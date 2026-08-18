@@ -1,0 +1,95 @@
+import { siteConfig } from "../config/site";
+import { getCanonicalUrl } from "./seo";
+import type { Community } from "../types/community";
+
+export interface BreadcrumbItem {
+  name: string;
+  item: string;
+}
+
+/**
+ * Generates WebSite JSON-LD schema with search potential.
+ */
+export function generateWebSiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteConfig.name,
+    url: getCanonicalUrl("/"),
+    description: siteConfig.description,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${getCanonicalUrl("/communities")}?search={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+}
+
+/**
+ * Generates BreadcrumbList JSON-LD schema.
+ */
+export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((crumb, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: crumb.name,
+      item: getCanonicalUrl(crumb.item),
+    })),
+  };
+}
+
+/**
+ * Generates CollectionPage / ItemList JSON-LD schema for category/platform directory pages.
+ */
+export function generateCollectionPageSchema(
+  name: string,
+  description: string,
+  urlPath: string,
+  communities: Community[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name,
+    description,
+    url: getCanonicalUrl(urlPath),
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: communities.length,
+      itemListElement: communities.map((comm, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: comm.title,
+        url: getCanonicalUrl(`/group/${comm.slug}`),
+      })),
+    },
+  };
+}
+
+/**
+ * Generates WebPage schema for individual community listing.
+ * Strictly adheres to non-fabricated data; no fake aggregateRating or product schema.
+ */
+export function generateCommunityDetailSchema(community: Community) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `${community.title} (${community.platform})`,
+    description: community.description || `${community.title} public online community.`,
+    url: getCanonicalUrl(`/group/${community.slug}`),
+    datePublished: community.discoveredAt,
+    dateModified: community.updatedAt || community.lastCheckedAt || community.discoveredAt,
+    mainEntity: {
+      "@type": "Organization",
+      name: community.title,
+      url: community.inviteUrl,
+      sameAs: community.sourceUrls,
+    },
+  };
+}

@@ -1,0 +1,37 @@
+---
+import DirectoryLayout from "../layouts/DirectoryLayout.astro";
+import CommunityGrid from "../components/CommunityGrid.astro";
+import { getRecentlyAdded } from "../lib/communities";
+import { generateCollectionPageSchema } from "../lib/schema";
+
+const recentCommunities = getRecentlyAdded(24);
+const schema = generateCollectionPageSchema(
+  "Recently Added Communities",
+  "The latest publicly discovered online communities added to the directory.",
+  "/new",
+  recentCommunities
+);
+---
+
+<DirectoryLayout
+  heading="Recently Added Communities"
+  subheading="Discover the latest online communities recently catalogued in our public directory."
+  breadcrumbs={[
+    { name: "Browse", item: "/communities" },
+    { name: "Recently Added", item: "/new" },
+  ]}
+  canonicalPath="/new"
+  jsonLd={schema}
+>
+  <div class="mb-6 flex items-center justify-between">
+    <span class="text-xs font-medium text-slate-500">
+      Showing <strong>{recentCommunities.length}</strong> latest additions
+    </span>
+  </div>
+
+  <CommunityGrid
+    communities={recentCommunities}
+    emptyTitle="No recent communities"
+    emptyMessage="No new communities have been added recently."
+  />
+</DirectoryLayout>

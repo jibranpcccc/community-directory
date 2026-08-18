@@ -1,0 +1,51 @@
+---
+import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
+import CommunityGrid from "../../components/CommunityGrid.astro";
+import { siteConfig } from "../../config/site";
+import { getAllTagsWithCounts, getCommunitiesByTag } from "../../lib/communities";
+import { generateCollectionPageSchema } from "../../lib/schema";
+
+export async function getStaticPaths() {
+  const minCommunities = siteConfig.tagPageMinCommunities || 2;
+  const tagsWithCounts = getAllTagsWithCounts();
+
+  // Filter tags meeting the minimum listing threshold to avoid thin/empty SEO pages
+  const validTags = tagsWithCounts.filter((t) => t.count >= minCommunities);
+
+  return validTags.map(({ tag }) => ({
+    params: { slug: tag },
+    props: { tag },
+  }));
+}
+
+interface Props {
+  tag: string;
+}
+
+const { tag } = Astro.props;
+const communities = getCommunitiesByTag(tag);
+
+const schema = generateCollectionPageSchema(
+  `#${tag} Communities`,
+  `Public communities tagged with #${tag} across Telegram, WhatsApp, and Discord.`,
+  `/tag/${tag}`,
+  communities
+);
+---
+
+<DirectoryLayout
+  heading={`#${tag} Communities`}
+  subheading={`Browse ${communities.length} public online communities discussing and tagged with #${tag}.`}
+  breadcrumbs={[
+    { name: "Browse", item: "/communities" },
+    { name: `#${tag}`, item: `/tag/${tag}` },
+  ]}
+  canonicalPath={`/tag/${tag}`}
+  jsonLd={schema}
+>
+  <CommunityGrid
+    communities={communities}
+    emptyTitle={`No communities found for #${tag}`}
+    emptyMessage="There are currently no listings matching this tag."
+  />
+</DirectoryLayout>

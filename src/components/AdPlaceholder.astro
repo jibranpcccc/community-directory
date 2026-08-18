@@ -1,0 +1,29 @@
+---
+import { siteConfig } from "../config/site";
+
+interface Props {
+  format?: "leaderboard" | "in-content" | "sidebar" | "mobile";
+  class?: string;
+}
+
+const { format = "in-content", class: customClass = "" } = Astro.props;
+
+// Do not render anything if ad placeholders are disabled
+if (!siteConfig.showAdPlaceholders) {
+  return null;
+}
+
+const formatStyles = {
+  leaderboard: "h-24 w-full max-w-4xl mx-auto my-6",
+  "in-content": "h-32 w-full my-6",
+  sidebar: "h-64 w-full my-4",
+  mobile: "h-20 w-full sm:hidden my-4",
+}[format];
+---
+
+<div
+  class={`flex items-center justify-center rounded-xl border border-dashed border-slate-300 bg-slate-50/60 text-slate-400 text-xs font-mono uppercase tracking-wider ${formatStyles} ${customClass}`}
+  aria-hidden="true"
+>
+  <span>Sponsorship / Ad Space ({format})</span>
+</div>

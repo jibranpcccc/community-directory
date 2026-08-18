@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow utility endpoints
+Disallow: /submit-success/
+Disallow: /report-success/
+
+Sitemap: https://communitydirectory.netlify.app/sitemap-index.xml

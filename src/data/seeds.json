@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://t.me/react_native_community",
+    "platform": "telegram",
+    "category": "ai-tech",
+    "subcategory": "Coding",
+    "notes": "React Native global discussion"
+  },
+  {
+    "url": "https://discord.gg/vuejs",
+    "platform": "discord",
+    "category": "ai-tech",
+    "subcategory": "Coding",
+    "notes": "Vue.js official Discord server"
+  },
+  {
+    "url": "https://chat.whatsapp.com/L123RemoteJobsSeedExample",
+    "platform": "whatsapp",
+    "category": "online-earning-remote-work",
+    "subcategory": "Remote Jobs",
+    "notes": "Global remote developers seed"
+  }
+]

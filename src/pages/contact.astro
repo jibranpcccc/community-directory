@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { siteConfig } from "../config/site";
+
+const breadcrumbs = [
+  { name: "Home", item: "/" },
+  { name: "Contact", item: "/contact" },
+];
+---
+
+<BaseLayout
+  title="Contact Us"
+  description={`Get in touch with the ${siteConfig.name} team for inquiries, feedback, or partnerships.`}
+  canonicalPath="/contact"
+>
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <div class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+        Contact the Team
+      </h1>
+      <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+        Have questions, suggestions, or partnership opportunities? Send us a message below.
+      </p>
+    </div>
+
+    <!-- Contact Form with Netlify Form integration -->
+    <form
+      name="contact"
+      method="POST"
+      action="/submit-success"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm space-y-6"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="hidden">
+        <label>
+          Don’t fill this out if you're human: <input name="bot-field" />
+        </label>
+      </p>
+
+      <div>
+        <label for="name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Your Name <span class="text-rose-500">*</span>
+        </label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          placeholder="Jane Doe"
+          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Email Address <span class="text-rose-500">*</span>
+        </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="jane@example.com"
+          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+        />
+      </div>
+
+      <div>
+        <label for="subject" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Subject
+        </label>
+        <input
+          type="text"
+          name="subject"
+          id="subject"
+          placeholder="General Inquiry / Feedback"
+          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+        />
+      </div>
+
+      <div>
+        <label for="message" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Message <span class="text-rose-500">*</span>
+        </label>
+        <textarea
+          name="message"
+          id="message"
+          rows="4"
+          required
+          placeholder="Write your message here..."
+          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+        ></textarea>
+      </div>
+
+      <div>
+        <button
+          type="submit"
+          class="w-full rounded-xl bg-slate-900 py-3 text-sm font-bold text-white shadow-sm hover:bg-slate-800 transition-colors"
+        >
+          Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</BaseLayout>

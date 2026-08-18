@@ -1,0 +1,57 @@
+---
+import DirectoryLayout from "../layouts/DirectoryLayout.astro";
+---
+
+<DirectoryLayout
+  heading="Editorial & Data Policy"
+  subheading="Our standards for data accuracy, automated discovery, AI boundaries, and corrections."
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Editorial Policy", item: "/editorial-policy" },
+  ]}
+  canonicalPath="/editorial-policy"
+>
+  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base text-slate-700 leading-relaxed">
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-slate-900">1. Data Sources & Discovery</h2>
+      <p>
+        Listings in this directory originate from three transparent sources:
+      </p>
+      <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
+        <li><strong>Automated Public Web Discovery:</strong> Search indexing of publicly shared invite URLs across standard web platforms.</li>
+        <li><strong>Direct Community Submissions:</strong> Submissions from community leaders and members via our submission form.</li>
+        <li><strong>Curated Seed Indexes:</strong> Well-known open source and developer hubs manually added by editors.</li>
+      </ul>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-slate-900">2. The Role of Artificial Intelligence</h2>
+      <p>
+        We utilize large language models (Google Gemini) exclusively for assisting with taxonomic categorization, extracting keyword tags, and formatting descriptions. 
+      </p>
+      <p class="font-semibold text-slate-900">
+        Our strict AI rules prohibit:
+      </p>
+      <ul class="list-disc pl-5 space-y-1 text-slate-600">
+        <li>Inventing community names, invite links, or founder names.</li>
+        <li>Estimating or fabricating member counts or growth stats.</li>
+        <li>Fabricating reviews or subjective ratings.</li>
+        <li>Certifying financial safety or investment viability.</li>
+      </ul>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-slate-900">3. Link Health & Dead Link Policy</h2>
+      <p>
+        We run automated link audits to check if invites remain active. If an invite fails or becomes unreachable, its status is cautiously transitioned to <code class="bg-slate-100 px-1 py-0.5 rounded text-xs">unknown</code> and then <code class="bg-slate-100 px-1 py-0.5 rounded text-xs">dead</code> upon persistent 404 responses. Dead listings are kept temporarily with clear warnings or removed to prevent broken user experiences.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-slate-900">4. Corrections & Takedown Requests</h2>
+      <p>
+        If you are the owner of a community and wish to update listing information or request immediate removal from the directory, please use our <a href="/report" class="text-emerald-600 font-semibold hover:underline">Report / Request form</a> or email our team. Requests are processed promptly.
+      </p>
+    </section>
+  </div>
+</DirectoryLayout>

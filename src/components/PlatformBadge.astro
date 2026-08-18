@@ -1,0 +1,40 @@
+---
+import type { PlatformId } from "../types/community";
+import { getPlatformById } from "../config/platforms";
+
+interface Props {
+  platform: PlatformId | string;
+  size?: "sm" | "md" | "lg";
+  showLink?: boolean;
+}
+
+const { platform, size = "md", showLink = false } = Astro.props;
+const config = getPlatformById(platform);
+
+const name = config?.name || platform;
+const badgeClass = config?.badgeBg || "bg-slate-100 text-slate-700 border-slate-200";
+
+const sizeClasses = {
+  sm: "text-xs px-2 py-0.5 gap-1",
+  md: "text-xs font-medium px-2.5 py-1 gap-1.5",
+  lg: "text-sm font-medium px-3 py-1.5 gap-2",
+}[size];
+---
+
+{
+  showLink ? (
+    <a
+      href={`/platform/${platform}`}
+      class={`inline-flex items-center rounded-full border transition-opacity hover:opacity-85 ${badgeClass} ${sizeClasses}`}
+      title={`Browse ${name} communities`}
+    >
+      <span class="capitalize">{name}</span>
+    </a>
+  ) : (
+    <span
+      class={`inline-flex items-center rounded-full border ${badgeClass} ${sizeClasses}`}
+    >
+      <span class="capitalize">{name}</span>
+    </span>
+  )
+}

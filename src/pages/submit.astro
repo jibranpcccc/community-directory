@@ -1,0 +1,221 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { categories } from "../config/categories";
+import { platforms } from "../config/platforms";
+
+const breadcrumbs = [
+  { name: "Home", item: "/" },
+  { name: "Submit Community", item: "/submit" },
+];
+---
+
+<BaseLayout
+  title="Submit a Community"
+  description="Submit a public Telegram channel, Discord server, or WhatsApp group to be catalogued in the directory."
+  canonicalPath="/submit"
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <div class="mb-8 text-center sm:text-left">
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+        Submit a Community
+      </h1>
+      <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+        Suggest a publicly discoverable online community. Every submission is reviewed to ensure link validity, correct categorization, and adherence to safety guidelines.
+      </p>
+    </div>
+
+    <!-- Submission Guidelines Box -->
+    <div class="mb-8 rounded-2xl border border-slate-200 bg-slate-50/80 p-5 text-xs text-slate-600 space-y-2">
+      <strong class="font-semibold text-slate-900 block text-sm">Submission Policy & Review Process</strong>
+      <ul class="list-disc pl-4 space-y-1 text-slate-600">
+        <li><strong>Public Communities Only:</strong> Do not submit private groups or password-protected resources.</li>
+        <li><strong>No Guaranteed Listing:</strong> Submission does not guarantee inclusion in the directory.</li>
+        <li><strong>Zero Tolerance for Scams:</strong> Fraudulent schemes, malware, pirated accounts, or misleading claims will be permanently rejected.</li>
+        <li><strong>Private Contact Information:</strong> Any admin email provided is kept strictly confidential and never displayed on public pages.</li>
+      </ul>
+    </div>
+
+    <!-- Netlify Form -->
+    <form
+      name="community-submission"
+      method="POST"
+      action="/submit-success"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm space-y-6"
+    >
+      <!-- Hidden Netlify Form identification -->
+      <input type="hidden" name="form-name" value="community-submission" />
+
+      <!-- Honeypot Field for anti-bot protection -->
+      <p class="hidden">
+        <label>
+          Don’t fill this out if you're human: <input name="bot-field" />
+        </label>
+      </p>
+
+      <!-- Community Title -->
+      <div>
+        <label for="title" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Community Name <span class="text-rose-500">*</span>
+        </label>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          required
+          maxlength="100"
+          placeholder="e.g., Python Developers Global"
+          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+        />
+      </div>
+
+      <!-- Platform & Category Row -->
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <!-- Platform -->
+        <div>
+          <label for="platform" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+            Platform <span class="text-rose-500">*</span>
+          </label>
+          <select
+            name="platform"
+            id="platform"
+            required
+            class="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-2.5 text-sm text-slate-800 focus:border-emerald-500 focus:bg-white focus:outline-none"
+          >
+            <option value="">Select Platform...</option>
+            {platforms.filter((p) => p.isConfigured).map((p) => (
+              <option value={p.id}>{p.name}</option>
+            ))}
+          </select>
+        </div>
+
+        <!-- Category -->
+        <div>
+          <label for="category" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+            Category <span class="text-rose-500">*</span>
+          </label>
+          <select
+            name="category"
+            id="category"
+            required
+            class="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-2.5 text-sm text-slate-800 focus:border-emerald-500 focus:bg-white focus:outline-none"
+          >
+            <option value="">Select Category...</option>
+            {categories.map((c) => (
+              <option value={c.slug}>{c.name}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      <!-- Invite URL -->
+      <div>
+        <label for="inviteUrl" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Public Invite URL <span class="text-rose-500">*</span>
+        </label>
+        <input
+          type="url"
+          name="inviteUrl"
+          id="inviteUrl"
+          required
+          placeholder="https://t.me/example or https://discord.gg/example"
+          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+        />
+        <p class="mt-1 text-[11px] text-slate-500">
+          Must be a direct, publicly accessible invite link (e.g. t.me, discord.gg, chat.whatsapp.com).
+        </p>
+      </div>
+
+      <!-- Description -->
+      <div>
+        <label for="description" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Factual Description <span class="text-rose-500">*</span>
+        </label>
+        <textarea
+          name="description"
+          id="description"
+          rows="3"
+          required
+          maxlength="500"
+          placeholder="Briefly state what the community discusses or builds. Please avoid promotional hype, earnings claims, or spam."
+          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+        ></textarea>
+      </div>
+
+      <!-- Tags & Language Row -->
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div>
+          <label for="tags" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+            Tags / Keywords (comma-separated)
+          </label>
+          <input
+            type="text"
+            name="tags"
+            id="tags"
+            placeholder="e.g. python, automation, machine-learning"
+            class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+          />
+        </div>
+
+        <div>
+          <label for="language" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+            Primary Language
+          </label>
+          <input
+            type="text"
+            name="language"
+            id="language"
+            placeholder="e.g. English, Spanish, Global"
+            class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+          />
+        </div>
+      </div>
+
+      <!-- Admin Contact (Private) -->
+      <div>
+        <label for="adminContact" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Admin Email or Contact (Private / Optional)
+        </label>
+        <input
+          type="email"
+          name="adminContact"
+          id="adminContact"
+          placeholder="admin@example.com"
+          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+        />
+        <p class="mt-1 text-[11px] text-slate-500">
+          Used solely for listing verification questions. Strictly confidential and never published.
+        </p>
+      </div>
+
+      <!-- Consent Checkbox -->
+      <div class="pt-2">
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input
+            type="checkbox"
+            name="confirmedPublic"
+            required
+            class="mt-1 h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
+          />
+          <span class="text-xs text-slate-600 leading-relaxed">
+            I confirm that this community is publicly discoverable and that I have the right to submit this information. I understand that fraudulent, abusive, or financial-scam listings will be discarded.
+          </span>
+        </label>
+      </div>
+
+      <!-- Submit Button -->
+      <div>
+        <button
+          type="submit"
+          class="w-full rounded-xl bg-emerald-600 py-3 text-sm font-bold text-white shadow-sm hover:bg-emerald-700 transition-colors"
+        >
+          Submit Community for Review
+        </button>
+      </div>
+    </form>
+  </div>
+</BaseLayout>

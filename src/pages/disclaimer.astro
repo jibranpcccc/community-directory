@@ -1,0 +1,45 @@
+---
+import DirectoryLayout from "../layouts/DirectoryLayout.astro";
+import SafetyNotice from "../components/SafetyNotice.astro";
+import { siteConfig } from "../config/site";
+---
+
+<DirectoryLayout
+  heading="Disclaimer & Disclosures"
+  subheading="General informational, financial market, and trademark disclaimers."
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Disclaimer", item: "/disclaimer" },
+  ]}
+  canonicalPath="/disclaimer"
+>
+  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base text-slate-700 leading-relaxed">
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-slate-900">1. No Financial Advice or Recommendations</h2>
+      <p>
+        Nothing contained on {siteConfig.name} constitutes financial, investment, legal, or tax advice. Online communities discussing cryptocurrencies, forex, stocks, trading signals, or market analysis are listed for informational and discovery purposes only.
+      </p>
+      <SafetyNotice type="financial" />
+      <p>
+        Past performance shared in external communities is not indicative of future results. Never make financial transactions or investments based solely on a directory listing or group conversation.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-slate-900">2. Trademark Notice & Non-Affiliation</h2>
+      <p>
+        Telegram, WhatsApp, Discord, Reddit, Slack, and other platform names, logos, and brands mentioned on this website are the property of their respective trademark holders.
+      </p>
+      <p>
+        {siteConfig.name} is an independent third-party directory. Use of these names, trademarks, and brands does not imply endorsement, affiliation, or sponsorship by their respective owners.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-slate-900">3. External Links & Third-Party Content</h2>
+      <p>
+        We have no control over the content, moderation, safety, or availability of external third-party chat groups. Joining external communities is done solely at your own discretion and risk.
+      </p>
+    </section>
+  </div>
+</DirectoryLayout>

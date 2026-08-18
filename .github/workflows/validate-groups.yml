@@ -1,0 +1,44 @@
+name: Validate Link Health
+
+on:
+  schedule:
+    - cron: '0 6 * * 1,4' # Twice weekly (Monday & Thursday at 06:00 UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-links:
+    name: Audit Community Link Health
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run link health engine
+        run: npm run validate-links
+
+      - name: Validate dataset schemas
+        run: npm run validate-data
+
+      - name: Commit and push health audit updates
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add src/data/
+          if git diff --staged --quiet; then
+            echo "No link status changes to commit."
+          else
+            git commit -m "data: update community link health audit [skip ci]"
+            git push
+          fi

@@ -1,0 +1,44 @@
+---
+import DirectoryLayout from "../layouts/DirectoryLayout.astro";
+import { siteConfig } from "../config/site";
+---
+
+<DirectoryLayout
+  heading="Terms of Service"
+  subheading={`Terms and conditions governing the use of ${siteConfig.name}.`}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Terms of Service", item: "/terms" },
+  ]}
+  canonicalPath="/terms"
+>
+  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base text-slate-700 leading-relaxed">
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-slate-900">1. Acceptance of Terms</h2>
+      <p>
+        By accessing or using {siteConfig.name}, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use the directory.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-slate-900">2. Directory Purpose & Informational Use</h2>
+      <p>
+        {siteConfig.name} is an informational directory intended to index publicly discoverable online communities. We do not operate, control, or monitor conversations inside external third-party groups, servers, or channels.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-slate-900">3. User Submissions & Warranties</h2>
+      <p>
+        When submitting a community to our directory, you warrant that the invite URL and details represent a publicly accessible resource and that the submission does not contain malicious software, illegal materials, or deceptive fraud.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-slate-900">4. Limitation of Liability</h2>
+      <p>
+        To the maximum extent permitted by law, {siteConfig.name} and its maintainers shall not be liable for any indirect, incidental, or consequential damages resulting from your interaction with any third-party community discovered through our service.
+      </p>
+    </section>
+  </div>
+</DirectoryLayout>

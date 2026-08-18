@@ -1,0 +1,100 @@
+---
+import { siteConfig } from "../config/site";
+import { getDatasetStats } from "../lib/communities";
+
+const stats = getDatasetStats();
+---
+
+<footer class="mt-auto border-t border-slate-200 bg-white text-slate-600">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
+      <!-- Brand & Mission Column -->
+      <div class="lg:col-span-2 space-y-4">
+        <a href="/" class="flex items-center gap-2">
+          <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600 text-white font-bold text-sm">
+            CH
+          </div>
+          <span class="text-base font-bold text-slate-900">{siteConfig.name}</span>
+        </a>
+        <p class="text-xs leading-relaxed text-slate-500 max-w-sm">
+          A zero-hallucination, structured directory cataloguing publicly discoverable online communities. We do not invent stats, reviews, or fake badges.
+        </p>
+
+        <div class="rounded-xl border border-slate-100 bg-slate-50 p-3 text-xs text-slate-600 space-y-1">
+          <div class="flex items-center justify-between">
+            <span>Indexed Communities:</span>
+            <strong class="text-slate-900 font-semibold">{stats.totalPublished}</strong>
+          </div>
+          <div class="flex items-center justify-between">
+            <span>Active Reachable:</span>
+            <span class="text-emerald-700 font-medium">{stats.activeLinks}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Platforms Column -->
+      <div>
+        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-900 mb-3">
+          Platforms
+        </h4>
+        <ul class="space-y-2 text-xs">
+          {siteConfig.footerNav.directory.map((item) => (
+            <li>
+              <a href={item.href} class="hover:text-emerald-600 transition-colors">
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Categories Column -->
+      <div>
+        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-900 mb-3">
+          Categories
+        </h4>
+        <ul class="space-y-2 text-xs">
+          {siteConfig.footerNav.categories.map((item) => (
+            <li>
+              <a href={item.href} class="hover:text-emerald-600 transition-colors">
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Trust & Legal Column -->
+      <div>
+        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-900 mb-3">
+          Trust & Legal
+        </h4>
+        <ul class="space-y-2 text-xs">
+          {siteConfig.footerNav.trustAndLegal.map((item) => (
+            <li>
+              <a href={item.href} class="hover:text-emerald-600 transition-colors">
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Disclaimer & Trademark -->
+    <div class="mt-12 pt-8 border-t border-slate-100 text-xs text-slate-400 space-y-3">
+      <p class="leading-relaxed">
+        <strong>Disclaimer:</strong> {siteConfig.name} is an independent informational directory. Not affiliated with, endorsed by, or sponsored by Telegram, WhatsApp, Discord, or their parent entities. All trademarks belong to their respective holders. Inclusion in this directory does not constitute an endorsement or warranty of safety.
+      </p>
+      <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+        <span>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</span>
+        <div class="flex gap-4">
+          <a href="/safety" class="hover:text-slate-600">Safety Guide</a>
+          <a href="/disclaimer" class="hover:text-slate-600">Disclaimer</a>
+          <a href="/privacy" class="hover:text-slate-600">Privacy</a>
+          <a href="/terms" class="hover:text-slate-600">Terms</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

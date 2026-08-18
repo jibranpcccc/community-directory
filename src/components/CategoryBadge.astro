@@ -1,0 +1,33 @@
+---
+import { getCategoryBySlug } from "../config/categories";
+
+interface Props {
+  category: string;
+  size?: "sm" | "md";
+  showLink?: boolean;
+}
+
+const { category, size = "md", showLink = false } = Astro.props;
+const config = getCategoryBySlug(category);
+const name = config?.name || category;
+
+const sizeClass = size === "sm" ? "text-xs px-2 py-0.5" : "text-xs px-2.5 py-1";
+---
+
+{
+  showLink ? (
+    <a
+      href={`/category/${category}`}
+      class={`inline-flex items-center rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors font-medium border border-slate-200 ${sizeClass}`}
+      title={`Browse ${name} category`}
+    >
+      {name}
+    </a>
+  ) : (
+    <span
+      class={`inline-flex items-center rounded-md bg-slate-100 text-slate-700 font-medium border border-slate-200 ${sizeClass}`}
+    >
+      {name}
+    </span>
+  )
+}

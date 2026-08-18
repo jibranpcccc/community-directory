@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SearchBox from "../components/SearchBox.astro";
+import { categories } from "../config/categories";
+---
+
+<BaseLayout
+  title="Page Not Found (404)"
+  description="The requested community listing or page could not be found."
+  noindex={true}
+>
+  <div class="max-w-3xl mx-auto px-4 py-16 sm:py-24 text-center">
+    <div class="inline-flex items-center justify-center h-20 w-20 rounded-full bg-slate-100 text-slate-500 font-extrabold text-2xl mb-6">
+      404
+    </div>
+
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+      Page or Listing Not Found
+    </h1>
+
+    <p class="text-sm sm:text-base text-slate-600 max-w-lg mx-auto leading-relaxed mb-8">
+      The community listing or page you are looking for may have been moved, removed, or never existed. Try searching the directory below.
+    </p>
+
+    <!-- Search Box -->
+    <div class="mb-10">
+      <SearchBox size="md" />
+    </div>
+
+    <!-- Quick Navigation -->
+    <div class="space-y-4">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-400">
+        Or browse by popular category:
+      </div>
+      <div class="flex flex-wrap justify-center gap-2">
+        {
+          categories.map((cat) => (
+            <a
+              href={`/category/${cat.slug}`}
+              class="rounded-xl border border-slate-200 bg-white px-3.5 py-2 text-xs font-semibold text-slate-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors shadow-sm"
+            >
+              {cat.name}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="mt-10 pt-8 border-t border-slate-200 flex justify-center gap-4">
+      <a
+        href="/"
+        class="rounded-xl bg-slate-900 px-5 py-2.5 text-xs font-semibold text-white hover:bg-slate-800 transition-colors"
+      >
+        Back to Home
+      </a>
+      <a
+        href="/communities"
+        class="rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
+      >
+        Browse All Communities
+      </a>
+    </div>
+  </div>
+</BaseLayout>

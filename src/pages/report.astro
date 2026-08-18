@@ -1,0 +1,148 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+
+// Parse optional query params passed from community detail page
+const listingId = Astro.url.searchParams.get("id") || "";
+const listingTitle = Astro.url.searchParams.get("title") || "";
+const listingUrl = Astro.url.searchParams.get("url") || "";
+
+const breadcrumbs = [
+  { name: "Home", item: "/" },
+  { name: "Report Listing", item: "/report" },
+];
+---
+
+<BaseLayout
+  title="Report a Listing"
+  description="Report a broken link, scam concern, or misleading information in our directory."
+  canonicalPath="/report"
+>
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <div class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+        Report a Community Listing
+      </h1>
+      <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+        Help us keep the directory accurate and safe. If you found a dead link, suspicious behavior, or incorrect metadata, submit this report for review.
+      </p>
+    </div>
+
+    <!-- Netlify Form -->
+    <form
+      name="listing-report"
+      method="POST"
+      action="/report-success"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm space-y-6"
+    >
+      <input type="hidden" name="form-name" value="listing-report" />
+
+      <!-- Honeypot -->
+      <p class="hidden">
+        <label>
+          Don’t fill this out if you're human: <input name="bot-field" />
+        </label>
+      </p>
+
+      <!-- Listing ID / Reference -->
+      <div>
+        <label for="listingId" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Listing Identifier / Name <span class="text-rose-500">*</span>
+        </label>
+        <input
+          type="text"
+          name="listingId"
+          id="listingId"
+          value={listingTitle || listingId}
+          required
+          placeholder="Community name or listing slug"
+          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+        />
+      </div>
+
+      <!-- Invite URL / Page URL -->
+      <div>
+        <label for="listingUrl" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Community Invite or Page URL
+        </label>
+        <input
+          type="text"
+          name="listingUrl"
+          id="listingUrl"
+          value={listingUrl}
+          placeholder="https://... or /group/slug"
+          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+        />
+      </div>
+
+      <!-- Report Reason -->
+      <div>
+        <label for="reason" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Reason for Report <span class="text-rose-500">*</span>
+        </label>
+        <select
+          name="reason"
+          id="reason"
+          required
+          class="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-2.5 text-sm text-slate-800 focus:border-emerald-500 focus:bg-white focus:outline-none"
+        >
+          <option value="">Select Reason...</option>
+          <option value="dead-invite">Dead or Expired Invite Link</option>
+          <option value="scam-fraud">Scam, Phishing, or Financial Fraud Concern</option>
+          <option value="misleading-claims">Misleading Claims or Falsified Information</option>
+          <option value="wrong-category">Incorrect Category or Tags</option>
+          <option value="duplicate">Duplicate Listing</option>
+          <option value="inappropriate-content">Abusive, Malware, or Inappropriate Content</option>
+          <option value="ownership-claim">Community Owner Removal / Update Request</option>
+          <option value="other">Other Issue</option>
+        </select>
+      </div>
+
+      <!-- Details -->
+      <div>
+        <label for="details" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Explanation & Details <span class="text-rose-500">*</span>
+        </label>
+        <textarea
+          name="details"
+          id="details"
+          rows="4"
+          required
+          placeholder="Please describe why this listing needs attention or provide evidence of broken/problematic state."
+          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+        ></textarea>
+      </div>
+
+      <!-- Reporter Email -->
+      <div>
+        <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Your Email (Optional / Confidential)
+        </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="your.email@example.com"
+          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+        />
+        <p class="mt-1 text-[11px] text-slate-500">
+          Only used if our team needs clarification. Never published or shared.
+        </p>
+      </div>
+
+      <!-- Submit Button -->
+      <div>
+        <button
+          type="submit"
+          class="w-full rounded-xl bg-slate-900 py-3 text-sm font-bold text-white shadow-sm hover:bg-slate-800 transition-colors"
+        >
+          Submit Report for Moderation
+        </button>
+      </div>
+    </form>
+  </div>
+</BaseLayout>

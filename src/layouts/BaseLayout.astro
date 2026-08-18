@@ -1,0 +1,78 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { getSeoMetadata } from "../lib/seo";
+import type { SeoProps } from "../lib/seo";
+import "../styles/global.css";
+
+interface Props extends SeoProps {
+  jsonLd?: Record<string, any> | Record<string, any>[];
+}
+
+const {
+  title,
+  description,
+  canonicalPath,
+  image,
+  type = "website",
+  noindex = false,
+  jsonLd,
+} = Astro.props;
+
+const seo = getSeoMetadata({
+  title,
+  description,
+  canonicalPath,
+  image,
+  type,
+  noindex,
+});
+---
+
+<!doctype html>
+<html lang="en" class="h-full bg-slate-50 text-slate-900">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Meta Tags -->
+    <title>{seo.title}</title>
+    <meta name="description" content={seo.description} />
+    <link rel="canonical" href={seo.canonicalUrl} />
+    {seo.noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={seo.type} />
+    <meta property="og:url" content={seo.canonicalUrl} />
+    <meta property="og:title" content={seo.title} />
+    <meta property="og:description" content={seo.description} />
+    <meta property="og:image" content={seo.imageUrl} />
+    <meta property="og:site_name" content={seo.siteName} />
+
+    <!-- Twitter / X -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={seo.canonicalUrl} />
+    <meta property="twitter:title" content={seo.title} />
+    <meta property="twitter:description" content={seo.description} />
+    <meta property="twitter:image" content={seo.imageUrl} />
+
+    <!-- JSON-LD Structured Data -->
+    {
+      jsonLd && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(jsonLd)}
+        />
+      )
+    }
+  </head>
+  <body class="flex min-h-full flex-col font-sans bg-slate-50 text-slate-900">
+    <Header />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

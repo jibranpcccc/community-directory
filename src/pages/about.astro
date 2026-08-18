@@ -1,0 +1,53 @@
+---
+import DirectoryLayout from "../layouts/DirectoryLayout.astro";
+import { siteConfig } from "../config/site";
+---
+
+<DirectoryLayout
+  heading={`About ${siteConfig.name}`}
+  subheading="Building a clean, structured, and fact-based catalog for discovering online communities."
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "About", item: "/about" },
+  ]}
+  canonicalPath="/about"
+>
+  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base text-slate-700 leading-relaxed">
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-slate-900">Our Mission</h2>
+      <p>
+        Online communities on platforms like Telegram, Discord, and WhatsApp are vital hubs for knowledge exchange, networking, and collaboration. However, discovering legitimate communities has historically been plagued by spam, link rot, and fake engagement metrics.
+      </p>
+      <p>
+        <strong>{siteConfig.name}</strong> was created to provide a structured, transparent directory that prioritizes verified facts over inflated statistics.
+      </p>
+    </section>
+
+    <section class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-8">
+      <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center">
+        <div class="text-2xl font-bold text-emerald-600 mb-1">0%</div>
+        <div class="text-xs font-semibold text-slate-800">Fake Metrics</div>
+        <p class="text-xs text-slate-500 mt-1">We never fabricate ratings or member counts.</p>
+      </div>
+
+      <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center">
+        <div class="text-2xl font-bold text-emerald-600 mb-1">100%</div>
+        <div class="text-xs font-semibold text-slate-800">Public Information</div>
+        <p class="text-xs text-slate-500 mt-1">Ethical discovery using only publicly shared links.</p>
+      </div>
+
+      <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center">
+        <div class="text-2xl font-bold text-emerald-600 mb-1">Fast</div>
+        <div class="text-xs font-semibold text-slate-800">Static Architecture</div>
+        <p class="text-xs text-slate-500 mt-1">Pre-rendered static HTML with instant search.</p>
+      </div>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-slate-900">How We Operate</h2>
+      <p>
+        We combine automated discovery scripts, link health validators, and human moderation to index public channels, servers, and groups. Anyone can browse for free, filter across platforms, or submit their own community.
+      </p>
+    </section>
+  </div>
+</DirectoryLayout>

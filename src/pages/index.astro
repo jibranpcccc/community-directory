@@ -1,0 +1,241 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SearchBox from "../components/SearchBox.astro";
+import CommunityGrid from "../components/CommunityGrid.astro";
+import SafetyNotice from "../components/SafetyNotice.astro";
+import AdPlaceholder from "../components/AdPlaceholder.astro";
+import { categories } from "../config/categories";
+import { platforms } from "../config/platforms";
+import {
+  getFeaturedCommunities,
+  getRecentlyAdded,
+  getRecentlyChecked,
+  getDatasetStats,
+} from "../lib/communities";
+import { generateWebSiteSchema } from "../lib/schema";
+
+const stats = getDatasetStats();
+const featuredListings = getFeaturedCommunities(6);
+const recentAdditions = getRecentlyAdded(6);
+const recentlyChecked = getRecentlyChecked(6);
+
+const webSiteSchema = generateWebSiteSchema();
+---
+
+<BaseLayout
+  title="Find Communities Worth Joining — Public Community Directory"
+  description="Discover, search, and browse public online communities across Telegram, WhatsApp, Discord, and more. Transparent data, zero fabricated statistics."
+  canonicalPath="/"
+  jsonLd={webSiteSchema}
+>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-emerald-50/50 to-transparent py-16 sm:py-24 border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800 mb-6">
+        <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        Zero Fake Metrics • Verified Public Sources
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-6">
+        Find Communities <span class="text-emerald-600">Worth Joining</span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed mb-8">
+        Searchable, categorized directory of publicly discoverable online communities across Telegram, WhatsApp, and Discord. No inflated stats, no fake badges.
+      </p>
+
+      <!-- Prominent Search Box -->
+      <SearchBox size="lg" />
+
+      <!-- Platform Pills -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 mt-6">
+        <span class="text-xs font-medium text-slate-500">Popular platforms:</span>
+        <a
+          href="/platform/telegram"
+          class="inline-flex items-center gap-1.5 rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700 hover:bg-sky-100 transition-colors"
+        >
+          Telegram
+        </a>
+        <a
+          href="/platform/discord"
+          class="inline-flex items-center gap-1.5 rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700 hover:bg-indigo-100 transition-colors"
+        >
+          Discord
+        </a>
+        <a
+          href="/platform/whatsapp"
+          class="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700 hover:bg-emerald-100 transition-colors"
+        >
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Dataset Statistics Counters -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+      <div class="text-center">
+        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">{stats.totalPublished}</div>
+        <div class="text-xs text-slate-500 font-medium mt-0.5">Listed Communities</div>
+      </div>
+      <div class="text-center border-l border-slate-100">
+        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">{categories.length}</div>
+        <div class="text-xs text-slate-500 font-medium mt-0.5">Categories</div>
+      </div>
+      <div class="text-center border-l border-slate-100">
+        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">3</div>
+        <div class="text-xs text-slate-500 font-medium mt-0.5">Active Platforms</div>
+      </div>
+      <div class="text-center border-l border-slate-100">
+        <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600">{stats.activeLinks}</div>
+        <div class="text-xs text-slate-500 font-medium mt-0.5">Active Reachable Links</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+    <!-- Ad Space Leaderboard (Optional) -->
+    <AdPlaceholder format="leaderboard" />
+
+    <!-- Categories Grid Section -->
+    <section id="categories" class="scroll-mt-20">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Browse by Category</h2>
+          <p class="text-xs text-slate-500 mt-1">Explore communities by topic, technology, and industry</p>
+        </div>
+        <a href="/communities" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
+          View all →
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {
+          categories.map((cat) => (
+            <a
+              href={`/category/${cat.slug}`}
+              class="group relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:border-emerald-300 hover:shadow-md transition-all"
+            >
+              <div>
+                <h3 class="text-base font-bold text-slate-900 group-hover:text-emerald-600 transition-colors mb-2">
+                  {cat.name}
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                  {cat.description}
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-1 pt-3 border-t border-slate-100">
+                {cat.subcategories.slice(0, 3).map((sub) => (
+                  <span class="rounded bg-slate-50 px-2 py-0.5 text-[11px] text-slate-500">
+                    {sub}
+                  </span>
+                ))}
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Platform Cards Section -->
+    <section id="platforms" class="scroll-mt-20">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Explore by Platform</h2>
+          <p class="text-xs text-slate-500 mt-1">Filter by your favorite chat apps and networks</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {
+          platforms
+            .filter((p) => p.isConfigured)
+            .map((plat) => (
+              <a
+                href={`/platform/${plat.id}`}
+                class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:border-slate-300 hover:shadow-md transition-all"
+              >
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-lg font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                    {plat.name}
+                  </span>
+                  <span class={`rounded-full px-2.5 py-0.5 text-[11px] font-medium border ${plat.badgeBg}`}>
+                    {stats.platforms[plat.id] || 0} listings
+                  </span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  {plat.description}
+                </p>
+              </a>
+            ))
+        }
+      </div>
+    </section>
+
+    <!-- Featured Communities Section -->
+    {
+      featuredListings.length > 0 && (
+        <section>
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Featured Listings</h2>
+              <p class="text-xs text-slate-500 mt-1">Editorially curated high-quality public communities</p>
+            </div>
+            <a href="/communities" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
+              Browse all →
+            </a>
+          </div>
+          <CommunityGrid communities={featuredListings} />
+        </section>
+      )
+    }
+
+    <!-- Recently Added Communities -->
+    <section>
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Recently Added</h2>
+          <p class="text-xs text-slate-500 mt-1">Newly catalogued communities from public sources</p>
+        </div>
+        <a href="/new" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
+          View all recent →
+        </a>
+      </div>
+      <CommunityGrid communities={recentAdditions} />
+    </section>
+
+    <!-- Recently Checked Link Health -->
+    <section>
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Recently Checked</h2>
+          <p class="text-xs text-slate-500 mt-1">Communities with verified link availability timestamps</p>
+        </div>
+        <a href="/recently-updated" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
+          View all checked →
+        </a>
+      </div>
+      <CommunityGrid communities={recentlyChecked} />
+    </section>
+
+    <!-- Safety Notice Banner -->
+    <SafetyNotice type="general" />
+
+    <!-- Submission CTA Banner -->
+    <section class="rounded-3xl border border-emerald-200 bg-gradient-to-br from-emerald-500 to-teal-700 p-8 sm:p-12 text-white text-center shadow-lg">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3">
+        Run a Public Online Community?
+      </h2>
+      <p class="text-emerald-100 max-w-xl mx-auto text-xs sm:text-sm leading-relaxed mb-6">
+        Submit your community to be catalogued in the directory. Every submission is reviewed for safety and verified before publication.
+      </p>
+      <a
+        href="/submit"
+        class="inline-flex items-center rounded-xl bg-white px-6 py-3 text-xs sm:text-sm font-bold text-emerald-900 shadow hover:bg-emerald-50 transition-colors"
+      >
+        Submit a Community for Free
+      </a>
+    </section>
+  </div>
+</BaseLayout>

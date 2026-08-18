@@ -1,0 +1,72 @@
+---
+interface Props {
+  type?: "general" | "financial" | "compact";
+  class?: string;
+}
+
+const { type = "general", class: customClass = "" } = Astro.props;
+---
+
+{
+  type === "financial" ? (
+    <div
+      class={`rounded-xl border border-amber-200 bg-amber-50/70 p-4 text-xs leading-relaxed text-amber-900 ${customClass}`}
+    >
+      <div class="flex items-start gap-2.5">
+        <svg
+          class="h-4 w-4 flex-shrink-0 text-amber-600 mt-0.5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+          />
+        </svg>
+        <div>
+          <strong class="font-semibold text-amber-950 block mb-0.5">
+            Financial Content & Risk Notice
+          </strong>
+          Communities in this category discuss financial markets, trading, or web3. Directory inclusion does NOT constitute financial advice, investment recommendations, or verification of past performance claims. Never send funds or share private keys based solely on a directory listing.
+        </div>
+      </div>
+    </div>
+  ) : type === "compact" ? (
+    <div
+      class={`rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-600 ${customClass}`}
+    >
+      <span>
+        🔒 <strong>Safety Note:</strong> Directory listings are publicly discovered. Inclusion does not imply endorsement. Verify administrators independently.
+      </span>
+    </div>
+  ) : (
+    <div
+      class={`rounded-xl border border-slate-200 bg-slate-50/80 p-4 text-xs leading-relaxed text-slate-700 ${customClass}`}
+    >
+      <div class="flex items-start gap-2.5">
+        <svg
+          class="h-4 w-4 flex-shrink-0 text-slate-500 mt-0.5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        <div>
+          <strong class="font-semibold text-slate-900 block mb-0.5">
+            Community Safety & Directory Integrity
+          </strong>
+          This directory catalogues publicly discoverable communities. We do not operate or moderate external groups. Always exercise independent caution, avoid clicking unverified attachments, and never disclose sensitive credentials.
+        </div>
+      </div>
+    </div>
+  )
+}

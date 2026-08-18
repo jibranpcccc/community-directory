@@ -1,0 +1,29 @@
+---
+import type { Community } from "../types/community";
+import CommunityCard from "./CommunityCard.astro";
+import EmptyState from "./EmptyState.astro";
+
+interface Props {
+  communities: Community[];
+  emptyTitle?: string;
+  emptyMessage?: string;
+}
+
+const {
+  communities,
+  emptyTitle = "No communities found",
+  emptyMessage = "There are no communities matching your selection yet.",
+} = Astro.props;
+---
+
+{
+  communities.length === 0 ? (
+    <EmptyState title={emptyTitle} message={emptyMessage} />
+  ) : (
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {communities.map((community) => (
+        <CommunityCard community={community} />
+      ))}
+    </div>
+  )
+}

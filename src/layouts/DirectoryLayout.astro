@@ -1,0 +1,51 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import type { BreadcrumbItem } from "../lib/schema";
+import type { SeoProps } from "../lib/seo";
+
+interface Props extends SeoProps {
+  heading: string;
+  subheading?: string;
+  breadcrumbs?: BreadcrumbItem[];
+  jsonLd?: Record<string, any> | Record<string, any>[];
+}
+
+const {
+  heading,
+  subheading,
+  breadcrumbs = [],
+  title,
+  description,
+  canonicalPath,
+  jsonLd,
+  noindex,
+} = Astro.props;
+---
+
+<BaseLayout
+  title={title || heading}
+  description={description || subheading}
+  canonicalPath={canonicalPath}
+  jsonLd={jsonLd}
+  noindex={noindex}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    {breadcrumbs.length > 0 && <Breadcrumbs items={breadcrumbs} />}
+
+    <!-- Page Header Header -->
+    <div class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">
+        {heading}
+      </h1>
+      {subheading && (
+        <p class="mt-2 text-sm sm:text-base text-slate-600 max-w-3xl leading-relaxed">
+          {subheading}
+        </p>
+      )}
+    </div>
+
+    <!-- Main Content Slot -->
+    <slot />
+  </div>
+</BaseLayout>

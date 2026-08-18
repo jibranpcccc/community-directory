@@ -1,0 +1,37 @@
+---
+import DirectoryLayout from "../layouts/DirectoryLayout.astro";
+import CommunityGrid from "../components/CommunityGrid.astro";
+import { getRecentlyChecked } from "../lib/communities";
+import { generateCollectionPageSchema } from "../lib/schema";
+
+const checkedCommunities = getRecentlyChecked(24);
+const schema = generateCollectionPageSchema(
+  "Recently Checked Communities",
+  "Communities with recently verified link availability and status checks.",
+  "/recently-updated",
+  checkedCommunities
+);
+---
+
+<DirectoryLayout
+  heading="Recently Checked Communities"
+  subheading="Communities with recently verified link availability and status health audits."
+  breadcrumbs={[
+    { name: "Browse", item: "/communities" },
+    { name: "Recently Checked", item: "/recently-updated" },
+  ]}
+  canonicalPath="/recently-updated"
+  jsonLd={schema}
+>
+  <div class="mb-6 flex items-center justify-between">
+    <span class="text-xs font-medium text-slate-500">
+      Showing <strong>{checkedCommunities.length}</strong> recently checked listings
+    </span>
+  </div>
+
+  <CommunityGrid
+    communities={checkedCommunities}
+    emptyTitle="No checked communities"
+    emptyMessage="No link health audits have been recorded yet."
+  />
+</DirectoryLayout>
