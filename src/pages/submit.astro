@@ -3,17 +3,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import { categories } from "../config/categories";
 import { platforms } from "../config/platforms";
+import { generateBreadcrumbSchema } from "../lib/schema";
 
 const breadcrumbs = [
   { name: "Home", item: "/" },
   { name: "Submit Community", item: "/submit" },
 ];
+
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
 ---
 
 <BaseLayout
   title="Submit a Community"
   description="Submit a public Telegram channel, Discord server, or WhatsApp group to be catalogued in the directory."
   canonicalPath="/submit"
+  jsonLd={breadcrumbSchema}
 >
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
     <Breadcrumbs items={breadcrumbs} />

@@ -17,7 +17,7 @@ const allItems = [{ name: "Home", item: "/" }, ...items];
         return (
           <li class="flex items-center gap-2">
             {index > 0 && (
-              <span class="text-black font-black">/</span>
+              <span class="text-black font-black" aria-hidden="true">/</span>
             )}
             {isLast ? (
               <span class="rounded bg-white px-2 py-0.5 border border-black text-black font-black shadow-[1px_1px_0px_0px_#000]" aria-current="page">

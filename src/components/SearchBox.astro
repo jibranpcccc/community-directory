@@ -17,13 +17,17 @@ const heightClass = size === "lg" ? "py-3.5 pl-11 pr-28 text-sm sm:text-base" : 
 const iconSize = size === "lg" ? "h-5 w-5 left-3.5" : "h-4 w-4 left-3";
 ---
 
-<form action={actionUrl} method="GET" class="relative w-full max-w-2xl mx-auto">
+<form action={actionUrl} method="GET" role="search" class="relative w-full max-w-2xl mx-auto">
+  <label for="search-input" class="sr-only">
+    Search communities
+  </label>
   <div class="relative flex items-center">
     <svg
       class={`absolute ${iconSize} text-black pointer-events-none`}
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
+      aria-hidden="true"
     >
       <path
         stroke-linecap="round"
@@ -38,16 +42,18 @@ const iconSize = size === "lg" ? "h-5 w-5 left-3.5" : "h-4 w-4 left-3";
       id="search-input"
       value={initialValue}
       placeholder={placeholder}
+      aria-label="Search communities by title, keyword, tech, or topic"
       class={`w-full rounded-2xl border-[2.5px] border-black bg-white text-black font-medium placeholder:text-slate-500 shadow-[4px_4px_0px_0px_#000] focus:shadow-[6px_6px_0px_0px_#000] focus:outline-none transition-all ${heightClass}`}
       autocomplete="off"
     />
     <div class="absolute right-2.5 flex items-center gap-2">
-      <kbd class="hidden sm:inline-flex items-center rounded-lg border-2 border-black bg-[#FEF08A] px-2 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
+      <kbd class="hidden sm:inline-flex items-center rounded-lg border-2 border-black bg-[#FEF08A] px-2 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]" aria-hidden="true">
         ⌘K
       </kbd>
       <button
         type="submit"
         class="neo-button bg-[#FEF08A] hover:bg-[#FDE047] text-black px-4 py-2 text-xs font-black"
+        aria-label="Submit search"
       >
         Search
       </button>

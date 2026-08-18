@@ -84,9 +84,17 @@ const seo = getSeoMetadata({
     }
   </head>
   <body class="relative flex min-h-full flex-col font-sans bg-[#FAF8F5] text-black">
+    <!-- Skip to Content Accessibility Link -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2.5 focus:bg-[#FEF08A] focus:text-black focus:border-2 focus:border-black focus:font-black focus:shadow-[3px_3px_0px_0px_#000] focus:rounded-xl"
+    >
+      Skip to main content
+    </a>
+
     <div class="relative z-10 flex min-h-screen flex-col">
       <Header />
-      <main class="flex-grow">
+      <main id="main-content" class="flex-grow" tabindex="-1">
         <slot />
       </main>
       <Footer />

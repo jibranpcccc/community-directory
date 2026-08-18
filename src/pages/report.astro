@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { generateBreadcrumbSchema } from "../lib/schema";
 
 // Parse optional query params passed from community detail page
 const listingId = Astro.url.searchParams.get("id") || "";
@@ -11,12 +12,15 @@ const breadcrumbs = [
   { name: "Home", item: "/" },
   { name: "Report Listing", item: "/report" },
 ];
+
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
 ---
 
 <BaseLayout
   title="Report a Listing"
   description="Report a broken link, scam concern, or misleading information in our directory."
   canonicalPath="/report"
+  jsonLd={breadcrumbSchema}
 >
   <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
     <Breadcrumbs items={breadcrumbs} />

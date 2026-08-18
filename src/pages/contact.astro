@@ -2,17 +2,21 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import { siteConfig } from "../config/site";
+import { generateBreadcrumbSchema } from "../lib/schema";
 
 const breadcrumbs = [
   { name: "Home", item: "/" },
   { name: "Contact", item: "/contact" },
 ];
+
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
 ---
 
 <BaseLayout
   title="Contact Us"
   description={`Get in touch with the ${siteConfig.name} team for inquiries, feedback, or partnerships.`}
   canonicalPath="/contact"
+  jsonLd={breadcrumbSchema}
 >
   <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
     <Breadcrumbs items={breadcrumbs} />

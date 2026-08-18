@@ -1,5 +1,41 @@
 [
   {
+    "id": "adobestock-discord",
+    "slug": "adobestock-discord",
+    "title": "adobestock",
+    "platform": "discord",
+    "category": "ai-tech",
+    "subcategory": "ai images",
+    "tags": [
+      "ai",
+      "images",
+      "creatives",
+      "feedback",
+      "discussions"
+    ],
+    "inviteUrl": "https://discord.gg/adobestock",
+    "description": "Our Discord server provides real-time interaction, and it's an excellent place to get feedback about your images, engage in live discussions, and connect with fellow creatives.",
+    "language": "en",
+    "country": null,
+    "accessType": "free",
+    "communityType": "discussion",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "manually-reviewed",
+    "linkStatus": "active",
+    "sourceUrls": [
+      "https://google.com/search"
+    ],
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-18T14:21:35.857Z",
+    "lastCheckedAt": "2026-08-18T14:21:35.857Z",
+    "updatedAt": "2026-08-18T15:19:47.701Z",
+    "safetyFlags": [],
+    "published": true,
+    "featured": false
+  },
+  {
     "id": "astro-lounge-discord",
     "slug": "astro-lounge-discord",
     "title": "Astro Lounge",
@@ -36,6 +72,42 @@
     "featured": true
   },
   {
+    "id": "chatgpt-community-discord",
+    "slug": "chatgpt-community-discord",
+    "title": "ChatGPT Community",
+    "platform": "discord",
+    "category": "ai-tech",
+    "subcategory": "ChatGPT",
+    "tags": [
+      "chatgpt",
+      "ai",
+      "discord",
+      "tech",
+      "artificialintelligence"
+    ],
+    "inviteUrl": "https://discord.gg/r-chatgpt-1050422060352024636",
+    "description": "A Discord server for members of the ChatGPT community.",
+    "language": "en",
+    "country": null,
+    "accessType": "free",
+    "communityType": "discussion",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "manually-reviewed",
+    "linkStatus": "active",
+    "sourceUrls": [
+      "https://google.com/search"
+    ],
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-18T14:21:35.857Z",
+    "lastCheckedAt": "2026-08-18T14:21:35.857Z",
+    "updatedAt": "2026-08-18T15:19:48.504Z",
+    "safetyFlags": [],
+    "published": true,
+    "featured": false
+  },
+  {
     "id": "ethereum-org-discord",
     "slug": "ethereum-org-discord",
     "title": "ethereum.org",
@@ -70,6 +142,42 @@
     "safetyFlags": [],
     "published": true,
     "featured": true
+  },
+  {
+    "id": "invideo-ai-video-community-discord",
+    "slug": "invideo-ai-video-community-discord",
+    "title": "InVideo AI Video Community",
+    "platform": "discord",
+    "category": "ai-tech",
+    "subcategory": "AI Video",
+    "tags": [
+      "ai",
+      "video",
+      "tech",
+      "invideo",
+      "aivideo"
+    ],
+    "inviteUrl": "https://discord.gg/invideo",
+    "description": null,
+    "language": "en",
+    "country": null,
+    "accessType": "free",
+    "communityType": "discussion",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "manually-reviewed",
+    "linkStatus": "active",
+    "sourceUrls": [
+      "https://google.com/search"
+    ],
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-18T14:21:35.857Z",
+    "lastCheckedAt": "2026-08-18T14:21:35.857Z",
+    "updatedAt": "2026-08-18T15:19:46.915Z",
+    "safetyFlags": [],
+    "published": true,
+    "featured": false
   },
   {
     "id": "learn-ai-together-discord",

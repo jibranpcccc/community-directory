@@ -85,11 +85,12 @@ const { community } = Astro.props;
       <a
         href={community.inviteUrl}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         class="neo-button bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black px-3 py-2 text-xs"
+        aria-label={`Join ${community.title} on ${community.platform} (opens in a new tab)`}
       >
         <span>Join Now</span>
-        <svg class="h-3.5 w-3.5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg class="h-3.5 w-3.5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
         </svg>
       </a>

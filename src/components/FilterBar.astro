@@ -19,14 +19,18 @@ const activePlatforms = platforms.filter((p) => p.isConfigured);
 ---
 
 <div class="neo-card p-5 sm:p-6 mb-8 bg-white">
-  <form id="directory-filter-form" method="GET" class="space-y-4">
+  <form id="directory-filter-form" method="GET" role="search" class="space-y-4">
     <!-- Top Row: Search Input -->
     <div class="relative">
+      <label for="filter-search-input" class="sr-only">
+        Filter communities by keyword
+      </label>
       <svg
         class="absolute left-3.5 top-3.5 h-4 w-4 text-black pointer-events-none"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
+        aria-hidden="true"
       >
         <path
           stroke-linecap="round"
@@ -41,6 +45,7 @@ const activePlatforms = platforms.filter((p) => p.isConfigured);
         id="filter-search-input"
         value={currentFilters.search || ""}
         placeholder="Filter by keyword, topic, language, or title..."
+        aria-label="Filter communities by keyword, topic, language, or title"
         class="w-full rounded-xl border-2 border-black py-2.5 pl-10 pr-4 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
       />
     </div>
