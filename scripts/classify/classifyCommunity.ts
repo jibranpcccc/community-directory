@@ -92,10 +92,10 @@ STRICT RULES:
           ? parsed.tags.map((t: string) => t.toLowerCase().replace(/[^a-z0-9-]/g, "")).filter(Boolean).slice(0, 5)
           : ["community"],
         description,
-        language: parsed.language || "en",
-        country: parsed.country || null,
-        accessType: parsed.accessType || "free",
-        communityType: parsed.communityType || "discussion",
+        language: typeof parsed.language === "string" && parsed.language.length === 2 ? parsed.language.toLowerCase() : null,
+        country: typeof parsed.country === "string" && parsed.country.length === 2 ? parsed.country.toUpperCase() : null,
+        accessType: ["free", "paid", "mixed"].includes(parsed.accessType) ? parsed.accessType : "unknown",
+        communityType: ["discussion", "education", "signals", "news", "jobs", "deals", "support", "other"].includes(parsed.communityType) ? parsed.communityType : "unknown",
         safetyFlags: flags,
         confidence: typeof parsed.confidence === "number" ? parsed.confidence : 0.8,
       };
@@ -156,10 +156,10 @@ export function fallbackHeuristicClassification(candidate: {
     subcategory,
     tags: [candidate.platform, category.replace(/-/g, "")].slice(0, 3),
     description: desc,
-    language: "en",
+    language: null,
     country: null,
-    accessType: "free",
-    communityType: "discussion",
+    accessType: "unknown",
+    communityType: "unknown",
     safetyFlags: flags,
     confidence: 0.6,
   };

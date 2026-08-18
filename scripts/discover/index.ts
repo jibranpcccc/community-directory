@@ -239,7 +239,7 @@ async function runDiscovery() {
     batchSeenUrls.add(normalizedUrl);
 
     // E. Strict Source Verification: Fetch independent source page and check for invite link presence
-    const sourceCheck = await verifySourceMentionsInvite(cand.sourceUrl, normalizedUrl);
+    const sourceCheck = await verifySourceMentionsInvite(cand.sourceUrl, normalizedUrl, extractedGuildId);
     const validSource = sourceCheck.sourceUrl;
     const isSourceConfirmed = sourceCheck.isConfirmed;
 

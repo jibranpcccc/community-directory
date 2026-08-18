@@ -32,9 +32,9 @@ class GeminiKeyPool {
       }
     }
 
-    const key = this.keys[this.currentIndex];
-    this.currentIndex = (this.currentIndex + 1) % this.keys.length;
-    return key;
+    // All keys in the pool are currently throttled
+    console.warn("[gemini-pool] All Gemini keys temporarily unavailable.");
+    return null;
   }
 
   public markRateLimited(key: string, cooldownMs: number = 300000) {

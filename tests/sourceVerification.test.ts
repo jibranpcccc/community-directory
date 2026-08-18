@@ -52,7 +52,35 @@ describe("Source Page Verification Engine", () => {
     global.fetch = originalFetch;
   });
 
-  it("rejects when source page HTML does not mention the invite token", async () => {
+  it("strictly rejects when plain text keyword appears in HTML but NO outbound link exists", async () => {
+    const mockHtml = `
+      <html>
+        <body>
+          <h1>Welcome to the astro documentation</h1>
+          <p>We love astro and everything built with astro.</p>
+          <a href="https://github.com/withastro/astro">GitHub Repository</a>
+        </body>
+      </html>
+    `;
+
+    const originalFetch = global.fetch;
+    global.fetch = vi.fn().mockResolvedValue({
+      ok: true,
+      text: async () => mockHtml,
+    } as any);
+
+    const res = await verifySourceMentionsInvite(
+      "https://astro.build/docs",
+      "https://discord.gg/astro"
+    );
+
+    // Plain text occurrence of "astro" MUST NOT confirm source!
+    expect(res.isConfirmed).toBe(false);
+
+    global.fetch = originalFetch;
+  });
+
+  it("strictly rejects when source page HTML does not mention the invite token", async () => {
     const mockHtml = `
       <html>
         <body>
@@ -76,5 +104,42 @@ describe("Source Page Verification Engine", () => {
     expect(res.isConfirmed).toBe(false);
 
     global.fetch = originalFetch;
+  });
+});
+
+describe("Classifier Zero-Fabrication Defaults", () => {
+  it("defaults unknown metadata fields to null and unknown without guessing", async () => {
+    const { fallbackHeuristicClassification } = await import("../scripts/classify/classifyCommunity");
+
+    const result = fallbackHeuristicClassification({
+      inviteUrl: "https://discord.gg/custom-code",
+      platform: "discord",
+      suggestedCategory: "ai-tech",
+    });
+
+    expect(result.language).toBeNull();
+    expect(result.country).toBeNull();
+    expect(result.accessType).toBe("unknown");
+    expect(result.communityType).toBe("unknown");
+    expect(result.description).toBeNull();
+  });
+});
+
+describe("Gemini Key Pool Exhaustion Guard", () => {
+  it("returns null gracefully when all keys in pool are throttled", async () => {
+    const { geminiKeyPool } = await import("../scripts/utilities/geminiPool");
+
+    // Temporarily rate limit all keys
+    const poolSize = geminiKeyPool.getPoolSize();
+    for (let i = 0; i < poolSize; i++) {
+      const key = geminiKeyPool.getKey();
+      if (key) {
+        geminiKeyPool.markRateLimited(key, 999999);
+      }
+    }
+
+    // Attempt to get key when all are throttled
+    const exhaustedKey = geminiKeyPool.getKey();
+    expect(exhaustedKey).toBeNull();
   });
 });
