@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: process.env.PUBLIC_SITE_URL || 'https://communitydirectory.netlify.app',
+  site: process.env.PUBLIC_SITE_URL || 'https://communityhub-directory.netlify.app',
   output: 'static',
   server: {
     host: true, // Listen on all network addresses (0.0.0.0, 127.0.0.1, localhost, IPv6)

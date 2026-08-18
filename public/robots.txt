@@ -5,4 +5,4 @@ Allow: /
 Disallow: /submit-success/
 Disallow: /report-success/
 
-Sitemap: https://communitydirectory.netlify.app/sitemap-index.xml
+Sitemap: https://communityhub-directory.netlify.app/sitemap-index.xml

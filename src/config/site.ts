@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: "Find Communities Worth Joining",
   description:
     "A searchable, curated, and automated directory of publicly discoverable online communities across Telegram, WhatsApp, Discord, and more. Built with zero hallucinated metrics.",
-  url: process.env.PUBLIC_SITE_URL || "http://localhost:4321",
+  url: process.env.PUBLIC_SITE_URL || "https://communityhub-directory.netlify.app",
   defaultLocale: "en",
   showAdPlaceholders: process.env.SHOW_AD_PLACEHOLDERS === "true",
   tagPageMinCommunities: 2, // minimum communities required before generating indexable tag page
