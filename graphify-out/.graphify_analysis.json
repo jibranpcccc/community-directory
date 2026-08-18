@@ -1,0 +1,465 @@
+{
+  "communities": {
+    "0": [
+      "c_users_jibra_desktop_1_testing_src_config_site",
+      "c_users_jibra_desktop_1_testing_src_lib_communities",
+      "c_users_jibra_desktop_1_testing_src_lib_schema",
+      "c_users_jibra_desktop_1_testing_src_lib_seo",
+      "c_users_jibra_desktop_1_testing_src_styles_global_css",
+      "src_components_breadcrumbs",
+      "src_components_breadcrumbs_allitems",
+      "src_components_communitygrid",
+      "src_components_emptystate",
+      "src_components_header",
+      "src_components_safetynotice",
+      "src_config_site",
+      "src_config_site_siteconfig",
+      "src_layouts_baselayout",
+      "src_layouts_baselayout_seo",
+      "src_layouts_directorylayout",
+      "src_layouts_directorylayout_if",
+      "src_lib_communities_getcommunitiesbycategory",
+      "src_lib_schema",
+      "src_lib_schema_breadcrumbitem",
+      "src_lib_schema_generatebreadcrumbschema",
+      "src_lib_schema_generatecollectionpageschema",
+      "src_lib_schema_generatecommunitydetailschema",
+      "src_lib_schema_generatewebsiteschema",
+      "src_lib_seo",
+      "src_lib_seo_formatpagetitle",
+      "src_lib_seo_getcanonicalurl",
+      "src_lib_seo_getseometadata",
+      "src_lib_seo_seoprops",
+      "src_pages_about",
+      "src_pages_category_slug",
+      "src_pages_category_slug_communities",
+      "src_pages_category_slug_getstaticpaths",
+      "src_pages_category_slug_schema",
+      "src_pages_contact",
+      "src_pages_contact_breadcrumbs",
+      "src_pages_disclaimer",
+      "src_pages_editorial_policy",
+      "src_pages_new",
+      "src_pages_new_recentcommunities",
+      "src_pages_new_schema",
+      "src_pages_platform_slug",
+      "src_pages_platform_slug_communities",
+      "src_pages_platform_slug_getstaticpaths",
+      "src_pages_platform_slug_schema",
+      "src_pages_privacy",
+      "src_pages_recently_updated",
+      "src_pages_recently_updated_checkedcommunities",
+      "src_pages_recently_updated_schema",
+      "src_pages_report",
+      "src_pages_report_breadcrumbs",
+      "src_pages_report_success",
+      "src_pages_safety",
+      "src_pages_submit_success",
+      "src_pages_tag_slug",
+      "src_pages_tag_slug_communities",
+      "src_pages_tag_slug_schema",
+      "src_pages_terms"
+    ],
+    "1": [
+      "google_generative_ai",
+      "package_dependencies_google_generative_ai",
+      "scripts_classify_classifycommunity",
+      "scripts_classify_classifycommunity_classifycommunitywithgemini",
+      "scripts_classify_classifycommunity_fallbackheuristicclassification",
+      "scripts_classify_normalizemetadata",
+      "scripts_classify_normalizemetadata_detectsafetyflags",
+      "scripts_classify_normalizemetadata_sanitizeplaintext",
+      "scripts_discover_discoverysources",
+      "scripts_discover_discoverysources_discoveryprovider",
+      "scripts_discover_discoverysources_discoveryprovider_isavailable",
+      "scripts_discover_discoverysources_discoveryprovider_search",
+      "scripts_discover_discoverysources_discoveryresult",
+      "scripts_discover_discoverysources_manualseedprovider",
+      "scripts_discover_discoverysources_manualseedprovider_isavailable",
+      "scripts_discover_discoverysources_manualseedprovider_search",
+      "scripts_discover_geminisearch",
+      "scripts_discover_geminisearch_geminigooglesearchprovider",
+      "scripts_discover_geminisearch_geminigooglesearchprovider_isavailable",
+      "scripts_discover_geminisearch_geminigooglesearchprovider_search",
+      "scripts_discover_generatequeries",
+      "scripts_discover_generatequeries_generatesearchqueries",
+      "scripts_discover_generatequeries_searchquery",
+      "scripts_discover_index",
+      "scripts_discover_index_isdryrun",
+      "scripts_discover_index_limitindex",
+      "scripts_discover_index_rundiscovery",
+      "scripts_discover_parsecandidates",
+      "scripts_discover_parsecandidates_candidatediscovery",
+      "scripts_discover_parsecandidates_extractcandidateurls",
+      "scripts_utilities_loadenv",
+      "scripts_utilities_loadenv_loadenv",
+      "src_config_discovery",
+      "src_config_discovery_discoveryconfig",
+      "src_config_platforms",
+      "src_config_platforms_detectplatformfromurl",
+      "src_config_platforms_getactiveplatforms",
+      "src_lib_urls",
+      "src_lib_urls_extractcommunityidentifier",
+      "src_lib_urls_generateslug",
+      "src_lib_urls_normalizeinviteurl",
+      "src_types_community_platformconfig",
+      "src_types_community_platformid",
+      "tests_urls_test"
+    ],
+    "2": [
+      "package",
+      "package_description",
+      "package_devdependencies",
+      "package_devdependencies_tsx",
+      "package_devdependencies_types_node",
+      "package_devdependencies_typescript",
+      "package_devdependencies_vitest",
+      "package_name",
+      "package_scripts",
+      "package_scripts_approve",
+      "package_scripts_astro",
+      "package_scripts_build",
+      "package_scripts_data_stats",
+      "package_scripts_dev",
+      "package_scripts_discover",
+      "package_scripts_lint",
+      "package_scripts_preview",
+      "package_scripts_start",
+      "package_scripts_test",
+      "package_scripts_test_watch",
+      "package_scripts_typecheck",
+      "package_scripts_validate_data",
+      "package_scripts_validate_links",
+      "package_type",
+      "package_version",
+      "tsx",
+      "types_node",
+      "typescript",
+      "vitest"
+    ],
+    "3": [
+      "c_users_jibra_desktop_1_testing_src_lib_filters",
+      "scripts_classify_classifycommunity_classificationresult",
+      "scripts_utilities_stats",
+      "scripts_utilities_stats_rundatastats",
+      "src_components_filterbar",
+      "src_components_filterbar_activeplatforms",
+      "src_lib_filters",
+      "src_lib_filters_filterandsortcommunities",
+      "src_lib_filters_sortcommunities",
+      "src_lib_search",
+      "src_lib_search_normalizesearchtext",
+      "src_lib_search_searchcommunities",
+      "src_pages_communities_index",
+      "src_pages_communities_index_allpublished",
+      "src_pages_communities_index_filtered",
+      "src_pages_communities_index_schema",
+      "src_types_community",
+      "src_types_community_accesstype",
+      "src_types_community_community",
+      "src_types_community_communitytype",
+      "src_types_community_discoverymethod",
+      "src_types_community_filteroptions",
+      "src_types_community_sortoption",
+      "src_types_community_verificationstatus",
+      "tests_deduplicate_test",
+      "tests_deduplicate_test_mockdatabase",
+      "tests_filters_test",
+      "tests_filters_test_samplelist"
+    ],
+    "4": [
+      "c_users_jibra_desktop_1_testing_src_config_platforms",
+      "c_users_jibra_desktop_1_testing_src_lib_dates",
+      "c_users_jibra_desktop_1_testing_src_types_community",
+      "scripts_utilities_approve",
+      "scripts_utilities_approve_runapprove",
+      "src_components_communitycard",
+      "src_components_platformbadge",
+      "src_components_platformbadge_config",
+      "src_components_statusbadge",
+      "src_components_verificationbadge",
+      "src_config_platforms_getplatformbyid",
+      "src_lib_dates",
+      "src_lib_dates_formatdate",
+      "src_lib_dates_getcurrentisotimestamp",
+      "src_lib_dates_isvalidisodate",
+      "src_pages_group_slug",
+      "src_pages_group_slug_breadcrumbs",
+      "src_pages_group_slug_breadcrumbschema",
+      "src_pages_group_slug_categoryconfig",
+      "src_pages_group_slug_communityschema",
+      "src_pages_group_slug_platformconfig",
+      "src_pages_group_slug_relatedcommunities",
+      "src_pages_how_we_verify"
+    ],
+    "5": [
+      "c_users_jibra_desktop_1_testing_src_config_categories",
+      "src_components_adplaceholder",
+      "src_components_categorybadge",
+      "src_components_categorybadge_config",
+      "src_components_searchbox",
+      "src_config_categories",
+      "src_config_categories_categories",
+      "src_config_categories_getallcategoryslugs",
+      "src_config_categories_getcategorybyslug",
+      "src_config_platforms_platforms",
+      "src_lib_communities_getrecentlychecked",
+      "src_pages_404",
+      "src_pages_index",
+      "src_pages_index_featuredlistings",
+      "src_pages_index_recentadditions",
+      "src_pages_index_recentlychecked",
+      "src_pages_index_stats",
+      "src_pages_index_websiteschema",
+      "src_pages_submit",
+      "src_pages_submit_breadcrumbs",
+      "src_types_community_categoryconfig"
+    ],
+    "6": [
+      "src_components_footer",
+      "src_components_footer_stats",
+      "src_lib_communities",
+      "src_lib_communities_allcommunities",
+      "src_lib_communities_getallcommunities",
+      "src_lib_communities_getalltagswithcounts",
+      "src_lib_communities_getcommunitiesbyplatform",
+      "src_lib_communities_getcommunitiesbytag",
+      "src_lib_communities_getcommunitybyid",
+      "src_lib_communities_getcommunitybyslug",
+      "src_lib_communities_getdatasetstats",
+      "src_lib_communities_getfeaturedcommunities",
+      "src_lib_communities_getpendingcommunities",
+      "src_lib_communities_getpublishedcommunities",
+      "src_lib_communities_getrecentlyadded",
+      "src_lib_communities_getrelatedcommunities",
+      "src_lib_communities_pendingcommunities",
+      "src_lib_communities_publishedcommunities",
+      "src_pages_group_slug_getstaticpaths",
+      "src_pages_tag_slug_getstaticpaths",
+      "tests_communities_test"
+    ],
+    "7": [
+      "ref_astro_config_mjs",
+      "ref_astro_tsconfigs_strict",
+      "ref_scripts",
+      "ref_src",
+      "ref_tests",
+      "tsconfig",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_baseurl",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_paths",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target",
+      "tsconfig_extends",
+      "tsconfig_include"
+    ],
+    "8": [
+      "scripts_validate_discord",
+      "scripts_validate_discord_validatediscordlink",
+      "scripts_validate_generic",
+      "scripts_validate_generic_validategenericlink",
+      "scripts_validate_index",
+      "scripts_validate_index_runlinkvalidation",
+      "scripts_validate_telegram",
+      "scripts_validate_telegram_validatetelegramlink",
+      "scripts_validate_validateurl",
+      "scripts_validate_validateurl_linkvalidationresult",
+      "scripts_validate_validateurl_performhttplinkcheck",
+      "scripts_validate_whatsapp",
+      "scripts_validate_whatsapp_validatewhatsapplink",
+      "src_types_community_linkstatus"
+    ],
+    "9": [
+      "astro",
+      "astrojs_sitemap",
+      "astrojs_tailwind",
+      "package_dependencies",
+      "package_dependencies_astro",
+      "package_dependencies_astrojs_sitemap",
+      "package_dependencies_astrojs_tailwind",
+      "package_dependencies_tailwindcss",
+      "package_dependencies_zod",
+      "tailwindcss",
+      "zod"
+    ],
+    "10": [
+      "src_components_pagination",
+      "src_components_pagination_getpageurl"
+    ],
+    "11": [
+      "astro_config"
+    ],
+    "12": [
+      "tailwind_config"
+    ],
+    "13": [
+      "tests_schema_test"
+    ]
+  },
+  "cohesion": {
+    "0": 0.07320024198427103,
+    "1": 0.10993657505285412,
+    "2": 0.06896551724137931,
+    "3": 0.13756613756613756,
+    "4": 0.1422924901185771,
+    "5": 0.12857142857142856,
+    "6": 0.13333333333333333,
+    "7": 0.11764705882352941,
+    "8": 0.4065934065934066,
+    "9": 0.18181818181818182,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0
+  },
+  "gods": [
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 15
+    },
+    {
+      "id": "src_types_community_platformid",
+      "label": "PlatformId",
+      "degree": 15
+    },
+    {
+      "id": "src_types_community_community",
+      "label": "Community",
+      "degree": 12
+    },
+    {
+      "id": "scripts_discover_index_rundiscovery",
+      "label": "runDiscovery()",
+      "degree": 10
+    },
+    {
+      "id": "scripts_validate_validateurl_performhttplinkcheck",
+      "label": "performHttpLinkCheck()",
+      "degree": 9
+    },
+    {
+      "id": "src_config_site_siteconfig",
+      "label": "siteConfig",
+      "degree": 9
+    },
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 9
+    },
+    {
+      "id": "src_lib_schema_generatecollectionpageschema",
+      "label": "generateCollectionPageSchema()",
+      "degree": 8
+    },
+    {
+      "id": "scripts_classify_classifycommunity_classifycommunitywithgemini",
+      "label": "classifyCommunityWithGemini()",
+      "degree": 7
+    },
+    {
+      "id": "src_config_categories_categories",
+      "label": "categories",
+      "degree": 7
+    }
+  ],
+  "surprises": [
+    {
+      "source": "SearchQuery",
+      "target": "PlatformId",
+      "source_files": [
+        "scripts/discover/generateQueries.ts",
+        "src/types/community.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `SearchQuery` unexpectedly reaches hub `PlatformId`"
+    },
+    {
+      "source": "runDiscovery()",
+      "target": "getCurrentIsoTimestamp()",
+      "source_files": [
+        "scripts/discover/index.ts",
+        "src/lib/dates.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "CandidateDiscovery",
+      "target": "PlatformId",
+      "source_files": [
+        "scripts/discover/parseCandidates.ts",
+        "src/types/community.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `CandidateDiscovery` unexpectedly reaches hub `PlatformId`"
+    },
+    {
+      "source": "runApprove()",
+      "target": "getCurrentIsoTimestamp()",
+      "source_files": [
+        "scripts/utilities/approve.ts",
+        "src/lib/dates.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `runApprove()` unexpectedly reaches hub `getCurrentIsoTimestamp()`"
+    },
+    {
+      "source": "classifyCommunityWithGemini()",
+      "target": "@google/generative-ai",
+      "source_files": [
+        "scripts/classify/classifyCommunity.ts",
+        "package.json"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `@google/generative-ai` connect `discover/index.ts` to `dependencies`?",
+      "why": "High betweenness centrality (0.235) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `dependencies` to `discover/index.ts`, `scripts`?",
+      "why": "High betweenness centrality (0.234) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `PlatformId` connect `discover/index.ts` to `community.ts`, `communities.ts`?",
+      "why": "High betweenness centrality (0.159) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `name`, `type`, `version` to the rest of the system?",
+      "why": "84 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `DirectoryLayout.astro` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07320024198427103 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `discover/index.ts` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10993657505285412 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `scripts` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

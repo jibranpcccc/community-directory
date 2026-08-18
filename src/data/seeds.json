@@ -4,20 +4,20 @@
     "platform": "telegram",
     "category": "ai-tech",
     "subcategory": "Coding",
-    "notes": "React Native global discussion"
+    "notes": "React Native global community"
   },
   {
-    "url": "https://discord.gg/vuejs",
+    "url": "https://discord.gg/HBherRA",
     "platform": "discord",
     "category": "ai-tech",
     "subcategory": "Coding",
     "notes": "Vue.js official Discord server"
   },
   {
-    "url": "https://chat.whatsapp.com/L123RemoteJobsSeedExample",
-    "platform": "whatsapp",
-    "category": "online-earning-remote-work",
-    "subcategory": "Remote Jobs",
-    "notes": "Global remote developers seed"
+    "url": "https://discord.gg/grF4GTXXYm",
+    "platform": "discord",
+    "category": "ai-tech",
+    "subcategory": "Coding",
+    "notes": "Astro web framework official Discord server"
   }
 ]

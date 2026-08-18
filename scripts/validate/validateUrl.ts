@@ -6,17 +6,16 @@ export interface LinkValidationResult {
   httpStatus?: number;
   message?: string;
   checkedAt: string;
+  extractedTitle?: string;
+  extractedDescription?: string;
+  extractedMemberCount?: number | null;
 }
 
-const USER_AGENT =
-  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 (Compatible; CommunityDirectoryBot/1.0; +https://communitydirectory.netlify.app)";
+export const BOT_USER_AGENT =
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 (Compatible; CommunityHubBot/1.0; +https://communityhub-directory.netlify.app)";
 
 /**
- * Performs a cautious HTTP link check with timeout, headers, and status mapping.
- * Rules:
- * - 200-299 => active
- * - 404/410 => dead
- * - 403/429/500/503/timeout => unknown (never guess or falsely mark dead due to bot protection)
+ * Performs a basic HTTP link check with timeout and status mapping.
  */
 export async function performHttpLinkCheck(
   url: string,
@@ -28,11 +27,10 @@ export async function performHttpLinkCheck(
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
-    // Try GET request with minimal body and stream abort
     const response = await fetch(url, {
       method: "GET",
       headers: {
-        "User-Agent": USER_AGENT,
+        "User-Agent": BOT_USER_AGENT,
         Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
       },
       signal: controller.signal,
@@ -63,7 +61,6 @@ export async function performHttpLinkCheck(
       };
     }
 
-    // 403, 429, or 5xx server errors indicate anti-bot or temporary issues => mark as unknown
     return {
       url,
       status: "unknown",

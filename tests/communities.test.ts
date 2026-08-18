@@ -17,14 +17,14 @@ describe("Communities Repository Layer", () => {
   });
 
   it("finds community by slug", () => {
-    const comm = getCommunityBySlug("astro-discord");
+    const comm = getCommunityBySlug("astro-lounge-discord");
     expect(comm).toBeDefined();
-    expect(comm?.title).toBe("Astro Community");
+    expect(comm?.title).toBe("Astro Lounge");
     expect(comm?.platform).toBe("discord");
   });
 
   it("finds related communities based on category and tags", () => {
-    const comm = getCommunityBySlug("astro-discord");
+    const comm = getCommunityBySlug("astro-lounge-discord");
     if (!comm) throw new Error("Astro community not found");
 
     const related = getRelatedCommunities(comm, 2);

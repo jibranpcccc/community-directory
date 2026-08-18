@@ -2,10 +2,14 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SearchBox from "../components/SearchBox.astro";
 import CommunityGrid from "../components/CommunityGrid.astro";
+import PlatformBadge from "../components/PlatformBadge.astro";
+import CategoryBadge from "../components/CategoryBadge.astro";
+import VerificationBadge from "../components/VerificationBadge.astro";
 import SafetyNotice from "../components/SafetyNotice.astro";
 import AdPlaceholder from "../components/AdPlaceholder.astro";
 import { categories } from "../config/categories";
 import { platforms } from "../config/platforms";
+import { formatDate } from "../lib/dates";
 import {
   getFeaturedCommunities,
   getRecentlyAdded,
@@ -17,23 +21,23 @@ import { generateWebSiteSchema } from "../lib/schema";
 const stats = getDatasetStats();
 const featuredListings = getFeaturedCommunities(6);
 const recentAdditions = getRecentlyAdded(6);
-const recentlyChecked = getRecentlyChecked(6);
+const recentlyChecked = getRecentlyChecked(5);
 
 const webSiteSchema = generateWebSiteSchema();
 ---
 
 <BaseLayout
   title="Find Communities Worth Joining — Public Community Directory"
-  description="Discover, search, and browse public online communities across Telegram, WhatsApp, Discord, and more. Transparent data, zero fabricated statistics."
+  description="Discover, search, and browse public online communities across Telegram, WhatsApp, Discord, and more. Real links and transparent verification status."
   canonicalPath="/"
   jsonLd={webSiteSchema}
 >
   <!-- Hero Section -->
   <section class="relative overflow-hidden bg-gradient-to-b from-emerald-50/50 to-transparent py-16 sm:py-24 border-b border-slate-200/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800 mb-6">
-        <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        Zero Fake Metrics • Verified Public Sources
+      <div class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-800 mb-6">
+        <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+        Real Links • Transparent Verification Status
       </div>
 
       <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-6">
@@ -41,15 +45,15 @@ const webSiteSchema = generateWebSiteSchema();
       </h1>
 
       <p class="max-w-2xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed mb-8">
-        Searchable, categorized directory of publicly discoverable online communities across Telegram, WhatsApp, and Discord. No inflated stats, no fake badges.
+        A searchable directory of publicly discoverable online communities across Telegram, Discord, and WhatsApp. Verified against official sources and public channels.
       </p>
 
       <!-- Prominent Search Box -->
       <SearchBox size="lg" />
 
-      <!-- Platform Pills -->
+      <!-- Platform Navigation Pills -->
       <div class="flex flex-wrap items-center justify-center gap-2.5 mt-6">
-        <span class="text-xs font-medium text-slate-500">Popular platforms:</span>
+        <span class="text-xs font-medium text-slate-500">Browse by platform:</span>
         <a
           href="/platform/telegram"
           class="inline-flex items-center gap-1.5 rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700 hover:bg-sky-100 transition-colors"
@@ -72,7 +76,7 @@ const webSiteSchema = generateWebSiteSchema();
     </div>
   </section>
 
-  <!-- Real Dataset Statistics Counters -->
+  <!-- Real Dataset Statistics Counters (Factual & Honest) -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
     <div class="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
       <div class="text-center">
@@ -85,11 +89,11 @@ const webSiteSchema = generateWebSiteSchema();
       </div>
       <div class="text-center border-l border-slate-100">
         <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">3</div>
-        <div class="text-xs text-slate-500 font-medium mt-0.5">Active Platforms</div>
+        <div class="text-xs text-slate-500 font-medium mt-0.5">Platforms Supported</div>
       </div>
       <div class="text-center border-l border-slate-100">
-        <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600">{stats.activeLinks}</div>
-        <div class="text-xs text-slate-500 font-medium mt-0.5">Active Reachable Links</div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600">4 Tiers</div>
+        <div class="text-xs text-slate-500 font-medium mt-0.5">Verification Standards</div>
       </div>
     </div>
   </section>
@@ -97,6 +101,24 @@ const webSiteSchema = generateWebSiteSchema();
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
     <!-- Ad Space Leaderboard (Optional) -->
     <AdPlaceholder format="leaderboard" />
+
+    <!-- Featured Communities Section (Full Cards) -->
+    {
+      featuredListings.length > 0 && (
+        <section>
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Featured Communities</h2>
+              <p class="text-xs text-slate-500 mt-1">Verified official communities with public channels and developer resources</p>
+            </div>
+            <a href="/communities" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
+              Browse all →
+            </a>
+          </div>
+          <CommunityGrid communities={featuredListings} />
+        </section>
+      )
+    }
 
     <!-- Categories Grid Section -->
     <section id="categories" class="scroll-mt-20">
@@ -143,7 +165,7 @@ const webSiteSchema = generateWebSiteSchema();
       <div class="flex items-center justify-between mb-6">
         <div>
           <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Explore by Platform</h2>
-          <p class="text-xs text-slate-500 mt-1">Filter by your favorite chat apps and networks</p>
+          <p class="text-xs text-slate-500 mt-1">Filter communities by chat platform</p>
         </div>
       </div>
 
@@ -173,62 +195,83 @@ const webSiteSchema = generateWebSiteSchema();
       </div>
     </section>
 
-    <!-- Featured Communities Section -->
-    {
-      featuredListings.length > 0 && (
-        <section>
-          <div class="flex items-center justify-between mb-6">
-            <div>
-              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Featured Listings</h2>
-              <p class="text-xs text-slate-500 mt-1">Editorially curated high-quality public communities</p>
-            </div>
-            <a href="/communities" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
-              Browse all →
-            </a>
-          </div>
-          <CommunityGrid communities={featuredListings} />
-        </section>
-      )
-    }
-
-    <!-- Recently Added Communities -->
+    <!-- Recently Added Communities (Compact Format to Prevent Redundancy) -->
     <section>
       <div class="flex items-center justify-between mb-6">
         <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Recently Added</h2>
-          <p class="text-xs text-slate-500 mt-1">Newly catalogued communities from public sources</p>
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Recently Added Listings</h2>
+          <p class="text-xs text-slate-500 mt-1">New additions catalogued in the directory</p>
         </div>
-        <a href="/new" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
-          View all recent →
+        <a href="/communities" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
+          Browse directory →
         </a>
       </div>
-      <CommunityGrid communities={recentAdditions} />
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {recentAdditions.map((comm) => (
+          <a
+            href={`/group/${comm.slug}`}
+            class="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4 hover:border-emerald-300 hover:shadow-sm transition-all"
+          >
+            <div class="min-w-0 pr-3">
+              <h3 class="text-sm font-semibold text-slate-900 truncate hover:text-emerald-600">
+                {comm.title}
+              </h3>
+              <div class="flex items-center gap-2 mt-1.5">
+                <PlatformBadge platform={comm.platform} size="sm" />
+                <CategoryBadge categorySlug={comm.category} size="sm" />
+              </div>
+            </div>
+            <span class="text-xs font-semibold text-emerald-600 shrink-0">
+              View →
+            </span>
+          </a>
+        ))}
+      </div>
     </section>
 
-    <!-- Recently Checked Link Health -->
+    <!-- Recently Checked Link Audit Log (Clean List Format) -->
     <section>
       <div class="flex items-center justify-between mb-6">
         <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Recently Checked</h2>
-          <p class="text-xs text-slate-500 mt-1">Communities with verified link availability timestamps</p>
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Recent Link Audits</h2>
+          <p class="text-xs text-slate-500 mt-1">Status checks performed across index links</p>
         </div>
-        <a href="/recently-updated" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
-          View all checked →
+        <a href="/how-we-verify" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
+          Verification protocol →
         </a>
       </div>
-      <CommunityGrid communities={recentlyChecked} />
+      
+      <div class="divide-y divide-slate-100 rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+        {recentlyChecked.map((comm) => (
+          <div class="flex flex-wrap items-center justify-between gap-3 p-4 sm:px-6 hover:bg-slate-50/50">
+            <div class="flex items-center gap-3 min-w-0">
+              <PlatformBadge platform={comm.platform} size="sm" />
+              <a href={`/group/${comm.slug}`} class="text-sm font-semibold text-slate-900 hover:text-emerald-600 truncate">
+                {comm.title}
+              </a>
+            </div>
+            <div class="flex items-center gap-3">
+              <VerificationBadge status={comm.verificationStatus} size="sm" />
+              <span class="text-xs text-slate-400">
+                Checked {formatDate(comm.lastCheckedAt)}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
 
     <!-- Safety Notice Banner -->
     <SafetyNotice type="general" />
 
     <!-- Submission CTA Banner -->
-    <section class="rounded-3xl border border-emerald-200 bg-gradient-to-br from-emerald-500 to-teal-700 p-8 sm:p-12 text-white text-center shadow-lg">
+    <section class="rounded-3xl border border-emerald-200 bg-gradient-to-br from-emerald-600 to-teal-800 p-8 sm:p-12 text-white text-center shadow-lg">
       <h2 class="text-2xl sm:text-3xl font-extrabold mb-3">
         Run a Public Online Community?
       </h2>
       <p class="text-emerald-100 max-w-xl mx-auto text-xs sm:text-sm leading-relaxed mb-6">
-        Submit your community to be catalogued in the directory. Every submission is reviewed for safety and verified before publication.
+        Submit your community to be catalogued in the directory. Every submission is reviewed before publication. Verification status is shown transparently on each listing.
       </p>
       <a
         href="/submit"

@@ -42,6 +42,7 @@ const schema = generateCollectionPageSchema(
   ]}
   canonicalPath={`/tag/${tag}`}
   jsonLd={schema}
+  noindex={communities.length < 5}
 >
   <CommunityGrid
     communities={communities}

@@ -18,6 +18,8 @@ export default defineConfig({
       filter: (page) =>
         !page.includes('/submit-success') &&
         !page.includes('/report-success') &&
+        !page.includes('/new') &&
+        !page.includes('/recently-updated') &&
         !page.includes('/404'),
     }),
   ],
