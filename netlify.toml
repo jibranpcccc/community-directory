@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  PUBLIC_SITE_URL = "https://communityhub-directory.netlify.app"
 
 [[headers]]
   for = "/*"

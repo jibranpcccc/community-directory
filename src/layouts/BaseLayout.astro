@@ -41,7 +41,7 @@ const seo = getSeoMetadata({
     <title>{seo.title}</title>
     <meta name="description" content={seo.description} />
     <link rel="canonical" href={seo.canonicalUrl} />
-    {seo.noindex && <meta name="robots" content="noindex, nofollow" />}
+    {seo.noindex && <meta name="robots" content="noindex, follow" />}
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content={seo.type} />
