@@ -37,6 +37,7 @@ const schema = generateCollectionPageSchema(
   ]}
   canonicalPath={`/category/${category.slug}`}
   jsonLd={schema}
+  noindex={communities.length === 0}
 >
   <!-- Subcategories & Tags Bar -->
   <div class="mb-6 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">

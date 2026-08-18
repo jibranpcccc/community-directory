@@ -1,6 +1,9 @@
 ---
 import DirectoryLayout from "../layouts/DirectoryLayout.astro";
 import { siteConfig } from "../config/site";
+import { generateOrganizationSchema } from "../lib/schema";
+
+const organizationSchema = generateOrganizationSchema();
 ---
 
 <DirectoryLayout
@@ -11,6 +14,7 @@ import { siteConfig } from "../config/site";
     { name: "About", item: "/about" },
   ]}
   canonicalPath="/about"
+  jsonLd={organizationSchema}
 >
   <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base text-slate-700 leading-relaxed">
     <section class="space-y-3">

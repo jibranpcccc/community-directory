@@ -2,6 +2,7 @@ import "../utilities/loadEnv";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { categories } from "../../src/config/categories";
 import { discoveryConfig } from "../../src/config/discovery";
+import { geminiKeyPool } from "../utilities/geminiPool";
 import { sanitizePlainText, detectSafetyFlags } from "./normalizeMetadata";
 import type { PlatformId, AccessType, CommunityType } from "../../src/types/community";
 
@@ -30,9 +31,12 @@ export async function classifyCommunityWithGemini(candidate: {
   suggestedCategory?: string;
   suggestedSubcategory?: string;
 }): Promise<ClassificationResult> {
-  const apiKey = process.env.GEMINI_API_KEY;
+  let poolRetries = Math.min(geminiKeyPool.getPoolSize(), 5);
 
-  if (apiKey) {
+  while (poolRetries > 0) {
+    const apiKey = geminiKeyPool.getKey();
+    if (!apiKey) break;
+
     try {
       const genAI = new GoogleGenerativeAI(apiKey);
       const model = genAI.getGenerativeModel({
@@ -70,27 +74,7 @@ STRICT RULES:
   "confidence": 0.0 to 1.0
 }`;
 
-      let response;
-      let retries = 2;
-      while (retries >= 0) {
-        try {
-          response = await model.generateContent(prompt);
-          break;
-        } catch (e: any) {
-          if (e.message?.includes("429") && retries > 0) {
-            console.log(`    ⏳ Gemini classification rate limit (Free tier). Pausing 12s...`);
-            await new Promise((r) => setTimeout(r, 12000));
-            retries--;
-            continue;
-          }
-          throw e;
-        }
-      }
-
-      if (!response) {
-        return fallbackHeuristicClassification(candidate);
-      }
-
+      const response = await model.generateContent(prompt);
       const text = response.response.text();
       const parsed = JSON.parse(text);
 
@@ -116,7 +100,13 @@ STRICT RULES:
         confidence: typeof parsed.confidence === "number" ? parsed.confidence : 0.8,
       };
     } catch (e: any) {
+      if (e.message?.includes("429") || e.message?.includes("Quota exceeded") || e.message?.includes("RESOURCE_EXHAUSTED")) {
+        geminiKeyPool.markRateLimited(apiKey);
+        poolRetries--;
+        continue;
+      }
       console.warn(`[classify] Gemini classification failed (${e.message}), using heuristic fallback.`);
+      poolRetries--;
     }
   }
 

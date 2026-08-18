@@ -1,6 +1,26 @@
 ---
 import DirectoryLayout from "../layouts/DirectoryLayout.astro";
 import SafetyNotice from "../components/SafetyNotice.astro";
+import { generateFAQSchema } from "../lib/schema";
+
+const faqSchema = generateFAQSchema([
+  {
+    question: "Does listing a community mean CommunityHub endorses it?",
+    answer: "No. Our directory catalogs publicly discoverable online communities. Listing a community does not constitute endorsement of its administrators, members, viewpoints, or products.",
+  },
+  {
+    question: "How do I protect my crypto wallet and credentials in communities?",
+    answer: "Never share seed phrases or private keys. Legitimate support staff will never ask for credentials. Beware of unsolicited direct messages (DMs) from impersonators and avoid downloading unverified files.",
+  },
+  {
+    question: "Are trading signals and financial advice guaranteed?",
+    answer: "No. Be skeptical of groups promising guaranteed profits or risk-free returns. All financial markets involve risk of capital loss.",
+  },
+  {
+    question: "How do I report a compromised or unsafe community?",
+    answer: "If you encounter a listing that promotes illegal activities, malware, or scams, submit an immediate report via our /report page for moderator review.",
+  },
+]);
 ---
 
 <DirectoryLayout
@@ -11,6 +31,7 @@ import SafetyNotice from "../components/SafetyNotice.astro";
     { name: "Safety Guide", item: "/safety" },
   ]}
   canonicalPath="/safety"
+  jsonLd={faqSchema}
 >
   <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base text-slate-700 leading-relaxed">
     <SafetyNotice type="general" />

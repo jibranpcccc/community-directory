@@ -73,6 +73,39 @@ export function generateCollectionPageSchema(
 }
 
 /**
+ * Generates Organization JSON-LD schema for the site.
+ */
+export function generateOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteConfig.name,
+    url: getCanonicalUrl("/"),
+    logo: getCanonicalUrl("/favicon.svg"),
+    description: siteConfig.description,
+    sameAs: [siteConfig.links.github],
+  };
+}
+
+/**
+ * Generates FAQPage JSON-LD schema.
+ */
+export function generateFAQSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+/**
  * Generates WebPage schema for individual community listing.
  * Strictly adheres to non-fabricated data; no fake aggregateRating or product schema.
  */
