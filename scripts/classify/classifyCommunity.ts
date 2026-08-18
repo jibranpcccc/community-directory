@@ -144,11 +144,11 @@ export function fallbackHeuristicClassification(candidate: {
   const category = candidate.suggestedCategory || "ai-tech";
   const subcategory = candidate.suggestedSubcategory || null;
 
-  const desc = candidate.evidenceText
+  const desc = candidate.evidenceText && candidate.evidenceText.trim().length > 5
     ? sanitizePlainText(candidate.evidenceText, 250)
-    : `A public ${candidate.platform} community listed under ${category}.`;
+    : null;
 
-  const flags = detectSafetyFlags(`${title} ${desc}`);
+  const flags = detectSafetyFlags(`${title} ${desc || ""}`);
 
   return {
     title: sanitizePlainText(title, 80) || "Community",

@@ -12,6 +12,7 @@ import { classifyCommunityWithGemini } from "../classify/classifyCommunity";
 import { validateDiscordLink } from "../validate/discord";
 import { validateTelegramLink } from "../validate/telegram";
 import { validateWhatsappLink } from "../validate/whatsapp";
+import { verifySourceMentionsInvite } from "../validate/verifySource";
 import type { LinkValidationResult } from "../validate/validateUrl";
 import { atomicWriteJson } from "../data/mergeListings";
 import { getCurrentIsoTimestamp } from "../../src/lib/dates";
@@ -237,12 +238,17 @@ async function runDiscovery() {
 
     batchSeenUrls.add(normalizedUrl);
 
-    // E. Classification & Tagging
+    // E. Strict Source Verification: Fetch independent source page and check for invite link presence
+    const sourceCheck = await verifySourceMentionsInvite(cand.sourceUrl, normalizedUrl);
+    const validSource = sourceCheck.sourceUrl;
+    const isSourceConfirmed = sourceCheck.isConfirmed;
+
+    // F. Classification & Tagging (Taxonomy only - never fabricates description)
     console.log(`  🔍 Classifying [${cand.platform.toUpperCase()}] "${realTitle || normalizedUrl}"...`);
     const classification = await classifyCommunityWithGemini({
       inviteUrl: normalizedUrl,
       platform: cand.platform,
-      evidenceText: (realDesc || realTitle || "").slice(0, 150),
+      evidenceText: (realDesc || (isSourceConfirmed ? sourceCheck.evidenceSnippet || "" : "") || realTitle || "").slice(0, 150),
       suggestedCategory: cand.category,
       suggestedSubcategory: cand.subcategory,
     });
@@ -251,37 +257,19 @@ async function runDiscovery() {
     const slug = generateSlug(finalTitle, cand.platform, existingSlugs);
     existingSlugs.push(slug);
 
-    // Determine clean source URL (strictly reject search engines & Google / Vertex redirects)
-    let validSource = cand.sourceUrl;
-    if (isSearchEngineOrRedirectUrl(validSource) || !validSource.startsWith("http")) {
-      validSource = normalizedUrl;
-    }
-
-    // Source-confirmed requires a real independent domain (not a chat invite or search redirect)
-    const isSourceConfirmed = Boolean(
-      validSource &&
-      validSource !== normalizedUrl &&
-      !isSearchEngineOrRedirectUrl(validSource) &&
-      !validSource.includes("discord.gg") &&
-      !validSource.includes("t.me") &&
-      !validSource.includes("chat.whatsapp.com") &&
-      validSource.startsWith("http")
-    );
-
-    // Clean description: Real platform description > classification description (if clean) > null
+    // G. Zero-Fabrication Description Policy
+    // Priority: 1. Real platform extracted description > 2. Verified source page snippet > 3. null
     let finalDescription: string | null = null;
     if (realDesc && realDesc.length > 5) {
       finalDescription = realDesc.slice(0, 400);
-    } else if (
-      classification.description &&
-      classification.description.length > 5 &&
-      !classification.description.includes("http") &&
-      !classification.description.includes("*")
-    ) {
-      finalDescription = classification.description.slice(0, 400);
+    } else if (sourceCheck.isConfirmed && sourceCheck.evidenceSnippet && sourceCheck.evidenceSnippet.length > 15) {
+      finalDescription = sourceCheck.evidenceSnippet.slice(0, 400);
     } else {
       finalDescription = null;
     }
+
+    // H. Accurate Member Count Source Attribution (Discord invite/API or Telegram preview, never external discovery source)
+    const memberCountSourceUrl = realMembers !== null ? normalizedUrl : null;
 
     const community: Community = {
       id: slug,
@@ -298,7 +286,7 @@ async function runDiscovery() {
       accessType: classification.accessType,
       communityType: classification.communityType,
       memberCount: realMembers,
-      memberCountSource: realMembers ? (validSource.startsWith("http") ? validSource : normalizedUrl) : null,
+      memberCountSource: memberCountSourceUrl,
       memberCountCheckedAt: realMembers ? now : null,
       verificationStatus: isSourceConfirmed ? "source-confirmed" : "unverified",
       linkStatus: "active", // Strictly active
