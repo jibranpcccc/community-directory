@@ -98,6 +98,13 @@ export default defineConfig({
         }
         return true;
       },
+      serialize: (item) => {
+        const siteUrl = (process.env.PUBLIC_SITE_URL || 'https://communityhub-directory.netlify.app').replace(/\/+$/, '');
+        if (item.url !== `${siteUrl}/` && item.url.endsWith('/')) {
+          item.url = item.url.replace(/\/+$/, '');
+        }
+        return item;
+      },
     }),
   ],
   build: {

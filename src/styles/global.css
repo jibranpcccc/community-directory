@@ -12,6 +12,12 @@
     @apply bg-[#FAF8F5] text-black antialiased min-h-screen flex flex-col selection:bg-[#FEF08A] selection:text-black;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   }
+
+  /* Accessible High-Contrast Keyboard Focus Indicators */
+  :focus-visible {
+    outline: 3px solid #000000 !important;
+    outline-offset: 2px !important;
+  }
 }
 
 /* Neo-Brutalist Hard Drop Shadows & Utilities */
