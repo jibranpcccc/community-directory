@@ -5,42 +5,42 @@ import { getDatasetStats } from "../lib/communities";
 const stats = getDatasetStats();
 ---
 
-<footer class="mt-auto border-t border-slate-200 bg-white text-slate-600">
+<footer class="mt-auto border-t-[3px] border-black bg-white text-black">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
       <!-- Brand & Mission Column -->
       <div class="lg:col-span-2 space-y-4">
-        <a href="/" class="flex items-center gap-2">
-          <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600 text-white font-bold text-sm">
+        <a href="/" class="flex items-center gap-2.5">
+          <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-[#FEF08A] text-black border-2 border-black shadow-[2px_2px_0px_0px_#000] font-black text-sm">
             CH
           </div>
-          <span class="text-base font-bold text-slate-900">{siteConfig.name}</span>
+          <span class="text-base font-black text-black">{siteConfig.name}</span>
         </a>
-        <p class="text-xs leading-relaxed text-slate-500 max-w-sm">
+        <p class="text-xs font-medium leading-relaxed text-slate-700 max-w-sm">
           A zero-hallucination, structured directory cataloguing publicly discoverable online communities. We do not invent stats, reviews, or fake badges.
         </p>
 
-        <div class="rounded-xl border border-slate-100 bg-slate-50 p-3 text-xs text-slate-600 space-y-1">
+        <div class="rounded-xl border-2 border-black bg-[#FEF9C3] p-3.5 text-xs text-black font-bold space-y-1.5 shadow-[2px_2px_0px_0px_#000]">
           <div class="flex items-center justify-between">
             <span>Listed Communities:</span>
-            <strong class="text-slate-900 font-semibold">{stats.totalPublished}</strong>
+            <strong class="text-black font-black text-sm">{stats.totalPublished}</strong>
           </div>
           <div class="flex items-center justify-between">
             <span>Platforms Supported:</span>
-            <span class="text-slate-700 font-medium">3</span>
+            <span class="text-black font-black">3 (Discord, TG, WA)</span>
           </div>
         </div>
       </div>
 
       <!-- Platforms Column -->
       <div>
-        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-900 mb-3">
+        <h4 class="text-xs font-black uppercase tracking-wider text-black bg-[#DDD6FE] px-2 py-0.5 rounded border border-black shadow-[1px_1px_0px_0px_#000] inline-block mb-3">
           Platforms
         </h4>
-        <ul class="space-y-2 text-xs">
+        <ul class="space-y-2 text-xs font-bold">
           {siteConfig.footerNav.directory.map((item) => (
             <li>
-              <a href={item.href} class="hover:text-emerald-600 transition-colors">
+              <a href={item.href} class="hover:underline text-black">
                 {item.label}
               </a>
             </li>
@@ -50,13 +50,13 @@ const stats = getDatasetStats();
 
       <!-- Categories Column -->
       <div>
-        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-900 mb-3">
+        <h4 class="text-xs font-black uppercase tracking-wider text-black bg-[#FEF08A] px-2 py-0.5 rounded border border-black shadow-[1px_1px_0px_0px_#000] inline-block mb-3">
           Categories
         </h4>
-        <ul class="space-y-2 text-xs">
+        <ul class="space-y-2 text-xs font-bold">
           {siteConfig.footerNav.categories.map((item) => (
             <li>
-              <a href={item.href} class="hover:text-emerald-600 transition-colors">
+              <a href={item.href} class="hover:underline text-black">
                 {item.label}
               </a>
             </li>
@@ -66,13 +66,13 @@ const stats = getDatasetStats();
 
       <!-- Trust & Legal Column -->
       <div>
-        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-900 mb-3">
+        <h4 class="text-xs font-black uppercase tracking-wider text-black bg-[#A7F3D0] px-2 py-0.5 rounded border border-black shadow-[1px_1px_0px_0px_#000] inline-block mb-3">
           Trust & Legal
         </h4>
-        <ul class="space-y-2 text-xs">
+        <ul class="space-y-2 text-xs font-bold">
           {siteConfig.footerNav.trustAndLegal.map((item) => (
             <li>
-              <a href={item.href} class="hover:text-emerald-600 transition-colors">
+              <a href={item.href} class="hover:underline text-black">
                 {item.label}
               </a>
             </li>
@@ -82,17 +82,17 @@ const stats = getDatasetStats();
     </div>
 
     <!-- Bottom Disclaimer & Trademark -->
-    <div class="mt-12 pt-8 border-t border-slate-100 text-xs text-slate-400 space-y-3">
+    <div class="mt-12 pt-8 border-t-2 border-black/10 text-xs text-slate-600 font-medium space-y-3">
       <p class="leading-relaxed">
         <strong>Disclaimer:</strong> {siteConfig.name} is an independent informational directory. Not affiliated with, endorsed by, or sponsored by Telegram, WhatsApp, Discord, or their parent entities. All trademarks belong to their respective holders. Inclusion in this directory does not constitute an endorsement or warranty of safety.
       </p>
-      <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+      <div class="flex flex-wrap items-center justify-between gap-4 pt-2 font-bold text-black">
         <span>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</span>
         <div class="flex gap-4">
-          <a href="/safety" class="hover:text-slate-600">Safety Guide</a>
-          <a href="/disclaimer" class="hover:text-slate-600">Disclaimer</a>
-          <a href="/privacy" class="hover:text-slate-600">Privacy</a>
-          <a href="/terms" class="hover:text-slate-600">Terms</a>
+          <a href="/safety" class="hover:underline">Safety Guide</a>
+          <a href="/disclaimer" class="hover:underline">Disclaimer</a>
+          <a href="/privacy" class="hover:underline">Privacy</a>
+          <a href="/terms" class="hover:underline">Terms</a>
         </div>
       </div>
     </div>

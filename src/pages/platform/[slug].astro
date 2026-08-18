@@ -41,13 +41,13 @@ const schema = generateCollectionPageSchema(
   noindex={communities.length === 0}
 >
   <!-- Non-Affiliation Notice -->
-  <div class="mb-6 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs text-slate-600">
+  <div class="mb-6 neo-card p-4 bg-white text-xs font-bold text-black">
     ℹ️ <strong>Platform Notice:</strong> This page indexes publicly discoverable {platform.name} invite links and channels. We are an independent directory not affiliated with or endorsed by {platform.name}.
   </div>
 
   <div class="flex items-center justify-between mb-4">
-    <span class="text-xs font-medium text-slate-500">
-      Showing <strong>{communities.length}</strong> listed communities on {platform.name}
+    <span class="text-xs font-bold text-black">
+      Showing <strong class="underline font-black">{communities.length}</strong> listed communities on {platform.name}
     </span>
   </div>
 

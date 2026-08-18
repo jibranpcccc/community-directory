@@ -14,11 +14,11 @@ const { community } = Astro.props;
 ---
 
 <article
-  class="group flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md"
+  class="neo-card flex flex-col justify-between p-5"
 >
   <div>
     <!-- Badges Row -->
-    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5">
       <div class="flex items-center gap-1.5">
         <PlatformBadge platform={community.platform} size="sm" showLink={true} />
         <CategoryBadge category={community.category} size="sm" showLink={true} />
@@ -27,24 +27,24 @@ const { community } = Astro.props;
     </div>
 
     <!-- Title & Link -->
-    <h3 class="text-base font-semibold text-slate-900 group-hover:text-emerald-600 transition-colors mb-2">
+    <h3 class="text-lg font-black text-black hover:text-[#059669] transition-colors mb-2">
       <a href={`/group/${community.slug}`} class="focus:outline-none">
         {community.title}
       </a>
     </h3>
 
     <!-- Description -->
-    <p class="text-xs leading-relaxed text-slate-600 line-clamp-2 mb-4">
-      {community.description || `A public ${community.platform} community in ${community.category}.`}
+    <p class="text-xs leading-relaxed text-slate-700 font-medium line-clamp-2 mb-4">
+      {community.description || `A public ${community.platform} community catalogued under ${community.category}.`}
     </p>
 
     <!-- Tags -->
     {community.tags && community.tags.length > 0 && (
-      <div class="flex flex-wrap gap-1 mb-4">
+      <div class="flex flex-wrap gap-1.5 mb-4">
         {community.tags.slice(0, 3).map((tag) => (
           <a
             href={`/tag/${tag.toLowerCase()}`}
-            class="rounded bg-slate-50 px-2 py-0.5 text-[11px] text-slate-500 hover:bg-slate-100 hover:text-slate-700 transition-colors"
+            class="rounded-md border border-black bg-[#FAF8F5] px-2 py-0.5 text-[11px] font-bold text-black hover:bg-[#FEF08A] transition-colors shadow-[1px_1px_0px_0px_#000]"
           >
             #{tag}
           </a>
@@ -54,14 +54,14 @@ const { community } = Astro.props;
   </div>
 
   <!-- Footer Metadata & Actions -->
-  <div class="pt-3 border-t border-slate-100 mt-2">
-    <div class="flex items-center justify-between text-[11px] text-slate-500 mb-3">
+  <div class="pt-3.5 border-t-2 border-black/10 mt-2">
+    <div class="flex items-center justify-between text-[11px] text-slate-600 font-bold mb-3.5">
       <div class="flex items-center gap-2">
         <VerificationBadge status={community.verificationStatus} size="sm" />
       </div>
 
       {community.lastCheckedAt && (
-        <span title={`Last link check: ${community.lastCheckedAt}`}>
+        <span title={`Last link check: ${community.lastCheckedAt}`} class="text-slate-500 font-medium">
           Checked {formatDate(community.lastCheckedAt)}
         </span>
       )}
@@ -69,16 +69,16 @@ const { community } = Astro.props;
 
     <!-- Sourced Member Count (Only shown if genuinely verified from source) -->
     {typeof community.memberCount === "number" && (
-      <div class="text-xs text-slate-600 mb-3">
-        <strong>{community.memberCount.toLocaleString()}</strong> sourced members
+      <div class="text-xs text-black font-bold mb-3">
+        ⚡ <strong>{community.memberCount.toLocaleString()}</strong> verified members
       </div>
     )}
 
     <!-- Action Buttons -->
-    <div class="grid grid-cols-2 gap-2">
+    <div class="grid grid-cols-2 gap-2.5">
       <a
         href={`/group/${community.slug}`}
-        class="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-100 transition-colors"
+        class="neo-button bg-white hover:bg-slate-100 text-black px-3 py-2 text-xs"
       >
         View Details
       </a>
@@ -86,11 +86,11 @@ const { community } = Astro.props;
         href={community.inviteUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center justify-center gap-1 rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-emerald-700 transition-colors"
+        class="neo-button bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black px-3 py-2 text-xs"
       >
-        <span>Join</span>
-        <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        <span>Join Now</span>
+        <svg class="h-3.5 w-3.5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
         </svg>
       </a>
     </div>

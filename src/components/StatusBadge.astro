@@ -11,37 +11,37 @@ const { status, size = "md" } = Astro.props;
 const config: Record<LinkStatus, { label: string; class: string; dot: string }> = {
   active: {
     label: "Active Link",
-    class: "bg-emerald-50 text-emerald-700 border-emerald-200",
-    dot: "bg-emerald-500",
+    class: "bg-[#A7F3D0] text-black border-2 border-black shadow-[1.5px_1.5px_0px_0px_#000]",
+    dot: "bg-black",
   },
   unknown: {
     label: "Unchecked",
-    class: "bg-amber-50 text-amber-700 border-amber-200",
-    dot: "bg-amber-500",
+    class: "bg-[#FEF08A] text-black border-2 border-black shadow-[1.5px_1.5px_0px_0px_#000]",
+    dot: "bg-black",
   },
   dead: {
     label: "Link Dead",
-    class: "bg-rose-50 text-rose-700 border-rose-200",
-    dot: "bg-rose-500",
+    class: "bg-[#FECDD3] text-black border-2 border-black shadow-[1.5px_1.5px_0px_0px_#000]",
+    dot: "bg-black",
   },
   removed: {
     label: "Removed",
-    class: "bg-slate-100 text-slate-600 border-slate-200",
-    dot: "bg-slate-400",
+    class: "bg-slate-200 text-black border-2 border-black shadow-[1.5px_1.5px_0px_0px_#000]",
+    dot: "bg-black",
   },
   reported: {
     label: "Reported",
-    class: "bg-purple-50 text-purple-700 border-purple-200",
-    dot: "bg-purple-500",
+    class: "bg-[#DDD6FE] text-black border-2 border-black shadow-[1.5px_1.5px_0px_0px_#000]",
+    dot: "bg-black",
   },
 };
 
 const current = config[status] || config.unknown;
-const sizeClass = size === "sm" ? "text-xs px-2 py-0.5" : "text-xs px-2.5 py-1 font-medium";
+const sizeClass = size === "sm" ? "text-[11px] px-2 py-0.5 font-bold" : "text-xs px-2.5 py-1 font-black";
 ---
 
 <span
-  class={`inline-flex items-center gap-1.5 rounded-full border ${current.class} ${sizeClass}`}
+  class={`inline-flex items-center gap-1.5 rounded-lg border ${current.class} ${sizeClass}`}
   title={`Link health status: ${current.label}`}
 >
   <span class={`h-1.5 w-1.5 rounded-full ${current.dot}`}></span>

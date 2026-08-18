@@ -34,67 +34,84 @@ const organizationSchema = generateOrganizationSchema();
   jsonLd={[webSiteSchema, organizationSchema]}
 >
   <!-- Hero Section -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-emerald-50/50 to-transparent py-16 sm:py-24 border-b border-slate-200/60">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-800 mb-6">
-        <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
-        Real Links • Transparent Verification Status
-      </div>
+  <section class="relative overflow-hidden bg-[#FAF8F5] py-12 sm:py-20 border-b-[3px] border-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Neo-Brutalist Hero Card -->
+      <div class="relative rounded-3xl border-[3px] border-black bg-[#A7F3D0] p-6 sm:p-12 shadow-[6px_6px_0px_0px_#000] overflow-hidden">
+        <!-- Playful Sticker Badge in Top Right -->
+        <div class="absolute -right-4 -top-4 sm:right-8 sm:top-6 rotate-6 z-10">
+          <div class="neo-badge bg-[#FEF08A] text-black px-4 py-2 text-xs sm:text-sm font-black border-2 border-black shadow-[3px_3px_0px_0px_#000] tracking-wider uppercase">
+            ★ 100% REAL LINKS ★
+          </div>
+        </div>
 
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-6">
-        Find Communities <span class="text-emerald-600">Worth Joining</span>
-      </h1>
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 rounded-lg border-2 border-black bg-white px-3 py-1 text-xs font-black text-black shadow-[2px_2px_0px_0px_#000] mb-6">
+            <span class="h-2.5 w-2.5 rounded-full bg-[#10B981] border border-black"></span>
+            ZERO FAKE METRICS • PUBLIC DIRECTORY
+          </div>
 
-      <p class="max-w-2xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed mb-8">
-        A searchable directory of publicly discoverable online communities across Telegram, Discord, and WhatsApp. Verified against official sources and public channels.
-      </p>
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-black mb-6 leading-tight">
+            CONNECT & DISCOVER: <br class="hidden sm:inline" />
+            <span class="bg-[#FEF08A] px-2 py-0.5 border-2 border-black shadow-[3px_3px_0px_0px_#000] inline-block mt-1">
+              COMMUNITY DIRECTORY
+            </span>
+          </h1>
 
-      <!-- Prominent Search Box -->
-      <SearchBox size="lg" />
+          <p class="text-sm sm:text-base font-bold text-black/80 leading-relaxed mb-8 max-w-xl">
+            Find, join, and explore verified public Discord servers, Telegram channels, and WhatsApp communities across tech, crypto, and remote work.
+          </p>
 
-      <!-- Platform Navigation Pills -->
-      <div class="flex flex-wrap items-center justify-center gap-2.5 mt-6">
-        <span class="text-xs font-medium text-slate-500">Browse by platform:</span>
-        <a
-          href="/platform/telegram"
-          class="inline-flex items-center gap-1.5 rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700 hover:bg-sky-100 transition-colors"
-        >
-          Telegram
-        </a>
-        <a
-          href="/platform/discord"
-          class="inline-flex items-center gap-1.5 rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700 hover:bg-indigo-100 transition-colors"
-        >
-          Discord
-        </a>
-        <a
-          href="/platform/whatsapp"
-          class="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700 hover:bg-emerald-100 transition-colors"
-        >
-          WhatsApp
-        </a>
+          <!-- Search Box -->
+          <div class="mb-6">
+            <SearchBox size="lg" />
+          </div>
+
+          <!-- Platform Navigation Pills -->
+          <div class="flex flex-wrap items-center gap-2.5 pt-2">
+            <span class="text-xs font-black text-black uppercase tracking-wider">Explore:</span>
+            <a
+              href="/platform/discord"
+              class="neo-button bg-[#DDD6FE] hover:bg-[#C4B5FD] text-black px-3.5 py-1 text-xs font-black"
+            >
+              Discord Servers
+            </a>
+            <a
+              href="/platform/telegram"
+              class="neo-button bg-[#BAE6FD] hover:bg-[#7DD3FC] text-black px-3.5 py-1 text-xs font-black"
+            >
+              Telegram Channels
+            </a>
+            <a
+              href="/platform/whatsapp"
+              class="neo-button bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black px-3.5 py-1 text-xs font-black"
+            >
+              WhatsApp Groups
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Real Dataset Statistics Counters (Factual & Honest) -->
+  <!-- Real Dataset Statistics Counters (Factual Neo-Brutalist Blocks) -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
-    <div class="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-      <div class="text-center">
-        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">{stats.totalPublished}</div>
-        <div class="text-xs text-slate-500 font-medium mt-0.5">Listed Communities</div>
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+      <div class="neo-card-yellow p-5 text-center">
+        <div class="text-3xl sm:text-4xl font-black text-black">{stats.totalPublished}</div>
+        <div class="text-xs font-black text-black uppercase tracking-wider mt-1">Listed Communities</div>
       </div>
-      <div class="text-center border-l border-slate-100">
-        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">{categories.length}</div>
-        <div class="text-xs text-slate-500 font-medium mt-0.5">Categories</div>
+      <div class="neo-card-mint p-5 text-center">
+        <div class="text-3xl sm:text-4xl font-black text-black">{categories.length}</div>
+        <div class="text-xs font-black text-black uppercase tracking-wider mt-1">Curated Categories</div>
       </div>
-      <div class="text-center border-l border-slate-100">
-        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">3</div>
-        <div class="text-xs text-slate-500 font-medium mt-0.5">Platforms Supported</div>
+      <div class="neo-card-purple p-5 text-center">
+        <div class="text-3xl sm:text-4xl font-black text-black">3</div>
+        <div class="text-xs font-black text-black uppercase tracking-wider mt-1">Chat Platforms</div>
       </div>
-      <div class="text-center border-l border-slate-100">
-        <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600">4 Tiers</div>
-        <div class="text-xs text-slate-500 font-medium mt-0.5">Verification Standards</div>
+      <div class="neo-card-coral p-5 text-center">
+        <div class="text-3xl sm:text-4xl font-black text-black">4 Tiers</div>
+        <div class="text-xs font-black text-black uppercase tracking-wider mt-1">Verification Standards</div>
       </div>
     </div>
   </section>
@@ -103,16 +120,19 @@ const organizationSchema = generateOrganizationSchema();
     <!-- Ad Space Leaderboard (Optional) -->
     <AdPlaceholder format="leaderboard" />
 
-    <!-- Featured Communities Section (Full Cards) -->
+    <!-- Featured Communities Section -->
     {
       featuredListings.length > 0 && (
         <section>
           <div class="flex items-center justify-between mb-6">
             <div>
-              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Featured Communities</h2>
-              <p class="text-xs text-slate-500 mt-1">Verified official communities with public channels and developer resources</p>
+              <div class="inline-block bg-[#FEF08A] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
+                HAND-PICKED
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Featured Communities</h2>
+              <p class="text-xs font-bold text-slate-600 mt-1">Verified official communities with active public resources</p>
             </div>
-            <a href="/communities" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
+            <a href="/communities" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
               Browse all →
             </a>
           </div>
@@ -125,38 +145,52 @@ const organizationSchema = generateOrganizationSchema();
     <section id="categories" class="scroll-mt-20">
       <div class="flex items-center justify-between mb-6">
         <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Browse by Category</h2>
-          <p class="text-xs text-slate-500 mt-1">Explore communities by topic, technology, and industry</p>
+          <div class="inline-block bg-[#A7F3D0] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
+            TOPICS & HUBS
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Browse by Category</h2>
+          <p class="text-xs font-bold text-slate-600 mt-1">Explore communities by topic, technology, and industry</p>
         </div>
-        <a href="/communities" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
+        <a href="/communities" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
           View all →
         </a>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {
-          categories.map((cat) => (
-            <a
-              href={`/category/${cat.slug}`}
-              class="group relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:border-emerald-300 hover:shadow-md transition-all"
-            >
-              <div>
-                <h3 class="text-base font-bold text-slate-900 group-hover:text-emerald-600 transition-colors mb-2">
-                  {cat.name}
-                </h3>
-                <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                  {cat.description}
-                </p>
-              </div>
-              <div class="flex flex-wrap gap-1 pt-3 border-t border-slate-100">
-                {cat.subcategories.slice(0, 3).map((sub) => (
-                  <span class="rounded bg-slate-50 px-2 py-0.5 text-[11px] text-slate-500">
-                    {sub}
-                  </span>
-                ))}
-              </div>
-            </a>
-          ))
+          categories.map((cat, idx) => {
+            const cardClasses = [
+              "neo-card-yellow",
+              "neo-card-mint",
+              "neo-card-purple",
+              "neo-card-coral",
+              "neo-card",
+            ][idx % 5];
+
+            return (
+              <a
+                href={`/category/${cat.slug}`}
+                class={`group relative flex flex-col justify-between p-5 ${cardClasses}`}
+              >
+                <div>
+                  <h3 class="text-lg font-black text-black group-hover:underline mb-2">
+                    {cat.name}
+                  </h3>
+                  <p class="text-xs font-medium text-black/80 leading-relaxed mb-4">
+                    {cat.description}
+                  </p>
+                </div>
+
+                <div class="flex flex-wrap gap-1.5 pt-3 border-t-2 border-black/10">
+                  {cat.subcategories.slice(0, 3).map((sub) => (
+                    <span class="rounded-md border border-black bg-white px-2 py-0.5 text-[11px] font-bold text-black shadow-[1px_1px_0px_0px_#000]">
+                      {sub}
+                    </span>
+                  ))}
+                </div>
+              </a>
+            );
+          })
         }
       </div>
     </section>
@@ -165,8 +199,11 @@ const organizationSchema = generateOrganizationSchema();
     <section id="platforms" class="scroll-mt-20">
       <div class="flex items-center justify-between mb-6">
         <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Explore by Platform</h2>
-          <p class="text-xs text-slate-500 mt-1">Filter communities by chat platform</p>
+          <div class="inline-block bg-[#DDD6FE] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
+            CHANNELS & SERVERS
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Explore by Platform</h2>
+          <p class="text-xs font-bold text-slate-600 mt-1">Filter public groups by chat network</p>
         </div>
       </div>
 
@@ -174,37 +211,49 @@ const organizationSchema = generateOrganizationSchema();
         {
           platforms
             .filter((p) => p.isConfigured)
-            .map((plat) => (
-              <a
-                href={`/platform/${plat.id}`}
-                class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:border-slate-300 hover:shadow-md transition-all"
-              >
-                <div class="flex items-center justify-between mb-3">
-                  <span class="text-lg font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
-                    {plat.name}
-                  </span>
-                  <span class={`rounded-full px-2.5 py-0.5 text-[11px] font-medium border ${plat.badgeBg}`}>
-                    {stats.platforms[plat.id] || 0} listings
-                  </span>
-                </div>
-                <p class="text-xs text-slate-600 leading-relaxed">
-                  {plat.description}
-                </p>
-              </a>
-            ))
+            .map((plat) => {
+              const bgClass =
+                plat.id === "discord"
+                  ? "neo-card-purple"
+                  : plat.id === "telegram"
+                  ? "neo-card bg-[#BAE6FD]"
+                  : "neo-card-mint";
+
+              return (
+                <a
+                  href={`/platform/${plat.id}`}
+                  class={`group p-6 ${bgClass}`}
+                >
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xl font-black text-black group-hover:underline">
+                      {plat.name}
+                    </span>
+                    <span class="rounded-lg border-2 border-black bg-white px-2.5 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
+                      {stats.platforms[plat.id] || 0} listings
+                    </span>
+                  </div>
+                  <p class="text-xs font-medium text-black/80 leading-relaxed">
+                    {plat.description}
+                  </p>
+                </a>
+              );
+            })
         }
       </div>
     </section>
 
-    <!-- Recently Added Communities (Compact Format to Prevent Redundancy) -->
+    <!-- Recently Added Communities -->
     <section>
       <div class="flex items-center justify-between mb-6">
         <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Recently Added Listings</h2>
-          <p class="text-xs text-slate-500 mt-1">New additions catalogued in the directory</p>
+          <div class="inline-block bg-[#FED7AA] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
+            FRESH LISTINGS
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Recently Added Listings</h2>
+          <p class="text-xs font-bold text-slate-600 mt-1">New additions catalogued in the directory</p>
         </div>
-        <a href="/communities" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
-          Browse directory →
+        <a href="/communities" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
+          Browse all →
         </a>
       </div>
       
@@ -212,18 +261,18 @@ const organizationSchema = generateOrganizationSchema();
         {recentAdditions.map((comm) => (
           <a
             href={`/group/${comm.slug}`}
-            class="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4 hover:border-emerald-300 hover:shadow-sm transition-all"
+            class="neo-card flex items-center justify-between p-4 bg-white hover:bg-[#FEF9C3]"
           >
             <div class="min-w-0 pr-3">
-              <h3 class="text-sm font-semibold text-slate-900 truncate hover:text-emerald-600">
+              <h3 class="text-sm font-black text-black truncate">
                 {comm.title}
               </h3>
-              <div class="flex items-center gap-2 mt-1.5">
+              <div class="flex items-center gap-2 mt-2">
                 <PlatformBadge platform={comm.platform} size="sm" />
-                <CategoryBadge categorySlug={comm.category} size="sm" />
+                <CategoryBadge category={comm.category} size="sm" />
               </div>
             </div>
-            <span class="text-xs font-semibold text-emerald-600 shrink-0">
+            <span class="text-xs font-black text-black shrink-0 underline">
               View →
             </span>
           </a>
@@ -231,30 +280,33 @@ const organizationSchema = generateOrganizationSchema();
       </div>
     </section>
 
-    <!-- Recently Checked Link Audit Log (Clean List Format) -->
+    <!-- Recently Checked Link Audit Log -->
     <section>
       <div class="flex items-center justify-between mb-6">
         <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Recent Link Audits</h2>
-          <p class="text-xs text-slate-500 mt-1">Status checks performed across index links</p>
+          <div class="inline-block bg-[#A7F3D0] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
+            LINK INTEGRITY
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Recent Link Audits</h2>
+          <p class="text-xs font-bold text-slate-600 mt-1">Status checks performed across index links</p>
         </div>
-        <a href="/how-we-verify" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
+        <a href="/how-we-verify" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
           Verification protocol →
         </a>
       </div>
       
-      <div class="divide-y divide-slate-100 rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+      <div class="divide-y-2 divide-black rounded-2xl border-2 border-black bg-white shadow-[4px_4px_0px_0px_#000] overflow-hidden">
         {recentlyChecked.map((comm) => (
-          <div class="flex flex-wrap items-center justify-between gap-3 p-4 sm:px-6 hover:bg-slate-50/50">
+          <div class="flex flex-wrap items-center justify-between gap-3 p-4 sm:px-6 hover:bg-[#FEF9C3] transition-colors">
             <div class="flex items-center gap-3 min-w-0">
               <PlatformBadge platform={comm.platform} size="sm" />
-              <a href={`/group/${comm.slug}`} class="text-sm font-semibold text-slate-900 hover:text-emerald-600 truncate">
+              <a href={`/group/${comm.slug}`} class="text-sm font-black text-black hover:underline truncate">
                 {comm.title}
               </a>
             </div>
             <div class="flex items-center gap-3">
               <VerificationBadge status={comm.verificationStatus} size="sm" />
-              <span class="text-xs text-slate-400">
+              <span class="text-xs font-bold text-slate-500">
                 Checked {formatDate(comm.lastCheckedAt)}
               </span>
             </div>
@@ -267,19 +319,23 @@ const organizationSchema = generateOrganizationSchema();
     <SafetyNotice type="general" />
 
     <!-- Submission CTA Banner -->
-    <section class="rounded-3xl border border-emerald-200 bg-gradient-to-br from-emerald-600 to-teal-800 p-8 sm:p-12 text-white text-center shadow-lg">
-      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3">
+    <section class="rounded-3xl border-[3px] border-black bg-[#FEF08A] p-8 sm:p-12 text-black text-center shadow-[6px_6px_0px_0px_#000]">
+      <div class="inline-block bg-white px-3 py-1 border-2 border-black text-xs font-black uppercase tracking-wider shadow-[2px_2px_0px_0px_#000] mb-4">
+        ★ FREE SUBMISSIONS ★
+      </div>
+      <h2 class="text-2xl sm:text-4xl font-black mb-3">
         Run a Public Online Community?
       </h2>
-      <p class="text-emerald-100 max-w-xl mx-auto text-xs sm:text-sm leading-relaxed mb-6">
+      <p class="text-black/80 max-w-xl mx-auto text-xs sm:text-sm font-bold leading-relaxed mb-6">
         Submit your community to be catalogued in the directory. Every submission is reviewed before publication. Verification status is shown transparently on each listing.
       </p>
       <a
         href="/submit"
-        class="inline-flex items-center rounded-xl bg-white px-6 py-3 text-xs sm:text-sm font-bold text-emerald-900 shadow hover:bg-emerald-50 transition-colors"
+        class="neo-button bg-[#A7F3D0] hover:bg-[#6EE7B7] px-6 py-3 text-sm font-black text-black shadow-[4px_4px_0px_0px_#000]"
       >
-        Submit a Community for Free
+        Submit a Community for Free →
       </a>
     </section>
   </div>
+</BaseLayout>
 </BaseLayout>

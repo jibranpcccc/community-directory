@@ -21,11 +21,14 @@ const breadcrumbs = [
   <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
     <Breadcrumbs items={breadcrumbs} />
 
-    <div class="mb-8">
-      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-        Report a Community Listing
+    <div class="mb-8 p-6 sm:p-8 rounded-3xl border-[3px] border-black bg-[#FECDD3] shadow-[5px_5px_0px_0px_#000]">
+      <div class="inline-block bg-white px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
+        MODERATION DESK
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-black text-black tracking-tight">
+        Report a Listing
       </h1>
-      <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+      <p class="mt-2 text-sm font-bold text-black/80 leading-relaxed">
         Help us keep the directory accurate and safe. If you found a dead link, suspicious behavior, or incorrect metadata, submit this report for review.
       </p>
     </div>
@@ -37,7 +40,7 @@ const breadcrumbs = [
       action="/report-success"
       data-netlify="true"
       netlify-honeypot="bot-field"
-      class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm space-y-6"
+      class="rounded-3xl border-[3px] border-black bg-white p-6 sm:p-8 shadow-[6px_6px_0px_0px_#000] space-y-6"
     >
       <input type="hidden" name="form-name" value="listing-report" />
 
@@ -50,7 +53,7 @@ const breadcrumbs = [
 
       <!-- Listing ID / Reference -->
       <div>
-        <label for="listingId" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+        <label for="listingId" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
           Listing Identifier / Name <span class="text-rose-500">*</span>
         </label>
         <input
@@ -60,13 +63,13 @@ const breadcrumbs = [
           value={listingTitle || listingId}
           required
           placeholder="Community name or listing slug"
-          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         />
       </div>
 
       <!-- Invite URL / Page URL -->
       <div>
-        <label for="listingUrl" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+        <label for="listingUrl" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
           Community Invite or Page URL
         </label>
         <input
@@ -75,20 +78,20 @@ const breadcrumbs = [
           id="listingUrl"
           value={listingUrl}
           placeholder="https://... or /group/slug"
-          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         />
       </div>
 
       <!-- Report Reason -->
       <div>
-        <label for="reason" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+        <label for="reason" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
           Reason for Report <span class="text-rose-500">*</span>
         </label>
         <select
           name="reason"
           id="reason"
           required
-          class="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-2.5 text-sm text-slate-800 focus:border-emerald-500 focus:bg-white focus:outline-none"
+          class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] px-4 py-2.5 text-sm font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
         >
           <option value="">Select Reason...</option>
           <option value="dead-invite">Dead or Expired Invite Link</option>
@@ -104,7 +107,7 @@ const breadcrumbs = [
 
       <!-- Details -->
       <div>
-        <label for="details" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+        <label for="details" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
           Explanation & Details <span class="text-rose-500">*</span>
         </label>
         <textarea
@@ -113,13 +116,13 @@ const breadcrumbs = [
           rows="4"
           required
           placeholder="Please describe why this listing needs attention or provide evidence of broken/problematic state."
-          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         ></textarea>
       </div>
 
       <!-- Reporter Email -->
       <div>
-        <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+        <label for="email" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
           Your Email (Optional / Confidential)
         </label>
         <input
@@ -127,9 +130,9 @@ const breadcrumbs = [
           name="email"
           id="email"
           placeholder="your.email@example.com"
-          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         />
-        <p class="mt-1 text-[11px] text-slate-500">
+        <p class="mt-1.5 text-xs font-bold text-slate-600">
           Only used if our team needs clarification. Never published or shared.
         </p>
       </div>
@@ -138,9 +141,9 @@ const breadcrumbs = [
       <div>
         <button
           type="submit"
-          class="w-full rounded-xl bg-slate-900 py-3 text-sm font-bold text-white shadow-sm hover:bg-slate-800 transition-colors"
+          class="neo-button w-full bg-[#FECDD3] hover:bg-[#FDA4AF] py-3.5 text-sm font-black text-black shadow-[4px_4px_0px_0px_#000]"
         >
-          Submit Report for Moderation
+          Submit Report for Moderation →
         </button>
       </div>
     </form>

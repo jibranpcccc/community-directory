@@ -30,7 +30,7 @@ const seo = getSeoMetadata({
 ---
 
 <!doctype html>
-<html lang="en" class="h-full bg-slate-50 text-slate-900">
+<html lang="en" class="h-full bg-[#FAF8F5] text-black">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,7 +38,7 @@ const seo = getSeoMetadata({
     <meta name="generator" content={Astro.generator} />
 
     <!-- Resource Hints & Mobile Meta -->
-    <meta name="theme-color" content="#059669" />
+    <meta name="theme-color" content="#FEF08A" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 
@@ -83,11 +83,13 @@ const seo = getSeoMetadata({
       )
     }
   </head>
-  <body class="flex min-h-full flex-col font-sans bg-slate-50 text-slate-900">
-    <Header />
-    <main class="flex-grow">
-      <slot />
-    </main>
-    <Footer />
+  <body class="relative flex min-h-full flex-col font-sans bg-[#FAF8F5] text-black">
+    <div class="relative z-10 flex min-h-screen flex-col">
+      <Header />
+      <main class="flex-grow">
+        <slot />
+      </main>
+      <Footer />
+    </div>
   </body>
 </html>

@@ -16,40 +16,46 @@ const organizationSchema = generateOrganizationSchema();
   canonicalPath="/about"
   jsonLd={organizationSchema}
 >
-  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base text-slate-700 leading-relaxed">
-    <section class="space-y-3">
-      <h2 class="text-xl font-bold text-slate-900">Our Mission</h2>
-      <p>
+  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base font-medium text-slate-800 leading-relaxed">
+    <section class="neo-card p-6 sm:p-8 space-y-3 bg-white">
+      <div class="inline-block bg-[#FEF08A] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
+        PURPOSE
+      </div>
+      <h2 class="text-2xl font-black text-black">Our Mission</h2>
+      <p class="font-bold text-slate-700">
         Online communities on platforms like Telegram, Discord, and WhatsApp are vital hubs for knowledge exchange, networking, and collaboration. However, discovering legitimate communities has historically been plagued by spam, link rot, and fake engagement metrics.
       </p>
-      <p>
+      <p class="font-bold text-slate-700">
         <strong>{siteConfig.name}</strong> was created to provide a structured, transparent directory that prioritizes verified facts over inflated statistics.
       </p>
     </section>
 
     <section class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-8">
-      <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center">
-        <div class="text-2xl font-bold text-emerald-600 mb-1">0%</div>
-        <div class="text-xs font-semibold text-slate-800">Fake Metrics</div>
-        <p class="text-xs text-slate-500 mt-1">We never fabricate ratings or member counts.</p>
+      <div class="neo-card-yellow p-6 text-center">
+        <div class="text-3xl font-black text-black mb-1">0%</div>
+        <div class="text-xs font-black uppercase tracking-wider text-black">Fake Metrics</div>
+        <p class="text-xs font-bold text-slate-700 mt-1">We never fabricate ratings or member counts.</p>
       </div>
 
-      <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center">
-        <div class="text-2xl font-bold text-emerald-600 mb-1">100%</div>
-        <div class="text-xs font-semibold text-slate-800">Public Information</div>
-        <p class="text-xs text-slate-500 mt-1">Ethical discovery using only publicly shared links.</p>
+      <div class="neo-card-mint p-6 text-center">
+        <div class="text-3xl font-black text-black mb-1">100%</div>
+        <div class="text-xs font-black uppercase tracking-wider text-black">Public Information</div>
+        <p class="text-xs font-bold text-slate-700 mt-1">Ethical discovery using only publicly shared links.</p>
       </div>
 
-      <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center">
-        <div class="text-2xl font-bold text-emerald-600 mb-1">Fast</div>
-        <div class="text-xs font-semibold text-slate-800">Static Architecture</div>
-        <p class="text-xs text-slate-500 mt-1">Pre-rendered static HTML with instant search.</p>
+      <div class="neo-card-purple p-6 text-center">
+        <div class="text-3xl font-black text-black mb-1">Fast</div>
+        <div class="text-xs font-black uppercase tracking-wider text-black">Static Architecture</div>
+        <p class="text-xs font-bold text-slate-700 mt-1">Pre-rendered static HTML with instant search.</p>
       </div>
     </section>
 
-    <section class="space-y-3">
-      <h2 class="text-xl font-bold text-slate-900">How We Operate</h2>
-      <p>
+    <section class="neo-card p-6 sm:p-8 space-y-3 bg-white">
+      <div class="inline-block bg-[#A7F3D0] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
+        OPERATIONS
+      </div>
+      <h2 class="text-2xl font-black text-black">How We Operate</h2>
+      <p class="font-bold text-slate-700">
         We combine automated discovery scripts, link health validators, and human moderation to index public channels, servers, and groups. Anyone can browse for free, filter across platforms, or submit their own community.
       </p>
     </section>

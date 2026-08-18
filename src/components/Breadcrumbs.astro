@@ -10,35 +10,23 @@ const allItems = [{ name: "Home", item: "/" }, ...items];
 ---
 
 <nav aria-label="Breadcrumb" class="mb-4">
-  <ol class="flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
+  <ol class="flex flex-wrap items-center gap-2 text-xs font-bold text-slate-700">
     {
       allItems.map((crumb, index) => {
         const isLast = index === allItems.length - 1;
         return (
-          <li class="flex items-center gap-1.5">
+          <li class="flex items-center gap-2">
             {index > 0 && (
-              <svg
-                class="h-3.5 w-3.5 text-slate-400 flex-shrink-0"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <span class="text-black font-black">/</span>
             )}
             {isLast ? (
-              <span class="font-medium text-slate-800" aria-current="page">
+              <span class="rounded bg-white px-2 py-0.5 border border-black text-black font-black shadow-[1px_1px_0px_0px_#000]" aria-current="page">
                 {crumb.name}
               </span>
             ) : (
               <a
                 href={crumb.item}
-                class="hover:text-slate-900 transition-colors"
+                class="hover:underline text-black"
               >
                 {crumb.name}
               </a>

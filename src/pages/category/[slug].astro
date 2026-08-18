@@ -40,14 +40,14 @@ const schema = generateCollectionPageSchema(
   noindex={communities.length === 0}
 >
   <!-- Subcategories & Tags Bar -->
-  <div class="mb-6 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-    <div class="text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
+  <div class="mb-6 neo-card p-5 bg-white">
+    <div class="text-xs font-black text-black uppercase tracking-wider mb-3">
       Popular Topics & Subcategories
     </div>
-    <div class="flex flex-wrap gap-1.5">
+    <div class="flex flex-wrap gap-2">
       {
         category.subcategories.map((sub) => (
-          <span class="rounded-lg bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">
+          <span class="rounded-lg border-2 border-black bg-[#FEF9C3] px-3 py-1 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
             {sub}
           </span>
         ))
@@ -66,8 +66,8 @@ const schema = generateCollectionPageSchema(
 
   <!-- Listings Header -->
   <div class="flex items-center justify-between mb-4">
-    <span class="text-xs font-medium text-slate-500">
-      Showing <strong>{communities.length}</strong> listed communities in {category.name}
+    <span class="text-xs font-bold text-black">
+      Showing <strong class="underline font-black">{communities.length}</strong> listed communities in {category.name}
     </span>
   </div>
 

@@ -18,14 +18,14 @@ const sizeClass = size === "sm" ? "text-xs px-2 py-0.5" : "text-xs px-2.5 py-1";
   showLink ? (
     <a
       href={`/category/${category}`}
-      class={`inline-flex items-center rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors font-medium border border-slate-200 ${sizeClass}`}
+      class={`inline-flex items-center rounded-lg bg-[#FEF08A] text-black hover:bg-[#FDE047] transition-all font-black border-2 border-black shadow-[1.5px_1.5px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none ${sizeClass}`}
       title={`Browse ${name} category`}
     >
       {name}
     </a>
   ) : (
     <span
-      class={`inline-flex items-center rounded-md bg-slate-100 text-slate-700 font-medium border border-slate-200 ${sizeClass}`}
+      class={`inline-flex items-center rounded-lg bg-[#FEF08A] text-black font-black border-2 border-black shadow-[1.5px_1.5px_0px_0px_#000] ${sizeClass}`}
     >
       {name}
     </span>

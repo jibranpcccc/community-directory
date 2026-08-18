@@ -51,13 +51,13 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
     <Breadcrumbs items={breadcrumbs} />
 
     <!-- Main Listing Header Card -->
-    <div class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm mb-8">
-      <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+    <div class="rounded-3xl border-[3px] border-black bg-white p-6 sm:p-10 shadow-[6px_6px_0px_0px_#000] mb-8">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
         <div class="flex flex-wrap items-center gap-2">
           <PlatformBadge platform={community.platform} size="md" showLink={true} />
           <CategoryBadge category={community.category} size="md" showLink={true} />
           {community.subcategory && (
-            <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">
+            <span class="rounded-lg border-2 border-black bg-[#FAF8F5] px-2.5 py-1 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
               {community.subcategory}
             </span>
           )}
@@ -68,11 +68,11 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
         </div>
       </div>
 
-      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+      <h1 class="text-3xl sm:text-5xl font-black text-black tracking-tight mb-4">
         {community.title}
       </h1>
 
-      <p class="text-sm sm:text-base text-slate-700 leading-relaxed mb-6">
+      <p class="text-sm sm:text-base font-medium text-slate-800 leading-relaxed mb-6">
         {community.description || `A public ${community.platform} community listed under ${categoryConfig?.name || community.category}.`}
       </p>
 
@@ -82,7 +82,7 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
           {community.tags.map((tag) => (
             <a
               href={`/tag/${tag.toLowerCase()}`}
-              class="rounded-lg bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 hover:bg-slate-200 transition-colors"
+              class="rounded-lg border-2 border-black bg-[#FEF9C3] px-2.5 py-1 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000] hover:bg-[#FEF08A] transition-colors"
             >
               #{tag}
             </a>
@@ -91,27 +91,27 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
       )}
 
       <!-- CTAs Row -->
-      <div class="flex flex-wrap items-center gap-3 pt-6 border-t border-slate-100">
+      <div class="flex flex-wrap items-center gap-3 pt-6 border-t-2 border-black/10">
         <a
           href={community.inviteUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-sm font-bold text-white shadow hover:bg-emerald-700 transition-all"
+          class="neo-button bg-[#A7F3D0] hover:bg-[#6EE7B7] px-6 py-3.5 text-sm font-black text-black shadow-[4px_4px_0px_0px_#000]"
         >
           <span>Visit & Join Community</span>
-          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          <svg class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>
         </a>
 
         <a
           href={`/report?id=${encodeURIComponent(community.id)}&title=${encodeURIComponent(community.title)}&url=${encodeURIComponent(community.inviteUrl)}`}
-          class="inline-flex items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-white px-4 py-3 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+          class="neo-button bg-white hover:bg-slate-100 px-4 py-3 text-xs font-black text-black"
         >
-          <svg class="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          <svg class="h-4 w-4 mr-1.5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
           </svg>
-          <span>Report Problem / Broken Link</span>
+          <span>Report Broken Link</span>
         </a>
       </div>
     </div>
@@ -119,67 +119,67 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
     <!-- Structured Factual Metadata Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
       <!-- Community Details Box -->
-      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 mb-4 pb-2 border-b border-slate-100">
+      <div class="neo-card-yellow p-6">
+        <h2 class="text-sm font-black uppercase tracking-wider text-black mb-4 pb-2 border-b-2 border-black/20">
           Community Information
         </h2>
-        <dl class="divide-y divide-slate-100 text-xs sm:text-sm">
+        <dl class="divide-y-2 divide-black/10 text-xs sm:text-sm font-bold">
           <div class="py-2.5 flex justify-between">
-            <dt class="text-slate-500 font-medium">Platform</dt>
-            <dd class="text-slate-900 font-semibold capitalize">{community.platform}</dd>
+            <dt class="text-slate-700">Platform</dt>
+            <dd class="text-black font-black capitalize">{community.platform}</dd>
           </div>
           <div class="py-2.5 flex justify-between">
-            <dt class="text-slate-500 font-medium">Category</dt>
-            <dd class="text-slate-900 font-semibold">{categoryConfig?.name || community.category}</dd>
+            <dt class="text-slate-700">Category</dt>
+            <dd class="text-black font-black">{categoryConfig?.name || community.category}</dd>
           </div>
           <div class="py-2.5 flex justify-between">
-            <dt class="text-slate-500 font-medium">Access Type</dt>
-            <dd class="text-slate-900 font-semibold capitalize">{community.accessType || "Free"}</dd>
+            <dt class="text-slate-700">Access Type</dt>
+            <dd class="text-black font-black capitalize">{community.accessType || "Free"}</dd>
           </div>
           <div class="py-2.5 flex justify-between">
-            <dt class="text-slate-500 font-medium">Primary Language</dt>
-            <dd class="text-slate-900 font-semibold uppercase">{community.language || "Not specified"}</dd>
+            <dt class="text-slate-700">Primary Language</dt>
+            <dd class="text-black font-black uppercase">{community.language || "Not specified"}</dd>
           </div>
           {community.country && (
             <div class="py-2.5 flex justify-between">
-              <dt class="text-slate-500 font-medium">Target Country</dt>
-              <dd class="text-slate-900 font-semibold uppercase">{community.country}</dd>
+              <dt class="text-slate-700">Target Country</dt>
+              <dd class="text-black font-black uppercase">{community.country}</dd>
             </div>
           )}
           {typeof community.memberCount === "number" && (
             <div class="py-2.5 flex justify-between">
-              <dt class="text-slate-500 font-medium">Sourced Members</dt>
-              <dd class="text-slate-900 font-semibold">{community.memberCount.toLocaleString()}</dd>
+              <dt class="text-slate-700">Sourced Members</dt>
+              <dd class="text-black font-black">{community.memberCount.toLocaleString()}</dd>
             </div>
           )}
         </dl>
       </div>
 
       <!-- Verification & Health Audit Box -->
-      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 mb-4 pb-2 border-b border-slate-100">
+      <div class="neo-card-mint p-6">
+        <h2 class="text-sm font-black uppercase tracking-wider text-black mb-4 pb-2 border-b-2 border-black/20">
           Verification & Health Audit
         </h2>
-        <dl class="divide-y divide-slate-100 text-xs sm:text-sm">
+        <dl class="divide-y-2 divide-black/10 text-xs sm:text-sm font-bold">
           <div class="py-2.5 flex justify-between">
-            <dt class="text-slate-500 font-medium">Verification Tier</dt>
-            <dd class="text-slate-900 font-semibold capitalize">{community.verificationStatus.replace("-", " ")}</dd>
+            <dt class="text-slate-700">Verification Tier</dt>
+            <dd class="text-black font-black capitalize">{community.verificationStatus.replace("-", " ")}</dd>
           </div>
           <div class="py-2.5 flex justify-between">
-            <dt class="text-slate-500 font-medium">Link Health</dt>
-            <dd class="text-slate-900 font-semibold capitalize">{community.linkStatus}</dd>
+            <dt class="text-slate-700">Link Health</dt>
+            <dd class="text-black font-black capitalize">{community.linkStatus}</dd>
           </div>
           <div class="py-2.5 flex justify-between">
-            <dt class="text-slate-500 font-medium">Discovered Date</dt>
-            <dd class="text-slate-900 font-semibold">{formatDate(community.discoveredAt)}</dd>
+            <dt class="text-slate-700">Discovered Date</dt>
+            <dd class="text-black font-black">{formatDate(community.discoveredAt)}</dd>
           </div>
           <div class="py-2.5 flex justify-between">
-            <dt class="text-slate-500 font-medium">Last Link Check</dt>
-            <dd class="text-slate-900 font-semibold">{formatDate(community.lastCheckedAt)}</dd>
+            <dt class="text-slate-700">Last Link Check</dt>
+            <dd class="text-black font-black">{formatDate(community.lastCheckedAt)}</dd>
           </div>
           <div class="py-2.5 flex justify-between">
-            <dt class="text-slate-500 font-medium">Discovery Method</dt>
-            <dd class="text-slate-900 font-semibold capitalize">{community.discoveryMethod.replace("-", " ")}</dd>
+            <dt class="text-slate-700">Discovery Method</dt>
+            <dd class="text-black font-black capitalize">{community.discoveryMethod.replace("-", " ")}</dd>
           </div>
         </dl>
       </div>
@@ -187,14 +187,14 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
 
     <!-- Source Information (If available) -->
     {community.sourceUrls && community.sourceUrls.length > 0 && (
-      <div class="rounded-2xl border border-slate-200 bg-slate-50/70 p-5 mb-8 text-xs text-slate-600">
-        <strong class="font-semibold text-slate-900 block mb-1">Source & Evidence Attribution</strong>
-        <p class="mb-2 text-slate-500">
+      <div class="neo-card p-5 mb-8 text-xs text-black font-bold">
+        <strong class="font-black text-black block mb-1">Source & Evidence Attribution</strong>
+        <p class="mb-2 text-slate-700 font-medium">
           This community listing was identified and confirmed from the following public source:
         </p>
         <ul class="space-y-1 font-mono text-[11px] break-all">
           {community.sourceUrls.map((url) => (
-            <li class="text-slate-700">• {url}</li>
+            <li class="text-black font-bold">• {url}</li>
           ))}
         </ul>
       </div>
@@ -211,7 +211,7 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
     <!-- Related Communities -->
     {relatedCommunities.length > 0 && (
       <div>
-        <h2 class="text-xl font-bold text-slate-900 mb-4">Related Communities</h2>
+        <h2 class="text-2xl font-black text-black tracking-tight mb-4">Related Communities</h2>
         <CommunityGrid communities={relatedCommunities} />
       </div>
     )}

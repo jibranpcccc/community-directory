@@ -33,45 +33,57 @@ const faqSchema = generateFAQSchema([
   canonicalPath="/safety"
   jsonLd={faqSchema}
 >
-  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base text-slate-700 leading-relaxed">
+  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base font-medium text-slate-800 leading-relaxed">
     <SafetyNotice type="general" />
 
-    <section class="space-y-4">
-      <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+    <section class="neo-card p-6 sm:p-8 space-y-4 bg-white">
+      <div class="inline-block bg-[#FEF08A] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
+        RULE #1
+      </div>
+      <h2 class="text-xl sm:text-2xl font-black text-black">
         1. Directory Inclusion Is Not Endorsement
       </h2>
-      <p>
+      <p class="text-slate-700 font-bold">
         Our directory catalogs publicly discoverable online communities. Listing a Telegram channel, Discord server, or WhatsApp group does not mean we endorse its administrators, members, viewpoints, or products. Always perform your own due diligence before trusting advice or making transactions.
       </p>
     </section>
 
-    <section class="space-y-4">
-      <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+    <section class="neo-card-coral p-6 sm:p-8 space-y-4">
+      <div class="inline-block bg-white px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
+        SECURITY BEST PRACTICES
+      </div>
+      <h2 class="text-xl sm:text-2xl font-black text-black">
         2. Protect Sensitive Credentials & Wallets
       </h2>
-      <ul class="list-disc pl-5 space-y-2">
+      <ul class="list-disc pl-5 space-y-2 text-black font-bold">
         <li><strong>Never share seed phrases or private keys:</strong> Legitimate administrators and support staff will NEVER ask for your wallet recovery phrases or passwords.</li>
         <li><strong>Beware of direct messages (DMs):</strong> Scammers frequently impersonate admins in public channels and initiate private chats offering "support" or "exclusive deals".</li>
         <li><strong>Do not download unverified files:</strong> Executable files (.exe, .scr, .bat, macro-enabled documents) shared in chat groups may contain infostealers or remote access trojans.</li>
       </ul>
     </section>
 
-    <section class="space-y-4">
-      <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+    <section class="neo-card-yellow p-6 sm:p-8 space-y-4">
+      <div class="inline-block bg-white px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
+        FINANCIAL DISCLAIMER
+      </div>
+      <h2 class="text-xl sm:text-2xl font-black text-black">
         3. Financial Market & Investment Warnings
       </h2>
-      <p>
+      <p class="text-black font-bold">
         Be extremely skeptical of groups promising guaranteed profits, 100% win rates, or "risk-free" trading signals. Financial markets involve substantial risk of capital loss. No community or signal provider can guarantee returns.
       </p>
       <SafetyNotice type="financial" />
     </section>
 
-    <section class="space-y-4">
-      <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+    <section class="neo-card-mint p-6 sm:p-8 space-y-4">
+      <div class="inline-block bg-white px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
+        COMMUNITY INTEGRITY
+      </div>
+      <h2 class="text-xl sm:text-2xl font-black text-black">
         4. Reporting Suspicious or Compromised Communities
       </h2>
-      <p>
-        If you encounter a community listed on our site that has been compromised, promotes illegal activities, or distributes malware, please submit an immediate report using our <a href="/report" class="text-emerald-600 font-semibold hover:underline">Report Listing form</a>.
+      <p class="text-black font-bold">
+        If you encounter a community listed on our site that has been compromised, promotes illegal activities, or distributes malware, please submit an immediate report using our <a href="/report" class="font-black underline text-black">Report Listing form</a>.
       </p>
     </section>
   </div>
