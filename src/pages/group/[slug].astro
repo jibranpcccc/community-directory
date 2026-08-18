@@ -11,7 +11,7 @@ import { getPublishedCommunities, getRelatedCommunities } from "../../lib/commun
 import { getCategoryBySlug } from "../../config/categories";
 import { getPlatformById } from "../../config/platforms";
 import { formatDate } from "../../lib/dates";
-import { generateCommunityDetailSchema } from "../../lib/schema";
+import { generateCommunityDetailSchema, generateBreadcrumbSchema } from "../../lib/schema";
 import type { Community } from "../../types/community";
 
 export async function getStaticPaths() {
@@ -30,20 +30,22 @@ const { community } = Astro.props;
 const categoryConfig = getCategoryBySlug(community.category);
 const platformConfig = getPlatformById(community.platform);
 const relatedCommunities = getRelatedCommunities(community, 3);
-const schema = generateCommunityDetailSchema(community);
+const communitySchema = generateCommunityDetailSchema(community);
 
 const breadcrumbs = [
   { name: "Browse", item: "/communities" },
   { name: categoryConfig?.name || community.category, item: `/category/${community.category}` },
   { name: community.title, item: `/group/${community.slug}` },
 ];
+
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
 ---
 
 <BaseLayout
   title={`${community.title} — ${platformConfig?.name || community.platform}`}
   description={community.description || `Discover ${community.title} on ${community.platform}. Public online community in ${community.category}.`}
   canonicalPath={`/group/${community.slug}`}
-  jsonLd={schema}
+  jsonLd={[communitySchema, breadcrumbSchema]}
 >
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
     <Breadcrumbs items={breadcrumbs} />

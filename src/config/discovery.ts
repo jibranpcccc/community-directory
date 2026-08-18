@@ -1,13 +1,13 @@
 export const discoveryConfig = {
-  // Query budget
-  maxQueriesPerRun: parseInt(process.env.DISCOVERY_MAX_QUERIES || "30", 10),
+  // Query budget (optimized for daily automated runs within Gemini limits)
+  maxQueriesPerRun: parseInt(process.env.DISCOVERY_MAX_QUERIES || "15", 10),
   maxCandidatesPerQuery: 10,
-  maxNewCandidatesPerRun: parseInt(process.env.DISCOVERY_MAX_CANDIDATES || "100", 10),
+  maxNewCandidatesPerRun: parseInt(process.env.DISCOVERY_MAX_CANDIDATES || "20", 10),
   
-  // Rate limiting (ms)
-  requestDelayMs: parseInt(process.env.DISCOVERY_REQUEST_DELAY_MS || "1200", 10),
+  // Rate limiting delay between search queries (ms)
+  requestDelayMs: parseInt(process.env.DISCOVERY_REQUEST_DELAY_MS || "2000", 10),
   
-  // Publication safety policy
+  // Publication safety policy (true = auto publish directly to groups.json)
   autoPublish: process.env.AUTO_PUBLISH_DISCOVERED === "true",
   
   // Gemini model settings

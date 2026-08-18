@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
-import type { BreadcrumbItem } from "../lib/schema";
+import { generateBreadcrumbSchema, type BreadcrumbItem } from "../lib/schema";
 import type { SeoProps } from "../lib/seo";
 
 interface Props extends SeoProps {
@@ -21,13 +21,28 @@ const {
   jsonLd,
   noindex,
 } = Astro.props;
+
+// Combine passed jsonLd with BreadcrumbList schema if breadcrumbs are present
+const schemas: Record<string, any>[] = [];
+
+if (jsonLd) {
+  if (Array.isArray(jsonLd)) {
+    schemas.push(...jsonLd);
+  } else {
+    schemas.push(jsonLd);
+  }
+}
+
+if (breadcrumbs.length > 0) {
+  schemas.push(generateBreadcrumbSchema(breadcrumbs));
+}
 ---
 
 <BaseLayout
   title={title || heading}
   description={description || subheading}
   canonicalPath={canonicalPath}
-  jsonLd={jsonLd}
+  jsonLd={schemas.length > 0 ? (schemas.length === 1 ? schemas[0] : schemas) : undefined}
   noindex={noindex}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
