@@ -68,6 +68,26 @@ describe("Duplicate Detection Engine", () => {
     expect(res.isDuplicate).toBe(true);
   });
 
+  it("detects same Discord guild ID match even with completely different invite URLs", () => {
+    const databaseWithGuild: Community[] = [
+      {
+        ...mockDatabase[1],
+        guildId: "888777666555444333",
+      },
+    ];
+
+    const candidate = {
+      inviteUrl: "https://discord.gg/completely-custom-vanity-slug",
+      platform: "discord",
+      title: "Different Server Display Name",
+      guildId: "888777666555444333",
+    };
+
+    const res = isDuplicateListing(candidate, databaseWithGuild);
+    expect(res.isDuplicate).toBe(true);
+    expect(res.reason).toContain("Same Discord guild ID");
+  });
+
   it("allows distinct non-duplicate communities", () => {
     const candidate = {
       inviteUrl: "https://t.me/rust_lang_global",

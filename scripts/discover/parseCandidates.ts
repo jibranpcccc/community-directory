@@ -19,13 +19,14 @@ const URL_EXTRACTION_REGEX =
  */
 export function extractCandidateUrls(
   content: string,
-  sourceUrl: string = "https://google.com/search"
+  sourceUrl: string = ""
 ): CandidateDiscovery[] {
   if (!content) return [];
 
   const matches = content.match(URL_EXTRACTION_REGEX) || [];
   const candidates: CandidateDiscovery[] = [];
   const seen = new Set<string>();
+  const lines = content.split("\n");
 
   for (const rawUrl of matches) {
     const normalized = normalizeInviteUrl(rawUrl);
@@ -40,12 +41,20 @@ export function extractCandidateUrls(
     const platform = detectPlatformFromUrl(normalized);
     if (platform) {
       seen.add(normalized);
+
+      // Extract ONLY the specific line/sentence mentioning this exact URL
+      const matchingLine = lines.find((l) => l.includes(rawUrl)) || "";
+      const lineText = matchingLine
+        .replace(URL_EXTRACTION_REGEX, "")
+        .replace(/[*\-_#`[\]()]/g, " ")
+        .trim();
+
       candidates.push({
         candidateUrl: rawUrl,
         normalizedUrl: normalized,
-        sourceUrl,
+        sourceUrl: sourceUrl || normalized,
         platform,
-        evidenceText: content.slice(0, 300),
+        evidenceText: lineText.length > 5 ? lineText.slice(0, 200) : undefined,
       });
     }
   }

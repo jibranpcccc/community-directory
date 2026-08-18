@@ -27,6 +27,7 @@ jobs:
 
       - name: Run discovery engine
         env:
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS || secrets.GEMINI_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
           GEMINI_SEARCH_ENABLED: ${{ vars.GEMINI_SEARCH_ENABLED || 'true' }}

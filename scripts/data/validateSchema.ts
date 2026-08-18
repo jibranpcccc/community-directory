@@ -76,6 +76,7 @@ export const CommunitySchema = z.object({
   lastCheckedAt: z.string().datetime({ offset: true }).nullable().optional(),
   updatedAt: z.string().datetime({ offset: true }).nullable().optional(),
   safetyFlags: z.array(z.string()).optional().default([]),
+  guildId: z.string().nullable().optional(),
   published: z.boolean(),
   featured: z.boolean().optional(),
 });

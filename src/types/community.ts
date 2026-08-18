@@ -66,6 +66,7 @@ export interface Community {
   lastCheckedAt?: string | null;
   updatedAt?: string | null;
   safetyFlags?: string[];
+  guildId?: string | null;
   published: boolean;
   featured?: boolean;
 }

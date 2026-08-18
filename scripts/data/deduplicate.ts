@@ -60,6 +60,21 @@ export function isDuplicateListing(
       }
     }
 
+    // 3. Discord Guild ID match
+    if (
+      candidate.platform === "discord" &&
+      existing.platform === "discord" &&
+      candidate.guildId &&
+      existing.guildId &&
+      candidate.guildId === existing.guildId
+    ) {
+      return {
+        isDuplicate: true,
+        reason: `Same Discord guild ID: "${candidate.guildId}"`,
+        matchedCommunity: existing,
+      };
+    }
+
     // 3. Slug match (if candidate slug provided)
     if (candidate.slug && candidate.slug === existing.slug) {
       return {

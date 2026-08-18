@@ -4,7 +4,7 @@ import * as path from "path";
 import { execSync } from "child_process";
 import { discoveryConfig } from "../../src/config/discovery";
 import { generateSearchQueries } from "./generateQueries";
-import { GeminiGoogleSearchProvider } from "./geminiSearch";
+import { GeminiGoogleSearchProvider, isSearchEngineOrRedirectUrl } from "./geminiSearch";
 import { ManualSeedProvider, type DiscoveryResult } from "./discoverySources";
 import { normalizeInviteUrl, generateSlug } from "../../src/lib/urls";
 import { isDuplicateListing } from "../data/deduplicate";
@@ -92,7 +92,7 @@ async function runDiscovery() {
       }
 
       // Check if we have enough raw candidates
-      if (rawResults.length >= maxTargetNew * 3) {
+      if (rawResults.length >= maxTargetNew * 4) {
         console.log(`[discover] Acquired sufficient candidate pool (${rawResults.length} raw candidates).`);
         break;
       }
@@ -110,8 +110,9 @@ async function runDiscovery() {
   console.log(`\n[discover] Total discovered raw candidate links: ${rawCandidatesCount}`);
 
   // 3. Platform Validation & Duplicate Checking Pipeline
-  let validCandidatesCount = 0;
-  let rejectedInvalidCount = 0;
+  let activeCandidatesCount = 0;
+  let unknownRejectedCount = 0;
+  let deadRejectedCount = 0;
   let duplicatesSkippedCount = 0;
   let newDiscordCount = 0;
   let newTelegramCount = 0;
@@ -119,6 +120,7 @@ async function runDiscovery() {
 
   const validNewCommunities: Community[] = [];
   const batchSeenUrls = new Set<string>();
+  const batchSeenGuildIds = new Set<string>();
   const batchSeenTitles = new Set<string>();
 
   const now = getCurrentIsoTimestamp();
@@ -132,7 +134,7 @@ async function runDiscovery() {
     const normalizedUrl = normalizeInviteUrl(cand.url);
 
     if (!normalizedUrl) {
-      rejectedInvalidCount++;
+      deadRejectedCount++;
       continue;
     }
 
@@ -142,17 +144,18 @@ async function runDiscovery() {
       continue;
     }
 
-    // B. Check against both groups.json and pending-groups.json
-    const dupCheck = isDuplicateListing(
+    // B. Preliminary check against both groups.json and pending-groups.json by URL
+    const preDupCheck = isDuplicateListing(
       { inviteUrl: normalizedUrl, platform: cand.platform },
       allKnown
     );
-    if (dupCheck.isDuplicate) {
+    if (preDupCheck.isDuplicate) {
+      console.log(`  ⏩ Duplicate skipped [URL]: ${normalizedUrl} (${preDupCheck.reason})`);
       duplicatesSkippedCount++;
       continue;
     }
 
-    // C. Platform-specific validation
+    // C. Platform-specific live validation
     let validation: LinkValidationResult;
     try {
       if (cand.platform === "discord") {
@@ -168,19 +171,59 @@ async function runDiscovery() {
       validation = { url: normalizedUrl, status: "unknown", message: `Validation error: ${err.message}`, checkedAt: now };
     }
 
-    // Reject dead/invalid links
+    // STRICT STATUS RULE: ONLY accept active links
     if (validation.status === "dead") {
-      console.log(`  ❌ Rejected [${cand.platform}]: ${normalizedUrl} (${validation.message || "Dead or invalid"})`);
-      rejectedInvalidCount++;
+      console.log(`  ❌ Rejected [Dead] [${cand.platform}]: ${normalizedUrl} (${validation.message || "Dead or expired link"})`);
+      deadRejectedCount++;
       continue;
     }
 
-    validCandidatesCount++;
+    if (validation.status === "unknown") {
+      console.log(`  ⚠️ Held/Rejected [Unknown] [${cand.platform}]: ${normalizedUrl} (${validation.message || "Unverified/uncertain link status"})`);
+      unknownRejectedCount++;
+      continue;
+    }
 
-    // D. Extract real metadata
+    if (validation.status !== "active") {
+      console.log(`  ❌ Rejected [Non-Active] [${cand.platform}]: ${normalizedUrl} (${validation.status})`);
+      deadRejectedCount++;
+      continue;
+    }
+
+    activeCandidatesCount++;
+
+    // D. Extract genuine metadata
     const realTitle = validation.extractedTitle?.trim() || "";
     const realDesc = validation.extractedDescription?.trim() || "";
     const realMembers = validation.extractedMemberCount ?? null;
+    const extractedGuildId = validation.extractedGuildId || undefined;
+
+    // Discord Guild ID deduplication
+    if (extractedGuildId) {
+      if (batchSeenGuildIds.has(extractedGuildId)) {
+        console.log(`  ⏩ Duplicate skipped [In-Batch Guild ID]: ${extractedGuildId} (${normalizedUrl})`);
+        duplicatesSkippedCount++;
+        continue;
+      }
+      batchSeenGuildIds.add(extractedGuildId);
+    }
+
+    // Comprehensive duplicate check against allKnown (URL, Handle, Guild ID, Title)
+    const fullDupCheck = isDuplicateListing(
+      {
+        inviteUrl: normalizedUrl,
+        platform: cand.platform,
+        title: realTitle || undefined,
+        guildId: extractedGuildId,
+      },
+      allKnown
+    );
+
+    if (fullDupCheck.isDuplicate) {
+      console.log(`  ⏩ Duplicate skipped: ${normalizedUrl} (${fullDupCheck.reason})`);
+      duplicatesSkippedCount++;
+      continue;
+    }
 
     // Check title in-batch duplicate
     if (realTitle) {
@@ -192,18 +235,6 @@ async function runDiscovery() {
       batchSeenTitles.add(cleanTitleKey);
     }
 
-    // Also check title duplicate against allKnown
-    if (realTitle) {
-      const titleDupCheck = isDuplicateListing(
-        { inviteUrl: normalizedUrl, platform: cand.platform, title: realTitle },
-        allKnown
-      );
-      if (titleDupCheck.isDuplicate) {
-        duplicatesSkippedCount++;
-        continue;
-      }
-    }
-
     batchSeenUrls.add(normalizedUrl);
 
     // E. Classification & Tagging
@@ -211,7 +242,7 @@ async function runDiscovery() {
     const classification = await classifyCommunityWithGemini({
       inviteUrl: normalizedUrl,
       platform: cand.platform,
-      evidenceText: `${realTitle} ${realDesc} ${cand.snippet || ""}`.trim(),
+      evidenceText: (realDesc || realTitle || "").slice(0, 150),
       suggestedCategory: cand.category,
       suggestedSubcategory: cand.subcategory,
     });
@@ -220,19 +251,37 @@ async function runDiscovery() {
     const slug = generateSlug(finalTitle, cand.platform, existingSlugs);
     existingSlugs.push(slug);
 
-    // Determine clean source URL (never google.com/search)
+    // Determine clean source URL (strictly reject search engines & Google / Vertex redirects)
     let validSource = cand.sourceUrl;
-    if (!validSource || validSource.includes("google.com/search") || !validSource.startsWith("http")) {
+    if (isSearchEngineOrRedirectUrl(validSource) || !validSource.startsWith("http")) {
       validSource = normalizedUrl;
     }
 
+    // Source-confirmed requires a real independent domain (not a chat invite or search redirect)
     const isSourceConfirmed = Boolean(
       validSource &&
+      validSource !== normalizedUrl &&
+      !isSearchEngineOrRedirectUrl(validSource) &&
       !validSource.includes("discord.gg") &&
       !validSource.includes("t.me") &&
       !validSource.includes("chat.whatsapp.com") &&
       validSource.startsWith("http")
     );
+
+    // Clean description: Real platform description > classification description (if clean) > null
+    let finalDescription: string | null = null;
+    if (realDesc && realDesc.length > 5) {
+      finalDescription = realDesc.slice(0, 400);
+    } else if (
+      classification.description &&
+      classification.description.length > 5 &&
+      !classification.description.includes("http") &&
+      !classification.description.includes("*")
+    ) {
+      finalDescription = classification.description.slice(0, 400);
+    } else {
+      finalDescription = null;
+    }
 
     const community: Community = {
       id: slug,
@@ -243,7 +292,7 @@ async function runDiscovery() {
       subcategory: classification.subcategory,
       tags: classification.tags,
       inviteUrl: normalizedUrl,
-      description: realDesc || classification.description,
+      description: finalDescription,
       language: classification.language,
       country: classification.country,
       accessType: classification.accessType,
@@ -252,8 +301,9 @@ async function runDiscovery() {
       memberCountSource: realMembers ? (validSource.startsWith("http") ? validSource : normalizedUrl) : null,
       memberCountCheckedAt: realMembers ? now : null,
       verificationStatus: isSourceConfirmed ? "source-confirmed" : "unverified",
-      linkStatus: validation.status,
+      linkStatus: "active", // Strictly active
       sourceUrls: [validSource],
+      guildId: extractedGuildId || null,
       discoveryMethod: geminiProvider.isAvailable() ? "gemini-search" : "manual",
       discoveredAt: now,
       lastCheckedAt: now,
@@ -313,8 +363,9 @@ async function runDiscovery() {
   console.log("=========================================");
   console.log(`Queries used: ${queriesUsedCount}`);
   console.log(`Raw candidates: ${rawCandidatesCount}`);
-  console.log(`Valid candidates: ${validCandidatesCount}`);
-  console.log(`Rejected invalid: ${rejectedInvalidCount}`);
+  console.log(`ACTIVE validated candidates: ${activeCandidatesCount}`);
+  console.log(`Unknown rejected/held: ${unknownRejectedCount}`);
+  console.log(`Dead rejected: ${deadRejectedCount}`);
   console.log(`Duplicates skipped: ${duplicatesSkippedCount}`);
   console.log(`New Discord: ${newDiscordCount}`);
   console.log(`New Telegram: ${newTelegramCount}`);

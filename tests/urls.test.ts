@@ -38,4 +38,17 @@ describe("URL Normalization & Utilities", () => {
     const slug2 = generateSlug("Python Developers Global", "telegram", ["python-developers-global-telegram"]);
     expect(slug2).toBe("python-developers-global-telegram-2");
   });
+
+  it("identifies search engine and Vertex AI grounding redirect URLs", async () => {
+    const { isSearchEngineOrRedirectUrl } = await import("../scripts/discover/geminiSearch");
+
+    expect(isSearchEngineOrRedirectUrl("https://vertexaisearch.cloud.google.com/grounding-api-redirect/abc123")).toBe(true);
+    expect(isSearchEngineOrRedirectUrl("https://www.google.com/search?q=discord")).toBe(true);
+    expect(isSearchEngineOrRedirectUrl("https://google.com/search")).toBe(true);
+    expect(isSearchEngineOrRedirectUrl("https://duckduckgo.com/?q=telegram")).toBe(true);
+    expect(isSearchEngineOrRedirectUrl("https://bing.com/search?q=whatsapp")).toBe(true);
+    expect(isSearchEngineOrRedirectUrl("https://reproml.org")).toBe(false);
+    expect(isSearchEngineOrRedirectUrl("https://react.dev")).toBe(false);
+    expect(isSearchEngineOrRedirectUrl("https://github.com/astral-sh/uv")).toBe(false);
+  });
 });

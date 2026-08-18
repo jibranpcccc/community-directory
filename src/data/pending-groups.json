@@ -24,7 +24,7 @@
     "verificationStatus": "unverified",
     "linkStatus": "active",
     "sourceUrls": [
-      "https://google.com/search"
+      "https://discord.gg/gfJvqeGSJE"
     ],
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-18T15:22:50.951Z",
@@ -133,7 +133,7 @@
     "verificationStatus": "unverified",
     "linkStatus": "unknown",
     "sourceUrls": [
-      "https://google.com/search"
+      "https://t.me/+TfP_Ihxdp2YwNjVh"
     ],
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-18T15:22:50.951Z",
@@ -168,7 +168,7 @@
     "verificationStatus": "unverified",
     "linkStatus": "unknown",
     "sourceUrls": [
-      "https://google.com/search"
+      "https://t.me/+XJLDvhp1kQs3NDVl"
     ],
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-18T15:22:50.951Z",
@@ -243,171 +243,6 @@
     "discoveredAt": "2026-08-18T15:22:50.951Z",
     "lastCheckedAt": "2026-08-18T15:22:50.951Z",
     "updatedAt": "2026-08-18T15:22:50.951Z",
-    "safetyFlags": [],
-    "published": false,
-    "featured": false
-  },
-  {
-    "id": "claudecodedaily-telegram",
-    "slug": "claudecodedaily-telegram",
-    "title": "ClaudeCodeDaily",
-    "platform": "telegram",
-    "category": "ai-tech",
-    "subcategory": "Coding",
-    "tags": [
-      "telegram",
-      "aitech"
-    ],
-    "inviteUrl": "https://t.me/ClaudeCodeDaily",
-    "description": "Here are real, active public community invite links for Telegram channels and groups related to \"Coding\" and \"AI Tech\" found on the public web:\n\n*   **https://t.me/ClaudeCodeDaily** - \"One practical Claude Code tip per day, written and published end ...",
-    "language": "en",
-    "country": null,
-    "accessType": "free",
-    "communityType": "discussion",
-    "memberCount": null,
-    "memberCountSource": null,
-    "memberCountCheckedAt": null,
-    "verificationStatus": "source-confirmed",
-    "linkStatus": "unknown",
-    "sourceUrls": [
-      "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1RHlrgMUisEr8QwvgvdGbJi4QUF4EoXzJTE3Q_JLNQ94vuECgR1vpQTcDlDRw84GcVVhy3Ke_-aXL8aP3vuTIJAuvOC4iNgFGET2EgdGunojfv5bg8CQ5bPY1DYYPFnQPlx88E9s="
-    ],
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-18T16:27:07.184Z",
-    "lastCheckedAt": "2026-08-18T16:27:07.184Z",
-    "updatedAt": "2026-08-18T16:27:07.184Z",
-    "safetyFlags": [],
-    "published": false,
-    "featured": false
-  },
-  {
-    "id": "codestars-telegram",
-    "slug": "codestars-telegram",
-    "title": "CodeStars",
-    "platform": "telegram",
-    "category": "ai-tech",
-    "subcategory": "Coding",
-    "tags": [
-      "telegram",
-      "aitech"
-    ],
-    "inviteUrl": "https://t.me/CodeStars",
-    "description": "Here are real, active public community invite links for Telegram channels and groups related to \"Coding\" and \"AI Tech\" found on the public web:\n\n*   **https://t.me/ClaudeCodeDaily** - \"One practical Claude Code tip per day, written and published end ...",
-    "language": "en",
-    "country": null,
-    "accessType": "free",
-    "communityType": "discussion",
-    "memberCount": null,
-    "memberCountSource": null,
-    "memberCountCheckedAt": null,
-    "verificationStatus": "source-confirmed",
-    "linkStatus": "unknown",
-    "sourceUrls": [
-      "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1RHlrgMUisEr8QwvgvdGbJi4QUF4EoXzJTE3Q_JLNQ94vuECgR1vpQTcDlDRw84GcVVhy3Ke_-aXL8aP3vuTIJAuvOC4iNgFGET2EgdGunojfv5bg8CQ5bPY1DYYPFnQPlx88E9s="
-    ],
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-18T16:27:07.184Z",
-    "lastCheckedAt": "2026-08-18T16:27:07.184Z",
-    "updatedAt": "2026-08-18T16:27:07.184Z",
-    "safetyFlags": [],
-    "published": false,
-    "featured": false
-  },
-  {
-    "id": "codingatnight-telegram",
-    "slug": "codingatnight-telegram",
-    "title": "CodingAtNight",
-    "platform": "telegram",
-    "category": "ai-tech",
-    "subcategory": "Coding",
-    "tags": [
-      "telegram",
-      "aitech"
-    ],
-    "inviteUrl": "https://t.me/CodingAtNight",
-    "description": "Here are real, active public community invite links for Telegram channels and groups related to \"Coding\" and \"AI Tech\" found on the public web:\n\n*   **https://t.me/ClaudeCodeDaily** - \"One practical Claude Code tip per day, written and published end ...",
-    "language": "en",
-    "country": null,
-    "accessType": "free",
-    "communityType": "discussion",
-    "memberCount": null,
-    "memberCountSource": null,
-    "memberCountCheckedAt": null,
-    "verificationStatus": "source-confirmed",
-    "linkStatus": "unknown",
-    "sourceUrls": [
-      "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1RHlrgMUisEr8QwvgvdGbJi4QUF4EoXzJTE3Q_JLNQ94vuECgR1vpQTcDlDRw84GcVVhy3Ke_-aXL8aP3vuTIJAuvOC4iNgFGET2EgdGunojfv5bg8CQ5bPY1DYYPFnQPlx88E9s="
-    ],
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-18T16:27:07.184Z",
-    "lastCheckedAt": "2026-08-18T16:27:07.184Z",
-    "updatedAt": "2026-08-18T16:27:07.184Z",
-    "safetyFlags": [],
-    "published": false,
-    "featured": false
-  },
-  {
-    "id": "geekschat-telegram",
-    "slug": "geekschat-telegram",
-    "title": "GeeksChat",
-    "platform": "telegram",
-    "category": "ai-tech",
-    "subcategory": "Coding",
-    "tags": [
-      "telegram",
-      "aitech"
-    ],
-    "inviteUrl": "https://t.me/geeksChat",
-    "description": "Here are real, active public community invite links for Telegram channels and groups related to \"Coding\" and \"AI Tech\" found on the public web:\n\n*   **https://t.me/ClaudeCodeDaily** - \"One practical Claude Code tip per day, written and published end ...",
-    "language": "en",
-    "country": null,
-    "accessType": "free",
-    "communityType": "discussion",
-    "memberCount": null,
-    "memberCountSource": null,
-    "memberCountCheckedAt": null,
-    "verificationStatus": "source-confirmed",
-    "linkStatus": "unknown",
-    "sourceUrls": [
-      "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1RHlrgMUisEr8QwvgvdGbJi4QUF4EoXzJTE3Q_JLNQ94vuECgR1vpQTcDlDRw84GcVVhy3Ke_-aXL8aP3vuTIJAuvOC4iNgFGET2EgdGunojfv5bg8CQ5bPY1DYYPFnQPlx88E9s="
-    ],
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-18T16:27:07.184Z",
-    "lastCheckedAt": "2026-08-18T16:27:07.184Z",
-    "updatedAt": "2026-08-18T16:27:07.184Z",
-    "safetyFlags": [],
-    "published": false,
-    "featured": false
-  },
-  {
-    "id": "thedevsgroup-telegram",
-    "slug": "thedevsgroup-telegram",
-    "title": "TheDevsGroup",
-    "platform": "telegram",
-    "category": "ai-tech",
-    "subcategory": "Coding",
-    "tags": [
-      "telegram",
-      "aitech"
-    ],
-    "inviteUrl": "https://t.me/TheDevsGroup",
-    "description": "Here are real, active public community invite links for Telegram channels and groups related to \"Coding\" and \"AI Tech\" found on the public web:\n\n*   **https://t.me/ClaudeCodeDaily** - \"One practical Claude Code tip per day, written and published end ...",
-    "language": "en",
-    "country": null,
-    "accessType": "free",
-    "communityType": "discussion",
-    "memberCount": null,
-    "memberCountSource": null,
-    "memberCountCheckedAt": null,
-    "verificationStatus": "source-confirmed",
-    "linkStatus": "unknown",
-    "sourceUrls": [
-      "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1RHlrgMUisEr8QwvgvdGbJi4QUF4EoXzJTE3Q_JLNQ94vuECgR1vpQTcDlDRw84GcVVhy3Ke_-aXL8aP3vuTIJAuvOC4iNgFGET2EgdGunojfv5bg8CQ5bPY1DYYPFnQPlx88E9s="
-    ],
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-18T16:27:07.184Z",
-    "lastCheckedAt": "2026-08-18T16:27:07.184Z",
-    "updatedAt": "2026-08-18T16:27:07.184Z",
     "safetyFlags": [],
     "published": false,
     "featured": false

@@ -6,6 +6,21 @@ import { geminiKeyPool } from "../utilities/geminiPool";
 import type { DiscoveryProvider, DiscoveryResult } from "./discoverySources";
 import type { PlatformId } from "../../src/types/community";
 
+export function isSearchEngineOrRedirectUrl(url?: string | null): boolean {
+  if (!url || typeof url !== "string") return true;
+  const lower = url.toLowerCase();
+  return (
+    lower.includes("google.com") ||
+    lower.includes("vertexaisearch.cloud.google.com") ||
+    lower.includes("grounding-api-redirect") ||
+    lower.includes("googleapis.com") ||
+    lower.includes("gstatic.com") ||
+    lower.includes("bing.com") ||
+    lower.includes("duckduckgo.com") ||
+    lower.includes("yahoo.com")
+  );
+}
+
 export class GeminiGoogleSearchProvider implements DiscoveryProvider {
   name = "gemini-google-search";
 
@@ -46,18 +61,18 @@ Topic: ${context?.category || "general"}.
 STRICT INSTRUCTIONS:
 - Identify and list ONLY real, verifiable public invite URLs found in search results (e.g. https://t.me/..., https://discord.gg/..., https://chat.whatsapp.com/...).
 - Do NOT generate synthetic, invented, or demo links.
-- Include a brief quote or snippet from the search grounding source next to each URL.`;
+- Format each link on a separate line with only its community name next to it.`;
 
         const result = await model.generateContent(prompt);
         const responseText = result.response.text();
 
-        // Extract real grounding sources from Gemini search metadata
+        // Extract real grounding sources from Gemini search metadata (strictly filter out search redirects)
         const candidateObj = result.response.candidates?.[0];
         const groundingMetadata = (candidateObj as any)?.groundingMetadata;
         const groundingChunks: any[] = groundingMetadata?.groundingChunks || [];
         const webSources: string[] = groundingChunks
           .map((c) => c.web?.uri)
-          .filter((u): u is string => typeof u === "string" && u.startsWith("http") && !u.includes("google.com/search"));
+          .filter((u): u is string => typeof u === "string" && u.startsWith("http") && !isSearchEngineOrRedirectUrl(u));
 
         // Extract candidate URLs from response text and web sources
         const combinedContent = `${responseText}\n${webSources.join("\n")}`;
@@ -65,17 +80,16 @@ STRICT INSTRUCTIONS:
         const candidates = extractCandidateUrls(combinedContent, primarySource);
 
         return candidates.map((cand) => {
-          // Find matching or relevant web source for this candidate
+          // Find genuine independent web source for this candidate, or fallback to the invite URL itself
           const matchingSource =
             webSources.find((s) => s.toLowerCase().includes(cand.platform) || !s.includes(cand.normalizedUrl)) ||
-            primarySource ||
-            cand.normalizedUrl;
+            (primarySource && !isSearchEngineOrRedirectUrl(primarySource) ? primarySource : cand.normalizedUrl);
 
           return {
             url: cand.normalizedUrl,
-            sourceUrl: matchingSource,
+            sourceUrl: isSearchEngineOrRedirectUrl(matchingSource) ? cand.normalizedUrl : matchingSource,
             platform: cand.platform,
-            snippet: cand.evidenceText || responseText.slice(0, 200),
+            snippet: cand.evidenceText,
             category: context?.category,
             subcategory: context?.subcategory,
           };
