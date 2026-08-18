@@ -2,6 +2,7 @@ import * as fs from "fs";
 import * as path from "path";
 import type { Community } from "../../src/types/community";
 import { validateCommunitiesData } from "./validateSchema";
+import { normalizeInviteUrl } from "./normalizeUrl";
 
 /**
  * Safely writes JSON data to disk atomically using a temp file.
@@ -20,7 +21,7 @@ export function atomicWriteJson(filePath: string, data: unknown): void {
 }
 
 /**
- * Safely merges new listings into target JSON file with strict validation.
+ * Safely merges new listings into target JSON file with strict validation and deduplication.
  */
 export function mergeListingsIntoFile(
   targetFilePath: string,
@@ -39,12 +40,40 @@ export function mergeListingsIntoFile(
     }
   }
 
-  // Stable sort by ID/title
-  const combined = [...existing, ...newListings];
-  combined.sort((a, b) => a.title.localeCompare(b.title));
+  const seenUrls = new Set<string>();
+  const seenIds = new Set<string>();
+  const seenSlugs = new Set<string>();
+  const merged: Community[] = [];
+
+  // Add existing items first
+  for (const item of existing) {
+    const normUrl = normalizeInviteUrl(item.inviteUrl);
+    seenUrls.add(normUrl);
+    seenIds.add(item.id);
+    seenSlugs.add(item.slug);
+    merged.push(item);
+  }
+
+  let actuallyAdded = 0;
+
+  // Add new items only if not already present
+  for (const item of newListings) {
+    const normUrl = normalizeInviteUrl(item.inviteUrl);
+    if (seenUrls.has(normUrl) || seenIds.has(item.id) || seenSlugs.has(item.slug)) {
+      continue;
+    }
+    seenUrls.add(normUrl);
+    seenIds.add(item.id);
+    seenSlugs.add(item.slug);
+    merged.push(item);
+    actuallyAdded++;
+  }
+
+  // Stable sort by title
+  merged.sort((a, b) => a.title.localeCompare(b.title));
 
   // Validate resulting data
-  const validation = validateCommunitiesData(combined);
+  const validation = validateCommunitiesData(merged);
   if (!validation.valid) {
     throw new Error(
       `Dataset validation failed after merge: ${validation.errors.join("; ")}`
@@ -55,7 +84,7 @@ export function mergeListingsIntoFile(
   atomicWriteJson(targetFilePath, validation.communities);
 
   return {
-    addedCount: newListings.length,
+    addedCount: actuallyAdded,
     totalCount: validation.communities.length,
   };
 }
