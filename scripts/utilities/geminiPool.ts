@@ -39,7 +39,7 @@ class GeminiKeyPool {
 
   public markRateLimited(key: string, cooldownMs: number = 300000) {
     this.throttledKeys.set(key, Date.now() + cooldownMs);
-    console.log(`[gemini-pool] Key ...${key.slice(-8)} temporarily paused for ${cooldownMs / 1000}s. Switched to next active key.`);
+    console.log(`[gemini-pool] Key ...${key.slice(-8)} temporarily paused for ${cooldownMs / 1000}s. Switched to next active key in pool.`);
   }
 
   public getPoolSize(): number {

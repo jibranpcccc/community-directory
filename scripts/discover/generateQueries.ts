@@ -11,33 +11,29 @@ export interface SearchQuery {
 }
 
 /**
- * Generates bounded, deterministic search queries across platforms and categories.
+ * Generates bounded, diverse search queries across platforms and categories with daily rotation.
  */
 export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQueriesPerRun): SearchQuery[] {
-  const queries: SearchQuery[] = [];
-  const platforms: PlatformId[] = ["telegram", "discord", "whatsapp"];
+  const allCombinations: SearchQuery[] = [];
+  const platforms: PlatformId[] = ["discord", "telegram", "whatsapp"];
 
   for (const cat of categories) {
     for (const sub of cat.subcategories) {
       for (const platform of platforms) {
-        if (queries.length >= maxQueries) break;
-
         let queryStr = "";
         switch (platform) {
           case "telegram":
-            queryStr = `site:t.me "${sub}" community`;
+            queryStr = `site:t.me "${sub}" channel OR group`;
             break;
           case "discord":
-            queryStr = `"discord.gg" "${sub}" community`;
+            queryStr = `"discord.gg" "${sub}" official community server`;
             break;
           case "whatsapp":
-            queryStr = `site:chat.whatsapp.com "${sub}"`;
+            queryStr = `site:chat.whatsapp.com "${sub}" community`;
             break;
-          default:
-            queryStr = `"${platform}" "${sub}" community`;
         }
 
-        queries.push({
+        allCombinations.push({
           query: queryStr,
           platform,
           category: cat.slug,
@@ -45,10 +41,37 @@ export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQu
           topic: sub,
         });
       }
-      if (queries.length >= maxQueries) break;
     }
-    if (queries.length >= maxQueries) break;
   }
 
-  return queries;
+  // Interleave combinations across categories and platforms
+  const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
+  const offset = (dayOfYear * 7) % allCombinations.length;
+  const rotated = [...allCombinations.slice(offset), ...allCombinations.slice(0, offset)];
+
+  // Group by platform and interleave
+  const byPlatform: Partial<Record<PlatformId, SearchQuery[]>> = {
+    discord: rotated.filter((q) => q.platform === "discord"),
+    telegram: rotated.filter((q) => q.platform === "telegram"),
+    whatsapp: rotated.filter((q) => q.platform === "whatsapp"),
+  };
+
+  const interleaved: SearchQuery[] = [];
+  const maxLen = Math.max(
+    byPlatform.discord?.length || 0,
+    byPlatform.telegram?.length || 0,
+    byPlatform.whatsapp?.length || 0
+  );
+
+  for (let i = 0; i < maxLen; i++) {
+    for (const p of platforms) {
+      const list = byPlatform[p];
+      if (list && list[i] && interleaved.length < maxQueries) {
+        interleaved.push(list[i]);
+      }
+    }
+    if (interleaved.length >= maxQueries) break;
+  }
+
+  return interleaved;
 }

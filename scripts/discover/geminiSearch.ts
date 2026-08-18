@@ -51,20 +51,44 @@ STRICT INSTRUCTIONS:
         const result = await model.generateContent(prompt);
         const responseText = result.response.text();
 
-        // Extract candidate URLs from response text
-        const candidates = extractCandidateUrls(responseText, "gemini-search-grounding");
+        // Extract real grounding sources from Gemini search metadata
+        const candidateObj = result.response.candidates?.[0];
+        const groundingMetadata = (candidateObj as any)?.groundingMetadata;
+        const groundingChunks: any[] = groundingMetadata?.groundingChunks || [];
+        const webSources: string[] = groundingChunks
+          .map((c) => c.web?.uri)
+          .filter((u): u is string => typeof u === "string" && u.startsWith("http") && !u.includes("google.com/search"));
 
-        return candidates.map((cand) => ({
-          url: cand.normalizedUrl,
-          sourceUrl: "https://google.com/search",
-          platform: cand.platform,
-          snippet: cand.evidenceText || responseText.slice(0, 200),
-          category: context?.category,
-          subcategory: context?.subcategory,
-        }));
+        // Extract candidate URLs from response text and web sources
+        const combinedContent = `${responseText}\n${webSources.join("\n")}`;
+        const primarySource = webSources.length > 0 ? webSources[0] : "";
+        const candidates = extractCandidateUrls(combinedContent, primarySource);
+
+        return candidates.map((cand) => {
+          // Find matching or relevant web source for this candidate
+          const matchingSource =
+            webSources.find((s) => s.toLowerCase().includes(cand.platform) || !s.includes(cand.normalizedUrl)) ||
+            primarySource ||
+            cand.normalizedUrl;
+
+          return {
+            url: cand.normalizedUrl,
+            sourceUrl: matchingSource,
+            platform: cand.platform,
+            snippet: cand.evidenceText || responseText.slice(0, 200),
+            category: context?.category,
+            subcategory: context?.subcategory,
+          };
+        });
       } catch (e: any) {
-        if (e.message?.includes("429") || e.message?.includes("Quota exceeded") || e.message?.includes("RESOURCE_EXHAUSTED")) {
-          geminiKeyPool.markRateLimited(apiKey);
+        if (
+          e.message?.includes("429") ||
+          e.message?.includes("403") ||
+          e.message?.includes("Quota exceeded") ||
+          e.message?.includes("RESOURCE_EXHAUSTED") ||
+          e.message?.includes("denied access")
+        ) {
+          geminiKeyPool.markRateLimited(apiKey, 86400000);
           retries--;
           continue;
         }

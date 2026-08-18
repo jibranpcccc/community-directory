@@ -100,8 +100,14 @@ STRICT RULES:
         confidence: typeof parsed.confidence === "number" ? parsed.confidence : 0.8,
       };
     } catch (e: any) {
-      if (e.message?.includes("429") || e.message?.includes("Quota exceeded") || e.message?.includes("RESOURCE_EXHAUSTED")) {
-        geminiKeyPool.markRateLimited(apiKey);
+      if (
+        e.message?.includes("429") ||
+        e.message?.includes("403") ||
+        e.message?.includes("Quota exceeded") ||
+        e.message?.includes("RESOURCE_EXHAUSTED") ||
+        e.message?.includes("denied access")
+      ) {
+        geminiKeyPool.markRateLimited(apiKey, 86400000);
         poolRetries--;
         continue;
       }

@@ -30,11 +30,14 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
           GEMINI_SEARCH_ENABLED: ${{ vars.GEMINI_SEARCH_ENABLED || 'true' }}
-          AUTO_PUBLISH_DISCOVERED: ${{ vars.AUTO_PUBLISH_DISCOVERED || 'true' }}
+          AUTO_PUBLISH_DISCOVERED: 'false'
         run: npm run discover
 
       - name: Validate dataset schemas
         run: npm run validate-data
+
+      - name: Run test suite
+        run: npm run test
 
       - name: Commit and push discovered data
         run: |

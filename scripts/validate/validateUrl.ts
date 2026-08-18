@@ -9,6 +9,7 @@ export interface LinkValidationResult {
   extractedTitle?: string;
   extractedDescription?: string;
   extractedMemberCount?: number | null;
+  extractedGuildId?: string;
 }
 
 export const BOT_USER_AGENT =

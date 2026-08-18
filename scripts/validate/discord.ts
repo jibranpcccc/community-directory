@@ -35,6 +35,7 @@ export async function validateDiscordLink(url: string): Promise<LinkValidationRe
     if (res.status === 200) {
       const data = (await res.json()) as any;
       const guildName = data?.guild?.name;
+      const guildId = data?.guild?.id;
       const memberCount = data?.approximate_member_count ?? null;
       const desc = data?.guild?.description ?? null;
 
@@ -47,6 +48,7 @@ export async function validateDiscordLink(url: string): Promise<LinkValidationRe
         extractedTitle: guildName,
         extractedDescription: desc,
         extractedMemberCount: memberCount,
+        extractedGuildId: guildId,
       };
     }
 

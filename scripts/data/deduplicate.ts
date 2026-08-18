@@ -17,11 +17,21 @@ export function isDuplicateListing(
     platform: string;
     slug?: string;
     category?: string;
+    guildId?: string;
   },
   existingList: Community[]
 ): DuplicateCheckResult {
   const normCandidateUrl = normalizeInviteUrl(candidate.inviteUrl);
   const candIdentifier = extractCommunityIdentifier(normCandidateUrl);
+
+  const cleanTitle = (t?: string) =>
+    (t || "")
+      .toLowerCase()
+      .replace(/\b(community|official|server|group|channel|hub|chat|hq)\b/g, "")
+      .replace(/[^a-z0-9]/g, "")
+      .trim();
+
+  const candCleanTitle = cleanTitle(candidate.title);
 
   for (const existing of existingList) {
     // 1. Primary: Exact normalized invite URL match
@@ -59,17 +69,19 @@ export function isDuplicateListing(
       };
     }
 
-    // 4. Exact Title + Same Platform match
-    if (
-      candidate.title &&
-      candidate.platform === existing.platform &&
-      candidate.title.trim().toLowerCase() === existing.title.trim().toLowerCase()
-    ) {
-      return {
-        isDuplicate: true,
-        reason: `Identical title on same platform: "${candidate.title}"`,
-        matchedCommunity: existing,
-      };
+    // 4. Title match on the same platform
+    if (candidate.platform === existing.platform && candidate.title && existing.title) {
+      const existCleanTitle = cleanTitle(existing.title);
+      if (
+        candidate.title.trim().toLowerCase() === existing.title.trim().toLowerCase() ||
+        (candCleanTitle.length > 3 && candCleanTitle === existCleanTitle)
+      ) {
+        return {
+          isDuplicate: true,
+          reason: `Matching community title on ${candidate.platform}: "${candidate.title}" vs "${existing.title}"`,
+          matchedCommunity: existing,
+        };
+      }
     }
   }
 
