@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+﻿import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import fs from 'fs';
@@ -75,6 +75,7 @@ try {
 export default defineConfig({
   site: process.env.PUBLIC_SITE_URL || 'https://communityhub-directory.netlify.app',
   output: 'static',
+  trailingSlash: 'always',
   integrations: [
     tailwind({
       applyBaseStyles: false,
@@ -94,7 +95,7 @@ export default defineConfig({
         ) {
           return false;
         }
-        // Permanently exclude all tag pages (Section 1)
+        // Permanently exclude all tag pages
         if (page.includes('/tag/')) {
           return false;
         }
@@ -130,11 +131,10 @@ export default defineConfig({
       },
       serialize: (item) => {
         const siteUrl = (process.env.PUBLIC_SITE_URL || 'https://communityhub-directory.netlify.app').replace(/\/+$/, '');
-        // Keep root as https://domain.com/ and subpages without trailing slash
         if (item.url === siteUrl || item.url === `${siteUrl}/`) {
           item.url = `${siteUrl}/`;
-        } else if (item.url.endsWith('/')) {
-          item.url = item.url.replace(/\/+$/, '');
+        } else if (!item.url.endsWith('/')) {
+          item.url = `${item.url}/`;
         }
         return item;
       },

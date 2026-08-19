@@ -1,4 +1,4 @@
-export type CountryCode = "US" | "GB" | "CA" | "AU" | "NZ" | "IE";
+﻿export type CountryCode = "US" | "GB" | "CA" | "AU" | "NZ" | "IE";
 
 export interface TargetCountry {
   code: CountryCode;
@@ -8,7 +8,7 @@ export interface TargetCountry {
   flag: string;
   priority: number;
   enabled: boolean;
-  discoveryBudgetWeight: number; // percentage weight for daily discovery
+  discoveryBudgetWeight: number;
   cities: string[];
 }
 
@@ -18,10 +18,10 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     slug: "usa",
     name: "United States",
     shortName: "USA",
-    flag: "🇺🇸",
+    flag: "US",
     priority: 1,
     enabled: true,
-    discoveryBudgetWeight: 0.40, // 40%
+    discoveryBudgetWeight: 0.40,
     cities: [
       "New York",
       "Los Angeles",
@@ -45,10 +45,10 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     slug: "uk",
     name: "United Kingdom",
     shortName: "UK",
-    flag: "🇬🇧",
+    flag: "UK",
     priority: 2,
     enabled: true,
-    discoveryBudgetWeight: 0.25, // 25%
+    discoveryBudgetWeight: 0.25,
     cities: [
       "London",
       "Manchester",
@@ -67,10 +67,10 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     slug: "canada",
     name: "Canada",
     shortName: "Canada",
-    flag: "🇨🇦",
+    flag: "CA",
     priority: 3,
     enabled: true,
-    discoveryBudgetWeight: 0.20, // 20%
+    discoveryBudgetWeight: 0.20,
     cities: [
       "Toronto",
       "Vancouver",
@@ -87,10 +87,10 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     slug: "australia",
     name: "Australia",
     shortName: "Australia",
-    flag: "🇦🇺",
+    flag: "AU",
     priority: 4,
     enabled: true,
-    discoveryBudgetWeight: 0.15, // 15%
+    discoveryBudgetWeight: 0.15,
     cities: [
       "Sydney",
       "Melbourne",
@@ -106,9 +106,9 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     slug: "new-zealand",
     name: "New Zealand",
     shortName: "NZ",
-    flag: "🇳🇿",
+    flag: "NZ",
     priority: 5,
-    enabled: false, // Secondary - disabled in Phase 1
+    enabled: false,
     discoveryBudgetWeight: 0.0,
     cities: ["Auckland", "Wellington", "Christchurch"],
   },
@@ -117,9 +117,9 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     slug: "ireland",
     name: "Ireland",
     shortName: "Ireland",
-    flag: "🇮🇪",
+    flag: "IE",
     priority: 6,
-    enabled: false, // Secondary - disabled in Phase 1
+    enabled: false,
     discoveryBudgetWeight: 0.0,
     cities: ["Dublin", "Cork", "Galway", "Limerick"],
   },
@@ -134,7 +134,5 @@ export function getCountryByCode(code: string | null | undefined): TargetCountry
 
 export function getCountryBySlug(slug: string | null | undefined): TargetCountry | undefined {
   if (!slug) return undefined;
-  return Object.values(TARGET_COUNTRIES).find(
-    (c) => c.slug.toLowerCase() === slug.toLowerCase()
-  );
+  return Object.values(TARGET_COUNTRIES).find((c) => c.slug.toLowerCase() === slug.toLowerCase());
 }

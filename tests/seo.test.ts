@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+ï»¿import { describe, it, expect } from "vitest";
 import {
   getCanonicalUrl,
   formatPageTitle,
@@ -19,21 +19,27 @@ describe("SEO Engine & JSON-LD Generators", () => {
   const baseUrl = siteConfig.url.replace(/\/+$/, "");
 
   describe("Canonical URL Generation", () => {
-    it("generates correct root canonical URL without trailing slash", () => {
-      expect(getCanonicalUrl("/")).toBe(baseUrl);
-      expect(getCanonicalUrl("")).toBe(baseUrl);
+    it("generates correct root canonical URL with trailing slash", () => {
+      expect(getCanonicalUrl("/")).toBe(`${baseUrl}/`);
+      expect(getCanonicalUrl("")).toBe(`${baseUrl}/`);
     });
 
-    it("generates normalized path canonical URLs without trailing slashes", () => {
-      expect(getCanonicalUrl("/category/tech-jobs")).toBe(`${baseUrl}/category/tech-jobs`);
-      expect(getCanonicalUrl("/category/tech-jobs/")).toBe(`${baseUrl}/category/tech-jobs`);
-      expect(getCanonicalUrl("category/tech-jobs")).toBe(`${baseUrl}/category/tech-jobs`);
+    it("generates normalized path canonical URLs with trailing slashes", () => {
+      expect(getCanonicalUrl("/category/tech-jobs")).toBe(`${baseUrl}/category/tech-jobs/`);
+      expect(getCanonicalUrl("/category/tech-jobs/")).toBe(`${baseUrl}/category/tech-jobs/`);
+      expect(getCanonicalUrl("jobs")).toBe(`${baseUrl}/jobs/`);
+      expect(getCanonicalUrl("/jobs/")).toBe(`${baseUrl}/jobs/`);
+    });
+
+    it("preserves static asset file extensions without trailing slashes", () => {
+      expect(getCanonicalUrl("/favicon.svg")).toBe(`${baseUrl}/favicon.svg`);
+      expect(getCanonicalUrl("/robots.txt")).toBe(`${baseUrl}/robots.txt`);
     });
   });
 
   describe("Page Title Formatting", () => {
     it("formats default page title", () => {
-      expect(formatPageTitle()).toBe(`${siteConfig.name} — ${siteConfig.tagline}`);
+      expect(formatPageTitle()).toBe(`${siteConfig.name} - ${siteConfig.tagline}`);
     });
 
     it("formats page specific title with branding suffix", () => {
@@ -84,18 +90,18 @@ describe("SEO Engine & JSON-LD Generators", () => {
   });
 
   describe("SEO Metadata Helper", () => {
-    it("generates correct Open Graph and Twitter tags", () => {
+    it("generates correct Open Graph and Twitter tags with trailing slashes", () => {
       const meta = getSeoMetadata({
         title: "Canada Job Alert Groups",
         description: "Find active job communities in Canada.",
-        canonicalPath: "/country/canada",
+        canonicalPath: "/country/canada/",
         noindex: true,
         pageType: "country",
       });
 
       expect(meta.title).toBe(`Canada Job Alert Groups | ${siteConfig.name}`);
       expect(meta.description).toBe("Find active job communities in Canada.");
-      expect(meta.canonicalUrl).toBe(`${baseUrl}/country/canada`);
+      expect(meta.canonicalUrl).toBe(`${baseUrl}/country/canada/`);
       expect(meta.imageUrl).toBe(`${baseUrl}/favicon.svg`);
       expect(meta.noindex).toBe(true);
     });
@@ -107,7 +113,7 @@ describe("SEO Engine & JSON-LD Generators", () => {
       expect(schema["@context"]).toBe("https://schema.org");
       expect(schema["@type"]).toBe("Organization");
       expect(schema.name).toBe(siteConfig.name);
-      expect(schema.url).toBe(baseUrl);
+      expect(schema.url).toBe(`${baseUrl}/`);
       expect(schema.logo).toBe(`${baseUrl}/favicon.svg`);
     });
 
@@ -116,22 +122,22 @@ describe("SEO Engine & JSON-LD Generators", () => {
       expect(schema["@context"]).toBe("https://schema.org");
       expect(schema["@type"]).toBe("WebSite");
       expect(schema.name).toBe(siteConfig.name);
-      expect(schema.url).toBe(baseUrl);
+      expect(schema.url).toBe(`${baseUrl}/`);
       expect((schema as any).potentialAction).toBeUndefined();
     });
 
-    it("generates valid BreadcrumbList JSON-LD schema", () => {
+    it("generates valid BreadcrumbList JSON-LD schema with trailing slashes", () => {
       const breadcrumbs = [
-        { name: "All Jobs", item: "/jobs" },
-        { name: "Canada", item: "/country/canada" },
+        { name: "All Jobs", item: "/jobs/" },
+        { name: "Canada", item: "/country/canada/" },
       ];
 
       const schema = generateBreadcrumbSchema(breadcrumbs);
       expect(schema["@context"]).toBe("https://schema.org");
       expect(schema["@type"]).toBe("BreadcrumbList");
       expect(schema.itemListElement).toHaveLength(2);
-      expect(schema.itemListElement[0].item).toBe(`${baseUrl}/jobs`);
-      expect(schema.itemListElement[1].item).toBe(`${baseUrl}/country/canada`);
+      expect(schema.itemListElement[0].item).toBe(`${baseUrl}/jobs/`);
+      expect(schema.itemListElement[1].item).toBe(`${baseUrl}/country/canada/`);
     });
 
     it("generates valid CollectionPage JSON-LD schema for category directories", () => {
@@ -164,13 +170,13 @@ describe("SEO Engine & JSON-LD Generators", () => {
       const schema = generateCollectionPageSchema(
         "Tech Job Alert Groups",
         "List of verified Tech Jobs communities",
-        "/category/tech-jobs",
+        "/category/tech-jobs/",
         mockCommunities
       );
 
       expect(schema["@type"]).toBe("CollectionPage");
       expect(schema.mainEntity.itemListElement).toHaveLength(1);
-      expect(schema.mainEntity.itemListElement[0].url).toBe(`${baseUrl}/group/astro-lounge-discord`);
+      expect(schema.mainEntity.itemListElement[0].url).toBe(`${baseUrl}/group/astro-lounge-discord/`);
     });
 
     it("generates factual CommunityDetail WebPage schema without unsupported Organization identity", () => {
@@ -204,7 +210,7 @@ describe("SEO Engine & JSON-LD Generators", () => {
       expect(schema["@context"]).toBe("https://schema.org");
       expect(schema["@type"]).toBe("WebPage");
       expect(schema.name).toBe("NorthernDev (formerly Tech Career North) (discord)");
-      expect(schema.url).toBe(`${baseUrl}/group/northerndev-formerly-tech-career-north-discord`);
+      expect(schema.url).toBe(`${baseUrl}/group/northerndev-formerly-tech-career-north-discord/`);
       expect((schema as any).mainEntity).toBeUndefined(); // Informal chat communities are NOT typed as Organization
       expect(schema.about).toEqual({
         "@type": "Thing",

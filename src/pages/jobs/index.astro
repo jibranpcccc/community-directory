@@ -1,58 +1,80 @@
----
+﻿---
 import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
+import CommunityCard from "../../components/CommunityCard.astro";
 import FilterBar from "../../components/FilterBar.astro";
-import CommunityGrid from "../../components/CommunityGrid.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
-import { getPublishedCommunities } from "../../lib/communities";
-import { filterAndSortCommunities } from "../../lib/filters";
+import EmptyState from "../../components/EmptyState.astro";
+import { filterCommunities, sortCommunities } from "../../lib/filters";
+import { getAllPublishedCommunities, getDatasetStats } from "../../lib/communities";
+import { siteConfig } from "../../config/site";
 import { generateCollectionPageSchema } from "../../lib/schema";
-import type { PlatformId, VerificationStatus, SortOption, CountryCode } from "../../types/community";
+import type { FilterOptions, SortOption } from "../../types/community";
 
+// Parse URL search parameters for runtime client-side filtering if available, or SSG defaults
 const search = Astro.url.searchParams.get("search") || undefined;
-const countryCode = (Astro.url.searchParams.get("countryCode") as CountryCode) || undefined;
+const countryCode = Astro.url.searchParams.get("countryCode") || undefined;
 const category = Astro.url.searchParams.get("category") || undefined;
-const platform = (Astro.url.searchParams.get("platform") as PlatformId) || undefined;
-const verificationStatus = (Astro.url.searchParams.get("verificationStatus") as VerificationStatus) || undefined;
+const platform = Astro.url.searchParams.get("platform") || undefined;
 const sort = (Astro.url.searchParams.get("sort") as SortOption) || "newest";
 
-const allCommunities = getPublishedCommunities();
-const filtered = filterAndSortCommunities(
-  allCommunities,
-  { search, countryCode, category, platform, verificationStatus },
+const currentFilters: FilterOptions = {
+  search,
+  countryCode,
+  category: category as any,
+  platform: platform as any,
+};
+
+const allCommunities = getAllPublishedCommunities();
+const filteredCommunities = sortCommunities(
+  filterCommunities(allCommunities, currentFilters),
   sort
 );
 
-const schema = generateCollectionPageSchema(
-  "All Active Job Alert Groups",
-  "Browse publicly discoverable job alert communities, hiring channels, and career servers for the US, UK, Canada, and Australia.",
-  "/jobs",
-  filtered
+const stats = getDatasetStats();
+
+// Structured data for CollectionPage
+const collectionSchema = generateCollectionPageSchema(
+  "Explore All Job Alert Groups",
+  siteConfig.description,
+  "/jobs/",
+  filteredCommunities
 );
 ---
 
 <DirectoryLayout
   heading="Explore All Job Alert Groups"
-  subheading="Discover active job alert communities, hiring channels, and career servers across Discord, Telegram, and WhatsApp."
-  breadcrumbs={[{ name: "All Jobs", item: "/jobs" }]}
-  canonicalPath="/jobs"
+  subheading="Browse public career communities, hiring channels, and job alert groups across Discord, Telegram, and WhatsApp."
+  breadcrumbs={[{ name: "All Jobs", item: "/jobs/" }]}
+  canonicalPath="/jobs/"
+  jsonLd={collectionSchema}
   pageType="jobs"
-  jsonLd={schema}
 >
-  <!-- Filter Bar -->
+  <!-- Filter Controls -->
   <FilterBar
-    currentFilters={{ search, countryCode, category, platform, verificationStatus }}
+    currentFilters={currentFilters}
     currentSort={sort}
-    totalCount={filtered.length}
+    totalCount={filteredCommunities.length}
   />
 
-  <!-- Interactive Grid Container -->
-  <div id="communities-results-container" class="space-y-8">
-    <CommunityGrid
-      communities={filtered}
-      emptyTitle="No job groups match your filter criteria"
-      emptyMessage="Try resetting or adjusting your search filters, or submit a public job group to be indexed."
-    />
+  <!-- Communities Grid or Empty State -->
+  {
+    filteredCommunities.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+        {filteredCommunities.map((comm) => (
+          <CommunityCard community={comm} />
+        ))}
+      </div>
+    ) : (
+      <div class="mb-10">
+        <EmptyState
+          title="No Matching Job Communities Found"
+          message="No active communities matched your exact filter combination. Try clearing some filters or searching for different keywords."
+          resetUrl="/jobs/"
+        />
+      </div>
+    )
+  }
 
-    <SafetyNotice type="job-warning" />
-  </div>
+  <!-- Job Seeker Safety Notice -->
+  <SafetyNotice type="job-warning" />
 </DirectoryLayout>

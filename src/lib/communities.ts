@@ -1,4 +1,4 @@
-import type { Community, PlatformId, FilterOptions, SortOption, CountryCode } from "../types/community";
+﻿import type { Community, PlatformId, FilterOptions, SortOption, CountryCode } from "../types/community";
 import groupsData from "../data/groups.json";
 import pendingData from "../data/pending-groups.json";
 
@@ -23,6 +23,8 @@ export function getAllCommunities(): Community[] {
 export function getPublishedCommunities(): Community[] {
   return publishedCommunities;
 }
+
+export const getAllPublishedCommunities = getPublishedCommunities;
 
 /**
  * Returns pending communities in the moderation queue.

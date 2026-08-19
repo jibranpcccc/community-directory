@@ -1,52 +1,34 @@
 ---
 import DirectoryLayout from "../layouts/DirectoryLayout.astro";
-import SafetyNotice from "../components/SafetyNotice.astro";
 import { siteConfig } from "../config/site";
+
+const pageTitle = `Disclaimer | ${siteConfig.name}`;
+const pageDescription = "Legal and informational disclaimer regarding community listings and employment offers on JobAlertHub.";
 ---
 
 <DirectoryLayout
-  heading="Legal Disclaimers & Disclosures"
-  subheading="Informational directory status, recruitment disclaimers, and trademark notices."
-  breadcrumbs={[
-    { name: "All Jobs", item: "/jobs" },
-    { name: "Disclaimer", item: "/disclaimer" },
-  ]}
-  canonicalPath="/disclaimer"
+  heading="Directory Disclaimer"
+  subheading="Important information regarding listings, external links, and third-party employment opportunities."
+  breadcrumbs={[{ name: "Disclaimer", item: "/disclaimer/" }]}
+  title={pageTitle}
+  description={pageDescription}
+  canonicalPath="/disclaimer/"
+  pageType="trust"
 >
-  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base text-slate-800 leading-relaxed font-medium">
-    <section class="neo-card p-6 sm:p-8 space-y-4 bg-white">
-      <h2 class="text-xl sm:text-2xl font-black text-black">1. Informational Directory Status (Not an Employer)</h2>
-      <p>
-        <strong>{siteConfig.name} is an independent informational directory.</strong> We are not an employer, staffing agency, recruitment firm, or labor broker.
+  <div class="max-w-4xl mx-auto space-y-6 text-sm font-medium text-slate-800 leading-relaxed">
+    <div class="neo-card p-6 sm:p-8 bg-white space-y-4">
+      <h2 class="text-xl font-black text-black">No Guarantee of Employment</h2>
+      <p class="text-slate-700">
+        JobAlertHub is a searchable public directory of third-party communities. Inclusion of any Telegram channel, Discord server, or WhatsApp group does NOT constitute an endorsement, recommendation, or guarantee of employment.
       </p>
-      <p>
-        Inclusion of a community in this directory does not constitute an endorsement, warranty of employment, or verification of hiring claims made by third parties. We do not guarantee job placement, interview opportunities, or the validity of job vacancies shared within external chat groups.
+      <h2 class="text-xl font-black text-black">External Third-Party Content</h2>
+      <p class="text-slate-700">
+        We do not control and are not responsible for messages, job postings, recruiter communications, or files shared within third-party communities. Job seekers must perform independent due diligence before sharing sensitive personal or financial information.
       </p>
-      <SafetyNotice type="job-warning" />
-    </section>
-
-    <section class="neo-card-yellow p-6 sm:p-8 space-y-4">
-      <h2 class="text-xl sm:text-2xl font-black text-black">2. No Payment for Employment</h2>
-      <p class="font-bold text-black">
-        Under no circumstances should any user pay money to apply for a job, obtain an interview, purchase mandatory training materials, or deposit cryptocurrency into third-party task platforms. Any group demanding upfront fees is likely fraudulent.
+      <h2 class="text-xl font-black text-black">Financial Risk Warning</h2>
+      <p class="text-slate-700">
+        Legitimate employers will never ask for payment, training fees, or cryptocurrency deposits. If any community demands money for employment, exit immediately and report the listing.
       </p>
-    </section>
-
-    <section class="neo-card p-6 sm:p-8 space-y-4 bg-white">
-      <h2 class="text-xl sm:text-2xl font-black text-black">3. Trademark Notice & Non-Affiliation</h2>
-      <p>
-        Telegram, WhatsApp, Discord, Meta Platforms Inc., and any employer brand names, logos, or trademarks referenced on this website are the property of their respective trademark holders.
-      </p>
-      <p>
-        {siteConfig.name} is an independent third-party index. Reference to these names and trademarks does not imply endorsement, affiliation, or sponsorship by their respective owners.
-      </p>
-    </section>
-
-    <section class="neo-card-mint p-6 sm:p-8 space-y-4">
-      <h2 class="text-xl sm:text-2xl font-black text-black">4. External Links & User Vigilance</h2>
-      <p>
-        We have no direct control over the messages, links, files, or moderation practices within external third-party chat groups. Users access external communities at their own discretion and must maintain independent vigilance.
-      </p>
-    </section>
+    </div>
   </div>
 </DirectoryLayout>

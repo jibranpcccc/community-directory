@@ -1,38 +1,30 @@
 ---
 import DirectoryLayout from "../layouts/DirectoryLayout.astro";
 import { siteConfig } from "../config/site";
+
+const pageTitle = `Terms of Service | ${siteConfig.name}`;
+const pageDescription = "Terms and conditions for browsing and submitting communities to JobAlertHub.";
 ---
 
 <DirectoryLayout
   heading="Terms of Service"
-  subheading={`Terms and conditions governing the use of ${siteConfig.name}.`}
-  breadcrumbs={[
-    { name: "All Jobs", item: "/jobs" },
-    { name: "Terms of Service", item: "/terms" },
-  ]}
-  canonicalPath="/terms"
+  subheading="Terms and conditions governing use of the JobAlertHub directory."
+  breadcrumbs={[{ name: "Terms of Service", item: "/terms/" }]}
+  title={pageTitle}
+  description={pageDescription}
+  canonicalPath="/terms/"
   pageType="trust"
 >
-  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base font-medium text-slate-800 leading-relaxed">
-    <section class="neo-card p-6 sm:p-8 space-y-3 bg-white">
-      <h2 class="text-xl sm:text-2xl font-black text-black">1. Acceptance of Terms</h2>
-      <p>
-        By accessing or using {siteConfig.name}, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use the directory.
+  <div class="max-w-4xl mx-auto space-y-6 text-sm font-medium text-slate-800 leading-relaxed">
+    <div class="neo-card p-6 sm:p-8 bg-white space-y-4">
+      <h2 class="text-xl font-black text-black">Acceptance of Terms</h2>
+      <p class="text-slate-700">
+        By accessing and using JobAlertHub, you agree to these terms. If you do not agree, please do not use the directory.
       </p>
-    </section>
-
-    <section class="neo-card p-6 sm:p-8 space-y-3 bg-white">
-      <h2 class="text-xl sm:text-2xl font-black text-black">2. Directory Purpose & Informational Use</h2>
-      <p>
-        {siteConfig.name} is an informational directory intended to index publicly discoverable online job alert communities. We do not operate, control, or monitor conversations inside external third-party groups, servers, or channels.
+      <h2 class="text-xl font-black text-black">Permitted Use</h2>
+      <p class="text-slate-700">
+        You may use this directory to discover public career communities for personal, non-commercial job seeking. Automated scraping or bulk harvesting of directory data is prohibited.
       </p>
-    </section>
-
-    <section class="neo-card p-6 sm:p-8 space-y-3 bg-white">
-      <h2 class="text-xl sm:text-2xl font-black text-black">3. Limitation of Liability</h2>
-      <p>
-        To the maximum extent permitted by law, {siteConfig.name} and its maintainers shall not be liable for any damages resulting from your interaction with any third-party community or employer discovered through our service.
-      </p>
-    </section>
+    </div>
   </div>
 </DirectoryLayout>

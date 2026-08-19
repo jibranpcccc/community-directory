@@ -1,69 +1,60 @@
 ---
 import DirectoryLayout from "../layouts/DirectoryLayout.astro";
 import { siteConfig } from "../config/site";
-import { generateOrganizationSchema } from "../lib/schema";
 
-const organizationSchema = generateOrganizationSchema();
+const pageTitle = `About JobAlertHub | ${siteConfig.name}`;
+const pageDescription = "Learn about JobAlertHub, our mission to index public job alert communities, and our zero-hallucination standards.";
 ---
 
 <DirectoryLayout
-  heading={`About ${siteConfig.name}`}
-  subheading="Building an active, structured, and scam-screened directory for discovering public job alert communities."
-  breadcrumbs={[
-    { name: "All Jobs", item: "/jobs" },
-    { name: "About", item: "/about" },
-  ]}
-  canonicalPath="/about"
+  heading="About JobAlertHub"
+  subheading="An independent, fact-first public directory of job alert channels, career communities, and hiring networks."
+  breadcrumbs={[{ name: "About", item: "/about/" }]}
+  title={pageTitle}
+  description={pageDescription}
+  canonicalPath="/about/"
   pageType="trust"
-  jsonLd={organizationSchema}
 >
   <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base font-medium text-slate-800 leading-relaxed">
-    <section class="neo-card p-6 sm:p-8 space-y-3 bg-white">
-      <div class="inline-block bg-[#FEF08A] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
-        PURPOSE
-      </div>
+    <div class="neo-card p-6 sm:p-8 bg-white space-y-4">
       <h2 class="text-2xl font-black text-black">Our Mission</h2>
-      <p class="font-bold text-slate-700">
-        Job hunting has increasingly moved into real-time messaging communities across Discord, Telegram, and WhatsApp. Job seekers across English-speaking markets (the United States, United Kingdom, Canada, and Australia) use these channels for immediate vacancy notices, networking, and direct hiring discussions.
+      <p class="text-slate-700">
+        Job hunting in modern tech, healthcare, finance, and remote industries is increasingly distributed across real-time messaging communities: Discord servers, Telegram channels, and WhatsApp hiring groups.
       </p>
-      <p class="font-bold text-slate-700">
-        <strong>{siteConfig.name}</strong> was created to catalog legitimate, publicly discoverable job alert communities while screening against upfront fee scams, task optimization schemes, and dead invite links.
+      <p class="text-slate-700">
+        JobAlertHub was built to create a clean, searchable, and verified index of these public communities across the United States, United Kingdom, Canada, and Australia.
       </p>
-    </section>
+    </div>
 
-    <!-- Factual Metric Grid -->
-    <section class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-8">
-      <div class="neo-card-yellow p-6 text-center">
-        <div class="text-3xl font-black text-black mb-1">0%</div>
-        <div class="text-xs font-black uppercase tracking-wider text-black">Fake Metrics</div>
-        <p class="text-xs font-bold text-slate-700 mt-1">We never fabricate member counts, growth stats, or ratings.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="neo-card-yellow p-6 space-y-3">
+        <h3 class="text-lg font-black text-black">Fact-First Standards</h3>
+        <p class="text-xs font-medium text-black/80 leading-relaxed">
+          We do not generate synthetic member counts, fake ratings, or promotional testimonials. Every community listed has a publicly verifiable invite URL and real-world origin.
+        </p>
       </div>
 
-      <div class="neo-card-mint p-6 text-center">
-        <div class="text-3xl font-black text-black mb-1">100%</div>
-        <div class="text-xs font-black uppercase tracking-wider text-black">Public Channels</div>
-        <p class="text-xs font-bold text-slate-700 mt-1">Only active, publicly discoverable group links.</p>
+      <div class="neo-card-mint p-6 space-y-3">
+        <h3 class="text-lg font-black text-black">Proactive Safety</h3>
+        <p class="text-xs font-medium text-black/80 leading-relaxed">
+          We maintain automated filters against recruitment fraud, fee-demanding schemes, and task optimization scams to protect job seekers from exploitation.
+        </p>
       </div>
+    </div>
 
-      <div class="neo-card-purple p-6 text-center">
-        <div class="text-3xl font-black text-black mb-1">Strict</div>
-        <div class="text-xs font-black uppercase tracking-wider text-black">Scam Screening</div>
-        <p class="text-xs font-bold text-slate-700 mt-1">Automated screening against pay-to-work and task schemes.</p>
-      </div>
-    </section>
-
-    <!-- Transparent Automation Disclosure (Section 46) -->
-    <section class="neo-card p-6 sm:p-8 space-y-3 bg-white">
-      <div class="inline-block bg-[#A7F3D0] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
-        OPERATIONS & AUTOMATION DISCLOSURE
-      </div>
-      <h2 class="text-2xl font-black text-black">How We Operate</h2>
-      <p class="font-bold text-slate-700">
-        {siteConfig.name} uses automated search and validation systems to discover and monitor public job communities. Listings are published only when they pass configured relevance, link-health, geographic, and safety checks.
+    <div class="neo-card p-6 sm:p-8 bg-white space-y-4">
+      <h2 class="text-2xl font-black text-black">Independent Public Service</h2>
+      <p class="text-slate-700">
+        JobAlertHub is an independent directory. We are not affiliated with, endorsed by, or operated by Discord Inc., Telegram FZ-LLC, or WhatsApp LLC.
       </p>
-      <p class="font-bold text-slate-700">
-        Published communities are rechecked automatically on a daily schedule. If an invitation link expires or becomes unreachable, the listing is automatically removed.
-      </p>
-    </section>
+      <div class="pt-4 flex flex-wrap gap-3">
+        <a href="/jobs/" class="neo-button bg-[#FEF08A] hover:bg-[#FDE047] text-black px-5 py-2.5 text-xs font-black">
+          Browse All Job Groups &rarr;
+        </a>
+        <a href="/how-we-verify/" class="neo-button bg-white hover:bg-slate-100 text-black px-5 py-2.5 text-xs font-black">
+          Our Verification Process
+        </a>
+      </div>
+    </div>
   </div>
 </DirectoryLayout>

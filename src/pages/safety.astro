@@ -1,105 +1,98 @@
----
+ï»¿---
 import DirectoryLayout from "../layouts/DirectoryLayout.astro";
-import SafetyNotice from "../components/SafetyNotice.astro";
+import { siteConfig } from "../config/site";
+
+const pageTitle = `Job Seeker Safety & Scam Prevention Guide | ${siteConfig.name}`;
+const pageDescription = "Essential safety guidelines for job seekers discovering online employment communities. Learn how to spot task scams, fake recruiters, and fee fraud.";
 ---
 
 <DirectoryLayout
   heading="Job Seeker Safety & Scam Guide"
-  subheading="Essential safety practices for discovering and evaluating job openings in public online communities."
-  breadcrumbs={[
-    { name: "All Jobs", item: "/jobs" },
-    { name: "Safety Guide", item: "/safety" },
-  ]}
-  canonicalPath="/safety"
+  subheading="How to protect yourself from recruitment fraud, upfront payment scams, task optimization schemes, and identity theft."
+  breadcrumbs={[{ name: "Safety Guide", item: "/safety/" }]}
+  title={pageTitle}
+  description={pageDescription}
+  canonicalPath="/safety/"
   pageType="trust"
 >
-  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base font-medium text-slate-800 leading-relaxed">
-    <SafetyNotice type="job-warning" />
-
-    <!-- Core Rule 1 -->
-    <section class="neo-card p-6 sm:p-8 space-y-4 bg-white">
-      <div class="inline-block bg-[#FECDD3] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
-        RED FLAG #1
+  <div class="max-w-4xl mx-auto space-y-10">
+    <!-- Critical Alert Box -->
+    <div class="rounded-3xl border-[3px] border-black bg-[#FEF08A] p-6 sm:p-8 shadow-[6px_6px_0px_0px_#000] space-y-3">
+      <div class="flex items-center gap-3 text-black">
+        <svg class="h-8 w-8 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        <h2 class="text-xl sm:text-2xl font-black">The Golden Rule of Job Searching</h2>
       </div>
-      <h2 class="text-xl sm:text-2xl font-black text-black">
-        1. Never Pay for a Job, Equipment, or Application Fee
-      </h2>
-      <p class="text-slate-700 leading-relaxed">
-        <strong>Legitimate employers will never ask candidates to pay money upfront.</strong> Beware of:
+      <p class="text-sm sm:text-base font-bold text-black leading-relaxed">
+        <strong>A legitimate employer will NEVER ask you to pay money to get a job.</strong> You should never pay for job applications, background check fees, equipment deposits, or cryptocurrency wallet unlocks.
       </p>
-      <ul class="list-disc pl-5 space-y-1.5 text-slate-700 text-xs sm:text-sm">
-        <li>"Application processing fees" or "background check fees".</li>
-        <li>"Software training deposits" or "home office kit setup fees".</li>
-        <li>Wire transfers, gift cards, Zelle/CashApp requests, or cryptocurrency transactions.</li>
-      </ul>
-    </section>
+    </div>
 
-    <!-- Core Rule 2 -->
-    <section class="neo-card p-6 sm:p-8 space-y-4 bg-white">
-      <div class="inline-block bg-[#FEF08A] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
-        RED FLAG #2
-      </div>
-      <h2 class="text-xl sm:text-2xl font-black text-black">
-        2. Beware of "Task Optimization" & Crypto Deposit Schemes
-      </h2>
-      <p class="text-slate-700 leading-relaxed">
-        A common online fraud involves offering lucrative daily pay ($200–$500/day) for simple tasks like rating hotel apps, clicking products, or watching videos:
-      </p>
-      <ul class="list-disc pl-5 space-y-1.5 text-slate-700 text-xs sm:text-sm">
-        <li>They allow small withdrawals at first to build trust.</li>
-        <li>Then they require "recharging" account balances with USDT/crypto to continue or withdraw larger sums.</li>
-        <li>Any job requiring you to deposit money to unlock tasks is 100% fraudulent.</li>
-      </ul>
-    </section>
+    <!-- Common Scams Explained -->
+    <div class="space-y-6">
+      <h2 class="text-2xl font-black text-black">Common Online Recruitment Scams</h2>
 
-    <!-- Core Rule 3 -->
-    <section class="neo-card p-6 sm:p-8 space-y-4 bg-white">
-      <div class="inline-block bg-[#BAE6FD] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
-        RED FLAG #3
-      </div>
-      <h2 class="text-xl sm:text-2xl font-black text-black">
-        3. Verify Email Domains & Recruiter Identities
-      </h2>
-      <p class="text-slate-700 leading-relaxed">
-        Scammers frequently impersonate recognizable companies (e.g. Amazon, Google, Microsoft, Shopify):
-      </p>
-      <ul class="list-disc pl-5 space-y-1.5 text-slate-700 text-xs sm:text-sm">
-        <li>Real corporate recruiters use company email domains (e.g. <code>@company.com</code>), not generic <code>@gmail.com</code>, <code>@telegram.me</code>, or lookalike misspelled domains.</li>
-        <li>Legitimate corporate interviews do not take place solely via text chat without video or voice verification.</li>
-        <li>Always cross-check open vacancies on the employer's official careers portal.</li>
-      </ul>
-    </section>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Scam 1: Task Scams -->
+        <div class="neo-card p-6 bg-white space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-black text-black">1. Task & App Rating Scams</h3>
+            <span class="rounded bg-[#FECDD3] px-2 py-0.5 border border-black text-[10px] font-black uppercase text-black">High Risk</span>
+          </div>
+          <p class="text-xs font-medium text-slate-700 leading-relaxed">
+            A common online fraud involves offering lucrative daily pay ($200-$500/day) for simple tasks like rating hotel apps, clicking products, or watching videos:
+          </p>
+          <ul class="text-xs font-bold text-slate-800 space-y-1.5 list-disc pl-4">
+            <li>They ask you to create an account on a fake task portal.</li>
+            <li>You see fake earnings accumulate quickly.</li>
+            <li>To withdraw your funds, they demand you deposit USDT or crypto.</li>
+            <li><strong>Outcome:</strong> Once you deposit, your money is stolen.</li>
+          </ul>
+        </div>
 
-    <!-- Core Rule 4 -->
-    <section class="neo-card p-6 sm:p-8 space-y-4 bg-white">
-      <div class="inline-block bg-[#DDD6FE] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
-        RED FLAG #4
+        <!-- Scam 2: Upfront Fee Scams -->
+        <div class="neo-card p-6 bg-white space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-black text-black">2. Upfront Fee & Kit Scams</h3>
+            <span class="rounded bg-[#FECDD3] px-2 py-0.5 border border-black text-[10px] font-black uppercase text-black">High Risk</span>
+          </div>
+          <p class="text-xs font-medium text-slate-700 leading-relaxed">
+            Fraudulent recruiters offer a remote position immediately without an interview, but require upfront payment:
+          </p>
+          <ul class="text-xs font-bold text-slate-800 space-y-1.5 list-disc pl-4">
+            <li>"Pay $150 for mandatory onboarding training."</li>
+            <li>"Send a deposit for company laptop & monitor shipping."</li>
+            <li>"Pay an administrative visa processing fee."</li>
+            <li><strong>Outcome:</strong> Legitimate firms provide all equipment and onboarding free of charge.</li>
+          </ul>
+        </div>
       </div>
-      <h2 class="text-xl sm:text-2xl font-black text-black">
-        4. Protect Sensitive Identity Information
-      </h2>
-      <p class="text-slate-700 leading-relaxed">
-        Do not provide sensitive identification data during initial chat conversations:
-      </p>
-      <ul class="list-disc pl-5 space-y-1.5 text-slate-700 text-xs sm:text-sm">
-        <li>Social Security Numbers (SSN), National Insurance (NI) numbers, Social Insurance Numbers (SIN), or Tax File Numbers (TFN).</li>
-        <li>Bank account logins, credit card numbers, or copies of government photo IDs prior to receiving a formal verified offer letter through official company systems.</li>
-      </ul>
-    </section>
+    </div>
 
-    <!-- Report CTA -->
-    <div class="rounded-3xl border-[3px] border-black bg-[#FEF08A] p-6 sm:p-8 shadow-[6px_6px_0px_0px_#000] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-      <div>
-        <h3 class="text-lg font-black text-black">Found a Suspicious Job Community?</h3>
-        <p class="mt-1 text-xs sm:text-sm font-bold text-black/80">
-          Help protect fellow job seekers by reporting scam channels or fee-charging groups for immediate removal.
-        </p>
+    <!-- Safety Checklist -->
+    <div class="neo-card-mint p-6 sm:p-8 space-y-4">
+      <h2 class="text-xl sm:text-2xl font-black text-black">Job Seeker Protection Checklist</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-black">
+        <div class="p-3 bg-white border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_#000]">
+          <strong>Verify Corporate Emails:</strong> Ensure communications come from official domains (@company.com), not generic Gmail, Outlook, or Telegram handles.
+        </div>
+        <div class="p-3 bg-white border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_#000]">
+          <strong>Video or In-Person Interview:</strong> Real employers conduct rigorous live interviews before extending employment offers.
+        </div>
+        <div class="p-3 bg-white border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_#000]">
+          <strong>Never Send Identity Docs Upfront:</strong> Do not submit passport copies, SSN/SIN, or banking details before an official verified offer letter.
+        </div>
+        <div class="p-3 bg-white border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_#000]">
+          <strong>Report Suspicious Channels:</strong> If a community listed on JobAlertHub promotes scams, report it immediately to have it removed.
+        </div>
       </div>
-      <a
-        href="/report"
-        class="neo-btn bg-[#FECDD3] hover:bg-[#FDA4AF] text-black px-4 py-2.5 text-xs font-black shrink-0 border-2 border-black shadow-[2px_2px_0px_0px_#000]"
-      >
-        Report a Suspicious Group &rarr;
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center pt-4">
+      <a href="/report/" class="neo-button bg-[#FECDD3] hover:bg-[#FDA4AF] text-black px-6 py-3 text-sm font-black">
+        Report a Suspicious Listing &rarr;
       </a>
     </div>
   </div>

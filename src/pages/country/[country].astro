@@ -1,96 +1,69 @@
----
+﻿---
 import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
-import FilterBar from "../../components/FilterBar.astro";
-import CommunityGrid from "../../components/CommunityGrid.astro";
+import CommunityCard from "../../components/CommunityCard.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
-import { siteConfig } from "../../config/site";
-import { ENABLED_COUNTRIES } from "../../config/countries";
+import EmptyState from "../../components/EmptyState.astro";
+import { TARGET_COUNTRIES, getCountryBySlug } from "../../config/countries";
 import { getCommunitiesByCountry } from "../../lib/communities";
-import { filterAndSortCommunities } from "../../lib/filters";
+import { siteConfig } from "../../config/site";
 import { generateCollectionPageSchema } from "../../lib/schema";
-import type { PlatformId, VerificationStatus, SortOption } from "../../types/community";
+import { getIndexability } from "../../lib/seo";
 
-export function getStaticPaths() {
-  return ENABLED_COUNTRIES.map((c) => ({
-    params: { country: c.slug },
-    props: { countryConfig: c },
+export async function getStaticPaths() {
+  return Object.values(TARGET_COUNTRIES).map((country) => ({
+    params: { country: country.slug },
   }));
 }
 
 const { country } = Astro.params;
-const { countryConfig } = Astro.props;
+const countryConfig = getCountryBySlug(country);
 
-const search = Astro.url.searchParams.get("search") || undefined;
-const category = Astro.url.searchParams.get("category") || undefined;
-const platform = (Astro.url.searchParams.get("platform") as PlatformId) || undefined;
-const verificationStatus = (Astro.url.searchParams.get("verificationStatus") as VerificationStatus) || undefined;
-const sort = (Astro.url.searchParams.get("sort") as SortOption) || "newest";
+if (!countryConfig) {
+  return Astro.redirect("/404/");
+}
 
-const countryCommunities = getCommunitiesByCountry(countryConfig.code);
-const filtered = filterAndSortCommunities(
-  countryCommunities,
-  { search, category, platform, verificationStatus },
-  sort
+const communities = getCommunitiesByCountry(countryConfig.code);
+const isIndexable = getIndexability("country", communities.length);
+
+const pageTitle = `Job Alert Groups in ${countryConfig.name} | ${siteConfig.name}`;
+const pageDescription = `Discover active public Telegram channels, Discord servers, and WhatsApp groups for jobs and hiring in ${countryConfig.name}.`;
+
+const collectionSchema = generateCollectionPageSchema(
+  `Job Alert Groups in ${countryConfig.name}`,
+  pageDescription,
+  `/country/${countryConfig.slug}/`,
+  communities
 );
-
-const schema = generateCollectionPageSchema(
-  `${countryConfig.name} Job Alert Groups`,
-  `Discover active job alert communities, hiring channels, and career groups in ${countryConfig.name} across WhatsApp, Telegram, and Discord.`,
-  `/country/${countryConfig.slug}`,
-  filtered
-);
-
-// If fewer than threshold listings exist, enforce noindex
-const noindex = countryCommunities.length < siteConfig.countryMinCommunities;
 ---
 
 <DirectoryLayout
-  heading={`${countryConfig.flag} Job Alert Groups in ${countryConfig.name}`}
-  subheading={`Browse active job communities currently listed for ${countryConfig.name}. Listings include public Discord servers, Telegram channels, and WhatsApp groups sharing employment alerts.`}
-  breadcrumbs={[
-    { name: "All Jobs", item: "/jobs" },
-    { name: countryConfig.name, item: `/country/${countryConfig.slug}` },
-  ]}
-  canonicalPath={`/country/${countryConfig.slug}`}
-  noindex={noindex}
+  heading={`Job Alert Groups in ${countryConfig.name}`}
+  subheading={`Discover verified public career communities, Discord servers, and Telegram channels targeting ${countryConfig.name}.`}
+  breadcrumbs={[{ name: countryConfig.name, item: `/country/${countryConfig.slug}/` }]}
+  title={pageTitle}
+  description={pageDescription}
+  canonicalPath={`/country/${countryConfig.slug}/`}
+  jsonLd={collectionSchema}
+  noindex={!isIndexable}
   pageType="country"
-  jsonLd={schema}
 >
-  <!-- Top Country Info Badge -->
-  <div class="mb-6 flex flex-wrap items-center gap-2 text-xs font-bold text-slate-700">
-    <span class="rounded-lg border-2 border-black bg-[#FEF08A] px-3 py-1 text-black shadow-[2px_2px_0px_0px_#000]">
-      Target Market: {countryConfig.name} ({countryConfig.code})
-    </span>
-    {countryConfig.cities.length > 0 && (
-      <span class="rounded-lg border-2 border-black bg-white px-3 py-1 text-black shadow-[2px_2px_0px_0px_#000]">
-        Major Metro Areas: {countryConfig.cities.slice(0, 5).join(", ")}
-      </span>
-    )}
-  </div>
+  {
+    communities.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+        {communities.map((comm) => (
+          <CommunityCard community={comm} />
+        ))}
+      </div>
+    ) : (
+      <div class="mb-10">
+        <EmptyState
+          title={`No ${countryConfig.name} Job Groups Listed Yet`}
+          message={`We haven't indexed any active job alert communities for ${countryConfig.name} yet. Check back soon as our discovery engine runs daily.`}
+          resetUrl="/jobs/"
+        />
+      </div>
+    )
+  }
 
-  <!-- Filter Bar -->
-  <FilterBar
-    currentFilters={{ search, category, platform, verificationStatus }}
-    currentSort={sort}
-    showCountryFilter={false}
-  />
-
-  <!-- Listings Header -->
-  <div class="flex items-center justify-between mb-4 mt-6">
-    <span class="text-xs font-bold text-black">
-      Showing <strong class="underline font-black">{filtered.length}</strong> {filtered.length === 1 ? 'community' : 'communities'} in {countryConfig.name}
-    </span>
-  </div>
-
-  <!-- Grid with Empty State -->
-  <div class="space-y-8">
-    <CommunityGrid
-      communities={filtered}
-      emptyTitle={`No active ${countryConfig.name} job groups currently published`}
-      emptyMessage="JobAlertHub continues checking public communities automatically. Verified communities will appear here once they pass publication gates."
-    />
-
-    <!-- Safety Notice -->
-    <SafetyNotice type="job-warning" />
-  </div>
+  <SafetyNotice type="job-warning" />
 </DirectoryLayout>

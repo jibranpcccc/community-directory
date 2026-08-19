@@ -1,4 +1,4 @@
-import { siteConfig } from "../config/site";
+ï»¿import { siteConfig } from "../config/site";
 
 export type PageType =
   | "home"
@@ -54,13 +54,20 @@ export function getIndexability(pageType: PageType, publishedCount: number = 0):
 
 /**
  * Returns the absolute canonical URL for a given path.
- * Enforces single trailing-slash policy (no trailing slash except root).
+ * Enforces Trailing Slash Canonical Policy (root / has trailing slash, all subpages have trailing slash).
  */
 export function getCanonicalUrl(path: string = "/"): string {
   const base = siteConfig.url.replace(/\/+$/, "");
-  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
-  const cleanPath = normalizedPath === "/" ? "" : normalizedPath.replace(/\/+$/, "");
-  return `${base}${cleanPath}`;
+  if (!path || path === "/" || path === "") {
+    return `${base}/`;
+  }
+  const clean = path.startsWith("/") ? path : `/${path}`;
+  // Do not append trailing slash to files with extensions (e.g. /favicon.svg, /robots.txt)
+  if (/\.[a-zA-Z0-9]+$/.test(clean)) {
+    return `${base}${clean}`;
+  }
+  const withSlash = clean.endsWith("/") ? clean : `${clean}/`;
+  return `${base}${withSlash}`;
 }
 
 /**
@@ -68,7 +75,7 @@ export function getCanonicalUrl(path: string = "/"): string {
  */
 export function formatPageTitle(pageTitle?: string, pageType?: PageType): string {
   if (!pageTitle) {
-    return `${siteConfig.name} — ${siteConfig.tagline}`;
+    return `${siteConfig.name} - ${siteConfig.tagline}`;
   }
   // If title already includes site name or is home, avoid double branding
   if (pageTitle.includes(siteConfig.name)) {

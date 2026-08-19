@@ -1,10 +1,11 @@
-export interface JobTypeConfig {
+﻿export interface JobTypeConfig {
   slug: string;
   name: string;
   shortName: string;
   description: string;
   icon: string;
   priority: number;
+  id?: string;
 }
 
 export const JOB_TYPES: JobTypeConfig[] = [
@@ -15,6 +16,7 @@ export const JOB_TYPES: JobTypeConfig[] = [
     description: "Public groups and channels sharing verified remote, telecommute, and distributed work opportunities.",
     icon: "laptop",
     priority: 1,
+    id: "remote-jobs",
   },
   {
     slug: "full-time-jobs",
@@ -23,6 +25,7 @@ export const JOB_TYPES: JobTypeConfig[] = [
     description: "Communities sharing permanent, full-time career roles and corporate openings.",
     icon: "briefcase",
     priority: 2,
+    id: "full-time-jobs",
   },
   {
     slug: "internships",
@@ -31,6 +34,7 @@ export const JOB_TYPES: JobTypeConfig[] = [
     description: "Student and undergraduate internship opportunities, summer programs, and co-op placements.",
     icon: "academic-cap",
     priority: 3,
+    id: "internships",
   },
   {
     slug: "graduate-jobs",
@@ -39,6 +43,7 @@ export const JOB_TYPES: JobTypeConfig[] = [
     description: "Entry-level schemes, graduate programs, and early-career opportunities.",
     icon: "sparkles",
     priority: 4,
+    id: "graduate-jobs",
   },
   {
     slug: "entry-level-jobs",
@@ -47,6 +52,7 @@ export const JOB_TYPES: JobTypeConfig[] = [
     description: "Roles requiring zero to two years of experience, junior positions, and career starter openings.",
     icon: "arrow-trending-up",
     priority: 5,
+    id: "entry-level-jobs",
   },
   {
     slug: "contract-jobs",
@@ -55,6 +61,7 @@ export const JOB_TYPES: JobTypeConfig[] = [
     description: "Fixed-term contracts, professional contracting, and consultancy placements.",
     icon: "document-text",
     priority: 6,
+    id: "contract-jobs",
   },
   {
     slug: "freelance-jobs",
@@ -63,6 +70,7 @@ export const JOB_TYPES: JobTypeConfig[] = [
     description: "Gig, freelance, and project-based independent contractor work across digital disciplines.",
     icon: "pencil-square",
     priority: 7,
+    id: "freelance-jobs",
   },
   {
     slug: "visa-sponsorship-jobs",
@@ -71,6 +79,7 @@ export const JOB_TYPES: JobTypeConfig[] = [
     description: "Verified openings providing legitimate employer immigration or work visa sponsorship.",
     icon: "globe-alt",
     priority: 8,
+    id: "visa-sponsorship-jobs",
   },
   {
     slug: "government-jobs",
@@ -79,6 +88,7 @@ export const JOB_TYPES: JobTypeConfig[] = [
     description: "Public sector, civil service, municipal, and state agency vacancy alerts.",
     icon: "building-library",
     priority: 9,
+    id: "government-jobs",
   },
   {
     slug: "part-time-jobs",
@@ -87,6 +97,7 @@ export const JOB_TYPES: JobTypeConfig[] = [
     description: "Flexible, hourly, and part-time positions accommodating varied schedules.",
     icon: "clock",
     priority: 10,
+    id: "part-time-jobs",
   },
   {
     slug: "temporary-jobs",
@@ -95,9 +106,12 @@ export const JOB_TYPES: JobTypeConfig[] = [
     description: "Seasonal, contingent, and interim staffing assignments.",
     icon: "calendar",
     priority: 11,
+    id: "temporary-jobs",
   },
 ];
 
 export function getJobTypeBySlug(slug: string): JobTypeConfig | undefined {
-  return JOB_TYPES.find((j) => j.slug === slug);
+  return JOB_TYPES.find((j) => j.slug === slug || j.id === slug);
 }
+
+export const getJobTypeConfig = getJobTypeBySlug;

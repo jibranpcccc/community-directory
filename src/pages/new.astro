@@ -1,39 +1,26 @@
 ---
 import DirectoryLayout from "../layouts/DirectoryLayout.astro";
-import CommunityGrid from "../components/CommunityGrid.astro";
-import { getRecentlyAdded } from "../lib/communities";
-import { generateCollectionPageSchema } from "../lib/schema";
+import CommunityCard from "../components/CommunityCard.astro";
+import SafetyNotice from "../components/SafetyNotice.astro";
+import { getAllPublishedCommunities } from "../lib/communities";
+import { siteConfig } from "../config/site";
 
-const recentCommunities = getRecentlyAdded(24);
-const schema = generateCollectionPageSchema(
-  "Recently Added Job Groups",
-  "The latest publicly discovered job alert communities catalogued in the directory.",
-  "/new",
-  recentCommunities
-);
+const allCommunities = getAllPublishedCommunities();
+const recentCommunities = allCommunities.slice(0, 12);
 ---
 
 <DirectoryLayout
-  heading="Recently Added Job Groups"
-  subheading="Discover the latest job alert communities recently added to our public directory."
-  breadcrumbs={[
-    { name: "All Jobs", item: "/jobs" },
-    { name: "Recently Added", item: "/new" },
-  ]}
-  canonicalPath="/new"
-  pageType="utility"
-  jsonLd={schema}
+  heading="Recently Added Job Communities"
+  subheading="The latest verified public Discord servers, Telegram channels, and WhatsApp groups."
+  breadcrumbs={[{ name: "Recently Added", item: "/new/" }]}
+  canonicalPath="/new/"
   noindex={true}
+  pageType="utility"
 >
-  <div class="mb-6 flex items-center justify-between">
-    <span class="text-xs font-bold text-black">
-      Showing <strong class="underline font-black">{recentCommunities.length}</strong> latest additions
-    </span>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+    {recentCommunities.map((comm) => (
+      <CommunityCard community={comm} />
+    ))}
   </div>
-
-  <CommunityGrid
-    communities={recentCommunities}
-    emptyTitle="No recent communities"
-    emptyMessage="No new communities have been added recently."
-  />
+  <SafetyNotice type="job-warning" />
 </DirectoryLayout>

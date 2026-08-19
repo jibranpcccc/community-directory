@@ -1,77 +1,78 @@
----
+﻿---
 import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
-import CommunityGrid from "../../components/CommunityGrid.astro";
+import CommunityCard from "../../components/CommunityCard.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
-import { siteConfig } from "../../config/site";
-import { platforms, type PlatformConfig } from "../../config/platforms";
+import EmptyState from "../../components/EmptyState.astro";
+import { platforms, getPlatformConfig } from "../../config/platforms";
 import { getCommunitiesByPlatform } from "../../lib/communities";
+import { siteConfig } from "../../config/site";
 import { generateCollectionPageSchema } from "../../lib/schema";
+import { getIndexability } from "../../lib/seo";
 
 export async function getStaticPaths() {
-  return platforms
-    .filter((p) => p.isConfigured)
-    .map((platform) => ({
-      params: { slug: platform.id },
-      props: { platform },
-    }));
+  return platforms.map((plat) => ({
+    params: { slug: plat.id },
+  }));
 }
 
-interface Props {
-  platform: PlatformConfig;
+const { slug } = Astro.params;
+const platformConfig = getPlatformConfig(slug as any);
+
+if (!platformConfig) {
+  return Astro.redirect("/404/");
 }
 
-const { platform } = Astro.props;
-const communities = getCommunitiesByPlatform(platform.id);
+const communities = getCommunitiesByPlatform(platformConfig.id);
+const isIndexable = getIndexability("platform", communities.length);
 
-const platformNoun =
-  platform.id === "discord"
-    ? "Servers"
-    : platform.id === "telegram"
-    ? "Channels & Groups"
-    : "Groups";
+const pageTitle = `Job Alert ${platformConfig.name} Channels & Groups | ${siteConfig.name}`;
+const pageDescription = `Discover publicly listed ${platformConfig.name} job alert communities, hiring channels, and career groups.`;
 
-const schema = generateCollectionPageSchema(
-  `Job Alert ${platform.name} ${platformNoun}`,
-  `Browse verified ${platform.name} job groups, employment channels, and career communities across the US, UK, Canada, and Australia.`,
-  `/platform/${platform.id}`,
+const collectionSchema = generateCollectionPageSchema(
+  `Job Alert ${platformConfig.name} Groups`,
+  pageDescription,
+  `/platform/${platformConfig.id}/`,
   communities
 );
 ---
 
 <DirectoryLayout
-  heading={`Job Alert ${platform.name} ${platformNoun}`}
-  subheading={`Explore publicly discoverable ${platform.name} job alert channels, hiring groups, and career communities.`}
-  breadcrumbs={[
-    { name: "All Jobs", item: "/jobs" },
-    { name: `${platform.name} Jobs`, item: `/platform/${platform.id}` },
-  ]}
-  canonicalPath={`/platform/${platform.id}`}
-  jsonLd={schema}
+  heading={`Job Alert ${platformConfig.name} Channels & Groups`}
+  subheading={`Explore publicly discoverable ${platformConfig.name} job alert channels, hiring groups, and career communities.`}
+  breadcrumbs={[{ name: `${platformConfig.name} Jobs`, item: `/platform/${platformConfig.id}/` }]}
+  title={pageTitle}
+  description={pageDescription}
+  canonicalPath={`/platform/${platformConfig.id}/`}
+  jsonLd={collectionSchema}
+  noindex={!isIndexable}
   pageType="platform"
-  noindex={communities.length < siteConfig.platformMinCommunities}
 >
-  <!-- Non-Affiliation Platform Notice -->
   <div class="mb-6 neo-card p-4 bg-white text-xs font-bold text-black flex items-center gap-2">
-    <span>??</span>
+    <svg class="h-4 w-4 text-black flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
     <span>
-      <strong>Platform Notice:</strong> This directory catalogues publicly discoverable {platform.name} job alert links. We are an independent directory and are not affiliated with or endorsed by {platform.name}.
+      <strong>Platform Notice:</strong> This directory catalogues publicly discoverable {platformConfig.name} job alert links. We are an independent directory and are not affiliated with or endorsed by {platformConfig.name}.
     </span>
   </div>
 
-  <div class="flex items-center justify-between mb-4">
-    <span class="text-xs font-bold text-black">
-      Showing <strong class="underline font-black">{communities.length}</strong> {communities.length === 1 ? 'community' : 'communities'} on {platform.name}
-    </span>
-  </div>
+  {
+    communities.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+        {communities.map((comm) => (
+          <CommunityCard community={comm} />
+        ))}
+      </div>
+    ) : (
+      <div class="mb-10">
+        <EmptyState
+          title={`No ${platformConfig.name} Groups Listed Yet`}
+          message={`We haven't indexed any active ${platformConfig.name} communities yet. Check back soon as new communities are discovered daily.`}
+          resetUrl="/jobs/"
+        />
+      </div>
+    )
+  }
 
-  <div class="space-y-8">
-    <CommunityGrid
-      communities={communities}
-      emptyTitle={`No active ${platform.name} job communities currently published`}
-      emptyMessage="JobAlertHub continues checking public communities automatically. Verified communities will appear here once they pass publication gates."
-    />
-
-    <!-- Safety Notice -->
-    <SafetyNotice type="job-warning" />
-  </div>
+  <SafetyNotice type="job-warning" />
 </DirectoryLayout>

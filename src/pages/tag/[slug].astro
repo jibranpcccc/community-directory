@@ -1,62 +1,71 @@
----
+﻿---
 import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
-import CommunityGrid from "../../components/CommunityGrid.astro";
+import CommunityCard from "../../components/CommunityCard.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
+import EmptyState from "../../components/EmptyState.astro";
+import { getAllPublishedCommunities, getCommunitiesByTag } from "../../lib/communities";
 import { siteConfig } from "../../config/site";
-import { getAllTagsWithCounts, getCommunitiesByTag } from "../../lib/communities";
 import { generateCollectionPageSchema } from "../../lib/schema";
 
 export async function getStaticPaths() {
-  const tagsWithCounts = getAllTagsWithCounts();
+  const all = getAllPublishedCommunities();
+  const tagSet = new Set<string>();
+  for (const c of all) {
+    if (Array.isArray(c.tags)) {
+      for (const t of c.tags) {
+        tagSet.add(t.toLowerCase());
+      }
+    }
+  }
 
-  return tagsWithCounts.map(({ tag }) => ({
+  return Array.from(tagSet).map((tag) => ({
     params: { slug: tag },
-    props: { tag },
   }));
 }
 
-interface Props {
-  tag: string;
-}
+const { slug } = Astro.params;
+const tagString = String(slug || "").toLowerCase();
+const communities = getCommunitiesByTag(tagString);
 
-const { tag } = Astro.props;
-const communities = getCommunitiesByTag(tag);
+const pageTitle = `Job Groups Tagged #${tagString} | ${siteConfig.name}`;
+const pageDescription = `Browse public job alert channels and hiring communities tagged with #${tagString}.`;
 
-const schema = generateCollectionPageSchema(
-  `#${tag} Job Communities`,
-  `Public job alert communities tagged with #${tag} across Telegram, WhatsApp, and Discord.`,
-  `/tag/${tag}`,
+const collectionSchema = generateCollectionPageSchema(
+  `Job Groups Tagged #${tagString}`,
+  pageDescription,
+  `/tag/${tagString}/`,
   communities
 );
 ---
 
 <DirectoryLayout
-  heading={`#${tag} Job Communities`}
-  subheading={`Browse public online job communities tagged with #${tag}.`}
-  breadcrumbs={[
-    { name: "All Jobs", item: "/jobs" },
-    { name: `#${tag}`, item: `/tag/${tag}` },
-  ]}
-  canonicalPath={`/tag/${tag}`}
-  pageType="tag"
+  heading={`Communities Tagged #${tagString}`}
+  subheading={`Public career communities and job alert channels tagged with #${tagString}.`}
+  breadcrumbs={[{ name: `#${tagString}`, item: `/tag/${tagString}/` }]}
+  title={pageTitle}
+  description={pageDescription}
+  canonicalPath={`/tag/${tagString}/`}
+  jsonLd={collectionSchema}
   noindex={true}
-  jsonLd={schema}
+  pageType="tag"
 >
-  <div class="space-y-6">
-    <!-- Tag Intent Clarification Banner -->
-    <div class="neo-card-yellow p-4 text-xs font-bold text-black">
-      <span>Tag Filter: </span>
-      <span class="font-black">#{tag}</span>. Browse all public job channels matching this tag. For structured geographic or role listings, see our <a href="/jobs" class="underline font-black">All Jobs catalog</a>.
-    </div>
+  {
+    communities.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+        {communities.map((comm) => (
+          <CommunityCard community={comm} />
+        ))}
+      </div>
+    ) : (
+      <div class="mb-10">
+        <EmptyState
+          title={`No Communities Tagged #${tagString}`}
+          message="No active communities with this specific tag are currently listed."
+          resetUrl="/jobs/"
+        />
+      </div>
+    )
+  }
 
-    <!-- Group Grid -->
-    <CommunityGrid
-      communities={communities}
-      emptyTitle={`No communities currently tagged #${tag}`}
-      emptyDescription="We haven't indexed any active communities with this tag yet."
-    />
-
-    <!-- Safety Banner -->
-    <SafetyNotice type="job-warning" />
-  </div>
+  <SafetyNotice type="job-warning" />
 </DirectoryLayout>

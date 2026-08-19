@@ -1,39 +1,26 @@
 ---
 import DirectoryLayout from "../layouts/DirectoryLayout.astro";
-import CommunityGrid from "../components/CommunityGrid.astro";
-import { getRecentlyChecked } from "../lib/communities";
-import { generateCollectionPageSchema } from "../lib/schema";
+import CommunityCard from "../components/CommunityCard.astro";
+import SafetyNotice from "../components/SafetyNotice.astro";
+import { getAllPublishedCommunities } from "../lib/communities";
+import { siteConfig } from "../config/site";
 
-const recentlyChecked = getRecentlyChecked(24);
-const schema = generateCollectionPageSchema(
-  "Recently Checked Job Groups",
-  "Active job communities verified during our latest automated link audit.",
-  "/recently-updated",
-  recentlyChecked
-);
+const allCommunities = getAllPublishedCommunities();
+const recentCommunities = allCommunities.slice(0, 12);
 ---
 
 <DirectoryLayout
-  heading="Recently Checked Job Groups"
-  subheading="Browse active job alert channels verified during our latest automated validation runs."
-  breadcrumbs={[
-    { name: "All Jobs", item: "/jobs" },
-    { name: "Recently Checked", item: "/recently-updated" },
-  ]}
-  canonicalPath="/recently-updated"
-  pageType="utility"
-  jsonLd={schema}
+  heading="Recently Checked Job Communities"
+  subheading="Public job communities with recently revalidated invite health."
+  breadcrumbs={[{ name: "Recently Checked", item: "/recently-updated/" }]}
+  canonicalPath="/recently-updated/"
   noindex={true}
+  pageType="utility"
 >
-  <div class="mb-6 flex items-center justify-between">
-    <span class="text-xs font-bold text-black">
-      Showing <strong class="underline font-black">{recentlyChecked.length}</strong> recently checked communities
-    </span>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+    {recentCommunities.map((comm) => (
+      <CommunityCard community={comm} />
+    ))}
   </div>
-
-  <CommunityGrid
-    communities={recentlyChecked}
-    emptyTitle="No recently checked communities"
-    emptyMessage="No communities have been rechecked recently."
-  />
+  <SafetyNotice type="job-warning" />
 </DirectoryLayout>

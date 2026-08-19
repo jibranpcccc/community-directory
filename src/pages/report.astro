@@ -1,157 +1,89 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Breadcrumbs from "../components/Breadcrumbs.astro";
-import { generateBreadcrumbSchema } from "../lib/schema";
+import DirectoryLayout from "../layouts/DirectoryLayout.astro";
+import { siteConfig } from "../config/site";
 
-// Parse optional query params passed from community detail page
-const listingId = Astro.url.searchParams.get("id") || "";
-const listingTitle = Astro.url.searchParams.get("title") || "";
-const listingUrl = Astro.url.searchParams.get("url") || "";
-
-const breadcrumbs = [
-  { name: "All Jobs", item: "/jobs" },
-  { name: "Report Listing", item: "/report" },
-];
-
-const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+const pageTitle = `Report a Listing | ${siteConfig.name}`;
+const pageDescription = "Report broken invite links, inactive channels, spam, or scam activity.";
 ---
 
-<BaseLayout
-  title="Report a Listing"
-  description="Report a broken link, scam concern, or misleading information in our directory."
-  canonicalPath="/report"
-  pageType="utility"
+<DirectoryLayout
+  heading="Report a Community Listing"
+  subheading="Report broken links, expired invites, task scams, or inactive communities for rapid moderation review."
+  breadcrumbs={[{ name: "Report Listing", item: "/report/" }]}
+  title={pageTitle}
+  description={pageDescription}
+  canonicalPath="/report/"
   noindex={true}
-  jsonLd={breadcrumbSchema}
+  pageType="utility"
 >
-  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-    <Breadcrumbs items={breadcrumbs} />
-
-    <header class="mb-8 p-6 sm:p-8 rounded-3xl border-[3px] border-black bg-[#FECDD3] shadow-[5px_5px_0px_0px_#000]">
-      <div class="inline-block bg-white px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
-        MODERATION DESK
-      </div>
-      <h1 class="text-3xl sm:text-4xl font-black text-black tracking-tight">
-        Report a Listing
-      </h1>
-      <p class="mt-2 text-sm font-bold text-black/80 leading-relaxed">
-        Help us keep the directory accurate and safe. If you found a dead link, suspicious behavior, or incorrect metadata, submit this report for review.
-      </p>
-    </header>
-
-    <!-- Netlify Form -->
+  <div class="max-w-2xl mx-auto">
     <form
-      name="listing-report"
+      name="community-report"
       method="POST"
-      action="/report-success"
+      action="/report-success/"
       data-netlify="true"
       netlify-honeypot="bot-field"
       class="rounded-3xl border-[3px] border-black bg-white p-6 sm:p-8 shadow-[6px_6px_0px_0px_#000] space-y-6"
     >
-      <input type="hidden" name="form-name" value="listing-report" />
+      <input type="hidden" name="form-name" value="community-report" />
 
-      <!-- Honeypot -->
       <p class="hidden">
-        <label>
-          Don't fill this out if you're human: <input name="bot-field" />
-        </label>
+        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
       </p>
 
-      <!-- Listing ID / Reference -->
       <div>
-        <label for="listingId" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Listing Identifier / Name <span class="text-rose-500">*</span>
+        <label for="communityUrl" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
+          Community Directory URL or Invite Link <span class="text-rose-600">*</span>
         </label>
         <input
           type="text"
-          name="listingId"
-          id="listingId"
-          value={listingTitle || listingId}
+          name="communityUrl"
+          id="communityUrl"
           required
-          placeholder="Community name or listing slug"
-          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
+          placeholder="e.g. /group/example or https://discord.gg/..."
+          class="w-full rounded-xl border-2 border-black py-2.5 px-4 text-sm font-medium text-black placeholder:text-slate-400 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         />
       </div>
 
-      <!-- Invite URL / Page URL -->
-      <div>
-        <label for="listingUrl" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Community Invite or Page URL
-        </label>
-        <input
-          type="text"
-          name="listingUrl"
-          id="listingUrl"
-          value={listingUrl}
-          placeholder="https://... or /group/slug"
-          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
-        />
-      </div>
-
-      <!-- Report Reason -->
       <div>
         <label for="reason" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Reason for Report <span class="text-rose-500">*</span>
+          Report Reason <span class="text-rose-600">*</span>
         </label>
         <select
           name="reason"
           id="reason"
           required
-          class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] px-4 py-2.5 text-sm font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
+          class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] py-2.5 px-4 text-xs font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
         >
-          <option value="">Select Reason...</option>
-          <option value="dead-invite">Dead or Expired Invite Link</option>
-          <option value="scam-fraud">Scam, Phishing, or Financial Fraud Concern</option>
-          <option value="misleading-claims">Misleading Claims or Falsified Information</option>
-          <option value="wrong-category">Incorrect Category or Tags</option>
-          <option value="duplicate">Duplicate Listing</option>
-          <option value="inappropriate-content">Abusive, Malware, or Inappropriate Content</option>
-          <option value="ownership-claim">Community Owner Removal / Update Request</option>
+          <option value="broken-link">Broken / Expired Invite Link</option>
+          <option value="scam-fraud">Job Scam / Upfront Fee / Crypto Task Scheme</option>
+          <option value="inactive">Inactive / Abandoned Community</option>
+          <option value="wrong-niche">Not a Job / Career Group</option>
           <option value="other">Other Issue</option>
         </select>
       </div>
 
-      <!-- Details -->
       <div>
         <label for="details" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Explanation & Details <span class="text-rose-500">*</span>
+          Additional Details
         </label>
         <textarea
           name="details"
           id="details"
-          rows="4"
-          required
-          placeholder="Please describe why this listing needs attention or provide evidence of broken/problematic state."
-          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
+          rows="3"
+          placeholder="Describe the issue observed..."
+          class="w-full rounded-xl border-2 border-black py-2.5 px-4 text-sm font-medium text-black placeholder:text-slate-400 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         ></textarea>
       </div>
 
-      <!-- Reporter Email -->
-      <div>
-        <label for="email" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Your Email (Optional / Confidential)
-        </label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="your.email@example.com"
-          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
-        />
-        <p class="mt-1.5 text-xs font-bold text-slate-600">
-          Only used if our team needs clarification. Never published or shared.
-        </p>
-      </div>
-
-      <!-- Submit Button -->
       <div>
         <button
           type="submit"
-          class="neo-button w-full bg-[#FECDD3] hover:bg-[#FDA4AF] py-3.5 text-sm font-black text-black shadow-[4px_4px_0px_0px_#000]"
+          class="neo-button w-full bg-[#FECDD3] hover:bg-[#FDA4AF] text-black py-3 px-6 text-sm font-black"
         >
-          Submit Report for Moderation &rarr;
+          Submit Report for Review &rarr;
         </button>
       </div>
     </form>
   </div>
-</BaseLayout>
+</DirectoryLayout>

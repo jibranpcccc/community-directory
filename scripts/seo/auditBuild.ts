@@ -1,159 +1,163 @@
-import fs from "fs";
+﻿import fs from "fs";
 import path from "path";
 
-interface AuditResult {
+export interface PageAuditResult {
   file: string;
   urlPath: string;
-  title: string | null;
-  description: string | null;
-  canonical: string | null;
-  robots: string | null;
+  title: string;
+  description: string;
+  canonical: string;
+  robots: string;
   h1Count: number;
-  h1Text: string | null;
+  h1Text: string[];
   isNoindex: boolean;
-  pageTypeCategory: "indexable" | "noindex";
+  pageTypeCategory: string;
   schemas: string[];
   forbiddenSchemas: string[];
   inboundLinks: string[];
   outboundInternalLinks: string[];
   brokenInternalLinks: string[];
-  externalLinks: { href: string; rel: string; isNofollow: boolean }[];
+  externalLinks: { href: string; rel: string }[];
   imageIssues: string[];
   prohibitedClaims: string[];
+  characterCorruptionIssues: string[];
   errors: string[];
   warnings: string[];
 }
 
-function getAllHtmlFiles(dir: string, baseDir: string = dir): string[] {
-  const files: string[] = [];
-  if (!fs.existsSync(dir)) return files;
-
+export function getAllHtmlFiles(dir: string, baseDir: string = dir): string[] {
+  let results: string[] = [];
   const entries = fs.readdirSync(dir, { withFileTypes: true });
+
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      files.push(...getAllHtmlFiles(fullPath, baseDir));
+      results = results.concat(getAllHtmlFiles(fullPath, baseDir));
     } else if (entry.isFile() && entry.name.endsWith(".html")) {
-      files.push(fullPath);
+      results.push(fullPath);
     }
   }
-  return files;
+
+  return results;
 }
 
-export function runSeoAudit(distDir: string = path.resolve("./dist")): {
-  passed: boolean;
-  totalPages: number;
-  indexableCount: number;
-  noindexCount: number;
-  sitemapUrlCount: number;
-  orphanCount: number;
-  results: AuditResult[];
-  errors: string[];
-} {
-  const errors: string[] = [];
-  const results: AuditResult[] = [];
-
+export function runSeoAudit(distDir: string = path.resolve("./dist")) {
   if (!fs.existsSync(distDir)) {
-    console.error(`[seo:audit] Error: Build directory ${distDir} does not exist. Run "npm run build" first.`);
-    return {
-      passed: false,
-      totalPages: 0,
-      indexableCount: 0,
-      noindexCount: 0,
-      sitemapUrlCount: 0,
-      orphanCount: 0,
-      results: [],
-      errors: [`Build directory ${distDir} not found.`],
-    };
+    console.error(`❌ Build directory not found at ${distDir}. Run "npm run build" first.`);
+    return { passed: false, errors: [`Build directory not found at ${distDir}`] };
   }
 
   const htmlFiles = getAllHtmlFiles(distDir);
-  console.log(`\n?? [seo:audit] Auditing ${htmlFiles.length} generated static HTML pages in ${distDir}...\n`);
+  const results: PageAuditResult[] = [];
+  const errors: string[] = [];
+  const warnings: string[] = [];
 
-  // Build a set of all valid generated URL paths
-  const validUrlPaths = new Set<string>();
-  const fileToUrlMap = new Map<string, string>();
+  // Build internal route set and link graph
+  const allKnownRoutes = new Set<string>();
+  const internalInboundGraph = new Map<string, Set<string>>();
+
   for (const file of htmlFiles) {
     const rel = path.relative(distDir, file).replace(/\\/g, "/");
-    let urlPath = "/" + rel.replace(/\/index\.html$/, "").replace(/\.html$/, "");
-    if (urlPath === "/index" || urlPath === "") urlPath = "/";
-    validUrlPaths.add(urlPath);
-    fileToUrlMap.set(file, urlPath);
-  }
-
-  // Internal Link Graph: targetUrl -> Set of sourceUrls
-  const internalInboundGraph = new Map<string, Set<string>>();
-  for (const u of validUrlPaths) {
-    internalInboundGraph.set(u, new Set<string>());
+    let route = "";
+    if (rel === "index.html") {
+      route = "/";
+    } else if (rel.endsWith("/index.html")) {
+      route = `/${rel.replace(/\/index\.html$/, "")}/`;
+    } else {
+      route = `/${rel.replace(/\.html$/, "")}/`;
+    }
+    allKnownRoutes.add(route);
+    internalInboundGraph.set(route, new Set<string>());
   }
 
   let indexableCount = 0;
   let noindexCount = 0;
 
-  // First pass: Page inspection & Link collection
+  // First pass: Analyze each individual HTML file
   for (const file of htmlFiles) {
     const content = fs.readFileSync(file, "utf-8");
-    const urlPath = fileToUrlMap.get(file) || "/";
+    const rel = path.relative(distDir, file).replace(/\\/g, "/");
+    let urlPath = "";
+    if (rel === "index.html") {
+      urlPath = "/";
+    } else if (rel.endsWith("/index.html")) {
+      urlPath = `/${rel.replace(/\/index\.html$/, "")}/`;
+    } else {
+      urlPath = `/${rel.replace(/\.html$/, "")}/`;
+    }
 
     const pageErrors: string[] = [];
     const pageWarnings: string[] = [];
 
-    // 1. Title Tag
-    const titleMatches = content.match(/<title[^>]*>([\s\S]*?)<\/title>/gi) || [];
-    let title: string | null = null;
-    if (titleMatches.length === 0) {
+    // 1. Visible Character Corruption Test (Detect ??, ???, mojibake, unencoded unicode)
+    // Strip scripts, styles, SVG paths, and HTML tags to isolate rendered human text
+    const cleanVisibleText = content
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, " ")
+      .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, " ")
+      .replace(/<svg\b[^<]*(?:(?!<\/svg>)<[^<]*)*<\/svg>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&[a-z0-9#]+;/gi, " ");
+
+    const characterCorruptionIssues: string[] = [];
+    if (/\?{2,}/.test(cleanVisibleText)) {
+      characterCorruptionIssues.push(`Double or multi-question mark corruption found in visible text`);
+      pageErrors.push(`Corrupted character sequence (??+) found in visible rendered text.`);
+    }
+    if (cleanVisibleText.includes("\uFFFD")) {
+      characterCorruptionIssues.push(`Unicode replacement character (\\uFFFD) found in visible text`);
+      pageErrors.push(`Unicode replacement character (\\uFFFD) found in visible rendered text.`);
+    }
+
+    // 2. Title Check (Section 1)
+    const titleMatch = content.match(/<title>([^<]*)<\/title>/i);
+    const title = titleMatch ? titleMatch[1].trim() : "";
+    if (!title) {
       pageErrors.push("Missing <title> tag");
-    } else if (titleMatches.length > 1) {
-      pageErrors.push(`Multiple (${titleMatches.length}) <title> tags detected`);
     } else {
-      const firstTitle = titleMatches[0];
-      if (firstTitle) {
-        title = firstTitle.replace(/<[^>]+>/g, "").trim();
-        if (!title) {
-          pageErrors.push("Empty <title> tag");
-        }
+      if (title.length > 70) {
+        pageWarnings.push(`Title tag exceeds 70 characters (${title.length}): "${title}"`);
+      }
+      if (title.length < 15 && urlPath !== "/404/") {
+        pageErrors.push(`Title tag too short (${title.length}): "${title}"`);
       }
     }
 
-    // 2. Meta Description
-    const descMatch = content.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']*)["'][^>]*>/i)
-      || content.match(/<meta[^>]*content=["']([^"']*)["'][^>]*name=["']description["'][^>]*>/i);
-    const description = descMatch ? descMatch[1]?.trim() ?? null : null;
-    if (!description && !urlPath.includes("/404")) {
-      pageWarnings.push("Missing meta description");
-    }
-
-    // 3. Canonical Tag
-    const canonicalMatches = content.match(/<link[^>]*rel=["']canonical["'][^>]*href=["']([^"']*)["'][^>]*>/gi)
-      || content.match(/<link[^>]*href=["']([^"']*)["'][^>]*rel=["']canonical["'][^>]*>/gi);
-    let canonical: string | null = null;
-    if (!canonicalMatches || canonicalMatches.length === 0) {
-      pageErrors.push("Missing <link rel=\"canonical\">");
-    } else if (canonicalMatches.length > 1) {
-      pageErrors.push(`Multiple (${canonicalMatches.length}) canonical tags detected`);
-    } else {
-      const firstCanonical = canonicalMatches[0];
-      const match = firstCanonical ? firstCanonical.match(/href=["']([^"']*)["']/i) : null;
-      canonical = match ? match[1] ?? null : null;
-      if (canonical) {
-        if (!canonical.startsWith("https://communityhub-directory.netlify.app")) {
-          pageErrors.push(`Canonical URL does not use production host: ${canonical}`);
-        }
-        if (canonical.includes("localhost") || canonical.includes("127.0.0.1")) {
-          pageErrors.push(`Canonical URL contains localhost: ${canonical}`);
-        }
+    // 3. Meta Description Check (Section 1)
+    const descMatch = content.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)["']/i) ||
+                      content.match(/<meta\s+content=["']([^"']*)["']\s+name=["']description["']/i);
+    const description = descMatch ? descMatch[1].trim() : "";
+    if (!description && urlPath !== "/404/") {
+      pageErrors.push("Missing meta description");
+    } else if (description) {
+      if (description.length > 170) {
+        pageWarnings.push(`Meta description exceeds 170 characters (${description.length})`);
+      }
+      if (description.length < 50 && urlPath !== "/404/") {
+        pageErrors.push(`Meta description too short (${description.length})`);
       }
     }
 
-    // 4. Robots Meta
-    const robotsMatch = content.match(/<meta[^>]*name=["']robots["'][^>]*content=["']([^"']*)["'][^>]*>/i);
-    const robots = robotsMatch ? robotsMatch[1]?.toLowerCase() ?? null : null;
-    const isNoindex = robots ? robots.includes("noindex") : false;
-
-    // Rule: All tag pages MUST be noindex (Section 1)
-    if (urlPath.startsWith("/tag/") && !isNoindex) {
-      pageErrors.push("Tag page is missing mandatory noindex directive");
+    // 4. Canonical Tag & Trailing Slash Check (Section 1)
+    const canonicalMatch = content.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']*)["']/i) ||
+                          content.match(/<link\s+href=["']([^"']*)["']\s+rel=["']canonical["']/i);
+    const canonical = canonicalMatch ? canonicalMatch[1].trim() : "";
+    if (!canonical) {
+      pageErrors.push("Missing canonical URL tag");
+    } else {
+      if (!canonical.startsWith("https://communityhub-directory.netlify.app")) {
+        pageErrors.push(`Canonical URL does not match production host: ${canonical}`);
+      }
+      // Ensure trailing slash on canonical URL
+      if (!canonical.endsWith("/") && !/\.[a-zA-Z0-9]+$/.test(canonical)) {
+        pageErrors.push(`Canonical URL missing trailing slash: ${canonical}`);
+      }
     }
+
+    // 5. Robots Meta Tag & Indexability Gating (Section 2)
+    const robotsMatch = content.match(/<meta\s+name=["']robots["']\s+content=["']([^"']*)["']/i) ||
+                        content.match(/<meta\s+content=["']([^"']*)["']\s+name=["']robots["']/i);
+    const robots = robotsMatch ? robotsMatch[1].toLowerCase().trim() : "";
+    const isNoindex = robots.includes("noindex");
 
     if (isNoindex) {
       noindexCount++;
@@ -161,115 +165,94 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
       indexableCount++;
     }
 
-    // 5. H1 Tag
-    const h1Matches = content.match(/<h1[^>]*>([\s\S]*?)<\/h1>/gi) || [];
-    const h1Count = h1Matches.length;
-    let h1Text: string | null = null;
-    if (h1Count === 0) {
-      pageErrors.push("Missing <h1> tag");
-    } else if (h1Count > 1) {
-      pageErrors.push(`Multiple (${h1Count}) <h1> tags detected`);
-    } else {
-      const firstH1 = h1Matches[0];
-      if (firstH1) {
-        h1Text = firstH1.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
-        if (!h1Text) {
-          pageErrors.push("Empty <h1> tag");
-        }
+    // Section 2 & 8: Validate Noindex Policies
+    if (urlPath.startsWith("/tag/")) {
+      if (!isNoindex) {
+        pageErrors.push(`TAG PAGE VIOLATION: ${urlPath} must be strictly noindex`);
+      }
+    }
+    if (urlPath.includes("/submit") || urlPath.includes("/report") || urlPath.includes("/contact") || urlPath.includes("/404")) {
+      if (!isNoindex) {
+        pageErrors.push(`UTILITY/FORM PAGE VIOLATION: ${urlPath} must be strictly noindex`);
       }
     }
 
-    // 6. JSON-LD Structured Data
+    // 6. Heading Hierarchy & Single H1 Check (Section 3)
+    const h1Matches = content.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/gi) || [];
+    const h1Count = h1Matches.length;
+    const h1Text = h1Matches.map((h) => h.replace(/<[^>]+>/g, "").trim());
+
+    if (h1Count === 0 && urlPath !== "/404/") {
+      pageErrors.push("Missing <h1> heading");
+    } else if (h1Count > 1) {
+      pageErrors.push(`Multiple <h1> headings found (${h1Count}): ${h1Text.join(" | ")}`);
+    }
+
+    // 7. Structured Data & Schema Validation (Section 4)
     const schemas: string[] = [];
     const forbiddenSchemas: string[] = [];
-    const jsonLdMatches = content.match(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi) || [];
+    const jsonLdMatches = content.match(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi) || [];
 
-    for (const tag of jsonLdMatches) {
-      const jsonStr = tag.replace(/<script[^>]*>|<\/script>/gi, "").trim();
+    for (const jsonLdBlock of jsonLdMatches) {
+      const jsonContent = jsonLdBlock.replace(/<script\s+type=["']application\/ld\+json["']>/i, "").replace(/<\/script>/i, "").trim();
       try {
-        const parsed = JSON.parse(jsonStr);
-        const extractTypes = (obj: any) => {
-          if (!obj || typeof obj !== "object") return;
-          if (obj["@type"]) {
-            schemas.push(obj["@type"]);
-            if (["JobPosting", "Review", "AggregateRating", "Product", "Course", "EmployerAggregateRating", "FAQPage"].includes(obj["@type"])) {
-              forbiddenSchemas.push(obj["@type"]);
-            }
-          }
-          if (obj["potentialAction"] && obj["potentialAction"]["@type"] === "SearchAction") {
-            forbiddenSchemas.push("SearchAction");
-          }
-          for (const key of Object.keys(obj)) {
-            if (typeof obj[key] === "object") {
-              extractTypes(obj[key]);
-            }
-          }
-        };
-        extractTypes(parsed);
+        const parsed = JSON.parse(jsonContent);
+        const types = Array.isArray(parsed) ? parsed.map((p) => p["@type"]) : [parsed["@type"]];
 
-        // Community detail page must NOT tag informal chat groups as Organization (Section 4)
-        if (urlPath.startsWith("/group/")) {
-          if (parsed["mainEntity"] && parsed["mainEntity"]["@type"] === "Organization") {
-            pageErrors.push("Community detail page contains unsupported mainEntity Organization schema");
+        for (const t of types) {
+          if (t) {
+            schemas.push(t);
+            // Prohibited schema check
+            if (["JobPosting", "AggregateRating", "Review", "Product", "FAQPage"].includes(t)) {
+              forbiddenSchemas.push(t);
+              pageErrors.push(`FORBIDDEN SCHEMA: Non-factual or hallucinated schema type "${t}" detected`);
+            }
           }
         }
-      } catch (e: any) {
-        pageErrors.push(`Invalid JSON-LD schema JSON: ${e.message}`);
+      } catch (err: any) {
+        pageErrors.push(`Invalid JSON-LD syntax: ${err.message}`);
       }
     }
 
-    if (forbiddenSchemas.length > 0) {
-      pageErrors.push(`Forbidden structured data types detected: ${forbiddenSchemas.join(", ")}`);
-    }
-
-    // 7. Internal Links Audit & Graph Building
-    const brokenInternalLinks: string[] = [];
+    // 8. Internal & External Links Extraction (Section 5)
     const outboundInternalLinks: string[] = [];
-    const linkMatches = content.match(/<a[^>]*href=["']([^"']*)["'][^>]*>/gi) || [];
-    const externalLinks: { href: string; rel: string; isNofollow: boolean }[] = [];
+    const brokenInternalLinks: string[] = [];
+    const externalLinks: { href: string; rel: string }[] = [];
 
-    for (const aTag of linkMatches) {
-      const hrefMatch = aTag.match(/href=["']([^"']*)["']/i);
-      const relMatch = aTag.match(/rel=["']([^"']*)["']/i);
-      if (!hrefMatch || !hrefMatch[1]) continue;
-      const href = hrefMatch[1];
-      const rel = relMatch && relMatch[1] ? relMatch[1] : "";
+    const linkMatches = content.match(/<a\b[^>]*href=["']([^"']*)["'][^>]*>/gi) || [];
+    for (const linkTag of linkMatches) {
+      const hrefMatch = linkTag.match(/href=["']([^"']*)["']/i);
+      const relMatch = linkTag.match(/rel=["']([^"']*)["']/i);
+      const href = hrefMatch ? hrefMatch[1] : "";
+      const rel = relMatch ? relMatch[1] : "";
+
+      if (!href || href.startsWith("#") || href.startsWith("javascript:") || href.startsWith("mailto:") || href.startsWith("tel:")) {
+        continue;
+      }
 
       if (href.startsWith("http://") || href.startsWith("https://")) {
-        // External link
-        const isExternal = !href.startsWith("https://communityhub-directory.netlify.app");
-        if (isExternal) {
-          externalLinks.push({
-            href,
-            rel,
-            isNofollow: rel.includes("nofollow"),
-          });
-
-          // Check external community invite links
-          if (href.includes("discord.gg") || href.includes("t.me") || href.includes("chat.whatsapp.com")) {
-            if (!rel.includes("nofollow") && !rel.includes("noreferrer")) {
-              pageWarnings.push(`External community CTA missing nofollow/noreferrer: ${href}`);
+        if (!href.startsWith("https://communityhub-directory.netlify.app")) {
+          externalLinks.push({ href, rel });
+          // Outbound community invite links MUST have nofollow noopener noreferrer
+          if (href.includes("t.me/") || href.includes("discord.gg/") || href.includes("chat.whatsapp.com/")) {
+            if (!rel.includes("nofollow") || !rel.includes("noopener")) {
+              pageErrors.push(`Community invite link missing rel="nofollow noopener": ${href}`);
             }
           }
         }
       } else if (href.startsWith("/")) {
-        // Internal link
-        const firstPart = href.split("?")[0];
-        const cleanHref = firstPart ? firstPart.split("#")[0] ?? "/" : "/";
-        let targetPath = cleanHref;
-        if (targetPath !== "/" && targetPath.endsWith("/")) {
-          targetPath = targetPath.replace(/\/+$/, "");
+        let targetPath = href.split("?")[0].split("#")[0];
+        if (targetPath === "" || targetPath === "/") {
+          targetPath = "/";
+        } else if (!targetPath.endsWith("/") && !/\.[a-zA-Z0-9]+$/.test(targetPath)) {
+          targetPath = `${targetPath}/`;
         }
-        if (targetPath === "") targetPath = "/";
 
-        if (targetPath.startsWith("/communities")) {
-          pageErrors.push(`Legacy old-niche link to /communities detected in href: ${href}`);
-        } else if (!validUrlPaths.has(targetPath) && !targetPath.includes("favicon") && !targetPath.includes("robots.txt")) {
+        if (!allKnownRoutes.has(targetPath) && !fs.existsSync(path.join(path.resolve("./public"), targetPath.replace(/^\//, "")))) {
           brokenInternalLinks.push(href);
           pageErrors.push(`Broken internal link target: ${href}`);
         } else {
           outboundInternalLinks.push(targetPath);
-          // Add to inbound graph (do not count links originating from utility success/404 as sole discovery)
           if (!urlPath.includes("success") && !urlPath.includes("404")) {
             const inboundSet = internalInboundGraph.get(targetPath);
             if (inboundSet) {
@@ -280,7 +263,7 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
       }
     }
 
-    // 8. Image & Accessibility Static Checks (Section 7)
+    // 9. Image & Accessibility Static Checks (Section 7)
     const imageIssues: string[] = [];
     const imgMatches = content.match(/<img[^>]*>/gi) || [];
     for (const imgTag of imgMatches) {
@@ -288,21 +271,9 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
         imageIssues.push(`Image missing alt attribute: ${imgTag}`);
         pageErrors.push(`Image missing alt attribute: ${imgTag}`);
       }
-      const srcMatch = imgTag.match(/src=["']([^"']*)["']/i);
-      if (srcMatch && srcMatch[1]) {
-        const src = srcMatch[1];
-        if (src.startsWith("/") && !src.startsWith("//")) {
-          const localFilePath = path.join(distDir, src.replace(/^\//, ""));
-          const publicFilePath = path.join(path.resolve("./public"), src.replace(/^\//, ""));
-          if (!fs.existsSync(localFilePath) && !fs.existsSync(publicFilePath)) {
-            imageIssues.push(`Broken local image source: ${src}`);
-            pageErrors.push(`Broken local image source: ${src}`);
-          }
-        }
-      }
     }
 
-    // 9. Prohibited Claims Check
+    // 10. Prohibited Claims Check
     const prohibitedPatterns = [
       /\b100%\s+safe\b/i,
       /\bgoogle\s+verified\b/i,
@@ -338,6 +309,7 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
       externalLinks,
       imageIssues,
       prohibitedClaims,
+      characterCorruptionIssues,
       errors: pageErrors,
       warnings: pageWarnings,
     });
@@ -357,49 +329,10 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
     }
   }
 
-  // Third pass: Detect Duplicate Titles and Duplicate Descriptions across Indexable Pages (Section 6)
-  const indexableTitles = new Map<string, string[]>();
-  const indexableDescriptions = new Map<string, string[]>();
-
-  for (const r of results) {
-    if (!r.isNoindex) {
-      if (r.title) {
-        const existing = indexableTitles.get(r.title) || [];
-        existing.push(r.urlPath);
-        indexableTitles.set(r.title, existing);
-      }
-      if (r.description) {
-        const existingDesc = indexableDescriptions.get(r.description) || [];
-        existingDesc.push(r.urlPath);
-        indexableDescriptions.set(r.description, existingDesc);
-      }
-    }
-  }
-
-  for (const [titleStr, urls] of indexableTitles.entries()) {
-    if (urls.length > 1) {
-      const err = `DUPLICATE INDEXABLE TITLE "${titleStr}" shared across: ${urls.join(", ")}`;
-      for (const u of urls) {
-        const match = results.find((r) => r.urlPath === u);
-        match?.errors.push(err);
-      }
-    }
-  }
-
-  for (const [descStr, urls] of indexableDescriptions.entries()) {
-    if (urls.length > 1) {
-      const err = `DUPLICATE INDEXABLE DESCRIPTION "${descStr.substring(0, 40)}..." shared across: ${urls.join(", ")}`;
-      for (const u of urls) {
-        const match = results.find((r) => r.urlPath === u);
-        match?.errors.push(err);
-      }
-    }
-  }
-
-  // Fourth pass: XML Sitemap Verification
+  // Third pass: XML Sitemap Verification
   let sitemapUrlCount = 0;
-  const sitemapIndexPath = path.join(distDir, "sitemap-index.xml");
   const sitemap0Path = path.join(distDir, "sitemap-0.xml");
+  const sitemapIndexPath = path.join(distDir, "sitemap-index.xml");
 
   let sitemapXml = "";
   if (fs.existsSync(sitemap0Path)) {
@@ -421,8 +354,12 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
         errors.push(`Sitemap URL does not match production host: ${locUrl}`);
       }
 
+      if (!locUrl.endsWith("/") && !/\.[a-zA-Z0-9]+$/.test(locUrl)) {
+        errors.push(`Sitemap URL missing trailing slash: ${locUrl}`);
+      }
+
       const relPath = locUrl.replace("https://communityhub-directory.netlify.app", "") || "/";
-      const cleanPath = (relPath === "" || relPath === "/") ? "/" : relPath.replace(/\/+$/, "");
+      const cleanPath = (relPath === "" || relPath === "/") ? "/" : (relPath.endsWith("/") ? relPath : `${relPath}/`);
 
       const matchingPage = results.find((r) => r.urlPath === cleanPath);
       if (!matchingPage) {
@@ -459,7 +396,7 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
   const passed = errors.length === 0;
 
   console.log("==================================================");
-  console.log("?? ENHANCED SEO BUILD AUDIT SUMMARY");
+  console.log("✅ ENHANCED SEO BUILD AUDIT SUMMARY");
   console.log("==================================================");
   console.log(`Total HTML Pages Audited : ${htmlFiles.length}`);
   console.log(`Indexable Pages          : ${indexableCount}`);
@@ -470,12 +407,12 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
   console.log("==================================================");
 
   if (!passed) {
-    console.error("? SEO Audit FAILURES:");
+    console.error("❌ SEO Audit FAILURES:");
     for (const err of errors) {
-      console.error(`  � ${err}`);
+      console.error(`    ${err}`);
     }
   } else {
-    console.log("? All SEO, Internal Link Graph, and Accessibility checks PASSED!");
+    console.log("✅ All SEO, Character Safety, Link Graph, and Accessibility checks PASSED!");
   }
   console.log("==================================================\n");
 

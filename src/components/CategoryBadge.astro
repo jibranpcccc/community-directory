@@ -1,33 +1,36 @@
----
+﻿---
+import type { Category } from "../types/community";
 import { getCategoryBySlug } from "../config/categories";
 
 interface Props {
-  category: string;
-  size?: "sm" | "md";
+  category: Category;
+  size?: "sm" | "md" | "lg";
   showLink?: boolean;
 }
 
 const { category, size = "md", showLink = false } = Astro.props;
 const config = getCategoryBySlug(category);
-const name = config?.name || category;
 
-const sizeClass = size === "sm" ? "text-xs px-2 py-0.5" : "text-xs px-2.5 py-1";
+const sizeClasses = {
+  sm: "px-2 py-0.5 text-[11px]",
+  md: "px-2.5 py-1 text-xs",
+  lg: "px-3 py-1.5 text-sm",
+}[size];
 ---
 
 {
   showLink ? (
     <a
-      href={`/category/${category}`}
-      class={`inline-flex items-center rounded-lg bg-[#FEF08A] text-black hover:bg-[#FDE047] transition-all font-black border-2 border-black shadow-[1.5px_1.5px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none ${sizeClass}`}
-      title={`Browse ${name} category`}
+      href={`/category/${category}/`}
+      class={`inline-flex items-center font-black rounded-md border border-black bg-[#FEF08A] text-black shadow-[1px_1px_0px_0px_#000] hover:bg-[#FDE047] transition-colors ${sizeClasses}`}
     >
-      {name}
+      <span>{config ? config.name : category}</span>
     </a>
   ) : (
     <span
-      class={`inline-flex items-center rounded-lg bg-[#FEF08A] text-black font-black border-2 border-black shadow-[1.5px_1.5px_0px_0px_#000] ${sizeClass}`}
+      class={`inline-flex items-center font-black rounded-md border border-black bg-[#FEF08A] text-black shadow-[1px_1px_0px_0px_#000] ${sizeClasses}`}
     >
-      {name}
+      <span>{config ? config.name : category}</span>
     </span>
   )
 }

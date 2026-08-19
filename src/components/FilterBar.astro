@@ -1,4 +1,4 @@
----
+ï»¿---
 import { categories } from "../config/categories";
 import { ENABLED_COUNTRIES } from "../config/countries";
 import { platforms } from "../config/platforms";
@@ -66,7 +66,7 @@ const activePlatforms = platforms.filter((p) => p.isConfigured);
           <option value="">All Countries</option>
           {ENABLED_COUNTRIES.map((c) => (
             <option value={c.code} selected={currentFilters.countryCode === c.code}>
-              {c.flag} {c.name}
+              {c.name}
             </option>
           ))}
         </select>
@@ -122,7 +122,7 @@ const activePlatforms = platforms.filter((p) => p.isConfigured);
         >
           <option value="newest" selected={currentSort === "newest"}>Newest Added</option>
           <option value="recently-checked" selected={currentSort === "recently-checked"}>Recently Checked</option>
-          <option value="alphabetical" selected={currentSort === "alphabetical"}>Alphabetical (A–Z)</option>
+          <option value="alphabetical" selected={currentSort === "alphabetical"}>Alphabetical (A-Z)</option>
           <option value="member-count" selected={currentSort === "member-count"}>Member Count (Sourced)</option>
         </select>
       </div>
@@ -136,7 +136,7 @@ const activePlatforms = platforms.filter((p) => p.isConfigured);
 
       <div class="flex items-center gap-3">
         <a
-          href="/jobs"
+          href="/jobs/"
           class="text-xs font-black text-black hover:underline"
         >
           Reset filters

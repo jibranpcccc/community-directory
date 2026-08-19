@@ -1,77 +1,69 @@
----
+﻿---
 import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
-import CommunityGrid from "../../components/CommunityGrid.astro";
+import CommunityCard from "../../components/CommunityCard.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
-import { siteConfig } from "../../config/site";
-import { categories, type CategoryConfig } from "../../config/categories";
+import EmptyState from "../../components/EmptyState.astro";
+import { categories, getCategoryBySlug } from "../../config/categories";
 import { getCommunitiesByCategory } from "../../lib/communities";
+import { siteConfig } from "../../config/site";
 import { generateCollectionPageSchema } from "../../lib/schema";
+import { getIndexability } from "../../lib/seo";
 
 export async function getStaticPaths() {
   return categories.map((cat) => ({
     params: { slug: cat.slug },
-    props: { category: cat },
   }));
 }
 
-interface Props {
-  category: CategoryConfig;
+const { slug } = Astro.params;
+const categoryConfig = getCategoryBySlug(slug as any);
+
+if (!categoryConfig) {
+  return Astro.redirect("/404/");
 }
 
-const { category } = Astro.props;
-const communities = getCommunitiesByCategory(category.slug);
+const communities = getCommunitiesByCategory(categoryConfig.slug);
+const isIndexable = getIndexability("category", communities.length);
 
-const schema = generateCollectionPageSchema(
-  `${category.name} Alert Groups & Communities`,
-  category.description,
-  `/category/${category.slug}`,
+const pageTitle = `${categoryConfig.name} Job Alert Groups | ${siteConfig.name}`;
+const pageDescription = `Discover active Discord servers, Telegram channels, and WhatsApp groups for ${categoryConfig.name}.`;
+
+const collectionSchema = generateCollectionPageSchema(
+  categoryConfig.name,
+  pageDescription,
+  `/category/${categoryConfig.slug}/`,
   communities
 );
 ---
 
 <DirectoryLayout
-  heading={`${category.name} Job Alert Groups`}
-  subheading={`Browse active ${category.name.toLowerCase()} communities sharing employment opportunities, recruiter links, and job alerts across the US, UK, Canada, and Australia.`}
-  breadcrumbs={[
-    { name: "All Jobs", item: "/jobs" },
-    { name: category.name, item: `/category/${category.slug}` },
-  ]}
-  canonicalPath={`/category/${category.slug}`}
-  jsonLd={schema}
+  heading={`${categoryConfig.name} Job Communities`}
+  subheading={categoryConfig.description}
+  breadcrumbs={[{ name: categoryConfig.name, item: `/category/${categoryConfig.slug}/` }]}
+  title={pageTitle}
+  description={pageDescription}
+  canonicalPath={`/category/${categoryConfig.slug}/`}
+  jsonLd={collectionSchema}
+  noindex={!isIndexable}
   pageType="category"
-  noindex={communities.length < siteConfig.categoryMinCommunities}
 >
-  <!-- Subcategories & Topics Bar -->
-  <div class="mb-6 neo-card p-5 bg-white">
-    <div class="text-xs font-black text-black uppercase tracking-wider mb-3">
-      Specializations & Focus Areas
-    </div>
-    <div class="flex flex-wrap gap-2">
-      {
-        category.subcategories.map((sub) => (
-          <span class="rounded-lg border-2 border-black bg-[#FEF9C3] px-3 py-1 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
-            {sub}
-          </span>
-        ))
-      }
-    </div>
-  </div>
+  {
+    communities.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+        {communities.map((comm) => (
+          <CommunityCard community={comm} />
+        ))}
+      </div>
+    ) : (
+      <div class="mb-10">
+        <EmptyState
+          title={`No ${categoryConfig.name} Communities Listed Yet`}
+          message="We have not indexed any public job alert groups for this category yet. Check back soon or explore other categories."
+          resetUrl="/jobs/"
+        />
+      </div>
+    )
+  }
 
-  <!-- Listings Header -->
-  <div class="flex items-center justify-between mb-4">
-    <span class="text-xs font-bold text-black">
-      Showing <strong class="underline font-black">{communities.length}</strong> {communities.length === 1 ? 'community' : 'communities'} in {category.name}
-    </span>
-  </div>
-
-  <div class="space-y-8">
-    <CommunityGrid
-      communities={communities}
-      emptyTitle={`No ${category.name.toLowerCase()} job groups currently published`}
-      emptyMessage="JobAlertHub continues checking public communities automatically. Verified communities will appear here once they pass publication gates."
-    />
-
-    <!-- Safety Notice -->
-    <SafetyNotice type="job-warning" />
-  </div>
+  <SafetyNotice type="job-warning" />
 </DirectoryLayout>

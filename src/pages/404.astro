@@ -1,65 +1,26 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import SearchBox from "../components/SearchBox.astro";
-import { categories } from "../config/categories";
+import { siteConfig } from "../config/site";
 ---
 
 <BaseLayout
-  title="Page Not Found (404)"
-  description="The requested job community listing or page could not be found."
-  canonicalPath="/404"
-  pageType="404"
+  title={`Page Not Found (404) | ${siteConfig.name}`}
+  description="The requested page could not be found."
+  canonicalPath="/404/"
   noindex={true}
+  pageType="404"
 >
-  <div class="max-w-3xl mx-auto px-4 py-16 sm:py-24 text-center">
-    <div class="inline-flex items-center justify-center h-20 w-20 rounded-2xl border-[3px] border-black bg-[#FEF08A] text-black font-black text-3xl shadow-[4px_4px_0px_0px_#000] mb-6">
+  <div class="max-w-xl mx-auto px-4 py-16 text-center space-y-6">
+    <div class="inline-block bg-[#FEF08A] px-4 py-1.5 border-2 border-black rounded-xl text-3xl font-black shadow-[3px_3px_0px_0px_#000]">
       404
     </div>
-
-    <h1 class="text-3xl sm:text-5xl font-black text-black tracking-tight mb-4">
-      Page or Listing Not Found
-    </h1>
-
-    <p class="text-sm sm:text-base font-bold text-slate-700 max-w-lg mx-auto leading-relaxed mb-8">
-      The job community listing or page you are looking for may have been removed, expired, or never existed. Search active groups or explore by category below.
+    <h1 class="text-3xl font-black text-black">Page Not Found</h1>
+    <p class="text-sm font-medium text-slate-700 leading-relaxed">
+      The directory page or group listing you were looking for doesn't exist or has been relocated.
     </p>
-
-    <!-- Search Box -->
-    <div class="mb-10 max-w-md mx-auto">
-      <SearchBox size="md" />
-    </div>
-
-    <!-- Quick Navigation -->
-    <div class="space-y-4">
-      <div class="text-xs font-black uppercase tracking-wider text-black">
-        Browse by category:
-      </div>
-      <div class="flex flex-wrap justify-center gap-2">
-        {
-          categories.map((cat) => (
-            <a
-              href={`/category/${cat.slug}`}
-              class="neo-button bg-white hover:bg-[#FEF9C3] px-3.5 py-2 text-xs font-black text-black"
-            >
-              {cat.name}
-            </a>
-          ))
-        }
-      </div>
-    </div>
-
-    <div class="mt-10 pt-8 border-t-2 border-black/10 flex justify-center gap-4">
-      <a
-        href="/"
-        class="neo-btn bg-[#FEF08A] hover:bg-[#FDE047] px-5 py-2.5 text-xs font-black text-black border-2 border-black shadow-[2px_2px_0px_0px_#000]"
-      >
-        Back to Home
-      </a>
-      <a
-        href="/jobs"
-        class="neo-btn bg-white hover:bg-slate-50 px-5 py-2.5 text-xs font-black text-black border-2 border-black shadow-[2px_2px_0px_0px_#000]"
-      >
-        Browse All Job Groups
+    <div class="pt-2">
+      <a href="/jobs/" class="neo-button bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black px-6 py-3 text-sm font-black">
+        Explore All Job Groups &rarr;
       </a>
     </div>
   </div>

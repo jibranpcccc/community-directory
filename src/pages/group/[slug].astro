@@ -1,24 +1,24 @@
----
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import CommunityCard from "../../components/CommunityCard.astro";
+ï»¿---
+import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
+import PlatformBadge from "../../components/PlatformBadge.astro";
+import CategoryBadge from "../../components/CategoryBadge.astro";
+import StatusBadge from "../../components/StatusBadge.astro";
+import VerificationBadge from "../../components/VerificationBadge.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
-import {
-  getPublishedCommunities,
-  getRelatedCommunities,
-} from "../../lib/communities";
-import { getPlatformConfig } from "../../config/platforms";
-import { getCategoryBySlug } from "../../config/categories";
+import { getAllPublishedCommunities } from "../../lib/communities";
 import { getCountryByCode } from "../../config/countries";
-import { siteConfig } from "../../config/site";
-import { generateCommunityDetailSchema, generateBreadcrumbSchema } from "../../lib/schema";
+import { getCategoryBySlug } from "../../config/categories";
+import { getPlatformConfig } from "../../config/platforms";
 import { formatDate } from "../../lib/dates";
+import { siteConfig } from "../../config/site";
+import { generateCommunityDetailSchema } from "../../lib/schema";
 import type { Community } from "../../types/community";
 
 export async function getStaticPaths() {
-  const communities = getPublishedCommunities();
-  return communities.map((comm) => ({
-    params: { slug: comm.slug },
-    props: { community: comm },
+  const communities = getAllPublishedCommunities();
+  return communities.map((community) => ({
+    params: { slug: community.slug },
+    props: { community },
   }));
 }
 
@@ -27,201 +27,167 @@ interface Props {
 }
 
 const { community } = Astro.props;
-const platform = getPlatformConfig(community.platform);
-const category = getCategoryBySlug(community.category);
+
 const country = getCountryByCode(community.countryCode);
-const related = getRelatedCommunities(community, 3);
+const category = getCategoryBySlug(community.category);
+const platformConfig = getPlatformConfig(community.platform);
 
-const webPageSchema = generateCommunityDetailSchema(community);
-const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: "All Jobs", item: "/jobs" },
-  ...(country ? [{ name: country.name, item: `/country/${country.slug}` }] : []),
-  ...(category ? [{ name: category.name, item: `/category/${category.slug}` }] : []),
-  { name: community.title, item: `/group/${community.slug}` },
-]);
-
-const jsonLd = [webPageSchema, breadcrumbSchema];
+const countryName = country ? country.name : "International";
 const categoryName = category ? category.name : community.category;
-const countryName = country ? country.name : community.countryCode;
-const pageTitle = `${community.title} — ${categoryName} Job Group in ${countryName} | ${siteConfig.name}`;
-const metaDescription = community.description
-  ? `${community.title}: ${community.description.slice(0, 140)}`
-  : `Discover ${community.title}, a public ${platform.name} job alert group for ${countryName}. Verified active link and scam screening.`;
+const platformName = platformConfig ? platformConfig.name : community.platform;
+
+// Factual SEO Metadata
+const pageTitle = `${community.title} - ${categoryName} Job Group in ${countryName} | ${siteConfig.name}`;
+const pageDescription = community.description
+  ? community.description.slice(0, 155)
+  : `Discover ${community.title}, a public ${platformName} community sharing ${categoryName} job alerts in ${countryName}.`;
+
+const detailSchema = generateCommunityDetailSchema(community);
+
+const breadcrumbs = [
+  { name: "All Jobs", item: "/jobs/" },
+  ...(country ? [{ name: country.name, item: `/country/${country.slug}/` }] : []),
+  ...(category ? [{ name: category.name, item: `/category/${category.slug}/` }] : []),
+  { name: community.title, item: `/group/${community.slug}/` },
+];
 ---
 
-<BaseLayout
+<DirectoryLayout
+  heading={community.title}
+  subheading={`Public ${platformName} community for ${categoryName} in ${countryName}.`}
+  breadcrumbs={breadcrumbs}
   title={pageTitle}
-  description={metaDescription}
-  canonicalPath={`/group/${community.slug}`}
+  description={pageDescription}
+  canonicalPath={`/group/${community.slug}/`}
+  jsonLd={detailSchema}
   pageType="group"
-  jsonLd={jsonLd}
 >
-  <div class="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
-    <!-- Breadcrumb Nav -->
-    <nav class="mb-6 text-xs font-bold text-slate-600" aria-label="Breadcrumbs">
-      <ol class="flex flex-wrap items-center gap-1.5">
-        <li><a href="/jobs" class="underline hover:text-black">All Jobs</a></li>
-        <li aria-hidden="true">&rarr;</li>
-        {country && (
-          <>
-            <li><a href={`/country/${country.slug}`} class="underline hover:text-black">{country.name}</a></li>
-            <li aria-hidden="true">&rarr;</li>
-          </>
-        )}
-        {category && (
-          <>
-            <li><a href={`/category/${category.slug}`} class="underline hover:text-black">{category.name}</a></li>
-            <li aria-hidden="true">&rarr;</li>
-          </>
-        )}
-        <li class="font-black text-black truncate max-w-xs" aria-current="page">{community.title}</li>
-      </ol>
-    </nav>
-
-    <!-- Main Detail Card -->
-    <article class="neo-card p-6 md:p-8 bg-white mb-8">
-      <header class="flex flex-wrap items-start justify-between gap-4 mb-6">
-        <div>
-          <!-- Badges Area -->
-          <div class="flex flex-wrap items-center gap-2 mb-3">
-            {country && (
-              <span class="rounded-lg border-2 border-black bg-[#FEF08A] px-2.5 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
-                {country.flag} {country.name}
-              </span>
-            )}
-            <span class="rounded-lg border-2 border-black bg-white px-2.5 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
-              {platform.name}
-            </span>
-            <span class="rounded-lg border-2 border-black bg-[#D1FAE5] px-2.5 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
-              {categoryName}
-            </span>
-            {community.verificationStatus === "source-confirmed" ? (
-              <span class="rounded-lg border-2 border-black bg-[#BAE6FD] px-2.5 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
-                ? Source Confirmed
-              </span>
-            ) : (
-              <span class="rounded-lg border-2 border-black bg-slate-100 px-2.5 py-0.5 text-xs font-black text-slate-700 shadow-[1.5px_1.5px_0px_0px_#000]">
-                Unverified Source
-              </span>
-            )}
-            <span class="rounded-lg border-2 border-black bg-[#A7F3D0] px-2.5 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
-              Active Link
-            </span>
-          </div>
-
-          <h1 class="text-2xl sm:text-4xl font-black text-black tracking-tight">
-            {community.title}
-          </h1>
-
-          {community.lastCheckedAt && (
-            <div class="text-xs font-bold text-slate-600 mt-2">
-              Last checked: {formatDate(community.lastCheckedAt)}
-            </div>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+    <!-- Left 2 Columns: Main Listing Detail -->
+    <div class="lg:col-span-2 space-y-6">
+      <!-- Key Metadata Card -->
+      <div class="neo-card p-6 bg-white space-y-4">
+        <div class="flex flex-wrap items-center gap-2">
+          <PlatformBadge platform={community.platform} size="md" showLink={true} />
+          {country && (
+            <a
+              href={`/country/${country.slug}/`}
+              class="rounded-md border border-black bg-[#BAE6FD] px-2.5 py-1 text-xs font-black text-black shadow-[1px_1px_0px_0px_#000] hover:bg-[#7DD3FC]"
+            >
+              {country.shortName}
+            </a>
           )}
+          <CategoryBadge category={community.category} size="md" showLink={true} />
+          <StatusBadge status={community.linkStatus} size="md" />
         </div>
 
-        <!-- Join Direct Button -->
+        <h2 class="text-xl font-black text-black">About This Community</h2>
+
+        {community.description ? (
+          <p class="text-sm font-medium leading-relaxed text-slate-800 whitespace-pre-line">
+            {community.description}
+          </p>
+        ) : (
+          <p class="text-sm font-medium text-slate-500 italic">
+            No public description provided by the community administrators.
+          </p>
+        )}
+
+        <!-- Tags -->
+        {community.tags && community.tags.length > 0 && (
+          <div class="pt-4 border-t-2 border-black/10">
+            <h3 class="text-xs font-black uppercase tracking-wider text-black mb-2">Community Tags</h3>
+            <div class="flex flex-wrap gap-1.5">
+              {community.tags.map((tag) => (
+                <a
+                  href={`/tag/${tag.toLowerCase()}/`}
+                  class="rounded-md border border-black bg-[#FAF8F5] px-2.5 py-1 text-xs font-bold text-black hover:bg-[#FEF08A] transition-colors shadow-[1px_1px_0px_0px_#000]"
+                >
+                  #{tag}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      <!-- Verification & Safety Notice for this Group -->
+      <div class="neo-card p-6 bg-white space-y-3">
+        <div class="flex items-center gap-2">
+          <VerificationBadge status={community.verificationStatus} size="md" />
+        </div>
+        <p class="text-xs font-medium text-slate-700 leading-relaxed">
+          {community.verificationStatus === "source-confirmed"
+            ? "This community invite link was independently confirmed on an authoritative external website or directory index."
+            : "This community was discovered from public directory listings. Its invite URL was checked by our automated verification engine."}
+        </p>
+        <p class="text-xs font-bold text-slate-600">
+          Last health revalidation: <span class="font-black text-black">{formatDate(community.lastCheckedAt)}</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Column: Join Action & Direct Meta -->
+    <div class="space-y-6">
+      <div class="neo-card-yellow p-6 space-y-4">
+        <h3 class="text-lg font-black text-black">Join Community</h3>
+        <p class="text-xs font-medium text-black/80 leading-relaxed">
+          Click below to open the public invite link in {platformName}.
+        </p>
+
         <a
           href={community.inviteUrl}
           target="_blank"
-          rel="noopener noreferrer nofollow"
-          class="neo-btn inline-flex items-center gap-2 bg-[#22C55E] hover:bg-[#16A34A] text-black font-black px-6 py-3.5 text-sm sm:text-base border-[3px] border-black shadow-[4px_4px_0px_0px_#000]"
+          rel="nofollow noopener noreferrer"
+          class="neo-button w-full text-center block bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black px-4 py-3 text-sm font-black"
+          aria-label={`Join ${community.title} on ${platformName} (opens in a new tab)`}
         >
-          <span>Join on {platform.name}</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+          Open in {platformName} &rarr;
         </a>
-      </header>
 
-      <!-- Description Section -->
-      <section class="mb-6">
-        <h2 class="text-sm font-black uppercase tracking-wider text-slate-700 mb-2">About This Community</h2>
-        <div class="prose prose-sm max-w-none text-slate-800 font-medium bg-[#F8FAFC] border-2 border-black p-5 rounded-2xl shadow-[2px_2px_0px_0px_#000]">
-          <p>{community.description || "Public online community sharing job alerts and career opportunities."}</p>
+        <div class="text-[11px] text-black/70 font-medium text-center">
+          Invite URL: <span class="font-mono break-all">{community.inviteUrl}</span>
         </div>
-      </section>
+      </div>
 
-      <!-- Factual Metadata Grid -->
-      <section class="mb-6">
-        <h2 class="text-sm font-black uppercase tracking-wider text-slate-700 mb-2">What We Know</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-bold">
-          <div class="border-2 border-black p-3 bg-[#FEF9C3] rounded-xl shadow-[2px_2px_0px_0px_#000]">
-            <div class="text-slate-600 font-black uppercase text-[10px]">Work Arrangement</div>
-            <div class="text-black font-black mt-1 capitalize">{community.workArrangement || "Not specified"}</div>
-          </div>
-          <div class="border-2 border-black p-3 bg-[#FEF9C3] rounded-xl shadow-[2px_2px_0px_0px_#000]">
-            <div class="text-slate-600 font-black uppercase text-[10px]">Visa Sponsorship</div>
-            <div class="text-black font-black mt-1 capitalize">{community.visaSponsorship || "Not specified"}</div>
-          </div>
-          <div class="border-2 border-black p-3 bg-[#FEF9C3] rounded-xl shadow-[2px_2px_0px_0px_#000]">
-            <div class="text-slate-600 font-black uppercase text-[10px]">Link Status</div>
-            <div class="text-black font-black mt-1 capitalize">{community.linkStatus}</div>
-          </div>
-          <div class="border-2 border-black p-3 bg-[#FEF9C3] rounded-xl shadow-[2px_2px_0px_0px_#000]">
-            <div class="text-slate-600 font-black uppercase text-[10px]">First Discovered</div>
-            <div class="text-black font-black mt-1">{formatDate(community.discoveredAt)}</div>
-          </div>
+      <!-- Quick Facts Box -->
+      <div class="neo-card p-5 bg-white text-xs font-bold text-black space-y-2.5">
+        <h4 class="font-black uppercase tracking-wider text-black text-xs pb-2 border-b-2 border-black/10">
+          Listing Facts
+        </h4>
+        <div class="flex justify-between">
+          <span class="text-slate-600">Platform:</span>
+          <span>{platformName}</span>
         </div>
-      </section>
-
-      <!-- Member Count if Sourced -->
-      {community.memberCount != null && community.memberCountSource && (
-        <div class="mb-6 p-3 border-2 border-black rounded-xl bg-white shadow-[2px_2px_0px_0px_#000] text-xs font-bold flex items-center justify-between">
-          <span>Observed Members: <strong class="font-black">{community.memberCount.toLocaleString()}</strong></span>
-          <span class="text-slate-600">Source: {community.memberCountSource}</span>
+        <div class="flex justify-between">
+          <span class="text-slate-600">Primary Country:</span>
+          <span>{countryName}</span>
         </div>
-      )}
+        <div class="flex justify-between">
+          <span class="text-slate-600">Category:</span>
+          <span>{categoryName}</span>
+        </div>
+        {community.city && (
+          <div class="flex justify-between">
+            <span class="text-slate-600">Location:</span>
+            <span>{community.city}</span>
+          </div>
+        )}
+        {typeof community.memberCount === "number" && (
+          <div class="flex justify-between">
+            <span class="text-slate-600">Observed Members:</span>
+            <span>{community.memberCount.toLocaleString()}</span>
+          </div>
+        )}
+      </div>
 
-      <!-- Verification & Independent Source Details -->
-      {community.sourceUrls && community.sourceUrls.length > 0 && (
-        <section class="mb-6 p-4 border-2 border-black rounded-2xl bg-[#BAE6FD] shadow-[2px_2px_0px_0px_#000] text-xs">
-          <div class="font-black text-black uppercase mb-1">Independent Source Evidence</div>
-          <p class="font-medium text-slate-800 mb-2">
-            This community invite was corroborated by an outbound reference on an independent public website:
-          </p>
-          <ul class="space-y-1">
-            {community.sourceUrls.map((sUrl) => (
-              <li>
-                <a
-                  href={sUrl}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  class="font-black text-black underline hover:text-slate-900 break-all"
-                >
-                  Source: {sUrl} &rarr;
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      <!-- Job Seeker Safety Notice -->
-      <SafetyNotice type="job-warning" />
-
-      <!-- Report Listing Footer -->
-      <footer class="mt-6 pt-4 border-t-2 border-black/10 flex items-center justify-between text-xs font-bold text-slate-600">
-        <span>Found an issue with this listing?</span>
-        <a
-          href={`/report?url=${encodeURIComponent(community.inviteUrl)}`}
-          class="underline font-black text-black hover:text-red-700"
-        >
-          Report this group &rarr;
+      <div class="text-center">
+        <a href="/report/" class="text-xs font-bold text-slate-600 hover:text-black underline">
+          Report broken link or spam
         </a>
-      </footer>
-    </article>
-
-    <!-- Related Job Communities -->
-    {related.length > 0 && (
-      <section>
-        <h2 class="text-xl font-black text-black tracking-tight mb-4">
-          Related Job Groups & Channels
-        </h2>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {related.map((rel) => (
-            <CommunityCard community={rel} />
-          ))}
-        </div>
-      </section>
-    )}
+      </div>
+    </div>
   </div>
-</BaseLayout>
+
+  <SafetyNotice type="job-warning" />
+</DirectoryLayout>

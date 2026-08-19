@@ -1,16 +1,21 @@
 ---
 import DirectoryLayout from "../layouts/DirectoryLayout.astro";
 import VerificationBadge from "../components/VerificationBadge.astro";
+
+const pageTitle = "How We Verify Job Communities | JobAlertHub";
+const pageDescription = "A transparent breakdown of our data standards, automated validation pipeline, and trust tiers.";
 ---
 
 <DirectoryLayout
   heading="How We Verify Job Communities"
   subheading="A transparent breakdown of our data standards, automated validation pipeline, and trust tiers."
   breadcrumbs={[
-    { name: "All Jobs", item: "/jobs" },
-    { name: "How We Verify", item: "/how-we-verify" },
+    { name: "All Jobs", item: "/jobs/" },
+    { name: "How We Verify", item: "/how-we-verify/" },
   ]}
-  canonicalPath="/how-we-verify"
+  title={pageTitle}
+  description={pageDescription}
+  canonicalPath="/how-we-verify/"
   pageType="trust"
 >
   <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base font-medium text-slate-800 leading-relaxed">
@@ -136,7 +141,7 @@ import VerificationBadge from "../components/VerificationBadge.astro";
         </p>
       </div>
       <a
-        href="/report"
+        href="/report/"
         class="neo-btn bg-white hover:bg-slate-100 text-black px-4 py-2.5 text-xs font-black shrink-0 border-2 border-black shadow-[2px_2px_0px_0px_#000]"
       >
         Submit a Report &rarr;

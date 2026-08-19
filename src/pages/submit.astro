@@ -1,45 +1,30 @@
----
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Breadcrumbs from "../components/Breadcrumbs.astro";
+﻿---
+import DirectoryLayout from "../layouts/DirectoryLayout.astro";
+import { siteConfig } from "../config/site";
 import { categories } from "../config/categories";
-import { ENABLED_COUNTRIES } from "../config/countries";
 import { platforms } from "../config/platforms";
-import { generateBreadcrumbSchema } from "../lib/schema";
+import { ENABLED_COUNTRIES } from "../config/countries";
 
-const breadcrumbs = [
-  { name: "All Jobs", item: "/jobs" },
-  { name: "Submit Job Community", item: "/submit" },
-];
-
-const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+const pageTitle = `Submit a Job Community | ${siteConfig.name}`;
+const pageDescription = "Submit a public Discord server, Telegram channel, or WhatsApp group sharing job alerts and career opportunities.";
 ---
 
-<BaseLayout
-  title="Submit a Job Alert Group"
-  description="Submit a public Telegram job channel, Discord career server, or WhatsApp job group to be catalogued in the directory."
-  canonicalPath="/submit"
-  pageType="utility"
+<DirectoryLayout
+  heading="Submit a Job Alert Community"
+  subheading="Submit a publicly accessible community or job channel for automated verification and manual review."
+  breadcrumbs={[{ name: "Submit Group", item: "/submit/" }]}
+  title={pageTitle}
+  description={pageDescription}
+  canonicalPath="/submit/"
   noindex={true}
-  jsonLd={breadcrumbSchema}
+  pageType="utility"
 >
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-    <Breadcrumbs items={breadcrumbs} />
-
-    <header class="mb-8 p-6 sm:p-8 rounded-3xl border-[3px] border-black bg-[#FEF08A] shadow-[5px_5px_0px_0px_#000]">
-      <div class="inline-block bg-white px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
-        JOB COMMUNITY SUBMISSIONS
-      </div>
-      <h1 class="text-3xl sm:text-4xl font-black text-black tracking-tight">
-        Submit a Job Alert Group
-      </h1>
-      <p class="mt-2 text-sm font-bold text-black/80 leading-relaxed">
-        Suggest a publicly discoverable job alert community. Every submission is reviewed to ensure link validity, career focus, and complete absence of job scams or fee requirements.
-      </p>
-    </header>
-
+  <div class="max-w-2xl mx-auto">
     <!-- Submission Guidelines Box -->
     <div class="mb-8 neo-card-mint p-6 text-xs text-black font-bold space-y-2">
-      <strong class="font-black text-black block text-sm uppercase tracking-wide">?? Submission Policy & Review Criteria</strong>
+      <strong class="font-black text-black block text-sm uppercase tracking-wide">
+        Submission Policy & Review Criteria
+      </strong>
       <ul class="list-disc pl-4 space-y-1.5 text-black">
         <li><strong>English-Speaking Target Markets:</strong> Priority focus on the United States, United Kingdom, Canada, and Australia.</li>
         <li><strong>Zero Tolerance for Job Scams:</strong> Task scams, upfront fee requests, crypto/USDT deposits, and fake check schemes are permanently banned.</li>
@@ -52,7 +37,7 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
     <form
       name="community-submission"
       method="POST"
-      action="/submit-success"
+      action="/submit-success/"
       data-netlify="true"
       netlify-honeypot="bot-field"
       class="rounded-3xl border-[3px] border-black bg-white p-6 sm:p-8 shadow-[6px_6px_0px_0px_#000] space-y-6"
@@ -69,50 +54,49 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
       <!-- Community Title -->
       <div>
         <label for="title" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Community Name <span class="text-rose-500">*</span>
+          Community Name <span class="text-rose-600">*</span>
         </label>
         <input
           type="text"
           name="title"
           id="title"
           required
-          placeholder="e.g. Remote Tech Careers & Hiring"
-          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
+          placeholder="e.g. Canada Tech Jobs & Hiring Hub"
+          class="w-full rounded-xl border-2 border-black py-2.5 px-4 text-sm font-medium text-black placeholder:text-slate-400 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         />
       </div>
 
       <!-- Public Invite URL -->
       <div>
         <label for="inviteUrl" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Public Invite URL <span class="text-rose-500">*</span>
+          Public Invite URL <span class="text-rose-600">*</span>
         </label>
         <input
           type="url"
           name="inviteUrl"
           id="inviteUrl"
           required
-          placeholder="https://t.me/... or https://discord.gg/... or https://chat.whatsapp.com/..."
-          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
+          placeholder="https://discord.gg/..., https://t.me/..., or https://chat.whatsapp.com/..."
+          class="w-full rounded-xl border-2 border-black py-2.5 px-4 text-sm font-medium text-black placeholder:text-slate-400 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         />
-        <p class="mt-1.5 text-xs font-bold text-slate-600">
-          Must be an active, publicly accessible Discord, Telegram, or WhatsApp invite.
+        <p class="mt-1 text-[11px] font-bold text-slate-600">
+          Must be a standard public Discord invite, Telegram channel link, or WhatsApp group invite.
         </p>
       </div>
 
-      <!-- Platform & Category Grid -->
+      <!-- Platform & Category Row -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label for="platform" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-            Platform <span class="text-rose-500">*</span>
+            Platform <span class="text-rose-600">*</span>
           </label>
           <select
             name="platform"
             id="platform"
             required
-            class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] px-4 py-2.5 text-sm font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
+            class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] py-2.5 px-4 text-xs font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
           >
-            <option value="">Select Platform...</option>
-            {platforms.filter((p) => p.isConfigured).map((p) => (
+            {platforms.filter(p => p.isConfigured).map((p) => (
               <option value={p.id}>{p.name}</option>
             ))}
           </select>
@@ -120,15 +104,14 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
 
         <div>
           <label for="category" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-            Primary Job Category <span class="text-rose-500">*</span>
+            Category <span class="text-rose-600">*</span>
           </label>
           <select
             name="category"
             id="category"
             required
-            class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] px-4 py-2.5 text-sm font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
+            class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] py-2.5 px-4 text-xs font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
           >
-            <option value="">Select Category...</option>
             {categories.map((c) => (
               <option value={c.slug}>{c.name}</option>
             ))}
@@ -136,85 +119,51 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
         </div>
       </div>
 
-      <!-- Country & City Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label for="countryCode" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-            Target Country <span class="text-rose-500">*</span>
-          </label>
-          <select
-            name="countryCode"
-            id="countryCode"
-            required
-            class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] px-4 py-2.5 text-sm font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
-          >
-            <option value="">Select Target Country...</option>
-            {ENABLED_COUNTRIES.map((c) => (
-              <option value={c.code}>{c.flag} {c.name}</option>
-            ))}
-          </select>
-        </div>
-
-        <div>
-          <label for="city" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-            Metro Area / City (Optional)
-          </label>
-          <input
-            type="text"
-            name="city"
-            id="city"
-            placeholder="e.g. Toronto, London, Austin"
-            class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
-          />
-        </div>
+      <!-- Target Country -->
+      <div>
+        <label for="countryCode" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
+          Target Country <span class="text-rose-600">*</span>
+        </label>
+        <select
+          name="countryCode"
+          id="countryCode"
+          required
+          class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] py-2.5 px-4 text-xs font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
+        >
+          {ENABLED_COUNTRIES.map((c) => (
+            <option value={c.code}>{c.name}</option>
+          ))}
+        </select>
       </div>
 
       <!-- Description -->
       <div>
         <label for="description" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Description & Focus <span class="text-rose-500">*</span>
+          Description
         </label>
         <textarea
           name="description"
           id="description"
-          rows="4"
-          required
-          placeholder="Briefly describe what kinds of jobs, alerts, or hiring discussions happen in this community."
-          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
+          rows="3"
+          placeholder="Brief description of the job alerts, industries, or opportunities shared in this group..."
+          class="w-full rounded-xl border-2 border-black py-2.5 px-4 text-sm font-medium text-black placeholder:text-slate-400 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         ></textarea>
       </div>
 
-      <!-- Official Source Link (Optional) -->
+      <!-- Admin Email (Private) -->
       <div>
-        <label for="sourceUrl" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Official Website or Source Page (Optional)
-        </label>
-        <input
-          type="url"
-          name="sourceUrl"
-          id="sourceUrl"
-          placeholder="https://yourcompany.com/community or university page"
-          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
-        />
-        <p class="mt-1.5 text-xs font-bold text-slate-600">
-          Providing an official domain page linking this invite helps earn a Source Confirmed badge.
-        </p>
-      </div>
-
-      <!-- Admin Email (Confidential) -->
-      <div>
-        <label for="adminEmail" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Your Email (Confidential / Verification Contact)
+        <label for="submitterEmail" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
+          Your Email (Optional, Strictly Private)
         </label>
         <input
           type="email"
-          name="adminEmail"
-          id="adminEmail"
-          placeholder="community.admin@example.com"
-          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
+          name="submitterEmail"
+          id="submitterEmail"
+          placeholder="admin@example.com"
+          class="w-full rounded-xl border-2 border-black py-2.5 px-4 text-sm font-medium text-black placeholder:text-slate-400 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         />
-        <p class="mt-1.5 text-xs font-bold text-slate-600">
-          Strictly confidential. Never published or displayed in directory data.
+        <p class="mt-1 text-[11px] font-bold text-slate-600">
+          Used only if maintainers need to clarify listing ownership. Never exposed publicly.
         </p>
       </div>
 
@@ -222,11 +171,11 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
       <div>
         <button
           type="submit"
-          class="neo-button w-full bg-[#A7F3D0] hover:bg-[#6EE7B7] py-3.5 text-sm font-black text-black shadow-[4px_4px_0px_0px_#000]"
+          class="neo-button w-full bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black py-3 px-6 text-sm font-black"
         >
-          Submit Job Community for Review &rarr;
+          Submit Community for Review &rarr;
         </button>
       </div>
     </form>
   </div>
-</BaseLayout>
+</DirectoryLayout>

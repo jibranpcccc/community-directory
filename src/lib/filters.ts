@@ -1,13 +1,12 @@
-import type { Community, FilterOptions, SortOption } from "../types/community";
+﻿import type { Community, FilterOptions, SortOption } from "../types/community";
 import { searchCommunities } from "./search";
 
 /**
- * Filters and sorts an array of communities based on filter options and sorting criteria.
+ * Filters an array of communities based on filter options.
  */
-export function filterAndSortCommunities(
+export function filterCommunities(
   communities: Community[],
-  options: FilterOptions = {},
-  sort: SortOption = "newest"
+  options: FilterOptions = {}
 ): Community[] {
   let result = [...communities];
 
@@ -96,8 +95,19 @@ export function filterAndSortCommunities(
     result = result.filter((c) => Boolean(c.featured) === options.featured);
   }
 
-  // Apply Sorting
-  return sortCommunities(result, sort);
+  return result;
+}
+
+/**
+ * Filters and sorts an array of communities based on filter options and sorting criteria.
+ */
+export function filterAndSortCommunities(
+  communities: Community[],
+  options: FilterOptions = {},
+  sort: SortOption = "newest"
+): Community[] {
+  const filtered = filterCommunities(communities, options);
+  return sortCommunities(filtered, sort);
 }
 
 /**

@@ -1,81 +1,69 @@
----
+﻿---
 import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
-import FilterBar from "../../components/FilterBar.astro";
-import CommunityGrid from "../../components/CommunityGrid.astro";
+import CommunityCard from "../../components/CommunityCard.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
-import { siteConfig } from "../../config/site";
-import { JOB_TYPES } from "../../config/jobTypes";
+import EmptyState from "../../components/EmptyState.astro";
+import { JOB_TYPES, getJobTypeConfig } from "../../config/jobTypes";
 import { getCommunitiesByJobType } from "../../lib/communities";
-import { filterAndSortCommunities } from "../../lib/filters";
+import { siteConfig } from "../../config/site";
 import { generateCollectionPageSchema } from "../../lib/schema";
-import type { PlatformId, VerificationStatus, SortOption, CountryCode } from "../../types/community";
+import { getIndexability } from "../../lib/seo";
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
   return JOB_TYPES.map((jt) => ({
     params: { type: jt.slug },
-    props: { jobTypeConfig: jt },
   }));
 }
 
 const { type } = Astro.params;
-const { jobTypeConfig } = Astro.props;
+const jobTypeConfig = getJobTypeConfig(type as string);
 
-const search = Astro.url.searchParams.get("search") || undefined;
-const countryCode = (Astro.url.searchParams.get("countryCode") as CountryCode) || undefined;
-const platform = (Astro.url.searchParams.get("platform") as PlatformId) || undefined;
-const verificationStatus = (Astro.url.searchParams.get("verificationStatus") as VerificationStatus) || undefined;
-const sort = (Astro.url.searchParams.get("sort") as SortOption) || "newest";
+if (!jobTypeConfig) {
+  return Astro.redirect("/404/");
+}
 
-const jobCommunities = getCommunitiesByJobType(jobTypeConfig.slug);
-const filtered = filterAndSortCommunities(
-  jobCommunities,
-  { search, countryCode, platform, verificationStatus },
-  sort
+const communities = getCommunitiesByJobType(jobTypeConfig.slug);
+const isIndexable = getIndexability("job-type", communities.length);
+
+const pageTitle = `${jobTypeConfig.name} Job Alert Communities | ${siteConfig.name}`;
+const pageDescription = `Discover public Telegram, Discord, and WhatsApp communities sharing ${jobTypeConfig.name} job alerts and openings.`;
+
+const collectionSchema = generateCollectionPageSchema(
+  `${jobTypeConfig.name} Job Communities`,
+  pageDescription,
+  `/job-type/${jobTypeConfig.slug}/`,
+  communities
 );
-
-const schema = generateCollectionPageSchema(
-  `${jobTypeConfig.name} Job Alert Groups`,
-  jobTypeConfig.description,
-  `/job-type/${jobTypeConfig.slug}`,
-  filtered
-);
-
-const noindex = jobCommunities.length < siteConfig.jobTypeMinCommunities;
 ---
 
 <DirectoryLayout
-  heading={`${jobTypeConfig.name} Job Alert Groups`}
+  heading={`${jobTypeConfig.name} Job Communities`}
   subheading={jobTypeConfig.description}
-  breadcrumbs={[
-    { name: "All Jobs", item: "/jobs" },
-    { name: jobTypeConfig.name, item: `/job-type/${jobTypeConfig.slug}` },
-  ]}
-  canonicalPath={`/job-type/${jobTypeConfig.slug}`}
-  noindex={noindex}
+  breadcrumbs={[{ name: jobTypeConfig.name, item: `/job-type/${jobTypeConfig.slug}/` }]}
+  title={pageTitle}
+  description={pageDescription}
+  canonicalPath={`/job-type/${jobTypeConfig.slug}/`}
+  jsonLd={collectionSchema}
+  noindex={!isIndexable}
   pageType="job-type"
-  jsonLd={schema}
 >
-  <!-- Filter Bar -->
-  <FilterBar
-    currentFilters={{ search, countryCode, platform, verificationStatus }}
-    currentSort={sort}
-    showCategoryFilter={true}
-  />
+  {
+    communities.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+        {communities.map((comm) => (
+          <CommunityCard community={comm} />
+        ))}
+      </div>
+    ) : (
+      <div class="mb-10">
+        <EmptyState
+          title={`No ${jobTypeConfig.name} Communities Found`}
+          message="We haven't indexed any active communities specifically tagged with this work arrangement yet."
+          resetUrl="/jobs/"
+        />
+      </div>
+    )
+  }
 
-  <div class="flex items-center justify-between mb-4 mt-6">
-    <span class="text-xs font-bold text-black">
-      Showing <strong class="underline font-black">{filtered.length}</strong> {filtered.length === 1 ? 'community' : 'communities'} for {jobTypeConfig.name}
-    </span>
-  </div>
-
-  <div class="space-y-8">
-    <CommunityGrid
-      communities={filtered}
-      emptyTitle={`No ${jobTypeConfig.name.toLowerCase()} groups currently published`}
-      emptyMessage="JobAlertHub continues checking public communities automatically. Verified communities will appear here once they pass publication gates."
-    />
-
-    <!-- Safety Notice -->
-    <SafetyNotice type="job-warning" />
-  </div>
+  <SafetyNotice type="job-warning" />
 </DirectoryLayout>

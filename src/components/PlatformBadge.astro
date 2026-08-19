@@ -1,40 +1,42 @@
----
-import type { PlatformId } from "../types/community";
-import { getPlatformById } from "../config/platforms";
+﻿---
+import type { Platform } from "../types/community";
+import { getPlatformConfig } from "../config/platforms";
 
 interface Props {
-  platform: PlatformId | string;
+  platform: Platform;
   size?: "sm" | "md" | "lg";
   showLink?: boolean;
 }
 
 const { platform, size = "md", showLink = false } = Astro.props;
-const config = getPlatformById(platform);
-
-const name = config?.name || platform;
-const badgeClass = config?.badgeBg || "bg-slate-100 text-slate-700 border-slate-200";
+const config = getPlatformConfig(platform);
 
 const sizeClasses = {
-  sm: "text-xs px-2 py-0.5 gap-1",
-  md: "text-xs font-medium px-2.5 py-1 gap-1.5",
-  lg: "text-sm font-medium px-3 py-1.5 gap-2",
+  sm: "px-2 py-0.5 text-[11px]",
+  md: "px-2.5 py-1 text-xs",
+  lg: "px-3 py-1.5 text-sm",
 }[size];
+
+const bgClasses = {
+  discord: "bg-[#5865F2] text-white",
+  telegram: "bg-[#0088cc] text-white",
+  whatsapp: "bg-[#25D366] text-black",
+}[platform] || "bg-black text-white";
 ---
 
 {
   showLink ? (
     <a
-      href={`/platform/${platform}`}
-      class={`inline-flex items-center rounded-full border transition-opacity hover:opacity-85 ${badgeClass} ${sizeClasses}`}
-      title={`Browse ${name} communities`}
+      href={`/platform/${platform}/`}
+      class={`inline-flex items-center font-black rounded-md border border-black shadow-[1px_1px_0px_0px_#000] hover:opacity-90 transition-opacity ${sizeClasses} ${bgClasses}`}
     >
-      <span class="capitalize">{name}</span>
+      <span>{config ? config.name : platform}</span>
     </a>
   ) : (
     <span
-      class={`inline-flex items-center rounded-full border ${badgeClass} ${sizeClasses}`}
+      class={`inline-flex items-center font-black rounded-md border border-black shadow-[1px_1px_0px_0px_#000] ${sizeClasses} ${bgClasses}`}
     >
-      <span class="capitalize">{name}</span>
+      <span>{config ? config.name : platform}</span>
     </span>
   )
 }
