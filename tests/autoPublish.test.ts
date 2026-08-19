@@ -23,6 +23,7 @@ describe("Autonomous Publication Engine - Evaluation Gates & Tiers", () => {
       sourceType: "official-source",
       text: "Canada Tech Careers",
       sourceUrl: "https://canadatech.ca",
+      checkedAt: now,
     },
     jobTypes: ["full-time-jobs", "internships"],
     industries: ["technology"],
@@ -138,7 +139,8 @@ describe("Autonomous Publication Engine - Evaluation Gates & Tiers", () => {
       verificationStatus: "unverified",
       sourceUrls: [],
       providerIds: ["gemini-search"],
-      timesSeen: 2, // Seen across 2 runs
+      observedRunIds: ["run_1", "run_2"], // Seen across 2 runs
+      timesSeen: 2,
     };
     const evalResult = evaluateAutoPublishCandidate(multiRunCand, []);
     expect(evalResult.tier).toBe("B");

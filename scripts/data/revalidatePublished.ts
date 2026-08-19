@@ -21,27 +21,39 @@ export interface RevalidationResult {
   unpublishedRecords: ArchivedCommunity[];
 }
 
+export interface RevalidationValidators {
+  discordValidator?: (url: string) => Promise<any>;
+  telegramValidator?: (url: string) => Promise<any>;
+  whatsappValidator?: (url: string) => Promise<any>;
+  sourceVerifier?: (sourceUrl: string, inviteUrl: string, guildId?: string) => Promise<any>;
+}
+
 /**
  * Revalidates all published communities in groups.json, updates fresh metadata,
  * downgrades stale source verifications, and auto-unpublishes dead/unsafe listings.
+ * Atomically persists changes to groups.json and archived-groups.json.
  */
-export async function runRevalidatePublished(options = autoPublishConfig): Promise<RevalidationResult> {
+export async function runRevalidatePublished(
+  options = autoPublishConfig,
+  customDataDir?: string,
+  validators: RevalidationValidators = {}
+): Promise<RevalidationResult> {
   console.log("=========================================");
   console.log("?? AUTOMATED PUBLISHED REVALIDATION ENGINE");
   console.log("=========================================");
 
-  const dataDir = path.resolve(process.cwd(), "src/data");
+  const dataDir = customDataDir || path.resolve(process.cwd(), "src/data");
   const groupsPath = path.join(dataDir, "groups.json");
   const archivedPath = path.join(dataDir, "archived-groups.json");
 
   const published: Community[] = fs.existsSync(groupsPath)
     ? JSON.parse(fs.readFileSync(groupsPath, "utf-8"))
     : [];
-  const archived: ArchivedCommunity[] = fs.existsSync(archivedPath)
+  let archived: ArchivedCommunity[] = fs.existsSync(archivedPath)
     ? JSON.parse(fs.readFileSync(archivedPath, "utf-8"))
     : [];
 
-  console.log(`[revalidate] Checking ${published.length} published communities...`);
+  console.log(`[revalidate] Checking ${published.length} published communities in ${dataDir}...`);
 
   const nowIso = getCurrentIsoTimestamp();
   const nowMs = Date.now();
@@ -56,11 +68,14 @@ export async function runRevalidatePublished(options = autoPublishConfig): Promi
     let validationResult;
     try {
       if (item.platform === "discord") {
-        validationResult = await validateDiscordLink(item.inviteUrl);
+        const validateFn = validators.discordValidator || validateDiscordLink;
+        validationResult = await validateFn(item.inviteUrl);
       } else if (item.platform === "telegram") {
-        validationResult = await validateTelegramLink(item.inviteUrl);
+        const validateFn = validators.telegramValidator || validateTelegramLink;
+        validationResult = await validateFn(item.inviteUrl);
       } else if (item.platform === "whatsapp") {
-        validationResult = await validateWhatsappLink(item.inviteUrl);
+        const validateFn = validators.whatsappValidator || validateWhatsappLink;
+        validationResult = await validateFn(item.inviteUrl);
       } else {
         validationResult = { url: item.inviteUrl, status: "unknown" as LinkStatus, message: "Unsupported platform", checkedAt: nowIso };
       }
@@ -87,6 +102,8 @@ export async function runRevalidatePublished(options = autoPublishConfig): Promi
         guildId: item.guildId || null,
         countryCode: item.countryCode,
         category: item.category,
+        countryEvidence: item.countryEvidence,
+        sourceUrls: item.sourceUrls,
       };
       newlyArchived.push(archivedRecord);
       continue;
@@ -95,6 +112,7 @@ export async function runRevalidatePublished(options = autoPublishConfig): Promi
     // B. Temporary Error / Unknown Status
     if (validationResult.status === "unknown") {
       item.consecutiveUnknownCount = (item.consecutiveUnknownCount || 0) + 1;
+      item.linkStatus = "unknown"; // Truthful public representation
       console.log(`  ? Status unknown for "${item.title}" (Consecutive: ${item.consecutiveUnknownCount}/${options.autoUnpublishUnknownAfter}).`);
 
       if (item.consecutiveUnknownCount >= options.autoUnpublishUnknownAfter) {
@@ -112,6 +130,8 @@ export async function runRevalidatePublished(options = autoPublishConfig): Promi
           guildId: item.guildId || null,
           countryCode: item.countryCode,
           category: item.category,
+          countryEvidence: item.countryEvidence,
+          sourceUrls: item.sourceUrls,
         };
         newlyArchived.push(archivedRecord);
         continue;
@@ -122,14 +142,17 @@ export async function runRevalidatePublished(options = autoPublishConfig): Promi
       }
     }
 
-    // Reset consecutive unknown count on active validation
+    // Active state confirmed
     item.consecutiveUnknownCount = 0;
     item.linkStatus = "active";
+    item.lastKnownLinkStatus = "active";
+    item.lastSuccessfulValidationAt = nowIso;
 
     // Refresh member count if returned
     if (validationResult.extractedMemberCount !== undefined && validationResult.extractedMemberCount !== null) {
       item.memberCount = validationResult.extractedMemberCount;
       item.memberCountCheckedAt = nowIso;
+      item.memberCountSource = item.inviteUrl;
     }
 
     // C. Check for Repurposed Server / Safety Changes
@@ -137,7 +160,6 @@ export async function runRevalidatePublished(options = autoPublishConfig): Promi
     const realDesc = validationResult.extractedDescription?.trim() || item.description || "";
     const fullText = `${realTitle} ${realDesc}`.trim();
 
-    // Check Inactive server markers in title
     if (/\b(inactive|shut\s+down|closed\s+down|no\s+longer\s+active|deleted\s+server|server\s+closed)\b/i.test(realTitle)) {
       console.log(`  ?? Community marked inactive in title: "${realTitle}". Auto-unpublishing.`);
       newlyArchived.push({
@@ -157,7 +179,6 @@ export async function runRevalidatePublished(options = autoPublishConfig): Promi
       continue;
     }
 
-    // Check Scam Risk
     const scamCheck = classifyJobScamRisk(fullText);
     if (scamCheck.isSevereScam) {
       console.log(`  ? Severe scam detected in metadata for "${item.title}". Auto-unpublishing.`);
@@ -178,7 +199,6 @@ export async function runRevalidatePublished(options = autoPublishConfig): Promi
       continue;
     }
 
-    // Check Job Relevance (Repurposed Server)
     const jobCheck = isJobRelevant(fullText);
     if (!jobCheck.isJobRelated) {
       console.log(`  ?? Community no longer job-related: "${item.title}". Auto-unpublishing.`);
@@ -199,16 +219,29 @@ export async function runRevalidatePublished(options = autoPublishConfig): Promi
       continue;
     }
 
-    // D. Periodic Source Recheck (every 30 days)
+    // D. Periodic Source Recheck controlled by sourceCheckedAt (every 30 days)
     if (item.verificationStatus === "source-confirmed" && item.sourceUrls.length > 0) {
-      const lastSourceCheck = item.updatedAt ? new Date(item.updatedAt).getTime() : 0;
+      const lastSourceCheck = item.sourceCheckedAt
+        ? new Date(item.sourceCheckedAt).getTime()
+        : new Date(item.discoveredAt).getTime();
       const sourceAgeDays = (nowMs - lastSourceCheck) / (1000 * 60 * 60 * 24);
 
       if (sourceAgeDays >= 30) {
-        console.log(`  ?? Rechecking independent source for "${item.title}" (${item.sourceUrls[0]})...`);
-        const sourceCheck = await verifySourceMentionsInvite(item.sourceUrls[0], item.inviteUrl, item.guildId || undefined);
-        if (!sourceCheck.isConfirmed) {
-          console.log(`  ?? Source link no longer active on "${item.sourceUrls[0]}". Downgrading to unverified.`);
+        console.log(`  ?? Rechecking independent sources for "${item.title}" (Age: ${Math.round(sourceAgeDays)}d)...`);
+        let anySourceConfirmed = false;
+        const verifierFn = validators.sourceVerifier || verifySourceMentionsInvite;
+
+        for (const sUrl of item.sourceUrls) {
+          const check = await verifierFn(sUrl, item.inviteUrl, item.guildId || undefined);
+          if (check.isConfirmed) {
+            anySourceConfirmed = true;
+            break;
+          }
+        }
+
+        item.sourceCheckedAt = nowIso;
+        if (!anySourceConfirmed) {
+          console.log(`  ?? No independent source confirmed invite for "${item.title}". Downgrading to unverified.`);
           item.verificationStatus = "unverified";
           downgradedSourceCount++;
         }
@@ -217,25 +250,25 @@ export async function runRevalidatePublished(options = autoPublishConfig): Promi
 
     item.updatedAt = nowIso;
     retained.push(item);
-    console.log(`  ? Retained active published: "${item.title}" (${item.verificationStatus})`);
+    console.log(`  ? Retained active published: "${item.title}" (${item.linkStatus} - ${item.verificationStatus})`);
   }
 
-  // Update datasets
-  if (newlyArchived.length > 0 || downgradedSourceCount > 0) {
-    const updatedArchived = [...archived, ...newlyArchived];
-    retained.sort((a, b) => a.title.localeCompare(b.title));
+  // Atomically persist datasets whenever revalidation runs
+  const updatedArchived = [...archived, ...newlyArchived];
+  retained.sort((a, b) => a.title.localeCompare(b.title));
 
-    const valPub = validateCommunitiesData(retained);
-    if (!valPub.valid) {
-      console.error("? Schema validation failed during revalidation:", valPub.errors);
-      throw new Error("Schema validation failure during revalidation");
-    }
+  const valPub = validateCommunitiesData(retained);
+  if (!valPub.valid) {
+    console.error("? Schema validation failed during revalidation:", valPub.errors);
+    throw new Error("Schema validation failure during revalidation");
+  }
 
-    atomicWriteJson(groupsPath, valPub.communities);
+  atomicWriteJson(groupsPath, valPub.communities);
+  if (newlyArchived.length > 0) {
     atomicWriteJson(archivedPath, updatedArchived);
-
-    console.log(`\n? Datasets updated: ${retained.length} active published, ${updatedArchived.length} total archived.`);
   }
+
+  console.log(`\n? Datasets atomically persisted: ${retained.length} published, ${updatedArchived.length} archived.`);
 
   console.log("\n=========================================");
   console.log("?? REVALIDATION REPORT");

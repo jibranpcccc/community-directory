@@ -72,6 +72,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No data changes to commit."
           else
-            git commit -m "chore(data): automated discovery $(date -u +'%Y-%m-%d') [skip ci]"
+            git commit -m "chore(data): automated directory update $(date -u +'%Y-%m-%d')"
             git push
           fi

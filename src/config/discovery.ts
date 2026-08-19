@@ -9,8 +9,8 @@ export const discoveryConfig = {
   // Rate limiting delay between search queries (ms)
   requestDelayMs: parseInt(process.env.DISCOVERY_REQUEST_DELAY_MS || "1500", 10),
 
-  // Publication safety policy (defaults to true for fully autonomous mode)
-  autoPublish: process.env.AUTO_PUBLISH_ENABLED !== "false",
+  // Publication safety policy (fail-closed: requires explicit AUTO_PUBLISH_ENABLED='true')
+  autoPublish: process.env.AUTO_PUBLISH_ENABLED === "true",
 
   // Gemini model settings
   geminiModel: process.env.GEMINI_MODEL || "gemini-2.5-flash",

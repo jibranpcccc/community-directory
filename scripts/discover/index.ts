@@ -18,7 +18,7 @@ import type { LinkValidationResult } from "../validate/validateUrl";
 import { atomicWriteJson } from "../data/mergeListings";
 import { getCurrentIsoTimestamp } from "../../src/lib/dates";
 import type { Community, CountryCode, ExperienceLevel, ArchivedCommunity } from "../../src/types/community";
-import { runAutoPublish } from "../data/autoPublish";
+import { runAutoPublish, validateCountryEvidence } from "../data/autoPublish";
 import { autoPublishConfig } from "../../src/config/autoPublish";
 
 // Parse CLI flags
@@ -487,6 +487,28 @@ async function runDiscovery() {
           .filter((el) => VALID_EXP_LEVELS.has(el)) as ExperienceLevel[]
       : [];
 
+    const countryValidation = validateCountryEvidence({
+      title: finalTitle,
+      description: finalDescription,
+      countryCode: classification.countryCode,
+      tags: classification.tags,
+      countryEvidence: isSourceConfirmed && sourceCheck.evidenceSnippet ? {
+        sourceType: "independent-source",
+        text: sourceCheck.evidenceSnippet,
+        sourceUrl: validSource,
+        checkedAt: now,
+      } : undefined,
+    } as any);
+
+    let parsedHostname: string | undefined;
+    if (validSource) {
+      try {
+        parsedHostname = new URL(validSource).hostname;
+      } catch {}
+    }
+
+    const currentRunId = `run_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+
     const community: Community = {
       id: slug,
       slug,
@@ -498,10 +520,12 @@ async function runDiscovery() {
       tags: classification.tags,
       inviteUrl: normalizedUrl,
       description: finalDescription,
+      descriptionSource: finalDescription ? (isSourceConfirmed ? "confirmed-source" : "platform") : null,
       language: classification.language,
       country: classification.country,
       countryCode: classification.countryCode,
       city: classification.city,
+      countryEvidence: countryValidation.evidence || null,
       jobTypes: classification.jobTypes,
       industries: classification.industries,
       workArrangement: classification.workArrangement,
@@ -514,7 +538,10 @@ async function runDiscovery() {
       memberCountCheckedAt: realMembers ? now : null,
       verificationStatus: isSourceConfirmed ? "source-confirmed" : "unverified",
       linkStatus: "active",
+      lastKnownLinkStatus: "active",
+      lastSuccessfulValidationAt: now,
       sourceUrls: [validSource],
+      sourceCheckedAt: isSourceConfirmed ? now : null,
       guildId: extractedGuildId || null,
       discoveryMethod: geminiProvider.isAvailable() ? "gemini-search" : "manual",
       discoveredAt: now,
@@ -523,6 +550,13 @@ async function runDiscovery() {
       safetyFlags: classification.safetyFlags,
       published: false,
       featured: false,
+      firstSeenAt: now,
+      lastSeenAt: now,
+      timesSeen: 1,
+      providerIds: [geminiProvider.isAvailable() ? "gemini-search" : "seed-provider"],
+      observedRunIds: [currentRunId],
+      querySource: cand.queryMeta?.query || undefined,
+      sourceHostname: parsedHostname,
     };
 
     validNewCommunities.push(community);
@@ -564,8 +598,26 @@ async function runDiscovery() {
       ? JSON.parse(fs.readFileSync(pendingPath, "utf-8"))
       : [];
 
-    const updatedPending = [...existingPending, ...validNewCommunities];
-    atomicWriteJson(pendingPath, updatedPending);
+    for (const newCand of validNewCommunities) {
+      const existingIdx = existingPending.findIndex(
+        (p) => normalizeInviteUrl(p.inviteUrl) === normalizeInviteUrl(newCand.inviteUrl)
+      );
+      if (existingIdx !== -1) {
+        const existing = existingPending[existingIdx];
+        existing.timesSeen = (existing.timesSeen || 1) + 1;
+        existing.lastSeenAt = now;
+        existing.observedRunIds = Array.from(new Set([...(existing.observedRunIds || []), ...(newCand.observedRunIds || [])]));
+        existing.providerIds = Array.from(
+          new Set([...(existing.providerIds || []), ...(newCand.providerIds || [])])
+        );
+        existing.lastCheckedAt = now;
+        existing.linkStatus = "active";
+      } else {
+        existingPending.push(newCand);
+      }
+    }
+
+    atomicWriteJson(pendingPath, existingPending);
     atomicWriteJson(rejectedPath, rejectedRecords);
     saveQueryStats(queryStatsMap);
 

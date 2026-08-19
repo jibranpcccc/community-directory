@@ -60,14 +60,27 @@ export type DiscoveryMethod =
   | "platform-api"
   | "other";
 
+export type DescriptionSource = "platform" | "confirmed-source";
+
 export interface CountryEvidence {
   sourceType:
     | "platform-title"
     | "platform-description"
     | "independent-source"
     | "official-source";
-  text?: string;
+  text: string;
   sourceUrl?: string;
+  checkedAt: string;
+}
+
+export interface CityEvidence {
+  sourceType:
+    | "platform-title"
+    | "platform-description"
+    | "independent-source"
+    | "official-source";
+  text: string;
+  checkedAt: string;
 }
 
 export interface Community {
@@ -81,11 +94,13 @@ export interface Community {
   tags: string[];
   inviteUrl: string;
   description?: string | null;
+  descriptionSource?: DescriptionSource | null;
   language?: string | null;
   country?: string | null;
   countryCode: CountryCode | null;
   city: string | null;
   countryEvidence?: CountryEvidence | null;
+  cityEvidence?: CityEvidence | null;
   jobTypes: string[];
   industries: string[];
   workArrangement: WorkArrangement;
@@ -98,7 +113,10 @@ export interface Community {
   memberCountCheckedAt?: string | null;
   verificationStatus: VerificationStatus;
   linkStatus: LinkStatus;
+  lastKnownLinkStatus?: LinkStatus;
+  lastSuccessfulValidationAt?: string | null;
   sourceUrls: string[];
+  sourceCheckedAt?: string | null;
   discoveryMethod: DiscoveryMethod;
   discoveredAt: string;
   lastCheckedAt?: string | null;
@@ -113,6 +131,9 @@ export interface Community {
   lastSeenAt?: string;
   timesSeen?: number;
   providerIds?: string[];
+  observedRunIds?: string[];
+  querySource?: string;
+  sourceHostname?: string;
   validationAttempts?: number;
   consecutiveUnknownCount?: number;
   lastValidationStatus?: LinkStatus;
@@ -136,6 +157,8 @@ export interface ArchivedCommunity {
   guildId?: string | null;
   countryCode?: CountryCode | null;
   category?: string;
+  countryEvidence?: CountryEvidence | null;
+  sourceUrls?: string[];
 }
 
 export interface CategoryConfig {
