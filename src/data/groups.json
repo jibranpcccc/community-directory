@@ -49,22 +49,24 @@
     "communityType": "unknown",
     "memberCount": 13903,
     "memberCountSource": "https://discord.gg/96rkQyC5rX",
-    "memberCountCheckedAt": "2026-08-19T08:33:40.620Z",
+    "memberCountCheckedAt": "2026-08-19T09:56:19.235Z",
     "verificationStatus": "source-confirmed",
     "linkStatus": "active",
     "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-19T08:33:40.620Z",
+    "lastSuccessfulValidationAt": "2026-08-19T09:56:19.235Z",
     "sourceUrls": [
       "https://northern.dev"
     ],
     "sourceCheckedAt": "2026-08-19T08:33:40.620Z",
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-19T08:33:40.620Z",
-    "lastCheckedAt": "2026-08-19T08:33:40.620Z",
-    "updatedAt": "2026-08-19T09:20:22.972Z",
+    "lastCheckedAt": "2026-08-19T09:56:19.235Z",
+    "updatedAt": "2026-08-19T09:56:19.235Z",
     "safetyFlags": [],
     "guildId": "1045555763264880640",
     "published": true,
-    "featured": false
+    "featured": false,
+    "consecutiveUnknownCount": 0,
+    "lastValidationStatus": "active"
   }
 ]
