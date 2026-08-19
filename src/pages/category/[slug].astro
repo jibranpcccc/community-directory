@@ -21,7 +21,7 @@ const { category } = Astro.props;
 const communities = getCommunitiesByCategory(category.slug);
 
 const schema = generateCollectionPageSchema(
-  `${category.name} Communities`,
+  `${category.name} Alert Groups & Communities`,
   category.description,
   `/category/${category.slug}`,
   communities
@@ -29,20 +29,20 @@ const schema = generateCollectionPageSchema(
 ---
 
 <DirectoryLayout
-  heading={`${category.name} Communities`}
+  heading={`${category.name} Job Groups`}
   subheading={category.description}
   breadcrumbs={[
-    { name: "Categories", item: "/#categories" },
+    { name: "All Jobs", item: "/jobs" },
     { name: category.name, item: `/category/${category.slug}` },
   ]}
   canonicalPath={`/category/${category.slug}`}
   jsonLd={schema}
   noindex={communities.length === 0}
 >
-  <!-- Subcategories & Tags Bar -->
+  <!-- Subcategories & Topics Bar -->
   <div class="mb-6 neo-card p-5 bg-white">
     <div class="text-xs font-black text-black uppercase tracking-wider mb-3">
-      Popular Topics & Subcategories
+      Job Specializations & Focus Areas
     </div>
     <div class="flex flex-wrap gap-2">
       {
@@ -55,25 +55,20 @@ const schema = generateCollectionPageSchema(
     </div>
   </div>
 
-  <!-- Mandatory Financial Risk Disclaimer for Crypto / Forex categories -->
-  {
-    category.financialDisclaimerRequired && (
-      <div class="mb-6">
-        <SafetyNotice type="financial" />
-      </div>
-    )
-  }
-
   <!-- Listings Header -->
   <div class="flex items-center justify-between mb-4">
     <span class="text-xs font-bold text-black">
-      Showing <strong class="underline font-black">{communities.length}</strong> listed communities in {category.name}
+      Showing <strong class="underline font-black">{communities.length}</strong> listed job groups in {category.name}
     </span>
   </div>
 
-  <CommunityGrid
-    communities={communities}
-    emptyTitle={`No ${category.name} communities yet`}
-    emptyMessage="Be the first to submit a public community in this category."
-  />
+  <div class="space-y-8">
+    <CommunityGrid
+      communities={communities}
+      emptyTitle={`No ${category.name} job groups yet`}
+      emptyMessage="We are continuously discovering active groups. Be the first to submit a public job group in this category."
+    />
+
+    <SafetyNotice type="job-warning" />
+  </div>
 </DirectoryLayout>

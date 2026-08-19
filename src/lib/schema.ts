@@ -21,7 +21,7 @@ export function generateWebSiteSchema() {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: `${getCanonicalUrl("/communities")}?search={search_term_string}`,
+        urlTemplate: `${getCanonicalUrl("/jobs")}?search={search_term_string}`,
       },
       "query-input": "required name=search_term_string",
     },

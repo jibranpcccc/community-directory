@@ -8,7 +8,9 @@ import VerificationBadge from "../components/VerificationBadge.astro";
 import SafetyNotice from "../components/SafetyNotice.astro";
 import AdPlaceholder from "../components/AdPlaceholder.astro";
 import { categories } from "../config/categories";
+import { ENABLED_COUNTRIES } from "../config/countries";
 import { platforms } from "../config/platforms";
+import { siteConfig } from "../config/site";
 import { formatDate } from "../lib/dates";
 import {
   getFeaturedCommunities,
@@ -28,8 +30,8 @@ const organizationSchema = generateOrganizationSchema();
 ---
 
 <BaseLayout
-  title="Find Communities Worth Joining — Public Community Directory"
-  description="Discover, search, and browse public online communities across Telegram, WhatsApp, Discord, and more. Real links and transparent verification status."
+  title={`${siteConfig.tagline} � USA, UK, Canada & Australia`}
+  description={siteConfig.description}
   canonicalPath="/"
   jsonLd={[webSiteSchema, organizationSchema]}
 >
@@ -41,25 +43,25 @@ const organizationSchema = generateOrganizationSchema();
         <!-- Playful Sticker Badge in Top Right -->
         <div class="absolute -right-4 -top-4 sm:right-8 sm:top-6 rotate-6 z-10">
           <div class="neo-badge bg-[#FEF08A] text-black px-4 py-2 text-xs sm:text-sm font-black border-2 border-black shadow-[3px_3px_0px_0px_#000] tracking-wider uppercase">
-            ★ 100% REAL LINKS ★
+            ? TIER-1 JOB ALERTS ?
           </div>
         </div>
 
         <div class="max-w-3xl">
           <div class="inline-flex items-center gap-2 rounded-lg border-2 border-black bg-white px-3 py-1 text-xs font-black text-black shadow-[2px_2px_0px_0px_#000] mb-6">
             <span class="h-2.5 w-2.5 rounded-full bg-[#10B981] border border-black"></span>
-            ZERO FAKE METRICS • PUBLIC DIRECTORY
+            ZERO FAKE METRICS � PUBLIC DIRECTORY
           </div>
 
           <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-black mb-6 leading-tight">
-            CONNECT & DISCOVER: <br class="hidden sm:inline" />
+            FIND ACTIVE <br class="hidden sm:inline" />
             <span class="bg-[#FEF08A] px-2 py-0.5 border-2 border-black shadow-[3px_3px_0px_0px_#000] inline-block mt-1">
-              COMMUNITY DIRECTORY
+              JOB ALERT GROUPS
             </span>
           </h1>
 
           <p class="text-sm sm:text-base font-bold text-black/80 leading-relaxed mb-8 max-w-xl">
-            Find, join, and explore verified public Discord servers, Telegram channels, and WhatsApp communities across tech, crypto, and remote work.
+            {siteConfig.subheadline}
           </p>
 
           <!-- Search Box -->
@@ -67,26 +69,22 @@ const organizationSchema = generateOrganizationSchema();
             <SearchBox size="lg" />
           </div>
 
-          <!-- Platform Navigation Pills -->
+          <!-- Country Quick Filters -->
           <div class="flex flex-wrap items-center gap-2.5 pt-2">
-            <span class="text-xs font-black text-black uppercase tracking-wider">Explore:</span>
+            <span class="text-xs font-black text-black uppercase tracking-wider">Target Countries:</span>
+            {ENABLED_COUNTRIES.map((c) => (
+              <a
+                href={`/country/${c.slug}`}
+                class="neo-button bg-white hover:bg-[#FEF08A] text-black px-3 py-1 text-xs font-black"
+              >
+                {c.flag} {c.shortName}
+              </a>
+            ))}
             <a
-              href="/platform/discord"
-              class="neo-button bg-[#DDD6FE] hover:bg-[#C4B5FD] text-black px-3.5 py-1 text-xs font-black"
+              href="/job-type/remote-jobs"
+              class="neo-button bg-[#FEF08A] hover:bg-[#FDE047] text-black px-3 py-1 text-xs font-black"
             >
-              Discord Servers
-            </a>
-            <a
-              href="/platform/telegram"
-              class="neo-button bg-[#BAE6FD] hover:bg-[#7DD3FC] text-black px-3.5 py-1 text-xs font-black"
-            >
-              Telegram Channels
-            </a>
-            <a
-              href="/platform/whatsapp"
-              class="neo-button bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black px-3.5 py-1 text-xs font-black"
-            >
-              WhatsApp Groups
+              ?? Remote Jobs
             </a>
           </div>
         </div>
@@ -94,16 +92,16 @@ const organizationSchema = generateOrganizationSchema();
     </div>
   </section>
 
-  <!-- Real Dataset Statistics Counters (Factual Neo-Brutalist Blocks) -->
+  <!-- Factual Dataset Counters -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
     <div class="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
       <div class="neo-card-yellow p-5 text-center">
         <div class="text-3xl sm:text-4xl font-black text-black">{stats.totalPublished}</div>
-        <div class="text-xs font-black text-black uppercase tracking-wider mt-1">Listed Communities</div>
+        <div class="text-xs font-black text-black uppercase tracking-wider mt-1">Active Job Communities</div>
       </div>
       <div class="neo-card-mint p-5 text-center">
-        <div class="text-3xl sm:text-4xl font-black text-black">{categories.length}</div>
-        <div class="text-xs font-black text-black uppercase tracking-wider mt-1">Curated Categories</div>
+        <div class="text-3xl sm:text-4xl font-black text-black">{ENABLED_COUNTRIES.length}</div>
+        <div class="text-xs font-black text-black uppercase tracking-wider mt-1">Target Countries</div>
       </div>
       <div class="neo-card-purple p-5 text-center">
         <div class="text-3xl sm:text-4xl font-black text-black">3</div>
@@ -120,7 +118,49 @@ const organizationSchema = generateOrganizationSchema();
     <!-- Ad Space Leaderboard (Optional) -->
     <AdPlaceholder format="leaderboard" />
 
-    <!-- Featured Communities Section -->
+    <!-- Country Hubs Section -->
+    <section id="countries" class="scroll-mt-20">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <div class="inline-block bg-[#BAE6FD] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
+            LOCATION HUBS
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Browse by Country</h2>
+          <p class="text-xs font-bold text-slate-600 mt-1">Explore job channels and communities by advertising market</p>
+        </div>
+        <a href="/jobs" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
+          View all jobs ?
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {
+          ENABLED_COUNTRIES.map((c) => (
+            <a
+              href={`/country/${c.slug}`}
+              class="neo-card p-6 bg-white hover:bg-[#FEF9C3] flex flex-col justify-between group transition-all"
+            >
+              <div>
+                <div class="text-3xl mb-2">{c.flag}</div>
+                <h3 class="text-lg font-black text-black group-hover:underline mb-1">
+                  {c.name}
+                </h3>
+                <p class="text-xs font-medium text-slate-600 mb-4">
+                  Job alerts and recruitment groups across major {c.shortName} metropolitan hubs.
+                </p>
+              </div>
+
+              <div class="pt-3 border-t-2 border-black/10 flex items-center justify-between text-xs font-black text-black">
+                <span>Explore {c.shortName}</span>
+                <span>?</span>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Featured Communities Section (Only shown if listings exist) -->
     {
       featuredListings.length > 0 && (
         <section>
@@ -129,11 +169,11 @@ const organizationSchema = generateOrganizationSchema();
               <div class="inline-block bg-[#FEF08A] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
                 HAND-PICKED
               </div>
-              <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Featured Communities</h2>
-              <p class="text-xs font-bold text-slate-600 mt-1">Verified official communities with active public resources</p>
+              <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Featured Job Communities</h2>
+              <p class="text-xs font-bold text-slate-600 mt-1">Verified communities sharing job alerts</p>
             </div>
-            <a href="/communities" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
-              Browse all →
+            <a href="/jobs" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
+              Browse all ?
             </a>
           </div>
           <CommunityGrid communities={featuredListings} />
@@ -141,18 +181,18 @@ const organizationSchema = generateOrganizationSchema();
       )
     }
 
-    <!-- Categories Grid Section -->
+    <!-- Job Categories Section -->
     <section id="categories" class="scroll-mt-20">
       <div class="flex items-center justify-between mb-6">
         <div>
           <div class="inline-block bg-[#A7F3D0] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
-            TOPICS & HUBS
+            JOB ROLES & DISCIPLINES
           </div>
-          <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Browse by Category</h2>
-          <p class="text-xs font-bold text-slate-600 mt-1">Explore communities by topic, technology, and industry</p>
+          <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Browse by Job Category</h2>
+          <p class="text-xs font-bold text-slate-600 mt-1">Find alert groups organized by industry and career track</p>
         </div>
-        <a href="/communities" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
-          View all →
+        <a href="/jobs" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
+          View all ?
         </a>
       </div>
 
@@ -200,10 +240,10 @@ const organizationSchema = generateOrganizationSchema();
       <div class="flex items-center justify-between mb-6">
         <div>
           <div class="inline-block bg-[#DDD6FE] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
-            CHANNELS & SERVERS
+            CHANNELS & NETWORKS
           </div>
           <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Explore by Platform</h2>
-          <p class="text-xs font-bold text-slate-600 mt-1">Filter public groups by chat network</p>
+          <p class="text-xs font-bold text-slate-600 mt-1">Filter public job channels by messaging network</p>
         </div>
       </div>
 
@@ -226,7 +266,7 @@ const organizationSchema = generateOrganizationSchema();
                 >
                   <div class="flex items-center justify-between mb-3">
                     <span class="text-xl font-black text-black group-hover:underline">
-                      {plat.name}
+                      {plat.name} Jobs
                     </span>
                     <span class="rounded-lg border-2 border-black bg-white px-2.5 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
                       {stats.platforms[plat.id] || 0} listings
@@ -242,98 +282,67 @@ const organizationSchema = generateOrganizationSchema();
       </div>
     </section>
 
-    <!-- Recently Added Communities -->
-    <section>
-      <div class="flex items-center justify-between mb-6">
-        <div>
-          <div class="inline-block bg-[#FED7AA] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
-            FRESH LISTINGS
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Recently Added Listings</h2>
-          <p class="text-xs font-bold text-slate-600 mt-1">New additions catalogued in the directory</p>
-        </div>
-        <a href="/communities" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
-          Browse all →
-        </a>
-      </div>
-      
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {recentAdditions.map((comm) => (
-          <a
-            href={`/group/${comm.slug}`}
-            class="neo-card flex items-center justify-between p-4 bg-white hover:bg-[#FEF9C3]"
-          >
-            <div class="min-w-0 pr-3">
-              <h3 class="text-sm font-black text-black truncate">
-                {comm.title}
-              </h3>
-              <div class="flex items-center gap-2 mt-2">
-                <PlatformBadge platform={comm.platform} size="sm" />
-                <CategoryBadge category={comm.category} size="sm" />
+    <!-- Recently Added Communities (Only shown if listings exist) -->
+    {
+      recentAdditions.length > 0 && (
+        <section>
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <div class="inline-block bg-[#FED7AA] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
+                FRESH LISTINGS
               </div>
+              <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Recently Added Job Groups</h2>
+              <p class="text-xs font-bold text-slate-600 mt-1">New additions catalogued in the directory</p>
             </div>
-            <span class="text-xs font-black text-black shrink-0 underline">
-              View →
-            </span>
-          </a>
-        ))}
-      </div>
-    </section>
-
-    <!-- Recently Checked Link Audit Log -->
-    <section>
-      <div class="flex items-center justify-between mb-6">
-        <div>
-          <div class="inline-block bg-[#A7F3D0] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
-            LINK INTEGRITY
+            <a href="/jobs" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
+              Browse all ?
+            </a>
           </div>
-          <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Recent Link Audits</h2>
-          <p class="text-xs font-bold text-slate-600 mt-1">Status checks performed across index links</p>
-        </div>
-        <a href="/how-we-verify" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
-          Verification protocol →
-        </a>
-      </div>
-      
-      <div class="divide-y-2 divide-black rounded-2xl border-2 border-black bg-white shadow-[4px_4px_0px_0px_#000] overflow-hidden">
-        {recentlyChecked.map((comm) => (
-          <div class="flex flex-wrap items-center justify-between gap-3 p-4 sm:px-6 hover:bg-[#FEF9C3] transition-colors">
-            <div class="flex items-center gap-3 min-w-0">
-              <PlatformBadge platform={comm.platform} size="sm" />
-              <a href={`/group/${comm.slug}`} class="text-sm font-black text-black hover:underline truncate">
-                {comm.title}
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {recentAdditions.map((comm) => (
+              <a
+                href={`/group/${comm.slug}`}
+                class="neo-card flex items-center justify-between p-4 bg-white hover:bg-[#FEF9C3]"
+              >
+                <div class="min-w-0 pr-3">
+                  <h3 class="text-sm font-black text-black truncate">
+                    {comm.title}
+                  </h3>
+                  <div class="flex items-center gap-2 mt-2">
+                    <PlatformBadge platform={comm.platform} size="sm" />
+                    <CategoryBadge category={comm.category} size="sm" />
+                  </div>
+                </div>
+                <span class="text-xs font-black text-black shrink-0 underline">
+                  View ?
+                </span>
               </a>
-            </div>
-            <div class="flex items-center gap-3">
-              <VerificationBadge status={comm.verificationStatus} size="sm" />
-              <span class="text-xs font-bold text-slate-500">
-                Checked {formatDate(comm.lastCheckedAt)}
-              </span>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </section>
+        </section>
+      )
+    }
 
-    <!-- Safety Notice Banner -->
-    <SafetyNotice type="general" />
+    <!-- Job Seeker Safety Notice Banner -->
+    <SafetyNotice type="job-warning" />
 
     <!-- Submission CTA Banner -->
     <section class="rounded-3xl border-[3px] border-black bg-[#FEF08A] p-8 sm:p-12 text-black text-center shadow-[6px_6px_0px_0px_#000]">
       <div class="inline-block bg-white px-3 py-1 border-2 border-black text-xs font-black uppercase tracking-wider shadow-[2px_2px_0px_0px_#000] mb-4">
-        ★ FREE SUBMISSIONS ★
+        ? FREE SUBMISSIONS ?
       </div>
       <h2 class="text-2xl sm:text-4xl font-black mb-3">
-        Run a Public Online Community?
+        Manage a Public Job Alert Community?
       </h2>
       <p class="text-black/80 max-w-xl mx-auto text-xs sm:text-sm font-bold leading-relaxed mb-6">
-        Submit your community to be catalogued in the directory. Every submission is reviewed before publication. Verification status is shown transparently on each listing.
+        Submit your community to be catalogued in the job alert directory. Every submission is reviewed before publication. Verification status is shown transparently on each listing.
       </p>
       <a
         href="/submit"
         class="neo-button bg-[#A7F3D0] hover:bg-[#6EE7B7] px-6 py-3 text-sm font-black text-black shadow-[4px_4px_0px_0px_#000]"
       >
-        Submit a Community for Free →
+        Submit a Job Community for Free ?
       </a>
     </section>
   </div>

@@ -5,86 +5,101 @@ import { generateFAQSchema } from "../lib/schema";
 
 const faqSchema = generateFAQSchema([
   {
-    question: "Does listing a community mean CommunityHub endorses it?",
-    answer: "No. Our directory catalogs publicly discoverable online communities. Listing a community does not constitute endorsement of its administrators, members, viewpoints, or products.",
+    question: "Does listing a job group mean the directory verifies all employers and job offers?",
+    answer: "No. Our directory catalogs publicly discoverable job alert channels and communities. Listing a community does not constitute endorsement or verification of individual employers, recruiters, or job postings.",
   },
   {
-    question: "How do I protect my crypto wallet and credentials in communities?",
-    answer: "Never share seed phrases or private keys. Legitimate support staff will never ask for credentials. Beware of unsolicited direct messages (DMs) from impersonators and avoid downloading unverified files.",
+    question: "Should I ever pay money to apply for a job or get hired?",
+    answer: "Never. Legitimate employers will never ask candidates to pay application fees, background check fees, onboarding fees, or training costs upfront.",
   },
   {
-    question: "Are trading signals and financial advice guaranteed?",
-    answer: "No. Be skeptical of groups promising guaranteed profits or risk-free returns. All financial markets involve risk of capital loss.",
+    question: "What is a task optimization or crypto deposit job scam?",
+    answer: "Scammers promise daily income for completing simple tasks (like rating products or liking videos) but require depositing cryptocurrency or USDT to unlock tasks or withdraw earnings. These are fraudulent scams.",
   },
   {
-    question: "How do I report a compromised or unsafe community?",
-    answer: "If you encounter a listing that promotes illegal activities, malware, or scams, submit an immediate report via our /report page for moderator review.",
+    question: "How do I report a fraudulent or scam job group?",
+    answer: "If you encounter a group promoting job scams, upfront fees, or phishing, submit a report via our /report page for review and removal.",
   },
 ]);
 ---
 
 <DirectoryLayout
-  heading="Community Safety Guide"
-  subheading="Essential safety practices for joining and participating in public online communities."
+  heading="Job Seeker Safety & Scam Guide"
+  subheading="Essential safety practices for discovering and evaluating job openings in public online communities."
   breadcrumbs={[
-    { name: "Home", item: "/" },
+    { name: "All Jobs", item: "/jobs" },
     { name: "Safety Guide", item: "/safety" },
   ]}
   canonicalPath="/safety"
   jsonLd={faqSchema}
 >
   <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base font-medium text-slate-800 leading-relaxed">
-    <SafetyNotice type="general" />
+    <SafetyNotice type="job-warning" />
 
+    <!-- Core Rule 1 -->
     <section class="neo-card p-6 sm:p-8 space-y-4 bg-white">
       <div class="inline-block bg-[#FEF08A] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
-        RULE #1
+        GOLDEN RULE #1
       </div>
       <h2 class="text-xl sm:text-2xl font-black text-black">
-        1. Directory Inclusion Is Not Endorsement
+        1. Never Pay Money to Get a Job
       </h2>
-      <p class="text-slate-700 font-bold">
-        Our directory catalogs publicly discoverable online communities. Listing a Telegram channel, Discord server, or WhatsApp group does not mean we endorse its administrators, members, viewpoints, or products. Always perform your own due diligence before trusting advice or making transactions.
+      <p class="text-slate-800 font-bold">
+        Legitimate employers and corporate recruiters <strong>NEVER</strong> require candidates to pay registration fees, application processing charges, equipment deposits, or mandatory training costs before starting work.
       </p>
+      <div class="rounded-xl border-2 border-black bg-[#FEF9C3] p-4 text-xs font-bold text-black space-y-1 shadow-[2px_2px_0px_0px_#000]">
+        <p>?? <strong>Immediate Red Flag:</strong> Anyone asking you to send cash, gift cards, wire transfers, or cryptocurrency (Bitcoin, USDT) is running a scam.</p>
+      </div>
     </section>
 
+    <!-- Core Rule 2: Task Scams -->
     <section class="neo-card-coral p-6 sm:p-8 space-y-4">
       <div class="inline-block bg-white px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
-        SECURITY BEST PRACTICES
+        TASK & BOOSTING SCAMS
       </div>
       <h2 class="text-xl sm:text-2xl font-black text-black">
-        2. Protect Sensitive Credentials & Wallets
+        2. Beware of "Task Optimization" & Video-Liking Scams
       </h2>
-      <ul class="list-disc pl-5 space-y-2 text-black font-bold">
-        <li><strong>Never share seed phrases or private keys:</strong> Legitimate administrators and support staff will NEVER ask for your wallet recovery phrases or passwords.</li>
-        <li><strong>Beware of direct messages (DMs):</strong> Scammers frequently impersonate admins in public channels and initiate private chats offering "support" or "exclusive deals".</li>
-        <li><strong>Do not download unverified files:</strong> Executable files (.exe, .scr, .bat, macro-enabled documents) shared in chat groups may contain infostealers or remote access trojans.</li>
+      <p class="text-black font-bold">
+        A widespread scam model promises $300–$1,000 daily for simple online tasks such as "optimizing product ratings", "reviewing apps", or "liking YouTube/TikTok videos".
+      </p>
+      <ul class="list-disc pl-5 space-y-2 text-black font-bold text-xs sm:text-sm">
+        <li>They give a small initial payout to build false trust.</li>
+        <li>They then demand you deposit USDT/crypto into a "workbench balance" to unlock higher-tier tasks.</li>
+        <li>Once funds are deposited, they block withdrawals and demand more money for "taxes" or "system unlock".</li>
       </ul>
     </section>
 
+    <!-- Core Rule 3: Fake Recruiters & Check Scams -->
     <section class="neo-card-yellow p-6 sm:p-8 space-y-4">
       <div class="inline-block bg-white px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
-        FINANCIAL DISCLAIMER
+        RECRUITER VERIFICATION
       </div>
       <h2 class="text-xl sm:text-2xl font-black text-black">
-        3. Financial Market & Investment Warnings
+        3. Fake Recruiters & Equipment Check Scams
       </h2>
-      <p class="text-black font-bold">
-        Be extremely skeptical of groups promising guaranteed profits, 100% win rates, or "risk-free" trading signals. Financial markets involve substantial risk of capital loss. No community or signal provider can guarantee returns.
-      </p>
-      <SafetyNotice type="financial" />
+      <ul class="list-disc pl-5 space-y-2 text-black font-bold text-xs sm:text-sm">
+        <li><strong>Verify Email Domains:</strong> Real corporate recruiters contact you from official company domains (e.g. <code>@apple.com</code>, <code>@amazon.com</code>), not generic <code>@gmail.com</code>, <code>@telegram</code>, or suspicious lookalike domains.</li>
+        <li><strong>Fake Check / Home Office Scam:</strong> Scammers send a counterfeit check to "buy remote office supplies", instruct you to deposit it, and ask you to wire excess funds to their "approved vendor". Days later, the check bounces and you are liable for the lost money.</li>
+      </ul>
     </section>
 
+    <!-- Core Rule 4: Personal Data -->
     <section class="neo-card-mint p-6 sm:p-8 space-y-4">
       <div class="inline-block bg-white px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
-        COMMUNITY INTEGRITY
+        DATA PROTECTION
       </div>
       <h2 class="text-xl sm:text-2xl font-black text-black">
-        4. Reporting Suspicious or Compromised Communities
+        4. Guard Sensitive Identity Information
       </h2>
       <p class="text-black font-bold">
-        If you encounter a community listed on our site that has been compromised, promotes illegal activities, or distributes malware, please submit an immediate report using our <a href="/report" class="font-black underline text-black">Report Listing form</a>.
+        Never share your Social Security Number (SSN), Social Insurance Number (SIN), national identity card, passport scans, or banking details during an initial chat or before a formal, verified written employment contract.
       </p>
+      <div class="pt-2">
+        <a href="/report" class="neo-button bg-white hover:bg-slate-100 text-black px-4 py-2 text-xs font-black">
+          Report a Suspicious Group ?
+        </a>
+      </div>
     </section>
   </div>
 </DirectoryLayout>

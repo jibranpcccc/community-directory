@@ -5,14 +5,22 @@ import type { Community } from "../src/types/community";
 
 const sampleList: Community[] = [
   {
-    id: "alpha-ai",
-    slug: "alpha-ai",
-    title: "Alpha AI Builders",
+    id: "alpha-jobs",
+    slug: "alpha-jobs",
+    title: "Alpha Tech Jobs",
     platform: "telegram",
-    category: "ai-tech",
-    tags: ["ai", "python"],
-    inviteUrl: "https://t.me/alpha_ai",
-    description: "Building machine learning tools.",
+    vertical: "jobs",
+    category: "tech-jobs",
+    countryCode: "US",
+    city: "New York",
+    jobTypes: ["remote-jobs", "full-time-jobs"],
+    industries: ["technology"],
+    workArrangement: "remote",
+    experienceLevels: ["mid-level", "senior"],
+    visaSponsorship: "unknown",
+    tags: ["tech", "engineering"],
+    inviteUrl: "https://t.me/alpha_jobs",
+    description: "Software engineering and developer job openings.",
     memberCount: 5000,
     verificationStatus: "source-confirmed",
     linkStatus: "active",
@@ -23,14 +31,22 @@ const sampleList: Community[] = [
     published: true,
   },
   {
-    id: "beta-crypto",
-    slug: "beta-crypto",
-    title: "Beta Crypto Discussion",
+    id: "beta-remote",
+    slug: "beta-remote",
+    title: "Beta Remote Careers",
     platform: "discord",
-    category: "crypto-web3",
-    tags: ["crypto", "defi"],
-    inviteUrl: "https://discord.gg/beta_crypto",
-    description: "DeFi protocols and Ethereum talk.",
+    vertical: "jobs",
+    category: "remote-jobs",
+    countryCode: "GB",
+    city: "London",
+    jobTypes: ["remote-jobs"],
+    industries: ["technology"],
+    workArrangement: "remote",
+    experienceLevels: ["entry-level", "mid-level"],
+    visaSponsorship: "unknown",
+    tags: ["remote", "careers"],
+    inviteUrl: "https://discord.gg/beta_remote",
+    description: "Remote work alerts and job vacancies.",
     memberCount: 2000,
     verificationStatus: "unverified",
     linkStatus: "active",
@@ -41,14 +57,22 @@ const sampleList: Community[] = [
     published: true,
   },
   {
-    id: "gamma-forex",
-    slug: "gamma-forex",
-    title: "Gamma Forex Traders",
+    id: "gamma-health",
+    slug: "gamma-health",
+    title: "Gamma Healthcare Jobs",
     platform: "whatsapp",
-    category: "forex-stocks",
-    tags: ["forex", "gold"],
-    inviteUrl: "https://chat.whatsapp.com/gamma",
-    description: "Technical analysis for currency pairs.",
+    vertical: "jobs",
+    category: "healthcare-jobs",
+    countryCode: "CA",
+    city: "Toronto",
+    jobTypes: ["full-time-jobs"],
+    industries: ["healthcare-medical"],
+    workArrangement: "onsite",
+    experienceLevels: ["mid-level"],
+    visaSponsorship: "unknown",
+    tags: ["nursing", "healthcare"],
+    inviteUrl: "https://chat.whatsapp.com/gamma_health",
+    description: "Hospital and clinical healthcare jobs in Canada.",
     memberCount: null,
     verificationStatus: "manually-reviewed",
     linkStatus: "dead",
@@ -64,38 +88,44 @@ describe("Filters, Search, and Sorting", () => {
   it("filters by platform", () => {
     const res = filterAndSortCommunities(sampleList, { platform: "telegram" });
     expect(res.length).toBe(1);
-    expect(res[0].id).toBe("alpha-ai");
+    expect(res[0].id).toBe("alpha-jobs");
   });
 
   it("filters by category", () => {
-    const res = filterAndSortCommunities(sampleList, { category: "crypto-web3" });
+    const res = filterAndSortCommunities(sampleList, { category: "remote-jobs" });
     expect(res.length).toBe(1);
-    expect(res[0].id).toBe("beta-crypto");
+    expect(res[0].id).toBe("beta-remote");
+  });
+
+  it("filters by country code", () => {
+    const res = filterAndSortCommunities(sampleList, { countryCode: "CA" });
+    expect(res.length).toBe(1);
+    expect(res[0].id).toBe("gamma-health");
   });
 
   it("performs tokenized text search", () => {
-    const res = searchCommunities(sampleList, "machine learning");
+    const res = searchCommunities(sampleList, "software engineering");
     expect(res.length).toBe(1);
-    expect(res[0].id).toBe("alpha-ai");
+    expect(res[0].id).toBe("alpha-jobs");
   });
 
   it("sorts by newest discovered date", () => {
     const sorted = sortCommunities(sampleList, "newest");
-    expect(sorted[0].id).toBe("gamma-forex");
-    expect(sorted[2].id).toBe("alpha-ai");
+    expect(sorted[0].id).toBe("gamma-health");
+    expect(sorted[2].id).toBe("alpha-jobs");
   });
 
   it("sorts by member count (sourced only)", () => {
     const sorted = sortCommunities(sampleList, "member-count");
-    expect(sorted[0].id).toBe("alpha-ai"); // 5000
-    expect(sorted[1].id).toBe("beta-crypto"); // 2000
-    expect(sorted[2].id).toBe("gamma-forex"); // null (-1)
+    expect(sorted[0].id).toBe("alpha-jobs"); // 5000
+    expect(sorted[1].id).toBe("beta-remote"); // 2000
+    expect(sorted[2].id).toBe("gamma-health"); // null (-1)
   });
 
   it("sorts alphabetically", () => {
     const sorted = sortCommunities(sampleList, "alphabetical");
-    expect(sorted[0].title).toBe("Alpha AI Builders");
-    expect(sorted[1].title).toBe("Beta Crypto Discussion");
-    expect(sorted[2].title).toBe("Gamma Forex Traders");
+    expect(sorted[0].title).toBe("Alpha Tech Jobs");
+    expect(sorted[1].title).toBe("Beta Remote Careers");
+    expect(sorted[2].title).toBe("Gamma Healthcare Jobs");
   });
 });

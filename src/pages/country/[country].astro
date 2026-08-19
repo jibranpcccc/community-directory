@@ -1,0 +1,86 @@
+---
+import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
+import FilterBar from "../../components/FilterBar.astro";
+import CommunityGrid from "../../components/CommunityGrid.astro";
+import SafetyNotice from "../../components/SafetyNotice.astro";
+import { ENABLED_COUNTRIES } from "../../config/countries";
+import { getCommunitiesByCountry } from "../../lib/communities";
+import { filterAndSortCommunities } from "../../lib/filters";
+import { generateCollectionPageSchema } from "../../lib/schema";
+import type { PlatformId, VerificationStatus, SortOption } from "../../types/community";
+
+export function getStaticPaths() {
+  return ENABLED_COUNTRIES.map((c) => ({
+    params: { country: c.slug },
+    props: { countryConfig: c },
+  }));
+}
+
+const { country } = Astro.params;
+const { countryConfig } = Astro.props;
+
+const search = Astro.url.searchParams.get("search") || undefined;
+const category = Astro.url.searchParams.get("category") || undefined;
+const platform = (Astro.url.searchParams.get("platform") as PlatformId) || undefined;
+const verificationStatus = (Astro.url.searchParams.get("verificationStatus") as VerificationStatus) || undefined;
+const sort = (Astro.url.searchParams.get("sort") as SortOption) || "newest";
+
+const countryCommunities = getCommunitiesByCountry(countryConfig.code);
+const filtered = filterAndSortCommunities(
+  countryCommunities,
+  { search, category, platform, verificationStatus },
+  sort
+);
+
+const schema = generateCollectionPageSchema(
+  `${countryConfig.name} Job Alert Groups`,
+  `Discover active and verified job alert communities, hiring channels, and career groups in ${countryConfig.name} across WhatsApp, Telegram, and Discord.`,
+  `/country/${countryConfig.slug}`,
+  filtered
+);
+
+// If 0 listings exist, enforce noindex
+const noindex = filtered.length === 0;
+---
+
+<DirectoryLayout
+  heading={`${countryConfig.flag} ${countryConfig.name} Job Alert Groups`}
+  subheading={`Discover active and verified job alert communities, hiring channels, and career groups in ${countryConfig.name} across WhatsApp, Telegram, and Discord.`}
+  breadcrumbs={[
+    { name: "All Jobs", item: "/jobs" },
+    { name: countryConfig.name, item: `/country/${countryConfig.slug}` },
+  ]}
+  canonicalPath={`/country/${countryConfig.slug}`}
+  noindex={noindex}
+  jsonLd={schema}
+>
+  <!-- Top Country Info Badge -->
+  <div class="mb-6 flex flex-wrap items-center gap-2 text-xs font-bold text-slate-700">
+    <span class="rounded-lg border-2 border-black bg-[#FEF08A] px-3 py-1 text-black shadow-[2px_2px_0px_0px_#000]">
+      Target Market: {countryConfig.name} ({countryConfig.code})
+    </span>
+    {countryConfig.cities.length > 0 && (
+      <span class="rounded-lg border-2 border-black bg-white px-3 py-1 text-black shadow-[2px_2px_0px_0px_#000]">
+        Major Metros: {countryConfig.cities.slice(0, 5).join(", ")}
+      </span>
+    )}
+  </div>
+
+  <!-- Filter Bar -->
+  <FilterBar
+    currentFilters={{ search, category, platform, verificationStatus, countryCode: countryConfig.code }}
+    currentSort={sort}
+    totalCount={filtered.length}
+  />
+
+  <!-- Interactive Grid Container -->
+  <div id="communities-results-container" class="space-y-8">
+    <CommunityGrid
+      communities={filtered}
+      emptyTitle={`No ${countryConfig.name} job groups found`}
+      emptyMessage={`We are currently discovering and validating active job alert groups for ${countryConfig.name}. Check back soon or submit a group!`}
+    />
+
+    <SafetyNotice type="job-warning" />
+  </div>
+</DirectoryLayout>

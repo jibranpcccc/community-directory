@@ -1,0 +1,73 @@
+---
+import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
+import FilterBar from "../../components/FilterBar.astro";
+import CommunityGrid from "../../components/CommunityGrid.astro";
+import SafetyNotice from "../../components/SafetyNotice.astro";
+import { JOB_TYPES } from "../../config/jobTypes";
+import { getCommunitiesByJobType } from "../../lib/communities";
+import { filterAndSortCommunities } from "../../lib/filters";
+import { generateCollectionPageSchema } from "../../lib/schema";
+import type { PlatformId, VerificationStatus, SortOption, CountryCode } from "../../types/community";
+
+export function getStaticPaths() {
+  return JOB_TYPES.map((jt) => ({
+    params: { type: jt.slug },
+    props: { jobTypeConfig: jt },
+  }));
+}
+
+const { type } = Astro.params;
+const { jobTypeConfig } = Astro.props;
+
+const search = Astro.url.searchParams.get("search") || undefined;
+const countryCode = (Astro.url.searchParams.get("countryCode") as CountryCode) || undefined;
+const platform = (Astro.url.searchParams.get("platform") as PlatformId) || undefined;
+const verificationStatus = (Astro.url.searchParams.get("verificationStatus") as VerificationStatus) || undefined;
+const sort = (Astro.url.searchParams.get("sort") as SortOption) || "newest";
+
+const jobCommunities = getCommunitiesByJobType(jobTypeConfig.slug);
+const filtered = filterAndSortCommunities(
+  jobCommunities,
+  { search, countryCode, platform, verificationStatus },
+  sort
+);
+
+const schema = generateCollectionPageSchema(
+  `${jobTypeConfig.name} Communities & Alert Channels`,
+  jobTypeConfig.description,
+  `/job-type/${jobTypeConfig.slug}`,
+  filtered
+);
+
+const noindex = filtered.length === 0;
+---
+
+<DirectoryLayout
+  heading={`${jobTypeConfig.name} Alert Groups`}
+  subheading={jobTypeConfig.description}
+  breadcrumbs={[
+    { name: "All Jobs", item: "/jobs" },
+    { name: jobTypeConfig.name, item: `/job-type/${jobTypeConfig.slug}` },
+  ]}
+  canonicalPath={`/job-type/${jobTypeConfig.slug}`}
+  noindex={noindex}
+  jsonLd={schema}
+>
+  <!-- Filter Bar -->
+  <FilterBar
+    currentFilters={{ search, countryCode, platform, verificationStatus }}
+    currentSort={sort}
+    totalCount={filtered.length}
+  />
+
+  <!-- Interactive Grid Container -->
+  <div id="communities-results-container" class="space-y-8">
+    <CommunityGrid
+      communities={filtered}
+      emptyTitle={`No ${jobTypeConfig.name} groups found`}
+      emptyMessage={`We are currently discovering and validating active ${jobTypeConfig.name} alert channels. Check back soon or submit a group!`}
+    />
+
+    <SafetyNotice type="job-warning" />
+  </div>
+</DirectoryLayout>

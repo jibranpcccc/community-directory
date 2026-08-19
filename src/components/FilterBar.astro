@@ -1,5 +1,6 @@
 ---
 import { categories } from "../config/categories";
+import { ENABLED_COUNTRIES } from "../config/countries";
 import { platforms } from "../config/platforms";
 import type { FilterOptions, SortOption } from "../types/community";
 
@@ -23,7 +24,7 @@ const activePlatforms = platforms.filter((p) => p.isConfigured);
     <!-- Top Row: Search Input -->
     <div class="relative">
       <label for="filter-search-input" class="sr-only">
-        Filter communities by keyword
+        Filter job communities by keyword
       </label>
       <svg
         class="absolute left-3.5 top-3.5 h-4 w-4 text-black pointer-events-none"
@@ -44,25 +45,44 @@ const activePlatforms = platforms.filter((p) => p.isConfigured);
         name="search"
         id="filter-search-input"
         value={currentFilters.search || ""}
-        placeholder="Filter by keyword, topic, language, or title..."
-        aria-label="Filter communities by keyword, topic, language, or title"
+        placeholder="Filter by job title, location, industry, or keyword..."
+        aria-label="Filter job communities by keyword"
         class="w-full rounded-xl border-2 border-black py-2.5 pl-10 pr-4 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
       />
     </div>
 
     <!-- Filter Dropdowns Grid -->
     <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-      <!-- Category -->
+      <!-- Target Country -->
+      <div>
+        <label for="filter-country" class="block text-xs font-black uppercase tracking-wider text-black mb-1">
+          Country
+        </label>
+        <select
+          name="countryCode"
+          id="filter-country"
+          class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] py-2 px-3 text-xs font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
+        >
+          <option value="">All Countries</option>
+          {ENABLED_COUNTRIES.map((c) => (
+            <option value={c.code} selected={currentFilters.countryCode === c.code}>
+              {c.flag} {c.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <!-- Job Category -->
       <div>
         <label for="filter-category" class="block text-xs font-black uppercase tracking-wider text-black mb-1">
-          Category
+          Job Category
         </label>
         <select
           name="category"
           id="filter-category"
           class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] py-2 px-3 text-xs font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
         >
-          <option value="">All Categories</option>
+          <option value="">All Job Categories</option>
           {categories.map((c) => (
             <option value={c.slug} selected={currentFilters.category === c.slug}>
               {c.name}
@@ -90,32 +110,6 @@ const activePlatforms = platforms.filter((p) => p.isConfigured);
         </select>
       </div>
 
-      <!-- Verification Tier -->
-      <div>
-        <label for="filter-verification" class="block text-xs font-black uppercase tracking-wider text-black mb-1">
-          Verification Tier
-        </label>
-        <select
-          name="verificationStatus"
-          id="filter-verification"
-          class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] py-2 px-3 text-xs font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
-        >
-          <option value="">Any Verification</option>
-          <option value="source-confirmed" selected={currentFilters.verificationStatus === "source-confirmed"}>
-            Source Confirmed
-          </option>
-          <option value="manually-reviewed" selected={currentFilters.verificationStatus === "manually-reviewed"}>
-            Manually Reviewed
-          </option>
-          <option value="owner-confirmed" selected={currentFilters.verificationStatus === "owner-confirmed"}>
-            Owner Confirmed
-          </option>
-          <option value="unverified" selected={currentFilters.verificationStatus === "unverified"}>
-            Unverified
-          </option>
-        </select>
-      </div>
-
       <!-- Sort -->
       <div>
         <label for="filter-sort" class="block text-xs font-black uppercase tracking-wider text-black mb-1">
@@ -128,7 +122,7 @@ const activePlatforms = platforms.filter((p) => p.isConfigured);
         >
           <option value="newest" selected={currentSort === "newest"}>Newest Added</option>
           <option value="recently-checked" selected={currentSort === "recently-checked"}>Recently Checked</option>
-          <option value="alphabetical" selected={currentSort === "alphabetical"}>Alphabetical (Aâ€“Z)</option>
+          <option value="alphabetical" selected={currentSort === "alphabetical"}>Alphabetical (A–Z)</option>
           <option value="member-count" selected={currentSort === "member-count"}>Member Count (Sourced)</option>
         </select>
       </div>
@@ -137,12 +131,12 @@ const activePlatforms = platforms.filter((p) => p.isConfigured);
     <!-- Active Filters & Reset Bar -->
     <div class="flex flex-wrap items-center justify-between gap-3 pt-3.5 border-t-2 border-black/10 text-xs font-bold text-black">
       <div>
-        Showing <strong class="font-black underline">{totalCount}</strong> matching listings
+        Showing <strong class="font-black underline">{totalCount}</strong> matching job listings
       </div>
 
       <div class="flex items-center gap-3">
         <a
-          href="/communities"
+          href="/jobs"
           class="text-xs font-black text-black hover:underline"
         >
           Reset filters

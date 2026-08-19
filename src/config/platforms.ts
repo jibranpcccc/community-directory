@@ -91,6 +91,8 @@ export function getPlatformById(id: string): PlatformConfig | undefined {
   return platforms.find((p) => p.id === id);
 }
 
+export const getPlatformConfig = getPlatformById;
+
 export function getActivePlatforms(): PlatformConfig[] {
   return platforms.filter((p) => p.isConfigured);
 }

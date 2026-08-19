@@ -5,38 +5,64 @@ import CategoryBadge from "./CategoryBadge.astro";
 import StatusBadge from "./StatusBadge.astro";
 import VerificationBadge from "./VerificationBadge.astro";
 import { formatDate } from "../lib/dates";
+import { getCountryByCode } from "../config/countries";
 
 interface Props {
   community: Community;
 }
 
 const { community } = Astro.props;
+const country = getCountryByCode(community.countryCode);
 ---
 
-<article
-  class="neo-card flex flex-col justify-between p-5"
->
+<article class="neo-card flex flex-col justify-between p-5">
   <div>
     <!-- Badges Row -->
     <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5">
-      <div class="flex items-center gap-1.5">
+      <div class="flex flex-wrap items-center gap-1.5">
         <PlatformBadge platform={community.platform} size="sm" showLink={true} />
+        {country && (
+          <a
+            href={`/country/${country.slug}`}
+            class="rounded-md border border-black bg-[#BAE6FD] px-2 py-0.5 text-[11px] font-black text-black shadow-[1px_1px_0px_0px_#000] hover:bg-[#7DD3FC]"
+          >
+            {country.flag} {country.shortName}
+          </a>
+        )}
         <CategoryBadge category={community.category} size="sm" showLink={true} />
       </div>
       <StatusBadge status={community.linkStatus} size="sm" />
     </div>
 
     <!-- Title & Link -->
-    <h3 class="text-lg font-black text-black hover:text-[#059669] transition-colors mb-2">
+    <h3 class="text-lg font-black text-black hover:text-[#059669] transition-colors mb-1.5">
       <a href={`/group/${community.slug}`} class="focus:outline-none">
         {community.title}
       </a>
     </h3>
 
-    <!-- Description -->
-    <p class="text-xs leading-relaxed text-slate-700 font-medium line-clamp-2 mb-4">
-      {community.description || `A public ${community.platform} community catalogued under ${community.category}.`}
-    </p>
+    <!-- Location & Arrangement Info -->
+    {(community.city || (community.workArrangement && community.workArrangement !== "unknown")) && (
+      <div class="flex flex-wrap items-center gap-2 text-xs font-bold text-slate-700 mb-2.5">
+        {community.city && (
+          <span class="inline-flex items-center gap-1 text-slate-800">
+            ?? {community.city}
+          </span>
+        )}
+        {community.workArrangement && community.workArrangement !== "unknown" && (
+          <span class="rounded bg-[#FEF08A] px-1.5 py-0.2 border border-black text-[10px] font-black uppercase">
+            {community.workArrangement}
+          </span>
+        )}
+      </div>
+    )}
+
+    <!-- Description (Zero AI Filler) -->
+    {community.description && (
+      <p class="text-xs leading-relaxed text-slate-700 font-medium line-clamp-2 mb-3">
+        {community.description}
+      </p>
+    )}
 
     <!-- Tags -->
     {community.tags && community.tags.length > 0 && (
@@ -70,7 +96,7 @@ const { community } = Astro.props;
     <!-- Sourced Member Count (Only shown if genuinely verified from source) -->
     {typeof community.memberCount === "number" && (
       <div class="text-xs text-black font-bold mb-3">
-        ⚡ <strong>{community.memberCount.toLocaleString()}</strong> verified members
+        ? <strong>{community.memberCount.toLocaleString()}</strong> verified members
       </div>
     )}
 
@@ -78,7 +104,7 @@ const { community } = Astro.props;
     <div class="grid grid-cols-2 gap-2.5">
       <a
         href={`/group/${community.slug}`}
-        class="neo-button bg-white hover:bg-slate-100 text-black px-3 py-2 text-xs"
+        class="neo-button bg-white hover:bg-slate-100 text-black px-3 py-2 text-xs font-black"
       >
         View Details
       </a>
@@ -86,10 +112,10 @@ const { community } = Astro.props;
         href={community.inviteUrl}
         target="_blank"
         rel="nofollow noopener noreferrer"
-        class="neo-button bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black px-3 py-2 text-xs"
+        class="neo-button bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black px-3 py-2 text-xs font-black"
         aria-label={`Join ${community.title} on ${community.platform} (opens in a new tab)`}
       >
-        <span>Join Now</span>
+        <span>Join Alerts</span>
         <svg class="h-3.5 w-3.5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
         </svg>

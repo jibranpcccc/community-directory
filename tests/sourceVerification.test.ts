@@ -136,16 +136,18 @@ describe("Source Page Verification Engine", () => {
 
 describe("Classifier Zero-Fabrication Defaults", () => {
   it("defaults unknown metadata fields to null and unknown without guessing", async () => {
-    const { fallbackHeuristicClassification } = await import("../scripts/classify/classifyCommunity");
+    const { fallbackHeuristicJobClassification } = await import("../scripts/classify/classifyCommunity");
 
-    const result = fallbackHeuristicClassification({
+    const result = fallbackHeuristicJobClassification({
       inviteUrl: "https://discord.gg/custom-code",
       platform: "discord",
-      suggestedCategory: "ai-tech",
+      suggestedCategory: "tech-jobs",
     });
 
     expect(result.language).toBeNull();
     expect(result.country).toBeNull();
+    expect(result.countryCode).toBeNull();
+    expect(result.city).toBeNull();
     expect(result.accessType).toBe("unknown");
     expect(result.communityType).toBe("unknown");
     expect(result.description).toBeNull();

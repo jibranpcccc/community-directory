@@ -2,20 +2,21 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import { categories } from "../config/categories";
+import { ENABLED_COUNTRIES } from "../config/countries";
 import { platforms } from "../config/platforms";
 import { generateBreadcrumbSchema } from "../lib/schema";
 
 const breadcrumbs = [
-  { name: "Home", item: "/" },
-  { name: "Submit Community", item: "/submit" },
+  { name: "All Jobs", item: "/jobs" },
+  { name: "Submit Job Community", item: "/submit" },
 ];
 
 const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
 ---
 
 <BaseLayout
-  title="Submit a Community"
-  description="Submit a public Telegram channel, Discord server, or WhatsApp group to be catalogued in the directory."
+  title="Submit a Job Alert Group"
+  description="Submit a public Telegram job channel, Discord career server, or WhatsApp job group to be catalogued in the directory."
   canonicalPath="/submit"
   jsonLd={breadcrumbSchema}
 >
@@ -24,30 +25,30 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
 
     <div class="mb-8 p-6 sm:p-8 rounded-3xl border-[3px] border-black bg-[#FEF08A] shadow-[5px_5px_0px_0px_#000]">
       <div class="inline-block bg-white px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
-        COMMUNITY SUBMISSIONS
+        JOB COMMUNITY SUBMISSIONS
       </div>
       <h1 class="text-3xl sm:text-4xl font-black text-black tracking-tight">
-        Submit a Community
+        Submit a Job Alert Group
       </h1>
       <p class="mt-2 text-sm font-bold text-black/80 leading-relaxed">
-        Suggest a publicly discoverable online community. Every submission is reviewed to ensure link validity, correct categorization, and adherence to safety guidelines.
+        Suggest a publicly discoverable job alert community. Every submission is reviewed to ensure link validity, career focus, and complete absence of job scams or fee requirements.
       </p>
     </div>
 
     <!-- Submission Guidelines Box -->
     <div class="mb-8 neo-card-mint p-6 text-xs text-black font-bold space-y-2">
-      <strong class="font-black text-black block text-sm uppercase tracking-wide">📋 Submission Policy & Review Process</strong>
+      <strong class="font-black text-black block text-sm uppercase tracking-wide">?? Submission Policy & Review Criteria</strong>
       <ul class="list-disc pl-4 space-y-1.5 text-black">
-        <li><strong>Public Communities Only:</strong> Do not submit private groups or password-protected resources.</li>
-        <li><strong>No Guaranteed Listing:</strong> Submission does not guarantee inclusion in the directory.</li>
-        <li><strong>Zero Tolerance for Scams:</strong> Fraudulent schemes, malware, pirated accounts, or misleading claims will be permanently rejected.</li>
-        <li><strong>Private Contact Information:</strong> Any admin email provided is kept strictly confidential and never displayed on public pages.</li>
+        <li><strong>Premium English-Speaking Markets:</strong> Priority focus on the United States, United Kingdom, Canada, and Australia.</li>
+        <li><strong>Zero Tolerance for Job Scams:</strong> Task scams, upfront fee requests, crypto/USDT deposits, and fake check schemes are permanently banned.</li>
+        <li><strong>Public Communities Only:</strong> Do not submit private paid masterminds or password-protected resources.</li>
+        <li><strong>Confidential Admin Contact:</strong> Any admin email provided is kept strictly private and never exposed publicly.</li>
       </ul>
     </div>
 
     <!-- Netlify Form -->
     <form
-      name="community-submission"
+      name="job-community-submission"
       method="POST"
       action="/submit-success"
       data-netlify="true"
@@ -55,19 +56,19 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
       class="rounded-3xl border-[3px] border-black bg-white p-6 sm:p-8 shadow-[6px_6px_0px_0px_#000] space-y-6"
     >
       <!-- Hidden Netlify Form identification -->
-      <input type="hidden" name="form-name" value="community-submission" />
+      <input type="hidden" name="form-name" value="job-community-submission" />
 
       <!-- Honeypot Field for anti-bot protection -->
       <p class="hidden">
         <label>
-          Don’t fill this out if you're human: <input name="bot-field" />
+          Don�t fill this out if you're human: <input name="bot-field" />
         </label>
       </p>
 
       <!-- Community Title -->
       <div>
         <label for="title" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Community Name <span class="text-rose-500">*</span>
+          Group / Channel Name <span class="text-rose-500">*</span>
         </label>
         <input
           type="text"
@@ -75,13 +76,32 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
           id="title"
           required
           maxlength="100"
-          placeholder="e.g., Python Developers Global"
+          placeholder="e.g., London Tech Jobs & Hiring"
           class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         />
       </div>
 
-      <!-- Platform & Category Row -->
+      <!-- Country & Platform Row -->
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <!-- Target Country -->
+        <div>
+          <label for="countryCode" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
+            Target Country <span class="text-rose-500">*</span>
+          </label>
+          <select
+            name="countryCode"
+            id="countryCode"
+            required
+            class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] px-4 py-2.5 text-sm font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
+          >
+            <option value="">Select Country...</option>
+            {ENABLED_COUNTRIES.map((c) => (
+              <option value={c.code}>{c.flag} {c.name}</option>
+            ))}
+            <option value="GLOBAL">?? Global Remote</option>
+          </select>
+        </div>
+
         <!-- Platform -->
         <div>
           <label for="platform" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
@@ -99,11 +119,14 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
             ))}
           </select>
         </div>
+      </div>
 
+      <!-- Category & Work Arrangement Row -->
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <!-- Category -->
         <div>
           <label for="category" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-            Category <span class="text-rose-500">*</span>
+            Job Category <span class="text-rose-500">*</span>
           </label>
           <select
             name="category"
@@ -115,6 +138,23 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
             {categories.map((c) => (
               <option value={c.slug}>{c.name}</option>
             ))}
+          </select>
+        </div>
+
+        <!-- Work Arrangement -->
+        <div>
+          <label for="workArrangement" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
+            Work Arrangement
+          </label>
+          <select
+            name="workArrangement"
+            id="workArrangement"
+            class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] px-4 py-2.5 text-sm font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
+          >
+            <option value="unknown">Not Specified / Mixed</option>
+            <option value="remote">Remote</option>
+            <option value="hybrid">Hybrid</option>
+            <option value="onsite">On-Site</option>
           </select>
         </div>
       </div>
@@ -129,12 +169,9 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
           name="inviteUrl"
           id="inviteUrl"
           required
-          placeholder="https://t.me/example or https://discord.gg/example"
+          placeholder="https://t.me/example, https://discord.gg/example, or https://chat.whatsapp.com/..."
           class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         />
-        <p class="mt-1.5 text-xs font-bold text-slate-600">
-          Must be a direct, publicly accessible invite link (e.g. t.me, discord.gg, chat.whatsapp.com).
-        </p>
       </div>
 
       <!-- Description -->
@@ -148,38 +185,9 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
           rows="3"
           required
           maxlength="500"
-          placeholder="Briefly state what the community discusses or builds. Please avoid promotional hype, earnings claims, or spam."
+          placeholder="Briefly describe what types of jobs are posted (e.g., UK nursing vacancies, US remote frontend engineering roles). Avoid hype."
           class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         ></textarea>
-      </div>
-
-      <!-- Tags & Language Row -->
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <div>
-          <label for="tags" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-            Tags / Keywords (comma-separated)
-          </label>
-          <input
-            type="text"
-            name="tags"
-            id="tags"
-            placeholder="e.g. python, automation, machine-learning"
-            class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
-          />
-        </div>
-
-        <div>
-          <label for="language" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-            Primary Language
-          </label>
-          <input
-            type="text"
-            name="language"
-            id="language"
-            placeholder="e.g. English, Spanish, Global"
-            class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
-          />
-        </div>
       </div>
 
       <!-- Admin Contact (Private) -->
@@ -195,7 +203,7 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
           class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         />
         <p class="mt-1.5 text-xs font-bold text-slate-600">
-          Used solely for listing verification questions. Strictly confidential and never published.
+          Used solely for listing moderation. Never published.
         </p>
       </div>
 
@@ -209,7 +217,7 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
             class="mt-1 h-5 w-5 rounded border-2 border-black text-emerald-600 focus:ring-0"
           />
           <span class="text-xs font-bold text-black leading-relaxed">
-            I confirm that this community is publicly discoverable and that I have the right to submit this information. I understand that fraudulent, abusive, or financial-scam listings will be discarded.
+            I confirm that this community is a legitimate job alert channel and does not require candidates to pay money, complete paid task schemes, or deposit crypto.
           </span>
         </label>
       </div>
@@ -220,7 +228,7 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
           type="submit"
           class="neo-button w-full bg-[#A7F3D0] hover:bg-[#6EE7B7] py-3.5 text-sm font-black text-black shadow-[4px_4px_0px_0px_#000]"
         >
-          Submit Community for Review →
+          Submit Job Community for Review ?
         </button>
       </div>
     </form>

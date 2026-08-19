@@ -1,0 +1,178 @@
+[
+  {
+    "id": "the-real-world-community-discord",
+    "slug": "the-real-world-community-discord",
+    "title": "The Real World Community",
+    "platform": "discord",
+    "category": "online-earning-remote-work",
+    "subcategory": "Entrepreneurship",
+    "tags": [
+      "entrepreneurship",
+      "networking",
+      "side-hustles",
+      "earning"
+    ],
+    "inviteUrl": "https://discord.gg/gfJvqeGSJE",
+    "description": "Networking server for money and business discussions.",
+    "language": null,
+    "country": null,
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "sourceUrls": [
+      "https://discord.gg/gfJvqeGSJE"
+    ],
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-18T15:22:50.951Z",
+    "lastCheckedAt": "2026-08-18T15:22:50.951Z",
+    "updatedAt": "2026-08-18T15:22:50.951Z",
+    "safetyFlags": [
+      "influencer-marketing",
+      "unverified-claims"
+    ],
+    "published": false,
+    "featured": false
+  },
+  {
+    "id": "mlrc-discord",
+    "slug": "mlrc-discord",
+    "title": "MLRC",
+    "platform": "discord",
+    "category": "ai-tech",
+    "subcategory": "Machine Learning",
+    "tags": [
+      "machine-learning",
+      "reproducibility",
+      "research",
+      "ai"
+    ],
+    "inviteUrl": "https://discord.gg/bDAK6WUCjU",
+    "description": "MLRC (Machine Learning Reproducibility Challenge) Discord server.",
+    "language": null,
+    "country": null,
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "sourceUrls": [
+      "https://reproml.org"
+    ],
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-18T15:22:50.951Z",
+    "lastCheckedAt": "2026-08-18T15:22:50.951Z",
+    "updatedAt": "2026-08-18T15:22:50.951Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false
+  },
+  {
+    "id": "routerbase-discord",
+    "slug": "routerbase-discord",
+    "title": "RouterBase",
+    "platform": "discord",
+    "category": "ai-tech",
+    "subcategory": "Coding",
+    "tags": [
+      "ai",
+      "api",
+      "llms",
+      "routerbase"
+    ],
+    "inviteUrl": "https://discord.gg/fpRxHDrWTV",
+    "description": "Community & support for RouterBase AI API routing.",
+    "language": null,
+    "country": null,
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "sourceUrls": [
+      "https://discord.gg/fpRxHDrWTV"
+    ],
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-18T15:22:50.951Z",
+    "lastCheckedAt": "2026-08-18T15:22:50.951Z",
+    "updatedAt": "2026-08-18T15:22:50.951Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false
+  },
+  {
+    "id": "the-ai-community-discord",
+    "slug": "the-ai-community-discord",
+    "title": "The AI Community",
+    "platform": "discord",
+    "category": "ai-tech",
+    "subcategory": "Artificial Intelligence",
+    "tags": [
+      "ai",
+      "community",
+      "tech"
+    ],
+    "inviteUrl": "https://discord.gg/tKxPzDMrbZ",
+    "description": "Discord server discussing artificial intelligence and emerging tech.",
+    "language": null,
+    "country": null,
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "sourceUrls": [
+      "https://discord.gg/tKxPzDMrbZ"
+    ],
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-18T15:22:50.951Z",
+    "lastCheckedAt": "2026-08-18T15:22:50.951Z",
+    "updatedAt": "2026-08-18T15:22:50.951Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false
+  },
+  {
+    "id": "prompthero-discord",
+    "slug": "prompthero-discord",
+    "title": "PromptHero",
+    "platform": "discord",
+    "category": "ai-tech",
+    "subcategory": "Prompt Engineering",
+    "tags": [
+      "discord",
+      "aitech"
+    ],
+    "inviteUrl": "https://discord.gg/TwjYmVUVFv",
+    "description": "Official Server for prompthero.com, a space to share AI art, prompts, ideas, resources, & prompt engineering techniques",
+    "language": null,
+    "country": null,
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 11062,
+    "memberCountSource": "https://discord.gg/TwjYmVUVFv",
+    "memberCountCheckedAt": "2026-08-19T04:39:20.522Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "sourceUrls": [
+      "https://discord.gg/TwjYmVUVFv"
+    ],
+    "guildId": "1026222136790110259",
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-19T04:39:20.522Z",
+    "lastCheckedAt": "2026-08-19T04:39:20.522Z",
+    "updatedAt": "2026-08-19T04:39:20.522Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false
+  }
+]

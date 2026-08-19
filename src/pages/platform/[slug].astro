@@ -1,6 +1,7 @@
 ---
 import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
 import CommunityGrid from "../../components/CommunityGrid.astro";
+import SafetyNotice from "../../components/SafetyNotice.astro";
 import { platforms, type PlatformConfig } from "../../config/platforms";
 import { getCommunitiesByPlatform } from "../../lib/communities";
 import { generateCollectionPageSchema } from "../../lib/schema";
@@ -22,19 +23,19 @@ const { platform } = Astro.props;
 const communities = getCommunitiesByPlatform(platform.id);
 
 const schema = generateCollectionPageSchema(
-  `${platform.name} Communities & Groups`,
-  platform.description,
+  `${platform.name} Job Groups & Alert Channels`,
+  `Browse verified ${platform.name} job groups, employment channels, and career communities across the US, UK, Canada, and Australia.`,
   `/platform/${platform.id}`,
   communities
 );
 ---
 
 <DirectoryLayout
-  heading={`${platform.name} Communities`}
-  subheading={`Explore publicly discoverable ${platform.name} channels, groups, and servers catalogued across diverse topics.`}
+  heading={`${platform.name} Job Groups`}
+  subheading={`Explore publicly discoverable ${platform.name} job alert channels, hiring groups, and career servers.`}
   breadcrumbs={[
-    { name: "Platforms", item: "/#platforms" },
-    { name: platform.name, item: `/platform/${platform.id}` },
+    { name: "All Jobs", item: "/jobs" },
+    { name: `${platform.name} Jobs`, item: `/platform/${platform.id}` },
   ]}
   canonicalPath={`/platform/${platform.id}`}
   jsonLd={schema}
@@ -42,18 +43,22 @@ const schema = generateCollectionPageSchema(
 >
   <!-- Non-Affiliation Notice -->
   <div class="mb-6 neo-card p-4 bg-white text-xs font-bold text-black">
-    ℹ️ <strong>Platform Notice:</strong> This page indexes publicly discoverable {platform.name} invite links and channels. We are an independent directory not affiliated with or endorsed by {platform.name}.
+    ⚠️ <strong>Platform Notice:</strong> This directory catalogues publicly discoverable {platform.name} job alert links and channels. We are an independent directory not affiliated with or endorsed by {platform.name} or Meta.
   </div>
 
   <div class="flex items-center justify-between mb-4">
     <span class="text-xs font-bold text-black">
-      Showing <strong class="underline font-black">{communities.length}</strong> listed communities on {platform.name}
+      Showing <strong class="underline font-black">{communities.length}</strong> listed job groups on {platform.name}
     </span>
   </div>
 
-  <CommunityGrid
-    communities={communities}
-    emptyTitle={`No ${platform.name} communities found`}
-    emptyMessage={`We have not indexed any public ${platform.name} communities yet. Submit one today!`}
-  />
+  <div class="space-y-8">
+    <CommunityGrid
+      communities={communities}
+      emptyTitle={`No ${platform.name} job groups found`}
+      emptyMessage={`We have not indexed any public ${platform.name} job communities yet. Submit one today!`}
+    />
+
+    <SafetyNotice type="job-warning" />
+  </div>
 </DirectoryLayout>

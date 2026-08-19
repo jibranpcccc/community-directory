@@ -1,6 +1,6 @@
 ---
 interface Props {
-  type?: "general" | "financial" | "compact";
+  type?: "general" | "job-warning" | "compact";
   class?: string;
 }
 
@@ -8,7 +8,7 @@ const { type = "general", class: customClass = "" } = Astro.props;
 ---
 
 {
-  type === "financial" ? (
+  type === "job-warning" ? (
     <div
       class={`rounded-2xl border-2 border-black bg-[#FEF08A] p-4 text-xs font-bold leading-relaxed text-black shadow-[3px_3px_0px_0px_#000] ${customClass}`}
     >
@@ -28,9 +28,9 @@ const { type = "general", class: customClass = "" } = Astro.props;
         </svg>
         <div>
           <strong class="font-black text-black block mb-0.5 text-sm uppercase tracking-wide">
-            ⚠️ Financial Content & Risk Notice
+            ?? Job Seeker Safety Notice
           </strong>
-          Communities in this category discuss financial markets, trading, or web3. Directory inclusion does NOT constitute financial advice, investment recommendations, or verification of past performance claims. Never send funds or share private keys based solely on a directory listing.
+          Directory inclusion is not an endorsement of employers or job offers. Never pay money to get a job, never deposit crypto/USDT to unlock tasks, and independently verify employers before sharing sensitive personal information or documents.
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@ const { type = "general", class: customClass = "" } = Astro.props;
       class={`rounded-xl border-2 border-black bg-white px-3 py-2 text-xs font-bold text-black shadow-[2px_2px_0px_0px_#000] ${customClass}`}
     >
       <span>
-        🔒 <strong>Safety Note:</strong> Directory listings are publicly discovered. Inclusion does not imply endorsement. Verify administrators independently.
+        ?? <strong>Safety Note:</strong> Directory inclusion is not an endorsement of employers or job offers. Never pay money for employment.
       </span>
     </div>
   ) : (
@@ -62,9 +62,9 @@ const { type = "general", class: customClass = "" } = Astro.props;
         </svg>
         <div>
           <strong class="font-black text-black block mb-0.5 text-sm uppercase tracking-wide">
-            🛡️ Community Safety & Directory Integrity
+            ??? Job Community Safety & Verification Notice
           </strong>
-          This directory catalogues publicly discoverable communities. We do not operate or moderate external groups. Always exercise independent caution, avoid clicking unverified attachments, and never disclose sensitive credentials.
+          This directory catalogues publicly discoverable job alert channels and groups. A working community link does NOT mean every job posting inside that community has been independently verified. Always research recruiters directly.
         </div>
       </div>
     </div>

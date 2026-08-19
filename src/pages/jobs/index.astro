@@ -1,0 +1,57 @@
+---
+import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
+import FilterBar from "../../components/FilterBar.astro";
+import CommunityGrid from "../../components/CommunityGrid.astro";
+import SafetyNotice from "../../components/SafetyNotice.astro";
+import { getPublishedCommunities } from "../../lib/communities";
+import { filterAndSortCommunities } from "../../lib/filters";
+import { generateCollectionPageSchema } from "../../lib/schema";
+import type { PlatformId, VerificationStatus, SortOption, CountryCode } from "../../types/community";
+
+const search = Astro.url.searchParams.get("search") || undefined;
+const countryCode = (Astro.url.searchParams.get("countryCode") as CountryCode) || undefined;
+const category = Astro.url.searchParams.get("category") || undefined;
+const platform = (Astro.url.searchParams.get("platform") as PlatformId) || undefined;
+const verificationStatus = (Astro.url.searchParams.get("verificationStatus") as VerificationStatus) || undefined;
+const sort = (Astro.url.searchParams.get("sort") as SortOption) || "newest";
+
+const allCommunities = getPublishedCommunities();
+const filtered = filterAndSortCommunities(
+  allCommunities,
+  { search, countryCode, category, platform, verificationStatus },
+  sort
+);
+
+const schema = generateCollectionPageSchema(
+  "All Verified Job Alert Groups",
+  "Browse publicly discoverable job alert communities, hiring channels, and career servers for the US, UK, Canada, and Australia.",
+  "/jobs",
+  filtered
+);
+---
+
+<DirectoryLayout
+  heading="Explore All Job Alert Groups"
+  subheading="Discover active and verified job alert communities, hiring channels, and career servers across WhatsApp, Telegram, and Discord."
+  breadcrumbs={[{ name: "All Jobs", item: "/jobs" }]}
+  canonicalPath="/jobs"
+  jsonLd={schema}
+>
+  <!-- Filter Bar -->
+  <FilterBar
+    currentFilters={{ search, countryCode, category, platform, verificationStatus }}
+    currentSort={sort}
+    totalCount={filtered.length}
+  />
+
+  <!-- Interactive Grid Container -->
+  <div id="communities-results-container" class="space-y-8">
+    <CommunityGrid
+      communities={filtered}
+      emptyTitle="No job groups match your filter criteria"
+      emptyMessage="Try resetting or adjusting your search filters, or be the first to submit a public job group."
+    />
+
+    <SafetyNotice type="job-warning" />
+  </div>
+</DirectoryLayout>

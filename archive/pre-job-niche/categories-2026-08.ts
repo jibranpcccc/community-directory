@@ -1,0 +1,168 @@
+import type { CategoryConfig } from "../types/community";
+
+export const categories: CategoryConfig[] = [
+  {
+    slug: "ai-tech",
+    name: "AI & Tech",
+    description:
+      "Explore developer communities, AI tool builders, prompt engineering groups, coding hubs, and machine learning discussions.",
+    icon: "Cpu",
+    subcategories: [
+      "Artificial Intelligence",
+      "ChatGPT",
+      "AI Video",
+      "AI Images",
+      "AI Agents",
+      "Automation",
+      "Prompt Engineering",
+      "Coding",
+      "Open Source AI",
+      "Machine Learning",
+      "Local LLMs",
+    ],
+    tags: [
+      "ai",
+      "chatgpt",
+      "ai-video",
+      "ai-images",
+      "ai-agents",
+      "automation",
+      "prompt-engineering",
+      "coding",
+      "open-source-ai",
+      "machine-learning",
+      "local-llms",
+      "python",
+      "javascript",
+      "web-dev",
+    ],
+    financialDisclaimerRequired: false,
+  },
+  {
+    slug: "crypto-web3",
+    name: "Crypto & Web3",
+    description:
+      "Public discussion hubs for blockchain technology, smart contract development, DeFi ecosystems, web3 projects, and market conversations.",
+    icon: "Coins",
+    subcategories: [
+      "Crypto Discussion",
+      "Blockchain",
+      "DeFi",
+      "Airdrops",
+      "Web3 Development",
+      "Memecoins",
+      "Market Discussion",
+    ],
+    tags: [
+      "crypto",
+      "blockchain",
+      "defi",
+      "airdrops",
+      "web3",
+      "solana",
+      "ethereum",
+      "bitcoin",
+      "smart-contracts",
+      "nft",
+      "memecoins",
+    ],
+    financialDisclaimerRequired: true,
+  },
+  {
+    slug: "forex-stocks",
+    name: "Forex & Stocks",
+    description:
+      "Educational communities and market analysis hubs for foreign exchange, stock market dynamics, commodities, indices, and trading education.",
+    icon: "TrendingUp",
+    subcategories: [
+      "Forex",
+      "Stocks",
+      "Gold",
+      "XAUUSD",
+      "Futures",
+      "Options",
+      "Indices",
+      "Trading Education",
+      "Market Analysis",
+    ],
+    tags: [
+      "forex",
+      "stocks",
+      "gold",
+      "xauusd",
+      "futures",
+      "options",
+      "indices",
+      "trading-education",
+      "market-analysis",
+      "day-trading",
+      "investing",
+    ],
+    financialDisclaimerRequired: true,
+  },
+  {
+    slug: "online-earning-remote-work",
+    name: "Online Earning & Remote Work",
+    description:
+      "Groups sharing remote job opportunities, freelance gigs, digital marketing strategies, side hustle ideas, and entrepreneurship discussions.",
+    icon: "Briefcase",
+    subcategories: [
+      "Freelancing",
+      "Remote Jobs",
+      "Side Hustles",
+      "Entrepreneurship",
+      "Digital Marketing",
+      "E-commerce",
+      "Creator Economy",
+    ],
+    tags: [
+      "freelancing",
+      "remote-jobs",
+      "side-hustles",
+      "entrepreneurship",
+      "digital-marketing",
+      "e-commerce",
+      "creator-economy",
+      "copywriting",
+      "seo",
+      "growth",
+    ],
+    financialDisclaimerRequired: false,
+  },
+  {
+    slug: "deals-coupons",
+    name: "Deals & Coupons",
+    description:
+      "Curated groups and channels tracking software discounts, SaaS lifetime deals, educational freebies, coupons, and shopping offers.",
+    icon: "Tag",
+    subcategories: [
+      "Software Deals",
+      "SaaS Deals",
+      "Freebies",
+      "Coupons",
+      "Shopping Deals",
+      "Courses",
+      "Digital Products",
+    ],
+    tags: [
+      "software-deals",
+      "saas-deals",
+      "freebies",
+      "coupons",
+      "shopping-deals",
+      "courses",
+      "digital-products",
+      "discounts",
+      "giveaways",
+    ],
+    financialDisclaimerRequired: false,
+  },
+];
+
+export function getCategoryBySlug(slug: string): CategoryConfig | undefined {
+  return categories.find((cat) => cat.slug === slug);
+}
+
+export function getAllCategorySlugs(): string[] {
+  return categories.map((cat) => cat.slug);
+}

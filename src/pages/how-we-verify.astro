@@ -6,28 +6,28 @@ import { generateFAQSchema } from "../lib/schema";
 const faqSchema = generateFAQSchema([
   {
     question: "What does the Unverified badge mean?",
-    answer: "The public invite link was discovered through automated search or indexing, but no direct confirmation has been performed with an official primary domain or community owner.",
+    answer: "The public invite link was discovered through automated search or indexing and validated as an active link, but no direct confirmation has been performed with an official primary domain or community owner.",
   },
   {
     question: "What does the Source Confirmed badge mean?",
-    answer: "The invite link was linked directly from an official, authoritative website (e.g. project homepage, GitHub repository, official docs) confirming genuine community association.",
+    answer: "The invite link was parsed directly from an outbound link on an official, authoritative website (e.g. company career portal, university site, official project page) confirming genuine association.",
   },
   {
     question: "What does the Owner Confirmed badge mean?",
-    answer: "The community founder or recognized administrator submitted verifiable proof of ownership and controls the listing details.",
+    answer: "The community creator or recognized recruiter submitted verifiable proof of administration and controls the listing details.",
   },
   {
     question: "What does the Manually Reviewed badge mean?",
-    answer: "A human moderator independently inspected the link, title, categorization, and public activity to confirm basic legitimacy and absence of obvious spam.",
+    answer: "A human editor independently inspected the link, title, categorization, and public activity to confirm basic legitimacy and absence of obvious scam language.",
   },
 ]);
 ---
 
 <DirectoryLayout
-  heading="How We Verify Listings"
-  subheading="A transparent breakdown of our verification tiers and what each badge means."
+  heading="How We Verify Job Communities"
+  subheading="A transparent breakdown of our verification tiers and data standards for job alert groups."
   breadcrumbs={[
-    { name: "Home", item: "/" },
+    { name: "All Jobs", item: "/jobs" },
     { name: "How We Verify", item: "/how-we-verify" },
   ]}
   canonicalPath="/how-we-verify"
@@ -38,9 +38,22 @@ const faqSchema = generateFAQSchema([
       <div class="inline-block bg-[#FEF08A] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
         ZERO HALLUCINATION
       </div>
-      <h2 class="text-2xl font-black text-black tracking-tight mb-3">Our Core Verification Principle</h2>
+      <h2 class="text-2xl font-black text-black tracking-tight mb-3">Our Core Verification Standard</h2>
       <p class="font-bold text-slate-700">
-        Unlike many directories that generate fake "Verified" checkmarks to create an illusion of trust, our directory utilizes strictly defined verification states. We never use the word "Verified" without concrete evidence.
+        Unlike directories that invent fake "Verified" badges to create an illusion of safety, our directory strictly delineates between working link status and independent evidence confirmation.
+      </p>
+    </div>
+
+    <!-- Mandatory Verification Disclaimer (Section 63) -->
+    <div class="rounded-2xl border-[3px] border-black bg-[#FEF08A] p-6 shadow-[4px_4px_0px_0px_#000] text-black font-bold space-y-2">
+      <strong class="font-black text-black block text-base uppercase tracking-wide">
+        ?? Mandatory Job Verification Notice
+      </strong>
+      <p class="text-sm leading-relaxed">
+        A working community link does NOT mean every job posting inside that community has been independently verified.
+      </p>
+      <p class="text-xs text-slate-800 font-medium">
+        Public groups may contain third-party user messages or recruiters that have not been vetted by our directory. Always verify employers directly on their official company domain before applying or sharing personal information.
       </p>
     </div>
 
@@ -48,11 +61,11 @@ const faqSchema = generateFAQSchema([
       <!-- Unverified -->
       <div class="neo-card p-6 space-y-3 bg-white">
         <div class="flex items-center justify-between">
-          <h3 class="text-base font-black text-black">1. Unverified</h3>
+          <h3 class="text-base font-black text-black">1. Unverified (Active Link)</h3>
           <VerificationBadge status="unverified" />
         </div>
         <p class="text-xs font-bold text-slate-600">
-          The public invite link was discovered through automated search or indexing, but no direct confirmation has been performed with an official primary domain or community owner.
+          The public invite link was discovered through search indexing and confirmed active, but has not yet been corroborated by an external primary website.
         </p>
       </div>
 
@@ -63,7 +76,7 @@ const faqSchema = generateFAQSchema([
           <VerificationBadge status="source-confirmed" />
         </div>
         <p class="text-xs font-bold text-slate-800">
-          The invite link was linked directly from an official, authoritative website (e.g. project homepage, GitHub repository, official docs) confirming genuine community association.
+          The exact community URL was confirmed via an outbound link on an independent authoritative domain (e.g. university career site, company portal, project homepage).
         </p>
       </div>
 
@@ -74,7 +87,7 @@ const faqSchema = generateFAQSchema([
           <VerificationBadge status="owner-confirmed" />
         </div>
         <p class="text-xs font-bold text-slate-800">
-          The community founder or recognized administrator submitted verifiable proof of ownership and controls the listing details.
+          The group administrator or community founder submitted verifiable credentials confirming ownership and community focus.
         </p>
       </div>
 
@@ -85,17 +98,9 @@ const faqSchema = generateFAQSchema([
           <VerificationBadge status="manually-reviewed" />
         </div>
         <p class="text-xs font-bold text-slate-800">
-          A human moderator independently inspected the link, title, categorization, and public activity to confirm basic legitimacy and absence of obvious spam.
+          A human editor personally audited the community's public description, platform metadata, and geographic focus for quality and relevance.
         </p>
       </div>
-    </div>
-
-    <!-- Clear Scope Limitation -->
-    <div class="neo-card-yellow p-6 text-xs sm:text-sm text-black font-bold space-y-2">
-      <strong class="font-black text-black block text-sm uppercase tracking-wide">⚠️ Important Safety Limitation</strong>
-      <p>
-        Verification of identity or source is NOT a guarantee of ongoing security, safety, or financial returns. Group ownership can change, and malicious actors can compromise accounts. Users must always maintain personal vigilance.
-      </p>
     </div>
   </div>
 </DirectoryLayout>

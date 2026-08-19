@@ -1,4 +1,4 @@
-import type { Community, PlatformId, FilterOptions, SortOption } from "../types/community";
+import type { Community, PlatformId, FilterOptions, SortOption, CountryCode } from "../types/community";
 import groupsData from "../data/groups.json";
 import pendingData from "../data/pending-groups.json";
 
@@ -53,6 +53,46 @@ export function getCommunitiesByCategory(category: string): Community[] {
 }
 
 /**
+ * Returns communities matching a specific target country code.
+ */
+export function getCommunitiesByCountry(countryCode: CountryCode | string): Community[] {
+  const normalized = countryCode.toUpperCase();
+  return publishedCommunities.filter((c) => c.countryCode === normalized);
+}
+
+/**
+ * Returns communities matching a specific job type.
+ */
+export function getCommunitiesByJobType(jobType: string): Community[] {
+  const norm = jobType.toLowerCase().trim();
+  return publishedCommunities.filter(
+    (c) =>
+      c.category === norm ||
+      (c.jobTypes && c.jobTypes.some((jt) => jt.toLowerCase() === norm))
+  );
+}
+
+/**
+ * Returns communities matching a specific industry.
+ */
+export function getCommunitiesByIndustry(industry: string): Community[] {
+  const norm = industry.toLowerCase().trim();
+  return publishedCommunities.filter(
+    (c) => c.industries && c.industries.some((ind) => ind.toLowerCase() === norm)
+  );
+}
+
+/**
+ * Returns communities matching a specific city.
+ */
+export function getCommunitiesByCity(city: string): Community[] {
+  const norm = city.toLowerCase().trim();
+  return publishedCommunities.filter(
+    (c) => c.city && c.city.toLowerCase().trim() === norm
+  );
+}
+
+/**
  * Returns communities matching a specific platform ID.
  */
 export function getCommunitiesByPlatform(platform: PlatformId | string): Community[] {
@@ -71,10 +111,10 @@ export function getCommunitiesByTag(tag: string): Community[] {
 
 /**
  * Deterministically finds related communities based on:
- * 1. Category match
- * 2. Overlapping tags count
- * 3. Platform match
- * 4. Language match
+ * 1. Target country match
+ * 2. Category match
+ * 3. Overlapping tags count
+ * 4. Platform match
  * Excludes the current community and caps at limit.
  */
 export function getRelatedCommunities(
@@ -86,7 +126,12 @@ export function getRelatedCommunities(
   const scored = others.map((candidate) => {
     let score = 0;
 
-    // Category match (high relevance)
+    // Country match
+    if (candidate.countryCode && current.countryCode && candidate.countryCode === current.countryCode) {
+      score += 15;
+    }
+
+    // Category match
     if (candidate.category === current.category) {
       score += 10;
     }
@@ -111,11 +156,6 @@ export function getRelatedCommunities(
     // Platform match
     if (candidate.platform === current.platform) {
       score += 2;
-    }
-
-    // Language match
-    if (current.language && candidate.language === current.language) {
-      score += 1;
     }
 
     return { candidate, score };
@@ -164,7 +204,6 @@ export function getFeaturedCommunities(limit: number = 6): Community[] {
   if (featured.length >= limit) {
     return featured.slice(0, limit);
   }
-  // Fallback to recently added if fewer featured exist
   const remaining = getRecentlyAdded(limit - featured.length);
   const combined = [...featured, ...remaining.filter((r) => !featured.some((f) => f.id === r.id))];
   return combined.slice(0, limit);
@@ -198,6 +237,7 @@ export function getDatasetStats() {
   const pendingCount = pendingCommunities.length;
 
   const platformCounts: Record<string, number> = {};
+  const countryCounts: Record<string, number> = {};
   const categoryCounts: Record<string, number> = {};
   let activeLinks = 0;
   let unknownLinks = 0;
@@ -205,6 +245,9 @@ export function getDatasetStats() {
 
   for (const c of publishedCommunities) {
     platformCounts[c.platform] = (platformCounts[c.platform] || 0) + 1;
+    if (c.countryCode) {
+      countryCounts[c.countryCode] = (countryCounts[c.countryCode] || 0) + 1;
+    }
     categoryCounts[c.category] = (categoryCounts[c.category] || 0) + 1;
 
     if (c.linkStatus === "active") activeLinks++;
@@ -216,6 +259,7 @@ export function getDatasetStats() {
     totalPublished: publishedCount,
     totalPending: pendingCount,
     platforms: platformCounts,
+    countries: countryCounts,
     categories: categoryCounts,
     activeLinks,
     unknownLinks,

@@ -16,19 +16,52 @@ export function filterAndSortCommunities(
     result = searchCommunities(result, options.search);
   }
 
-  // 2. Category Filter
-  if (options.category) {
+  // 2. Country Code Filter
+  if (options.countryCode) {
     result = result.filter(
-      (c) => c.category.toLowerCase() === options.category?.toLowerCase()
+      (c) => c.countryCode === options.countryCode?.toUpperCase()
     );
   }
 
-  // 3. Platform Filter
+  // 3. Category Filter
+  if (options.category) {
+    const targetCat = options.category.toLowerCase();
+    result = result.filter((c) => c.category.toLowerCase() === targetCat);
+  }
+
+  if (options.jobType) {
+    const targetType = options.jobType.toLowerCase();
+    result = result.filter(
+      (c) =>
+        c.category.toLowerCase() === targetType ||
+        (c.jobTypes && c.jobTypes.some((jt) => jt.toLowerCase() === targetType))
+    );
+  }
+
+  // 4. Industry Filter
+  if (options.industry) {
+    const targetInd = options.industry.toLowerCase();
+    result = result.filter(
+      (c) => c.industries && c.industries.some((ind) => ind.toLowerCase() === targetInd)
+    );
+  }
+
+  // 5. Work Arrangement Filter
+  if (options.workArrangement) {
+    result = result.filter((c) => c.workArrangement === options.workArrangement);
+  }
+
+  // 6. Visa Sponsorship Filter
+  if (options.visaSponsorship) {
+    result = result.filter((c) => c.visaSponsorship === options.visaSponsorship);
+  }
+
+  // 7. Platform Filter
   if (options.platform) {
     result = result.filter((c) => c.platform === options.platform);
   }
 
-  // 4. Tag Filter
+  // 8. Tag Filter
   if (options.tag) {
     const targetTag = options.tag.toLowerCase().trim();
     result = result.filter((c) =>
@@ -36,34 +69,29 @@ export function filterAndSortCommunities(
     );
   }
 
-  // 5. Language Filter
+  // 9. Language Filter
   if (options.language) {
     result = result.filter(
       (c) => c.language?.toLowerCase() === options.language?.toLowerCase()
     );
   }
 
-  // 6. Access Type Filter
+  // 10. Access Type Filter
   if (options.accessType) {
     result = result.filter((c) => c.accessType === options.accessType);
   }
 
-  // 7. Verification Status Filter
+  // 11. Verification Status Filter
   if (options.verificationStatus) {
     result = result.filter((c) => c.verificationStatus === options.verificationStatus);
   }
 
-  // 8. Link Status Filter
+  // 12. Link Status Filter
   if (options.linkStatus) {
     result = result.filter((c) => c.linkStatus === options.linkStatus);
   }
 
-  // 9. Community Type Filter
-  if (options.communityType) {
-    result = result.filter((c) => c.communityType === options.communityType);
-  }
-
-  // 10. Featured
+  // 13. Featured
   if (options.featured !== undefined) {
     result = result.filter((c) => Boolean(c.featured) === options.featured);
   }

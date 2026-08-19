@@ -29,6 +29,27 @@ export const PlatformIdSchema = z.enum([
   "forum",
 ]);
 
+export const CountryCodeSchema = z.enum(["US", "GB", "CA", "AU", "NZ", "IE"]);
+
+export const WorkArrangementSchema = z.enum([
+  "remote",
+  "hybrid",
+  "onsite",
+  "mixed",
+  "unknown",
+]);
+
+export const ExperienceLevelSchema = z.enum([
+  "internship",
+  "entry-level",
+  "graduate",
+  "mid-level",
+  "senior",
+  "executive",
+]);
+
+export const VisaSponsorshipSchema = z.enum(["yes", "no", "mixed", "unknown"]);
+
 export const AccessTypeSchema = z.enum(["free", "paid", "mixed", "unknown"]);
 
 export const CommunityTypeSchema = z.enum([
@@ -51,11 +72,16 @@ export const DiscoveryMethodSchema = z.enum([
   "other",
 ]);
 
+// Prohibited non-job keywords (Build-time Niche Guard)
+const DISALLOWED_NICHE_REGEX =
+  /\b(crypto\s+signals|forex\s+signals|binance\s+pump|airdrop\s+hunters|online\s+casino|sports\s+betting|binary\s+options|free\s+nitro)\b/i;
+
 export const CommunitySchema = z.object({
   id: z.string().min(1, "ID is required"),
   slug: z.string().regex(/^[a-z0-9-]+$/, "Slug must be lowercase alphanumeric with hyphens"),
   title: z.string().min(1, "Title is required").max(120, "Title too long"),
   platform: PlatformIdSchema,
+  vertical: z.literal("jobs", { errorMap: () => ({ message: "Community must have vertical='jobs'" }) }),
   category: z.string().min(1, "Category is required"),
   subcategory: z.string().nullable().optional(),
   tags: z.array(z.string()),
@@ -63,6 +89,13 @@ export const CommunitySchema = z.object({
   description: z.string().nullable().optional(),
   language: z.string().nullable().optional(),
   country: z.string().nullable().optional(),
+  countryCode: CountryCodeSchema.nullable().optional().default(null),
+  city: z.string().nullable().optional().default(null),
+  jobTypes: z.array(z.string()).optional().default([]),
+  industries: z.array(z.string()).optional().default([]),
+  workArrangement: WorkArrangementSchema.optional().default("unknown"),
+  experienceLevels: z.array(ExperienceLevelSchema).optional().default([]),
+  visaSponsorship: VisaSponsorshipSchema.optional().default("unknown"),
   accessType: AccessTypeSchema.optional().default("unknown"),
   communityType: CommunityTypeSchema.optional().default("unknown"),
   memberCount: z.number().int().nonnegative().nullable().optional(),
@@ -79,7 +112,10 @@ export const CommunitySchema = z.object({
   guildId: z.string().nullable().optional(),
   published: z.boolean(),
   featured: z.boolean().optional(),
-});
+}).refine((data) => {
+  const fullText = `${data.title} ${data.description || ""} ${data.tags.join(" ")}`;
+  return !DISALLOWED_NICHE_REGEX.test(fullText);
+}, { message: "Community contains prohibited non-job niche terms (crypto/forex/casino/etc.)" });
 
 export type ValidatedCommunity = z.infer<typeof CommunitySchema>;
 
@@ -104,6 +140,15 @@ export function validateCommunitiesData(items: unknown[]): {
     }
 
     const comm = parseResult.data;
+
+    // Build-time Niche Guard
+    if (comm.vertical !== "jobs") {
+      errors.push(`Item #${i} (${comm.title}): Invalid vertical '${(comm as any).vertical}'. Must be 'jobs'.`);
+    }
+
+    if (DISALLOWED_NICHE_REGEX.test(comm.title) || DISALLOWED_NICHE_REGEX.test(comm.category)) {
+      errors.push(`Item #${i} (${comm.title}): Rejected by Build-Time Niche Guard for prohibited niche keyword.`);
+    }
 
     // Check duplicate ID
     if (seenIds.has(comm.id)) {
@@ -140,7 +185,7 @@ if (process.argv[1] && process.argv[1].includes("validateSchema")) {
   const groupsPath = path.join(dataDir, "groups.json");
   const pendingPath = path.join(dataDir, "pending-groups.json");
 
-  console.log("🔍 Validating JSON datasets...");
+  console.log("?? Validating JSON datasets against Job Directory Schema...");
 
   let hasError = false;
 
@@ -149,18 +194,18 @@ if (process.argv[1] && process.argv[1].includes("validateSchema")) {
       const raw = JSON.parse(fs.readFileSync(groupsPath, "utf-8"));
       const res = validateCommunitiesData(Array.isArray(raw) ? raw : []);
       if (!res.valid) {
-        console.error(`❌ groups.json validation failed with ${res.errors.length} error(s):`);
+        console.error(`? groups.json validation failed with ${res.errors.length} error(s):`);
         res.errors.forEach((err) => console.error(`   - ${err}`));
         hasError = true;
       } else {
-        console.log(`✅ groups.json is valid (${res.communities.length} items).`);
+        console.log(`? groups.json is valid (${res.communities.length} items).`);
       }
     } catch (e: any) {
-      console.error(`❌ Failed to parse groups.json: ${e.message}`);
+      console.error(`? Failed to parse groups.json: ${e.message}`);
       hasError = true;
     }
   } else {
-    console.warn("⚠️ groups.json not found (will be created).");
+    console.warn("?? groups.json not found (will be created).");
   }
 
   if (fs.existsSync(pendingPath)) {
@@ -168,14 +213,14 @@ if (process.argv[1] && process.argv[1].includes("validateSchema")) {
       const raw = JSON.parse(fs.readFileSync(pendingPath, "utf-8"));
       const res = validateCommunitiesData(Array.isArray(raw) ? raw : []);
       if (!res.valid) {
-        console.error(`❌ pending-groups.json validation failed with ${res.errors.length} error(s):`);
+        console.error(`? pending-groups.json validation failed with ${res.errors.length} error(s):`);
         res.errors.forEach((err) => console.error(`   - ${err}`));
         hasError = true;
       } else {
-        console.log(`✅ pending-groups.json is valid (${res.communities.length} items).`);
+        console.log(`? pending-groups.json is valid (${res.communities.length} items).`);
       }
     } catch (e: any) {
-      console.error(`❌ Failed to parse pending-groups.json: ${e.message}`);
+      console.error(`? Failed to parse pending-groups.json: ${e.message}`);
       hasError = true;
     }
   }
@@ -183,6 +228,6 @@ if (process.argv[1] && process.argv[1].includes("validateSchema")) {
   if (hasError) {
     process.exit(1);
   } else {
-    console.log("🎉 All dataset schemas passed validation!");
+    console.log("?? All dataset schemas passed validation!");
   }
 }

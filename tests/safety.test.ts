@@ -2,44 +2,26 @@ import { describe, it, expect } from "vitest";
 import { categories, getCategoryBySlug } from "../src/config/categories";
 import { discoveryConfig } from "../src/config/discovery";
 import { sanitizePlainText, detectSafetyFlags } from "../scripts/classify/normalizeMetadata";
-import { fallbackHeuristicClassification } from "../scripts/classify/classifyCommunity";
+import { fallbackHeuristicJobClassification } from "../scripts/classify/classifyCommunity";
 import { normalizeInviteUrl } from "../src/lib/urls";
 import { CommunitySchema } from "../scripts/data/validateSchema";
 
 describe("Financial Risk Disclaimer Trigger Logic", () => {
-  it("enforces financialDisclaimerRequired on high-risk categories", () => {
-    const cryptoCategory = getCategoryBySlug("crypto-web3");
-    const forexCategory = getCategoryBySlug("forex-stocks");
-
-    expect(cryptoCategory?.financialDisclaimerRequired).toBe(true);
-    expect(forexCategory?.financialDisclaimerRequired).toBe(true);
-  });
-
-  it("does not require financial disclaimers for non-financial categories", () => {
-    const techCategory = getCategoryBySlug("ai-tech");
-    const dealsCategory = getCategoryBySlug("deals-coupons");
-    const remoteWorkCategory = getCategoryBySlug("online-earning-remote-work");
-
-    expect(techCategory?.financialDisclaimerRequired).toBe(false);
-    expect(dealsCategory?.financialDisclaimerRequired).toBe(false);
-    expect(remoteWorkCategory?.financialDisclaimerRequired).toBe(false);
+  it("verifies all configured categories have explicit boolean financialDisclaimerRequired", () => {
+    for (const cat of categories) {
+      expect(typeof cat.financialDisclaimerRequired).toBe("boolean");
+    }
   });
 
   it("safely handles non-existent or invalid category lookups", () => {
     expect(getCategoryBySlug("invalid-category-xyz")).toBeUndefined();
     expect(getCategoryBySlug("")).toBeUndefined();
   });
-
-  it("verifies all configured categories have explicit boolean financialDisclaimerRequired", () => {
-    for (const cat of categories) {
-      expect(typeof cat.financialDisclaimerRequired).toBe("boolean");
-    }
-  });
 });
 
 describe("Scam, Malware & Suspicious Keyword Detection", () => {
   it("detects all configured high-risk keywords in candidate text", () => {
-    for (const keyword of discoveryConfig.suspiciousKeywords) {
+    for (const keyword of discoveryConfig.jobScamKeywords) {
       const testText = `Join this exclusive channel for ${keyword} and instant results!`;
       const flags = detectSafetyFlags(testText);
       expect(flags).toContain("potential-risk-language");
@@ -47,22 +29,22 @@ describe("Scam, Malware & Suspicious Keyword Detection", () => {
   });
 
   it("is case-insensitive when detecting safety flags", () => {
-    const upperText = "GET 100% WIN RATE TRADING SIGNALS!";
-    const mixedText = "DoUbLe YoUr MoNeY in 24 hours guaranteed";
-    const capitalText = "PUMP AND DUMP VIP LEAK";
+    const upperText = "GET PAID TO COMPLETE OPTIMIZATION TASKS!";
+    const mixedText = "DePoSiT UsDt to unlock tasks";
+    const capitalText = "TASK SCAM PAY TO JOIN";
 
     expect(detectSafetyFlags(upperText)).toContain("potential-risk-language");
     expect(detectSafetyFlags(mixedText)).toContain("potential-risk-language");
     expect(detectSafetyFlags(capitalText)).toContain("potential-risk-language");
   });
 
-  it("allows legitimate, clean technical community descriptions without false flags", () => {
+  it("allows legitimate, clean job community descriptions without false flags", () => {
     const cleanTexts = [
-      "Open-source Python developers learning machine learning and LLMs.",
-      "A community for TypeScript and React frontend engineers.",
-      "Official Ethereum protocol discussion and smart contract security.",
-      "Forex economic calendar discussion and fundamental analysis education.",
-      "SaaS discounts, dev tool coupons, and promotional deals.",
+      "Open-source Python developers sharing remote job openings and career advice.",
+      "A community for TypeScript and React frontend engineers hiring in London.",
+      "UK healthcare vacancies, NHS nursing roles, and medical career alerts.",
+      "Canada tech careers, software engineer internships, and co-op opportunities.",
+      "Remote product design and UX jobs hiring globally.",
     ];
 
     for (const text of cleanTexts) {
@@ -82,11 +64,11 @@ describe("Scam, Malware & Suspicious Keyword Detection", () => {
     const scamCandidate = {
       inviteUrl: "https://t.me/free_crypto_signals",
       platform: "telegram" as const,
-      evidenceText: "Join for guaranteed profit and daily insider signals.",
-      suggestedCategory: "crypto-web3",
+      evidenceText: "Join for guaranteed daily income and USDT optimization tasks.",
+      suggestedCategory: "tech-jobs",
     };
 
-    const result = fallbackHeuristicClassification(scamCandidate);
+    const result = fallbackHeuristicJobClassification(scamCandidate);
     expect(result.safetyFlags).toContain("potential-risk-language");
   });
 
@@ -94,11 +76,11 @@ describe("Scam, Malware & Suspicious Keyword Detection", () => {
     const cleanCandidate = {
       inviteUrl: "https://discord.gg/reactjs",
       platform: "discord" as const,
-      evidenceText: "Official community for React framework developers and maintainers.",
-      suggestedCategory: "ai-tech",
+      evidenceText: "Official community for React framework developers and software engineering job alerts.",
+      suggestedCategory: "tech-jobs",
     };
 
-    const result = fallbackHeuristicClassification(cleanCandidate);
+    const result = fallbackHeuristicJobClassification(cleanCandidate);
     expect(result.safetyFlags).toEqual([]);
   });
 });
@@ -160,14 +142,22 @@ describe("Safety & Anti-Hallucination Schema Rules", () => {
     id: "safe-comm-1",
     slug: "safe-comm-1",
     title: "Safe Community",
-    platform: "telegram",
-    category: "ai-tech",
-    tags: ["tech"],
+    platform: "telegram" as const,
+    vertical: "jobs" as const,
+    category: "tech-jobs",
+    countryCode: "US" as const,
+    city: "San Francisco",
+    jobTypes: ["remote-jobs", "full-time-jobs"],
+    industries: ["technology"],
+    workArrangement: "remote" as const,
+    experienceLevels: ["mid-level"],
+    visaSponsorship: "unknown" as const,
+    tags: ["tech", "jobs"],
     inviteUrl: "https://t.me/safe_community",
-    verificationStatus: "source-confirmed",
-    linkStatus: "active",
+    verificationStatus: "source-confirmed" as const,
+    linkStatus: "active" as const,
     sourceUrls: ["https://example.com"],
-    discoveryMethod: "manual",
+    discoveryMethod: "manual" as const,
     discoveredAt: "2026-08-18T12:00:00.000Z",
     published: true,
   };
@@ -188,7 +178,7 @@ describe("Safety & Anti-Hallucination Schema Rules", () => {
       "source-confirmed",
       "owner-confirmed",
       "manually-reviewed",
-    ];
+    ] as const;
 
     for (const status of validStatuses) {
       const parsed = CommunitySchema.safeParse({

@@ -105,7 +105,7 @@ describe("JSON-LD Schema.org Generators", () => {
     expect(schema.potentialAction["@type"]).toBe("SearchAction");
     expect(schema.potentialAction.target["@type"]).toBe("EntryPoint");
     expect(schema.potentialAction.target.urlTemplate).toBe(
-      `${baseUrl}/communities?search={search_term_string}`
+      `${baseUrl}/jobs?search={search_term_string}`
     );
     expect(schema.potentialAction["query-input"]).toBe("required name=search_term_string");
   });
@@ -149,7 +149,15 @@ describe("JSON-LD Schema.org Generators", () => {
         slug: "astro-lounge-discord",
         title: "Astro Lounge",
         platform: "discord",
-        category: "ai-tech",
+        vertical: "jobs",
+        category: "tech-jobs",
+        countryCode: "GB",
+        city: "London",
+        jobTypes: ["remote-jobs"],
+        industries: ["technology"],
+        workArrangement: "remote",
+        experienceLevels: ["mid-level"],
+        visaSponsorship: "unknown",
         tags: ["astro", "webdev"],
         inviteUrl: "https://discord.gg/astro",
         verificationStatus: "source-confirmed",
@@ -164,7 +172,15 @@ describe("JSON-LD Schema.org Generators", () => {
         slug: "python-developers-telegram",
         title: "Python Developers",
         platform: "telegram",
-        category: "ai-tech",
+        vertical: "jobs",
+        category: "tech-jobs",
+        countryCode: "US",
+        city: "San Francisco",
+        jobTypes: ["remote-jobs", "full-time-jobs"],
+        industries: ["technology"],
+        workArrangement: "remote",
+        experienceLevels: ["entry-level", "mid-level"],
+        visaSponsorship: "unknown",
         tags: ["python"],
         inviteUrl: "https://t.me/pythongroup",
         verificationStatus: "unverified",
@@ -177,17 +193,17 @@ describe("JSON-LD Schema.org Generators", () => {
     ];
 
     const schema = generateCollectionPageSchema(
-      "AI & Tech Communities",
-      "List of verified AI & Tech communities",
-      "/category/ai-tech",
+      "Tech Jobs Communities",
+      "List of verified Tech Jobs communities",
+      "/category/tech-jobs",
       mockCommunities
     );
 
     expect(schema["@context"]).toBe("https://schema.org");
     expect(schema["@type"]).toBe("CollectionPage");
-    expect(schema.name).toBe("AI & Tech Communities");
-    expect(schema.description).toBe("List of verified AI & Tech communities");
-    expect(schema.url).toBe(`${baseUrl}/category/ai-tech`);
+    expect(schema.name).toBe("Tech Jobs Communities");
+    expect(schema.description).toBe("List of verified Tech Jobs communities");
+    expect(schema.url).toBe(`${baseUrl}/category/tech-jobs`);
     expect(schema.mainEntity["@type"]).toBe("ItemList");
     expect(schema.mainEntity.numberOfItems).toBe(2);
     expect(schema.mainEntity.itemListElement).toHaveLength(2);
@@ -237,7 +253,15 @@ describe("JSON-LD Schema.org Generators", () => {
       slug: "reactiflux-discord",
       title: "Reactiflux",
       platform: "discord",
-      category: "ai-tech",
+      vertical: "jobs",
+      category: "tech-jobs",
+      countryCode: "US",
+      city: "San Francisco",
+      jobTypes: ["remote-jobs"],
+      industries: ["technology"],
+      workArrangement: "remote",
+      experienceLevels: ["mid-level", "senior"],
+      visaSponsorship: "unknown",
       tags: ["react", "javascript"],
       inviteUrl: "https://discord.gg/reactiflux",
       description: "Chat community for React developers.",
@@ -270,7 +294,15 @@ describe("JSON-LD Schema.org Generators", () => {
       slug: "minimal",
       title: "Minimal Group",
       platform: "telegram",
-      category: "ai-tech",
+      vertical: "jobs",
+      category: "tech-jobs",
+      countryCode: null,
+      city: null,
+      jobTypes: [],
+      industries: [],
+      workArrangement: "unknown",
+      experienceLevels: [],
+      visaSponsorship: "unknown",
       tags: [],
       inviteUrl: "https://t.me/minimal",
       verificationStatus: "unverified",

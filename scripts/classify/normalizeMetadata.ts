@@ -24,7 +24,12 @@ export function detectSafetyFlags(text?: string | null): string[] {
   const lower = text.toLowerCase();
   const flags: string[] = [];
 
-  for (const kw of discoveryConfig.suspiciousKeywords) {
+  const scamKeywords = [
+    ...(discoveryConfig.jobScamKeywords || []),
+    ...(discoveryConfig.disallowedNicheKeywords || []),
+  ];
+
+  for (const kw of scamKeywords) {
     if (lower.includes(kw.toLowerCase())) {
       flags.push("potential-risk-language");
       break;

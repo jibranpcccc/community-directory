@@ -21,6 +21,25 @@ export type PlatformId =
   | "github"
   | "forum";
 
+export type CountryCode = "US" | "GB" | "CA" | "AU" | "NZ" | "IE";
+
+export type WorkArrangement =
+  | "remote"
+  | "hybrid"
+  | "onsite"
+  | "mixed"
+  | "unknown";
+
+export type ExperienceLevel =
+  | "internship"
+  | "entry-level"
+  | "graduate"
+  | "mid-level"
+  | "senior"
+  | "executive";
+
+export type VisaSponsorship = "yes" | "no" | "mixed" | "unknown";
+
 export type AccessType = "free" | "paid" | "mixed" | "unknown";
 
 export type CommunityType =
@@ -46,6 +65,7 @@ export interface Community {
   slug: string;
   title: string;
   platform: PlatformId;
+  vertical: "jobs";
   category: string;
   subcategory?: string | null;
   tags: string[];
@@ -53,6 +73,13 @@ export interface Community {
   description?: string | null;
   language?: string | null;
   country?: string | null;
+  countryCode: CountryCode | null;
+  city: string | null;
+  jobTypes: string[];
+  industries: string[];
+  workArrangement: WorkArrangement;
+  experienceLevels: ExperienceLevel[];
+  visaSponsorship: VisaSponsorship;
   accessType?: AccessType;
   communityType?: CommunityType;
   memberCount?: number | null;
@@ -94,6 +121,11 @@ export interface PlatformConfig {
 }
 
 export interface FilterOptions {
+  countryCode?: CountryCode;
+  jobType?: string;
+  industry?: string;
+  workArrangement?: WorkArrangement;
+  visaSponsorship?: VisaSponsorship;
   category?: string;
   platform?: PlatformId;
   tag?: string;

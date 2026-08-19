@@ -8,13 +8,21 @@ describe("Schema Validation", () => {
       slug: "valid-slug",
       title: "Valid Community",
       platform: "telegram",
-      category: "ai-tech",
+      vertical: "jobs",
+      category: "tech-jobs",
       subcategory: "Coding",
       tags: ["coding", "ai"],
       inviteUrl: "https://t.me/valid_chat",
       description: "A valid factual description.",
       language: "en",
-      country: "us",
+      country: "United States",
+      countryCode: "US",
+      city: "San Francisco",
+      jobTypes: ["remote-jobs", "full-time-jobs"],
+      industries: ["technology"],
+      workArrangement: "remote",
+      experienceLevels: ["mid-level"],
+      visaSponsorship: "unknown",
       accessType: "free",
       communityType: "discussion",
       verificationStatus: "source-confirmed",
@@ -36,7 +44,8 @@ describe("Schema Validation", () => {
       slug: "Invalid Slug With Spaces!",
       title: "Test",
       platform: "unknown_platform",
-      category: "ai-tech",
+      vertical: "jobs",
+      category: "tech-jobs",
       tags: [],
       inviteUrl: "not-a-url",
       verificationStatus: "unverified",
@@ -51,6 +60,28 @@ describe("Schema Validation", () => {
     expect(parseResult.success).toBe(false);
   });
 
+  it("rejects invalid non-job vertical or prohibited niches", () => {
+    const cryptoRecord = {
+      id: "crypto-signals-1",
+      slug: "crypto-signals-1",
+      title: "Crypto Signals 100x Pump VIP",
+      platform: "telegram",
+      vertical: "jobs",
+      category: "tech-jobs",
+      tags: ["crypto"],
+      inviteUrl: "https://t.me/crypto_pump",
+      verificationStatus: "unverified",
+      linkStatus: "active",
+      sourceUrls: [],
+      discoveryMethod: "manual",
+      discoveredAt: "2026-08-18T12:00:00.000Z",
+      published: true,
+    };
+
+    const parseResult = CommunitySchema.safeParse(cryptoRecord);
+    expect(parseResult.success).toBe(false);
+  });
+
   it("detects duplicate IDs and URLs across batch validation", () => {
     const duplicates = [
       {
@@ -58,7 +89,8 @@ describe("Schema Validation", () => {
         slug: "item-1",
         title: "Community One",
         platform: "telegram",
-        category: "ai-tech",
+        vertical: "jobs",
+        category: "tech-jobs",
         tags: [],
         inviteUrl: "https://t.me/duplicate_url",
         verificationStatus: "unverified",
@@ -73,7 +105,8 @@ describe("Schema Validation", () => {
         slug: "item-2",
         title: "Community Two",
         platform: "telegram",
-        category: "ai-tech",
+        vertical: "jobs",
+        category: "tech-jobs",
         tags: [],
         inviteUrl: "https://t.me/duplicate_url", // duplicate normalized URL
         verificationStatus: "unverified",
@@ -85,7 +118,7 @@ describe("Schema Validation", () => {
       },
     ];
 
-    const result = validateCommunitiesData(duplicates);
+    const result = validateCommunitiesData(duplicates as any);
     expect(result.valid).toBe(false);
     expect(result.errors.some((e) => e.includes("Duplicate ID"))).toBe(true);
     expect(result.errors.some((e) => e.includes("Duplicate normalized invite URL"))).toBe(true);
