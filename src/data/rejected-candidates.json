@@ -254,40 +254,40 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T09:56:18.214Z",
-    "lastSeenAt": "2026-08-19T09:56:18.214Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-19T10:19:18.665Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/2cTEFGTQBT",
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T09:56:18.214Z",
-    "lastSeenAt": "2026-08-19T09:56:18.214Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-19T10:19:18.665Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/SVse4Sr",
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T09:56:18.214Z",
-    "lastSeenAt": "2026-08-19T09:56:18.214Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-19T10:19:18.665Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/3YkVB5Q",
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T09:56:18.214Z",
-    "lastSeenAt": "2026-08-19T09:56:18.214Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-19T10:19:18.665Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/cscareerhub",
     "platform": "discord",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-19T09:56:18.214Z",
-    "lastSeenAt": "2026-08-19T09:56:18.214Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-08-19T10:19:18.665Z",
+    "timesSeen": 2,
     "title": "CS Career Hub"
   },
   {
@@ -295,16 +295,16 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T09:56:18.214Z",
-    "lastSeenAt": "2026-08-19T09:56:18.214Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-19T10:19:18.665Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/N6jTp6CXXw",
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T09:56:18.214Z",
-    "lastSeenAt": "2026-08-19T09:56:18.214Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-19T10:19:18.665Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/sVrvK4yeNv",
@@ -319,15 +319,32 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T09:56:18.214Z",
-    "lastSeenAt": "2026-08-19T09:56:18.214Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-19T10:19:18.665Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/N3yC28sx66",
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T09:56:18.214Z",
-    "lastSeenAt": "2026-08-19T09:56:18.214Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-19T10:19:18.665Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://discord.gg/NKQWydMhMC",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-08-19T10:19:18.665Z",
+    "lastSeenAt": "2026-08-19T10:19:18.665Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://discord.gg/9M8awV8",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-19T10:19:18.665Z",
+    "lastSeenAt": "2026-08-19T10:19:18.665Z",
+    "timesSeen": 1,
+    "title": "Metaverse Makers"
   }
 ]
