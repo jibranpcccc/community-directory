@@ -50,7 +50,7 @@ function runApprove() {
 
   const [toApprove] = pending.splice(index, 1);
   toApprove.published = true;
-  toApprove.verificationStatus = "manually-reviewed";
+  toApprove.verificationStatus = toApprove.verificationStatus === "source-confirmed" ? "source-confirmed" : "manually-reviewed";
   toApprove.updatedAt = getCurrentIsoTimestamp();
 
   published.push(toApprove);

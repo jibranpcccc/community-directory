@@ -36,7 +36,78 @@ interface RejectedRecord {
   platform: string;
   reason: string;
   date: string;
+  lastSeenAt?: string;
+  timesSeen?: number;
   title?: string;
+}
+
+export interface DailyMetricsRecord {
+  date: string;
+  queryTopics: number;
+  providerRequests: number;
+  rawCandidates: number;
+  passedJobIntent: number;
+  wrongNiche: number;
+  active: number;
+  dead: number;
+  unknown: number;
+  validationFailures: number;
+  confirmedTier1: number;
+  wrongCountry: number;
+  unconfirmedTargetMarket: number;
+  scamRejected: number;
+  duplicates: number;
+  newPending: number;
+  countryCounts: {
+    US: number;
+    GB: number;
+    CA: number;
+    AU: number;
+  };
+  platformCounts: {
+    telegram: number;
+    discord: number;
+    whatsapp: number;
+  };
+  categoryCounts: {
+    "tech-jobs": number;
+    "remote-jobs": number;
+    "internships-graduate": number;
+    "visa-sponsorship-jobs": number;
+    "healthcare-jobs": number;
+    "finance-jobs": number;
+    "engineering-jobs": number;
+    "sales-marketing-jobs": number;
+    "government-jobs": number;
+    "other": number;
+  };
+}
+
+function recordRejection(
+  list: RejectedRecord[],
+  url: string,
+  platform: string,
+  reason: string,
+  now: string,
+  title?: string
+) {
+  const existing = list.find((r) => r.url === url);
+  if (existing) {
+    existing.timesSeen = (existing.timesSeen || 1) + 1;
+    existing.lastSeenAt = now;
+    existing.reason = reason;
+    if (title && !existing.title) existing.title = title;
+  } else {
+    list.push({
+      url,
+      platform,
+      reason,
+      date: now,
+      lastSeenAt: now,
+      timesSeen: 1,
+      title,
+    });
+  }
 }
 
 async function runDiscovery() {
@@ -48,6 +119,7 @@ async function runDiscovery() {
   const groupsPath = path.join(dataDir, "groups.json");
   const pendingPath = path.join(dataDir, "pending-groups.json");
   const rejectedPath = path.join(dataDir, "rejected-candidates.json");
+  const dailyMetricsPath = path.join(dataDir, "daily-metrics.json");
 
   // Load existing datasets
   const publishedGroups: Community[] = fs.existsSync(groupsPath)
@@ -75,6 +147,7 @@ async function runDiscovery() {
   const geminiProvider = new GeminiGoogleSearchProvider();
   const rawResults: (DiscoveryResult & { queryMeta?: SearchQuery; title?: string })[] = [];
   let queriesUsedCount = 0;
+  let providerRequestsCount = 0;
 
   if (geminiProvider.isAvailable()) {
     console.log(`[discover] Executing job search queries with model ${discoveryConfig.geminiModel}...`);
@@ -82,6 +155,7 @@ async function runDiscovery() {
       const q = queries[i];
       console.log(`  [search] Query #${i + 1}/${queries.length} [${q.countryCode} - ${q.platform.toUpperCase()}] ${q.query}...`);
       queriesUsedCount++;
+      providerRequestsCount++;
 
       const results = await geminiProvider.search(q.query, {
         platform: q.platform,
@@ -99,14 +173,22 @@ async function runDiscovery() {
 
       // Update query performance tracking
       const statKey = q.query;
+      const existingStat = queryStatsMap[statKey];
       queryStatsMap[statKey] = {
         query: q.query,
+        country: q.countryCode,
+        platform: q.platform,
+        category: q.category,
         lastRunAt: getCurrentIsoTimestamp(),
-        rawCandidateCount: (queryStatsMap[statKey]?.rawCandidateCount || 0) + validForQuery,
-        activeCandidateCount: queryStatsMap[statKey]?.activeCandidateCount || 0,
-        wrongNicheCount: queryStatsMap[statKey]?.wrongNicheCount || 0,
-        newPendingCount: queryStatsMap[statKey]?.newPendingCount || 0,
-        duplicateCount: queryStatsMap[statKey]?.duplicateCount || 0,
+        timesRun: (existingStat?.timesRun || 0) + 1,
+        rawCandidateCount: (existingStat?.rawCandidateCount || 0) + validForQuery,
+        passedJobIntentCount: existingStat?.passedJobIntentCount || 0,
+        activeCandidateCount: existingStat?.activeCandidateCount || 0,
+        confirmedTier1Count: existingStat?.confirmedTier1Count || 0,
+        wrongNicheCount: existingStat?.wrongNicheCount || 0,
+        wrongCountryCount: existingStat?.wrongCountryCount || 0,
+        duplicateCount: existingStat?.duplicateCount || 0,
+        newPendingCount: existingStat?.newPendingCount || 0,
       };
 
       if (validForQuery > 0) {
@@ -129,13 +211,19 @@ async function runDiscovery() {
   const rawCandidatesCount = rawResults.length;
   console.log(`\n[discover] Total discovered raw candidate links: ${rawCandidatesCount}`);
 
-  // 3. Platform Validation & Duplicate Checking Pipeline
-  let activeCandidatesCount = 0;
-  let unknownRejectedCount = 0;
-  let deadRejectedCount = 0;
+  // 3. Sequential Filtering Pipeline Counters
+  let passedJobIntentCount = 0;
   let wrongNicheCount = 0;
+
+  let activeCandidatesCount = 0;
+  let deadRejectedCount = 0;
+  let unknownRejectedCount = 0;
+  const validationFailuresCount = 0;
+
+  let confirmedTier1Count = 0;
   let wrongCountryCount = 0;
   let unconfirmedCountryCount = 0;
+
   let scamRiskCount = 0;
   let duplicatesSkippedCount = 0;
 
@@ -150,6 +238,10 @@ async function runDiscovery() {
     "internships-graduate": 0,
     "visa-sponsorship-jobs": 0,
     "healthcare-jobs": 0,
+    "finance-jobs": 0,
+    "engineering-jobs": 0,
+    "sales-marketing-jobs": 0,
+    "government-jobs": 0,
     "other": 0,
   };
 
@@ -165,6 +257,7 @@ async function runDiscovery() {
     }
 
     const cand = rawResults[i];
+    const queryStat = cand.queryMeta?.query ? queryStatsMap[cand.queryMeta.query] : null;
     const normalizedUrl = normalizeInviteUrl(cand.url);
 
     if (!normalizedUrl) {
@@ -175,6 +268,7 @@ async function runDiscovery() {
     // A. In-batch URL deduplication
     if (batchSeenUrls.has(normalizedUrl)) {
       duplicatesSkippedCount++;
+      if (queryStat) queryStat.duplicateCount++;
       continue;
     }
 
@@ -186,6 +280,7 @@ async function runDiscovery() {
     if (preDupCheck.isDuplicate) {
       console.log(`  ⚠ Duplicate skipped [URL]: ${normalizedUrl} (${preDupCheck.reason})`);
       duplicatesSkippedCount++;
+      if (queryStat) queryStat.duplicateCount++;
       continue;
     }
 
@@ -196,16 +291,14 @@ async function runDiscovery() {
       if (!intentCheck.hasIntent) {
         console.log(`  ⚠️ Pre-filtered [No Job Intent in Snippet]: "${cand.title || cand.url}" (${intentCheck.reason})`);
         wrongNicheCount++;
-        rejectedRecords.push({
-          url: normalizedUrl,
-          platform: cand.platform,
-          title: cand.title,
-          reason: `Pre-filtered: ${intentCheck.reason}`,
-          date: now,
-        });
+        if (queryStat) queryStat.wrongNicheCount++;
+        recordRejection(rejectedRecords, normalizedUrl, cand.platform, `Pre-filtered: ${intentCheck.reason}`, now, cand.title);
         continue;
       }
     }
+
+    passedJobIntentCount++;
+    if (queryStat) queryStat.passedJobIntentCount++;
 
     // D. Platform-specific live validation
     let validation: LinkValidationResult;
@@ -227,14 +320,14 @@ async function runDiscovery() {
     if (validation.status === "dead") {
       console.log(`  ✗ Rejected [Dead] [${cand.platform}]: ${normalizedUrl} (${validation.message || "Dead or expired link"})`);
       deadRejectedCount++;
-      rejectedRecords.push({ url: normalizedUrl, platform: cand.platform, reason: "dead-link", date: now });
+      recordRejection(rejectedRecords, normalizedUrl, cand.platform, "dead-link", now);
       continue;
     }
 
     if (validation.status === "unknown") {
       console.log(`  ⏳ Held/Rejected [Unknown] [${cand.platform}]: ${normalizedUrl} (${validation.message || "Unverified/uncertain link status"})`);
       unknownRejectedCount++;
-      rejectedRecords.push({ url: normalizedUrl, platform: cand.platform, reason: "unknown-status", date: now });
+      recordRejection(rejectedRecords, normalizedUrl, cand.platform, "unknown-status", now);
       continue;
     }
 
@@ -245,6 +338,7 @@ async function runDiscovery() {
     }
 
     activeCandidatesCount++;
+    if (queryStat) queryStat.activeCandidateCount++;
 
     // E. Extract genuine metadata
     const realTitle = validation.extractedTitle?.trim() || "";
@@ -258,7 +352,8 @@ async function runDiscovery() {
     if (!jobCheck.isJobRelated) {
       console.log(`  ✗ Rejected [Wrong Niche]: "${realTitle || normalizedUrl}" (${jobCheck.reason || "Not job-related"})`);
       wrongNicheCount++;
-      rejectedRecords.push({ url: normalizedUrl, platform: cand.platform, reason: "wrong-niche", title: realTitle, date: now });
+      if (queryStat) queryStat.wrongNicheCount++;
+      recordRejection(rejectedRecords, normalizedUrl, cand.platform, "wrong-niche", now, realTitle);
       continue;
     }
 
@@ -267,7 +362,7 @@ async function runDiscovery() {
     if (scamCheck.isSevereScam) {
       console.log(`  ✗ Rejected [Scam Risk]: "${realTitle || normalizedUrl}" (${scamCheck.reasons.join("; ")})`);
       scamRiskCount++;
-      rejectedRecords.push({ url: normalizedUrl, platform: cand.platform, reason: "job-scam-risk", title: realTitle, date: now });
+      recordRejection(rejectedRecords, normalizedUrl, cand.platform, "job-scam-risk", now, realTitle);
       continue;
     }
 
@@ -276,6 +371,7 @@ async function runDiscovery() {
       if (batchSeenGuildIds.has(extractedGuildId)) {
         console.log(`  ⚠ Duplicate skipped [In-Batch Guild ID]: ${extractedGuildId} (${normalizedUrl})`);
         duplicatesSkippedCount++;
+        if (queryStat) queryStat.duplicateCount++;
         continue;
       }
       batchSeenGuildIds.add(extractedGuildId);
@@ -287,19 +383,21 @@ async function runDiscovery() {
       if (guildDupCheck.isDuplicate) {
         console.log(`  ⚠ Duplicate skipped [Guild ID]: ${extractedGuildId} (${guildDupCheck.reason})`);
         duplicatesSkippedCount++;
+        if (queryStat) queryStat.duplicateCount++;
         continue;
       }
     }
 
     batchSeenUrls.add(normalizedUrl);
 
-    // H. Strict Source Verification: Fetch independent source page and check for exact outbound href
+    // H. Strict Source Verification
     const sourceCheck = await verifySourceMentionsInvite(cand.sourceUrl, normalizedUrl, extractedGuildId);
     const validSource = sourceCheck.sourceUrl;
     const isSourceConfirmed = sourceCheck.isConfirmed;
 
     // I. Job Classification & Tagging
     console.log(`  🔍 Classifying [${cand.platform.toUpperCase()}] "${realTitle || normalizedUrl}"...`);
+    providerRequestsCount++;
     const classification = await classifyJobCommunityWithGemini({
       inviteUrl: normalizedUrl,
       platform: cand.platform,
@@ -315,14 +413,9 @@ async function runDiscovery() {
     // 1. Inactive Server Filter
     if (/\b(inactive|shut\s+down|closed\s+down|no\s+longer\s+active|deleted\s+server|server\s+closed)\b/i.test(finalTitle)) {
       console.log(`  ⚠️ Rejected [Inactive Server]: "${finalTitle}"`);
-      rejectedRecords.push({
-        url: normalizedUrl,
-        platform: cand.platform,
-        title: finalTitle,
-        reason: "server-inactive-or-closed",
-        date: now,
-      });
+      recordRejection(rejectedRecords, normalizedUrl, cand.platform, "server-inactive-or-closed", now, finalTitle);
       wrongNicheCount++;
+      if (queryStat) queryStat.wrongNicheCount++;
       continue;
     }
 
@@ -331,14 +424,9 @@ async function runDiscovery() {
     const platformRelevance = isJobRelevant(fullPlatformText);
     if (!platformRelevance.isJobRelated) {
       console.log(`  ⚠️ Rejected [Wrong Niche on Platform]: "${finalTitle}" (${platformRelevance.reason})`);
-      rejectedRecords.push({
-        url: normalizedUrl,
-        platform: cand.platform,
-        title: finalTitle,
-        reason: `Platform title/description not job related: ${platformRelevance.reason}`,
-        date: now,
-      });
+      recordRejection(rejectedRecords, normalizedUrl, cand.platform, `Platform title/description not job related: ${platformRelevance.reason}`, now, finalTitle);
       wrongNicheCount++;
+      if (queryStat) queryStat.wrongNicheCount++;
       continue;
     }
 
@@ -349,17 +437,18 @@ async function runDiscovery() {
         ? `wrong-country: ${classification.countryCode}`
         : "unconfirmed-target-market";
       console.log(`  ⚠️ Held/Rejected [Country Gate]: "${finalTitle}" (${reason})`);
-      rejectedRecords.push({
-        url: normalizedUrl,
-        platform: cand.platform,
-        title: finalTitle,
-        reason,
-        date: now,
-      });
-      if (reason.startsWith("wrong-country")) wrongCountryCount++;
-      else unconfirmedCountryCount++;
+      recordRejection(rejectedRecords, normalizedUrl, cand.platform, reason, now, finalTitle);
+      if (reason.startsWith("wrong-country")) {
+        wrongCountryCount++;
+        if (queryStat) queryStat.wrongCountryCount++;
+      } else {
+        unconfirmedCountryCount++;
+      }
       continue;
     }
+
+    confirmedTier1Count++;
+    if (queryStat) queryStat.confirmedTier1Count++;
 
     const slug = generateSlug(finalTitle, cand.platform, existingSlugs);
     existingSlugs.push(slug);
@@ -424,7 +513,7 @@ async function runDiscovery() {
     allKnown.push(community);
 
     if (community.countryCode) {
-      countryCounts[community.countryCode] = (countryCounts[community.countryCode] || 0) + 1;
+      countryCounts[community.countryCode as CountryCode] = (countryCounts[community.countryCode as CountryCode] || 0) + 1;
     }
 
     if (cand.platform === "discord") newDiscordCount++;
@@ -439,6 +528,7 @@ async function runDiscovery() {
       categoryCounts["other"]++;
     }
 
+    if (queryStat) queryStat.newPendingCount++;
     console.log(`  ✅ Added to pending: [${cand.platform.toUpperCase()}] "${community.title}" (${community.countryCode} - ${community.category})`);
 
     // Polite API delay
@@ -447,6 +537,44 @@ async function runDiscovery() {
 
   // 4. Output / Save Results
   const totalNewPending = validNewCommunities.length;
+
+  // Persist Daily Metrics
+  const dailyMetricsRecord: DailyMetricsRecord = {
+    date: new Date().toISOString().split("T")[0],
+    queryTopics: queriesUsedCount,
+    providerRequests: providerRequestsCount,
+    rawCandidates: rawCandidatesCount,
+    passedJobIntent: passedJobIntentCount,
+    wrongNiche: wrongNicheCount,
+    active: activeCandidatesCount,
+    dead: deadRejectedCount,
+    unknown: unknownRejectedCount,
+    validationFailures: validationFailuresCount,
+    confirmedTier1: confirmedTier1Count,
+    wrongCountry: wrongCountryCount,
+    unconfirmedTargetMarket: unconfirmedCountryCount,
+    scamRejected: scamRiskCount,
+    duplicates: duplicatesSkippedCount,
+    newPending: totalNewPending,
+    countryCounts: {
+      US: countryCounts.US,
+      GB: countryCounts.GB,
+      CA: countryCounts.CA,
+      AU: countryCounts.AU,
+    },
+    platformCounts: {
+      telegram: newTelegramCount,
+      discord: newDiscordCount,
+      whatsapp: newWhatsappCount,
+    },
+    categoryCounts,
+  };
+
+  const existingDailyMetrics: DailyMetricsRecord[] = fs.existsSync(dailyMetricsPath)
+    ? JSON.parse(fs.readFileSync(dailyMetricsPath, "utf-8"))
+    : [];
+  existingDailyMetrics.push(dailyMetricsRecord);
+  atomicWriteJson(dailyMetricsPath, existingDailyMetrics);
 
   if (isDryRun) {
     console.log("\n🧪 DRY RUN COMPLETED — Discovered Job Communities (Not Saved):");
@@ -476,6 +604,7 @@ async function runDiscovery() {
       throw testError;
     }
   } else {
+    atomicWriteJson(rejectedPath, rejectedRecords);
     saveQueryStats(queryStatsMap);
   }
 
@@ -485,16 +614,21 @@ async function runDiscovery() {
   console.log("=========================================");
   console.log("RAW DISCOVERY");
   console.log(`Raw candidates: ${rawCandidatesCount}`);
+  console.log("\nEARLY JOB-INTENT FILTER");
+  console.log(`Passed job intent: ${passedJobIntentCount}`);
+  console.log(`Wrong niche rejected: ${wrongNicheCount}`);
   console.log("\nPLATFORM VALIDATION");
   console.log(`Active: ${activeCandidatesCount}`);
   console.log(`Dead: ${deadRejectedCount}`);
   console.log(`Unknown: ${unknownRejectedCount}`);
-  console.log(`Other validation failure: 0`);
-  console.log("\nACTIVE CANDIDATE FILTERING");
-  console.log(`Wrong niche: ${wrongNicheCount}`);
+  console.log(`Other validation failure: ${validationFailuresCount}`);
+  console.log("\nTARGET MARKET FILTER");
+  console.log(`Confirmed Tier-1: ${confirmedTier1Count}`);
   console.log(`Wrong country: ${wrongCountryCount}`);
-  console.log(`Unconfirmed country: ${unconfirmedCountryCount}`);
-  console.log(`Scam risk: ${scamRiskCount}`);
+  console.log(`Unconfirmed target market: ${unconfirmedCountryCount}`);
+  console.log("\nSAFETY FILTER");
+  console.log(`Scam-risk rejected: ${scamRiskCount}`);
+  console.log("\nDEDUPLICATION");
   console.log(`Duplicates: ${duplicatesSkippedCount}`);
   console.log("\nFINAL");
   console.log(`New active pending: ${totalNewPending}`);
@@ -513,6 +647,10 @@ async function runDiscovery() {
   console.log(`Internships/New Grad: ${categoryCounts["internships-graduate"]}`);
   console.log(`Visa Sponsorship: ${categoryCounts["visa-sponsorship-jobs"]}`);
   console.log(`Healthcare: ${categoryCounts["healthcare-jobs"]}`);
+  console.log(`Finance: ${categoryCounts["finance-jobs"]}`);
+  console.log(`Engineering: ${categoryCounts["engineering-jobs"]}`);
+  console.log(`Sales/Marketing: ${categoryCounts["sales-marketing-jobs"]}`);
+  console.log(`Government: ${categoryCounts["government-jobs"]}`);
   console.log(`Other: ${categoryCounts["other"]}`);
   console.log("=========================================\n");
 }

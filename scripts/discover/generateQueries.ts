@@ -17,12 +17,19 @@ export interface SearchQuery {
 
 export interface QueryStats {
   query: string;
+  country?: CountryCode;
+  platform?: PlatformId;
+  category?: string;
   lastRunAt: string;
+  timesRun: number;
   rawCandidateCount: number;
+  passedJobIntentCount: number;
   activeCandidateCount: number;
+  confirmedTier1Count: number;
   wrongNicheCount: number;
-  newPendingCount: number;
+  wrongCountryCount: number;
   duplicateCount: number;
+  newPendingCount: number;
 }
 
 interface QueryTemplate {
