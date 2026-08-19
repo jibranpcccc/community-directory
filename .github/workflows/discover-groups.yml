@@ -75,3 +75,19 @@ jobs:
             git commit -m "chore(data): automated directory update $(date -u +'%Y-%m-%d')"
             git push
           fi
+
+      - name: Build static production site
+        run: npm run build
+
+      - name: Deploy to Netlify Production
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          if [ -n "$NETLIFY_AUTH_TOKEN" ] && [ -n "$NETLIFY_SITE_ID" ]; then
+            echo "Deploying production build to Netlify..."
+            npx netlify-cli deploy --prod --dir=dist --auth="$NETLIFY_AUTH_TOKEN" --site="$NETLIFY_SITE_ID"
+          else
+            echo "Netlify credentials not set. Skipping direct API deploy."
+          fi
+

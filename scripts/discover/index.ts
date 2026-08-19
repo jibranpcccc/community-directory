@@ -267,6 +267,8 @@ async function runDiscovery() {
   const batchSeenGuildIds = new Set<string>();
 
   const now = getCurrentIsoTimestamp();
+  const currentRunId = `run_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+  const providerName = geminiProvider.isAvailable() ? "gemini-search" : "seed-provider";
 
   for (let i = 0; i < rawResults.length; i++) {
     if (validNewCommunities.length >= maxTargetNew) {
@@ -610,9 +612,6 @@ async function runDiscovery() {
     const existingPending: Community[] = fs.existsSync(pendingPath)
       ? JSON.parse(fs.readFileSync(pendingPath, "utf-8"))
       : [];
-
-    const currentRunId = `run_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
-    const providerName = geminiProvider.isAvailable() ? "gemini-search" : "seed-provider";
 
     const { updatedPending } = stageDiscoveredCandidates(
       existingPending,

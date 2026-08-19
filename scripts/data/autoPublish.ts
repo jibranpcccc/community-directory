@@ -81,22 +81,32 @@ export function validateCountryEvidence(candidate: Community): {
     const trustedTypes = new Set(["platform-title", "platform-description", "independent-source", "official-source"]);
     if (trustedTypes.has(candidate.countryEvidence.sourceType)) {
       if (pattern.test(candidate.countryEvidence.text)) {
-        // If independent source, require sourceUrl and checkedAt
+        // If independent source, require explicit sourceUrl and checkedAt (fail-closed)
         if (
           candidate.countryEvidence.sourceType === "independent-source" ||
           candidate.countryEvidence.sourceType === "official-source"
         ) {
-          if (candidate.countryEvidence.sourceUrl && candidate.countryEvidence.sourceUrl.startsWith("http")) {
+          if (
+            candidate.countryEvidence.sourceUrl &&
+            candidate.countryEvidence.sourceUrl.startsWith("http") &&
+            candidate.countryEvidence.checkedAt
+          ) {
             return {
               isValid: true,
               evidence: {
                 sourceType: candidate.countryEvidence.sourceType,
                 text: candidate.countryEvidence.text.trim(),
                 sourceUrl: candidate.countryEvidence.sourceUrl,
-                checkedAt: candidate.countryEvidence.checkedAt || now,
+                checkedAt: candidate.countryEvidence.checkedAt,
               },
             };
           }
+          // Lacks full independent verification provenance -> fail closed
+          return {
+            isValid: false,
+            evidence: null,
+            reason: "Independent source country evidence missing sourceUrl or checkedAt provenance",
+          };
         } else {
           return {
             isValid: true,
