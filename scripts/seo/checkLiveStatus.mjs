@@ -29,12 +29,20 @@ async function check() {
 
   for (const p of pages) {
     const res = await fetchPage(p.url);
-    const hasCorruptedDoubleQ = /\?{2,}/.test(res.body.replace(/<script[\s\S]*?<\/script>/gi, "").replace(/<style[\s\S]*?<\/style>/gi, "").replace(/<svg[\s\S]*?<\/svg>/gi, "").replace(/<[^>]+>/g, " "));
+    const hasCorruptedDoubleQ = /\?{2,}/.test(
+      res.body
+        .replace(/<script[\s\S]*?<\/script>/gi, "")
+        .replace(/<style[\s\S]*?<\/style>/gi, "")
+        .replace(/<svg[\s\S]*?<\/svg>/gi, "")
+        .replace(/<[^>]+>/g, " ")
+    );
     const hasCorruptedTripleQ = res.body.includes("???");
     const canonicalMatch = res.body.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']*)["']/i);
     const canonical = canonicalMatch ? canonicalMatch[1] : "NONE";
 
-    console.log(`[${p.name}] HTTP ${res.statusCode} | Canonical: ${canonical} | Corrupted ??: ${hasCorruptedDoubleQ} | ???: ${hasCorruptedTripleQ}`);
+    console.log(
+      `[${p.name}] HTTP ${res.statusCode} | Canonical: ${canonical} | Corrupted ??: ${hasCorruptedDoubleQ} | ???: ${hasCorruptedTripleQ}`
+    );
   }
 
   // Check 301 redirect on /jobs
@@ -45,9 +53,24 @@ async function check() {
   });
   console.log(`\n[Redirect Test: /jobs] HTTP ${redirectRes.statusCode} -> Location: ${redirectRes.location}`);
 
-  // Check 404 on invalid url
-  const invalidRes = await fetchPage("https://communityhub-directory.netlify.app/this-url-must-not-exist-seo-test-987654");
-  console.log(`[404 Test: /this-url-must-not-exist-seo-test-987654] HTTP ${invalidRes.statusCode}`);
+  // Check 404 on out-of-scope routes
+  const outOfScopeRoutes = [
+    "/country/new-zealand/",
+    "/country/ireland/",
+    "/platform/reddit/",
+    "/platform/slack/",
+    "/platform/skool/",
+    "/platform/github/",
+    "/this-url-must-not-exist-seo-test-987654",
+  ];
+
+  console.log("\n=========================================");
+  console.log("CHECKING OUT-OF-SCOPE ROUTES (EXPECTING 404)");
+  console.log("=========================================");
+  for (const route of outOfScopeRoutes) {
+    const res = await fetchPage(`https://communityhub-directory.netlify.app${route}`);
+    console.log(`[404 Test: ${route}] HTTP ${res.statusCode}`);
+  }
 }
 
 check().catch(console.error);

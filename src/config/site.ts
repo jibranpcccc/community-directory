@@ -6,7 +6,7 @@
   subheadline:
     "Discover public WhatsApp, Telegram, and Discord communities sharing job openings, hiring alerts, career opportunities, and remote work across the United States, United Kingdom, Canada, and Australia.",
   description:
-    "Discover active and verified job alert communities across Discord, Telegram, and WhatsApp for the US, UK, Canada, and Australia. Zero fake metrics, automated link validation, and strict scam screening.",
+    "Discover active public job alert communities across Discord, Telegram, and WhatsApp for the US, UK, Canada, and Australia, with automated link checks, relevance screening, and job-scam safeguards.",
   url: process.env.PUBLIC_SITE_URL || "https://communityhub-directory.netlify.app",
   defaultLocale: "en",
   showAdPlaceholders: process.env.SHOW_AD_PLACEHOLDERS === "true",

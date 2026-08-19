@@ -10,15 +10,17 @@ import { generateCollectionPageSchema } from "../../lib/schema";
 import { getIndexability } from "../../lib/seo";
 
 export async function getStaticPaths() {
-  return platforms.map((plat) => ({
-    params: { slug: plat.id },
-  }));
+  return platforms
+    .filter((plat) => plat.isConfigured)
+    .map((plat) => ({
+      params: { slug: plat.id },
+    }));
 }
 
 const { slug } = Astro.params;
 const platformConfig = getPlatformConfig(slug as any);
 
-if (!platformConfig) {
+if (!platformConfig || !platformConfig.isConfigured) {
   return Astro.redirect("/404/");
 }
 

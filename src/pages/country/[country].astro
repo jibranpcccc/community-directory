@@ -3,14 +3,14 @@ import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
 import CommunityCard from "../../components/CommunityCard.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
 import EmptyState from "../../components/EmptyState.astro";
-import { TARGET_COUNTRIES, getCountryBySlug } from "../../config/countries";
+import { ENABLED_COUNTRIES, getCountryBySlug } from "../../config/countries";
 import { getCommunitiesByCountry } from "../../lib/communities";
 import { siteConfig } from "../../config/site";
 import { generateCollectionPageSchema } from "../../lib/schema";
 import { getIndexability } from "../../lib/seo";
 
 export async function getStaticPaths() {
-  return Object.values(TARGET_COUNTRIES).map((country) => ({
+  return ENABLED_COUNTRIES.map((country) => ({
     params: { country: country.slug },
   }));
 }
@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 const { country } = Astro.params;
 const countryConfig = getCountryBySlug(country);
 
-if (!countryConfig) {
+if (!countryConfig || !countryConfig.enabled) {
   return Astro.redirect("/404/");
 }
 
@@ -38,7 +38,7 @@ const collectionSchema = generateCollectionPageSchema(
 
 <DirectoryLayout
   heading={`Job Alert Groups in ${countryConfig.name}`}
-  subheading={`Discover verified public career communities, Discord servers, and Telegram channels targeting ${countryConfig.name}.`}
+  subheading={`Discover active public career communities, Discord servers, and Telegram channels targeting ${countryConfig.name}.`}
   breadcrumbs={[{ name: countryConfig.name, item: `/country/${countryConfig.slug}/` }]}
   title={pageTitle}
   description={pageDescription}
