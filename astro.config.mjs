@@ -4,8 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import fs from 'fs';
 import path from 'path';
 
-// Calculate tags, categories, job-types, countries, and platforms with listings for sitemap indexation
-let eligibleTags = new Set();
+// Calculate categories, job-types, countries, and platforms with listings for sitemap indexation
 let eligibleCategories = new Set();
 let eligibleJobTypes = new Set();
 let eligibleCountries = new Set();
@@ -15,7 +14,6 @@ try {
   const groupsPath = path.resolve('./src/data/groups.json');
   if (fs.existsSync(groupsPath)) {
     const raw = JSON.parse(fs.readFileSync(groupsPath, 'utf-8'));
-    const tagCounts = {};
     const catCounts = {};
     const jobTypeCounts = {};
     const countryCounts = {};
@@ -45,20 +43,9 @@ try {
         if (item.platform) {
           platCounts[item.platform] = (platCounts[item.platform] || 0) + 1;
         }
-        if (Array.isArray(item.tags)) {
-          for (const t of item.tags) {
-            const norm = t.toLowerCase().trim();
-            tagCounts[norm] = (tagCounts[norm] || 0) + 1;
-          }
-        }
       }
     }
 
-    eligibleTags = new Set(
-      Object.entries(tagCounts)
-        .filter(([_, count]) => count >= 5)
-        .map(([t]) => t)
-    );
     eligibleCategories = new Set(
       Object.entries(catCounts)
         .filter(([_, count]) => count >= 5)
@@ -88,17 +75,13 @@ try {
 export default defineConfig({
   site: process.env.PUBLIC_SITE_URL || 'https://communityhub-directory.netlify.app',
   output: 'static',
-  server: {
-    host: true,
-    port: 4321,
-  },
   integrations: [
     tailwind({
       applyBaseStyles: false,
     }),
     sitemap({
       filter: (page) => {
-        // Exclude utility & error pages
+        // Exclude utility, success, and error pages
         if (
           page.includes('/submit-success') ||
           page.includes('/report-success') ||
@@ -109,6 +92,10 @@ export default defineConfig({
           page.includes('/contact') ||
           page.includes('/404')
         ) {
+          return false;
+        }
+        // Permanently exclude all tag pages (Section 1)
+        if (page.includes('/tag/')) {
           return false;
         }
         if (page.includes('/country/')) {
@@ -139,18 +126,14 @@ export default defineConfig({
           }
           return false;
         }
-        if (page.includes('/tag/')) {
-          const match = page.match(/\/tag\/([^/]+)/);
-          if (match && match[1]) {
-            return eligibleTags.has(match[1].toLowerCase());
-          }
-          return false;
-        }
         return true;
       },
       serialize: (item) => {
         const siteUrl = (process.env.PUBLIC_SITE_URL || 'https://communityhub-directory.netlify.app').replace(/\/+$/, '');
-        if (item.url !== `${siteUrl}/` && item.url.endsWith('/')) {
+        // Keep root as https://domain.com/ and subpages without trailing slash
+        if (item.url === siteUrl || item.url === `${siteUrl}/`) {
+          item.url = `${siteUrl}/`;
+        } else if (item.url.endsWith('/')) {
           item.url = item.url.replace(/\/+$/, '');
         }
         return item;

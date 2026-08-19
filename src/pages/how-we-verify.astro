@@ -1,26 +1,6 @@
 ---
 import DirectoryLayout from "../layouts/DirectoryLayout.astro";
 import VerificationBadge from "../components/VerificationBadge.astro";
-import { generateFAQSchema } from "../lib/schema";
-
-const faqSchema = generateFAQSchema([
-  {
-    question: "What does the Active Link status mean?",
-    answer: "The public invite link was tested and verified as reachable during our latest automated check. It confirms the link is active and valid, but does not constitute an endorsement of job offers posted inside.",
-  },
-  {
-    question: "What does the Source Confirmed status mean?",
-    answer: "The invite link or server identifier was independently corroborated by an outbound reference on an authoritative public website or official organization page.",
-  },
-  {
-    question: "How often are published communities rechecked?",
-    answer: "Every published community is rechecked automatically on a daily schedule. If a link expires or returns an error across multiple consecutive checks, it is automatically unpublished.",
-  },
-  {
-    question: "Does listing inclusion mean employers are verified?",
-    answer: "No. Directory inclusion confirms only that the community exists and meets public link health standards. Job seekers must always verify employers and job postings independently.",
-  },
-]);
 ---
 
 <DirectoryLayout
@@ -32,94 +12,135 @@ const faqSchema = generateFAQSchema([
   ]}
   canonicalPath="/how-we-verify"
   pageType="trust"
-  jsonLd={faqSchema}
 >
   <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base font-medium text-slate-800 leading-relaxed">
     <!-- Core Standard Card -->
     <div class="neo-card p-6 sm:p-8 bg-white">
       <div class="inline-block bg-[#FEF08A] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
-        TRANSPARENT METHODOLOGY
+        ZERO TOLERANCE
       </div>
-      <h2 class="text-2xl font-black text-black tracking-tight mb-3">Our Core Verification Standard</h2>
-      <p class="font-bold text-slate-700">
-        Unlike directories that invent fake "Verified" badges to create a false impression of security, JobAlertHub strictly separates link reachability from independent source corroboration.
+      <h2 class="text-xl sm:text-2xl font-black text-black tracking-tight">
+        Zero Hallucination & Evidence-First Standard
+      </h2>
+      <p class="mt-3 text-slate-700 leading-relaxed">
+        Our directory operates under strict engineering principles: <strong>we never invent community names, invite links, member counts, ratings, or founder identities.</strong> If a data point cannot be independently corroborated through public domain records or platform metadata, it remains unlisted.
       </p>
     </div>
 
-    <!-- Mandatory Verification Disclaimer -->
-    <div class="rounded-2xl border-[3px] border-black bg-[#FEF08A] p-6 shadow-[4px_4px_0px_0px_#000] text-black font-bold space-y-2">
-      <strong class="font-black text-black block text-base uppercase tracking-wide">
-        ?? Mandatory Job Verification Notice
-      </strong>
-      <p class="text-sm leading-relaxed">
-        A working community link does NOT mean every job posting inside that community has been independently verified.
+    <!-- Verification Badges Explained -->
+    <section class="space-y-4">
+      <h2 class="text-xl sm:text-2xl font-black text-black">
+        Directory Status Badges Explained
+      </h2>
+      <p class="text-xs sm:text-sm font-bold text-slate-600">
+        Every listing in our directory displays one of these factual verification badges:
       </p>
-      <p class="text-xs text-slate-800 font-medium">
-        Public groups may contain third-party user messages or recruiters that have not been vetted by our directory. Always verify employers directly on their official company domain before applying or sharing personal information.
-      </p>
-    </div>
 
-    <!-- Status Definitions Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- Active Link / Unverified Source -->
-      <div class="neo-card p-6 space-y-3 bg-white">
-        <div class="flex items-center justify-between">
-          <h3 class="text-base font-black text-black">Active Link</h3>
-          <span class="rounded-lg border-2 border-black bg-[#A7F3D0] px-2.5 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">Active</span>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Active Link Badge -->
+        <div class="neo-card p-5 bg-white space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 rounded-lg border-2 border-black bg-[#A7F3D0] px-2.5 py-1 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
+              <span class="h-2 w-2 rounded-full bg-emerald-600"></span>
+              Active Link
+            </span>
+            <span class="text-[11px] font-black text-slate-500 uppercase">Tier 1 Gated</span>
+          </div>
+          <h3 class="text-sm font-black text-black">Tested Reachable Link</h3>
+          <p class="text-xs font-medium text-slate-700 leading-relaxed">
+            The community invite was tested and confirmed reachable during our latest automated validation cycle. Indicates the group exists and the link is active.
+          </p>
         </div>
-        <p class="text-xs font-bold text-slate-600">
-          The public invite link was confirmed active and reachable within the last 24 hours. The community passed all geographic and safety checks.
+
+        <!-- Source Confirmed Badge -->
+        <div class="neo-card p-5 bg-white space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 rounded-lg border-2 border-black bg-[#BAE6FD] px-2.5 py-1 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
+              <span class="h-2 w-2 rounded-full bg-sky-600"></span>
+              Source Confirmed
+            </span>
+            <span class="text-[11px] font-black text-slate-500 uppercase">Tier A Verified</span>
+          </div>
+          <h3 class="text-sm font-black text-black">Authoritative Web Backing</h3>
+          <p class="text-xs font-medium text-slate-700 leading-relaxed">
+            The community invite link was discovered or corroborated by an independent authoritative domain (e.g. an official company blog, university website, or open-source foundation).
+          </p>
+        </div>
+
+        <!-- Owner Confirmed Badge -->
+        <div class="neo-card p-5 bg-white space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 rounded-lg border-2 border-black bg-[#DDD6FE] px-2.5 py-1 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
+              <span class="h-2 w-2 rounded-full bg-purple-600"></span>
+              Owner Confirmed
+            </span>
+            <span class="text-[11px] font-black text-slate-500 uppercase">Admin Verified</span>
+          </div>
+          <h3 class="text-sm font-black text-black">Administrator Attestation</h3>
+          <p class="text-xs font-medium text-slate-700 leading-relaxed">
+            The listing administrator has confirmed ownership and provided active contact credentials to maintain listing accuracy.
+          </p>
+        </div>
+
+        <!-- Manually Reviewed Badge -->
+        <div class="neo-card p-5 bg-white space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 rounded-lg border-2 border-black bg-[#FEF08A] px-2.5 py-1 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
+              <span class="h-2 w-2 rounded-full bg-amber-600"></span>
+              Manually Reviewed
+            </span>
+            <span class="text-[11px] font-black text-slate-500 uppercase">Curated</span>
+          </div>
+          <h3 class="text-sm font-black text-black">Editorial Review</h3>
+          <p class="text-xs font-medium text-slate-700 leading-relaxed">
+            A human directory maintainer has manually audited the community topic, membership rules, and focus areas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The 4-Stage Automated Lifecycle -->
+    <section class="neo-card p-6 sm:p-8 space-y-4 bg-white">
+      <div class="inline-block bg-[#BAE6FD] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
+        SYSTEM LIFECYCLE
+      </div>
+      <h2 class="text-xl sm:text-2xl font-black text-black">
+        The 4-Stage Listing Lifecycle
+      </h2>
+      <div class="space-y-4 text-xs sm:text-sm font-medium text-slate-700">
+        <div class="border-l-4 border-black pl-4 py-1">
+          <strong class="text-black font-black block text-sm">1. Public Discovery</strong>
+          Candidate communities are discovered from public web references, indexing portals, or user submissions.
+        </div>
+        <div class="border-l-4 border-black pl-4 py-1">
+          <strong class="text-black font-black block text-sm">2. 12-Gate Safety & Quality Audit</strong>
+          Every candidate must pass 12 programmatic checks: URL format normalization, anti-scam heuristics, geographic target evidence, link accessibility, and duplication detection.
+        </div>
+        <div class="border-l-4 border-black pl-4 py-1">
+          <strong class="text-black font-black block text-sm">3. Probation & Multi-Observation Validation</strong>
+          Unverified listings undergo probation observation across multiple discovery cycles before public publishing.
+        </div>
+        <div class="border-l-4 border-black pl-4 py-1">
+          <strong class="text-black font-black block text-sm">4. Continuous Daily Revalidation</strong>
+          All published listings are re-tested daily. Listings with broken or expired invites are automatically unpublished to preserve directory quality.
+        </div>
+      </div>
+    </section>
+
+    <!-- Report & Takedown Callout -->
+    <div class="rounded-3xl border-[3px] border-black bg-[#FECDD3] p-6 sm:p-8 shadow-[6px_6px_0px_0px_#000] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div>
+        <h3 class="text-lg font-black text-black">Notice a Broken Link or Misleading Info?</h3>
+        <p class="mt-1 text-xs sm:text-sm font-bold text-black/80">
+          Our moderation desk immediately reviews user reports and community owner update requests.
         </p>
       </div>
-
-      <!-- Source Confirmed -->
-      <div class="neo-card p-6 space-y-3 bg-white">
-        <div class="flex items-center justify-between">
-          <h3 class="text-base font-black text-black">Source Confirmed</h3>
-          <span class="rounded-lg border-2 border-black bg-[#BAE6FD] px-2.5 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">Source Confirmed</span>
-        </div>
-        <p class="text-xs font-bold text-slate-600">
-          The invite link or server ID was verified through an exact outbound link on an authoritative primary website or official organization page.
-        </p>
-      </div>
-    </div>
-
-    <!-- 4-Stage Lifecycle Explanation -->
-    <div class="neo-card p-6 sm:p-8 bg-white space-y-6">
-      <div class="inline-block bg-[#DDD6FE] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
-        PIPELINE
-      </div>
-      <h2 class="text-2xl font-black text-black tracking-tight">The 4-Stage Automated Lifecycle</h2>
-
-      <div class="space-y-4">
-        <div class="p-4 border-2 border-black rounded-xl bg-[#FEF9C3] shadow-[2px_2px_0px_0px_#000]">
-          <h3 class="font-black text-black text-sm mb-1">1. Discovery & Intent Screening</h3>
-          <p class="text-xs text-slate-700">
-            Public queries discover candidates across Discord, Telegram, and WhatsApp. Candidates must demonstrate explicit employment and hiring intent for US, UK, Canada, or Australia.
-          </p>
-        </div>
-
-        <div class="p-4 border-2 border-black rounded-xl bg-[#BAE6FD] shadow-[2px_2px_0px_0px_#000]">
-          <h3 class="font-black text-black text-sm mb-1">2. Platform Health & Independent Verification</h3>
-          <p class="text-xs text-slate-700">
-            Invite endpoints are tested against official platform APIs or web endpoints. Independent source pages are fetched to confirm outbound invite links.
-          </p>
-        </div>
-
-        <div class="p-4 border-2 border-black rounded-xl bg-[#DDD6FE] shadow-[2px_2px_0px_0px_#000]">
-          <h3 class="font-black text-black text-sm mb-1">3. Safety & Fraud Filters</h3>
-          <p class="text-xs text-slate-700">
-            Automated filters inspect community titles and descriptions against known employment fraud patterns, task scams, and upfront fee schemes.
-          </p>
-        </div>
-
-        <div class="p-4 border-2 border-black rounded-xl bg-[#A7F3D0] shadow-[2px_2px_0px_0px_#000]">
-          <h3 class="font-black text-black text-sm mb-1">4. Daily Revalidation & Auto-Unpublish</h3>
-          <p class="text-xs text-slate-700">
-            Every published community is rechecked daily. Dead links, renamed non-job channels, or compromised groups are automatically unpublished.
-          </p>
-        </div>
-      </div>
+      <a
+        href="/report"
+        class="neo-btn bg-white hover:bg-slate-100 text-black px-4 py-2.5 text-xs font-black shrink-0 border-2 border-black shadow-[2px_2px_0px_0px_#000]"
+      >
+        Submit a Report &rarr;
+      </a>
     </div>
   </div>
 </DirectoryLayout>

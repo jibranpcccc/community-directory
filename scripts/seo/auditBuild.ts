@@ -11,10 +11,14 @@ interface AuditResult {
   h1Count: number;
   h1Text: string | null;
   isNoindex: boolean;
+  pageTypeCategory: "indexable" | "noindex";
   schemas: string[];
   forbiddenSchemas: string[];
+  inboundLinks: string[];
+  outboundInternalLinks: string[];
   brokenInternalLinks: string[];
   externalLinks: { href: string; rel: string; isNofollow: boolean }[];
+  imageIssues: string[];
   prohibitedClaims: string[];
   errors: string[];
   warnings: string[];
@@ -42,6 +46,7 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
   indexableCount: number;
   noindexCount: number;
   sitemapUrlCount: number;
+  orphanCount: number;
   results: AuditResult[];
   errors: string[];
 } {
@@ -56,6 +61,7 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
       indexableCount: 0,
       noindexCount: 0,
       sitemapUrlCount: 0,
+      orphanCount: 0,
       results: [],
       errors: [`Build directory ${distDir} not found.`],
     };
@@ -66,21 +72,28 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
 
   // Build a set of all valid generated URL paths
   const validUrlPaths = new Set<string>();
+  const fileToUrlMap = new Map<string, string>();
   for (const file of htmlFiles) {
     const rel = path.relative(distDir, file).replace(/\\/g, "/");
     let urlPath = "/" + rel.replace(/\/index\.html$/, "").replace(/\.html$/, "");
     if (urlPath === "/index" || urlPath === "") urlPath = "/";
     validUrlPaths.add(urlPath);
+    fileToUrlMap.set(file, urlPath);
+  }
+
+  // Internal Link Graph: targetUrl -> Set of sourceUrls
+  const internalInboundGraph = new Map<string, Set<string>>();
+  for (const u of validUrlPaths) {
+    internalInboundGraph.set(u, new Set<string>());
   }
 
   let indexableCount = 0;
   let noindexCount = 0;
 
+  // First pass: Page inspection & Link collection
   for (const file of htmlFiles) {
     const content = fs.readFileSync(file, "utf-8");
-    const rel = path.relative(distDir, file).replace(/\\/g, "/");
-    let urlPath = "/" + rel.replace(/\/index\.html$/, "").replace(/\.html$/, "");
-    if (urlPath === "/index" || urlPath === "") urlPath = "/";
+    const urlPath = fileToUrlMap.get(file) || "/";
 
     const pageErrors: string[] = [];
     const pageWarnings: string[] = [];
@@ -137,6 +150,11 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
     const robots = robotsMatch ? robotsMatch[1]?.toLowerCase() ?? null : null;
     const isNoindex = robots ? robots.includes("noindex") : false;
 
+    // Rule: All tag pages MUST be noindex (Section 1)
+    if (urlPath.startsWith("/tag/") && !isNoindex) {
+      pageErrors.push("Tag page is missing mandatory noindex directive");
+    }
+
     if (isNoindex) {
       noindexCount++;
     } else {
@@ -174,9 +192,12 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
           if (!obj || typeof obj !== "object") return;
           if (obj["@type"]) {
             schemas.push(obj["@type"]);
-            if (["JobPosting", "Review", "AggregateRating", "Product", "Course", "EmployerAggregateRating"].includes(obj["@type"])) {
+            if (["JobPosting", "Review", "AggregateRating", "Product", "Course", "EmployerAggregateRating", "FAQPage"].includes(obj["@type"])) {
               forbiddenSchemas.push(obj["@type"]);
             }
+          }
+          if (obj["potentialAction"] && obj["potentialAction"]["@type"] === "SearchAction") {
+            forbiddenSchemas.push("SearchAction");
           }
           for (const key of Object.keys(obj)) {
             if (typeof obj[key] === "object") {
@@ -185,6 +206,13 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
           }
         };
         extractTypes(parsed);
+
+        // Community detail page must NOT tag informal chat groups as Organization (Section 4)
+        if (urlPath.startsWith("/group/")) {
+          if (parsed["mainEntity"] && parsed["mainEntity"]["@type"] === "Organization") {
+            pageErrors.push("Community detail page contains unsupported mainEntity Organization schema");
+          }
+        }
       } catch (e: any) {
         pageErrors.push(`Invalid JSON-LD schema JSON: ${e.message}`);
       }
@@ -194,8 +222,9 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
       pageErrors.push(`Forbidden structured data types detected: ${forbiddenSchemas.join(", ")}`);
     }
 
-    // 7. Internal Links Audit
+    // 7. Internal Links Audit & Graph Building
     const brokenInternalLinks: string[] = [];
+    const outboundInternalLinks: string[] = [];
     const linkMatches = content.match(/<a[^>]*href=["']([^"']*)["'][^>]*>/gi) || [];
     const externalLinks: { href: string; rel: string; isNofollow: boolean }[] = [];
 
@@ -216,7 +245,7 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
             isNofollow: rel.includes("nofollow"),
           });
 
-          // Check external CTA invite links
+          // Check external community invite links
           if (href.includes("discord.gg") || href.includes("t.me") || href.includes("chat.whatsapp.com")) {
             if (!rel.includes("nofollow") && !rel.includes("noreferrer")) {
               pageWarnings.push(`External community CTA missing nofollow/noreferrer: ${href}`);
@@ -238,11 +267,42 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
         } else if (!validUrlPaths.has(targetPath) && !targetPath.includes("favicon") && !targetPath.includes("robots.txt")) {
           brokenInternalLinks.push(href);
           pageErrors.push(`Broken internal link target: ${href}`);
+        } else {
+          outboundInternalLinks.push(targetPath);
+          // Add to inbound graph (do not count links originating from utility success/404 as sole discovery)
+          if (!urlPath.includes("success") && !urlPath.includes("404")) {
+            const inboundSet = internalInboundGraph.get(targetPath);
+            if (inboundSet) {
+              inboundSet.add(urlPath);
+            }
+          }
         }
       }
     }
 
-    // 8. Prohibited Claims Check (Section 98)
+    // 8. Image & Accessibility Static Checks (Section 7)
+    const imageIssues: string[] = [];
+    const imgMatches = content.match(/<img[^>]*>/gi) || [];
+    for (const imgTag of imgMatches) {
+      if (!/alt=["'][^"']*["']/i.test(imgTag)) {
+        imageIssues.push(`Image missing alt attribute: ${imgTag}`);
+        pageErrors.push(`Image missing alt attribute: ${imgTag}`);
+      }
+      const srcMatch = imgTag.match(/src=["']([^"']*)["']/i);
+      if (srcMatch && srcMatch[1]) {
+        const src = srcMatch[1];
+        if (src.startsWith("/") && !src.startsWith("//")) {
+          const localFilePath = path.join(distDir, src.replace(/^\//, ""));
+          const publicFilePath = path.join(path.resolve("./public"), src.replace(/^\//, ""));
+          if (!fs.existsSync(localFilePath) && !fs.existsSync(publicFilePath)) {
+            imageIssues.push(`Broken local image source: ${src}`);
+            pageErrors.push(`Broken local image source: ${src}`);
+          }
+        }
+      }
+    }
+
+    // 9. Prohibited Claims Check
     const prohibitedPatterns = [
       /\b100%\s+safe\b/i,
       /\bgoogle\s+verified\b/i,
@@ -259,10 +319,6 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
       }
     }
 
-    if (pageErrors.length > 0) {
-      errors.push(`[${urlPath}] ${pageErrors.join("; ")}`);
-    }
-
     results.push({
       file,
       urlPath,
@@ -273,17 +329,74 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
       h1Count,
       h1Text,
       isNoindex,
+      pageTypeCategory: isNoindex ? "noindex" : "indexable",
       schemas,
       forbiddenSchemas,
+      inboundLinks: [],
+      outboundInternalLinks,
       brokenInternalLinks,
       externalLinks,
+      imageIssues,
       prohibitedClaims,
       errors: pageErrors,
       warnings: pageWarnings,
     });
   }
 
-  // 9. XML Sitemap Validation
+  // Second pass: Populate inbound links and detect Orphan Indexable Pages (Section 5)
+  let orphanCount = 0;
+  for (const r of results) {
+    const inbound = Array.from(internalInboundGraph.get(r.urlPath) || []);
+    r.inboundLinks = inbound;
+
+    if (!r.isNoindex && r.urlPath !== "/") {
+      if (inbound.length === 0) {
+        orphanCount++;
+        r.errors.push(`ORPHAN INDEXABLE PAGE: No crawlable inbound internal links found for ${r.urlPath}`);
+      }
+    }
+  }
+
+  // Third pass: Detect Duplicate Titles and Duplicate Descriptions across Indexable Pages (Section 6)
+  const indexableTitles = new Map<string, string[]>();
+  const indexableDescriptions = new Map<string, string[]>();
+
+  for (const r of results) {
+    if (!r.isNoindex) {
+      if (r.title) {
+        const existing = indexableTitles.get(r.title) || [];
+        existing.push(r.urlPath);
+        indexableTitles.set(r.title, existing);
+      }
+      if (r.description) {
+        const existingDesc = indexableDescriptions.get(r.description) || [];
+        existingDesc.push(r.urlPath);
+        indexableDescriptions.set(r.description, existingDesc);
+      }
+    }
+  }
+
+  for (const [titleStr, urls] of indexableTitles.entries()) {
+    if (urls.length > 1) {
+      const err = `DUPLICATE INDEXABLE TITLE "${titleStr}" shared across: ${urls.join(", ")}`;
+      for (const u of urls) {
+        const match = results.find((r) => r.urlPath === u);
+        match?.errors.push(err);
+      }
+    }
+  }
+
+  for (const [descStr, urls] of indexableDescriptions.entries()) {
+    if (urls.length > 1) {
+      const err = `DUPLICATE INDEXABLE DESCRIPTION "${descStr.substring(0, 40)}..." shared across: ${urls.join(", ")}`;
+      for (const u of urls) {
+        const match = results.find((r) => r.urlPath === u);
+        match?.errors.push(err);
+      }
+    }
+  }
+
+  // Fourth pass: XML Sitemap Verification
   let sitemapUrlCount = 0;
   const sitemapIndexPath = path.join(distDir, "sitemap-index.xml");
   const sitemap0Path = path.join(distDir, "sitemap-0.xml");
@@ -295,23 +408,50 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
     sitemapXml = fs.readFileSync(sitemapIndexPath, "utf-8");
   }
 
+  const sitemapUrls = new Set<string>();
   if (sitemapXml) {
     const locMatches = sitemapXml.match(/<loc>([\s\S]*?)<\/loc>/gi) || [];
     sitemapUrlCount = locMatches.length;
 
     for (const locTag of locMatches) {
       const locUrl = locTag.replace(/<[^>]+>/g, "").trim();
+      sitemapUrls.add(locUrl);
+
       if (!locUrl.startsWith("https://communityhub-directory.netlify.app")) {
         errors.push(`Sitemap URL does not match production host: ${locUrl}`);
       }
 
       const relPath = locUrl.replace("https://communityhub-directory.netlify.app", "") || "/";
-      const cleanPath = relPath === "" ? "/" : relPath.replace(/\/+$/, "");
+      const cleanPath = (relPath === "" || relPath === "/") ? "/" : relPath.replace(/\/+$/, "");
 
-      // Check if sitemap contains a page marked as noindex
       const matchingPage = results.find((r) => r.urlPath === cleanPath);
-      if (matchingPage && matchingPage.isNoindex) {
+      if (!matchingPage) {
+        errors.push(`Sitemap contains non-existent URL: ${locUrl}`);
+      } else if (matchingPage.isNoindex) {
         errors.push(`Sitemap contains noindex page: ${locUrl}`);
+      }
+    }
+
+    // Verify all indexable pages are present in sitemap
+    for (const r of results) {
+      if (!r.isNoindex) {
+        const expectedSitemapUrl = r.urlPath === "/"
+          ? "https://communityhub-directory.netlify.app/"
+          : `https://communityhub-directory.netlify.app${r.urlPath}`;
+        if (!sitemapUrls.has(expectedSitemapUrl)) {
+          errors.push(`Indexable page missing from XML sitemap: ${expectedSitemapUrl}`);
+        }
+      }
+    }
+  }
+
+  // Aggregate all page errors
+  for (const r of results) {
+    if (r.errors.length > 0) {
+      for (const e of r.errors) {
+        if (!errors.includes(`[${r.urlPath}] ${e}`)) {
+          errors.push(`[${r.urlPath}] ${e}`);
+        }
       }
     }
   }
@@ -319,12 +459,13 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
   const passed = errors.length === 0;
 
   console.log("==================================================");
-  console.log("?? SEO BUILD AUDIT SUMMARY");
+  console.log("?? ENHANCED SEO BUILD AUDIT SUMMARY");
   console.log("==================================================");
   console.log(`Total HTML Pages Audited : ${htmlFiles.length}`);
   console.log(`Indexable Pages          : ${indexableCount}`);
   console.log(`Noindex Pages            : ${noindexCount}`);
   console.log(`Sitemap URLs             : ${sitemapUrlCount}`);
+  console.log(`Orphan Indexable Pages   : ${orphanCount}`);
   console.log(`Audit Errors             : ${errors.length}`);
   console.log("==================================================");
 
@@ -334,7 +475,7 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
       console.error(`  • ${err}`);
     }
   } else {
-    console.log("? All SEO checks PASSED successfully!");
+    console.log("? All SEO, Internal Link Graph, and Accessibility checks PASSED!");
   }
   console.log("==================================================\n");
 
@@ -344,6 +485,7 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")): {
     indexableCount,
     noindexCount,
     sitemapUrlCount,
+    orphanCount,
     results,
     errors,
   };

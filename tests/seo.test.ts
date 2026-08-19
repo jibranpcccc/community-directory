@@ -10,7 +10,6 @@ import {
   generateBreadcrumbSchema,
   generateCollectionPageSchema,
   generateOrganizationSchema,
-  generateFAQSchema,
   generateCommunityDetailSchema,
 } from "../src/lib/schema";
 import { siteConfig } from "../src/config/site";
@@ -62,16 +61,20 @@ describe("SEO Engine & JSON-LD Generators", () => {
       expect(getIndexability("category", 3)).toBe(false);
       expect(getIndexability("platform", 0)).toBe(false);
       expect(getIndexability("job-type", 2)).toBe(false);
-      expect(getIndexability("tag", 1)).toBe(false);
     });
 
-    it("enforces index eligibility for taxonomy pages with 5 or more listings", () => {
+    it("enforces index eligibility for country, category, platform, and job-type with 5 or more listings", () => {
       expect(getIndexability("country", 5)).toBe(true);
       expect(getIndexability("country", 10)).toBe(true);
       expect(getIndexability("category", 5)).toBe(true);
       expect(getIndexability("platform", 6)).toBe(true);
       expect(getIndexability("job-type", 5)).toBe(true);
-      expect(getIndexability("tag", 8)).toBe(true);
+    });
+
+    it("permanently enforces noindex for tag pages regardless of count (0, 5, 50)", () => {
+      expect(getIndexability("tag", 0)).toBe(false);
+      expect(getIndexability("tag", 5)).toBe(false);
+      expect(getIndexability("tag", 50)).toBe(false);
     });
 
     it("enforces noindex for utility, success, and 404 pages", () => {
@@ -99,7 +102,7 @@ describe("SEO Engine & JSON-LD Generators", () => {
   });
 
   describe("Structured Data Schema Generators", () => {
-    it("generates valid Organization JSON-LD schema", () => {
+    it("generates valid Organization JSON-LD schema for JobAlertHub publisher", () => {
       const schema = generateOrganizationSchema();
       expect(schema["@context"]).toBe("https://schema.org");
       expect(schema["@type"]).toBe("Organization");
@@ -108,13 +111,13 @@ describe("SEO Engine & JSON-LD Generators", () => {
       expect(schema.logo).toBe(`${baseUrl}/favicon.svg`);
     });
 
-    it("generates valid WebSite JSON-LD schema", () => {
+    it("generates factual WebSite JSON-LD schema without SearchAction", () => {
       const schema = generateWebSiteSchema();
       expect(schema["@context"]).toBe("https://schema.org");
       expect(schema["@type"]).toBe("WebSite");
       expect(schema.name).toBe(siteConfig.name);
       expect(schema.url).toBe(baseUrl);
-      expect(schema.potentialAction["@type"]).toBe("SearchAction");
+      expect((schema as any).potentialAction).toBeUndefined();
     });
 
     it("generates valid BreadcrumbList JSON-LD schema", () => {
@@ -170,7 +173,7 @@ describe("SEO Engine & JSON-LD Generators", () => {
       expect(schema.mainEntity.itemListElement[0].url).toBe(`${baseUrl}/group/astro-lounge-discord`);
     });
 
-    it("generates factual CommunityDetail WebPage schema without JobPosting, ratings, or fake products", () => {
+    it("generates factual CommunityDetail WebPage schema without unsupported Organization identity", () => {
       const community: Community = {
         id: "northerndev-discord",
         slug: "northerndev-formerly-tech-career-north-discord",
@@ -202,7 +205,11 @@ describe("SEO Engine & JSON-LD Generators", () => {
       expect(schema["@type"]).toBe("WebPage");
       expect(schema.name).toBe("NorthernDev (formerly Tech Career North) (discord)");
       expect(schema.url).toBe(`${baseUrl}/group/northerndev-formerly-tech-career-north-discord`);
-      expect(schema.mainEntity["@type"]).toBe("Organization");
+      expect((schema as any).mainEntity).toBeUndefined(); // Informal chat communities are NOT typed as Organization
+      expect(schema.about).toEqual({
+        "@type": "Thing",
+        name: "NorthernDev (formerly Tech Career North)",
+      });
 
       // Verify no forbidden schemas exist
       const schemaString = JSON.stringify(schema);
@@ -210,6 +217,7 @@ describe("SEO Engine & JSON-LD Generators", () => {
       expect(schemaString).not.toContain("AggregateRating");
       expect(schemaString).not.toContain("Review");
       expect(schemaString).not.toContain("Product");
+      expect(schemaString).not.toContain("FAQPage");
     });
   });
 });

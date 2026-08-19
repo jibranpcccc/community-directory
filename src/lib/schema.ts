@@ -8,7 +8,8 @@ export interface BreadcrumbItem {
 }
 
 /**
- * Generates WebSite JSON-LD schema with search action potential.
+ * Generates factual WebSite JSON-LD schema for JobAlertHub.
+ * Sitelinks searchbox / SearchAction is intentionally omitted per modern Google guidelines.
  */
 export function generateWebSiteSchema() {
   return {
@@ -17,14 +18,6 @@ export function generateWebSiteSchema() {
     name: siteConfig.name,
     url: getCanonicalUrl("/"),
     description: siteConfig.description,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${getCanonicalUrl("/jobs")}?search={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -73,7 +66,7 @@ export function generateCollectionPageSchema(
 }
 
 /**
- * Generates Organization JSON-LD schema for the site publisher.
+ * Generates Organization JSON-LD schema strictly for JobAlertHub itself (the directory publisher).
  */
 export function generateOrganizationSchema() {
   return {
@@ -88,41 +81,21 @@ export function generateOrganizationSchema() {
 }
 
 /**
- * Generates FAQPage JSON-LD schema for educational content.
- */
-export function generateFAQSchema(faqs: { question: string; answer: string }[]) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
-}
-
-/**
- * Generates WebPage schema for individual community listing.
- * Strictly adheres to non-fabricated data; NO fake JobPosting, NO fake aggregateRating or product schema.
+ * Generates factual WebPage schema for an individual community listing.
+ * Strictly avoids assigning unsupported Organization schemas or fake JobPosting/Review/Rating schemas.
  */
 export function generateCommunityDetailSchema(community: Community) {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: `${community.title} (${community.platform})`,
-    description: community.description || `${community.title} public online job community.`,
+    description: community.description || `${community.title} public job alert community.`,
     url: getCanonicalUrl(`/group/${community.slug}`),
     datePublished: community.discoveredAt,
     dateModified: community.updatedAt || community.lastCheckedAt || community.discoveredAt,
-    mainEntity: {
-      "@type": "Organization",
+    about: {
+      "@type": "Thing",
       name: community.title,
-      url: community.inviteUrl,
-      sameAs: community.sourceUrls,
     },
   };
 }

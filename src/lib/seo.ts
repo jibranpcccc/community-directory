@@ -25,7 +25,11 @@ export interface SeoProps {
 
 /**
  * Returns whether a page is eligible for search engine indexing based on its type and published inventory count.
- * Threshold: 5+ published listings required for programmatic taxonomy pages to prevent thin content indexing.
+ * Gating Rules:
+ * - Home, Jobs catalog, Trust pages, and Published Groups are eligible (true).
+ * - Country, Category, Platform, Job-Type require >= 5 published listings to prevent thin content indexing.
+ * - Tags are PERMANENTLY NOINDEX (false) to prevent duplicate intent overlap with primary taxonomies.
+ * - Utility, success, and 404 pages are PERMANENTLY NOINDEX (false).
  */
 export function getIndexability(pageType: PageType, publishedCount: number = 0): boolean {
   switch (pageType) {
@@ -39,18 +43,18 @@ export function getIndexability(pageType: PageType, publishedCount: number = 0):
     case "category":
     case "platform":
     case "job-type":
-    case "tag":
       return publishedCount >= siteConfig.taxonomyMinCommunitiesForIndex;
+    case "tag":
     case "utility":
     case "404":
     default:
-      return false; // noindex for forms, success pages, error pages, thin utilities
+      return false; // permanently noindex for tags, forms, success pages, error pages, thin utilities
   }
 }
 
 /**
  * Returns the absolute canonical URL for a given path.
- * Normalizes host from siteConfig.url and enforces single trailing-slash policy (no trailing slash except root).
+ * Enforces single trailing-slash policy (no trailing slash except root).
  */
 export function getCanonicalUrl(path: string = "/"): string {
   const base = siteConfig.url.replace(/\/+$/, "");

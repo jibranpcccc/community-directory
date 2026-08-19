@@ -38,18 +38,25 @@ const schema = generateCollectionPageSchema(
     { name: `#${tag}`, item: `/tag/${tag}` },
   ]}
   canonicalPath={`/tag/${tag}`}
-  jsonLd={schema}
   pageType="tag"
-  noindex={communities.length < siteConfig.tagPageMinCommunities}
+  noindex={true}
+  jsonLd={schema}
 >
-  <div class="space-y-8">
+  <div class="space-y-6">
+    <!-- Tag Intent Clarification Banner -->
+    <div class="neo-card-yellow p-4 text-xs font-bold text-black">
+      <span>Tag Filter: </span>
+      <span class="font-black">#{tag}</span>. Browse all public job channels matching this tag. For structured geographic or role listings, see our <a href="/jobs" class="underline font-black">All Jobs catalog</a>.
+    </div>
+
+    <!-- Group Grid -->
     <CommunityGrid
       communities={communities}
-      emptyTitle={`No communities found for #${tag}`}
-      emptyMessage="There are currently no listings matching this tag."
+      emptyTitle={`No communities currently tagged #${tag}`}
+      emptyDescription="We haven't indexed any active communities with this tag yet."
     />
 
-    <!-- Safety Notice -->
+    <!-- Safety Banner -->
     <SafetyNotice type="job-warning" />
   </div>
 </DirectoryLayout>
