@@ -34,7 +34,7 @@ const filtered = filterAndSortCommunities(
 );
 
 const schema = generateCollectionPageSchema(
-  `${jobTypeConfig.name} Communities & Alert Channels`,
+  `${jobTypeConfig.name} Job Alert Groups`,
   jobTypeConfig.description,
   `/job-type/${jobTypeConfig.slug}`,
   filtered
@@ -44,7 +44,7 @@ const noindex = jobCommunities.length < siteConfig.jobTypeMinCommunities;
 ---
 
 <DirectoryLayout
-  heading={`${jobTypeConfig.name} Alert Groups`}
+  heading={`${jobTypeConfig.name} Job Alert Groups`}
   subheading={jobTypeConfig.description}
   breadcrumbs={[
     { name: "All Jobs", item: "/jobs" },
@@ -52,23 +52,30 @@ const noindex = jobCommunities.length < siteConfig.jobTypeMinCommunities;
   ]}
   canonicalPath={`/job-type/${jobTypeConfig.slug}`}
   noindex={noindex}
+  pageType="job-type"
   jsonLd={schema}
 >
   <!-- Filter Bar -->
   <FilterBar
     currentFilters={{ search, countryCode, platform, verificationStatus }}
     currentSort={sort}
-    totalCount={filtered.length}
+    showCategoryFilter={true}
   />
 
-  <!-- Interactive Grid Container -->
-  <div id="communities-results-container" class="space-y-8">
+  <div class="flex items-center justify-between mb-4 mt-6">
+    <span class="text-xs font-bold text-black">
+      Showing <strong class="underline font-black">{filtered.length}</strong> {filtered.length === 1 ? 'community' : 'communities'} for {jobTypeConfig.name}
+    </span>
+  </div>
+
+  <div class="space-y-8">
     <CommunityGrid
       communities={filtered}
-      emptyTitle={`No ${jobTypeConfig.name} groups found`}
-      emptyMessage={`We are currently discovering and validating active ${jobTypeConfig.name} alert channels. Check back soon or submit a group!`}
+      emptyTitle={`No ${jobTypeConfig.name.toLowerCase()} groups currently published`}
+      emptyMessage="JobAlertHub continues checking public communities automatically. Verified communities will appear here once they pass publication gates."
     />
 
+    <!-- Safety Notice -->
     <SafetyNotice type="job-warning" />
   </div>
 </DirectoryLayout>

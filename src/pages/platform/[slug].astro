@@ -23,8 +23,15 @@ interface Props {
 const { platform } = Astro.props;
 const communities = getCommunitiesByPlatform(platform.id);
 
+const platformNoun =
+  platform.id === "discord"
+    ? "Servers"
+    : platform.id === "telegram"
+    ? "Channels & Groups"
+    : "Groups";
+
 const schema = generateCollectionPageSchema(
-  `${platform.name} Job Groups & Alert Channels`,
+  `Job Alert ${platform.name} ${platformNoun}`,
   `Browse verified ${platform.name} job groups, employment channels, and career communities across the US, UK, Canada, and Australia.`,
   `/platform/${platform.id}`,
   communities
@@ -32,34 +39,39 @@ const schema = generateCollectionPageSchema(
 ---
 
 <DirectoryLayout
-  heading={`${platform.name} Job Groups`}
-  subheading={`Explore publicly discoverable ${platform.name} job alert channels, hiring groups, and career servers.`}
+  heading={`Job Alert ${platform.name} ${platformNoun}`}
+  subheading={`Explore publicly discoverable ${platform.name} job alert channels, hiring groups, and career communities.`}
   breadcrumbs={[
     { name: "All Jobs", item: "/jobs" },
     { name: `${platform.name} Jobs`, item: `/platform/${platform.id}` },
   ]}
   canonicalPath={`/platform/${platform.id}`}
   jsonLd={schema}
-  noindex={communities.length < siteConfig.taxonomyMinCommunitiesForIndex}
+  pageType="platform"
+  noindex={communities.length < siteConfig.platformMinCommunities}
 >
-  <!-- Non-Affiliation Notice -->
-  <div class="mb-6 neo-card p-4 bg-white text-xs font-bold text-black">
-    ⚠️ <strong>Platform Notice:</strong> This directory catalogues publicly discoverable {platform.name} job alert links and channels. We are an independent directory not affiliated with or endorsed by {platform.name} or Meta.
+  <!-- Non-Affiliation Platform Notice -->
+  <div class="mb-6 neo-card p-4 bg-white text-xs font-bold text-black flex items-center gap-2">
+    <span>??</span>
+    <span>
+      <strong>Platform Notice:</strong> This directory catalogues publicly discoverable {platform.name} job alert links. We are an independent directory and are not affiliated with or endorsed by {platform.name}.
+    </span>
   </div>
 
   <div class="flex items-center justify-between mb-4">
     <span class="text-xs font-bold text-black">
-      Showing <strong class="underline font-black">{communities.length}</strong> listed job groups on {platform.name}
+      Showing <strong class="underline font-black">{communities.length}</strong> {communities.length === 1 ? 'community' : 'communities'} on {platform.name}
     </span>
   </div>
 
   <div class="space-y-8">
     <CommunityGrid
       communities={communities}
-      emptyTitle={`No ${platform.name} job groups found`}
-      emptyMessage={`We have not indexed any public ${platform.name} job communities yet. Submit one today!`}
+      emptyTitle={`No active ${platform.name} job communities currently published`}
+      emptyMessage="JobAlertHub continues checking public communities automatically. Verified communities will appear here once they pass publication gates."
     />
 
+    <!-- Safety Notice -->
     <SafetyNotice type="job-warning" />
   </div>
 </DirectoryLayout>

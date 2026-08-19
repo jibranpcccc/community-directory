@@ -8,12 +8,13 @@ const organizationSchema = generateOrganizationSchema();
 
 <DirectoryLayout
   heading={`About ${siteConfig.name}`}
-  subheading="Building a clean, structured, and scam-free catalog for discovering public job alert communities."
+  subheading="Building an active, structured, and scam-screened directory for discovering public job alert communities."
   breadcrumbs={[
     { name: "All Jobs", item: "/jobs" },
     { name: "About", item: "/about" },
   ]}
   canonicalPath="/about"
+  pageType="trust"
   jsonLd={organizationSchema}
 >
   <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base font-medium text-slate-800 leading-relaxed">
@@ -23,40 +24,45 @@ const organizationSchema = generateOrganizationSchema();
       </div>
       <h2 class="text-2xl font-black text-black">Our Mission</h2>
       <p class="font-bold text-slate-700">
-        Job hunting has moved into real-time community channels across WhatsApp, Telegram, and Discord. Job seekers in premium English-speaking markets (USA, UK, Canada, and Australia) rely on these groups for early vacancy alerts, recruiter direct messages, and peer networking.
+        Job hunting has increasingly moved into real-time messaging communities across Discord, Telegram, and WhatsApp. Job seekers across English-speaking markets (the United States, United Kingdom, Canada, and Australia) use these channels for immediate vacancy notices, networking, and direct hiring discussions.
       </p>
       <p class="font-bold text-slate-700">
-        <strong>{siteConfig.name}</strong> was created to catalog legitimate, active job alert groups while aggressively rejecting upfront-fee scams, task optimization schemes, and dead invite links.
+        <strong>{siteConfig.name}</strong> was created to catalog legitimate, publicly discoverable job alert communities while screening against upfront fee scams, task optimization schemes, and dead invite links.
       </p>
     </section>
 
+    <!-- Factual Metric Grid -->
     <section class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-8">
       <div class="neo-card-yellow p-6 text-center">
         <div class="text-3xl font-black text-black mb-1">0%</div>
         <div class="text-xs font-black uppercase tracking-wider text-black">Fake Metrics</div>
-        <p class="text-xs font-bold text-slate-700 mt-1">We never fabricate member counts or reviews.</p>
+        <p class="text-xs font-bold text-slate-700 mt-1">We never fabricate member counts, growth stats, or ratings.</p>
       </div>
 
       <div class="neo-card-mint p-6 text-center">
         <div class="text-3xl font-black text-black mb-1">100%</div>
         <div class="text-xs font-black uppercase tracking-wider text-black">Public Channels</div>
-        <p class="text-xs font-bold text-slate-700 mt-1">Only active, publicly accessible group links.</p>
+        <p class="text-xs font-bold text-slate-700 mt-1">Only active, publicly discoverable group links.</p>
       </div>
 
       <div class="neo-card-purple p-6 text-center">
         <div class="text-3xl font-black text-black mb-1">Strict</div>
-        <div class="text-xs font-black uppercase tracking-wider text-black">Scam Filtering</div>
-        <p class="text-xs font-bold text-slate-700 mt-1">Automated rejection of upfront-fee schemes.</p>
+        <div class="text-xs font-black uppercase tracking-wider text-black">Scam Screening</div>
+        <p class="text-xs font-bold text-slate-700 mt-1">Automated screening against pay-to-work and task schemes.</p>
       </div>
     </section>
 
+    <!-- Transparent Automation Disclosure (Section 46) -->
     <section class="neo-card p-6 sm:p-8 space-y-3 bg-white">
       <div class="inline-block bg-[#A7F3D0] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
-        OPERATIONS
+        OPERATIONS & AUTOMATION DISCLOSURE
       </div>
       <h2 class="text-2xl font-black text-black">How We Operate</h2>
       <p class="font-bold text-slate-700">
-        We combine automated search grounding, daily link health checks, and strict human moderation to index public career channels, developer servers, and regional hiring groups. Job seekers can browse completely free of charge.
+        {siteConfig.name} uses automated search and validation systems to discover and monitor public job communities. Listings are published only when they pass configured relevance, link-health, geographic, and safety checks.
+      </p>
+      <p class="font-bold text-slate-700">
+        Published communities are rechecked automatically on a daily schedule. If an invitation link expires or becomes unreachable, the listing is automatically removed.
       </p>
     </section>
   </div>

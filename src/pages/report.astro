@@ -20,12 +20,14 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
   title="Report a Listing"
   description="Report a broken link, scam concern, or misleading information in our directory."
   canonicalPath="/report"
+  pageType="utility"
+  noindex={true}
   jsonLd={breadcrumbSchema}
 >
   <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
     <Breadcrumbs items={breadcrumbs} />
 
-    <div class="mb-8 p-6 sm:p-8 rounded-3xl border-[3px] border-black bg-[#FECDD3] shadow-[5px_5px_0px_0px_#000]">
+    <header class="mb-8 p-6 sm:p-8 rounded-3xl border-[3px] border-black bg-[#FECDD3] shadow-[5px_5px_0px_0px_#000]">
       <div class="inline-block bg-white px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
         MODERATION DESK
       </div>
@@ -35,7 +37,7 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
       <p class="mt-2 text-sm font-bold text-black/80 leading-relaxed">
         Help us keep the directory accurate and safe. If you found a dead link, suspicious behavior, or incorrect metadata, submit this report for review.
       </p>
-    </div>
+    </header>
 
     <!-- Netlify Form -->
     <form
@@ -51,7 +53,7 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
       <!-- Honeypot -->
       <p class="hidden">
         <label>
-          Don’t fill this out if you're human: <input name="bot-field" />
+          Don't fill this out if you're human: <input name="bot-field" />
         </label>
       </p>
 
@@ -147,7 +149,7 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
           type="submit"
           class="neo-button w-full bg-[#FECDD3] hover:bg-[#FDA4AF] py-3.5 text-sm font-black text-black shadow-[4px_4px_0px_0px_#000]"
         >
-          Submit Report for Moderation →
+          Submit Report for Moderation &rarr;
         </button>
       </div>
     </form>

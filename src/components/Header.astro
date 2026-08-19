@@ -5,9 +5,9 @@ import { siteConfig } from "../config/site";
 <header class="sticky top-0 z-40 w-full border-b-[3px] border-black bg-white">
   <div class="max-w-7xl mx-auto flex h-18 items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
     <!-- Brand Logo -->
-    <a href="/" class="flex items-center gap-2.5 group">
-      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FEF08A] text-black border-2 border-black shadow-[3px_3px_0px_0px_#000] transition-transform group-hover:scale-105 group-hover:rotate-1">
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <a href="/" class="flex items-center gap-2.5 group" aria-label="JobAlertHub Homepage">
+      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FEF08A] text-black border-2 border-black shadow-[3px_3px_0px_0px_#000] transition-transform group-hover:scale-105">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       </div>
@@ -22,13 +22,14 @@ import { siteConfig } from "../config/site";
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden md:flex items-center gap-2 lg:gap-3 text-xs font-black text-black">
+    <nav class="hidden md:flex items-center gap-1.5 lg:gap-2 text-xs font-black text-black" aria-label="Main Navigation">
       <a href="/jobs" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FEF08A] hover:border-2 hover:border-black transition-all">All Jobs</a>
-      <a href="/country/usa" class="rounded-lg px-2.5 py-1.5 hover:bg-[#BAE6FD] hover:border-2 hover:border-black transition-all">???? USA</a>
-      <a href="/country/uk" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FECDD3] hover:border-2 hover:border-black transition-all">???? UK</a>
-      <a href="/country/canada" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FED7AA] hover:border-2 hover:border-black transition-all">???? Canada</a>
-      <a href="/country/australia" class="rounded-lg px-2.5 py-1.5 hover:bg-[#DDD6FE] hover:border-2 hover:border-black transition-all">???? Australia</a>
-      <a href="/job-type/remote-jobs" class="rounded-lg px-2.5 py-1.5 hover:bg-[#A7F3D0] hover:border-2 hover:border-black transition-all">Remote Jobs</a>
+      <a href="/country/usa" class="rounded-lg px-2.5 py-1.5 hover:bg-[#BAE6FD] hover:border-2 hover:border-black transition-all">USA</a>
+      <a href="/country/uk" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FECDD3] hover:border-2 hover:border-black transition-all">UK</a>
+      <a href="/country/canada" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FED7AA] hover:border-2 hover:border-black transition-all">Canada</a>
+      <a href="/country/australia" class="rounded-lg px-2.5 py-1.5 hover:bg-[#DDD6FE] hover:border-2 hover:border-black transition-all">Australia</a>
+      <a href="/category/tech-jobs" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FEF9C3] hover:border-2 hover:border-black transition-all">Tech Jobs</a>
+      <a href="/how-we-verify" class="rounded-lg px-2.5 py-1.5 hover:bg-[#A7F3D0] hover:border-2 hover:border-black transition-all">How We Verify</a>
       <a href="/safety" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FDE047] hover:border-2 hover:border-black transition-all">Safety</a>
     </nav>
 
@@ -36,12 +37,12 @@ import { siteConfig } from "../config/site";
     <div class="flex items-center gap-3">
       <a
         href="/submit"
-        class="neo-button bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black px-4 py-2 text-xs font-black"
+        class="neo-btn inline-flex items-center bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black px-4 py-2 text-xs font-black border-2 border-black shadow-[2px_2px_0px_0px_#000]"
       >
-        <svg class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
         </svg>
-        <span>+ Submit Group</span>
+        <span>Submit Group</span>
       </a>
 
       <!-- Mobile Menu Toggle Button -->
@@ -53,7 +54,7 @@ import { siteConfig } from "../config/site";
         aria-expanded="false"
         aria-controls="mobile-menu"
       >
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
@@ -66,33 +67,37 @@ import { siteConfig } from "../config/site";
       All Job Groups
     </a>
     <a href="/country/usa" class="block rounded-xl border-2 border-black bg-[#BAE6FD] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
-      ???? USA Job Groups
+      USA Job Groups
     </a>
     <a href="/country/uk" class="block rounded-xl border-2 border-black bg-[#FECDD3] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
-      ???? UK Job Groups
+      UK Job Groups
     </a>
     <a href="/country/canada" class="block rounded-xl border-2 border-black bg-[#FED7AA] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
-      ???? Canada Job Groups
+      Canada Job Groups
     </a>
     <a href="/country/australia" class="block rounded-xl border-2 border-black bg-[#DDD6FE] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
-      ???? Australia Job Groups
+      Australia Job Groups
     </a>
-    <a href="/job-type/remote-jobs" class="block rounded-xl border-2 border-black bg-[#A7F3D0] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
-      Remote Job Groups
+    <a href="/category/tech-jobs" class="block rounded-xl border-2 border-black bg-[#FEF9C3] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
+      Tech Jobs
+    </a>
+    <a href="/how-we-verify" class="block rounded-xl border-2 border-black bg-[#A7F3D0] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
+      How We Verify
     </a>
     <a href="/safety" class="block rounded-xl border-2 border-black bg-[#FEF08A] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
-      Job Scam Safety Guide
+      Job Safety Guide
     </a>
   </div>
 </header>
 
-<script>
-  const btn = document.getElementById("mobile-menu-button");
-  const menu = document.getElementById("mobile-menu");
+<script is:inline>
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
   if (btn && menu) {
-    btn.addEventListener("click", () => {
-      const isHidden = menu.classList.toggle("hidden");
-      btn.setAttribute("aria-expanded", isHidden ? "false" : "true");
+    btn.addEventListener('click', () => {
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!isExpanded));
+      menu.classList.toggle('hidden');
     });
   }
 </script>

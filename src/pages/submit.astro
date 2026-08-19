@@ -18,12 +18,14 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
   title="Submit a Job Alert Group"
   description="Submit a public Telegram job channel, Discord career server, or WhatsApp job group to be catalogued in the directory."
   canonicalPath="/submit"
+  pageType="utility"
+  noindex={true}
   jsonLd={breadcrumbSchema}
 >
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
     <Breadcrumbs items={breadcrumbs} />
 
-    <div class="mb-8 p-6 sm:p-8 rounded-3xl border-[3px] border-black bg-[#FEF08A] shadow-[5px_5px_0px_0px_#000]">
+    <header class="mb-8 p-6 sm:p-8 rounded-3xl border-[3px] border-black bg-[#FEF08A] shadow-[5px_5px_0px_0px_#000]">
       <div class="inline-block bg-white px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
         JOB COMMUNITY SUBMISSIONS
       </div>
@@ -33,13 +35,13 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
       <p class="mt-2 text-sm font-bold text-black/80 leading-relaxed">
         Suggest a publicly discoverable job alert community. Every submission is reviewed to ensure link validity, career focus, and complete absence of job scams or fee requirements.
       </p>
-    </div>
+    </header>
 
     <!-- Submission Guidelines Box -->
     <div class="mb-8 neo-card-mint p-6 text-xs text-black font-bold space-y-2">
       <strong class="font-black text-black block text-sm uppercase tracking-wide">?? Submission Policy & Review Criteria</strong>
       <ul class="list-disc pl-4 space-y-1.5 text-black">
-        <li><strong>Premium English-Speaking Markets:</strong> Priority focus on the United States, United Kingdom, Canada, and Australia.</li>
+        <li><strong>English-Speaking Target Markets:</strong> Priority focus on the United States, United Kingdom, Canada, and Australia.</li>
         <li><strong>Zero Tolerance for Job Scams:</strong> Task scams, upfront fee requests, crypto/USDT deposits, and fake check schemes are permanently banned.</li>
         <li><strong>Public Communities Only:</strong> Do not submit private paid masterminds or password-protected resources.</li>
         <li><strong>Confidential Admin Contact:</strong> Any admin email provided is kept strictly private and never exposed publicly.</li>
@@ -48,61 +50,57 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
 
     <!-- Netlify Form -->
     <form
-      name="job-community-submission"
+      name="community-submission"
       method="POST"
       action="/submit-success"
       data-netlify="true"
       netlify-honeypot="bot-field"
       class="rounded-3xl border-[3px] border-black bg-white p-6 sm:p-8 shadow-[6px_6px_0px_0px_#000] space-y-6"
     >
-      <!-- Hidden Netlify Form identification -->
-      <input type="hidden" name="form-name" value="job-community-submission" />
+      <input type="hidden" name="form-name" value="community-submission" />
 
-      <!-- Honeypot Field for anti-bot protection -->
+      <!-- Honeypot for bot spam prevention -->
       <p class="hidden">
         <label>
-          Don’t fill this out if you're human: <input name="bot-field" />
+          Don't fill this out if you're human: <input name="bot-field" />
         </label>
       </p>
 
       <!-- Community Title -->
       <div>
         <label for="title" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Group / Channel Name <span class="text-rose-500">*</span>
+          Community Name <span class="text-rose-500">*</span>
         </label>
         <input
           type="text"
           name="title"
           id="title"
           required
-          maxlength="100"
-          placeholder="e.g., London Tech Jobs & Hiring"
+          placeholder="e.g. Remote Tech Careers & Hiring"
           class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         />
       </div>
 
-      <!-- Country & Platform Row -->
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <!-- Target Country -->
-        <div>
-          <label for="countryCode" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-            Target Country <span class="text-rose-500">*</span>
-          </label>
-          <select
-            name="countryCode"
-            id="countryCode"
-            required
-            class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] px-4 py-2.5 text-sm font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
-          >
-            <option value="">Select Country...</option>
-            {ENABLED_COUNTRIES.map((c) => (
-              <option value={c.code}>{c.flag} {c.name}</option>
-            ))}
-            <option value="GLOBAL">?? Global Remote</option>
-          </select>
-        </div>
+      <!-- Public Invite URL -->
+      <div>
+        <label for="inviteUrl" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
+          Public Invite URL <span class="text-rose-500">*</span>
+        </label>
+        <input
+          type="url"
+          name="inviteUrl"
+          id="inviteUrl"
+          required
+          placeholder="https://t.me/... or https://discord.gg/... or https://chat.whatsapp.com/..."
+          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
+        />
+        <p class="mt-1.5 text-xs font-bold text-slate-600">
+          Must be an active, publicly accessible Discord, Telegram, or WhatsApp invite.
+        </p>
+      </div>
 
-        <!-- Platform -->
+      <!-- Platform & Category Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label for="platform" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
             Platform <span class="text-rose-500">*</span>
@@ -119,14 +117,10 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
             ))}
           </select>
         </div>
-      </div>
 
-      <!-- Category & Work Arrangement Row -->
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <!-- Category -->
         <div>
           <label for="category" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-            Job Category <span class="text-rose-500">*</span>
+            Primary Job Category <span class="text-rose-500">*</span>
           </label>
           <select
             name="category"
@@ -140,86 +134,88 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
             ))}
           </select>
         </div>
-
-        <!-- Work Arrangement -->
-        <div>
-          <label for="workArrangement" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-            Work Arrangement
-          </label>
-          <select
-            name="workArrangement"
-            id="workArrangement"
-            class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] px-4 py-2.5 text-sm font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
-          >
-            <option value="unknown">Not Specified / Mixed</option>
-            <option value="remote">Remote</option>
-            <option value="hybrid">Hybrid</option>
-            <option value="onsite">On-Site</option>
-          </select>
-        </div>
       </div>
 
-      <!-- Invite URL -->
-      <div>
-        <label for="inviteUrl" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Public Invite URL <span class="text-rose-500">*</span>
-        </label>
-        <input
-          type="url"
-          name="inviteUrl"
-          id="inviteUrl"
-          required
-          placeholder="https://t.me/example, https://discord.gg/example, or https://chat.whatsapp.com/..."
-          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
-        />
+      <!-- Country & City Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="countryCode" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
+            Target Country <span class="text-rose-500">*</span>
+          </label>
+          <select
+            name="countryCode"
+            id="countryCode"
+            required
+            class="w-full rounded-xl border-2 border-black bg-[#FAF8F5] px-4 py-2.5 text-sm font-bold text-black shadow-[2px_2px_0px_0px_#000] focus:bg-white focus:outline-none"
+          >
+            <option value="">Select Target Country...</option>
+            {ENABLED_COUNTRIES.map((c) => (
+              <option value={c.code}>{c.flag} {c.name}</option>
+            ))}
+          </select>
+        </div>
+
+        <div>
+          <label for="city" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
+            Metro Area / City (Optional)
+          </label>
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="e.g. Toronto, London, Austin"
+            class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
+          />
+        </div>
       </div>
 
       <!-- Description -->
       <div>
         <label for="description" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Factual Description <span class="text-rose-500">*</span>
+          Description & Focus <span class="text-rose-500">*</span>
         </label>
         <textarea
           name="description"
           id="description"
-          rows="3"
+          rows="4"
           required
-          maxlength="500"
-          placeholder="Briefly describe what types of jobs are posted (e.g., UK nursing vacancies, US remote frontend engineering roles). Avoid hype."
+          placeholder="Briefly describe what kinds of jobs, alerts, or hiring discussions happen in this community."
           class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         ></textarea>
       </div>
 
-      <!-- Admin Contact (Private) -->
+      <!-- Official Source Link (Optional) -->
       <div>
-        <label for="adminContact" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
-          Admin Email or Contact (Private / Optional)
+        <label for="sourceUrl" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
+          Official Website or Source Page (Optional)
         </label>
         <input
-          type="email"
-          name="adminContact"
-          id="adminContact"
-          placeholder="admin@example.com"
+          type="url"
+          name="sourceUrl"
+          id="sourceUrl"
+          placeholder="https://yourcompany.com/community or university page"
           class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
         />
         <p class="mt-1.5 text-xs font-bold text-slate-600">
-          Used solely for listing moderation. Never published.
+          Providing an official domain page linking this invite helps earn a Source Confirmed badge.
         </p>
       </div>
 
-      <!-- Consent Checkbox -->
-      <div class="pt-2">
-        <label class="flex items-start gap-3 cursor-pointer">
-          <input
-            type="checkbox"
-            name="confirmedPublic"
-            required
-            class="mt-1 h-5 w-5 rounded border-2 border-black text-emerald-600 focus:ring-0"
-          />
-          <span class="text-xs font-bold text-black leading-relaxed">
-            I confirm that this community is a legitimate job alert channel and does not require candidates to pay money, complete paid task schemes, or deposit crypto.
-          </span>
+      <!-- Admin Email (Confidential) -->
+      <div>
+        <label for="adminEmail" class="block text-xs font-black uppercase tracking-wider text-black mb-1.5">
+          Your Email (Confidential / Verification Contact)
         </label>
+        <input
+          type="email"
+          name="adminEmail"
+          id="adminEmail"
+          placeholder="community.admin@example.com"
+          class="w-full rounded-xl border-2 border-black px-4 py-2.5 text-sm font-medium text-black placeholder:text-slate-500 shadow-[2px_2px_0px_0px_#000] focus:outline-none focus:shadow-[4px_4px_0px_0px_#000]"
+        />
+        <p class="mt-1.5 text-xs font-bold text-slate-600">
+          Strictly confidential. Never published or displayed in directory data.
+        </p>
       </div>
 
       <!-- Submit Button -->
@@ -228,7 +224,7 @@ const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
           type="submit"
           class="neo-button w-full bg-[#A7F3D0] hover:bg-[#6EE7B7] py-3.5 text-sm font-black text-black shadow-[4px_4px_0px_0px_#000]"
         >
-          Submit Job Community for Review ?
+          Submit Job Community for Review &rarr;
         </button>
       </div>
     </form>

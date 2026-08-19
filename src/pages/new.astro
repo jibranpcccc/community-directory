@@ -6,21 +6,22 @@ import { generateCollectionPageSchema } from "../lib/schema";
 
 const recentCommunities = getRecentlyAdded(24);
 const schema = generateCollectionPageSchema(
-  "Recently Added Communities",
-  "The latest publicly discovered online communities added to the directory.",
+  "Recently Added Job Groups",
+  "The latest publicly discovered job alert communities catalogued in the directory.",
   "/new",
   recentCommunities
 );
 ---
 
 <DirectoryLayout
-  heading="Recently Added Communities"
-  subheading="Discover the latest online communities recently catalogued in our public directory."
+  heading="Recently Added Job Groups"
+  subheading="Discover the latest job alert communities recently added to our public directory."
   breadcrumbs={[
-    { name: "Browse", item: "/communities" },
+    { name: "All Jobs", item: "/jobs" },
     { name: "Recently Added", item: "/new" },
   ]}
   canonicalPath="/new"
+  pageType="utility"
   jsonLd={schema}
   noindex={true}
 >

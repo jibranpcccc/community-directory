@@ -1,12 +1,12 @@
 export const siteConfig = {
   name: "JobAlertHub",
   shortName: "JobAlerts",
-  tagline: "Find Active Job Alert Groups",
+  tagline: "Active Job Alert Groups for US, UK, Canada & Australia",
   headline: "Find Active Job Alert Groups",
   subheadline:
-    "Discover public WhatsApp, Telegram and Discord communities sharing job openings, hiring alerts, career opportunities and remote work across the United States, United Kingdom, Canada and Australia.",
+    "Discover public WhatsApp, Telegram, and Discord communities sharing job openings, hiring alerts, career opportunities, and remote work across the United States, United Kingdom, Canada, and Australia.",
   description:
-    "Discover public WhatsApp, Telegram and Discord communities sharing job openings, hiring alerts, career opportunities and remote work across the United States, United Kingdom, Canada and Australia. Built with zero hallucinated metrics.",
+    "Discover active and verified job alert communities across Discord, Telegram, and WhatsApp for the US, UK, Canada, and Australia. Zero fake metrics, automated link validation, and strict scam screening.",
   url: process.env.PUBLIC_SITE_URL || "https://communityhub-directory.netlify.app",
   defaultLocale: "en",
   showAdPlaceholders: process.env.SHOW_AD_PLACEHOLDERS === "true",
@@ -15,9 +15,10 @@ export const siteConfig = {
   categoryMinCommunities: 5,         // minimum 5 published listings required before category indexation
   countryMinCommunities: 5,          // minimum 5 published listings required before country indexation
   jobTypeMinCommunities: 5,          // minimum 5 published listings required before job-type indexation
+  platformMinCommunities: 5,         // minimum 5 published listings required before platform indexation
   paginationPageSize: 24,
   links: {
-    github: "https://github.com",
+    github: "https://github.com/jibranpcccc/community-directory",
     submit: "/submit",
     report: "/report",
   },
@@ -30,7 +31,7 @@ export const siteConfig = {
     { label: "Remote Jobs", href: "/job-type/remote-jobs" },
     { label: "Tech Jobs", href: "/category/tech-jobs" },
     { label: "Healthcare", href: "/category/healthcare-jobs" },
-    { label: "Submit", href: "/submit" },
+    { label: "How We Verify", href: "/how-we-verify" },
     { label: "Safety", href: "/safety" },
   ],
   footerNav: {
@@ -49,17 +50,17 @@ export const siteConfig = {
       { label: "Visa Sponsorship", href: "/category/visa-sponsorship-jobs" },
     ],
     platforms: [
+      { label: "Discord Job Servers", href: "/platform/discord" },
       { label: "Telegram Job Channels", href: "/platform/telegram" },
       { label: "WhatsApp Job Groups", href: "/platform/whatsapp" },
-      { label: "Discord Job Servers", href: "/platform/discord" },
     ],
     trustAndLegal: [
-      { label: "Job Scam Safety Guide", href: "/safety" },
+      { label: "About JobAlertHub", href: "/about" },
       { label: "How We Verify", href: "/how-we-verify" },
+      { label: "Job Scam Safety Guide", href: "/safety" },
       { label: "Editorial Policy", href: "/editorial-policy" },
-      { label: "About Us", href: "/about" },
-      { label: "Report Listing", href: "/report" },
-      { label: "Contact", href: "/contact" },
+      { label: "Report a Listing", href: "/report" },
+      { label: "Contact Us", href: "/contact" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
       { label: "Disclaimer", href: "/disclaimer" },

@@ -23,7 +23,7 @@ const filtered = filterAndSortCommunities(
 );
 
 const schema = generateCollectionPageSchema(
-  "All Verified Job Alert Groups",
+  "All Active Job Alert Groups",
   "Browse publicly discoverable job alert communities, hiring channels, and career servers for the US, UK, Canada, and Australia.",
   "/jobs",
   filtered
@@ -32,9 +32,10 @@ const schema = generateCollectionPageSchema(
 
 <DirectoryLayout
   heading="Explore All Job Alert Groups"
-  subheading="Discover active and verified job alert communities, hiring channels, and career servers across WhatsApp, Telegram, and Discord."
+  subheading="Discover active job alert communities, hiring channels, and career servers across Discord, Telegram, and WhatsApp."
   breadcrumbs={[{ name: "All Jobs", item: "/jobs" }]}
   canonicalPath="/jobs"
+  pageType="jobs"
   jsonLd={schema}
 >
   <!-- Filter Bar -->
@@ -49,7 +50,7 @@ const schema = generateCollectionPageSchema(
     <CommunityGrid
       communities={filtered}
       emptyTitle="No job groups match your filter criteria"
-      emptyMessage="Try resetting or adjusting your search filters, or be the first to submit a public job group."
+      emptyMessage="Try resetting or adjusting your search filters, or submit a public job group to be indexed."
     />
 
     <SafetyNotice type="job-warning" />

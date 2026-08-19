@@ -5,46 +5,48 @@ import { generateFAQSchema } from "../lib/schema";
 
 const faqSchema = generateFAQSchema([
   {
-    question: "What does the Unverified badge mean?",
-    answer: "The public invite link was discovered through automated search or indexing and validated as an active link, but no direct confirmation has been performed with an official primary domain or community owner.",
+    question: "What does the Active Link status mean?",
+    answer: "The public invite link was tested and verified as reachable during our latest automated check. It confirms the link is active and valid, but does not constitute an endorsement of job offers posted inside.",
   },
   {
-    question: "What does the Source Confirmed badge mean?",
-    answer: "The invite link was parsed directly from an outbound link on an official, authoritative website (e.g. company career portal, university site, official project page) confirming genuine association.",
+    question: "What does the Source Confirmed status mean?",
+    answer: "The invite link or server identifier was independently corroborated by an outbound reference on an authoritative public website or official organization page.",
   },
   {
-    question: "What does the Owner Confirmed badge mean?",
-    answer: "The community creator or recognized recruiter submitted verifiable proof of administration and controls the listing details.",
+    question: "How often are published communities rechecked?",
+    answer: "Every published community is rechecked automatically on a daily schedule. If a link expires or returns an error across multiple consecutive checks, it is automatically unpublished.",
   },
   {
-    question: "What does the Manually Reviewed badge mean?",
-    answer: "A human editor independently inspected the link, title, categorization, and public activity to confirm basic legitimacy and absence of obvious scam language.",
+    question: "Does listing inclusion mean employers are verified?",
+    answer: "No. Directory inclusion confirms only that the community exists and meets public link health standards. Job seekers must always verify employers and job postings independently.",
   },
 ]);
 ---
 
 <DirectoryLayout
   heading="How We Verify Job Communities"
-  subheading="A transparent breakdown of our verification tiers and data standards for job alert groups."
+  subheading="A transparent breakdown of our data standards, automated validation pipeline, and trust tiers."
   breadcrumbs={[
     { name: "All Jobs", item: "/jobs" },
     { name: "How We Verify", item: "/how-we-verify" },
   ]}
   canonicalPath="/how-we-verify"
+  pageType="trust"
   jsonLd={faqSchema}
 >
   <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base font-medium text-slate-800 leading-relaxed">
+    <!-- Core Standard Card -->
     <div class="neo-card p-6 sm:p-8 bg-white">
       <div class="inline-block bg-[#FEF08A] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
-        ZERO HALLUCINATION
+        TRANSPARENT METHODOLOGY
       </div>
       <h2 class="text-2xl font-black text-black tracking-tight mb-3">Our Core Verification Standard</h2>
       <p class="font-bold text-slate-700">
-        Unlike directories that invent fake "Verified" badges to create an illusion of safety, our directory strictly delineates between working link status and independent evidence confirmation.
+        Unlike directories that invent fake "Verified" badges to create a false impression of security, JobAlertHub strictly separates link reachability from independent source corroboration.
       </p>
     </div>
 
-    <!-- Mandatory Verification Disclaimer (Section 63) -->
+    <!-- Mandatory Verification Disclaimer -->
     <div class="rounded-2xl border-[3px] border-black bg-[#FEF08A] p-6 shadow-[4px_4px_0px_0px_#000] text-black font-bold space-y-2">
       <strong class="font-black text-black block text-base uppercase tracking-wide">
         ?? Mandatory Job Verification Notice
@@ -57,49 +59,66 @@ const faqSchema = generateFAQSchema([
       </p>
     </div>
 
+    <!-- Status Definitions Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- Unverified -->
+      <!-- Active Link / Unverified Source -->
       <div class="neo-card p-6 space-y-3 bg-white">
         <div class="flex items-center justify-between">
-          <h3 class="text-base font-black text-black">1. Unverified (Active Link)</h3>
-          <VerificationBadge status="unverified" />
+          <h3 class="text-base font-black text-black">Active Link</h3>
+          <span class="rounded-lg border-2 border-black bg-[#A7F3D0] px-2.5 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">Active</span>
         </div>
         <p class="text-xs font-bold text-slate-600">
-          The public invite link was discovered through search indexing and confirmed active, but has not yet been corroborated by an external primary website.
+          The public invite link was confirmed active and reachable within the last 24 hours. The community passed all geographic and safety checks.
         </p>
       </div>
 
       <!-- Source Confirmed -->
-      <div class="neo-card bg-[#BAE6FD] p-6 space-y-3">
+      <div class="neo-card p-6 space-y-3 bg-white">
         <div class="flex items-center justify-between">
-          <h3 class="text-base font-black text-black">2. Source Confirmed</h3>
-          <VerificationBadge status="source-confirmed" />
+          <h3 class="text-base font-black text-black">Source Confirmed</h3>
+          <span class="rounded-lg border-2 border-black bg-[#BAE6FD] px-2.5 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">Source Confirmed</span>
         </div>
-        <p class="text-xs font-bold text-slate-800">
-          The exact community URL was confirmed via an outbound link on an independent authoritative domain (e.g. university career site, company portal, project homepage).
+        <p class="text-xs font-bold text-slate-600">
+          The invite link or server ID was verified through an exact outbound link on an authoritative primary website or official organization page.
         </p>
       </div>
+    </div>
 
-      <!-- Owner Confirmed -->
-      <div class="neo-card-mint p-6 space-y-3">
-        <div class="flex items-center justify-between">
-          <h3 class="text-base font-black text-black">3. Owner Confirmed</h3>
-          <VerificationBadge status="owner-confirmed" />
-        </div>
-        <p class="text-xs font-bold text-slate-800">
-          The group administrator or community founder submitted verifiable credentials confirming ownership and community focus.
-        </p>
+    <!-- 4-Stage Lifecycle Explanation -->
+    <div class="neo-card p-6 sm:p-8 bg-white space-y-6">
+      <div class="inline-block bg-[#DDD6FE] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000]">
+        PIPELINE
       </div>
+      <h2 class="text-2xl font-black text-black tracking-tight">The 4-Stage Automated Lifecycle</h2>
 
-      <!-- Manually Reviewed -->
-      <div class="neo-card-purple p-6 space-y-3">
-        <div class="flex items-center justify-between">
-          <h3 class="text-base font-black text-black">4. Manually Reviewed</h3>
-          <VerificationBadge status="manually-reviewed" />
+      <div class="space-y-4">
+        <div class="p-4 border-2 border-black rounded-xl bg-[#FEF9C3] shadow-[2px_2px_0px_0px_#000]">
+          <h3 class="font-black text-black text-sm mb-1">1. Discovery & Intent Screening</h3>
+          <p class="text-xs text-slate-700">
+            Public queries discover candidates across Discord, Telegram, and WhatsApp. Candidates must demonstrate explicit employment and hiring intent for US, UK, Canada, or Australia.
+          </p>
         </div>
-        <p class="text-xs font-bold text-slate-800">
-          A human editor personally audited the community's public description, platform metadata, and geographic focus for quality and relevance.
-        </p>
+
+        <div class="p-4 border-2 border-black rounded-xl bg-[#BAE6FD] shadow-[2px_2px_0px_0px_#000]">
+          <h3 class="font-black text-black text-sm mb-1">2. Platform Health & Independent Verification</h3>
+          <p class="text-xs text-slate-700">
+            Invite endpoints are tested against official platform APIs or web endpoints. Independent source pages are fetched to confirm outbound invite links.
+          </p>
+        </div>
+
+        <div class="p-4 border-2 border-black rounded-xl bg-[#DDD6FE] shadow-[2px_2px_0px_0px_#000]">
+          <h3 class="font-black text-black text-sm mb-1">3. Safety & Fraud Filters</h3>
+          <p class="text-xs text-slate-700">
+            Automated filters inspect community titles and descriptions against known employment fraud patterns, task scams, and upfront fee schemes.
+          </p>
+        </div>
+
+        <div class="p-4 border-2 border-black rounded-xl bg-[#A7F3D0] shadow-[2px_2px_0px_0px_#000]">
+          <h3 class="font-black text-black text-sm mb-1">4. Daily Revalidation & Auto-Unpublish</h3>
+          <p class="text-xs text-slate-700">
+            Every published community is rechecked daily. Dead links, renamed non-job channels, or compromised groups are automatically unpublished.
+          </p>
+        </div>
       </div>
     </div>
   </div>

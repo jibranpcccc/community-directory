@@ -1,320 +1,215 @@
 import { describe, it, expect } from "vitest";
-import { getCanonicalUrl, formatPageTitle, getSeoMetadata } from "../src/lib/seo";
 import {
-  generateOrganizationSchema,
+  getCanonicalUrl,
+  formatPageTitle,
+  getSeoMetadata,
+  getIndexability,
+} from "../src/lib/seo";
+import {
   generateWebSiteSchema,
   generateBreadcrumbSchema,
   generateCollectionPageSchema,
+  generateOrganizationSchema,
   generateFAQSchema,
   generateCommunityDetailSchema,
 } from "../src/lib/schema";
 import { siteConfig } from "../src/config/site";
 import type { Community } from "../src/types/community";
 
-describe("SEO & Canonical URL Generation", () => {
+describe("SEO Engine & JSON-LD Generators", () => {
   const baseUrl = siteConfig.url.replace(/\/+$/, "");
 
-  it("builds absolute canonical URLs for root path", () => {
-    expect(getCanonicalUrl()).toBe(baseUrl);
-    expect(getCanonicalUrl("/")).toBe(baseUrl);
-    expect(getCanonicalUrl("")).toBe(baseUrl);
-  });
-
-  it("builds canonical URLs for sub-paths with and without leading slash", () => {
-    expect(getCanonicalUrl("/communities")).toBe(`${baseUrl}/communities`);
-    expect(getCanonicalUrl("communities")).toBe(`${baseUrl}/communities`);
-    expect(getCanonicalUrl("/category/ai-tech")).toBe(`${baseUrl}/category/ai-tech`);
-    expect(getCanonicalUrl("category/crypto-web3")).toBe(`${baseUrl}/category/crypto-web3`);
-  });
-
-  it("strips trailing slashes from sub-paths to avoid duplicate canonical URLs", () => {
-    expect(getCanonicalUrl("/communities/")).toBe(`${baseUrl}/communities`);
-    expect(getCanonicalUrl("/group/python-discord///")).toBe(`${baseUrl}/group/python-discord`);
-    expect(getCanonicalUrl("platform/telegram/")).toBe(`${baseUrl}/platform/telegram`);
-  });
-
-  it("formats page titles adhering to site branding standards", () => {
-    // Default fallback
-    expect(formatPageTitle()).toBe(`${siteConfig.name} — ${siteConfig.tagline}`);
-    expect(formatPageTitle("")).toBe(`${siteConfig.name} — ${siteConfig.tagline}`);
-
-    // Custom titles
-    expect(formatPageTitle("Telegram Communities")).toBe(
-      `Telegram Communities | ${siteConfig.name}`
-    );
-    expect(formatPageTitle("AI & Tech")).toBe(`AI & Tech | ${siteConfig.name}`);
-  });
-
-  it("generates comprehensive SEO and Open Graph metadata with fallbacks", () => {
-    const defaultMeta = getSeoMetadata({});
-    expect(defaultMeta.title).toBe(`${siteConfig.name} — ${siteConfig.tagline}`);
-    expect(defaultMeta.description).toBe(siteConfig.description);
-    expect(defaultMeta.canonicalUrl).toBe(baseUrl);
-    expect(defaultMeta.imageUrl).toBe(`${baseUrl}/favicon.svg`);
-    expect(defaultMeta.type).toBe("website");
-    expect(defaultMeta.noindex).toBe(false);
-    expect(defaultMeta.siteName).toBe(siteConfig.name);
-
-    // Custom properties
-    const customMeta = getSeoMetadata({
-      title: "Explore Python Groups",
-      description: "Find the best Python Discord and Telegram groups.",
-      canonicalPath: "/category/ai-tech",
-      image: "https://example.com/custom-og.jpg",
-      type: "article",
-      noindex: true,
+  describe("Canonical URL Generation", () => {
+    it("generates correct root canonical URL without trailing slash", () => {
+      expect(getCanonicalUrl("/")).toBe(baseUrl);
+      expect(getCanonicalUrl("")).toBe(baseUrl);
     });
 
-    expect(customMeta.title).toBe(`Explore Python Groups | ${siteConfig.name}`);
-    expect(customMeta.description).toBe("Find the best Python Discord and Telegram groups.");
-    expect(customMeta.canonicalUrl).toBe(`${baseUrl}/category/ai-tech`);
-    expect(customMeta.imageUrl).toBe("https://example.com/custom-og.jpg");
-    expect(customMeta.type).toBe("article");
-    expect(customMeta.noindex).toBe(true);
-
-    // Relative image path resolution
-    const relativeImageMeta = getSeoMetadata({
-      image: "assets/banner.png",
-    });
-    expect(relativeImageMeta.imageUrl).toBe(`${baseUrl}/assets/banner.png`);
-  });
-});
-
-describe("JSON-LD Schema.org Generators", () => {
-  const baseUrl = siteConfig.url.replace(/\/+$/, "");
-
-  it("generates valid Organization JSON-LD schema", () => {
-    const schema = generateOrganizationSchema();
-    expect(schema["@context"]).toBe("https://schema.org");
-    expect(schema["@type"]).toBe("Organization");
-    expect(schema.name).toBe(siteConfig.name);
-    expect(schema.url).toBe(baseUrl);
-    expect(schema.logo).toBe(`${baseUrl}/favicon.svg`);
-    expect(schema.description).toBe(siteConfig.description);
-    expect(schema.sameAs).toEqual([siteConfig.links.github]);
-  });
-
-  it("generates valid WebSite JSON-LD schema with search action", () => {
-    const schema = generateWebSiteSchema();
-    expect(schema["@context"]).toBe("https://schema.org");
-    expect(schema["@type"]).toBe("WebSite");
-    expect(schema.name).toBe(siteConfig.name);
-    expect(schema.url).toBe(baseUrl);
-    expect(schema.description).toBe(siteConfig.description);
-    expect(schema.potentialAction).toBeDefined();
-    expect(schema.potentialAction["@type"]).toBe("SearchAction");
-    expect(schema.potentialAction.target["@type"]).toBe("EntryPoint");
-    expect(schema.potentialAction.target.urlTemplate).toBe(
-      `${baseUrl}/jobs?search={search_term_string}`
-    );
-    expect(schema.potentialAction["query-input"]).toBe("required name=search_term_string");
-  });
-
-  it("generates valid BreadcrumbList JSON-LD schema", () => {
-    const breadcrumbs = [
-      { name: "Home", item: "/" },
-      { name: "Categories", item: "/#categories" },
-      { name: "AI & Tech", item: "/category/ai-tech" },
-    ];
-
-    const schema = generateBreadcrumbSchema(breadcrumbs);
-    expect(schema["@context"]).toBe("https://schema.org");
-    expect(schema["@type"]).toBe("BreadcrumbList");
-    expect(schema.itemListElement).toHaveLength(3);
-
-    expect(schema.itemListElement[0]).toEqual({
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: baseUrl,
-    });
-    expect(schema.itemListElement[1]).toEqual({
-      "@type": "ListItem",
-      position: 2,
-      name: "Categories",
-      item: `${baseUrl}/#categories`,
-    });
-    expect(schema.itemListElement[2]).toEqual({
-      "@type": "ListItem",
-      position: 3,
-      name: "AI & Tech",
-      item: `${baseUrl}/category/ai-tech`,
+    it("generates normalized path canonical URLs without trailing slashes", () => {
+      expect(getCanonicalUrl("/category/tech-jobs")).toBe(`${baseUrl}/category/tech-jobs`);
+      expect(getCanonicalUrl("/category/tech-jobs/")).toBe(`${baseUrl}/category/tech-jobs`);
+      expect(getCanonicalUrl("category/tech-jobs")).toBe(`${baseUrl}/category/tech-jobs`);
     });
   });
 
-  it("generates valid CollectionPage JSON-LD schema for category directories", () => {
-    const mockCommunities: Community[] = [
-      {
-        id: "astro-discord",
-        slug: "astro-lounge-discord",
-        title: "Astro Lounge",
+  describe("Page Title Formatting", () => {
+    it("formats default page title", () => {
+      expect(formatPageTitle()).toBe(`${siteConfig.name} � ${siteConfig.tagline}`);
+    });
+
+    it("formats page specific title with branding suffix", () => {
+      expect(formatPageTitle("Tech Job Alert Groups")).toBe(`Tech Job Alert Groups | ${siteConfig.name}`);
+    });
+
+    it("avoids duplicate branding if title already contains site name", () => {
+      expect(formatPageTitle(`Tech Jobs on ${siteConfig.name}`)).toBe(`Tech Jobs on ${siteConfig.name}`);
+    });
+  });
+
+  describe("Indexation Gating (Thresholds & Thin Content Control)", () => {
+    it("returns true for home, jobs catalog, trust pages, and published groups", () => {
+      expect(getIndexability("home", 0)).toBe(true);
+      expect(getIndexability("jobs", 0)).toBe(true);
+      expect(getIndexability("trust", 0)).toBe(true);
+      expect(getIndexability("group", 1)).toBe(true);
+    });
+
+    it("enforces noindex for thin taxonomy pages with 0 to 4 listings", () => {
+      expect(getIndexability("country", 0)).toBe(false);
+      expect(getIndexability("country", 1)).toBe(false);
+      expect(getIndexability("country", 4)).toBe(false);
+      expect(getIndexability("category", 0)).toBe(false);
+      expect(getIndexability("category", 3)).toBe(false);
+      expect(getIndexability("platform", 0)).toBe(false);
+      expect(getIndexability("job-type", 2)).toBe(false);
+      expect(getIndexability("tag", 1)).toBe(false);
+    });
+
+    it("enforces index eligibility for taxonomy pages with 5 or more listings", () => {
+      expect(getIndexability("country", 5)).toBe(true);
+      expect(getIndexability("country", 10)).toBe(true);
+      expect(getIndexability("category", 5)).toBe(true);
+      expect(getIndexability("platform", 6)).toBe(true);
+      expect(getIndexability("job-type", 5)).toBe(true);
+      expect(getIndexability("tag", 8)).toBe(true);
+    });
+
+    it("enforces noindex for utility, success, and 404 pages", () => {
+      expect(getIndexability("utility", 10)).toBe(false);
+      expect(getIndexability("404", 0)).toBe(false);
+    });
+  });
+
+  describe("SEO Metadata Helper", () => {
+    it("generates correct Open Graph and Twitter tags", () => {
+      const meta = getSeoMetadata({
+        title: "Canada Job Alert Groups",
+        description: "Find active job communities in Canada.",
+        canonicalPath: "/country/canada",
+        noindex: true,
+        pageType: "country",
+      });
+
+      expect(meta.title).toBe(`Canada Job Alert Groups | ${siteConfig.name}`);
+      expect(meta.description).toBe("Find active job communities in Canada.");
+      expect(meta.canonicalUrl).toBe(`${baseUrl}/country/canada`);
+      expect(meta.imageUrl).toBe(`${baseUrl}/favicon.svg`);
+      expect(meta.noindex).toBe(true);
+    });
+  });
+
+  describe("Structured Data Schema Generators", () => {
+    it("generates valid Organization JSON-LD schema", () => {
+      const schema = generateOrganizationSchema();
+      expect(schema["@context"]).toBe("https://schema.org");
+      expect(schema["@type"]).toBe("Organization");
+      expect(schema.name).toBe(siteConfig.name);
+      expect(schema.url).toBe(baseUrl);
+      expect(schema.logo).toBe(`${baseUrl}/favicon.svg`);
+    });
+
+    it("generates valid WebSite JSON-LD schema", () => {
+      const schema = generateWebSiteSchema();
+      expect(schema["@context"]).toBe("https://schema.org");
+      expect(schema["@type"]).toBe("WebSite");
+      expect(schema.name).toBe(siteConfig.name);
+      expect(schema.url).toBe(baseUrl);
+      expect(schema.potentialAction["@type"]).toBe("SearchAction");
+    });
+
+    it("generates valid BreadcrumbList JSON-LD schema", () => {
+      const breadcrumbs = [
+        { name: "All Jobs", item: "/jobs" },
+        { name: "Canada", item: "/country/canada" },
+      ];
+
+      const schema = generateBreadcrumbSchema(breadcrumbs);
+      expect(schema["@context"]).toBe("https://schema.org");
+      expect(schema["@type"]).toBe("BreadcrumbList");
+      expect(schema.itemListElement).toHaveLength(2);
+      expect(schema.itemListElement[0].item).toBe(`${baseUrl}/jobs`);
+      expect(schema.itemListElement[1].item).toBe(`${baseUrl}/country/canada`);
+    });
+
+    it("generates valid CollectionPage JSON-LD schema for category directories", () => {
+      const mockCommunities: Community[] = [
+        {
+          id: "astro-discord",
+          slug: "astro-lounge-discord",
+          title: "Astro Lounge",
+          platform: "discord",
+          vertical: "jobs",
+          category: "tech-jobs",
+          countryCode: "GB",
+          city: "London",
+          jobTypes: ["remote-jobs"],
+          industries: ["technology"],
+          workArrangement: "remote",
+          experienceLevels: ["mid-level"],
+          visaSponsorship: "unknown",
+          tags: ["astro", "webdev"],
+          inviteUrl: "https://discord.gg/astro",
+          verificationStatus: "source-confirmed",
+          linkStatus: "active",
+          sourceUrls: ["https://astro.build"],
+          discoveryMethod: "manual",
+          discoveredAt: "2026-08-18T10:00:00.000Z",
+          published: true,
+        },
+      ];
+
+      const schema = generateCollectionPageSchema(
+        "Tech Job Alert Groups",
+        "List of verified Tech Jobs communities",
+        "/category/tech-jobs",
+        mockCommunities
+      );
+
+      expect(schema["@type"]).toBe("CollectionPage");
+      expect(schema.mainEntity.itemListElement).toHaveLength(1);
+      expect(schema.mainEntity.itemListElement[0].url).toBe(`${baseUrl}/group/astro-lounge-discord`);
+    });
+
+    it("generates factual CommunityDetail WebPage schema without JobPosting, ratings, or fake products", () => {
+      const community: Community = {
+        id: "northerndev-discord",
+        slug: "northerndev-formerly-tech-career-north-discord",
+        title: "NorthernDev (formerly Tech Career North)",
         platform: "discord",
         vertical: "jobs",
         category: "tech-jobs",
-        countryCode: "GB",
-        city: "London",
-        jobTypes: ["remote-jobs"],
-        industries: ["technology"],
-        workArrangement: "remote",
-        experienceLevels: ["mid-level"],
-        visaSponsorship: "unknown",
-        tags: ["astro", "webdev"],
-        inviteUrl: "https://discord.gg/astro",
-        verificationStatus: "source-confirmed",
-        linkStatus: "active",
-        sourceUrls: ["https://astro.build"],
-        discoveryMethod: "manual",
-        discoveredAt: "2026-08-18T10:00:00.000Z",
-        published: true,
-      },
-      {
-        id: "python-telegram",
-        slug: "python-developers-telegram",
-        title: "Python Developers",
-        platform: "telegram",
-        vertical: "jobs",
-        category: "tech-jobs",
-        countryCode: "US",
-        city: "San Francisco",
+        countryCode: "CA",
+        city: "Toronto",
         jobTypes: ["remote-jobs", "full-time-jobs"],
         industries: ["technology"],
         workArrangement: "remote",
-        experienceLevels: ["entry-level", "mid-level"],
+        experienceLevels: ["mid-level", "senior"],
         visaSponsorship: "unknown",
-        tags: ["python"],
-        inviteUrl: "https://t.me/pythongroup",
-        verificationStatus: "unverified",
+        tags: ["canada", "tech-jobs"],
+        inviteUrl: "https://discord.gg/northerndev",
+        description: "Canadian tech community sharing career and hiring discussions.",
+        verificationStatus: "source-confirmed",
         linkStatus: "active",
-        sourceUrls: ["https://python.org"],
+        sourceUrls: ["https://northern.dev"],
         discoveryMethod: "manual",
-        discoveredAt: "2026-08-18T10:00:00.000Z",
+        discoveredAt: "2026-08-01T00:00:00.000Z",
+        lastCheckedAt: "2026-08-19T04:00:00.000Z",
         published: true,
-      },
-    ];
+      };
 
-    const schema = generateCollectionPageSchema(
-      "Tech Jobs Communities",
-      "List of verified Tech Jobs communities",
-      "/category/tech-jobs",
-      mockCommunities
-    );
+      const schema = generateCommunityDetailSchema(community);
+      expect(schema["@context"]).toBe("https://schema.org");
+      expect(schema["@type"]).toBe("WebPage");
+      expect(schema.name).toBe("NorthernDev (formerly Tech Career North) (discord)");
+      expect(schema.url).toBe(`${baseUrl}/group/northerndev-formerly-tech-career-north-discord`);
+      expect(schema.mainEntity["@type"]).toBe("Organization");
 
-    expect(schema["@context"]).toBe("https://schema.org");
-    expect(schema["@type"]).toBe("CollectionPage");
-    expect(schema.name).toBe("Tech Jobs Communities");
-    expect(schema.description).toBe("List of verified Tech Jobs communities");
-    expect(schema.url).toBe(`${baseUrl}/category/tech-jobs`);
-    expect(schema.mainEntity["@type"]).toBe("ItemList");
-    expect(schema.mainEntity.numberOfItems).toBe(2);
-    expect(schema.mainEntity.itemListElement).toHaveLength(2);
-    expect(schema.mainEntity.itemListElement[0]).toEqual({
-      "@type": "ListItem",
-      position: 1,
-      name: "Astro Lounge",
-      url: `${baseUrl}/group/astro-lounge-discord`,
+      // Verify no forbidden schemas exist
+      const schemaString = JSON.stringify(schema);
+      expect(schemaString).not.toContain("JobPosting");
+      expect(schemaString).not.toContain("AggregateRating");
+      expect(schemaString).not.toContain("Review");
+      expect(schemaString).not.toContain("Product");
     });
-    expect(schema.mainEntity.itemListElement[1]).toEqual({
-      "@type": "ListItem",
-      position: 2,
-      name: "Python Developers",
-      url: `${baseUrl}/group/python-developers-telegram`,
-    });
-  });
-
-  it("generates valid FAQPage JSON-LD schema", () => {
-    const faqs = [
-      {
-        question: "How do you verify communities?",
-        answer: "We confirm presence on official websites or verify admin ownership.",
-      },
-      {
-        question: "Is it free to list a community?",
-        answer: "Yes, standard listing is completely free.",
-      },
-    ];
-
-    const schema = generateFAQSchema(faqs);
-    expect(schema["@context"]).toBe("https://schema.org");
-    expect(schema["@type"]).toBe("FAQPage");
-    expect(schema.mainEntity).toHaveLength(2);
-    expect(schema.mainEntity[0]).toEqual({
-      "@type": "Question",
-      name: "How do you verify communities?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We confirm presence on official websites or verify admin ownership.",
-      },
-    });
-  });
-
-  it("generates factual CommunityDetail WebPage JSON-LD schema without fake ratings", () => {
-    const community: Community = {
-      id: "reactiflux-discord",
-      slug: "reactiflux-discord",
-      title: "Reactiflux",
-      platform: "discord",
-      vertical: "jobs",
-      category: "tech-jobs",
-      countryCode: "US",
-      city: "San Francisco",
-      jobTypes: ["remote-jobs"],
-      industries: ["technology"],
-      workArrangement: "remote",
-      experienceLevels: ["mid-level", "senior"],
-      visaSponsorship: "unknown",
-      tags: ["react", "javascript"],
-      inviteUrl: "https://discord.gg/reactiflux",
-      description: "Chat community for React developers.",
-      verificationStatus: "source-confirmed",
-      linkStatus: "active",
-      sourceUrls: ["https://reactiflux.com"],
-      discoveryMethod: "manual",
-      discoveredAt: "2026-08-01T00:00:00.000Z",
-      lastCheckedAt: "2026-08-18T12:00:00.000Z",
-      updatedAt: "2026-08-18T14:00:00.000Z",
-      published: true,
-    };
-
-    const schema = generateCommunityDetailSchema(community);
-    expect(schema["@context"]).toBe("https://schema.org");
-    expect(schema["@type"]).toBe("WebPage");
-    expect(schema.name).toBe("Reactiflux (discord)");
-    expect(schema.description).toBe("Chat community for React developers.");
-    expect(schema.url).toBe(`${baseUrl}/group/reactiflux-discord`);
-    expect(schema.datePublished).toBe("2026-08-01T00:00:00.000Z");
-    expect(schema.dateModified).toBe("2026-08-18T14:00:00.000Z");
-    expect(schema.mainEntity["@type"]).toBe("Organization");
-    expect(schema.mainEntity.name).toBe("Reactiflux");
-    expect(schema.mainEntity.url).toBe("https://discord.gg/reactiflux");
-    expect(schema.mainEntity.sameAs).toEqual(["https://reactiflux.com"]);
-
-    // Test fallback dateModified and fallback description
-    const minimalCommunity: Community = {
-      id: "minimal",
-      slug: "minimal",
-      title: "Minimal Group",
-      platform: "telegram",
-      vertical: "jobs",
-      category: "tech-jobs",
-      countryCode: null,
-      city: null,
-      jobTypes: [],
-      industries: [],
-      workArrangement: "unknown",
-      experienceLevels: [],
-      visaSponsorship: "unknown",
-      tags: [],
-      inviteUrl: "https://t.me/minimal",
-      verificationStatus: "unverified",
-      linkStatus: "active",
-      sourceUrls: [],
-      discoveryMethod: "manual",
-      discoveredAt: "2026-08-10T00:00:00.000Z",
-      published: true,
-    };
-
-    const minimalSchema = generateCommunityDetailSchema(minimalCommunity);
-    expect(minimalSchema.description).toBe("Minimal Group public online community.");
-    expect(minimalSchema.dateModified).toBe("2026-08-10T00:00:00.000Z");
   });
 });

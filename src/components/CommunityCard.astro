@@ -15,7 +15,7 @@ const { community } = Astro.props;
 const country = getCountryByCode(community.countryCode);
 ---
 
-<article class="neo-card flex flex-col justify-between p-5">
+<article class="neo-card flex flex-col justify-between p-5 bg-white">
   <div>
     <!-- Badges Row -->
     <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5">
@@ -36,7 +36,7 @@ const country = getCountryByCode(community.countryCode);
 
     <!-- Title & Link -->
     <h3 class="text-lg font-black text-black hover:text-[#059669] transition-colors mb-1.5">
-      <a href={`/group/${community.slug}`} class="focus:outline-none">
+      <a href={`/group/${community.slug}`} class="focus:outline-none focus:underline">
         {community.title}
       </a>
     </h3>
@@ -94,9 +94,9 @@ const country = getCountryByCode(community.countryCode);
     </div>
 
     <!-- Sourced Member Count (Only shown if genuinely verified from source) -->
-    {typeof community.memberCount === "number" && (
+    {typeof community.memberCount === "number" && community.memberCountSource && (
       <div class="text-xs text-black font-bold mb-3">
-        ? <strong>{community.memberCount.toLocaleString()}</strong> verified members
+        ?? <strong>{community.memberCount.toLocaleString()}</strong> observed members
       </div>
     )}
 
@@ -104,7 +104,7 @@ const country = getCountryByCode(community.countryCode);
     <div class="grid grid-cols-2 gap-2.5">
       <a
         href={`/group/${community.slug}`}
-        class="neo-button bg-white hover:bg-slate-100 text-black px-3 py-2 text-xs font-black"
+        class="neo-btn text-center bg-white hover:bg-slate-100 text-black px-3 py-2 text-xs font-black border-2 border-black shadow-[2px_2px_0px_0px_#000]"
       >
         View Details
       </a>
@@ -112,13 +112,10 @@ const country = getCountryByCode(community.countryCode);
         href={community.inviteUrl}
         target="_blank"
         rel="nofollow noopener noreferrer"
-        class="neo-button bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black px-3 py-2 text-xs font-black"
+        class="neo-btn text-center inline-flex items-center justify-center bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black px-3 py-2 text-xs font-black border-2 border-black shadow-[2px_2px_0px_0px_#000]"
         aria-label={`Join ${community.title} on ${community.platform} (opens in a new tab)`}
       >
-        <span>Join Alerts</span>
-        <svg class="h-3.5 w-3.5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
+        <span>Join on {community.platform === "discord" ? "Discord" : community.platform === "telegram" ? "Telegram" : "WhatsApp"}</span>
       </a>
     </div>
   </div>

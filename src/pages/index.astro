@@ -6,7 +6,6 @@ import PlatformBadge from "../components/PlatformBadge.astro";
 import CategoryBadge from "../components/CategoryBadge.astro";
 import VerificationBadge from "../components/VerificationBadge.astro";
 import SafetyNotice from "../components/SafetyNotice.astro";
-import AdPlaceholder from "../components/AdPlaceholder.astro";
 import { categories } from "../config/categories";
 import { ENABLED_COUNTRIES } from "../config/countries";
 import { platforms } from "../config/platforms";
@@ -30,20 +29,20 @@ const organizationSchema = generateOrganizationSchema();
 ---
 
 <BaseLayout
-  title={`${siteConfig.tagline} — USA, UK, Canada & Australia`}
+  title={`${siteConfig.name} — ${siteConfig.tagline}`}
   description={siteConfig.description}
   canonicalPath="/"
+  pageType="home"
   jsonLd={[webSiteSchema, organizationSchema]}
 >
-  <!-- Hero Section -->
+  <!-- 1. Hero Section -->
   <section class="relative overflow-hidden bg-[#FAF8F5] py-12 sm:py-20 border-b-[3px] border-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Neo-Brutalist Hero Card -->
       <div class="relative rounded-3xl border-[3px] border-black bg-[#A7F3D0] p-6 sm:p-12 shadow-[6px_6px_0px_0px_#000] overflow-hidden">
-        <!-- Playful Sticker Badge in Top Right -->
-        <div class="absolute -right-4 -top-4 sm:right-8 sm:top-6 rotate-6 z-10">
+        <!-- Top Right Badge -->
+        <div class="absolute -right-4 -top-4 sm:right-8 sm:top-6 rotate-3 z-10">
           <div class="neo-badge bg-[#FEF08A] text-black px-4 py-2 text-xs sm:text-sm font-black border-2 border-black shadow-[3px_3px_0px_0px_#000] tracking-wider uppercase">
-            ? TIER-1 JOB ALERTS ?
+            ? TIER-1 JOB ALERTS
           </div>
         </div>
 
@@ -54,126 +53,92 @@ const organizationSchema = generateOrganizationSchema();
           </div>
 
           <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-black mb-6 leading-tight">
-            FIND ACTIVE <br class="hidden sm:inline" />
+            Find Active <br class="hidden sm:inline" />
             <span class="bg-[#FEF08A] px-2 py-0.5 border-2 border-black shadow-[3px_3px_0px_0px_#000] inline-block mt-1">
-              JOB ALERT GROUPS
+              Job Alert Groups
             </span>
           </h1>
 
-          <p class="text-sm sm:text-base font-bold text-black/80 leading-relaxed mb-8 max-w-xl">
-            {siteConfig.subheadline}
+          <p class="text-sm sm:text-lg font-bold text-black/90 leading-relaxed mb-8 max-w-2xl">
+            Discover public Discord servers, Telegram channels, and WhatsApp groups sharing hiring alerts and career opportunities across the United States, United Kingdom, Canada, and Australia.
           </p>
 
-          <!-- Search Box -->
-          <div class="mb-6">
-            <SearchBox size="lg" />
+          <!-- Primary CTA & Quick Links -->
+          <div class="flex flex-wrap items-center gap-4 mb-6">
+            <a
+              href="/jobs"
+              class="neo-btn inline-flex items-center gap-2 bg-[#FEF08A] hover:bg-[#FDE047] text-black font-black px-6 py-3.5 text-sm sm:text-base border-[3px] border-black shadow-[4px_4px_0px_0px_#000]"
+            >
+              <span>Browse Job Groups</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </a>
+            <a
+              href="/how-we-verify"
+              class="neo-btn inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-black font-black px-5 py-3.5 text-sm border-2 border-black shadow-[3px_3px_0px_0px_#000]"
+            >
+              <span>How We Verify</span>
+            </a>
           </div>
 
-          <!-- Country Quick Filters -->
-          <div class="flex flex-wrap items-center gap-2.5 pt-2">
-            <span class="text-xs font-black text-black uppercase tracking-wider">Target Countries:</span>
-            {ENABLED_COUNTRIES.map((c) => (
-              <a
-                href={`/country/${c.slug}`}
-                class="neo-button bg-white hover:bg-[#FEF08A] text-black px-3 py-1 text-xs font-black"
-              >
-                {c.flag} {c.shortName}
-              </a>
-            ))}
-            <a
-              href="/job-type/remote-jobs"
-              class="neo-button bg-[#FEF08A] hover:bg-[#FDE047] text-black px-3 py-1 text-xs font-black"
-            >
-              ?? Remote Jobs
-            </a>
+          <!-- Secondary Trust Signals -->
+          <div class="flex flex-wrap items-center gap-4 text-xs font-black text-black">
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-700" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+              Links Automatically Rechecked
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-700" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+              US • UK • Canada • Australia
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-700" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+              Strict Scam & Fraud Screening
+            </span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Factual Dataset Counters -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
-    <div class="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-      <div class="neo-card-yellow p-5 text-center">
-        <div class="text-3xl sm:text-4xl font-black text-black">{stats.totalPublished}</div>
-        <div class="text-xs font-black text-black uppercase tracking-wider mt-1">Active Job Communities</div>
-      </div>
-      <div class="neo-card-mint p-5 text-center">
-        <div class="text-3xl sm:text-4xl font-black text-black">{ENABLED_COUNTRIES.length}</div>
-        <div class="text-xs font-black text-black uppercase tracking-wider mt-1">Target Countries</div>
-      </div>
-      <div class="neo-card-purple p-5 text-center">
-        <div class="text-3xl sm:text-4xl font-black text-black">3</div>
-        <div class="text-xs font-black text-black uppercase tracking-wider mt-1">Chat Platforms</div>
-      </div>
-      <div class="neo-card-coral p-5 text-center">
-        <div class="text-3xl sm:text-4xl font-black text-black">4 Tiers</div>
-        <div class="text-xs font-black text-black uppercase tracking-wider mt-1">Verification Standards</div>
+  <!-- 2. Dynamic Live Stats Bar -->
+  <section class="border-b-[3px] border-black bg-white py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="p-3 border-2 border-black rounded-2xl bg-[#FEF9C3] shadow-[3px_3px_0px_0px_#000]">
+          <div class="text-2xl font-black text-black">{stats.totalPublished}</div>
+          <div class="text-xs font-black uppercase text-slate-700">Active Communities</div>
+        </div>
+        <div class="p-3 border-2 border-black rounded-2xl bg-[#BAE6FD] shadow-[3px_3px_0px_0px_#000]">
+          <div class="text-2xl font-black text-black">{stats.countriesCount}</div>
+          <div class="text-xs font-black uppercase text-slate-700">Countries Covered</div>
+        </div>
+        <div class="p-3 border-2 border-black rounded-2xl bg-[#DDD6FE] shadow-[3px_3px_0px_0px_#000]">
+          <div class="text-2xl font-black text-black">{stats.platformsCount}</div>
+          <div class="text-xs font-black uppercase text-slate-700">Messaging Platforms</div>
+        </div>
+        <div class="p-3 border-2 border-black rounded-2xl bg-[#A7F3D0] shadow-[3px_3px_0px_0px_#000]">
+          <div class="text-2xl font-black text-black">24h</div>
+          <div class="text-xs font-black uppercase text-slate-700">Recheck Frequency</div>
+        </div>
       </div>
     </div>
   </section>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
-    <!-- Ad Space Leaderboard (Optional) -->
-    <AdPlaceholder format="leaderboard" />
-
-    <!-- Country Hubs Section -->
-    <section id="countries" class="scroll-mt-20">
-      <div class="flex items-center justify-between mb-6">
-        <div>
-          <div class="inline-block bg-[#BAE6FD] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
-            LOCATION HUBS
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Browse by Country</h2>
-          <p class="text-xs font-bold text-slate-600 mt-1">Explore job channels and communities by advertising market</p>
-        </div>
-        <a href="/jobs" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
-          View all jobs ?
-        </a>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {
-          ENABLED_COUNTRIES.map((c) => (
-            <a
-              href={`/country/${c.slug}`}
-              class="neo-card p-6 bg-white hover:bg-[#FEF9C3] flex flex-col justify-between group transition-all"
-            >
-              <div>
-                <div class="text-3xl mb-2">{c.flag}</div>
-                <h3 class="text-lg font-black text-black group-hover:underline mb-1">
-                  {c.name}
-                </h3>
-                <p class="text-xs font-medium text-slate-600 mb-4">
-                  Job alerts and recruitment groups across major {c.shortName} metropolitan hubs.
-                </p>
-              </div>
-
-              <div class="pt-3 border-t-2 border-black/10 flex items-center justify-between text-xs font-black text-black">
-                <span>Explore {c.shortName}</span>
-                <span>?</span>
-              </div>
-            </a>
-          ))
-        }
-      </div>
-    </section>
-
-    <!-- Featured Communities Section (Only shown if listings exist) -->
+    <!-- 3. Current Active Groups Section (Dynamic Inventory) -->
     {
       featuredListings.length > 0 && (
         <section>
           <div class="flex items-center justify-between mb-6">
             <div>
               <div class="inline-block bg-[#FEF08A] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
-                HAND-PICKED
+                ACTIVE LISTINGS
               </div>
-              <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Featured Job Communities</h2>
-              <p class="text-xs font-bold text-slate-600 mt-1">Verified communities sharing job alerts</p>
+              <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Active Job Communities</h2>
+              <p class="text-xs font-bold text-slate-600 mt-1">Verified communities sharing real employment openings</p>
             </div>
             <a href="/jobs" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
-              Browse all ?
+              Browse all &rarr;
             </a>
           </div>
           <CommunityGrid communities={featuredListings} />
@@ -181,24 +146,64 @@ const organizationSchema = generateOrganizationSchema();
       )
     }
 
-    <!-- Job Categories Section -->
+    <!-- 4. Browse by Country -->
+    <section id="countries" class="scroll-mt-20">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <div class="inline-block bg-[#BAE6FD] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
+            GEOGRAPHIC FOCUS
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Browse by Country</h2>
+          <p class="text-xs font-bold text-slate-600 mt-1">Tier-1 English-speaking hiring markets</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {
+          ENABLED_COUNTRIES.map((c) => {
+            const count = stats.countries[c.code] || 0;
+            return (
+              <a
+                href={`/country/${c.slug}`}
+                class="neo-card p-5 bg-white hover:bg-[#FEF9C3] flex flex-col justify-between"
+              >
+                <div>
+                  <div class="text-3xl mb-2">{c.flag}</div>
+                  <h3 class="text-lg font-black text-black mb-1">{c.name}</h3>
+                  <p class="text-xs font-medium text-slate-600">
+                    {c.cities.slice(0, 3).join(", ")}
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t-2 border-black/10 flex items-center justify-between text-xs font-bold">
+                  <span class="text-black">{count} {count === 1 ? 'community' : 'communities'}</span>
+                  <span class="font-black text-black">&rarr;</span>
+                </div>
+              </a>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    <!-- 5. Browse by Job Category -->
     <section id="categories" class="scroll-mt-20">
       <div class="flex items-center justify-between mb-6">
         <div>
           <div class="inline-block bg-[#A7F3D0] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
-            JOB ROLES & DISCIPLINES
+            JOB DISCIPLINES
           </div>
           <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Browse by Job Category</h2>
-          <p class="text-xs font-bold text-slate-600 mt-1">Find alert groups organized by industry and career track</p>
+          <p class="text-xs font-bold text-slate-600 mt-1">Specialized employment tracks and industry channels</p>
         </div>
         <a href="/jobs" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
-          View all ?
+          View all &rarr;
         </a>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {
           categories.map((cat, idx) => {
+            const count = stats.categories[cat.slug] || 0;
             const cardClasses = [
               "neo-card-yellow",
               "neo-card-mint",
@@ -213,9 +218,14 @@ const organizationSchema = generateOrganizationSchema();
                 class={`group relative flex flex-col justify-between p-5 ${cardClasses}`}
               >
                 <div>
-                  <h3 class="text-lg font-black text-black group-hover:underline mb-2">
-                    {cat.name}
-                  </h3>
+                  <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-lg font-black text-black group-hover:underline">
+                      {cat.name}
+                    </h3>
+                    <span class="text-xs font-black px-2 py-0.5 bg-white border border-black rounded shadow-[1px_1px_0px_0px_#000]">
+                      {count}
+                    </span>
+                  </div>
                   <p class="text-xs font-medium text-black/80 leading-relaxed mb-4">
                     {cat.description}
                   </p>
@@ -235,15 +245,15 @@ const organizationSchema = generateOrganizationSchema();
       </div>
     </section>
 
-    <!-- Platform Cards Section -->
+    <!-- 6. Browse by Platform -->
     <section id="platforms" class="scroll-mt-20">
       <div class="flex items-center justify-between mb-6">
         <div>
           <div class="inline-block bg-[#DDD6FE] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
-            CHANNELS & NETWORKS
+            MESSAGING PLATFORMS
           </div>
           <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Explore by Platform</h2>
-          <p class="text-xs font-bold text-slate-600 mt-1">Filter public job channels by messaging network</p>
+          <p class="text-xs font-bold text-slate-600 mt-1">Public career channels organized by communication app</p>
         </div>
       </div>
 
@@ -282,68 +292,68 @@ const organizationSchema = generateOrganizationSchema();
       </div>
     </section>
 
-    <!-- Recently Added Communities (Only shown if listings exist) -->
-    {
-      recentAdditions.length > 0 && (
-        <section>
-          <div class="flex items-center justify-between mb-6">
-            <div>
-              <div class="inline-block bg-[#FED7AA] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
-                FRESH LISTINGS
-              </div>
-              <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">Recently Added Job Groups</h2>
-              <p class="text-xs font-bold text-slate-600 mt-1">New additions catalogued in the directory</p>
-            </div>
-            <a href="/jobs" class="neo-button bg-white hover:bg-slate-100 text-black px-3.5 py-1.5 text-xs font-black">
-              Browse all ?
-            </a>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {recentAdditions.map((comm) => (
-              <a
-                href={`/group/${comm.slug}`}
-                class="neo-card flex items-center justify-between p-4 bg-white hover:bg-[#FEF9C3]"
-              >
-                <div class="min-w-0 pr-3">
-                  <h3 class="text-sm font-black text-black truncate">
-                    {comm.title}
-                  </h3>
-                  <div class="flex items-center gap-2 mt-2">
-                    <PlatformBadge platform={comm.platform} size="sm" />
-                    <CategoryBadge category={comm.category} size="sm" />
-                  </div>
-                </div>
-                <span class="text-xs font-black text-black shrink-0 underline">
-                  View ?
-                </span>
-              </a>
-            ))}
-          </div>
-        </section>
-      )
-    }
-
-    <!-- Job Seeker Safety Notice Banner -->
-    <SafetyNotice type="job-warning" />
-
-    <!-- Submission CTA Banner -->
-    <section class="rounded-3xl border-[3px] border-black bg-[#FEF08A] p-8 sm:p-12 text-black text-center shadow-[6px_6px_0px_0px_#000]">
-      <div class="inline-block bg-white px-3 py-1 border-2 border-black text-xs font-black uppercase tracking-wider shadow-[2px_2px_0px_0px_#000] mb-4">
-        ? FREE SUBMISSIONS ?
+    <!-- 7. How JobAlertHub Works -->
+    <section class="neo-card p-6 sm:p-10 bg-white">
+      <div class="inline-block bg-[#FEF08A] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-3">
+        METHODOLOGY
       </div>
-      <h2 class="text-2xl sm:text-4xl font-black mb-3">
-        Manage a Public Job Alert Community?
-      </h2>
-      <p class="text-black/80 max-w-xl mx-auto text-xs sm:text-sm font-bold leading-relaxed mb-6">
-        Submit your community to be catalogued in the job alert directory. Every submission is reviewed before publication. Verification status is shown transparently on each listing.
+      <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight mb-2">How JobAlertHub Works</h2>
+      <p class="text-xs sm:text-sm font-bold text-slate-700 mb-8 max-w-2xl">
+        JobAlertHub uses automated discovery and validation pipelines to maintain an active directory of public job communities.
       </p>
-      <a
-        href="/submit"
-        class="neo-button bg-[#A7F3D0] hover:bg-[#6EE7B7] px-6 py-3 text-sm font-black text-black shadow-[4px_4px_0px_0px_#000]"
-      >
-        Submit a Job Community for Free ?
-      </a>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-4 border-2 border-black rounded-xl bg-[#FEF9C3] shadow-[2px_2px_0px_0px_#000]">
+          <div class="font-black text-lg text-black mb-1">1. Discovery</div>
+          <p class="text-xs font-medium text-slate-800">
+            Public search indexing identifies publicly listed community links across Telegram, Discord, and WhatsApp.
+          </p>
+        </div>
+        <div class="p-4 border-2 border-black rounded-xl bg-[#BAE6FD] shadow-[2px_2px_0px_0px_#000]">
+          <div class="font-black text-lg text-black mb-1">2. Validation</div>
+          <p class="text-xs font-medium text-slate-800">
+            Automated health engines verify that invite links are active, not expired, and target US, UK, CA, or AU.
+          </p>
+        </div>
+        <div class="p-4 border-2 border-black rounded-xl bg-[#DDD6FE] shadow-[2px_2px_0px_0px_#000]">
+          <div class="font-black text-lg text-black mb-1">3. Safety Screening</div>
+          <p class="text-xs font-medium text-slate-800">
+            Scam filters screen against upfront fees, task optimization schemes, and crypto/forex recruitment fraud.
+          </p>
+        </div>
+        <div class="p-4 border-2 border-black rounded-xl bg-[#A7F3D0] shadow-[2px_2px_0px_0px_#000]">
+          <div class="font-black text-lg text-black mb-1">4. Revalidation</div>
+          <p class="text-xs font-medium text-slate-800">
+            Published communities are rechecked daily. Broken links or suspicious channels are auto-unpublished.
+          </p>
+        </div>
+      </div>
     </section>
+
+    <!-- 8. Verification & Trust Section -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="neo-card p-6 bg-white space-y-2">
+        <div class="flex items-center justify-between mb-1">
+          <h3 class="text-lg font-black text-black">Active Link</h3>
+          <span class="rounded-lg border-2 border-black bg-[#A7F3D0] px-2.5 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">Active</span>
+        </div>
+        <p class="text-xs font-medium text-slate-700 leading-relaxed">
+          Indicates that the community invite was reachable during our latest automated check. It does not constitute an endorsement of job postings inside the group.
+        </p>
+      </div>
+
+      <div class="neo-card p-6 bg-white space-y-2">
+        <div class="flex items-center justify-between mb-1">
+          <h3 class="text-lg font-black text-black">Source Confirmed</h3>
+          <span class="rounded-lg border-2 border-black bg-[#BAE6FD] px-2.5 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">Source Confirmed</span>
+        </div>
+        <p class="text-xs font-medium text-slate-700 leading-relaxed">
+          Indicates that the exact community link or server ID was independently linked from an authoritative primary website or official organization page.
+        </p>
+      </div>
+    </section>
+
+    <!-- 9. Job Seeker Safety Notice -->
+    <SafetyNotice type="job-warning" />
   </div>
 </BaseLayout>

@@ -8,7 +8,7 @@ export interface BreadcrumbItem {
 }
 
 /**
- * Generates WebSite JSON-LD schema with search potential.
+ * Generates WebSite JSON-LD schema with search action potential.
  */
 export function generateWebSiteSchema() {
   return {
@@ -29,7 +29,7 @@ export function generateWebSiteSchema() {
 }
 
 /**
- * Generates BreadcrumbList JSON-LD schema.
+ * Generates BreadcrumbList JSON-LD schema matching visible hierarchy.
  */
 export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
   return {
@@ -73,7 +73,7 @@ export function generateCollectionPageSchema(
 }
 
 /**
- * Generates Organization JSON-LD schema for the site.
+ * Generates Organization JSON-LD schema for the site publisher.
  */
 export function generateOrganizationSchema() {
   return {
@@ -88,7 +88,7 @@ export function generateOrganizationSchema() {
 }
 
 /**
- * Generates FAQPage JSON-LD schema.
+ * Generates FAQPage JSON-LD schema for educational content.
  */
 export function generateFAQSchema(faqs: { question: string; answer: string }[]) {
   return {
@@ -107,14 +107,14 @@ export function generateFAQSchema(faqs: { question: string; answer: string }[]) 
 
 /**
  * Generates WebPage schema for individual community listing.
- * Strictly adheres to non-fabricated data; no fake aggregateRating or product schema.
+ * Strictly adheres to non-fabricated data; NO fake JobPosting, NO fake aggregateRating or product schema.
  */
 export function generateCommunityDetailSchema(community: Community) {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: `${community.title} (${community.platform})`,
-    description: community.description || `${community.title} public online community.`,
+    description: community.description || `${community.title} public online job community.`,
     url: getCanonicalUrl(`/group/${community.slug}`),
     datePublished: community.discoveredAt,
     dateModified: community.updatedAt || community.lastCheckedAt || community.discoveredAt,

@@ -1,56 +1,55 @@
 ---
 import DirectoryLayout from "../layouts/DirectoryLayout.astro";
+import { siteConfig } from "../config/site";
 ---
 
 <DirectoryLayout
   heading="Editorial & Data Policy"
-  subheading="Our standards for data accuracy, automated discovery, AI boundaries, and corrections."
+  subheading="Our standards for data accuracy, zero hallucination, automated discovery, and corrections."
   breadcrumbs={[
-    { name: "Home", item: "/" },
+    { name: "All Jobs", item: "/jobs" },
     { name: "Editorial Policy", item: "/editorial-policy" },
   ]}
   canonicalPath="/editorial-policy"
+  pageType="trust"
 >
-  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base text-slate-700 leading-relaxed">
-    <section class="space-y-3">
-      <h2 class="text-xl font-bold text-slate-900">1. Data Sources & Discovery</h2>
+  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base font-medium text-slate-800 leading-relaxed">
+    <section class="neo-card p-6 sm:p-8 space-y-3 bg-white">
+      <div class="inline-block bg-[#FEF08A] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
+        ZERO FABRICATION
+      </div>
+      <h2 class="text-xl sm:text-2xl font-black text-black">1. Fact-First Data Standards</h2>
       <p>
-        Listings in this directory originate from three transparent sources:
+        <strong>{siteConfig.name} operates under a strict Zero Hallucination policy:</strong>
       </p>
-      <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
-        <li><strong>Automated Public Web Discovery:</strong> Search indexing of publicly shared invite URLs across standard web platforms.</li>
-        <li><strong>Direct Community Submissions:</strong> Submissions from community leaders and members via our submission form.</li>
-        <li><strong>Curated Seed Indexes:</strong> Well-known open source and developer hubs manually added by editors.</li>
+      <ul class="list-disc pl-5 space-y-1.5 text-slate-700">
+        <li>We never invent community names, invite links, founder names, or recruiter contacts.</li>
+        <li>We never fabricate member counts, growth statistics, or user ratings.</li>
+        <li>If a metadata attribute cannot be independently corroborated, it remains explicitly <code>null</code> or unlisted.</li>
+        <li>We do not accept paid compensation for placement or artificial ranking boosts.</li>
       </ul>
     </section>
 
-    <section class="space-y-3">
-      <h2 class="text-xl font-bold text-slate-900">2. The Role of Artificial Intelligence</h2>
+    <section class="neo-card p-6 sm:p-8 space-y-3 bg-white">
+      <div class="inline-block bg-[#A7F3D0] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
+        AUTOMATION & AI BOUNDARIES
+      </div>
+      <h2 class="text-xl sm:text-2xl font-black text-black">2. Automated Operations & Discovery</h2>
       <p>
-        We utilize large language models (Google Gemini) exclusively for assisting with taxonomic categorization, extracting keyword tags, and formatting descriptions. 
+        {siteConfig.name} uses automated search and validation systems to discover and monitor public job communities. Automated classifiers assist with assigning taxonomy tags, geographic entity verification, and link reachability checks.
       </p>
-      <p class="font-semibold text-slate-900">
-        Our strict AI rules prohibit:
-      </p>
-      <ul class="list-disc pl-5 space-y-1 text-slate-600">
-        <li>Inventing community names, invite links, or founder names.</li>
-        <li>Estimating or fabricating member counts or growth stats.</li>
-        <li>Fabricating reviews or subjective ratings.</li>
-        <li>Certifying financial safety or investment viability.</li>
-      </ul>
-    </section>
-
-    <section class="space-y-3">
-      <h2 class="text-xl font-bold text-slate-900">3. Link Health & Dead Link Policy</h2>
       <p>
-        We run automated link audits to check if invites remain active. If an invite fails or becomes unreachable, its status is cautiously transitioned to <code class="bg-slate-100 px-1 py-0.5 rounded text-xs">unknown</code> and then <code class="bg-slate-100 px-1 py-0.5 rounded text-xs">dead</code> upon persistent 404 responses. Dead listings are kept temporarily with clear warnings or removed to prevent broken user experiences.
+        All automated candidate listings must pass strict programmatic gating (active status, geographic evidence, zero scam patterns) before entering public indexation.
       </p>
     </section>
 
-    <section class="space-y-3">
-      <h2 class="text-xl font-bold text-slate-900">4. Corrections & Takedown Requests</h2>
+    <section class="neo-card p-6 sm:p-8 space-y-3 bg-white">
+      <div class="inline-block bg-[#DDD6FE] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-2">
+        CORRECTIONS
+      </div>
+      <h2 class="text-xl sm:text-2xl font-black text-black">3. Corrections & Takedown Protocol</h2>
       <p>
-        If you are the owner of a community and wish to update listing information or request immediate removal from the directory, please use our <a href="/report" class="text-emerald-600 font-semibold hover:underline">Report / Request form</a> or email our team. Requests are processed promptly.
+        If you are the administrator of a community and wish to update listing information, replace an invite URL, or request immediate removal, use our <a href="/report" class="font-black text-black underline hover:text-emerald-700">Report & Removal Desk</a>. Takedown requests are processed immediately.
       </p>
     </section>
   </div>

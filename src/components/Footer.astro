@@ -12,12 +12,12 @@ const stats = getDatasetStats();
       <div class="lg:col-span-2 space-y-4">
         <a href="/" class="flex items-center gap-2.5">
           <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-[#FEF08A] text-black border-2 border-black shadow-[2px_2px_0px_0px_#000] font-black text-sm">
-            ??
+            ?
           </div>
           <span class="text-base font-black text-black">{siteConfig.name}</span>
         </a>
         <p class="text-xs font-medium leading-relaxed text-slate-700 max-w-sm">
-          Discover public WhatsApp, Telegram, and Discord communities sharing job openings, hiring alerts, career opportunities, and remote work across the USA, UK, Canada, and Australia.
+          Discover public Discord servers, Telegram channels, and WhatsApp groups sharing job openings, hiring alerts, career opportunities, and remote work across the USA, UK, Canada, and Australia.
         </p>
 
         <div class="rounded-xl border-2 border-black bg-[#FEF9C3] p-3.5 text-xs text-black font-bold space-y-1.5 shadow-[2px_2px_0px_0px_#000]">
@@ -31,16 +31,16 @@ const stats = getDatasetStats();
           </div>
           <div class="flex items-center justify-between">
             <span>Platforms:</span>
-            <span class="text-black font-black">Telegram, WhatsApp, Discord</span>
+            <span class="text-black font-black">Discord, Telegram, WhatsApp</span>
           </div>
         </div>
       </div>
 
       <!-- Countries Column -->
       <div>
-        <h4 class="text-xs font-black uppercase tracking-wider text-black bg-[#BAE6FD] px-2 py-0.5 rounded border border-black shadow-[1px_1px_0px_0px_#000] inline-block mb-3">
+        <h3 class="text-xs font-black uppercase tracking-wider text-black bg-[#BAE6FD] px-2 py-0.5 rounded border border-black shadow-[1px_1px_0px_0px_#000] inline-block mb-3">
           Target Countries
-        </h4>
+        </h3>
         <ul class="space-y-2 text-xs font-bold">
           {siteConfig.footerNav.countries.map((item) => (
             <li>
@@ -54,9 +54,9 @@ const stats = getDatasetStats();
 
       <!-- Job Types Column -->
       <div>
-        <h4 class="text-xs font-black uppercase tracking-wider text-black bg-[#FEF08A] px-2 py-0.5 rounded border border-black shadow-[1px_1px_0px_0px_#000] inline-block mb-3">
+        <h3 class="text-xs font-black uppercase tracking-wider text-black bg-[#FEF08A] px-2 py-0.5 rounded border border-black shadow-[1px_1px_0px_0px_#000] inline-block mb-3">
           Job Categories
-        </h4>
+        </h3>
         <ul class="space-y-2 text-xs font-bold">
           {siteConfig.footerNav.jobTypes.map((item) => (
             <li>
@@ -70,9 +70,9 @@ const stats = getDatasetStats();
 
       <!-- Trust & Legal Column -->
       <div>
-        <h4 class="text-xs font-black uppercase tracking-wider text-black bg-[#A7F3D0] px-2 py-0.5 rounded border border-black shadow-[1px_1px_0px_0px_#000] inline-block mb-3">
+        <h3 class="text-xs font-black uppercase tracking-wider text-black bg-[#A7F3D0] px-2 py-0.5 rounded border border-black shadow-[1px_1px_0px_0px_#000] inline-block mb-3">
           Trust & Safety
-        </h4>
+        </h3>
         <ul class="space-y-2 text-xs font-bold">
           {siteConfig.footerNav.trustAndLegal.map((item) => (
             <li>
@@ -85,21 +85,19 @@ const stats = getDatasetStats();
       </div>
     </div>
 
-    <!-- Bottom Disclaimer & Trademark -->
-    <div class="mt-12 pt-8 border-t-2 border-black/10 text-xs text-slate-600 font-medium space-y-3">
-      <p class="leading-relaxed">
-        <strong>Disclaimer:</strong> {siteConfig.name} is an independent public directory. Not affiliated with WhatsApp, Telegram, Discord, Meta, or employers represented in external communities. The website is an informational directory, not an employer or recruitment agency, and does not guarantee employment. Never pay money to get a job, and independently verify employers before sharing sensitive personal details.
-      </p>
-      <div class="flex flex-wrap items-center justify-between gap-4 pt-2 font-bold text-black">
-        <span>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</span>
-        <div class="flex gap-4">
-          <a href="/safety" class="hover:underline">Job Scam Guide</a>
-          <a href="/how-we-verify" class="hover:underline">How We Verify</a>
-          <a href="/editorial-policy" class="hover:underline">Editorial Policy</a>
-          <a href="/disclaimer" class="hover:underline">Disclaimer</a>
-          <a href="/privacy" class="hover:underline">Privacy</a>
-          <a href="/terms" class="hover:underline">Terms</a>
-        </div>
+    <!-- Bottom Disclaimer & Copyright Bar -->
+    <div class="mt-12 pt-6 border-t-2 border-black flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-bold text-slate-700">
+      <div>
+        &copy; {new Date().getFullYear()} {siteConfig.name}. An independent public job alert community directory.
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="/disclaimer" class="hover:underline text-black">Disclaimer</a>
+        <span>&bull;</span>
+        <a href="/privacy" class="hover:underline text-black">Privacy</a>
+        <span>&bull;</span>
+        <a href="/terms" class="hover:underline text-black">Terms</a>
+        <span>&bull;</span>
+        <a href="/report" class="hover:underline text-black">Report</a>
       </div>
     </div>
   </div>

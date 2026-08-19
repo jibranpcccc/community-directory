@@ -6,8 +6,9 @@ import { categories } from "../config/categories";
 
 <BaseLayout
   title="Page Not Found (404)"
-  description="The requested community listing or page could not be found."
+  description="The requested job community listing or page could not be found."
   canonicalPath="/404"
+  pageType="404"
   noindex={true}
 >
   <div class="max-w-3xl mx-auto px-4 py-16 sm:py-24 text-center">
@@ -20,18 +21,18 @@ import { categories } from "../config/categories";
     </h1>
 
     <p class="text-sm sm:text-base font-bold text-slate-700 max-w-lg mx-auto leading-relaxed mb-8">
-      The community listing or page you are looking for may have been moved, removed, or never existed. Try searching the directory below.
+      The job community listing or page you are looking for may have been removed, expired, or never existed. Search active groups or explore by category below.
     </p>
 
     <!-- Search Box -->
-    <div class="mb-10">
+    <div class="mb-10 max-w-md mx-auto">
       <SearchBox size="md" />
     </div>
 
     <!-- Quick Navigation -->
     <div class="space-y-4">
       <div class="text-xs font-black uppercase tracking-wider text-black">
-        Or browse by popular category:
+        Browse by category:
       </div>
       <div class="flex flex-wrap justify-center gap-2">
         {
@@ -50,15 +51,15 @@ import { categories } from "../config/categories";
     <div class="mt-10 pt-8 border-t-2 border-black/10 flex justify-center gap-4">
       <a
         href="/"
-        class="neo-button bg-[#A7F3D0] hover:bg-[#6EE7B7] px-5 py-2.5 text-xs font-black text-black"
+        class="neo-btn bg-[#FEF08A] hover:bg-[#FDE047] px-5 py-2.5 text-xs font-black text-black border-2 border-black shadow-[2px_2px_0px_0px_#000]"
       >
         Back to Home
       </a>
       <a
-        href="/communities"
-        class="neo-button bg-white hover:bg-slate-100 px-5 py-2.5 text-xs font-black text-black"
+        href="/jobs"
+        class="neo-btn bg-white hover:bg-slate-50 px-5 py-2.5 text-xs font-black text-black border-2 border-black shadow-[2px_2px_0px_0px_#000]"
       >
-        Browse All Communities
+        Browse All Job Groups
       </a>
     </div>
   </div>

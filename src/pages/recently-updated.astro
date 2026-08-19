@@ -4,35 +4,36 @@ import CommunityGrid from "../components/CommunityGrid.astro";
 import { getRecentlyChecked } from "../lib/communities";
 import { generateCollectionPageSchema } from "../lib/schema";
 
-const checkedCommunities = getRecentlyChecked(24);
+const recentlyChecked = getRecentlyChecked(24);
 const schema = generateCollectionPageSchema(
-  "Recently Checked Communities",
-  "Communities with recently verified link availability and status checks.",
+  "Recently Checked Job Groups",
+  "Active job communities verified during our latest automated link audit.",
   "/recently-updated",
-  checkedCommunities
+  recentlyChecked
 );
 ---
 
 <DirectoryLayout
-  heading="Recently Checked Communities"
-  subheading="Communities with recently verified link availability and status health audits."
+  heading="Recently Checked Job Groups"
+  subheading="Browse active job alert channels verified during our latest automated validation runs."
   breadcrumbs={[
-    { name: "Browse", item: "/communities" },
+    { name: "All Jobs", item: "/jobs" },
     { name: "Recently Checked", item: "/recently-updated" },
   ]}
   canonicalPath="/recently-updated"
+  pageType="utility"
   jsonLd={schema}
   noindex={true}
 >
   <div class="mb-6 flex items-center justify-between">
     <span class="text-xs font-bold text-black">
-      Showing <strong class="underline font-black">{checkedCommunities.length}</strong> recently checked listings
+      Showing <strong class="underline font-black">{recentlyChecked.length}</strong> recently checked communities
     </span>
   </div>
 
   <CommunityGrid
-    communities={checkedCommunities}
-    emptyTitle="No checked communities"
-    emptyMessage="No link health audits have been recorded yet."
+    communities={recentlyChecked}
+    emptyTitle="No recently checked communities"
+    emptyMessage="No communities have been rechecked recently."
   />
 </DirectoryLayout>

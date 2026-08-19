@@ -1,6 +1,7 @@
 ---
 import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
 import CommunityGrid from "../../components/CommunityGrid.astro";
+import SafetyNotice from "../../components/SafetyNotice.astro";
 import { siteConfig } from "../../config/site";
 import { getAllTagsWithCounts, getCommunitiesByTag } from "../../lib/communities";
 import { generateCollectionPageSchema } from "../../lib/schema";
@@ -22,27 +23,33 @@ const { tag } = Astro.props;
 const communities = getCommunitiesByTag(tag);
 
 const schema = generateCollectionPageSchema(
-  `#${tag} Communities`,
-  `Public communities tagged with #${tag} across Telegram, WhatsApp, and Discord.`,
+  `#${tag} Job Communities`,
+  `Public job alert communities tagged with #${tag} across Telegram, WhatsApp, and Discord.`,
   `/tag/${tag}`,
   communities
 );
 ---
 
 <DirectoryLayout
-  heading={`#${tag} Communities`}
-  subheading={`Browse ${communities.length} public online communities discussing and tagged with #${tag}.`}
+  heading={`#${tag} Job Communities`}
+  subheading={`Browse public online job communities tagged with #${tag}.`}
   breadcrumbs={[
     { name: "All Jobs", item: "/jobs" },
     { name: `#${tag}`, item: `/tag/${tag}` },
   ]}
   canonicalPath={`/tag/${tag}`}
   jsonLd={schema}
+  pageType="tag"
   noindex={communities.length < siteConfig.tagPageMinCommunities}
 >
-  <CommunityGrid
-    communities={communities}
-    emptyTitle={`No communities found for #${tag}`}
-    emptyMessage="There are currently no listings matching this tag."
-  />
+  <div class="space-y-8">
+    <CommunityGrid
+      communities={communities}
+      emptyTitle={`No communities found for #${tag}`}
+      emptyMessage="There are currently no listings matching this tag."
+    />
+
+    <!-- Safety Notice -->
+    <SafetyNotice type="job-warning" />
+  </div>
 </DirectoryLayout>

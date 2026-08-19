@@ -30,20 +30,21 @@ const schema = generateCollectionPageSchema(
 ---
 
 <DirectoryLayout
-  heading={`${category.name} Job Groups`}
-  subheading={category.description}
+  heading={`${category.name} Job Alert Groups`}
+  subheading={`Browse active ${category.name.toLowerCase()} communities sharing employment opportunities, recruiter links, and job alerts across the US, UK, Canada, and Australia.`}
   breadcrumbs={[
     { name: "All Jobs", item: "/jobs" },
     { name: category.name, item: `/category/${category.slug}` },
   ]}
   canonicalPath={`/category/${category.slug}`}
   jsonLd={schema}
+  pageType="category"
   noindex={communities.length < siteConfig.categoryMinCommunities}
 >
   <!-- Subcategories & Topics Bar -->
   <div class="mb-6 neo-card p-5 bg-white">
     <div class="text-xs font-black text-black uppercase tracking-wider mb-3">
-      Job Specializations & Focus Areas
+      Specializations & Focus Areas
     </div>
     <div class="flex flex-wrap gap-2">
       {
@@ -59,17 +60,18 @@ const schema = generateCollectionPageSchema(
   <!-- Listings Header -->
   <div class="flex items-center justify-between mb-4">
     <span class="text-xs font-bold text-black">
-      Showing <strong class="underline font-black">{communities.length}</strong> listed job groups in {category.name}
+      Showing <strong class="underline font-black">{communities.length}</strong> {communities.length === 1 ? 'community' : 'communities'} in {category.name}
     </span>
   </div>
 
   <div class="space-y-8">
     <CommunityGrid
       communities={communities}
-      emptyTitle={`No ${category.name} job groups yet`}
-      emptyMessage="We are continuously discovering active groups. Be the first to submit a public job group in this category."
+      emptyTitle={`No ${category.name.toLowerCase()} job groups currently published`}
+      emptyMessage="JobAlertHub continues checking public communities automatically. Verified communities will appear here once they pass publication gates."
     />
 
+    <!-- Safety Notice -->
     <SafetyNotice type="job-warning" />
   </div>
 </DirectoryLayout>

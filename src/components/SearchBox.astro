@@ -1,76 +1,65 @@
 ---
 interface Props {
   placeholder?: string;
+  size?: "sm" | "md" | "lg";
   actionUrl?: string;
-  initialValue?: string;
-  size?: "md" | "lg";
 }
 
 const {
-  placeholder = "Search communities by title, keyword, tech, or topic...",
-  actionUrl = "/communities",
-  initialValue = "",
-  size = "lg",
+  placeholder = "Search job communities (e.g. Remote, Tech, Internships)...",
+  size = "md",
+  actionUrl = "/jobs",
 } = Astro.props;
 
-const heightClass = size === "lg" ? "py-3.5 pl-11 pr-28 text-sm sm:text-base" : "py-2.5 pl-10 pr-20 text-sm";
-const iconSize = size === "lg" ? "h-5 w-5 left-3.5" : "h-4 w-4 left-3";
+const sizeClasses = {
+  sm: "py-2 px-3 text-xs",
+  md: "py-3 px-4 text-sm",
+  lg: "py-4 px-5 text-base font-bold",
+};
 ---
 
-<form action={actionUrl} method="GET" role="search" class="relative w-full max-w-2xl mx-auto">
-  <label for="search-input" class="sr-only">
-    Search communities
-  </label>
-  <div class="relative flex items-center">
-    <svg
-      class={`absolute ${iconSize} text-black pointer-events-none`}
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      aria-hidden="true"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2.5"
-        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-      />
-    </svg>
+<form
+  action={actionUrl}
+  method="GET"
+  class="relative flex w-full items-center"
+  role="search"
+  aria-label="Job community search"
+>
+  <label for="search-input" class="sr-only">Search job communities</label>
+  <div class="relative w-full">
+    <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+      <svg
+        class="h-5 w-5 text-black"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2.5"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+        />
+      </svg>
+    </div>
+
     <input
+      id="search-input"
       type="search"
       name="search"
-      id="search-input"
-      value={initialValue}
       placeholder={placeholder}
-      aria-label="Search communities by title, keyword, tech, or topic"
-      class={`w-full rounded-2xl border-[2.5px] border-black bg-white text-black font-medium placeholder:text-slate-500 shadow-[4px_4px_0px_0px_#000] focus:shadow-[6px_6px_0px_0px_#000] focus:outline-none transition-all ${heightClass}`}
-      autocomplete="off"
+      class={`w-full rounded-2xl border-[3px] border-black bg-white pl-11 pr-24 font-bold text-black placeholder-slate-500 shadow-[3px_3px_0px_0px_#000] focus:bg-[#FEF9C3] focus:outline-none focus:ring-2 focus:ring-black ${sizeClasses[size]}`}
     />
-    <div class="absolute right-2.5 flex items-center gap-2">
-      <kbd class="hidden sm:inline-flex items-center rounded-lg border-2 border-black bg-[#FEF08A] px-2 py-0.5 text-xs font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]" aria-hidden="true">
-        ⌘K
-      </kbd>
+
+    <div class="absolute inset-y-0 right-1.5 flex items-center">
       <button
         type="submit"
-        class="neo-button bg-[#FEF08A] hover:bg-[#FDE047] text-black px-4 py-2 text-xs font-black"
-        aria-label="Submit search"
+        class="neo-btn rounded-xl border-2 border-black bg-[#FEF08A] hover:bg-[#FDE047] px-3.5 py-1.5 text-xs font-black text-black shadow-[2px_2px_0px_0px_#000]"
+        aria-label="Execute search"
       >
         Search
       </button>
     </div>
   </div>
 </form>
-
-<script>
-  // Global ⌘K / Ctrl+K keyboard shortcut to focus search input
-  window.addEventListener("keydown", (e) => {
-    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
-      e.preventDefault();
-      const input = document.getElementById("search-input") as HTMLInputElement | null;
-      if (input) {
-        input.focus();
-        input.select();
-      }
-    }
-  });
-</script>

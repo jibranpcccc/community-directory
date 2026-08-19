@@ -26,8 +26,6 @@ try {
       GB: 'uk',
       CA: 'canada',
       AU: 'australia',
-      NZ: 'new-zealand',
-      IE: 'ireland',
     };
 
     for (const item of raw) {
@@ -83,7 +81,7 @@ try {
     );
   }
 } catch {
-  // fallback
+  // fallback if file not read
 }
 
 // https://astro.build/config
@@ -91,7 +89,7 @@ export default defineConfig({
   site: process.env.PUBLIC_SITE_URL || 'https://communityhub-directory.netlify.app',
   output: 'static',
   server: {
-    host: true, // Listen on all network addresses (0.0.0.0, 127.0.0.1, localhost, IPv6)
+    host: true,
     port: 4321,
   },
   integrations: [
@@ -100,11 +98,15 @@ export default defineConfig({
     }),
     sitemap({
       filter: (page) => {
+        // Exclude utility & error pages
         if (
           page.includes('/submit-success') ||
           page.includes('/report-success') ||
           page.includes('/new') ||
           page.includes('/recently-updated') ||
+          page.includes('/submit') ||
+          page.includes('/report') ||
+          page.includes('/contact') ||
           page.includes('/404')
         ) {
           return false;

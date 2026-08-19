@@ -2,13 +2,14 @@
 import BaseLayout from "./BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import { generateBreadcrumbSchema, type BreadcrumbItem } from "../lib/schema";
-import type { SeoProps } from "../lib/seo";
+import type { SeoProps, PageType } from "../lib/seo";
 
 interface Props extends SeoProps {
   heading: string;
   subheading?: string;
   breadcrumbs?: BreadcrumbItem[];
   jsonLd?: Record<string, any> | Record<string, any>[];
+  pageType?: PageType;
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   canonicalPath,
   jsonLd,
   noindex,
+  pageType = "jobs",
 } = Astro.props;
 
 // Combine passed jsonLd with BreadcrumbList schema if breadcrumbs are present
@@ -44,12 +46,13 @@ if (breadcrumbs.length > 0) {
   canonicalPath={canonicalPath}
   jsonLd={schemas.length > 0 ? (schemas.length === 1 ? schemas[0] : schemas) : undefined}
   noindex={noindex}
+  pageType={pageType}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
     {breadcrumbs.length > 0 && <Breadcrumbs items={breadcrumbs} />}
 
-    <!-- Page Header Header -->
-    <div class="mb-8 p-6 sm:p-8 rounded-3xl border-[3px] border-black bg-[#FEF9C3] shadow-[5px_5px_0px_0px_#000]">
+    <!-- Page Header Card with single H1 -->
+    <header class="mb-8 p-6 sm:p-8 rounded-3xl border-[3px] border-black bg-[#FEF9C3] shadow-[5px_5px_0px_0px_#000]">
       <h1 class="text-2xl sm:text-4xl font-black tracking-tight text-black">
         {heading}
       </h1>
@@ -58,7 +61,7 @@ if (breadcrumbs.length > 0) {
           {subheading}
         </p>
       )}
-    </div>
+    </header>
 
     <!-- Main Content Slot -->
     <slot />

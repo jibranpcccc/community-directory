@@ -7,28 +7,29 @@ import { siteConfig } from "../config/site";
   heading="Privacy Policy"
   subheading={`How ${siteConfig.name} handles information, form submissions, and external links.`}
   breadcrumbs={[
-    { name: "Home", item: "/" },
+    { name: "All Jobs", item: "/jobs" },
     { name: "Privacy Policy", item: "/privacy" },
   ]}
   canonicalPath="/privacy"
+  pageType="trust"
 >
-  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base text-slate-700 leading-relaxed">
-    <section class="space-y-3">
-      <h2 class="text-xl font-bold text-slate-900">1. Information We Collect</h2>
+  <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base font-medium text-slate-800 leading-relaxed">
+    <section class="neo-card p-6 sm:p-8 space-y-3 bg-white">
+      <h2 class="text-xl sm:text-2xl font-black text-black">1. Information We Collect</h2>
       <p>
-        <strong>Browsing Data:</strong> Our website is statically generated. We do not place invasive tracking cookies, browser fingerprinting scripts, or sell personal data.
+        <strong>Browsing Data:</strong> Our website is statically generated. We do not use invasive tracking cookies, browser fingerprinting scripts, or sell personal data.
       </p>
       <p>
-        <strong>Form Submissions:</strong> When you submit a community listing, report, or contact message, we collect the details you voluntarily provide (name, email, community URL, notes) to process your request.
+        <strong>Form Submissions:</strong> When you submit a community listing, report, or contact message, we collect the details you voluntarily provide (name, email, community URL, explanation) to process your request.
       </p>
     </section>
 
-    <section class="space-y-3">
-      <h2 class="text-xl font-bold text-slate-900">2. How Information is Used</h2>
+    <section class="neo-card p-6 sm:p-8 space-y-3 bg-white">
+      <h2 class="text-xl sm:text-2xl font-black text-black">2. How Information is Used</h2>
       <p>
         Submitted data is used strictly for:
       </p>
-      <ul class="list-disc pl-5 space-y-1 text-slate-600">
+      <ul class="list-disc pl-5 space-y-1 text-slate-700">
         <li>Evaluating community submissions and reports.</li>
         <li>Maintaining directory accuracy and removing broken or dangerous links.</li>
         <li>Responding to user inquiries.</li>
@@ -38,17 +39,10 @@ import { siteConfig } from "../config/site";
       </p>
     </section>
 
-    <section class="space-y-3">
-      <h2 class="text-xl font-bold text-slate-900">3. Outbound External Links</h2>
+    <section class="neo-card p-6 sm:p-8 space-y-3 bg-white">
+      <h2 class="text-xl sm:text-2xl font-black text-black">3. Outbound External Links</h2>
       <p>
-        Our directory links to third-party platforms (Telegram, Discord, WhatsApp, etc.). When you click to join an external community, you leave our site and become subject to that platform's privacy policy and terms.
-      </p>
-    </section>
-
-    <section class="space-y-3">
-      <h2 class="text-xl font-bold text-slate-900">4. Contact Regarding Privacy</h2>
-      <p>
-        For questions or requests concerning your data or community listings, contact us via our <a href="/contact" class="text-emerald-600 font-semibold hover:underline">Contact Page</a>.
+        Our directory links to third-party platforms (Discord, Telegram, WhatsApp). When you click to join an external community, you leave our site and become subject to that platform's privacy policy and terms.
       </p>
     </section>
   </div>

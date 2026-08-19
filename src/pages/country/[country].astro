@@ -35,7 +35,7 @@ const filtered = filterAndSortCommunities(
 
 const schema = generateCollectionPageSchema(
   `${countryConfig.name} Job Alert Groups`,
-  `Discover active and verified job alert communities, hiring channels, and career groups in ${countryConfig.name} across WhatsApp, Telegram, and Discord.`,
+  `Discover active job alert communities, hiring channels, and career groups in ${countryConfig.name} across WhatsApp, Telegram, and Discord.`,
   `/country/${countryConfig.slug}`,
   filtered
 );
@@ -45,14 +45,15 @@ const noindex = countryCommunities.length < siteConfig.countryMinCommunities;
 ---
 
 <DirectoryLayout
-  heading={`${countryConfig.flag} ${countryConfig.name} Job Alert Groups`}
-  subheading={`Discover active and verified job alert communities, hiring channels, and career groups in ${countryConfig.name} across WhatsApp, Telegram, and Discord.`}
+  heading={`${countryConfig.flag} Job Alert Groups in ${countryConfig.name}`}
+  subheading={`Browse active job communities currently listed for ${countryConfig.name}. Listings include public Discord servers, Telegram channels, and WhatsApp groups sharing employment alerts.`}
   breadcrumbs={[
     { name: "All Jobs", item: "/jobs" },
     { name: countryConfig.name, item: `/country/${countryConfig.slug}` },
   ]}
   canonicalPath={`/country/${countryConfig.slug}`}
   noindex={noindex}
+  pageType="country"
   jsonLd={schema}
 >
   <!-- Top Country Info Badge -->
@@ -62,26 +63,34 @@ const noindex = countryCommunities.length < siteConfig.countryMinCommunities;
     </span>
     {countryConfig.cities.length > 0 && (
       <span class="rounded-lg border-2 border-black bg-white px-3 py-1 text-black shadow-[2px_2px_0px_0px_#000]">
-        Major Metros: {countryConfig.cities.slice(0, 5).join(", ")}
+        Major Metro Areas: {countryConfig.cities.slice(0, 5).join(", ")}
       </span>
     )}
   </div>
 
   <!-- Filter Bar -->
   <FilterBar
-    currentFilters={{ search, category, platform, verificationStatus, countryCode: countryConfig.code }}
+    currentFilters={{ search, category, platform, verificationStatus }}
     currentSort={sort}
-    totalCount={filtered.length}
+    showCountryFilter={false}
   />
 
-  <!-- Interactive Grid Container -->
-  <div id="communities-results-container" class="space-y-8">
+  <!-- Listings Header -->
+  <div class="flex items-center justify-between mb-4 mt-6">
+    <span class="text-xs font-bold text-black">
+      Showing <strong class="underline font-black">{filtered.length}</strong> {filtered.length === 1 ? 'community' : 'communities'} in {countryConfig.name}
+    </span>
+  </div>
+
+  <!-- Grid with Empty State -->
+  <div class="space-y-8">
     <CommunityGrid
       communities={filtered}
-      emptyTitle={`No ${countryConfig.name} job groups found`}
-      emptyMessage={`We are currently discovering and validating active job alert groups for ${countryConfig.name}. Check back soon or submit a group!`}
+      emptyTitle={`No active ${countryConfig.name} job groups currently published`}
+      emptyMessage="JobAlertHub continues checking public communities automatically. Verified communities will appear here once they pass publication gates."
     />
 
+    <!-- Safety Notice -->
     <SafetyNotice type="job-warning" />
   </div>
 </DirectoryLayout>
