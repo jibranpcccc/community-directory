@@ -8,9 +8,6 @@ export interface SourceVerificationResult {
   sourceUrl: string;
 }
 
-const COMMUNITY_URL_REGEX =
-  /https?:\/\/(?:t\.me|telegram\.me|discord\.gg|discord\.com\/invite|chat\.whatsapp\.com)\/[a-zA-Z0-9_+%-]+/gi;
-
 const HREF_LINK_REGEX =
   /<a\s+(?:[^>]*?\s+)?href=["']([^"']+)["'][^>]*>(.*?)<\/a>/gis;
 
@@ -73,14 +70,6 @@ export async function verifySourceMentionsInvite(
       const rawHref = linkMatch[1];
       const anchor = linkMatch[2].replace(/<[^>]+>/g, " ").trim();
       extractedOutboundLinks.push({ href: rawHref, anchorText: anchor });
-    }
-
-    // Also scan for any explicit raw community URLs in the document
-    const rawUrlMatches = html.match(COMMUNITY_URL_REGEX) || [];
-    for (const rawUrl of rawUrlMatches) {
-      if (!extractedOutboundLinks.some((l) => l.href.includes(rawUrl))) {
-        extractedOutboundLinks.push({ href: rawUrl, anchorText: "" });
-      }
     }
 
     // 2. Check for exact normalized invite URL match in outbound links

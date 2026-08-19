@@ -80,6 +80,33 @@ describe("Source Page Verification Engine", () => {
     global.fetch = originalFetch;
   });
 
+  it("strictly rejects when plain text URL appears in HTML with no <a href> link", async () => {
+    const mockHtml = `
+      <html>
+        <body>
+          <h1>Astro Documentation</h1>
+          <p>You can join our chat at https://discord.gg/astro in your browser.</p>
+        </body>
+      </html>
+    `;
+
+    const originalFetch = global.fetch;
+    global.fetch = vi.fn().mockResolvedValue({
+      ok: true,
+      text: async () => mockHtml,
+    } as any);
+
+    const res = await verifySourceMentionsInvite(
+      "https://astro.build/docs",
+      "https://discord.gg/astro"
+    );
+
+    // Plain text URL without an <a href="..."> link MUST NOT confirm source!
+    expect(res.isConfirmed).toBe(false);
+
+    global.fetch = originalFetch;
+  });
+
   it("strictly rejects when source page HTML does not mention the invite token", async () => {
     const mockHtml = `
       <html>
