@@ -2,6 +2,7 @@
 import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
 import CommunityGrid from "../../components/CommunityGrid.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
+import { siteConfig } from "../../config/site";
 import { categories, type CategoryConfig } from "../../config/categories";
 import { getCommunitiesByCategory } from "../../lib/communities";
 import { generateCollectionPageSchema } from "../../lib/schema";
@@ -37,7 +38,7 @@ const schema = generateCollectionPageSchema(
   ]}
   canonicalPath={`/category/${category.slug}`}
   jsonLd={schema}
-  noindex={communities.length === 0}
+  noindex={communities.length < siteConfig.categoryMinCommunities}
 >
   <!-- Subcategories & Topics Bar -->
   <div class="mb-6 neo-card p-5 bg-white">

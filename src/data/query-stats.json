@@ -1,0 +1,272 @@
+[
+  {
+    "query": "site:t.me \"software engineer jobs\" USA",
+    "lastRunAt": "2026-08-19T08:52:51.917Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "\"discord.gg\" \"software engineer jobs\" USA",
+    "lastRunAt": "2026-08-19T08:52:59.693Z",
+    "rawCandidateCount": 7,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:chat.whatsapp.com \"software engineer jobs\" USA",
+    "lastRunAt": "2026-08-19T08:53:05.147Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:t.me \"software engineer jobs\" UK",
+    "lastRunAt": "2026-08-19T08:53:09.940Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "\"discord.gg\" \"software engineer jobs\" UK",
+    "lastRunAt": "2026-08-19T08:53:11.699Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:chat.whatsapp.com \"software engineer jobs\" UK",
+    "lastRunAt": "2026-08-19T08:53:12.708Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:t.me \"software engineer jobs\" Canada",
+    "lastRunAt": "2026-08-19T08:53:13.721Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "\"discord.gg\" \"software engineer jobs\" Canada",
+    "lastRunAt": "2026-08-19T08:53:14.727Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:chat.whatsapp.com \"software engineer jobs\" Canada",
+    "lastRunAt": "2026-08-19T08:53:15.738Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:t.me \"software engineer jobs\" Australia",
+    "lastRunAt": "2026-08-19T08:53:16.743Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "\"discord.gg\" \"software engineer jobs\" Australia",
+    "lastRunAt": "2026-08-19T08:53:17.750Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:chat.whatsapp.com \"software engineer jobs\" Australia",
+    "lastRunAt": "2026-08-19T08:53:18.753Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:t.me \"developer jobs\" USA \"job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:19.758Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "\"discord.gg\" \"developer jobs\" USA \"job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:20.769Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:chat.whatsapp.com \"developer jobs\" USA \"job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:21.772Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:t.me \"developer jobs\" UK \"job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:22.776Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "\"discord.gg\" \"developer jobs\" UK \"job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:23.779Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:chat.whatsapp.com \"developer jobs\" UK \"job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:24.782Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:t.me \"developer jobs\" Canada \"job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:25.790Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "\"discord.gg\" \"developer jobs\" Canada \"job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:26.803Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:chat.whatsapp.com \"developer jobs\" Canada \"job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:27.816Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:t.me \"developer jobs\" Australia \"job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:28.827Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "\"discord.gg\" \"developer jobs\" Australia \"job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:29.837Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:chat.whatsapp.com \"developer jobs\" Australia \"job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:30.846Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:t.me \"New York tech jobs\" OR \"New York job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:31.857Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "\"discord.gg\" \"New York tech jobs\" OR \"New York job postings\"",
+    "lastRunAt": "2026-08-19T08:53:32.868Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:chat.whatsapp.com \"New York job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:33.881Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:t.me \"London tech jobs\" OR \"London job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:34.891Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "\"discord.gg\" \"London tech jobs\" OR \"London job postings\"",
+    "lastRunAt": "2026-08-19T08:53:35.899Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  },
+  {
+    "query": "site:chat.whatsapp.com \"London job alerts\"",
+    "lastRunAt": "2026-08-19T08:53:36.911Z",
+    "rawCandidateCount": 0,
+    "activeCandidateCount": 0,
+    "wrongNicheCount": 0,
+    "newPendingCount": 0,
+    "duplicateCount": 0
+  }
+]

@@ -10,7 +10,11 @@ export const siteConfig = {
   url: process.env.PUBLIC_SITE_URL || "https://communityhub-directory.netlify.app",
   defaultLocale: "en",
   showAdPlaceholders: process.env.SHOW_AD_PLACEHOLDERS === "true",
-  tagPageMinCommunities: 3, // minimum communities required before generating indexable tag page
+  taxonomyMinCommunitiesForIndex: 5, // minimum 5 published listings required before indexation
+  tagPageMinCommunities: 5,          // minimum 5 published listings required before tag indexation
+  categoryMinCommunities: 5,         // minimum 5 published listings required before category indexation
+  countryMinCommunities: 5,          // minimum 5 published listings required before country indexation
+  jobTypeMinCommunities: 5,          // minimum 5 published listings required before job-type indexation
   paginationPageSize: 24,
   links: {
     github: "https://github.com",

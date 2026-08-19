@@ -3,6 +3,7 @@ import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
 import FilterBar from "../../components/FilterBar.astro";
 import CommunityGrid from "../../components/CommunityGrid.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
+import { siteConfig } from "../../config/site";
 import { JOB_TYPES } from "../../config/jobTypes";
 import { getCommunitiesByJobType } from "../../lib/communities";
 import { filterAndSortCommunities } from "../../lib/filters";
@@ -39,7 +40,7 @@ const schema = generateCollectionPageSchema(
   filtered
 );
 
-const noindex = filtered.length === 0;
+const noindex = jobCommunities.length < siteConfig.jobTypeMinCommunities;
 ---
 
 <DirectoryLayout

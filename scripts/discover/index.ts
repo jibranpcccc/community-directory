@@ -3,13 +3,13 @@ import * as fs from "fs";
 import * as path from "path";
 import { execSync } from "child_process";
 import { discoveryConfig } from "../../src/config/discovery";
-import { generateSearchQueries, type SearchQuery } from "./generateQueries";
+import { generateSearchQueries, loadQueryStats, saveQueryStats, type SearchQuery, type QueryStats } from "./generateQueries";
 import { GeminiGoogleSearchProvider, isSearchEngineOrRedirectUrl } from "./geminiSearch";
 import { ManualSeedProvider, type DiscoveryResult } from "./discoverySources";
 import { normalizeInviteUrl, generateSlug } from "../../src/lib/urls";
 import { isDuplicateListing } from "../data/deduplicate";
 import { classifyJobCommunityWithGemini } from "../classify/classifyCommunity";
-import { isJobRelevant, classifyJobScamRisk } from "../safety/jobRiskClassifier";
+import { isJobRelevant, classifyJobScamRisk, hasStrongJobIntent } from "../safety/jobRiskClassifier";
 import { validateDiscordLink } from "../validate/discord";
 import { validateTelegramLink } from "../validate/telegram";
 import { validateWhatsappLink } from "../validate/whatsapp";
@@ -24,7 +24,7 @@ const isDryRun = process.argv.some((arg) => arg.includes("dry-run"));
 const limitIndex = process.argv.findIndex((arg) => arg === "--limit");
 const maxTargetNew = limitIndex !== -1 && process.argv[limitIndex + 1]
   ? parseInt(process.argv[limitIndex + 1], 10)
-  : 30;
+  : discoveryConfig.maxNewCandidatesPerRun;
 
 const queriesIndex = process.argv.findIndex((arg) => arg === "--queries");
 const maxQueriesToRun = queriesIndex !== -1 && process.argv[queriesIndex + 1]
@@ -41,7 +41,7 @@ interface RejectedRecord {
 
 async function runDiscovery() {
   console.log("=========================================");
-  console.log(`?? JOB COMMUNITY DISCOVERY ENGINE ${isDryRun ? "[DRY RUN]" : ""}`);
+  console.log(`🎯 JOB COMMUNITY DISCOVERY ENGINE ${isDryRun ? "[DRY RUN]" : ""}`);
   console.log("=========================================");
 
   const dataDir = path.resolve(process.cwd(), "src/data");
@@ -50,61 +50,67 @@ async function runDiscovery() {
   const rejectedPath = path.join(dataDir, "rejected-candidates.json");
 
   // Load existing datasets
-  const published: Community[] = fs.existsSync(groupsPath)
+  const publishedGroups: Community[] = fs.existsSync(groupsPath)
     ? JSON.parse(fs.readFileSync(groupsPath, "utf-8"))
     : [];
-  const pending: Community[] = fs.existsSync(pendingPath)
-    ? JSON.parse(fs.readFileSync(pendingPath, "utf-8"))
-    : [];
+  const initialPendingBackup = fs.existsSync(pendingPath)
+    ? fs.readFileSync(pendingPath, "utf-8")
+    : "[]";
+  const pendingGroups: Community[] = JSON.parse(initialPendingBackup);
   const rejectedRecords: RejectedRecord[] = fs.existsSync(rejectedPath)
     ? JSON.parse(fs.readFileSync(rejectedPath, "utf-8"))
     : [];
 
-  const initialPendingBackup = JSON.stringify(pending, null, 2);
-  const allKnown = [...published, ...pending];
+  const allKnown: Community[] = [...publishedGroups, ...pendingGroups];
   const existingSlugs = allKnown.map((c) => c.slug);
+  const queryStatsMap = loadQueryStats();
 
-  console.log(`[discover] Current indexed database: ${published.length} published, ${pending.length} pending.`);
+  console.log(`[discover] Current indexed database: ${publishedGroups.length} published, ${pendingGroups.length} pending.`);
 
-  // 1. Generate bounded search queries across platforms and target countries
+  // 1. Generate precision-focused search queries
   const queries = generateSearchQueries(maxQueriesToRun);
-  console.log(`[discover] Generated ${queries.length} country-balanced job queries.`);
+  console.log(`[discover] Generated ${queries.length} country-balanced, high-intent job queries.`);
 
-  // 2. Initialize discovery providers
+  // 2. Fetch candidates via Gemini Live Google Search Grounding
   const geminiProvider = new GeminiGoogleSearchProvider();
-  const seedProvider = new ManualSeedProvider();
-
+  const rawResults: (DiscoveryResult & { queryMeta?: SearchQuery; title?: string })[] = [];
   let queriesUsedCount = 0;
-  const rawResults: (DiscoveryResult & { queryMeta?: SearchQuery })[] = [];
 
-  // Add seeds if available and needed
-  if (seedProvider.isAvailable()) {
-    const seedResults = await seedProvider.search();
-    if (seedResults.length > 0) {
-      console.log(`[discover] Loaded ${seedResults.length} manual seeds from seeds.json.`);
-      rawResults.push(...seedResults);
-    }
-  }
-
-  // Run search queries with Gemini Google Search Grounding
   if (geminiProvider.isAvailable()) {
     console.log(`[discover] Executing job search queries with model ${discoveryConfig.geminiModel}...`);
     for (let i = 0; i < queries.length; i++) {
       const q = queries[i];
+      console.log(`  [search] Query #${i + 1}/${queries.length} [${q.countryCode} - ${q.platform.toUpperCase()}] ${q.query}...`);
       queriesUsedCount++;
 
-      console.log(`  [search] Query #${i + 1}/${queries.length} [${q.countryCode} - ${q.platform.toUpperCase()}] "${q.query}"...`);
       const results = await geminiProvider.search(q.query, {
         platform: q.platform,
         category: q.category,
         subcategory: q.subcategory,
       });
 
-      if (results.length > 0) {
-        console.log(`    -> Found ${results.length} raw candidate link(s).`);
-        for (const res of results) {
-          rawResults.push({ ...res, queryMeta: q });
+      let validForQuery = 0;
+      for (const r of results) {
+        if (!isSearchEngineOrRedirectUrl(r.url)) {
+          rawResults.push({ ...r, queryMeta: q });
+          validForQuery++;
         }
+      }
+
+      // Update query performance tracking
+      const statKey = q.query;
+      queryStatsMap[statKey] = {
+        query: q.query,
+        lastRunAt: getCurrentIsoTimestamp(),
+        rawCandidateCount: (queryStatsMap[statKey]?.rawCandidateCount || 0) + validForQuery,
+        activeCandidateCount: queryStatsMap[statKey]?.activeCandidateCount || 0,
+        wrongNicheCount: queryStatsMap[statKey]?.wrongNicheCount || 0,
+        newPendingCount: queryStatsMap[statKey]?.newPendingCount || 0,
+        duplicateCount: queryStatsMap[statKey]?.duplicateCount || 0,
+      };
+
+      if (validForQuery > 0) {
+        console.log(`    -> Found ${validForQuery} raw candidate link(s).`);
       }
 
       if (rawResults.length >= maxTargetNew * 4) {
@@ -117,7 +123,7 @@ async function runDiscovery() {
       }
     }
   } else {
-    console.warn("??  GEMINI_API_KEY is not set. Live search grounding is disabled.");
+    console.warn("⚠️  GEMINI_API_KEY is not set. Live search grounding is disabled.");
   }
 
   const rawCandidatesCount = rawResults.length;
@@ -138,10 +144,18 @@ async function runDiscovery() {
   let newTelegramCount = 0;
   let newWhatsappCount = 0;
 
+  const categoryCounts = {
+    "tech-jobs": 0,
+    "remote-jobs": 0,
+    "internships-graduate": 0,
+    "visa-sponsorship-jobs": 0,
+    "healthcare-jobs": 0,
+    "other": 0,
+  };
+
   const validNewCommunities: Community[] = [];
   const batchSeenUrls = new Set<string>();
   const batchSeenGuildIds = new Set<string>();
-  const batchSeenTitles = new Set<string>();
 
   const now = getCurrentIsoTimestamp();
 
@@ -164,18 +178,36 @@ async function runDiscovery() {
       continue;
     }
 
-    // B. Preliminary check against both groups.json and pending-groups.json by URL
+    // B. Preliminary check against known records by URL
     const preDupCheck = isDuplicateListing(
       { inviteUrl: normalizedUrl, platform: cand.platform },
       allKnown
     );
     if (preDupCheck.isDuplicate) {
-      console.log(`  ? Duplicate skipped [URL]: ${normalizedUrl} (${preDupCheck.reason})`);
+      console.log(`  ⚠ Duplicate skipped [URL]: ${normalizedUrl} (${preDupCheck.reason})`);
       duplicatesSkippedCount++;
       continue;
     }
 
-    // C. Platform-specific live validation
+    // C. Early Job-Intent Pre-Filtering on Search Snippet/Title
+    const rawSearchText = `${cand.title || ""} ${cand.snippet || ""}`.trim();
+    if (rawSearchText.length > 5) {
+      const intentCheck = hasStrongJobIntent(rawSearchText);
+      if (!intentCheck.hasIntent) {
+        console.log(`  ⚠️ Pre-filtered [No Job Intent in Snippet]: "${cand.title || cand.url}" (${intentCheck.reason})`);
+        wrongNicheCount++;
+        rejectedRecords.push({
+          url: normalizedUrl,
+          platform: cand.platform,
+          title: cand.title,
+          reason: `Pre-filtered: ${intentCheck.reason}`,
+          date: now,
+        });
+        continue;
+      }
+    }
+
+    // D. Platform-specific live validation
     let validation: LinkValidationResult;
     try {
       if (cand.platform === "discord") {
@@ -193,47 +225,47 @@ async function runDiscovery() {
 
     // STRICT STATUS RULE: ONLY accept active links
     if (validation.status === "dead") {
-      console.log(`  ? Rejected [Dead] [${cand.platform}]: ${normalizedUrl} (${validation.message || "Dead or expired link"})`);
+      console.log(`  ✗ Rejected [Dead] [${cand.platform}]: ${normalizedUrl} (${validation.message || "Dead or expired link"})`);
       deadRejectedCount++;
       rejectedRecords.push({ url: normalizedUrl, platform: cand.platform, reason: "dead-link", date: now });
       continue;
     }
 
     if (validation.status === "unknown") {
-      console.log(`  ?? Held/Rejected [Unknown] [${cand.platform}]: ${normalizedUrl} (${validation.message || "Unverified/uncertain link status"})`);
+      console.log(`  ⏳ Held/Rejected [Unknown] [${cand.platform}]: ${normalizedUrl} (${validation.message || "Unverified/uncertain link status"})`);
       unknownRejectedCount++;
       rejectedRecords.push({ url: normalizedUrl, platform: cand.platform, reason: "unknown-status", date: now });
       continue;
     }
 
     if (validation.status !== "active") {
-      console.log(`  ? Rejected [Non-Active] [${cand.platform}]: ${normalizedUrl} (${validation.status})`);
+      console.log(`  ✗ Rejected [Non-Active] [${cand.platform}]: ${normalizedUrl} (${validation.status})`);
       deadRejectedCount++;
       continue;
     }
 
     activeCandidatesCount++;
 
-    // D. Extract genuine metadata
+    // E. Extract genuine metadata
     const realTitle = validation.extractedTitle?.trim() || "";
     const realDesc = validation.extractedDescription?.trim() || "";
     const realMembers = validation.extractedMemberCount ?? null;
     const extractedGuildId = validation.extractedGuildId || undefined;
 
-    // E. Strict Job Relevance Validation
-    const candidateFullText = `${realTitle} ${realDesc} ${cand.snippet || ""}`;
+    // F. Strict Job Relevance Validation on Extracted Platform Text
+    const candidateFullText = `${realTitle} ${realDesc} ${cand.snippet || ""}`.trim();
     const jobCheck = isJobRelevant(candidateFullText);
     if (!jobCheck.isJobRelated) {
-      console.log(`  ? Rejected [Wrong Niche]: "${realTitle || normalizedUrl}" (${jobCheck.reason || "Not job-related"})`);
+      console.log(`  ✗ Rejected [Wrong Niche]: "${realTitle || normalizedUrl}" (${jobCheck.reason || "Not job-related"})`);
       wrongNicheCount++;
       rejectedRecords.push({ url: normalizedUrl, platform: cand.platform, reason: "wrong-niche", title: realTitle, date: now });
       continue;
     }
 
-    // F. Strict Job Scam Risk Check
+    // G. Strict Job Scam Risk Check
     const scamCheck = classifyJobScamRisk(candidateFullText);
     if (scamCheck.isSevereScam) {
-      console.log(`  ? Rejected [Scam Risk]: "${realTitle || normalizedUrl}" (${scamCheck.reasons.join("; ")})`);
+      console.log(`  ✗ Rejected [Scam Risk]: "${realTitle || normalizedUrl}" (${scamCheck.reasons.join("; ")})`);
       scamRiskCount++;
       rejectedRecords.push({ url: normalizedUrl, platform: cand.platform, reason: "job-scam-risk", title: realTitle, date: now });
       continue;
@@ -242,49 +274,32 @@ async function runDiscovery() {
     // Discord Guild ID deduplication
     if (extractedGuildId) {
       if (batchSeenGuildIds.has(extractedGuildId)) {
-        console.log(`  ? Duplicate skipped [In-Batch Guild ID]: ${extractedGuildId} (${normalizedUrl})`);
+        console.log(`  ⚠ Duplicate skipped [In-Batch Guild ID]: ${extractedGuildId} (${normalizedUrl})`);
         duplicatesSkippedCount++;
         continue;
       }
       batchSeenGuildIds.add(extractedGuildId);
-    }
 
-    // Comprehensive duplicate check against allKnown (URL, Handle, Guild ID, Title)
-    const fullDupCheck = isDuplicateListing(
-      {
-        inviteUrl: normalizedUrl,
-        platform: cand.platform,
-        title: realTitle || undefined,
-        guildId: extractedGuildId,
-      },
-      allKnown
-    );
-
-    if (fullDupCheck.isDuplicate) {
-      console.log(`  ? Duplicate skipped: ${normalizedUrl} (${fullDupCheck.reason})`);
-      duplicatesSkippedCount++;
-      continue;
-    }
-
-    // Check title in-batch duplicate
-    if (realTitle) {
-      const cleanTitleKey = `${cand.platform}:${realTitle.toLowerCase().replace(/[^a-z0-9]/g, "")}`;
-      if (batchSeenTitles.has(cleanTitleKey)) {
+      const guildDupCheck = isDuplicateListing(
+        { inviteUrl: normalizedUrl, platform: cand.platform, guildId: extractedGuildId },
+        allKnown
+      );
+      if (guildDupCheck.isDuplicate) {
+        console.log(`  ⚠ Duplicate skipped [Guild ID]: ${extractedGuildId} (${guildDupCheck.reason})`);
         duplicatesSkippedCount++;
         continue;
       }
-      batchSeenTitles.add(cleanTitleKey);
     }
 
     batchSeenUrls.add(normalizedUrl);
 
-    // G. Strict Source Verification: Fetch independent source page and check for exact outbound href
+    // H. Strict Source Verification: Fetch independent source page and check for exact outbound href
     const sourceCheck = await verifySourceMentionsInvite(cand.sourceUrl, normalizedUrl, extractedGuildId);
     const validSource = sourceCheck.sourceUrl;
     const isSourceConfirmed = sourceCheck.isConfirmed;
 
-    // H. Job Classification & Tagging
-    console.log(`  ?? Classifying [${cand.platform.toUpperCase()}] "${realTitle || normalizedUrl}"...`);
+    // I. Job Classification & Tagging
+    console.log(`  🔍 Classifying [${cand.platform.toUpperCase()}] "${realTitle || normalizedUrl}"...`);
     const classification = await classifyJobCommunityWithGemini({
       inviteUrl: normalizedUrl,
       platform: cand.platform,
@@ -327,7 +342,7 @@ async function runDiscovery() {
       continue;
     }
 
-    // 3. Strict Tier-1 Country Gate (US, GB, CA, AU)
+    // 3. Strict Tier-1 Target Market Gate (US, GB, CA, AU)
     const TIER_1_SET = new Set(["US", "GB", "CA", "AU"]);
     if (!classification.countryCode || !TIER_1_SET.has(classification.countryCode)) {
       const reason = classification.countryCode
@@ -349,8 +364,7 @@ async function runDiscovery() {
     const slug = generateSlug(finalTitle, cand.platform, existingSlugs);
     existingSlugs.push(slug);
 
-    // I. Zero-Fabrication Description Policy
-    // Priority: 1. Real platform extracted description > 2. Verified source page snippet > 3. null
+    // Zero-Fabrication Description Policy
     let finalDescription: string | null = null;
     if (realDesc && realDesc.length > 5) {
       finalDescription = realDesc.slice(0, 400);
@@ -361,8 +375,6 @@ async function runDiscovery() {
     }
 
     const memberCountSourceUrl = realMembers !== null ? normalizedUrl : null;
-
-    // Sanitize experienceLevels against valid schema enum
     const VALID_EXP_LEVELS = new Set(["internship", "entry-level", "graduate", "mid-level", "senior", "executive"]);
     const validExpLevels = Array.isArray(classification.experienceLevels)
       ? (classification.experienceLevels as string[])
@@ -396,7 +408,7 @@ async function runDiscovery() {
       memberCountSource: memberCountSourceUrl,
       memberCountCheckedAt: realMembers ? now : null,
       verificationStatus: isSourceConfirmed ? "source-confirmed" : "unverified",
-      linkStatus: "active", // Strictly active
+      linkStatus: "active",
       sourceUrls: [validSource],
       guildId: extractedGuildId || null,
       discoveryMethod: geminiProvider.isAvailable() ? "gemini-search" : "manual",
@@ -404,7 +416,7 @@ async function runDiscovery() {
       lastCheckedAt: now,
       updatedAt: now,
       safetyFlags: classification.safetyFlags,
-      published: false, // Strictly false: discoveries only go to pending-groups.json
+      published: false,
       featured: false,
     };
 
@@ -419,6 +431,14 @@ async function runDiscovery() {
     else if (cand.platform === "telegram") newTelegramCount++;
     else if (cand.platform === "whatsapp") newWhatsappCount++;
 
+    // Track category breakdown
+    const cat = community.category;
+    if (cat in categoryCounts) {
+      categoryCounts[cat as keyof typeof categoryCounts]++;
+    } else {
+      categoryCounts["other"]++;
+    }
+
     console.log(`  ✅ Added to pending: [${cand.platform.toUpperCase()}] "${community.title}" (${community.countryCode} - ${community.category})`);
 
     // Polite API delay
@@ -429,7 +449,7 @@ async function runDiscovery() {
   const totalNewPending = validNewCommunities.length;
 
   if (isDryRun) {
-    console.log("\n?? DRY RUN COMPLETED � Discovered Job Communities (Not Saved):");
+    console.log("\n🧪 DRY RUN COMPLETED — Discovered Job Communities (Not Saved):");
     validNewCommunities.forEach((c) => {
       console.log(` - [${c.platform.toUpperCase()}] [${c.countryCode || "UNKNOWN"}] ${c.title} (${c.category}) => ${c.inviteUrl}`);
     });
@@ -441,49 +461,63 @@ async function runDiscovery() {
     const updatedPending = [...existingPending, ...validNewCommunities];
     atomicWriteJson(pendingPath, updatedPending);
     atomicWriteJson(rejectedPath, rejectedRecords);
+    saveQueryStats(queryStatsMap);
 
     // 5. Verification & Rollback Protection
-    console.log("\n?? Running automated verification tests...");
+    console.log("\n🧪 Running automated verification tests...");
     try {
       execSync("npm run validate-data", { stdio: "inherit" });
       execSync("npm run test", { stdio: "inherit" });
-      console.log("? Verification passed: Schemas and test suites are 100% healthy.");
+      console.log("✓ Verification passed: Schemas and test suites are 100% healthy.");
     } catch (testError: any) {
-      console.error("? Post-discovery verification failed! Rolling back pending-groups.json...");
+      console.error("✗ Post-discovery verification failed! Rolling back pending-groups.json...");
       fs.writeFileSync(pendingPath, initialPendingBackup, "utf-8");
-      console.log("? Rollback complete: Restored original pending-groups.json.");
+      console.log("✓ Rollback complete: Restored original pending-groups.json.");
       throw testError;
     }
+  } else {
+    saveQueryStats(queryStatsMap);
   }
 
-  // 6. Print Job Discovery Execution Report
+  // 6. Print Sequential Funnel Report
   console.log("\n=========================================");
   console.log("🎯 JOB DISCOVERY EXECUTION REPORT");
   console.log("=========================================");
-  console.log(`Queries used: ${queriesUsedCount}`);
+  console.log("RAW DISCOVERY");
   console.log(`Raw candidates: ${rawCandidatesCount}`);
-  console.log(`Wrong niche rejected: ${wrongNicheCount}`);
-  console.log(`Wrong country rejected: ${wrongCountryCount}`);
-  console.log(`Unconfirmed country held: ${unconfirmedCountryCount}`);
-  console.log(`Scam risk rejected: ${scamRiskCount}`);
-  console.log(`Dead rejected: ${deadRejectedCount}`);
-  console.log(`Unknown rejected/held: ${unknownRejectedCount}`);
-  console.log(`Duplicates skipped: ${duplicatesSkippedCount}`);
-  console.log(`ACTIVE validated candidates: ${activeCandidatesCount}`);
-  console.log(`Total new pending: ${totalNewPending}`);
-  console.log("-----------------------------------------");
-  console.log(`USA (US)       : ${countryCounts.US}`);
-  console.log(`UK (GB)        : ${countryCounts.GB}`);
-  console.log(`Canada (CA)    : ${countryCounts.CA}`);
-  console.log(`Australia (AU) : ${countryCounts.AU}`);
-  console.log("-----------------------------------------");
-  console.log(`Telegram       : ${newTelegramCount}`);
-  console.log(`Discord        : ${newDiscordCount}`);
-  console.log(`WhatsApp       : ${newWhatsappCount}`);
+  console.log("\nPLATFORM VALIDATION");
+  console.log(`Active: ${activeCandidatesCount}`);
+  console.log(`Dead: ${deadRejectedCount}`);
+  console.log(`Unknown: ${unknownRejectedCount}`);
+  console.log(`Other validation failure: 0`);
+  console.log("\nACTIVE CANDIDATE FILTERING");
+  console.log(`Wrong niche: ${wrongNicheCount}`);
+  console.log(`Wrong country: ${wrongCountryCount}`);
+  console.log(`Unconfirmed country: ${unconfirmedCountryCount}`);
+  console.log(`Scam risk: ${scamRiskCount}`);
+  console.log(`Duplicates: ${duplicatesSkippedCount}`);
+  console.log("\nFINAL");
+  console.log(`New active pending: ${totalNewPending}`);
+  console.log("\nCOUNTRY BREAKDOWN");
+  console.log(`US: ${countryCounts.US}`);
+  console.log(`GB: ${countryCounts.GB}`);
+  console.log(`CA: ${countryCounts.CA}`);
+  console.log(`AU: ${countryCounts.AU}`);
+  console.log("\nPLATFORM BREAKDOWN");
+  console.log(`Telegram: ${newTelegramCount}`);
+  console.log(`Discord: ${newDiscordCount}`);
+  console.log(`WhatsApp: ${newWhatsappCount}`);
+  console.log("\nCATEGORY BREAKDOWN");
+  console.log(`Tech Jobs: ${categoryCounts["tech-jobs"]}`);
+  console.log(`Remote Jobs: ${categoryCounts["remote-jobs"]}`);
+  console.log(`Internships/New Grad: ${categoryCounts["internships-graduate"]}`);
+  console.log(`Visa Sponsorship: ${categoryCounts["visa-sponsorship-jobs"]}`);
+  console.log(`Healthcare: ${categoryCounts["healthcare-jobs"]}`);
+  console.log(`Other: ${categoryCounts["other"]}`);
   console.log("=========================================\n");
 }
 
 runDiscovery().catch((err) => {
-  console.error("? Discovery run encountered fatal error:", err);
+  console.error("✗ Discovery run encountered fatal error:", err);
   process.exit(1);
 });

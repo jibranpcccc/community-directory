@@ -2,6 +2,7 @@
 import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
 import CommunityGrid from "../../components/CommunityGrid.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
+import { siteConfig } from "../../config/site";
 import { platforms, type PlatformConfig } from "../../config/platforms";
 import { getCommunitiesByPlatform } from "../../lib/communities";
 import { generateCollectionPageSchema } from "../../lib/schema";
@@ -39,7 +40,7 @@ const schema = generateCollectionPageSchema(
   ]}
   canonicalPath={`/platform/${platform.id}`}
   jsonLd={schema}
-  noindex={communities.length === 0}
+  noindex={communities.length < siteConfig.taxonomyMinCommunitiesForIndex}
 >
   <!-- Non-Affiliation Notice -->
   <div class="mb-6 neo-card p-4 bg-white text-xs font-bold text-black">

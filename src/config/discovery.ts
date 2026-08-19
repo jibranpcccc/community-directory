@@ -1,8 +1,10 @@
 export const discoveryConfig = {
-  // Query budget (optimized for daily automated runs within Gemini limits)
+  // Daily discovery targets (3–10 high quality Tier-1 communities; 0 is acceptable)
+  minTargetNewPerDay: 3,
+  maxTargetNewPerDay: 10,
   maxQueriesPerRun: parseInt(process.env.DISCOVERY_MAX_QUERIES || "30", 10),
   maxCandidatesPerQuery: 10,
-  maxNewCandidatesPerRun: parseInt(process.env.DISCOVERY_MAX_CANDIDATES || "30", 10),
+  maxNewCandidatesPerRun: parseInt(process.env.DISCOVERY_MAX_CANDIDATES || "10", 10),
 
   // Rate limiting delay between search queries (ms)
   requestDelayMs: parseInt(process.env.DISCOVERY_REQUEST_DELAY_MS || "1500", 10),
@@ -17,19 +19,32 @@ export const discoveryConfig = {
   // Target platforms for discovery
   supportedPlatforms: ["telegram", "discord", "whatsapp"] as const,
 
-  // Country discovery allocation weights
+  // Country discovery allocation weights (US: 40%, GB: 25%, CA: 20%, AU: 15%)
   countryWeights: {
-    US: 0.40, // 40%
-    GB: 0.25, // 25%
-    CA: 0.20, // 20%
-    AU: 0.15, // 15%
+    US: 0.40,
+    GB: 0.25,
+    CA: 0.20,
+    AU: 0.15,
   },
 
-  // Platform discovery allocation weights
+  // Platform discovery allocation weights (Telegram: 40%, Discord: 40%, WhatsApp: 20%)
   platformWeights: {
-    telegram: 0.40, // 40%
-    discord: 0.35,  // 35%
-    whatsapp: 0.25, // 25%
+    telegram: 0.40,
+    discord: 0.40,
+    whatsapp: 0.20,
+  },
+
+  // Category discovery budget allocations (Tier A: 90%, Tier B: 10%)
+  categoryWeights: {
+    "tech-jobs": 0.25,                 // 25%
+    "remote-jobs": 0.20,               // 20%
+    "internships-graduate": 0.20,      // 20%
+    "visa-sponsorship-jobs": 0.15,     // 15%
+    "healthcare-jobs": 0.10,           // 10%
+    "finance-jobs": 0.025,             // 2.5%
+    "engineering-jobs": 0.025,         // 2.5%
+    "sales-marketing-jobs": 0.025,     // 2.5%
+    "government-jobs": 0.025,          // 2.5%
   },
 
   // High-risk job scam phrases that trigger safetyFlags or rejection

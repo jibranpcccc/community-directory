@@ -3,6 +3,7 @@ import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
 import FilterBar from "../../components/FilterBar.astro";
 import CommunityGrid from "../../components/CommunityGrid.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
+import { siteConfig } from "../../config/site";
 import { ENABLED_COUNTRIES } from "../../config/countries";
 import { getCommunitiesByCountry } from "../../lib/communities";
 import { filterAndSortCommunities } from "../../lib/filters";
@@ -39,8 +40,8 @@ const schema = generateCollectionPageSchema(
   filtered
 );
 
-// If 0 listings exist, enforce noindex
-const noindex = filtered.length === 0;
+// If fewer than threshold listings exist, enforce noindex
+const noindex = countryCommunities.length < siteConfig.countryMinCommunities;
 ---
 
 <DirectoryLayout

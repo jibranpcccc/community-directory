@@ -1,6 +1,6 @@
-import { TARGET_COUNTRIES, type CountryCode, ENABLED_COUNTRIES } from "../../src/config/countries";
-import { JOB_TYPES } from "../../src/config/jobTypes";
-import { INDUSTRIES } from "../../src/config/industries";
+import * as fs from "fs";
+import * as path from "path";
+import { type CountryCode, ENABLED_COUNTRIES } from "../../src/config/countries";
 import { discoveryConfig } from "../../src/config/discovery";
 import type { PlatformId } from "../../src/types/community";
 
@@ -12,109 +12,160 @@ export interface SearchQuery {
   subcategory?: string;
   topic: string;
   targetCity?: string;
+  weight?: number;
+}
+
+export interface QueryStats {
+  query: string;
+  lastRunAt: string;
+  rawCandidateCount: number;
+  activeCandidateCount: number;
+  wrongNicheCount: number;
+  newPendingCount: number;
+  duplicateCount: number;
 }
 
 interface QueryTemplate {
   category: string;
   subcategory: string;
   topic: string;
+  weight: number;
   getKeywords: (countryName: string, shortName: string) => string[];
 }
 
 const TEMPLATES: QueryTemplate[] = [
-  {
-    category: "remote-jobs",
-    subcategory: "Remote Work",
-    topic: "Remote Jobs",
-    getKeywords: (country, short) => [
-      `remote jobs ${short}`,
-      `remote hiring ${country}`,
-      `work from home jobs ${short}`,
-      `remote careers ${short}`,
-    ],
-  },
+  // TIER A (90% of category allocation)
   {
     category: "tech-jobs",
     subcategory: "Software Engineering",
     topic: "Software & Tech Jobs",
+    weight: 0.25,
     getKeywords: (country, short) => [
-      `software engineer jobs ${short}`,
-      `tech careers ${country}`,
-      `developer jobs ${short}`,
-      `engineering recruitment ${short}`,
+      `"tech job postings" Discord ${country}`,
+      `"software jobs" Telegram ${short}`,
+      `"tech hiring" Discord ${short}`,
+      `"software engineer jobs" ${short}`,
+      `"developer jobs" ${short} "job alerts"`,
     ],
   },
   {
-    category: "tech-jobs",
-    subcategory: "AI & Machine Learning",
-    topic: "AI & Data Jobs",
+    category: "remote-jobs",
+    subcategory: "Remote Work",
+    topic: "Remote Jobs",
+    weight: 0.20,
     getKeywords: (country, short) => [
-      `AI engineer jobs ${short}`,
-      `machine learning careers ${country}`,
-      `data science jobs ${short}`,
-    ],
-  },
-  {
-    category: "tech-jobs",
-    subcategory: "Cybersecurity",
-    topic: "Cybersecurity Jobs",
-    getKeywords: (country, short) => [
-      `cybersecurity jobs ${short}`,
-      `infosec hiring ${country}`,
-      `security engineer careers ${short}`,
-    ],
-  },
-  {
-    category: "healthcare-jobs",
-    subcategory: "Nursing & Medical",
-    topic: "Healthcare & Nursing",
-    getKeywords: (country, short) => [
-      `nursing jobs ${short}`,
-      `healthcare recruitment ${country}`,
-      `hospital nursing vacancies ${short}`,
-    ],
-  },
-  {
-    category: "finance-jobs",
-    subcategory: "Finance & Accounting",
-    topic: "Finance & Accounting",
-    getKeywords: (country, short) => [
-      `finance jobs ${short}`,
-      `accounting careers ${country}`,
-      `banking recruitment ${short}`,
+      `"remote job alerts" Telegram ${short}`,
+      `"daily job postings" Discord ${country}`,
+      `"remote hiring" ${short} "job alerts"`,
+      `"work from home jobs" ${short}`,
     ],
   },
   {
     category: "internships-graduate",
     subcategory: "Graduate & Internships",
     topic: "Internships & Graduate Schemes",
+    weight: 0.20,
     getKeywords: (country, short) => [
-      `graduate jobs ${short}`,
-      `internship openings ${country}`,
-      `entry level tech careers ${short}`,
+      `"new grad jobs" Discord ${country}`,
+      `"internship postings" Discord ${country}`,
+      `"${country} internships" Discord`,
+      `"${short} graduate jobs" Telegram`,
+      `"entry level tech jobs" ${short}`,
     ],
   },
   {
     category: "visa-sponsorship-jobs",
     subcategory: "Visa Sponsorship",
     topic: "Visa Sponsorship Jobs",
+    weight: 0.15,
     getKeywords: (country, short) => [
-      `visa sponsorship jobs ${country}`,
-      `skilled worker visa jobs ${short}`,
-      `relocation jobs ${country}`,
+      `"visa sponsorship jobs" ${country}`,
+      `"skilled worker visa jobs" ${short}`,
+      `"relocation tech jobs" ${country}`,
+    ],
+  },
+  {
+    category: "healthcare-jobs",
+    subcategory: "Nursing & Medical",
+    topic: "Healthcare & Nursing",
+    weight: 0.10,
+    getKeywords: (country, short) => [
+      `"nursing job alerts" ${short}`,
+      `"healthcare vacancies" ${country}`,
+      `"hospital nursing jobs" ${short}`,
+    ],
+  },
+  // TIER B (10% of category allocation combined)
+  {
+    category: "finance-jobs",
+    subcategory: "Finance & Accounting",
+    topic: "Finance & Accounting",
+    weight: 0.025,
+    getKeywords: (country, short) => [
+      `"finance job alerts" ${short}`,
+      `"accounting careers" ${country}`,
+    ],
+  },
+  {
+    category: "engineering-jobs",
+    subcategory: "Civil & Mechanical",
+    topic: "Engineering Careers",
+    weight: 0.025,
+    getKeywords: (country, short) => [
+      `"engineering job postings" ${short}`,
+      `"mechanical engineer vacancies" ${country}`,
     ],
   },
   {
     category: "sales-marketing-jobs",
     subcategory: "Sales & Marketing",
     topic: "Sales & Marketing",
+    weight: 0.025,
     getKeywords: (country, short) => [
-      `sales marketing jobs ${short}`,
-      `B2B tech sales careers ${country}`,
-      `growth marketing jobs ${short}`,
+      `"sales marketing job alerts" ${short}`,
+      `"B2B sales vacancies" ${country}`,
+    ],
+  },
+  {
+    category: "government-jobs",
+    subcategory: "Public Sector",
+    topic: "Government & Public Sector",
+    weight: 0.025,
+    getKeywords: (country, short) => [
+      `"government job alerts" ${short}`,
+      `"civil service vacancies" ${country}`,
     ],
   },
 ];
+
+const STATS_FILE = path.resolve("./src/data/query-stats.json");
+
+export function loadQueryStats(): Record<string, QueryStats> {
+  try {
+    if (fs.existsSync(STATS_FILE)) {
+      const raw = JSON.parse(fs.readFileSync(STATS_FILE, "utf-8"));
+      if (Array.isArray(raw)) {
+        const map: Record<string, QueryStats> = {};
+        for (const item of raw) {
+          if (item && item.query) map[item.query] = item;
+        }
+        return map;
+      }
+    }
+  } catch {
+    // fallback
+  }
+  return {};
+}
+
+export function saveQueryStats(statsMap: Record<string, QueryStats>): void {
+  try {
+    const list = Object.values(statsMap);
+    fs.writeFileSync(STATS_FILE, JSON.stringify(list, null, 2), "utf-8");
+  } catch {
+    // ignore
+  }
+}
 
 /**
  * Generates an interleaved, country-balanced query matrix across
@@ -123,6 +174,7 @@ const TEMPLATES: QueryTemplate[] = [
 export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQueriesPerRun): SearchQuery[] {
   const platforms: PlatformId[] = ["telegram", "discord", "whatsapp"];
   const countries = ENABLED_COUNTRIES;
+  const stats = loadQueryStats();
 
   // Build query candidates partitioned by country and platform
   const poolByCountryAndPlatform: Record<string, SearchQuery[]> = {};
@@ -138,43 +190,53 @@ export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQu
       const keywords = tpl.getKeywords(c.name, c.shortName);
 
       for (const kw of keywords) {
+        // Query score calculation based on past performance
+        const past = stats[kw];
+        let performanceWeight = 1.0;
+        if (past) {
+          if (past.newPendingCount > 0) performanceWeight += 0.5;
+          if (past.wrongNicheCount > 5 && past.newPendingCount === 0) performanceWeight -= 0.3;
+        }
+
         // Telegram query
         poolByCountryAndPlatform[`${c.code}:telegram`].push({
-          query: `site:t.me "${kw}" channel OR group OR "job alerts"`,
+          query: kw.includes("site:") ? kw : `site:t.me ${kw}`,
           platform: "telegram",
           countryCode: c.code,
           category: tpl.category,
           subcategory: tpl.subcategory,
           topic: tpl.topic,
+          weight: tpl.weight * performanceWeight,
         });
 
         // Discord query
         poolByCountryAndPlatform[`${c.code}:discord`].push({
-          query: `"discord.gg" "${kw}" server OR "job openings" OR "hiring"`,
+          query: kw.includes("site:") || kw.includes("discord.gg") ? kw : `"discord.gg" ${kw}`,
           platform: "discord",
           countryCode: c.code,
           category: tpl.category,
           subcategory: tpl.subcategory,
           topic: tpl.topic,
+          weight: tpl.weight * performanceWeight,
         });
 
         // WhatsApp query
         poolByCountryAndPlatform[`${c.code}:whatsapp`].push({
-          query: `site:chat.whatsapp.com "${kw}" group OR "job alerts"`,
+          query: kw.includes("site:") || kw.includes("chat.whatsapp.com") ? kw : `site:chat.whatsapp.com ${kw}`,
           platform: "whatsapp",
           countryCode: c.code,
           category: tpl.category,
           subcategory: tpl.subcategory,
           topic: tpl.topic,
+          weight: tpl.weight * performanceWeight,
         });
       }
 
-      // Add top 2 cities per country for metro-specific coverage
+      // Add top 2 cities per country for high-converting metro coverage
       const topCities = c.cities.slice(0, 2);
       for (const city of topCities) {
-        const metroKw = `${city} jobs`;
         poolByCountryAndPlatform[`${c.code}:telegram`].push({
-          query: `site:t.me "${metroKw}" group OR channel`,
+          query: `site:t.me "${city} tech jobs" OR "${city} job alerts"`,
           platform: "telegram",
           countryCode: c.code,
           category: tpl.category,
@@ -184,7 +246,7 @@ export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQu
         });
 
         poolByCountryAndPlatform[`${c.code}:discord`].push({
-          query: `"discord.gg" "${metroKw}" server OR hiring`,
+          query: `"discord.gg" "${city} tech jobs" OR "${city} job postings"`,
           platform: "discord",
           countryCode: c.code,
           category: tpl.category,
@@ -194,7 +256,7 @@ export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQu
         });
 
         poolByCountryAndPlatform[`${c.code}:whatsapp`].push({
-          query: `site:chat.whatsapp.com "${metroKw}" group`,
+          query: `site:chat.whatsapp.com "${city} job alerts"`,
           platform: "whatsapp",
           countryCode: c.code,
           category: tpl.category,

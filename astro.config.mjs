@@ -58,27 +58,27 @@ try {
 
     eligibleTags = new Set(
       Object.entries(tagCounts)
-        .filter(([_, count]) => count >= 3)
+        .filter(([_, count]) => count >= 5)
         .map(([t]) => t)
     );
     eligibleCategories = new Set(
       Object.entries(catCounts)
-        .filter(([_, count]) => count > 0)
+        .filter(([_, count]) => count >= 5)
         .map(([c]) => c)
     );
     eligibleJobTypes = new Set(
       Object.entries(jobTypeCounts)
-        .filter(([_, count]) => count > 0)
+        .filter(([_, count]) => count >= 5)
         .map(([jt]) => jt)
     );
     eligibleCountries = new Set(
       Object.entries(countryCounts)
-        .filter(([_, count]) => count > 0)
+        .filter(([_, count]) => count >= 5)
         .map(([c]) => c)
     );
     eligiblePlatforms = new Set(
       Object.entries(platCounts)
-        .filter(([_, count]) => count > 0)
+        .filter(([_, count]) => count >= 5)
         .map(([p]) => p)
     );
   }

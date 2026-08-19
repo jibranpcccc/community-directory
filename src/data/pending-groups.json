@@ -5,35 +5,48 @@
     "title": "northern.dev (formerly Tech Career North 🍁)",
     "platform": "discord",
     "vertical": "jobs",
-    "category": "internships-graduate",
-    "subcategory": "Vancouver Jobs",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering & Internships",
     "tags": [
-      "discord",
-      "jobs",
-      "internshipsgraduate"
+      "tech-jobs",
+      "canada",
+      "internships",
+      "graduate-jobs",
+      "software-engineering",
+      "discord"
     ],
     "inviteUrl": "https://discord.gg/96rkQyC5rX",
     "description": "Welcome to our community of builders - engineers, researchers, and makers who learn, ship, and grow together. Ties to Canada 🍁 is the only membership card.",
-    "language": null,
-    "country": "CA",
+    "language": "en",
+    "country": "Canada",
     "countryCode": "CA",
     "city": null,
     "jobTypes": [
-      "internships-graduate"
+      "internships",
+      "graduate-jobs",
+      "entry-level-jobs",
+      "full-time-jobs"
     ],
-    "industries": [],
+    "industries": [
+      "technology"
+    ],
     "workArrangement": "unknown",
-    "experienceLevels": [],
+    "experienceLevels": [
+      "internship",
+      "entry-level",
+      "graduate",
+      "mid-level"
+    ],
     "visaSponsorship": "unknown",
     "accessType": "unknown",
     "communityType": "unknown",
     "memberCount": 13903,
     "memberCountSource": "https://discord.gg/96rkQyC5rX",
     "memberCountCheckedAt": "2026-08-19T08:33:40.620Z",
-    "verificationStatus": "unverified",
+    "verificationStatus": "source-confirmed",
     "linkStatus": "active",
     "sourceUrls": [
-      "https://discord.gg/96rkQyC5rX"
+      "https://northern.dev"
     ],
     "guildId": "1045555763264880640",
     "discoveryMethod": "gemini-search",

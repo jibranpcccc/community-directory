@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { isJobRelevant, classifyJobScamRisk } from "../scripts/safety/jobRiskClassifier";
+import { isJobRelevant, classifyJobScamRisk, hasStrongJobIntent } from "../scripts/safety/jobRiskClassifier";
 import { TARGET_COUNTRIES, ENABLED_COUNTRIES, getCountryByCode, getCountryBySlug } from "../src/config/countries";
 import { JOB_TYPES, getJobTypeBySlug } from "../src/config/jobTypes";
 import { INDUSTRIES, getIndustryBySlug } from "../src/config/industries";
@@ -65,13 +65,57 @@ describe("Job Relevance Classification", () => {
   });
 });
 
+describe("Early Pre-Filtering Job Intent Engine", () => {
+  it("identifies strong positive employment intent from search snippets and titles", () => {
+    const positiveSnippets = [
+      "daily job postings Discord Canada",
+      "tech job postings Discord Canada",
+      "new grad jobs Discord Canada",
+      "internship postings Discord Canada",
+      "job alerts Telegram USA",
+      "software jobs Telegram USA",
+      "remote job alerts Telegram USA",
+      "tech hiring Discord USA",
+      "UK tech jobs Telegram",
+      "job postings Discord UK",
+      "London tech jobs Discord",
+      "Sydney tech jobs Discord",
+      "Australia graduate jobs Telegram",
+    ];
+
+    for (const text of positiveSnippets) {
+      const res = hasStrongJobIntent(text);
+      expect(res.hasIntent).toBe(true);
+      expect(res.matched.length).toBeGreaterThan(0);
+    }
+  });
+
+  it("rejects weak or generic community phrases that lack strong employment intent", () => {
+    const weakSnippets = [
+      "Canada tech Discord",
+      "USA remote community",
+      "UK discussion server",
+      "Gaming lounge with anime chat",
+      "Crypto trading signals VIP",
+      "Dropshipping and ecommerce course",
+    ];
+
+    for (const text of weakSnippets) {
+      const res = hasStrongJobIntent(text);
+      expect(res.hasIntent).toBe(false);
+    }
+  });
+});
+
 describe("Job Scam and Fraud Risk Engine with Negation Context", () => {
   it("allows educational/warning statements without triggering false scam flags", () => {
     const educationalSamples = [
       "No registration fee is required",
-      "Never send a crypto deposit to recruiters",
-      "Employers should never ask you to pay upfront",
+      "We never charge applicants",
+      "Never send crypto to recruiters",
+      "Employers should never ask for upfront payment",
       "We never charge registration fees",
+      "100% free job alerts to join",
     ];
 
     for (const text of educationalSamples) {
@@ -82,10 +126,17 @@ describe("Job Scam and Fraud Risk Engine with Negation Context", () => {
   });
 
   it("detects and flags actual upfront fee scams", () => {
-    const text = "Pay $50 registration fee to start your remote position.";
-    const res = classifyJobScamRisk(text);
-    expect(res.isSevereScam).toBe(true);
-    expect(res.safetyFlags).toContain("upfront-payment");
+    const samples = [
+      "Pay $50 registration fee to begin",
+      "Pay for equipment before your interview",
+      "Registration fee required to unlock your training",
+    ];
+
+    for (const text of samples) {
+      const res = classifyJobScamRisk(text);
+      expect(res.isSevereScam).toBe(true);
+      expect(res.safetyFlags).toContain("upfront-payment");
+    }
   });
 
   it("detects and flags task optimization / video likes scams", () => {
@@ -103,10 +154,16 @@ describe("Job Scam and Fraud Risk Engine with Negation Context", () => {
   });
 
   it("detects and flags reshipping / package mule scams", () => {
-    const text = "Work from home as a parcel inspector reshipping packages to international clients.";
-    const res = classifyJobScamRisk(text);
-    expect(res.isSevereScam).toBe(true);
-    expect(res.safetyFlags).toContain("reshipping-scam");
+    const samples = [
+      "Work from home as a parcel inspector reshipping packages to international clients.",
+      "Receive packages and resend them for salary and bonus.",
+    ];
+
+    for (const text of samples) {
+      const res = classifyJobScamRisk(text);
+      expect(res.isSevereScam).toBe(true);
+      expect(res.safetyFlags).toContain("reshipping-scam");
+    }
   });
 
   it("detects and flags unrealistic guaranteed income claims", () => {
