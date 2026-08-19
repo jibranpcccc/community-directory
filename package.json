@@ -16,6 +16,8 @@
     "validate-data": "tsx scripts/data/validateSchema.ts",
     "data:stats": "tsx scripts/utilities/stats.ts",
     "discover": "tsx scripts/discover/index.ts",
+    "auto-publish": "tsx scripts/data/autoPublish.ts",
+    "revalidate-published": "tsx scripts/data/revalidatePublished.ts",
     "validate-links": "tsx scripts/validate/index.ts",
     "approve": "tsx scripts/utilities/approve.ts"
   },

@@ -1,16 +1,20 @@
-name: Discover Communities
+name: Discover & Auto-Publish Communities
 
 on:
   schedule:
     - cron: '0 4 * * *' # Daily at 04:00 UTC
   workflow_dispatch:
 
+concurrency:
+  group: job-directory-data-writer
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
 jobs:
   discover:
-    name: Run Automated Discovery
+    name: Run Autonomous Discovery & Publication
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -25,14 +29,34 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: TypeScript type checking
+        run: npm run typecheck
+
       - name: Run discovery engine
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS || secrets.GEMINI_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
           GEMINI_SEARCH_ENABLED: ${{ vars.GEMINI_SEARCH_ENABLED || 'true' }}
-          AUTO_PUBLISH_DISCOVERED: 'false'
+          AUTO_PUBLISH_ENABLED: 'true'
+          AUTO_PUBLISH_MAX_PER_RUN: '5'
+          AUTO_PUBLISH_MAX_VALIDATION_AGE_HOURS: '24'
+          AUTO_PUBLISH_REQUIRE_TARGET_COUNTRY: 'true'
+          AUTO_PUBLISH_REQUIRE_STRONG_JOB_INTENT: 'true'
+          AUTO_PUBLISH_REJECT_SEVERE_RISK: 'true'
+          AUTO_PUBLISH_PROBATION_ENABLED: 'true'
+          PROBATION_MAX_DAYS: '7'
+          TIER_B_REQUIRED_OBSERVATIONS: '2'
         run: npm run discover
+
+      - name: Run automated publication engine
+        env:
+          AUTO_PUBLISH_ENABLED: 'true'
+          AUTO_PUBLISH_MAX_PER_RUN: '5'
+        run: npm run auto-publish
+
+      - name: Revalidate published communities
+        run: npm run revalidate-published
 
       - name: Validate dataset schemas
         run: npm run validate-data
@@ -40,7 +64,7 @@ jobs:
       - name: Run test suite
         run: npm run test
 
-      - name: Commit and push discovered data
+      - name: Commit and push changed data
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -48,6 +72,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No data changes to commit."
           else
-            git commit -m "data: update discovered communities [skip ci]"
+            git commit -m "chore(data): automated discovery $(date -u +'%Y-%m-%d') [skip ci]"
             git push
           fi

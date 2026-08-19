@@ -9,8 +9,8 @@ export const discoveryConfig = {
   // Rate limiting delay between search queries (ms)
   requestDelayMs: parseInt(process.env.DISCOVERY_REQUEST_DELAY_MS || "1500", 10),
 
-  // Publication safety policy (false = route discoveries strictly to pending-groups.json)
-  autoPublish: process.env.AUTO_PUBLISH_DISCOVERED === "true",
+  // Publication safety policy (defaults to true for fully autonomous mode)
+  autoPublish: process.env.AUTO_PUBLISH_ENABLED !== "false",
 
   // Gemini model settings
   geminiModel: process.env.GEMINI_MODEL || "gemini-2.5-flash",
@@ -27,11 +27,11 @@ export const discoveryConfig = {
     AU: 0.15,
   },
 
-  // Platform discovery allocation weights (Telegram: 40%, Discord: 40%, WhatsApp: 20%)
+  // Platform discovery allocation weights (Discord: 50%, Telegram: 35%, WhatsApp: 15%)
   platformWeights: {
-    telegram: 0.40,
-    discord: 0.40,
-    whatsapp: 0.20,
+    discord: 0.50,
+    telegram: 0.35,
+    whatsapp: 0.15,
   },
 
   // Category discovery budget allocations (Tier A: 90%, Tier B: 10%)

@@ -91,6 +91,11 @@ export const CommunitySchema = z.object({
   country: z.string().nullable().optional(),
   countryCode: CountryCodeSchema.nullable().optional().default(null),
   city: z.string().nullable().optional().default(null),
+  countryEvidence: z.object({
+    sourceType: z.enum(["platform-title", "platform-description", "independent-source", "official-source"]),
+    text: z.string().optional(),
+    sourceUrl: z.string().optional(),
+  }).nullable().optional(),
   jobTypes: z.array(z.string()).optional().default([]),
   industries: z.array(z.string()).optional().default([]),
   workArrangement: WorkArrangementSchema.optional().default("unknown"),
@@ -112,6 +117,19 @@ export const CommunitySchema = z.object({
   guildId: z.string().nullable().optional(),
   published: z.boolean(),
   featured: z.boolean().optional(),
+  // Probation and lifecycle tracking fields
+  firstSeenAt: z.string().datetime({ offset: true }).optional(),
+  lastSeenAt: z.string().datetime({ offset: true }).optional(),
+  timesSeen: z.number().int().nonnegative().optional(),
+  providerIds: z.array(z.string()).optional(),
+  validationAttempts: z.number().int().nonnegative().optional(),
+  consecutiveUnknownCount: z.number().int().nonnegative().optional(),
+  lastValidationStatus: LinkStatusSchema.optional(),
+  publicationConfidence: z.number().optional(),
+  publicationTier: z.enum(["A", "B", "C"]).optional(),
+  autoPublishBlockedReasons: z.array(z.string()).optional(),
+  unpublishedAt: z.string().datetime({ offset: true }).nullable().optional(),
+  unpublishReason: z.string().nullable().optional(),
 }).refine((data) => {
   const fullText = `${data.title} ${data.description || ""} ${data.tags.join(" ")}`;
   return !DISALLOWED_NICHE_REGEX.test(fullText);

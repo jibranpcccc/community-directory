@@ -17,7 +17,9 @@ import { verifySourceMentionsInvite } from "../validate/verifySource";
 import type { LinkValidationResult } from "../validate/validateUrl";
 import { atomicWriteJson } from "../data/mergeListings";
 import { getCurrentIsoTimestamp } from "../../src/lib/dates";
-import type { Community, CountryCode, ExperienceLevel } from "../../src/types/community";
+import type { Community, CountryCode, ExperienceLevel, ArchivedCommunity } from "../../src/types/community";
+import { runAutoPublish } from "../data/autoPublish";
+import { autoPublishConfig } from "../../src/config/autoPublish";
 
 // Parse CLI flags
 const isDryRun = process.argv.some((arg) => arg.includes("dry-run"));
@@ -43,6 +45,11 @@ interface RejectedRecord {
 
 export interface DailyMetricsRecord {
   date: string;
+  runId: string;
+  workflowRunId?: string;
+  startedAt: string;
+  finishedAt: string;
+  generatedBy: "discovery-pipeline";
   queryTopics: number;
   providerRequests: number;
   rawCandidates: number;
@@ -57,7 +64,15 @@ export interface DailyMetricsRecord {
   unconfirmedTargetMarket: number;
   scamRejected: number;
   duplicates: number;
-  newPending: number;
+  probationAdded: number;
+  tierAEligible: number;
+  tierBEligible: number;
+  tierCBlocked: number;
+  autoPublished: number;
+  autoUnpublished: number;
+  publishedTotal: number;
+  pendingTotal: number;
+  archivedTotal: number;
   countryCounts: {
     US: number;
     GB: number;
@@ -111,6 +126,7 @@ function recordRejection(
 }
 
 async function runDiscovery() {
+  const startedAtIso = getCurrentIsoTimestamp();
   console.log("=========================================");
   console.log(`🎯 JOB COMMUNITY DISCOVERY ENGINE ${isDryRun ? "[DRY RUN]" : ""}`);
   console.log("=========================================");
@@ -529,52 +545,14 @@ async function runDiscovery() {
     }
 
     if (queryStat) queryStat.newPendingCount++;
-    console.log(`  ✅ Added to pending: [${cand.platform.toUpperCase()}] "${community.title}" (${community.countryCode} - ${community.category})`);
+    console.log(`  ✅ Added to staging: [${cand.platform.toUpperCase()}] "${community.title}" (${community.countryCode} - ${community.category})`);
 
     // Polite API delay
     await new Promise((r) => setTimeout(r, 300));
   }
 
-  // 4. Output / Save Results
+  // 4. Output / Save Staging Results
   const totalNewPending = validNewCommunities.length;
-
-  // Persist Daily Metrics
-  const dailyMetricsRecord: DailyMetricsRecord = {
-    date: new Date().toISOString().split("T")[0],
-    queryTopics: queriesUsedCount,
-    providerRequests: providerRequestsCount,
-    rawCandidates: rawCandidatesCount,
-    passedJobIntent: passedJobIntentCount,
-    wrongNiche: wrongNicheCount,
-    active: activeCandidatesCount,
-    dead: deadRejectedCount,
-    unknown: unknownRejectedCount,
-    validationFailures: validationFailuresCount,
-    confirmedTier1: confirmedTier1Count,
-    wrongCountry: wrongCountryCount,
-    unconfirmedTargetMarket: unconfirmedCountryCount,
-    scamRejected: scamRiskCount,
-    duplicates: duplicatesSkippedCount,
-    newPending: totalNewPending,
-    countryCounts: {
-      US: countryCounts.US,
-      GB: countryCounts.GB,
-      CA: countryCounts.CA,
-      AU: countryCounts.AU,
-    },
-    platformCounts: {
-      telegram: newTelegramCount,
-      discord: newDiscordCount,
-      whatsapp: newWhatsappCount,
-    },
-    categoryCounts,
-  };
-
-  const existingDailyMetrics: DailyMetricsRecord[] = fs.existsSync(dailyMetricsPath)
-    ? JSON.parse(fs.readFileSync(dailyMetricsPath, "utf-8"))
-    : [];
-  existingDailyMetrics.push(dailyMetricsRecord);
-  atomicWriteJson(dailyMetricsPath, existingDailyMetrics);
 
   if (isDryRun) {
     console.log("\n🧪 DRY RUN COMPLETED — Discovered Job Communities (Not Saved):");
@@ -591,7 +569,7 @@ async function runDiscovery() {
     atomicWriteJson(rejectedPath, rejectedRecords);
     saveQueryStats(queryStatsMap);
 
-    // 5. Verification & Rollback Protection
+    // Verification & Rollback Protection
     console.log("\n🧪 Running automated verification tests...");
     try {
       execSync("npm run validate-data", { stdio: "inherit" });
@@ -606,6 +584,87 @@ async function runDiscovery() {
   } else {
     atomicWriteJson(rejectedPath, rejectedRecords);
     saveQueryStats(queryStatsMap);
+  }
+
+  // 5. Automated Publication Step
+  let autoPublishResult = {
+    tierACount: 0,
+    tierBCount: 0,
+    tierCCount: 0,
+    eligibleCount: 0,
+    publishedCount: 0,
+    rejectedProbationCount: 0,
+  };
+
+  if (!isDryRun && autoPublishConfig.enabled) {
+    console.log("\n🚀 Triggering Autonomous Publication Engine...");
+    autoPublishResult = await runAutoPublish(autoPublishConfig);
+  }
+
+  const finishedAtIso = getCurrentIsoTimestamp();
+
+  // Read latest totals for accurate reporting
+  const currentPublished: Community[] = fs.existsSync(groupsPath)
+    ? JSON.parse(fs.readFileSync(groupsPath, "utf-8"))
+    : [];
+  const currentPending: Community[] = fs.existsSync(pendingPath)
+    ? JSON.parse(fs.readFileSync(pendingPath, "utf-8"))
+    : [];
+  const currentArchived: ArchivedCommunity[] = fs.existsSync(path.join(dataDir, "archived-groups.json"))
+    ? JSON.parse(fs.readFileSync(path.join(dataDir, "archived-groups.json"), "utf-8"))
+    : [];
+
+  // Persist Real Daily Execution Metrics
+  const dailyMetricsRecord: DailyMetricsRecord = {
+    date: new Date().toISOString().split("T")[0],
+    runId: `run_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
+    workflowRunId: process.env.GITHUB_RUN_ID || undefined,
+    startedAt: startedAtIso,
+    finishedAt: finishedAtIso,
+    generatedBy: "discovery-pipeline",
+    queryTopics: queriesUsedCount,
+    providerRequests: providerRequestsCount,
+    rawCandidates: rawCandidatesCount,
+    passedJobIntent: passedJobIntentCount,
+    wrongNiche: wrongNicheCount,
+    active: activeCandidatesCount,
+    dead: deadRejectedCount,
+    unknown: unknownRejectedCount,
+    validationFailures: validationFailuresCount,
+    confirmedTier1: confirmedTier1Count,
+    wrongCountry: wrongCountryCount,
+    unconfirmedTargetMarket: unconfirmedCountryCount,
+    scamRejected: scamRiskCount,
+    duplicates: duplicatesSkippedCount,
+    probationAdded: totalNewPending,
+    tierAEligible: autoPublishResult.tierACount,
+    tierBEligible: autoPublishResult.tierBCount,
+    tierCBlocked: autoPublishResult.tierCCount,
+    autoPublished: autoPublishResult.publishedCount,
+    autoUnpublished: 0,
+    publishedTotal: currentPublished.length,
+    pendingTotal: currentPending.length,
+    archivedTotal: currentArchived.length,
+    countryCounts: {
+      US: countryCounts.US,
+      GB: countryCounts.GB,
+      CA: countryCounts.CA,
+      AU: countryCounts.AU,
+    },
+    platformCounts: {
+      telegram: newTelegramCount,
+      discord: newDiscordCount,
+      whatsapp: newWhatsappCount,
+    },
+    categoryCounts,
+  };
+
+  if (!isDryRun) {
+    const existingDailyMetrics: DailyMetricsRecord[] = fs.existsSync(dailyMetricsPath)
+      ? JSON.parse(fs.readFileSync(dailyMetricsPath, "utf-8"))
+      : [];
+    existingDailyMetrics.push(dailyMetricsRecord);
+    atomicWriteJson(dailyMetricsPath, existingDailyMetrics);
   }
 
   // 6. Print Sequential Funnel Report

@@ -60,6 +60,16 @@ export type DiscoveryMethod =
   | "platform-api"
   | "other";
 
+export interface CountryEvidence {
+  sourceType:
+    | "platform-title"
+    | "platform-description"
+    | "independent-source"
+    | "official-source";
+  text?: string;
+  sourceUrl?: string;
+}
+
 export interface Community {
   id: string;
   slug: string;
@@ -75,6 +85,7 @@ export interface Community {
   country?: string | null;
   countryCode: CountryCode | null;
   city: string | null;
+  countryEvidence?: CountryEvidence | null;
   jobTypes: string[];
   industries: string[];
   workArrangement: WorkArrangement;
@@ -96,6 +107,35 @@ export interface Community {
   guildId?: string | null;
   published: boolean;
   featured?: boolean;
+
+  // Automated probation & lifecycle tracking metadata
+  firstSeenAt?: string;
+  lastSeenAt?: string;
+  timesSeen?: number;
+  providerIds?: string[];
+  validationAttempts?: number;
+  consecutiveUnknownCount?: number;
+  lastValidationStatus?: LinkStatus;
+  publicationConfidence?: number;
+  publicationTier?: "A" | "B" | "C";
+  autoPublishBlockedReasons?: string[];
+  unpublishedAt?: string | null;
+  unpublishReason?: string | null;
+}
+
+export interface ArchivedCommunity {
+  id: string;
+  slug: string;
+  title: string;
+  platform: PlatformId;
+  inviteUrl: string;
+  publishedAt?: string;
+  unpublishedAt: string;
+  unpublishReason: string;
+  lastKnownStatus: LinkStatus;
+  guildId?: string | null;
+  countryCode?: CountryCode | null;
+  category?: string;
 }
 
 export interface CategoryConfig {
