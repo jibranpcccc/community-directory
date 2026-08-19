@@ -19,6 +19,7 @@ import { atomicWriteJson } from "../data/mergeListings";
 import { getCurrentIsoTimestamp } from "../../src/lib/dates";
 import type { Community, CountryCode, ExperienceLevel, ArchivedCommunity } from "../../src/types/community";
 import { runAutoPublish, validateCountryEvidence } from "../data/autoPublish";
+import { stageDiscoveredCandidates } from "../data/mergeStaging";
 import { autoPublishConfig } from "../../src/config/autoPublish";
 
 // Parse CLI flags
@@ -508,6 +509,7 @@ async function runDiscovery() {
     }
 
     const currentRunId = `run_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+    const providerName = geminiProvider.isAvailable() ? "gemini-search" : "seed-provider";
 
     const community: Community = {
       id: slug,
@@ -542,6 +544,17 @@ async function runDiscovery() {
       lastSuccessfulValidationAt: now,
       sourceUrls: [validSource],
       sourceCheckedAt: isSourceConfirmed ? now : null,
+      sourceVerification: isSourceConfirmed
+        ? {
+            status: "confirmed",
+            checkedAt: now,
+            sourceUrl: validSource,
+            inviteUrl: normalizedUrl,
+            matchedBy: sourceCheck.matchedBy || "exact-href",
+            matchedGuildId: extractedGuildId || null,
+            evidenceSnippet: sourceCheck.evidenceSnippet || null,
+          }
+        : null,
       guildId: extractedGuildId || null,
       discoveryMethod: geminiProvider.isAvailable() ? "gemini-search" : "manual",
       discoveredAt: now,
@@ -553,7 +566,7 @@ async function runDiscovery() {
       firstSeenAt: now,
       lastSeenAt: now,
       timesSeen: 1,
-      providerIds: [geminiProvider.isAvailable() ? "gemini-search" : "seed-provider"],
+      providerIds: [providerName],
       observedRunIds: [currentRunId],
       querySource: cand.queryMeta?.query || undefined,
       sourceHostname: parsedHostname,
@@ -598,26 +611,18 @@ async function runDiscovery() {
       ? JSON.parse(fs.readFileSync(pendingPath, "utf-8"))
       : [];
 
-    for (const newCand of validNewCommunities) {
-      const existingIdx = existingPending.findIndex(
-        (p) => normalizeInviteUrl(p.inviteUrl) === normalizeInviteUrl(newCand.inviteUrl)
-      );
-      if (existingIdx !== -1) {
-        const existing = existingPending[existingIdx];
-        existing.timesSeen = (existing.timesSeen || 1) + 1;
-        existing.lastSeenAt = now;
-        existing.observedRunIds = Array.from(new Set([...(existing.observedRunIds || []), ...(newCand.observedRunIds || [])]));
-        existing.providerIds = Array.from(
-          new Set([...(existing.providerIds || []), ...(newCand.providerIds || [])])
-        );
-        existing.lastCheckedAt = now;
-        existing.linkStatus = "active";
-      } else {
-        existingPending.push(newCand);
-      }
-    }
+    const currentRunId = `run_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+    const providerName = geminiProvider.isAvailable() ? "gemini-search" : "seed-provider";
 
-    atomicWriteJson(pendingPath, existingPending);
+    const { updatedPending } = stageDiscoveredCandidates(
+      existingPending,
+      validNewCommunities,
+      currentRunId,
+      providerName,
+      now
+    );
+
+    atomicWriteJson(pendingPath, updatedPending);
     atomicWriteJson(rejectedPath, rejectedRecords);
     saveQueryStats(queryStatsMap);
 

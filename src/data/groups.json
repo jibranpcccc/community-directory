@@ -58,6 +58,15 @@
       "https://northern.dev"
     ],
     "sourceCheckedAt": "2026-08-19T08:33:40.620Z",
+    "sourceVerification": {
+      "status": "confirmed",
+      "checkedAt": "2026-08-19T08:33:40.620Z",
+      "sourceUrl": "https://northern.dev",
+      "inviteUrl": "https://discord.gg/96rkQyC5rX",
+      "matchedBy": "exact-href",
+      "matchedGuildId": "1045555763264880640",
+      "evidenceSnippet": "Welcome to our community of builders - engineers, researchers, and makers who learn, ship, and grow together."
+    },
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-19T08:33:40.620Z",
     "lastCheckedAt": "2026-08-19T09:56:19.235Z",

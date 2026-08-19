@@ -60,7 +60,22 @@ export type DiscoveryMethod =
   | "platform-api"
   | "other";
 
-export type DescriptionSource = "platform" | "confirmed-source";
+export type DescriptionSource =
+  | "platform"
+  | "confirmed-source"
+  | "platform-title"
+  | "platform-description"
+  | "independent-source";
+
+export interface SourceVerificationEvidence {
+  status: "confirmed" | "failed" | "unverified";
+  checkedAt: string;
+  sourceUrl: string;
+  inviteUrl: string;
+  matchedBy: "exact-href" | "discord-guild-id";
+  matchedGuildId?: string | null;
+  evidenceSnippet?: string | null;
+}
 
 export interface CountryEvidence {
   sourceType:
@@ -117,6 +132,7 @@ export interface Community {
   lastSuccessfulValidationAt?: string | null;
   sourceUrls: string[];
   sourceCheckedAt?: string | null;
+  sourceVerification?: SourceVerificationEvidence | null;
   discoveryMethod: DiscoveryMethod;
   discoveredAt: string;
   lastCheckedAt?: string | null;

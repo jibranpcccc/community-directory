@@ -6,6 +6,8 @@ export interface SourceVerificationResult {
   isConfirmed: boolean;
   evidenceSnippet?: string;
   sourceUrl: string;
+  matchedBy?: "exact-href" | "discord-guild-id";
+  matchedGuildId?: string | null;
 }
 
 const HREF_LINK_REGEX =
@@ -94,6 +96,8 @@ export async function verifySourceMentionsInvite(
           isConfirmed: true,
           evidenceSnippet: snippet && snippet.length > 5 ? snippet.slice(0, 300) : undefined,
           sourceUrl: normSource,
+          matchedBy: "exact-href",
+          matchedGuildId: candidateGuildId || null,
         };
       }
     }
@@ -115,6 +119,8 @@ export async function verifySourceMentionsInvite(
               isConfirmed: true,
               evidenceSnippet: `Official Discord server linked on ${new URL(normSource).hostname}`,
               sourceUrl: normSource,
+              matchedBy: "discord-guild-id",
+              matchedGuildId: candidateGuildId,
             };
           }
         } catch {

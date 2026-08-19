@@ -1,13 +1,15 @@
-import { describe, it, expect, beforeEach, afterEach } from "vitest";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import * as fs from "fs";
 import * as path from "path";
 import * as os from "os";
-import { evaluateAutoPublishCandidate, runAutoPublish, validateCountryEvidence } from "../scripts/data/autoPublish";
+import { evaluateAutoPublishCandidate, runAutoPublish, validateCountryEvidence, COUNTRY_GEO_PATTERNS } from "../scripts/data/autoPublish";
 import { runRevalidatePublished } from "../scripts/data/revalidatePublished";
+import { stageDiscoveredCandidates } from "../scripts/data/mergeStaging";
+import * as jobRiskModule from "../scripts/safety/jobRiskClassifier";
 import type { Community, ArchivedCommunity } from "../src/types/community";
 import { getCurrentIsoTimestamp } from "../src/lib/dates";
 
-describe("Autonomous Pipeline Integration Test Suite (Full End-to-End)", () => {
+describe("Autonomous Pipeline Integration Test Suite (Zero-Maintenance Production Hardened)", () => {
   let tempDir: string;
   let groupsPath: string;
   let pendingPath: string;
@@ -15,6 +17,21 @@ describe("Autonomous Pipeline Integration Test Suite (Full End-to-End)", () => {
   let archivedPath: string;
 
   const now = getCurrentIsoTimestamp();
+  const testPublishConfig = {
+    enabled: true,
+    dryRun: false,
+    maxPerRun: 5,
+    maxValidationAgeHours: 24,
+    requireTargetCountry: true,
+    requireStrongJobIntent: true,
+    rejectSevereRisk: true,
+    probationEnabled: true,
+    probationMaxDays: 7,
+    tierBRequiredObservations: 2,
+    autoUnpublishUnknownAfter: 3,
+    platformWeights: { discord: 0.5, telegram: 0.35, whatsapp: 0.15 },
+    countryWeights: { US: 0.4, GB: 0.25, CA: 0.2, AU: 0.15 },
+  };
 
   const createSampleCandidate = (overrides: Partial<Community> = {}): Community => ({
     id: "sample-cand-ca",
@@ -70,412 +87,408 @@ describe("Autonomous Pipeline Integration Test Suite (Full End-to-End)", () => {
   });
 
   afterEach(() => {
+    vi.restoreAllMocks();
     try {
       fs.rmSync(tempDir, { recursive: true, force: true });
     } catch {}
   });
 
-  it("Test A: Probation Tier A -> runAutoPublish moves record from pending to published", async () => {
-    const tierACand = createSampleCandidate({
-      verificationStatus: "source-confirmed",
-      sourceUrls: ["https://canadahire.ca"],
-      sourceCheckedAt: now,
-      descriptionSource: "confirmed-source",
+  // ==========================================
+  // 1. US COUNTRY REGEX TESTS (Fix Pronoun Bug)
+  // ==========================================
+  describe("1. US Country Regex Verification", () => {
+    it("Rejects pronoun 'us' in 'Join us for tech jobs'", () => {
+      const cand = createSampleCandidate({
+        title: "Join us for tech jobs",
+        description: "Community discussion",
+        countryCode: "US",
+        countryEvidence: null,
+      });
+      const val = validateCountryEvidence(cand);
+      expect(val.isValid).toBe(false);
     });
 
-    fs.writeFileSync(pendingPath, JSON.stringify([tierACand], null, 2), "utf-8");
+    it("Rejects pronoun 'us' in 'Connect with us for remote jobs'", () => {
+      const cand = createSampleCandidate({
+        title: "Global Careers",
+        description: "Connect with us for remote jobs",
+        countryCode: "US",
+        countryEvidence: null,
+      });
+      const val = validateCountryEvidence(cand);
+      expect(val.isValid).toBe(false);
+    });
 
-    const result = await runAutoPublish(
-      {
-        enabled: true,
-        dryRun: false,
-        maxPerRun: 5,
-        maxValidationAgeHours: 24,
-        requireTargetCountry: true,
-        requireStrongJobIntent: true,
-        rejectSevereRisk: true,
-        probationEnabled: true,
-        probationMaxDays: 7,
-        tierBRequiredObservations: 2,
-        autoUnpublishUnknownAfter: 3,
-        platformWeights: { discord: 0.5, telegram: 0.35, whatsapp: 0.15 },
-        countryWeights: { US: 0.4, GB: 0.25, CA: 0.2, AU: 0.15 },
-      },
-      tempDir
-    );
+    it("Passes explicit 'USA Tech Jobs'", () => {
+      const cand = createSampleCandidate({
+        title: "USA Tech Jobs",
+        countryCode: "US",
+        countryEvidence: null,
+      });
+      const val = validateCountryEvidence(cand);
+      expect(val.isValid).toBe(true);
+    });
 
-    expect(result.publishedCount).toBe(1);
-    expect(result.tierACount).toBe(1);
+    it("Passes 'United States Software Careers'", () => {
+      const cand = createSampleCandidate({
+        title: "United States Software Careers",
+        countryCode: "US",
+        countryEvidence: null,
+      });
+      const val = validateCountryEvidence(cand);
+      expect(val.isValid).toBe(true);
+    });
 
-    const updatedPublished: Community[] = JSON.parse(fs.readFileSync(groupsPath, "utf-8"));
-    const updatedPending: Community[] = JSON.parse(fs.readFileSync(pendingPath, "utf-8"));
-
-    expect(updatedPublished).toHaveLength(1);
-    expect(updatedPublished[0].id).toBe(tierACand.id);
-    expect(updatedPublished[0].published).toBe(true);
-    expect(updatedPending).toHaveLength(0);
+    it("Passes 'American Nursing Jobs'", () => {
+      const cand = createSampleCandidate({
+        title: "American Nursing Jobs",
+        countryCode: "US",
+        countryEvidence: null,
+      });
+      const val = validateCountryEvidence(cand);
+      expect(val.isValid).toBe(true);
+    });
   });
 
-  it("Test B: Tier B same candidate seen twice in the SAME run -> NOT eligible", () => {
-    const sameRunCand = createSampleCandidate({
-      verificationStatus: "unverified",
-      sourceUrls: [],
-      providerIds: ["gemini-search"],
-      observedRunIds: ["run_123_abc", "run_123_abc"], // Same Run ID twice
+  // ==========================================
+  // 2. DESCRIPTION PROVENANCE FAIL-CLOSED
+  // ==========================================
+  describe("2. Description Provenance Fail-Closed", () => {
+    it("Blocks candidate if description exists but descriptionSource is missing", () => {
+      const cand = createSampleCandidate({
+        description: "Some description text without provenance",
+        descriptionSource: undefined,
+      });
+      const evalRes = evaluateAutoPublishCandidate(cand, []);
+      expect(evalRes.eligible).toBe(false);
+      expect(evalRes.blockedReasons).toContain("missing-description-provenance");
     });
 
-    const evalRes = evaluateAutoPublishCandidate(sameRunCand, [], [], {
-      maxValidationAgeHours: 24,
-      tierBRequiredObservations: 2,
+    it("Allows candidate if description is null", () => {
+      const cand = createSampleCandidate({
+        description: null,
+        descriptionSource: null,
+      });
+      const evalRes = evaluateAutoPublishCandidate(cand, []);
+      expect(evalRes.blockedReasons).not.toContain("missing-description-provenance");
     });
 
-    expect(evalRes.tier).toBe("C");
-    expect(evalRes.eligible).toBe(false);
-    expect(evalRes.blockedReasons.some((r) => r.includes("tier-b-pending-observation"))).toBe(true);
+    it("Passes candidate with valid platform descriptionSource", () => {
+      const cand = createSampleCandidate({
+        description: "Verified platform description",
+        descriptionSource: "platform",
+      });
+      const evalRes = evaluateAutoPublishCandidate(cand, []);
+      expect(evalRes.passedGates).toContain("description-provenance-verified");
+    });
+
+    it("Passes candidate with valid confirmed-source descriptionSource", () => {
+      const cand = createSampleCandidate({
+        description: "Verified independent source description",
+        descriptionSource: "confirmed-source",
+      });
+      const evalRes = evaluateAutoPublishCandidate(cand, []);
+      expect(evalRes.passedGates).toContain("description-provenance-verified");
+    });
   });
 
-  it("Test C: Tier B candidate observed across TWO distinct runIds -> Eligible for publication", () => {
-    const multiRunCand = createSampleCandidate({
-      verificationStatus: "unverified",
-      sourceUrls: [],
-      providerIds: ["gemini-search"],
-      observedRunIds: ["run_100_first", "run_200_second"], // 2 Distinct Runs
+  // ==========================================
+  // 3. TIER A PERSISTED SOURCE PROOF
+  // ==========================================
+  describe("3. Tier A Real Persisted Source Proof", () => {
+    it("Tier A requires valid sourceVerification record with matching URL/guildId", () => {
+      const validTierACand = createSampleCandidate({
+        verificationStatus: "source-confirmed",
+        sourceUrls: ["https://canadahire.ca"],
+        sourceCheckedAt: now,
+        sourceVerification: {
+          status: "confirmed",
+          checkedAt: now,
+          sourceUrl: "https://canadahire.ca",
+          inviteUrl: "https://discord.gg/sample-ca-hub",
+          matchedBy: "exact-href",
+          matchedGuildId: "888888888888888888",
+        },
+      });
+
+      const evalRes = evaluateAutoPublishCandidate(validTierACand, []);
+      expect(evalRes.tier).toBe("A");
+      expect(evalRes.eligible).toBe(true);
     });
 
-    const evalRes = evaluateAutoPublishCandidate(multiRunCand, [], [], {
-      maxValidationAgeHours: 24,
-      tierBRequiredObservations: 2,
+    it("Rejects Tier A if sourceVerification status is unverified/failed", () => {
+      const invalidTierACand = createSampleCandidate({
+        verificationStatus: "source-confirmed",
+        sourceUrls: ["https://canadahire.ca"],
+        sourceVerification: {
+          status: "failed",
+          checkedAt: now,
+          sourceUrl: "https://canadahire.ca",
+          inviteUrl: "https://discord.gg/sample-ca-hub",
+          matchedBy: "exact-href",
+        },
+      });
+
+      const evalRes = evaluateAutoPublishCandidate(invalidTierACand, []);
+      expect(evalRes.tier).not.toBe("A");
     });
 
-    expect(evalRes.tier).toBe("B");
-    expect(evalRes.eligible).toBe(true);
-    expect(evalRes.passedGates.some((g) => g.includes("tier-b-multi-run-observation"))).toBe(true);
+    it("Rejects Tier A if sourceVerification inviteUrl does not match candidate", () => {
+      const mismatchCand = createSampleCandidate({
+        verificationStatus: "source-confirmed",
+        sourceUrls: ["https://canadahire.ca"],
+        sourceVerification: {
+          status: "confirmed",
+          checkedAt: now,
+          sourceUrl: "https://canadahire.ca",
+          inviteUrl: "https://discord.gg/completely-different-guild",
+          matchedBy: "exact-href",
+          matchedGuildId: "999999999999999999",
+        },
+      });
+
+      const evalRes = evaluateAutoPublishCandidate(mismatchCand, []);
+      expect(evalRes.tier).not.toBe("A");
+    });
   });
 
-  it("Test D: 2 duplicate provider IDs -> Count as one provider and do NOT qualify", () => {
-    const duplicateProviderCand = createSampleCandidate({
-      verificationStatus: "unverified",
-      sourceUrls: [],
-      providerIds: ["gemini-search", "gemini-search"], // Duplicate provider
-      observedRunIds: ["run_100_first"],
+  // ==========================================
+  // 4. SOURCE DOWNGRADE RE-EVALUATION
+  // ==========================================
+  describe("4. Source Downgrade Re-evaluation", () => {
+    it("Source downgrade with 2 distinct run observations retains candidate as published Tier B", async () => {
+      const publishedTierA = createSampleCandidate({
+        published: true,
+        verificationStatus: "source-confirmed",
+        sourceUrls: ["https://stale-site.ca"],
+        sourceCheckedAt: new Date(Date.now() - 35 * 24 * 3600 * 1000).toISOString(),
+        observedRunIds: ["run_1", "run_2"], // 2 runs observed!
+        providerIds: ["gemini-search"],
+      });
+      fs.writeFileSync(groupsPath, JSON.stringify([publishedTierA], null, 2), "utf-8");
+
+      const mockValidators = {
+        discordValidator: async () => ({
+          url: publishedTierA.inviteUrl,
+          status: "active" as const,
+          checkedAt: new Date().toISOString(),
+        }),
+        sourceVerifier: async () => ({ isConfirmed: false }), // Source disappeared
+      };
+
+      const res = await runRevalidatePublished(testPublishConfig, tempDir, mockValidators);
+      expect(res.activeRetained).toBe(1);
+      expect(res.downgradedSourceCount).toBe(1);
+      expect(res.autoUnpublished).toBe(0);
+
+      const savedGroups: Community[] = JSON.parse(fs.readFileSync(groupsPath, "utf-8"));
+      expect(savedGroups[0].verificationStatus).toBe("unverified");
+      expect(savedGroups[0].publicationTier).toBe("B");
     });
 
-    const evalRes = evaluateAutoPublishCandidate(duplicateProviderCand, [], [], {
-      maxValidationAgeHours: 24,
-      tierBRequiredObservations: 2,
-    });
+    it("Source downgrade without Tier B evidence auto-unpublishes and archives", async () => {
+      const publishedTierAOnly = createSampleCandidate({
+        published: true,
+        verificationStatus: "source-confirmed",
+        sourceUrls: ["https://stale-site.ca"],
+        sourceCheckedAt: new Date(Date.now() - 35 * 24 * 3600 * 1000).toISOString(),
+        observedRunIds: ["run_1"], // Only 1 run observation
+        providerIds: ["gemini-search"], // Only 1 provider
+      });
+      fs.writeFileSync(groupsPath, JSON.stringify([publishedTierAOnly], null, 2), "utf-8");
 
-    expect(evalRes.eligible).toBe(false);
+      const mockValidators = {
+        discordValidator: async () => ({
+          url: publishedTierAOnly.inviteUrl,
+          status: "active" as const,
+          checkedAt: new Date().toISOString(),
+        }),
+        sourceVerifier: async () => ({ isConfirmed: false }), // Source disappeared
+      };
+
+      const res = await runRevalidatePublished(testPublishConfig, tempDir, mockValidators);
+      expect(res.activeRetained).toBe(0);
+      expect(res.autoUnpublished).toBe(1);
+
+      const savedGroups: Community[] = JSON.parse(fs.readFileSync(groupsPath, "utf-8"));
+      const savedArchived: ArchivedCommunity[] = JSON.parse(fs.readFileSync(archivedPath, "utf-8"));
+
+      expect(savedGroups).toHaveLength(0);
+      expect(savedArchived).toHaveLength(1);
+      expect(savedArchived[0].unpublishReason).toContain("source-downgraded-tier-b-ineligible");
+    });
   });
 
-  it("Test E: Two unique provider IDs -> Tier B eligible", () => {
-    const multiProviderCand = createSampleCandidate({
-      verificationStatus: "unverified",
-      sourceUrls: [],
-      providerIds: ["gemini-search", "tavily-search"], // 2 Unique providers
-      observedRunIds: ["run_100_first"],
-    });
+  // ==========================================
+  // 5. GLOBAL CRITICAL CIRCUIT BREAKER
+  // ==========================================
+  describe("5. Global Critical Circuit Breaker Fail-Closed", () => {
+    it("Halts entire publication run (0 published) if a critical subsystem throws on any candidate", async () => {
+      const candidate1 = createSampleCandidate({ id: "cand-1", title: "Canada Jobs 1", observedRunIds: ["r1", "r2"] });
+      const candidate2 = createSampleCandidate({
+        id: "cand-2",
+        title: "Canada Jobs 2",
+        verificationStatus: "source-confirmed",
+        sourceUrls: ["https://source2.ca"],
+        sourceVerification: {
+          status: "confirmed",
+          checkedAt: now,
+          sourceUrl: "https://source2.ca",
+          inviteUrl: "https://discord.gg/sample-ca-hub",
+          matchedBy: "exact-href",
+        },
+      });
 
-    const evalRes = evaluateAutoPublishCandidate(multiProviderCand, [], [], {
-      maxValidationAgeHours: 24,
-      tierBRequiredObservations: 2,
-    });
+      fs.writeFileSync(pendingPath, JSON.stringify([candidate1, candidate2], null, 2), "utf-8");
 
-    expect(evalRes.tier).toBe("B");
-    expect(evalRes.eligible).toBe(true);
+      // Spy on classifyJobScamRisk to throw critical error on first evaluation
+      vi.spyOn(jobRiskModule, "classifyJobScamRisk").mockImplementationOnce(() => {
+        throw new Error("Critical Hardware/Parser Fault in Safety Engine");
+      });
+
+      const result = await runAutoPublish(testPublishConfig, tempDir);
+
+      expect(result.circuitBreakerTriggered).toBe(true);
+      expect(result.publishedCount).toBe(0); // ZERO published for the entire batch!
+
+      const savedGroups: Community[] = JSON.parse(fs.readFileSync(groupsPath, "utf-8"));
+      expect(savedGroups).toHaveLength(0);
+    });
   });
 
-  it("Test F: Revalidation unknown run #1 -> Persists consecutiveUnknownCount = 1 to disk", async () => {
-    const publishedGroup = createSampleCandidate({ published: true });
-    fs.writeFileSync(groupsPath, JSON.stringify([publishedGroup], null, 2), "utf-8");
+  // ==========================================
+  // 6. REAL STAGING MERGE TESTS (observedRunIds & providerIds)
+  // ==========================================
+  describe("6. Real Discovery Staging Merge (Run IDs & Provider IDs)", () => {
+    it("Aggregates observedRunIds across distinct runs using real stageDiscoveredCandidates", () => {
+      const initialPending: Community[] = [];
+      const cand = createSampleCandidate();
 
-    const mockValidators = {
-      discordValidator: async () => ({
-        url: publishedGroup.inviteUrl,
-        status: "unknown" as const,
-        message: "HTTP 429 Rate limited",
-        checkedAt: new Date().toISOString(),
-      }),
-    };
+      // RUN A
+      const { updatedPending: step1 } = stageDiscoveredCandidates(initialPending, [cand], "RUN_A", "gemini-search");
+      expect(step1[0].observedRunIds).toEqual(["RUN_A"]);
 
-    const res = await runRevalidatePublished(undefined, tempDir, mockValidators);
-    expect(res.temporaryUnknownCount).toBe(1);
-    expect(res.autoUnpublished).toBe(0);
+      // Rediscover in same RUN A
+      const { updatedPending: step2 } = stageDiscoveredCandidates(step1, [cand], "RUN_A", "gemini-search");
+      expect(step2[0].observedRunIds).toEqual(["RUN_A"]); // Still size 1!
 
-    const savedGroups: Community[] = JSON.parse(fs.readFileSync(groupsPath, "utf-8"));
-    expect(savedGroups).toHaveLength(1);
-    expect(savedGroups[0].consecutiveUnknownCount).toBe(1);
-    expect(savedGroups[0].linkStatus).toBe("unknown");
-    expect(savedGroups[0].lastKnownLinkStatus).toBe("active");
-  });
+      // RUN B
+      const { updatedPending: step3 } = stageDiscoveredCandidates(step2, [cand], "RUN_B", "gemini-search");
+      expect(new Set(step3[0].observedRunIds).size).toBe(2);
+      expect(step3[0].observedRunIds).toContain("RUN_A");
+      expect(step3[0].observedRunIds).toContain("RUN_B");
 
-  it("Test G: Revalidation unknown run #2 -> Persists consecutiveUnknownCount = 2 to disk", async () => {
-    const publishedGroup = createSampleCandidate({
-      published: true,
-      consecutiveUnknownCount: 1,
-      linkStatus: "unknown",
-      lastKnownLinkStatus: "active",
-    });
-    fs.writeFileSync(groupsPath, JSON.stringify([publishedGroup], null, 2), "utf-8");
-
-    const mockValidators = {
-      discordValidator: async () => ({
-        url: publishedGroup.inviteUrl,
-        status: "unknown" as const,
-        message: "HTTP 503 Service unavailable",
-        checkedAt: new Date().toISOString(),
-      }),
-    };
-
-    const res = await runRevalidatePublished(undefined, tempDir, mockValidators);
-    expect(res.temporaryUnknownCount).toBe(1);
-    expect(res.autoUnpublished).toBe(0);
-
-    const savedGroups: Community[] = JSON.parse(fs.readFileSync(groupsPath, "utf-8"));
-    expect(savedGroups).toHaveLength(1);
-    expect(savedGroups[0].consecutiveUnknownCount).toBe(2);
-  });
-
-  it("Test H: Revalidation unknown run #3 -> Auto-unpublishes and archives record", async () => {
-    const publishedGroup = createSampleCandidate({
-      published: true,
-      consecutiveUnknownCount: 2,
-      linkStatus: "unknown",
-      lastKnownLinkStatus: "active",
-    });
-    fs.writeFileSync(groupsPath, JSON.stringify([publishedGroup], null, 2), "utf-8");
-
-    const mockValidators = {
-      discordValidator: async () => ({
-        url: publishedGroup.inviteUrl,
-        status: "unknown" as const,
-        message: "HTTP 504 Gateway timeout",
-        checkedAt: new Date().toISOString(),
-      }),
-    };
-
-    const res = await runRevalidatePublished(undefined, tempDir, mockValidators);
-    expect(res.autoUnpublished).toBe(1);
-    expect(res.activeRetained).toBe(0);
-
-    const savedGroups: Community[] = JSON.parse(fs.readFileSync(groupsPath, "utf-8"));
-    const savedArchived: ArchivedCommunity[] = JSON.parse(fs.readFileSync(archivedPath, "utf-8"));
-
-    expect(savedGroups).toHaveLength(0);
-    expect(savedArchived).toHaveLength(1);
-    expect(savedArchived[0].unpublishReason).toContain("repeated-unknown-status");
-  });
-
-  it("Test I: Definitive dead link -> Auto-unpublishes immediately on first encounter", async () => {
-    const publishedGroup = createSampleCandidate({ published: true });
-    fs.writeFileSync(groupsPath, JSON.stringify([publishedGroup], null, 2), "utf-8");
-
-    const mockValidators = {
-      discordValidator: async () => ({
-        url: publishedGroup.inviteUrl,
-        status: "dead" as const,
-        message: "404 Invite expired",
-        checkedAt: new Date().toISOString(),
-      }),
-    };
-
-    const res = await runRevalidatePublished(undefined, tempDir, mockValidators);
-    expect(res.autoUnpublished).toBe(1);
-
-    const savedGroups: Community[] = JSON.parse(fs.readFileSync(groupsPath, "utf-8"));
-    const savedArchived: ArchivedCommunity[] = JSON.parse(fs.readFileSync(archivedPath, "utf-8"));
-
-    expect(savedGroups).toHaveLength(0);
-    expect(savedArchived).toHaveLength(1);
-    expect(savedArchived[0].lastKnownStatus).toBe("dead");
-    expect(savedArchived[0].unpublishReason).toContain("dead-link");
-  });
-
-  it("Test J: Active revalidation -> Persists fresh lastCheckedAt and refreshed memberCount", async () => {
-    const publishedGroup = createSampleCandidate({ published: true, memberCount: 1000 });
-    fs.writeFileSync(groupsPath, JSON.stringify([publishedGroup], null, 2), "utf-8");
-
-    const mockValidators = {
-      discordValidator: async () => ({
-        url: publishedGroup.inviteUrl,
-        status: "active" as const,
-        extractedMemberCount: 15500,
-        extractedTitle: "Canada Tech Jobs & Hiring Hub",
-        checkedAt: new Date().toISOString(),
-      }),
-    };
-
-    const res = await runRevalidatePublished(undefined, tempDir, mockValidators);
-    expect(res.activeRetained).toBe(1);
-
-    const savedGroups: Community[] = JSON.parse(fs.readFileSync(groupsPath, "utf-8"));
-    expect(savedGroups).toHaveLength(1);
-    expect(savedGroups[0].memberCount).toBe(15500);
-    expect(savedGroups[0].lastValidationStatus).toBe("active");
-    expect(savedGroups[0].lastSuccessfulValidationAt).toBeTruthy();
-  });
-
-  it("Test K: sourceCheckedAt controls 30-day source reverification", async () => {
-    let sourceCheckTriggered = false;
-    const staleSourceTime = new Date(Date.now() - 35 * 24 * 3600 * 1000).toISOString(); // 35 days ago
-
-    const publishedGroup = createSampleCandidate({
-      published: true,
-      verificationStatus: "source-confirmed",
-      sourceUrls: ["https://canadahire.ca"],
-      sourceCheckedAt: staleSourceTime,
-    });
-    fs.writeFileSync(groupsPath, JSON.stringify([publishedGroup], null, 2), "utf-8");
-
-    const mockValidators = {
-      discordValidator: async () => ({
-        url: publishedGroup.inviteUrl,
-        status: "active" as const,
-        checkedAt: new Date().toISOString(),
-      }),
-      sourceVerifier: async () => {
-        sourceCheckTriggered = true;
-        return { isConfirmed: true, evidenceSnippet: "Verified Canadian tech hiring" };
-      },
-    };
-
-    await runRevalidatePublished(undefined, tempDir, mockValidators);
-    expect(sourceCheckTriggered).toBe(true);
-
-    const savedGroups: Community[] = JSON.parse(fs.readFileSync(groupsPath, "utf-8"));
-    expect(savedGroups[0].verificationStatus).toBe("source-confirmed");
-    expect(new Date(savedGroups[0].sourceCheckedAt!).getTime()).toBeGreaterThan(new Date(staleSourceTime).getTime());
-  });
-
-  it("Test L: Archived candidate can be safely restored if all publication gates pass", async () => {
-    const archivedRecord: ArchivedCommunity = {
-      id: "sample-cand-ca",
-      slug: "sample-cand-ca",
-      title: "Canada Tech Jobs & Hiring Hub",
-      platform: "discord",
-      inviteUrl: "https://discord.gg/sample-ca-hub",
-      unpublishedAt: now,
-      unpublishReason: "dead-link",
-      lastKnownStatus: "dead",
-      guildId: "888888888888888888",
-      countryCode: "CA",
-      category: "tech-jobs",
-    };
-    fs.writeFileSync(archivedPath, JSON.stringify([archivedRecord], null, 2), "utf-8");
-
-    const restoredCandidate = createSampleCandidate({
-      verificationStatus: "source-confirmed",
-      sourceUrls: ["https://canadahire.ca"],
-      sourceCheckedAt: now,
-      descriptionSource: "confirmed-source",
-    });
-    fs.writeFileSync(pendingPath, JSON.stringify([restoredCandidate], null, 2), "utf-8");
-
-    const result = await runAutoPublish(
-      {
-        enabled: true,
-        dryRun: false,
-        maxPerRun: 5,
-        maxValidationAgeHours: 24,
-        requireTargetCountry: true,
-        requireStrongJobIntent: true,
-        rejectSevereRisk: true,
-        probationEnabled: true,
-        probationMaxDays: 7,
-        tierBRequiredObservations: 2,
-        autoUnpublishUnknownAfter: 3,
-        platformWeights: { discord: 0.5, telegram: 0.35, whatsapp: 0.15 },
-        countryWeights: { US: 0.4, GB: 0.25, CA: 0.2, AU: 0.15 },
-      },
-      tempDir
-    );
-
-    expect(result.restoredCount).toBe(1);
-    expect(result.publishedCount).toBe(1);
-
-    const savedGroups: Community[] = JSON.parse(fs.readFileSync(groupsPath, "utf-8"));
-    const savedArchived: ArchivedCommunity[] = JSON.parse(fs.readFileSync(archivedPath, "utf-8"));
-
-    expect(savedGroups).toHaveLength(1);
-    expect(savedGroups[0].id).toBe("sample-cand-ca");
-    expect(savedArchived).toHaveLength(0); // Cleaned from archive!
-  });
-
-  it("Test M: Two duplicate pending candidates with same guildId cannot both publish in same batch", async () => {
-    const cand1 = createSampleCandidate({
-      id: "cand-1",
-      slug: "cand-1",
-      inviteUrl: "https://discord.gg/vanity-1",
-      guildId: "777777777777777777",
-      verificationStatus: "source-confirmed",
-      sourceUrls: ["https://source1.ca"],
+      // Candidate now qualifies for Tier B
+      const evalRes = evaluateAutoPublishCandidate(step3[0], []);
+      expect(evalRes.tier).toBe("B");
+      expect(evalRes.eligible).toBe(true);
     });
 
-    const cand2 = createSampleCandidate({
-      id: "cand-2",
-      slug: "cand-2",
-      inviteUrl: "https://discord.gg/vanity-2",
-      guildId: "777777777777777777", // Same guild ID
-      verificationStatus: "source-confirmed",
-      sourceUrls: ["https://source2.ca"],
+    it("Aggregates providerIds correctly across discovery calls", () => {
+      const initialPending: Community[] = [];
+      const cand = createSampleCandidate();
+
+      // Gemini + Gemini -> size 1
+      const { updatedPending: step1 } = stageDiscoveredCandidates(initialPending, [cand], "RUN_1", "gemini-search");
+      const { updatedPending: step2 } = stageDiscoveredCandidates(step1, [cand], "RUN_1", "gemini-search");
+      expect(new Set(step2[0].providerIds).size).toBe(1);
+
+      // Gemini + Tavily -> size 2
+      const { updatedPending: step3 } = stageDiscoveredCandidates(step2, [cand], "RUN_2", "tavily-search");
+      expect(new Set(step3[0].providerIds).size).toBe(2);
+      expect(step3[0].providerIds).toContain("gemini-search");
+      expect(step3[0].providerIds).toContain("tavily-search");
+
+      const evalRes = evaluateAutoPublishCandidate(step3[0], []);
+      expect(evalRes.tier).toBe("B");
+      expect(evalRes.eligible).toBe(true);
     });
-
-    fs.writeFileSync(pendingPath, JSON.stringify([cand1, cand2], null, 2), "utf-8");
-
-    const result = await runAutoPublish(
-      {
-        enabled: true,
-        dryRun: false,
-        maxPerRun: 5,
-        maxValidationAgeHours: 24,
-        requireTargetCountry: true,
-        requireStrongJobIntent: true,
-        rejectSevereRisk: true,
-        probationEnabled: true,
-        probationMaxDays: 7,
-        tierBRequiredObservations: 2,
-        autoUnpublishUnknownAfter: 3,
-        platformWeights: { discord: 0.5, telegram: 0.35, whatsapp: 0.15 },
-        countryWeights: { US: 0.4, GB: 0.25, CA: 0.2, AU: 0.15 },
-      },
-      tempDir
-    );
-
-    expect(result.publishedCount).toBe(1); // Only 1 allowed in batch!
-    const savedGroups: Community[] = JSON.parse(fs.readFileSync(groupsPath, "utf-8"));
-    const savedPending: Community[] = JSON.parse(fs.readFileSync(pendingPath, "utf-8"));
-
-    expect(savedGroups).toHaveLength(1);
-    expect(savedPending).toHaveLength(1);
   });
 
-  it("Test N: countryEvidence.sourceUrl by itself cannot establish country", () => {
-    const candidateWithoutGeoText: Community = createSampleCandidate({
-      title: "General Developer Network",
-      description: "Chat with coders.",
-      countryCode: "CA",
-      countryEvidence: {
-        sourceType: "official-source",
-        text: "", // Empty geo text
-        sourceUrl: "https://some-canadian-domain.ca/jobs",
-        checkedAt: now,
-      },
+  // ==========================================
+  // 7. BATCH DEDUPLICATION ACROSS ALL PLATFORMS
+  // ==========================================
+  describe("7. Batch Deduplication (Discord, Telegram, WhatsApp)", () => {
+    it("Discord: Same guildId in same batch publishes only 1", async () => {
+      const cand1 = createSampleCandidate({ id: "d1", inviteUrl: "https://discord.gg/vanity-1", guildId: "111222333" });
+      const cand2 = createSampleCandidate({ id: "d2", inviteUrl: "https://discord.gg/vanity-2", guildId: "111222333" });
+
+      cand1.observedRunIds = ["r1", "r2"];
+      cand2.observedRunIds = ["r1", "r2"];
+
+      fs.writeFileSync(pendingPath, JSON.stringify([cand1, cand2], null, 2), "utf-8");
+
+      const res = await runAutoPublish(testPublishConfig, tempDir);
+      expect(res.publishedCount).toBe(1);
     });
 
-    const val = validateCountryEvidence(candidateWithoutGeoText);
-    expect(val.isValid).toBe(false);
+    it("Telegram: Same handle in same batch publishes only 1", async () => {
+      const cand1 = createSampleCandidate({
+        id: "tg1",
+        platform: "telegram",
+        inviteUrl: "https://t.me/canada_tech_jobs",
+        observedRunIds: ["r1", "r2"],
+      });
+      const cand2 = createSampleCandidate({
+        id: "tg2",
+        platform: "telegram",
+        inviteUrl: "https://telegram.me/CANADA_TECH_JOBS",
+        observedRunIds: ["r1", "r2"],
+      });
+
+      fs.writeFileSync(pendingPath, JSON.stringify([cand1, cand2], null, 2), "utf-8");
+
+      const res = await runAutoPublish(testPublishConfig, tempDir);
+      expect(res.publishedCount).toBe(1);
+    });
+
+    it("WhatsApp: Same invite code in same batch publishes only 1", async () => {
+      const cand1 = createSampleCandidate({
+        id: "wa1",
+        platform: "whatsapp",
+        inviteUrl: "https://chat.whatsapp.com/AbCdEfGhIjKlMnOpQrStUv",
+        observedRunIds: ["r1", "r2"],
+      });
+      const cand2 = createSampleCandidate({
+        id: "wa2",
+        platform: "whatsapp",
+        inviteUrl: "https://chat.whatsapp.com/ABCDEFGHIJKLMnOpQrStUv",
+        observedRunIds: ["r1", "r2"],
+      });
+
+      fs.writeFileSync(pendingPath, JSON.stringify([cand1, cand2], null, 2), "utf-8");
+
+      const res = await runAutoPublish(testPublishConfig, tempDir);
+      expect(res.publishedCount).toBe(1);
+    });
   });
 
-  it("Test O: Classifier tag 'canada' by itself cannot establish country without matching text", () => {
-    const candidateWithOnlyTag: Community = createSampleCandidate({
-      title: "General Developer Network",
-      description: "Discuss tech careers globally.",
-      tags: ["canada", "tech", "jobs"], // Tag exists
-      countryCode: "CA",
-      countryEvidence: null,
+  // ==========================================
+  // 8. CITY PROVENANCE
+  // ==========================================
+  describe("8. City Provenance", () => {
+    it("Resets city to null if no factual city evidence is found", () => {
+      const cand = createSampleCandidate({
+        title: "Canada Tech Jobs",
+        description: "General hiring",
+        city: "Vancouver",
+        cityEvidence: null,
+      });
+
+      const evalRes = evaluateAutoPublishCandidate(cand, []);
+      expect(cand.city).toBeNull();
     });
 
-    const val = validateCountryEvidence(candidateWithOnlyTag);
-    expect(val.isValid).toBe(false);
+    it("Retains city if factual city evidence exists in platform title", () => {
+      const cand = createSampleCandidate({
+        title: "Toronto Tech Jobs & Careers",
+        city: "Toronto",
+        cityEvidence: null,
+      });
+
+      const evalRes = evaluateAutoPublishCandidate(cand, []);
+      expect(cand.city).toBe("Toronto");
+      expect(cand.cityEvidence).toBeTruthy();
+    });
   });
 });

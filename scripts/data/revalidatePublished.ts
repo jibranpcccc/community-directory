@@ -11,6 +11,7 @@ import { validateCommunitiesData } from "./validateSchema";
 import { atomicWriteJson } from "./mergeListings";
 import { getCurrentIsoTimestamp } from "../../src/lib/dates";
 import { autoPublishConfig } from "../../src/config/autoPublish";
+import { evaluateAutoPublishCandidate, validateCountryEvidence } from "./autoPublish";
 
 export interface RevalidationResult {
   totalChecked: number;
@@ -30,7 +31,8 @@ export interface RevalidationValidators {
 
 /**
  * Revalidates all published communities in groups.json, updates fresh metadata,
- * downgrades stale source verifications, and auto-unpublishes dead/unsafe listings.
+ * downgrades stale source verifications (and re-evaluates Tier B eligibility),
+ * and auto-unpublishes dead/unsafe listings.
  * Atomically persists changes to groups.json and archived-groups.json.
  */
 export async function runRevalidatePublished(
@@ -112,7 +114,7 @@ export async function runRevalidatePublished(
     // B. Temporary Error / Unknown Status
     if (validationResult.status === "unknown") {
       item.consecutiveUnknownCount = (item.consecutiveUnknownCount || 0) + 1;
-      item.linkStatus = "unknown"; // Truthful public representation
+      item.linkStatus = "unknown";
       console.log(`  ? Status unknown for "${item.title}" (Consecutive: ${item.consecutiveUnknownCount}/${options.autoUnpublishUnknownAfter}).`);
 
       if (item.consecutiveUnknownCount >= options.autoUnpublishUnknownAfter) {
@@ -220,7 +222,7 @@ export async function runRevalidatePublished(
     }
 
     // D. Periodic Source Recheck controlled by sourceCheckedAt (every 30 days)
-    if (item.verificationStatus === "source-confirmed" && item.sourceUrls.length > 0) {
+    if (item.verificationStatus === "source-confirmed" && item.sourceUrls && item.sourceUrls.length > 0) {
       const lastSourceCheck = item.sourceCheckedAt
         ? new Date(item.sourceCheckedAt).getTime()
         : new Date(item.discoveredAt).getTime();
@@ -228,22 +230,77 @@ export async function runRevalidatePublished(
 
       if (sourceAgeDays >= 30) {
         console.log(`  ?? Rechecking independent sources for "${item.title}" (Age: ${Math.round(sourceAgeDays)}d)...`);
-        let anySourceConfirmed = false;
+        let confirmedResult: any = null;
         const verifierFn = validators.sourceVerifier || verifySourceMentionsInvite;
 
         for (const sUrl of item.sourceUrls) {
           const check = await verifierFn(sUrl, item.inviteUrl, item.guildId || undefined);
           if (check.isConfirmed) {
-            anySourceConfirmed = true;
+            confirmedResult = check;
             break;
           }
         }
 
         item.sourceCheckedAt = nowIso;
-        if (!anySourceConfirmed) {
-          console.log(`  ?? No independent source confirmed invite for "${item.title}". Downgrading to unverified.`);
+
+        if (confirmedResult) {
+          item.sourceVerification = {
+            status: "confirmed",
+            checkedAt: nowIso,
+            sourceUrl: confirmedResult.sourceUrl,
+            inviteUrl: item.inviteUrl,
+            matchedBy: confirmedResult.matchedBy || "exact-href",
+            matchedGuildId: confirmedResult.matchedGuildId || item.guildId || null,
+            evidenceSnippet: confirmedResult.evidenceSnippet || null,
+          };
+        } else {
+          console.log(`  ?? No independent source confirmed invite for "${item.title}". Downgrading and re-evaluating Tier B eligibility.`);
           item.verificationStatus = "unverified";
+          item.sourceVerification = null;
           downgradedSourceCount++;
+
+          // Re-evaluate country evidence if it previously relied on the downgraded source
+          if (
+            item.countryEvidence?.sourceType === "independent-source" ||
+            item.countryEvidence?.sourceType === "official-source"
+          ) {
+            const countryCheck = validateCountryEvidence({ ...item, countryEvidence: null });
+            if (countryCheck.isValid && countryCheck.evidence) {
+              item.countryEvidence = countryCheck.evidence;
+            } else {
+              item.countryEvidence = null;
+            }
+          }
+
+          // Evaluate Tier B eligibility
+          const tierBEval = evaluateAutoPublishCandidate(item, [], [], {
+            maxValidationAgeHours: options.maxValidationAgeHours,
+            tierBRequiredObservations: options.tierBRequiredObservations,
+          });
+
+          if (tierBEval.eligible && tierBEval.tier === "B") {
+            item.publicationTier = "B";
+            console.log(`  ? Community "${item.title}" independently qualifies for Tier B. Retained published as unverified.`);
+          } else {
+            console.log(`  ? Community "${item.title}" does not qualify for Tier B (${tierBEval.blockedReasons.join(", ")}). Auto-unpublishing.`);
+            newlyArchived.push({
+              id: item.id,
+              slug: item.slug,
+              title: item.title,
+              platform: item.platform,
+              inviteUrl: item.inviteUrl,
+              publishedAt: item.discoveredAt,
+              unpublishedAt: nowIso,
+              unpublishReason: `source-downgraded-tier-b-ineligible: ${tierBEval.blockedReasons.join(", ")}`,
+              lastKnownStatus: "removed",
+              guildId: item.guildId || null,
+              countryCode: item.countryCode,
+              category: item.category,
+              countryEvidence: item.countryEvidence,
+              sourceUrls: item.sourceUrls,
+            });
+            continue;
+          }
         }
       }
     }

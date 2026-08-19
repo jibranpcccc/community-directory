@@ -1,7 +1,7 @@
 import "../utilities/loadEnv";
 import * as fs from "fs";
 import * as path from "path";
-import type { Community, ArchivedCommunity, CountryEvidence } from "../../src/types/community";
+import type { Community, ArchivedCommunity, CountryEvidence, DescriptionSource } from "../../src/types/community";
 import { autoPublishConfig } from "../../src/config/autoPublish";
 import { isDuplicateListing } from "./deduplicate";
 import { isJobRelevant, classifyJobScamRisk, hasStrongJobIntent } from "../safety/jobRiskClassifier";
@@ -36,17 +36,29 @@ export interface AutoPublishResult {
 
 const TIER_1_COUNTRIES = new Set(["US", "GB", "CA", "AU"]);
 
+/**
+ * Strict Geographic regex patterns.
+ * IMPORTANT: Explicit US geographic forms only. "usa?" was REMOVED to avoid matching pronoun "us" in "Join us".
+ */
 export const COUNTRY_GEO_PATTERNS: Record<string, RegExp> = {
-  US: /\b(usa?|united\s+states|america|american|california|texas|new\s+york|nyc|washington|florida|illinois|chicago|seattle|san\s+francisco|los\s+angeles|boston|austin|atlanta)\b/i,
-  GB: /\b(uk|united\s+kingdom|britain|british|england|scotland|wales|london|manchester|birmingham|leeds|glasgow|edinburgh|bristol)\b/i,
+  US: /\b(united\s+states(?:\s+of\s+america)?|u\.s\.a\.|usa|u\.s\.|american|california|texas|new\s+york|nyc|washington|florida|illinois|chicago|seattle|san\s+francisco|los\s+angeles|boston|austin|atlanta|colorado|ohio|virginia|michigan|georgia|north\s+carolina|pennsylvania|arizona|san\s+diego|dallas|houston|denver|miami)\b/i,
+  GB: /\b(united\s+kingdom|u\.k\.|uk|great\s+britain|britain|british|england|scotland|wales|northern\s+ireland|london|manchester|birmingham|leeds|glasgow|edinburgh|bristol)\b/i,
   CA: /\b(canada|canadian|ontario|quebec|british\s+columbia|alberta|toronto|vancouver|montreal|ottawa|calgary|edmonton|waterloo)\b/i,
   AU: /\b(australia|australian|nsw|victoria|queensland|sydney|melbourne|brisbane|perth|adelaide|canberra)\b/i,
 };
 
+const VALID_DESCRIPTION_SOURCES = new Set<string>([
+  "platform",
+  "confirmed-source",
+  "platform-title",
+  "platform-description",
+  "independent-source",
+]);
+
 /**
  * Validates whether the candidate possesses genuine factual geographic evidence
  * originating from platform title/description or independently fetched source text.
- * Tags alone, bare source URLs, or source-confirmed status ALONE do not count.
+ * Requires trusted sourceType and matching text. AI tags or bare URLs alone do not count.
  */
 export function validateCountryEvidence(candidate: Community): {
   isValid: boolean;
@@ -64,18 +76,38 @@ export function validateCountryEvidence(candidate: Community): {
 
   const now = getCurrentIsoTimestamp();
 
-  // 1. Check if candidate already has explicit countryEvidence with matching text
+  // 1. Check explicit countryEvidence
   if (candidate.countryEvidence && candidate.countryEvidence.text) {
-    if (pattern.test(candidate.countryEvidence.text)) {
-      return {
-        isValid: true,
-        evidence: {
-          sourceType: candidate.countryEvidence.sourceType,
-          text: candidate.countryEvidence.text.trim(),
-          sourceUrl: candidate.countryEvidence.sourceUrl,
-          checkedAt: candidate.countryEvidence.checkedAt || now,
-        },
-      };
+    const trustedTypes = new Set(["platform-title", "platform-description", "independent-source", "official-source"]);
+    if (trustedTypes.has(candidate.countryEvidence.sourceType)) {
+      if (pattern.test(candidate.countryEvidence.text)) {
+        // If independent source, require sourceUrl and checkedAt
+        if (
+          candidate.countryEvidence.sourceType === "independent-source" ||
+          candidate.countryEvidence.sourceType === "official-source"
+        ) {
+          if (candidate.countryEvidence.sourceUrl && candidate.countryEvidence.sourceUrl.startsWith("http")) {
+            return {
+              isValid: true,
+              evidence: {
+                sourceType: candidate.countryEvidence.sourceType,
+                text: candidate.countryEvidence.text.trim(),
+                sourceUrl: candidate.countryEvidence.sourceUrl,
+                checkedAt: candidate.countryEvidence.checkedAt || now,
+              },
+            };
+          }
+        } else {
+          return {
+            isValid: true,
+            evidence: {
+              sourceType: candidate.countryEvidence.sourceType,
+              text: candidate.countryEvidence.text.trim(),
+              checkedAt: candidate.countryEvidence.checkedAt || now,
+            },
+          };
+        }
+      }
     }
   }
 
@@ -106,7 +138,7 @@ export function validateCountryEvidence(candidate: Community): {
   return {
     isValid: false,
     evidence: null,
-    reason: `No factual geographic evidence matching ${candidate.countryCode} found in platform title, description, or verified source text. (Tags or bare sourceUrls alone are insufficient)`,
+    reason: `No factual geographic evidence matching ${candidate.countryCode} found in platform title, description, or verified source text. (Pronouns like "us", tags, or bare sourceUrls alone are insufficient)`,
   };
 }
 
@@ -145,10 +177,10 @@ export function evaluateAutoPublishCandidate(
   }
 
   // 4. Mandatory Gate: Validation Freshness
-  const now = Date.now();
+  const nowMs = Date.now();
   if (candidate.lastCheckedAt) {
     const checkedTime = new Date(candidate.lastCheckedAt).getTime();
-    const ageHours = (now - checkedTime) / (1000 * 60 * 60);
+    const ageHours = (nowMs - checkedTime) / (1000 * 60 * 60);
     if (!isNaN(checkedTime) && ageHours <= options.maxValidationAgeHours) {
       passedGates.push("validation-fresh");
     } else {
@@ -173,7 +205,35 @@ export function evaluateAutoPublishCandidate(
     blockedReasons.push(`unconfirmed-country-evidence: ${countryValidation.reason}`);
   }
 
-  // 6. Mandatory Gate: Strong Employment Intent
+  // 6. Mandatory Gate: City Provenance (Fail-closed)
+  if (candidate.city !== null && candidate.city !== undefined && candidate.city.trim() !== "") {
+    if (candidate.cityEvidence && candidate.cityEvidence.text) {
+      const cityRegex = new RegExp(`\\b${candidate.city.trim()}\\b`, "i");
+      if (cityRegex.test(candidate.cityEvidence.text)) {
+        passedGates.push("city-evidence-verified");
+      } else {
+        candidate.city = null;
+        candidate.cityEvidence = null;
+      }
+    } else {
+      // Platform title/description contains city?
+      const fullText = `${candidate.title} ${candidate.description || ""}`;
+      const cityRegex = new RegExp(`\\b${candidate.city.trim()}\\b`, "i");
+      if (cityRegex.test(fullText)) {
+        candidate.cityEvidence = {
+          sourceType: candidate.title.match(cityRegex) ? "platform-title" : "platform-description",
+          text: candidate.city.trim(),
+          checkedAt: getCurrentIsoTimestamp(),
+        };
+        passedGates.push("city-evidence-verified");
+      } else {
+        candidate.city = null;
+        candidate.cityEvidence = null;
+      }
+    }
+  }
+
+  // 7. Mandatory Gate: Strong Employment Intent
   const fullText = `${candidate.title} ${candidate.description || ""}`.trim();
   const intentCheck = hasStrongJobIntent(fullText);
   const relevanceCheck = isJobRelevant(fullText);
@@ -183,7 +243,7 @@ export function evaluateAutoPublishCandidate(
     blockedReasons.push(`insufficient-job-intent: ${intentCheck.reason || relevanceCheck.reason || "missing employment terms"}`);
   }
 
-  // 7. Mandatory Gate: Safety & Scam Prevention
+  // 8. Mandatory Gate: Safety & Scam Prevention
   const scamCheck = classifyJobScamRisk(fullText);
   if (!scamCheck.isSevereScam && (!candidate.safetyFlags || candidate.safetyFlags.length === 0)) {
     passedGates.push("safety-clean");
@@ -191,25 +251,32 @@ export function evaluateAutoPublishCandidate(
     blockedReasons.push(`scam-risk-flags: ${scamCheck.safetyFlags.concat(candidate.safetyFlags || []).join(", ")}`);
   }
 
-  // 8. Mandatory Gate: Inactive / Repurposed Filter
+  // 9. Mandatory Gate: Inactive / Repurposed Filter
   if (/\b(inactive|shut\s+down|closed\s+down|no\s+longer\s+active|deleted\s+server|server\s+closed)\b/i.test(candidate.title)) {
     blockedReasons.push("server-inactive-or-closed");
   } else {
     passedGates.push("active-server-name");
   }
 
-  // 9. Mandatory Gate: Metadata Provenance
+  // 10. Mandatory Gate: Member Count Provenance
   if (candidate.memberCount !== null && candidate.memberCount !== undefined && !candidate.memberCountSource) {
     blockedReasons.push("member-count-missing-source");
   } else {
     passedGates.push("member-count-provenance");
   }
 
-  if (candidate.description && !candidate.descriptionSource) {
-    candidate.descriptionSource = candidate.verificationStatus === "source-confirmed" ? "confirmed-source" : "platform";
+  // 11. Mandatory Gate: Description Provenance (Fail-Closed: Never auto-assign)
+  if (candidate.description !== null && candidate.description !== undefined && candidate.description.trim() !== "") {
+    if (!candidate.descriptionSource || !VALID_DESCRIPTION_SOURCES.has(candidate.descriptionSource)) {
+      blockedReasons.push("missing-description-provenance");
+    } else {
+      passedGates.push("description-provenance-verified");
+    }
+  } else {
+    passedGates.push("description-null-valid");
   }
 
-  // 10. Check against Published and Archived Lists
+  // 12. Check against Published and Archived Lists
   const publishedDupCheck = isDuplicateListing(
     {
       inviteUrl: candidate.inviteUrl,
@@ -249,13 +316,42 @@ export function evaluateAutoPublishCandidate(
   let eligible = false;
 
   if (isMandatoryPass) {
-    if (candidate.verificationStatus === "source-confirmed" && candidate.sourceUrls.length > 0) {
-      // TIER A: Source-confirmed with proven outbound link
+    // TIER A Evaluation: Real Persisted Source Verification Record
+    const hasSourceVerification =
+      candidate.verificationStatus === "source-confirmed" &&
+      candidate.sourceUrls &&
+      candidate.sourceUrls.length > 0 &&
+      candidate.sourceVerification &&
+      candidate.sourceVerification.status === "confirmed" &&
+      candidate.sourceUrls.includes(candidate.sourceVerification.sourceUrl);
+
+    let isTierAValid = false;
+    if (hasSourceVerification && candidate.sourceVerification) {
+      const sv = candidate.sourceVerification;
+      const normSourceInvite = normalizeInviteUrl(sv.inviteUrl);
+      const normCandInvite = normalizeInviteUrl(candidate.inviteUrl);
+      const isUrlMatch = normSourceInvite === normCandInvite;
+      const isGuildMatch = Boolean(
+        candidate.platform === "discord" &&
+        candidate.guildId &&
+        sv.matchedGuildId &&
+        sv.matchedGuildId === candidate.guildId
+      );
+
+      if (isUrlMatch || isGuildMatch) {
+        const svAgeDays = (nowMs - new Date(sv.checkedAt).getTime()) / (1000 * 60 * 60 * 24);
+        if (svAgeDays <= 35) {
+          isTierAValid = true;
+        }
+      }
+    }
+
+    if (isTierAValid) {
       tier = "A";
       eligible = true;
       passedGates.push("tier-a-source-confirmed");
     } else {
-      // TIER B Evaluation: Platform-confirmed with multi-provider or multi-run observation
+      // TIER B Evaluation: Platform-confirmed with multi-provider OR multi-run observation
       const uniqueProviders = new Set(candidate.providerIds || []).size;
       const uniqueRuns = new Set(candidate.observedRunIds || []).size;
 
@@ -290,7 +386,34 @@ export function evaluateAutoPublishCandidate(
 }
 
 /**
+ * Extracts platform canonical identifier for batch deduplication.
+ */
+function extractPlatformBatchIdentity(community: Community): {
+  type: string;
+  key: string;
+} {
+  const normUrl = normalizeInviteUrl(community.inviteUrl);
+  if (community.platform === "discord" && community.guildId) {
+    return { type: "discord-guild", key: community.guildId };
+  }
+  if (community.platform === "telegram") {
+    const handleMatch = normUrl.match(/t\.me\/([a-zA-Z0-9_+]+)/i);
+    if (handleMatch) {
+      return { type: "telegram-handle", key: handleMatch[1].toLowerCase() };
+    }
+  }
+  if (community.platform === "whatsapp") {
+    const codeMatch = normUrl.match(/chat\.whatsapp\.com\/([a-zA-Z0-9_-]+)/i);
+    if (codeMatch) {
+      return { type: "whatsapp-code", key: codeMatch[1].toLowerCase() };
+    }
+  }
+  return { type: "url", key: normUrl };
+}
+
+/**
  * Runs the fully automated publication engine over src/data/pending-groups.json.
+ * Enforces Fail-Closed Global Circuit Breaker on critical subsystem error.
  */
 export async function runAutoPublish(
   options = autoPublishConfig,
@@ -344,11 +467,15 @@ export async function runAutoPublish(
   const restoredRecords: ArchivedCommunity[] = [];
   let rejectedProbationCount = 0;
 
-  // Batch Deduplication Sets (prevents duplicates in the SAME pending batch)
-  const batchPublishedUrls = new Set<string>(published.map((p) => normalizeInviteUrl(p.inviteUrl)));
-  const batchPublishedGuildIds = new Set<string>(
-    published.filter((p) => p.platform === "discord" && p.guildId).map((p) => p.guildId as string)
-  );
+  // Batch Deduplication across all platforms
+  const batchSeenIdentities = new Set<string>();
+  published.forEach((p) => {
+    const ident = extractPlatformBatchIdentity(p);
+    batchSeenIdentities.add(`${ident.type}:${ident.key}`);
+  });
+
+  let criticalSubsystemFailure = false;
+  let criticalSubsystemReason: string | undefined;
 
   for (const cand of pending) {
     let evalResult: AutoPublishEvaluation;
@@ -358,14 +485,16 @@ export async function runAutoPublish(
         tierBRequiredObservations: options.tierBRequiredObservations,
       });
     } catch (err: any) {
-      console.error(`? Critical evaluation error on "${cand.title}":`, err.message);
+      console.error(`?? Critical subsystem error during evaluation on "${cand.title}":`, err.message);
+      criticalSubsystemFailure = true;
+      criticalSubsystemReason = `Subsystem failure on candidate "${cand.title}": ${err.message}`;
       evalResult = {
         candidate: cand,
         tier: "C",
         eligible: false,
         isRestoration: false,
         passedGates: [],
-        blockedReasons: [`evaluation-error: ${err.message}`],
+        blockedReasons: [`critical-subsystem-error: ${err.message}`],
       };
     }
     evaluations.push(evalResult);
@@ -373,30 +502,21 @@ export async function runAutoPublish(
     cand.publicationTier = evalResult.tier;
     cand.autoPublishBlockedReasons = evalResult.blockedReasons;
 
-    if (evalResult.eligible) {
-      const normalizedUrl = normalizeInviteUrl(cand.inviteUrl);
+    if (evalResult.eligible && !criticalSubsystemFailure) {
+      const ident = extractPlatformBatchIdentity(cand);
+      const identKey = `${ident.type}:${ident.key}`;
 
-      // Prevent duplicate in same pending batch
-      if (batchPublishedUrls.has(normalizedUrl)) {
-        cand.autoPublishBlockedReasons.push("duplicate-in-same-pending-batch-url");
+      // Prevent duplicate in same pending batch (Discord guild, Telegram handle, WhatsApp code, URL)
+      if (batchSeenIdentities.has(identKey)) {
+        cand.autoPublishBlockedReasons.push(`duplicate-in-same-pending-batch-${ident.type}`);
         remainingPending.push(cand);
         continue;
       }
 
-      if (cand.platform === "discord" && cand.guildId && batchPublishedGuildIds.has(cand.guildId)) {
-        cand.autoPublishBlockedReasons.push("duplicate-in-same-pending-batch-guildId");
-        remainingPending.push(cand);
-        continue;
-      }
-
-      batchPublishedUrls.add(normalizedUrl);
-      if (cand.platform === "discord" && cand.guildId) {
-        batchPublishedGuildIds.add(cand.guildId);
-      }
+      batchSeenIdentities.add(identKey);
 
       if (evalResult.isRestoration && evalResult.restoredArchivedRecord) {
         restoredRecords.push(evalResult.restoredArchivedRecord);
-        // Preserve stable original ID and slug
         cand.id = evalResult.restoredArchivedRecord.id;
         cand.slug = evalResult.restoredArchivedRecord.slug;
       }
@@ -407,7 +527,7 @@ export async function runAutoPublish(
       const ageDays = (Date.now() - firstSeen) / (1000 * 60 * 60 * 24);
 
       if (ageDays > options.probationMaxDays) {
-        console.log(`  ?? Probation Expired (> ${options.probationMaxDays}d): "${cand.title}" -> Auto-rejecting.`);
+        console.log(`  ? Probation Expired (> ${options.probationMaxDays}d): "${cand.title}" -> Auto-rejecting.`);
         rejected.push({
           url: cand.inviteUrl,
           platform: cand.platform,
@@ -435,40 +555,42 @@ export async function runAutoPublish(
   console.log(`  Tier C (Probation/Hold)  : ${tierCCount}`);
   console.log(`  Total Eligible           : ${eligibleCount}`);
 
-  // Strengthened Anomaly Circuit Breaker
+  // GLOBAL CIRCUIT BREAKER FAIL-CLOSED
   let circuitBreakerTriggered = false;
   let circuitBreakerReason: string | undefined;
 
-  if (pending.length >= 5 && eligibleCount / pending.length > 0.5) {
+  if (criticalSubsystemFailure) {
+    circuitBreakerTriggered = true;
+    circuitBreakerReason = `Critical subsystem failure: ${criticalSubsystemReason}`;
+  } else if (pending.length >= 5 && eligibleCount / pending.length > 0.5) {
     circuitBreakerTriggered = true;
     circuitBreakerReason = `High eligible ratio anomaly: ${eligibleCount}/${pending.length} (>50%) qualified in single batch.`;
-  }
-
-  // Check if >=5 eligible candidates share same querySource or external evidence hostname
-  const querySourceCounts: Record<string, number> = {};
-  const hostnameCounts: Record<string, number> = {};
-  for (const c of eligibleCandidates) {
-    if (c.querySource) querySourceCounts[c.querySource] = (querySourceCounts[c.querySource] || 0) + 1;
-    if (c.sourceHostname) hostnameCounts[c.sourceHostname] = (hostnameCounts[c.sourceHostname] || 0) + 1;
-  }
-
-  for (const [qs, count] of Object.entries(querySourceCounts)) {
-    if (count >= 5) {
-      circuitBreakerTriggered = true;
-      circuitBreakerReason = `Query clustering anomaly: ${count} candidates from same query "${qs}".`;
+  } else {
+    const querySourceCounts: Record<string, number> = {};
+    const hostnameCounts: Record<string, number> = {};
+    for (const c of eligibleCandidates) {
+      if (c.querySource) querySourceCounts[c.querySource] = (querySourceCounts[c.querySource] || 0) + 1;
+      if (c.sourceHostname) hostnameCounts[c.sourceHostname] = (hostnameCounts[c.sourceHostname] || 0) + 1;
     }
-  }
 
-  for (const [hn, count] of Object.entries(hostnameCounts)) {
-    if (count >= 5) {
-      circuitBreakerTriggered = true;
-      circuitBreakerReason = `Hostname clustering anomaly: ${count} candidates from same hostname "${hn}".`;
+    for (const [qs, count] of Object.entries(querySourceCounts)) {
+      if (count >= 5) {
+        circuitBreakerTriggered = true;
+        circuitBreakerReason = `Query clustering anomaly: ${count} candidates from same query "${qs}".`;
+      }
+    }
+
+    for (const [hn, count] of Object.entries(hostnameCounts)) {
+      if (count >= 5) {
+        circuitBreakerTriggered = true;
+        circuitBreakerReason = `Hostname clustering anomaly: ${count} candidates from same hostname "${hn}".`;
+      }
     }
   }
 
   if (circuitBreakerTriggered) {
-    console.warn(`\n??  CIRCUIT BREAKER TRIGGERED: ${circuitBreakerReason}`);
-    console.warn("  -> Publication suspended for this run to protect database integrity.");
+    console.warn(`\n??  GLOBAL CIRCUIT BREAKER TRIGGERED: ${circuitBreakerReason}`);
+    console.warn("  -> Publication HALTED (0 published) to protect database integrity.");
     return {
       evaluatedCount: pending.length,
       tierACount,
@@ -500,7 +622,6 @@ export async function runAutoPublish(
     console.log(`  ?? Auto-Published [Tier ${item.publicationTier}]: "${item.title}" (${item.countryCode} - ${item.category})`);
   }
 
-  // Clean restored records from archived storage
   if (restoredRecords.length > 0) {
     const restoredIds = new Set(restoredRecords.map((r) => r.id));
     archived = archived.filter((a) => !restoredIds.has(a.id));
