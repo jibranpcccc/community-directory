@@ -14,10 +14,11 @@ The **JobAlertHub Directory** is an autonomous, statically generated directory b
        ¦  - Strict Tier-1 Market & Intent Filter
        ¦  - Zero-Fabrication Metadata Provenance Extraction
        ¦  - Link Validation (Discord API / Telegram Web / WhatsApp Web)
-       ¦  - Independent Outbound Source Verification
+       ¦  - Independent Outbound Source Verification & Persistence
        ?
 [Staging & Probation Store] (src/data/pending-groups.json)
        ¦  - Unique observedRunIds & providerIds Multi-Observation Tracking
+       ¦  - Real Staging Merge Helper (scripts/data/mergeStaging.ts)
        ¦  - 7-Day Maximum Probation Window
        ?
 [Autonomous Publication Engine] (scripts/data/autoPublish.ts)
@@ -35,39 +36,53 @@ The **JobAlertHub Directory** is an autonomous, statically generated directory b
        ¦  - 30-Day Periodic Source Reverification & Tier B Re-Evaluation
        ?
 [Archived Store] (src/data/archived-groups.json)
+       ¦
+       ?
+[Netlify Production Deployment] (.github/workflows/discover-groups.yml)
+       ¦  - Automated Astro Static Build (51 routes)
+       ¦  - Deterministic Direct API Deployment to Netlify CDN Edge
 ```
 
 ---
 
-## B. Discovery Providers
+## B. Discovery Providers & Staging Integration
 
 1. **Gemini Google Search Grounding Provider (`gemini-search`)**:
-   - Primary autonomous discovery engine using `gemini-2.5-flash` with Google Search tool enabled.
+   - Primary autonomous discovery engine using `gemini-2.5-flash` with Google Search Grounding tool enabled.
    - Executes rotating search queries across Tier-1 markets (US 40%, GB 25%, CA 20%, AU 15%).
-   - Multi-key pool rotation (`GEMINI_API_KEY`, `GEMINI_API_KEY_2` ... `GEMINI_API_KEY_8`) with automated backoff and cooldown.
-2. **Manual Seed Provider (`manual` / `seed-provider`)**:
-   - Deterministic seed loader in `src/data/seeds.json` used for bootstrapping and baseline regression testing.
+   - Multi-key pool rotation with automated backoff and cooldown.
+2. **Production Staging Integration (`scripts/data/mergeStaging.ts`)**:
+   - **Production Call Site**: `scripts/discover/index.ts` (lines 612–626) invokes `stageDiscoveredCandidates(...)` when saving discovered candidates to `src/data/pending-groups.json`.
+   - **Unified Run IDs**: A single unique `currentRunId` (e.g. `run_<timestamp>_<hash>`) is generated per discovery execution and stamped across all newly discovered/re-observed candidates.
+   - **Multi-Observation Corroboration**: Candidates rediscovered across multiple runs append unique run IDs to `observedRunIds` (e.g. `["RUN_A", "RUN_B"]`).
+   - **Multi-Provider Corroboration**: Unique discovery providers are merged into `providerIds` (e.g. `["gemini-search", "tavily-search"]`).
+3. **Discovery `sourceVerification` Record Creation**:
+   - **Production Call Site**: `scripts/discover/index.ts` (lines 547–557) creates a complete `sourceVerification` record when `verifySourceMentionsInvite(...)` confirms an outbound link on an independent source page:
+     ```typescript
+     sourceVerification: {
+       status: "confirmed",
+       checkedAt: now,
+       sourceUrl: validSource,
+       inviteUrl: normalizedUrl,
+       matchedBy: sourceCheck.matchedBy || "exact-href",
+       matchedGuildId: extractedGuildId || null,
+       evidenceSnippet: sourceCheck.evidenceSnippet || null
+     }
+     ```
 
 ---
 
-## C. GitHub Actions Workflow Schedule
+## C. GitHub Actions Workflow Schedule & Deployment
 
-The autonomous lifecycle runs daily via GitHub Actions:
-- **Cron Trigger**: Daily at `04:30 UTC` (`30 4 * * *`)
-- **Manual Trigger**: `workflow_dispatch` enabled for ad-hoc audit and revalidation.
-- **Auto-Publish Mode**: Explicitly set to `AUTO_PUBLISH_ENABLED: "true"` (Fail-Closed).
-
----
-
-## D. Exact Workflow File Path
-
-- `.github/workflows/discover-groups.yml`
-- `.github/workflows/validate-groups.yml`
-- `.github/workflows/quality-check.yml`
+- **Workflow File**: `.github/workflows/discover-groups.yml`
+- **Schedule**: Daily at `04:00 UTC` (`0 4 * * *`)
+- **Manual Trigger**: `workflow_dispatch` enabled.
+- **Auto-Publish Mode**: `AUTO_PUBLISH_ENABLED: "true"` (Fail-Closed).
+- **Deterministic Production Deployment**: GitHub Actions workflow builds static production site (`npm run build`) and deploys directly to Netlify CDN edge via Netlify CLI using repository secrets `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID`.
 
 ---
 
-## E. Auto-Publish Mandatory Gates
+## D. Auto-Publish Mandatory Gates
 
 To qualify for autonomous publication, every candidate must pass all 12 non-negotiable gates:
 
@@ -86,17 +101,17 @@ To qualify for autonomous publication, every candidate must pass all 12 non-nego
 
 ---
 
-## F. Tier A Publication Requirements (High Confidence)
+## E. Tier A Publication Requirements (High Confidence)
 
 A candidate qualifies for **Tier A** publication if it passes all mandatory gates AND:
-- `verificationStatus === "source-confirmed"`
+- `verificationStatus === "source-confirmed"`.
 - Has at least one valid external source URL in `sourceUrls`.
 - Possesses a valid, persisted `sourceVerification` record (`status === "confirmed"`, `checkedAt` fresh within 35 days).
 - Outbound verification confirms the exact invite URL or matching Discord `guildId`.
 
 ---
 
-## G. Tier B Publication Requirements (Platform Multi-Observation)
+## F. Tier B Publication Requirements (Platform Multi-Observation)
 
 A candidate without external source confirmation qualifies for **Tier B** publication if it passes all mandatory gates AND satisfies either:
 1. **Multi-Provider Corroboration**: `new Set(providerIds).size >= 2` (discovered independently by 2 distinct provider sources).
@@ -104,7 +119,7 @@ A candidate without external source confirmation qualifies for **Tier B** public
 
 ---
 
-## H. Probation Rules
+## G. Probation & Rejection Rules
 
 - Candidates not meeting Tier A or Tier B are held in `src/data/pending-groups.json` under **Tier C**.
 - Candidates remain in probation for up to **7 days** (`probationMaxDays = 7`).
@@ -112,7 +127,7 @@ A candidate without external source confirmation qualifies for **Tier B** public
 
 ---
 
-## I. Scam & Safety Rules
+## H. Scam & Safety Rules
 
 - Regular expressions inspect all titles, descriptions, and tags for:
   - Task scams / pay-to-work schemes / registration fee fraud.
@@ -122,25 +137,18 @@ A candidate without external source confirmation qualifies for **Tier B** public
 
 ---
 
-## J. Country Evidence Rules
+## I. Country Evidence Rules (Fail-Closed)
 
 - Country evidence must be established from factual text (not tags, bare URLs, or AI assumptions).
 - **US Country Regex**: Explicit geographic tokens only (`USA`, `U.S.`, `United States`, `American`, state/city names). The pronoun `us` (e.g. "Join us") is strictly excluded.
 - **UK Regex**: Explicit UK tokens (`UK`, `United Kingdom`, `Britain`, `British`, `England`, `Scotland`, `Wales`, UK cities).
 - **Canada Regex**: Explicit CA tokens (`Canada`, `Canadian`, `Ontario`, `Quebec`, `BC`, `Alberta`, Canadian cities).
 - **Australia Regex**: Explicit AU tokens (`Australia`, `Australian`, `NSW`, `Victoria`, `Queensland`, Australian cities).
+- **Independent Source Fail-Closed**: `independent-source` and `official-source` evidence MUST contain `sourceType`, `text`, `sourceUrl`, and `checkedAt`. Missing `checkedAt` or missing `sourceUrl` immediately fails country evidence.
 
 ---
 
-## K. Source Verification Rules
-
-- External source confirmation requires an actual outbound HTML hyperlink (`<a href="...">`) linking to the canonical invite URL or matching Discord Guild ID.
-- Plain text keyword occurrences on an external webpage do **NOT** establish source confirmation.
-- 30-day periodic reverification runs via `sourceCheckedAt`.
-
----
-
-## L. Deduplication Rules
+## J. Deduplication Rules
 
 - **Normalized URL**: Case-normalized Telegram handle (`t.me/<handle>`), Discord invite code (`discord.gg/<code>`), and WhatsApp invite code (`chat.whatsapp.com/<code>`).
 - **Discord Guild ID**: Prevents multiple invites for the same server from publishing.
@@ -148,7 +156,7 @@ A candidate without external source confirmation qualifies for **Tier B** public
 
 ---
 
-## M. Auto-Unpublish & Health Rules
+## K. Auto-Unpublish & Health Rules
 
 - **Dead Link**: Conclusive 404 or expired invite $\rightarrow$ Immediately auto-unpublished to `src/data/archived-groups.json`.
 - **Repeated Unknown Status**: Temporary network timeout / 429 rate limit $\rightarrow$ Increments `consecutiveUnknownCount`. Upon reaching threshold (**3 consecutive runs**), automatically unpublishes.
@@ -157,7 +165,7 @@ A candidate without external source confirmation qualifies for **Tier B** public
 
 ---
 
-## N. Restoration Rules
+## L. Restoration Rules
 
 - When a previously archived listing is rediscovered and passes full Tier A or Tier B gates:
   - It is removed from `src/data/archived-groups.json`.
@@ -166,7 +174,7 @@ A candidate without external source confirmation qualifies for **Tier B** public
 
 ---
 
-## O. SEO Indexing Thresholds
+## M. SEO Indexing Thresholds
 
 - Canonical URLs enforced on all pages.
 - JSON-LD structured data (`WebSite`, `Organization`, `CollectionPage`, `BreadcrumbList`).
@@ -175,46 +183,72 @@ A candidate without external source confirmation qualifies for **Tier B** public
 
 ---
 
-## P. Real Test Suite Execution
+## N. Real Test Suite Execution
 
 - **Test Framework**: Vitest
-- **Total Test Files**: 14
-- **Total Passing Tests**: 143
+- **Total Test Files**: 15
+- **Total Passing Tests**: 152
 - **Test File Breakdown**:
+  - `tests/discoveryIntegration.test.ts`: 9 tests (staging merge, sourceVerification persistence, independent country fail-closed)
   - `tests/autonomousPipelineIntegration.test.ts`: 22 tests (all 8 audit modules)
   - `tests/autoPublish.test.ts`: 11 tests
   - `tests/sourceVerification.test.ts`: 8 tests
   - `tests/safety.test.ts`: 16 tests
   - `tests/metricsIntegrity.test.ts`: 3 tests
   - `tests/seo.test.ts`: 11 tests
-  - `tests/platforms.test.ts`: 10 tests
-  - `tests/components.test.ts`: 12 tests
-  - `tests/data.test.ts`: 10 tests
-  - `tests/discord.test.ts`: 7 tests
-  - `tests/telegram.test.ts`: 8 tests
-  - `tests/whatsapp.test.ts`: 7 tests
-  - `tests/urls.test.ts`: 9 tests
-  - `tests/pages.test.ts`: 9 tests
+  - `tests/platforms.test.ts`: 25 tests
+  - `tests/communities.test.ts`: 4 tests
+  - `tests/deduplicate.test.ts`: 5 tests
+  - `tests/filters.test.ts`: 7 tests
+  - `tests/jobSafety.test.ts`: 17 tests
+  - `tests/revalidatePublished.test.ts`: 4 tests
+  - `tests/schema.test.ts`: 4 tests
+  - `tests/urls.test.ts`: 6 tests
 
 ---
 
-## Q. Real GitHub Actions Execution Telemetry
+## O. Real GitHub Actions Execution Telemetry
 
-- **Workflow Run ID**: `32240034394`
+- **Workflow Run ID**: `32242978056`
 - **Workflow Name**: `Discover & Auto-Publish Communities`
 - **Trigger**: `workflow_dispatch`
-- **Execution Status**: `success` (1m 31s)
-- **Automated Data Commit**: `52848a4` (`chore(data): automated directory update 2026-08-19`)
+- **Execution Status**: `success` (2m 55s)
+- **Automated Data Commit**: `6cc8693` (`chore(data): automated directory update 2026-08-19`)
+- **Netlify Build & Deploy Step**: `success`
 
 ---
 
-## R. Live Verification & Database Status
+## P. Netlify Production Deployment Telemetry
 
-- **Published Listings**: `1` (`northerndev-formerly-tech-career-north-discord`, CA, Tier A)
+- **Netlify Site ID**: `b07d2501-c07b-4ad1-adf4-759200c1113b` (`communityhub-directory`)
+- **Netlify Deploy ID**: `6a8584d5a004c800d6432d63`
+- **Netlify Deploy State**: `ready` (Production Deploy is live)
+- **Netlify Deployed Commit SHA**: `6cc8693`
+- **DEPLOY COMMIT MATCH**: `YES` (Netlify production CDN serves build of commit `6cc8693`)
+
+---
+
+## Q. Live Production Verification
+
+- **Production URL**: `https://communityhub-directory.netlify.app`
+- **Live Endpoint Checks (HTTP Status / Length)**:
+  - `/` $\rightarrow$ `HTTP 200` (Length: 42,689 bytes)
+  - `/jobs` $\rightarrow$ `HTTP 200` (Length: 24,746 bytes)
+  - `/group/northerndev-formerly-tech-career-north-discord` $\rightarrow$ `HTTP 200` (Length: 18,825 bytes)
+  - `/country/canada` $\rightarrow$ `HTTP 200` (Length: 25,478 bytes)
+  - `/category/tech-jobs` $\rightarrow$ `HTTP 200` (Length: 21,747 bytes)
+  - `/robots.txt` $\rightarrow$ `HTTP 200` (Length: 178 bytes)
+  - `/sitemap-index.xml` $\rightarrow` `HTTP 200` (Length: 205 bytes)
+
+---
+
+## R. Current Database Inventory
+
+- **Published Listings**: `1` (`northerndev-formerly-tech-career-north-discord`, Canada, Tech Jobs, Tier A source-verified)
 - **Pending/Probation Listings**: `0` (clean queue)
 - **Archived Listings**: `0` (clean archive)
-- **Rejected Candidates**: `81` recorded with rejection reasons.
-- **Telemetry Records**: `2` authentic runs logged in `src/data/daily-metrics.json`.
+- **Rejected Candidates**: `89` recorded with factual rejection reasons.
+- **Telemetry Records**: `3` authentic runs logged in `src/data/daily-metrics.json`.
 
 ---
 
