@@ -148,8 +148,10 @@
   {
     "url": "https://discord.gg/JjNdBkVGc6",
     "platform": "discord",
-    "reason": "dead-link",
-    "date": "2026-08-19T08:33:40.620Z"
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-19T08:33:40.620Z",
+    "timesSeen": 3,
+    "lastSeenAt": "2026-08-20T07:49:44.568Z"
   },
   {
     "url": "https://discord.gg/Kfx2EsnKnK",
@@ -353,6 +355,39 @@
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T10:32:00.619Z",
     "lastSeenAt": "2026-08-19T10:32:00.619Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/G8zFsbHHyG",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-20T07:49:44.568Z",
+    "lastSeenAt": "2026-08-20T07:49:44.568Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/yFcbG5mcky",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-20T07:49:44.568Z",
+    "lastSeenAt": "2026-08-20T07:49:44.568Z",
+    "timesSeen": 1,
+    "title": "Trade Mind"
+  },
+  {
+    "url": "https://discord.gg/9hx3WBjucW",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-20T07:49:44.568Z",
+    "lastSeenAt": "2026-08-20T07:49:44.568Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/fu7X8nNBFB",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-20T07:49:44.568Z",
+    "lastSeenAt": "2026-08-20T07:49:44.568Z",
     "timesSeen": 1
   }
 ]
