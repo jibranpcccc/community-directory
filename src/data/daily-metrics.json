@@ -321,5 +321,59 @@
       "government-jobs": 0,
       "other": 0
     }
+  },
+  {
+    "date": "2026-08-20",
+    "runId": "run_1787225515450_412gj",
+    "workflowRunId": "32363208168",
+    "startedAt": "2026-08-20T11:19:19.515Z",
+    "finishedAt": "2026-08-20T11:31:55.449Z",
+    "generatedBy": "discovery-pipeline",
+    "queryTopics": 120,
+    "providerRequests": 124,
+    "rawCandidates": 65,
+    "passedJobIntent": 4,
+    "wrongNiche": 61,
+    "active": 4,
+    "dead": 0,
+    "unknown": 0,
+    "validationFailures": 0,
+    "confirmedTier1": 1,
+    "wrongCountry": 0,
+    "unconfirmedTargetMarket": 2,
+    "scamRejected": 0,
+    "duplicates": 1,
+    "probationAdded": 1,
+    "tierAEligible": 0,
+    "tierBEligible": 1,
+    "tierCBlocked": 0,
+    "autoPublished": 1,
+    "autoUnpublished": 0,
+    "publishedTotal": 2,
+    "pendingTotal": 0,
+    "archivedTotal": 0,
+    "countryCounts": {
+      "US": 0,
+      "GB": 1,
+      "CA": 0,
+      "AU": 0
+    },
+    "platformCounts": {
+      "telegram": 0,
+      "discord": 1,
+      "whatsapp": 0
+    },
+    "categoryCounts": {
+      "tech-jobs": 1,
+      "remote-jobs": 0,
+      "internships-graduate": 0,
+      "visa-sponsorship-jobs": 0,
+      "healthcare-jobs": 0,
+      "finance-jobs": 0,
+      "engineering-jobs": 0,
+      "sales-marketing-jobs": 0,
+      "government-jobs": 0,
+      "other": 0
+    }
   }
 ]

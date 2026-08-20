@@ -1,5 +1,76 @@
 [
   {
+    "id": "cs-careers-uk-discord",
+    "slug": "cs-careers-uk-discord",
+    "title": "CS Careers UK",
+    "platform": "discord",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering",
+    "tags": [
+      "discord",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://discord.gg/tGdB6PZ7c9",
+    "description": "UK Computer Science Careers: From intern to engineering lead.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GB",
+    "countryCode": "GB",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "CS Careers UK",
+      "checkedAt": "2026-08-20T11:31:51.879Z"
+    },
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 688,
+    "memberCountSource": "https://discord.gg/tGdB6PZ7c9",
+    "memberCountCheckedAt": "2026-08-20T11:31:56.401Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-08-20T11:31:56.401Z",
+    "sourceUrls": [
+      "https://discord.gg/tGdB6PZ7c9"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-20T11:31:51.220Z",
+    "lastCheckedAt": "2026-08-20T11:31:56.401Z",
+    "updatedAt": "2026-08-20T11:31:56.401Z",
+    "safetyFlags": [],
+    "guildId": "1453139927134113834",
+    "published": true,
+    "featured": false,
+    "firstSeenAt": "2026-08-20T11:31:51.220Z",
+    "lastSeenAt": "2026-08-20T11:31:51.220Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1787225511220_qcx2j",
+      "run_1787225511880_t6v4l"
+    ],
+    "querySource": "discord.gg cybersecurity jobs UK Discord invite",
+    "sourceHostname": "discord.gg",
+    "consecutiveUnknownCount": 0,
+    "lastValidationStatus": "active",
+    "publicationTier": "B",
+    "autoPublishBlockedReasons": []
+  },
+  {
     "id": "northerndev-formerly-tech-career-north-discord",
     "slug": "northerndev-formerly-tech-career-north-discord",
     "title": "northern.dev (formerly Tech Career North 🍁)",
@@ -49,11 +120,11 @@
     "communityType": "unknown",
     "memberCount": 13916,
     "memberCountSource": "https://discord.gg/96rkQyC5rX",
-    "memberCountCheckedAt": "2026-08-20T07:49:45.910Z",
+    "memberCountCheckedAt": "2026-08-20T11:31:56.401Z",
     "verificationStatus": "source-confirmed",
     "linkStatus": "active",
     "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-20T07:49:45.910Z",
+    "lastSuccessfulValidationAt": "2026-08-20T11:31:56.401Z",
     "sourceUrls": [
       "https://northern.dev"
     ],
@@ -69,8 +140,8 @@
     },
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-19T08:33:40.620Z",
-    "lastCheckedAt": "2026-08-20T07:49:45.910Z",
-    "updatedAt": "2026-08-20T07:49:45.910Z",
+    "lastCheckedAt": "2026-08-20T11:31:56.401Z",
+    "updatedAt": "2026-08-20T11:31:56.401Z",
     "safetyFlags": [],
     "guildId": "1045555763264880640",
     "published": true,
