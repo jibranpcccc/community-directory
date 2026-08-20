@@ -48,14 +48,16 @@ const TEMPLATES: QueryTemplate[] = [
     topic: "Software & Tech Jobs",
     weight: 0.25,
     getKeywords: (country, short) => [
-      `"tech job postings" Discord ${country}`,
-      `"software jobs" Telegram ${short}`,
-      `"tech hiring" Discord ${short}`,
-      `"software engineer jobs" ${short}`,
-      `"developer jobs" ${short} "job alerts"`,
-      `"frontend" OR "backend" tech jobs ${country} Discord`,
-      `"data science jobs" OR "machine learning jobs" ${short} Telegram`,
-      `"devops hiring" OR "cloud engineer jobs" ${country}`,
+      `tech job postings Discord ${country}`,
+      `software jobs Telegram ${short}`,
+      `tech hiring Discord ${short}`,
+      `software engineer jobs ${short} community`,
+      `developer jobs ${short} job alerts`,
+      `frontend backend developer jobs ${country} Discord`,
+      `data science machine learning jobs ${short} Telegram`,
+      `devops cloud engineer jobs ${country} community`,
+      `cybersecurity jobs ${short} Discord invite`,
+      `tech startup hiring ${country} Telegram`,
     ],
   },
   {
@@ -64,12 +66,12 @@ const TEMPLATES: QueryTemplate[] = [
     topic: "Remote Jobs",
     weight: 0.20,
     getKeywords: (country, short) => [
-      `"remote job alerts" Telegram ${short}`,
-      `"daily job postings" Discord ${country}`,
-      `"remote hiring" ${short} "job alerts"`,
-      `"work from home jobs" ${short}`,
-      `"remote tech jobs" Discord ${country}`,
-      `"remote developer careers" Telegram ${short}`,
+      `remote job alerts Telegram ${short}`,
+      `daily remote job postings Discord ${country}`,
+      `remote hiring ${short} job alerts`,
+      `work from home jobs ${short} community`,
+      `remote tech developer jobs Discord ${country}`,
+      `worldwide remote jobs ${short} Telegram channel`,
     ],
   },
   {
@@ -78,13 +80,13 @@ const TEMPLATES: QueryTemplate[] = [
     topic: "Internships & Graduate Schemes",
     weight: 0.20,
     getKeywords: (country, short) => [
-      `"new grad jobs" Discord ${country}`,
-      `"internship postings" Discord ${country}`,
-      `"${country} internships" Discord`,
-      `"${short} graduate jobs" Telegram`,
-      `"entry level tech jobs" ${short}`,
-      `"summer internship 2026" ${country} Discord`,
-      `"early career jobs" ${short} Telegram`,
+      `new grad tech jobs Discord ${country}`,
+      `internship postings Discord ${country}`,
+      `${country} student internships Discord server`,
+      `${short} graduate jobs Telegram group`,
+      `entry level software engineer jobs ${short}`,
+      `summer internship 2026 ${country} Discord`,
+      `junior developer careers ${short} Telegram`,
     ],
   },
   {
@@ -93,11 +95,11 @@ const TEMPLATES: QueryTemplate[] = [
     topic: "Visa Sponsorship Jobs",
     weight: 0.15,
     getKeywords: (country, short) => [
-      `"visa sponsorship jobs" ${country}`,
-      `"skilled worker visa jobs" ${short}`,
-      `"relocation tech jobs" ${country}`,
-      `"h1b visa jobs" ${country} Telegram`,
-      `"sponsor visa hiring" ${short} Discord`,
+      `visa sponsorship jobs ${country} community`,
+      `skilled worker visa jobs ${short} Telegram`,
+      `relocation tech jobs ${country} Discord`,
+      `work visa hiring ${country} community group`,
+      `international tech hiring ${short} Discord`,
     ],
   },
   {
@@ -106,11 +108,11 @@ const TEMPLATES: QueryTemplate[] = [
     topic: "Healthcare & Nursing",
     weight: 0.10,
     getKeywords: (country, short) => [
-      `"nursing job alerts" ${short}`,
-      `"healthcare vacancies" ${country}`,
-      `"hospital nursing jobs" ${short}`,
-      `"travel nurse jobs" ${country} WhatsApp`,
-      `"medical doctor staffing" ${short}`,
+      `nursing job alerts ${short} Telegram`,
+      `healthcare vacancies ${country} community`,
+      `hospital nursing jobs ${short} group`,
+      `travel nurse jobs ${country} community`,
+      `medical doctor healthcare hiring ${short}`,
     ],
   },
   // TIER B (10% of category allocation combined)
@@ -120,9 +122,9 @@ const TEMPLATES: QueryTemplate[] = [
     topic: "Finance & Accounting",
     weight: 0.025,
     getKeywords: (country, short) => [
-      `"finance job alerts" ${short}`,
-      `"accounting careers" ${country}`,
-      `"fintech hiring" ${country} Discord`,
+      `finance accounting job alerts ${short} Telegram`,
+      `fintech careers hiring ${country} Discord`,
+      `banking finance vacancies ${short} community`,
     ],
   },
   {
@@ -131,9 +133,9 @@ const TEMPLATES: QueryTemplate[] = [
     topic: "Engineering Careers",
     weight: 0.025,
     getKeywords: (country, short) => [
-      `"engineering job postings" ${short}`,
-      `"mechanical engineer vacancies" ${country}`,
-      `"electrical engineer jobs" ${short}`,
+      `engineering job postings ${short} Telegram`,
+      `mechanical electrical engineer vacancies ${country}`,
+      `civil engineering careers ${short} community`,
     ],
   },
   {
@@ -142,9 +144,9 @@ const TEMPLATES: QueryTemplate[] = [
     topic: "Sales & Marketing",
     weight: 0.025,
     getKeywords: (country, short) => [
-      `"sales marketing job alerts" ${short}`,
-      `"B2B sales vacancies" ${country}`,
-      `"growth marketing jobs" ${short}`,
+      `sales marketing job alerts ${short} Telegram`,
+      `B2B sales vacancies ${country} community`,
+      `digital growth marketing jobs ${short} Discord`,
     ],
   },
   {
@@ -153,9 +155,9 @@ const TEMPLATES: QueryTemplate[] = [
     topic: "Government & Public Sector",
     weight: 0.025,
     getKeywords: (country, short) => [
-      `"government job alerts" ${short}`,
-      `"civil service vacancies" ${country}`,
-      `"public sector hiring" ${short}`,
+      `government job alerts ${short} Telegram`,
+      `civil service vacancies ${country} community`,
+      `public sector hiring ${short} group`,
     ],
   },
 ];
@@ -191,7 +193,7 @@ export function saveQueryStats(statsMap: Record<string, QueryStats>): void {
 
 /**
  * Generates an interleaved, country-balanced query matrix across
- * US, GB, CA, AU and Telegram, Discord, WhatsApp.
+ * 8 English-speaking countries and Telegram, Discord, WhatsApp.
  */
 export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQueriesPerRun): SearchQuery[] {
   const platforms: PlatformId[] = ["telegram", "discord", "whatsapp"];
@@ -212,7 +214,6 @@ export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQu
       const keywords = tpl.getKeywords(c.name, c.shortName);
 
       for (const kw of keywords) {
-        // Query score calculation based on past performance
         const past = stats[kw];
         let performanceWeight = 1.0;
         if (past) {
@@ -228,18 +229,18 @@ export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQu
           category: tpl.category,
           subcategory: tpl.subcategory,
           topic: tpl.topic,
-          weight: tpl.weight * performanceWeight,
+          weight: tpl.weight * performanceWeight * (c.discoveryBudgetWeight || 0.1),
         });
 
         // Discord query
         poolByCountryAndPlatform[`${c.code}:discord`].push({
-          query: kw.includes("site:") || kw.includes("discord.gg") ? kw : `"discord.gg" ${kw}`,
+          query: kw.includes("site:") || kw.includes("discord.gg") ? kw : `discord.gg ${kw}`,
           platform: "discord",
           countryCode: c.code,
           category: tpl.category,
           subcategory: tpl.subcategory,
           topic: tpl.topic,
-          weight: tpl.weight * performanceWeight,
+          weight: tpl.weight * performanceWeight * (c.discoveryBudgetWeight || 0.1),
         });
 
         // WhatsApp query
@@ -250,7 +251,7 @@ export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQu
           category: tpl.category,
           subcategory: tpl.subcategory,
           topic: tpl.topic,
-          weight: tpl.weight * performanceWeight,
+          weight: tpl.weight * performanceWeight * (c.discoveryBudgetWeight || 0.1),
         });
       }
 
@@ -258,7 +259,7 @@ export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQu
       const topCities = c.cities.slice(0, 3);
       for (const city of topCities) {
         poolByCountryAndPlatform[`${c.code}:telegram`].push({
-          query: `site:t.me "${city} tech jobs" OR "${city} job alerts"`,
+          query: `site:t.me ${city} tech jobs OR ${city} job alerts`,
           platform: "telegram",
           countryCode: c.code,
           category: tpl.category,
@@ -268,7 +269,7 @@ export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQu
         });
 
         poolByCountryAndPlatform[`${c.code}:discord`].push({
-          query: `"discord.gg" "${city} tech jobs" OR "${city} job postings"`,
+          query: `discord.gg ${city} tech jobs OR ${city} hiring`,
           platform: "discord",
           countryCode: c.code,
           category: tpl.category,
@@ -278,7 +279,7 @@ export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQu
         });
 
         poolByCountryAndPlatform[`${c.code}:whatsapp`].push({
-          query: `site:chat.whatsapp.com "${city} job alerts"`,
+          query: `site:chat.whatsapp.com ${city} job alerts`,
           platform: "whatsapp",
           countryCode: c.code,
           category: tpl.category,
@@ -305,7 +306,7 @@ export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQu
         const bucket = poolByCountryAndPlatform[`${c.code}:${p}`];
         if (!bucket || bucket.length === 0) continue;
 
-        const rotatedIndex = (idx + dayOfYear * 3) % bucket.length;
+        const rotatedIndex = (idx + dayOfYear * 5) % bucket.length;
         const q = bucket[rotatedIndex];
 
         if (q && !interleaved.some((existing) => existing.query === q.query)) {

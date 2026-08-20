@@ -1,4 +1,4 @@
-﻿import https from "https";
+import https from "https";
 
 function fetchPage(url) {
   return new Promise((resolve, reject) => {
@@ -55,8 +55,7 @@ async function check() {
 
   // Check 404 on out-of-scope routes
   const outOfScopeRoutes = [
-    "/country/new-zealand/",
-    "/country/ireland/",
+    "/country/france/",
     "/platform/reddit/",
     "/platform/slack/",
     "/platform/skool/",

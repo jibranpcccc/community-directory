@@ -21,7 +21,7 @@ export type PlatformId =
   | "github"
   | "forum";
 
-export type CountryCode = "US" | "GB" | "CA" | "AU" | "NZ" | "IE";
+export type CountryCode = "US" | "GB" | "CA" | "AU" | "NZ" | "IE" | "SG" | "ZA";
 
 export type WorkArrangement =
   | "remote"

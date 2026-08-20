@@ -79,6 +79,10 @@ export interface DailyMetricsRecord {
     GB: number;
     CA: number;
     AU: number;
+    NZ?: number;
+    IE?: number;
+    SG?: number;
+    ZA?: number;
   };
   platformCounts: {
     telegram: number;
@@ -244,7 +248,7 @@ async function runDiscovery() {
   let scamRiskCount = 0;
   let duplicatesSkippedCount = 0;
 
-  const countryCounts: Record<CountryCode, number> = { US: 0, GB: 0, CA: 0, AU: 0, NZ: 0, IE: 0 };
+  const countryCounts: Record<CountryCode, number> = { US: 0, GB: 0, CA: 0, AU: 0, NZ: 0, IE: 0, SG: 0, ZA: 0 };
   let newDiscordCount = 0;
   let newTelegramCount = 0;
   let newWhatsappCount = 0;

@@ -1,4 +1,4 @@
-﻿export type CountryCode = "US" | "GB" | "CA" | "AU" | "NZ" | "IE";
+﻿export type CountryCode = "US" | "GB" | "CA" | "AU" | "NZ" | "IE" | "SG" | "ZA";
 
 export interface TargetCountry {
   code: CountryCode;
@@ -21,7 +21,7 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     flag: "US",
     priority: 1,
     enabled: true,
-    discoveryBudgetWeight: 0.40,
+    discoveryBudgetWeight: 0.30,
     cities: [
       "New York",
       "Los Angeles",
@@ -48,7 +48,7 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     flag: "UK",
     priority: 2,
     enabled: true,
-    discoveryBudgetWeight: 0.25,
+    discoveryBudgetWeight: 0.20,
     cities: [
       "London",
       "Manchester",
@@ -70,7 +70,7 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     flag: "CA",
     priority: 3,
     enabled: true,
-    discoveryBudgetWeight: 0.20,
+    discoveryBudgetWeight: 0.15,
     cities: [
       "Toronto",
       "Vancouver",
@@ -90,7 +90,7 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     flag: "AU",
     priority: 4,
     enabled: true,
-    discoveryBudgetWeight: 0.15,
+    discoveryBudgetWeight: 0.10,
     cities: [
       "Sydney",
       "Melbourne",
@@ -105,12 +105,12 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     code: "NZ",
     slug: "new-zealand",
     name: "New Zealand",
-    shortName: "NZ",
+    shortName: "New Zealand",
     flag: "NZ",
     priority: 5,
-    enabled: false,
-    discoveryBudgetWeight: 0.0,
-    cities: ["Auckland", "Wellington", "Christchurch"],
+    enabled: true,
+    discoveryBudgetWeight: 0.05,
+    cities: ["Auckland", "Wellington", "Christchurch", "Hamilton", "Tauranga"],
   },
   IE: {
     code: "IE",
@@ -119,9 +119,31 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     shortName: "Ireland",
     flag: "IE",
     priority: 6,
-    enabled: false,
-    discoveryBudgetWeight: 0.0,
-    cities: ["Dublin", "Cork", "Galway", "Limerick"],
+    enabled: true,
+    discoveryBudgetWeight: 0.05,
+    cities: ["Dublin", "Cork", "Galway", "Limerick", "Waterford"],
+  },
+  SG: {
+    code: "SG",
+    slug: "singapore",
+    name: "Singapore",
+    shortName: "Singapore",
+    flag: "SG",
+    priority: 7,
+    enabled: true,
+    discoveryBudgetWeight: 0.10,
+    cities: ["Singapore", "Jurong", "Changi", "Tampines", "Woodlands"],
+  },
+  ZA: {
+    code: "ZA",
+    slug: "south-africa",
+    name: "South Africa",
+    shortName: "South Africa",
+    flag: "ZA",
+    priority: 8,
+    enabled: true,
+    discoveryBudgetWeight: 0.05,
+    cities: ["Johannesburg", "Cape Town", "Durban", "Pretoria", "Sandton", "Centurion"],
   },
 };
 

@@ -182,13 +182,17 @@ describe("Job Scam and Fraud Risk Engine with Negation Context", () => {
 });
 
 describe("Target Country Configuration", () => {
-  it("has US, GB, CA, AU enabled with proper discovery weights summing to 100%", () => {
-    expect(ENABLED_COUNTRIES.length).toBe(4);
+  it("has 8 English-speaking countries enabled with proper discovery weights summing to 100%", () => {
+    expect(ENABLED_COUNTRIES.length).toBe(8);
     const codes = ENABLED_COUNTRIES.map((c) => c.code);
     expect(codes).toContain("US");
     expect(codes).toContain("GB");
     expect(codes).toContain("CA");
     expect(codes).toContain("AU");
+    expect(codes).toContain("NZ");
+    expect(codes).toContain("IE");
+    expect(codes).toContain("SG");
+    expect(codes).toContain("ZA");
 
     const totalWeight = ENABLED_COUNTRIES.reduce((sum, c) => sum + c.discoveryBudgetWeight, 0);
     expect(totalWeight).toBeCloseTo(1.0);
@@ -199,6 +203,8 @@ describe("Target Country Configuration", () => {
     expect(getCountryByCode("gb")?.name).toBe("United Kingdom");
     expect(getCountryBySlug("canada")?.code).toBe("CA");
     expect(getCountryBySlug("australia")?.code).toBe("AU");
+    expect(getCountryBySlug("singapore")?.code).toBe("SG");
+    expect(getCountryBySlug("south-africa")?.code).toBe("ZA");
     expect(getCountryByCode(null)).toBeUndefined();
   });
 });

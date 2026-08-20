@@ -34,7 +34,7 @@ export interface AutoPublishResult {
   evaluations: AutoPublishEvaluation[];
 }
 
-const TIER_1_COUNTRIES = new Set(["US", "GB", "CA", "AU"]);
+const TIER_1_COUNTRIES = new Set(["US", "GB", "CA", "AU", "NZ", "IE", "SG", "ZA"]);
 
 /**
  * Strict Geographic regex patterns.
@@ -45,6 +45,10 @@ export const COUNTRY_GEO_PATTERNS: Record<string, RegExp> = {
   GB: /\b(united\s+kingdom|u\.k\.|uk|great\s+britain|britain|british|england|scotland|wales|northern\s+ireland|london|manchester|birmingham|leeds|glasgow|edinburgh|bristol)\b/i,
   CA: /\b(canada|canadian|ontario|quebec|british\s+columbia|alberta|toronto|vancouver|montreal|ottawa|calgary|edmonton|waterloo)\b/i,
   AU: /\b(australia|australian|nsw|victoria|queensland|sydney|melbourne|brisbane|perth|adelaide|canberra)\b/i,
+  NZ: /\b(new\s+zealand|auckland|wellington|christchurch|hamilton|tauranga|kiwi)\b/i,
+  IE: /\b(ireland|irish|republic\s+of\s+ireland|dublin|cork|galway|limerick|waterford)\b/i,
+  SG: /\b(singapore|singaporean|jurong|changi|tampines|woodlands)\b/i,
+  ZA: /\b(south\s+africa|south\s+african|johannesburg|joburg|cape\s+town|durban|pretoria|sandton|centurion)\b/i,
 };
 
 const VALID_DESCRIPTION_SOURCES = new Set<string>([

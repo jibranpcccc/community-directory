@@ -1,23 +1,25 @@
-﻿import { describe, it, expect } from "vitest";
+import { describe, it, expect } from "vitest";
 import { ENABLED_COUNTRIES, TARGET_COUNTRIES } from "../src/config/countries";
 import { platforms } from "../src/config/platforms";
 
 describe("Public Route Scope Validation", () => {
   describe("Country Routes Scope", () => {
-    it("only enables US, GB, CA, and AU for Phase 1 public routing", () => {
+    it("enables all 8 major English-speaking countries for public routing", () => {
       const enabledCountryCodes = ENABLED_COUNTRIES.map((c) => c.code);
-      expect(enabledCountryCodes).toEqual(["US", "GB", "CA", "AU"]);
-      expect(ENABLED_COUNTRIES).toHaveLength(4);
+      expect(enabledCountryCodes).toEqual(["US", "GB", "CA", "AU", "NZ", "IE", "SG", "ZA"]);
+      expect(ENABLED_COUNTRIES).toHaveLength(8);
     });
 
-    it("ensures disabled future countries (NZ, IE) are excluded from ENABLED_COUNTRIES", () => {
+    it("ensures all 8 English-speaking countries have valid slugs and flags", () => {
       const enabledSlugs = ENABLED_COUNTRIES.map((c) => c.slug);
-      expect(enabledSlugs).not.toContain("new-zealand");
-      expect(enabledSlugs).not.toContain("ireland");
-
-      // Verify they still exist in TARGET_COUNTRIES as disabled
-      expect(TARGET_COUNTRIES.NZ.enabled).toBe(false);
-      expect(TARGET_COUNTRIES.IE.enabled).toBe(false);
+      expect(enabledSlugs).toContain("usa");
+      expect(enabledSlugs).toContain("uk");
+      expect(enabledSlugs).toContain("canada");
+      expect(enabledSlugs).toContain("australia");
+      expect(enabledSlugs).toContain("new-zealand");
+      expect(enabledSlugs).toContain("ireland");
+      expect(enabledSlugs).toContain("singapore");
+      expect(enabledSlugs).toContain("south-africa");
     });
   });
 

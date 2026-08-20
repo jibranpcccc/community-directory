@@ -59,9 +59,9 @@ Platform focus: ${context?.platform || "telegram, discord, or whatsapp"}.
 Topic: ${context?.category || "general"}.
 
 STRICT INSTRUCTIONS:
-- Identify and list ONLY real, verifiable public invite URLs found in search results (e.g. https://t.me/..., https://discord.gg/..., https://chat.whatsapp.com/...).
-- Do NOT generate synthetic, invented, or demo links.
-- Format each link on a separate line with only its community name next to it.`;
+- Identify and list ALL real, public invite URLs found in search results, directories, aggregator lists, and websites (e.g. https://t.me/..., https://discord.gg/..., https://chat.whatsapp.com/...).
+- Do NOT generate synthetic or invented links.
+- Format each found link on a separate line with only its community name next to it.`;
 
         const result = await model.generateContent(prompt);
         const responseText = result.response.text();
