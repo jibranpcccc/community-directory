@@ -1,15 +1,15 @@
-export const discoveryConfig = {
-  // Daily discovery targets (3–10 high quality Tier-1 communities; 0 is acceptable)
-  minTargetNewPerDay: 3,
-  maxTargetNewPerDay: 10,
-  maxQueriesPerRun: parseInt(process.env.DISCOVERY_MAX_QUERIES || "30", 10),
+﻿export const discoveryConfig = {
+  // Daily discovery targets (10–30 high quality Tier-1 communities)
+  minTargetNewPerDay: 10,
+  maxTargetNewPerDay: 30,
+  maxQueriesPerRun: parseInt(process.env.DISCOVERY_MAX_QUERIES || "60", 10),
   maxCandidatesPerQuery: 10,
-  maxNewCandidatesPerRun: parseInt(process.env.DISCOVERY_MAX_CANDIDATES || "10", 10),
+  maxNewCandidatesPerRun: parseInt(process.env.DISCOVERY_MAX_CANDIDATES || "30", 10),
 
   // Rate limiting delay between search queries (ms)
   requestDelayMs: parseInt(process.env.DISCOVERY_REQUEST_DELAY_MS || "1500", 10),
 
-  // Publication safety policy (fail-closed: requires explicit AUTO_PUBLISH_ENABLED='true')
+  // Publication safety policy (fail-closed: requires explicit AUTO_PUBLISH_ENABLED="true")
   autoPublish: process.env.AUTO_PUBLISH_ENABLED === "true",
 
   // Gemini model settings

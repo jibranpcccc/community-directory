@@ -1,4 +1,4 @@
-name: Discover & Auto-Publish Communities
+﻿name: Discover & Auto-Publish Communities
 
 on:
   schedule:
@@ -38,8 +38,10 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
           GEMINI_SEARCH_ENABLED: ${{ vars.GEMINI_SEARCH_ENABLED || 'true' }}
+          DISCOVERY_MAX_QUERIES: '60'
+          DISCOVERY_MAX_CANDIDATES: '30'
           AUTO_PUBLISH_ENABLED: 'true'
-          AUTO_PUBLISH_MAX_PER_RUN: '5'
+          AUTO_PUBLISH_MAX_PER_RUN: '30'
           AUTO_PUBLISH_MAX_VALIDATION_AGE_HOURS: '24'
           AUTO_PUBLISH_REQUIRE_TARGET_COUNTRY: 'true'
           AUTO_PUBLISH_REQUIRE_STRONG_JOB_INTENT: 'true'
@@ -52,7 +54,7 @@ jobs:
       - name: Run automated publication engine
         env:
           AUTO_PUBLISH_ENABLED: 'true'
-          AUTO_PUBLISH_MAX_PER_RUN: '5'
+          AUTO_PUBLISH_MAX_PER_RUN: '30'
         run: npm run auto-publish
 
       - name: Revalidate published communities
@@ -90,4 +92,3 @@ jobs:
           else
             echo "Netlify credentials not set. Skipping direct API deploy."
           fi
-

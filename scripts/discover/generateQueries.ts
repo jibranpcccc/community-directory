@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 import * as path from "path";
 import { type CountryCode, ENABLED_COUNTRIES } from "../../src/config/countries";
 import { discoveryConfig } from "../../src/config/discovery";
@@ -53,6 +53,9 @@ const TEMPLATES: QueryTemplate[] = [
       `"tech hiring" Discord ${short}`,
       `"software engineer jobs" ${short}`,
       `"developer jobs" ${short} "job alerts"`,
+      `"frontend" OR "backend" tech jobs ${country} Discord`,
+      `"data science jobs" OR "machine learning jobs" ${short} Telegram`,
+      `"devops hiring" OR "cloud engineer jobs" ${country}`,
     ],
   },
   {
@@ -65,6 +68,8 @@ const TEMPLATES: QueryTemplate[] = [
       `"daily job postings" Discord ${country}`,
       `"remote hiring" ${short} "job alerts"`,
       `"work from home jobs" ${short}`,
+      `"remote tech jobs" Discord ${country}`,
+      `"remote developer careers" Telegram ${short}`,
     ],
   },
   {
@@ -78,6 +83,8 @@ const TEMPLATES: QueryTemplate[] = [
       `"${country} internships" Discord`,
       `"${short} graduate jobs" Telegram`,
       `"entry level tech jobs" ${short}`,
+      `"summer internship 2026" ${country} Discord`,
+      `"early career jobs" ${short} Telegram`,
     ],
   },
   {
@@ -89,6 +96,8 @@ const TEMPLATES: QueryTemplate[] = [
       `"visa sponsorship jobs" ${country}`,
       `"skilled worker visa jobs" ${short}`,
       `"relocation tech jobs" ${country}`,
+      `"h1b visa jobs" ${country} Telegram`,
+      `"sponsor visa hiring" ${short} Discord`,
     ],
   },
   {
@@ -100,6 +109,8 @@ const TEMPLATES: QueryTemplate[] = [
       `"nursing job alerts" ${short}`,
       `"healthcare vacancies" ${country}`,
       `"hospital nursing jobs" ${short}`,
+      `"travel nurse jobs" ${country} WhatsApp`,
+      `"medical doctor staffing" ${short}`,
     ],
   },
   // TIER B (10% of category allocation combined)
@@ -111,6 +122,7 @@ const TEMPLATES: QueryTemplate[] = [
     getKeywords: (country, short) => [
       `"finance job alerts" ${short}`,
       `"accounting careers" ${country}`,
+      `"fintech hiring" ${country} Discord`,
     ],
   },
   {
@@ -121,6 +133,7 @@ const TEMPLATES: QueryTemplate[] = [
     getKeywords: (country, short) => [
       `"engineering job postings" ${short}`,
       `"mechanical engineer vacancies" ${country}`,
+      `"electrical engineer jobs" ${short}`,
     ],
   },
   {
@@ -131,6 +144,7 @@ const TEMPLATES: QueryTemplate[] = [
     getKeywords: (country, short) => [
       `"sales marketing job alerts" ${short}`,
       `"B2B sales vacancies" ${country}`,
+      `"growth marketing jobs" ${short}`,
     ],
   },
   {
@@ -141,6 +155,7 @@ const TEMPLATES: QueryTemplate[] = [
     getKeywords: (country, short) => [
       `"government job alerts" ${short}`,
       `"civil service vacancies" ${country}`,
+      `"public sector hiring" ${short}`,
     ],
   },
 ];
@@ -239,8 +254,8 @@ export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQu
         });
       }
 
-      // Add top 2 cities per country for high-converting metro coverage
-      const topCities = c.cities.slice(0, 2);
+      // Add top 3 cities per country for high-converting metro coverage
+      const topCities = c.cities.slice(0, 3);
       for (const city of topCities) {
         poolByCountryAndPlatform[`${c.code}:telegram`].push({
           query: `site:t.me "${city} tech jobs" OR "${city} job alerts"`,

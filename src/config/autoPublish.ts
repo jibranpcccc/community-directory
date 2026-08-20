@@ -1,4 +1,4 @@
-export interface AutoPublishConfig {
+﻿export interface AutoPublishConfig {
   enabled: boolean;
   dryRun: boolean;
   maxPerRun: number;
@@ -26,7 +26,7 @@ export interface AutoPublishConfig {
 export const autoPublishConfig: AutoPublishConfig = {
   enabled: process.env.AUTO_PUBLISH_ENABLED === "true",
   dryRun: process.env.AUTO_PUBLISH_DRY_RUN === "true",
-  maxPerRun: parseInt(process.env.AUTO_PUBLISH_MAX_PER_RUN || "5", 10),
+  maxPerRun: parseInt(process.env.AUTO_PUBLISH_MAX_PER_RUN || "30", 10),
   maxValidationAgeHours: parseInt(process.env.AUTO_PUBLISH_MAX_VALIDATION_AGE_HOURS || "24", 10),
   requireTargetCountry: true,
   requireStrongJobIntent: true,
