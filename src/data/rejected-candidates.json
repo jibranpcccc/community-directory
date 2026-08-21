@@ -742,34 +742,34 @@
   {
     "url": "https://t.me/remotework",
     "platform": "telegram",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-21T09:30:52.154Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/design_work",
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-21T09:30:52.154Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/itfreelance",
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-21T09:30:52.154Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/writing_jobs",
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-08-21T09:30:52.154Z",
+    "timesSeen": 2,
     "title": "𝙒𝙍𝙄𝙏𝙄𝙉𝙂 𝙅𝙊𝘽"
   },
   {
@@ -777,8 +777,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-21T09:30:52.154Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/freelancehunt_jobs",
@@ -807,18 +807,18 @@
   {
     "url": "https://t.me/job4you",
     "platform": "telegram",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-21T09:30:52.154Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/prog_jobs",
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-21T09:30:52.154Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/marketing_vacancies",
@@ -1111,6 +1111,14 @@
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-21T04:42:49.346Z",
     "lastSeenAt": "2026-08-21T04:42:49.346Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/Remotely",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-08-21T09:30:52.154Z",
+    "lastSeenAt": "2026-08-21T09:30:52.154Z",
     "timesSeen": 1
   }
 ]
