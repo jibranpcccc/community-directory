@@ -1,12 +1,12 @@
 export const siteConfig = {
   name: "JobAlertHub",
   shortName: "JobAlerts",
-  tagline: "Active Job Alert Groups for Global Remote & 14 Employment Markets",
+  tagline: "Active Job Alert Groups Across 14 Target Markets (13 Countries + Worldwide/Remote)",
   headline: "Find Active Job Alert Groups",
   subheadline:
-    "Discover public WhatsApp, Telegram, and Discord communities sharing job openings, hiring alerts, career opportunities, and remote work across Worldwide Remote and 14 employment markets.",
+    "Discover public WhatsApp, Telegram, and Discord communities sharing job openings, hiring alerts, career opportunities, and remote work across 14 target markets (13 countries + Worldwide/Remote).",
   description:
-    "JobAlertHub discovers and monitors public job-alert communities across Discord, Telegram and WhatsApp, covering worldwide remote opportunities and selected employment markets including the United States, United Kingdom, Canada, Australia, India, Germany, the Netherlands, Singapore, the United Arab Emirates, the Philippines, New Zealand, Ireland and South Africa.",
+    "JobAlertHub discovers and monitors public job-alert communities across Discord, Telegram and WhatsApp, covering 14 target markets (13 countries and Worldwide/Remote) including the United States, United Kingdom, Canada, Australia, India, Germany, the Netherlands, Singapore, the United Arab Emirates, the Philippines, New Zealand, Ireland and South Africa.",
   url: process.env.PUBLIC_SITE_URL || "https://communityhub-directory.netlify.app",
   defaultLocale: "en",
   showAdPlaceholders: process.env.SHOW_AD_PLACEHOLDERS === "true",
@@ -24,7 +24,7 @@ export const siteConfig = {
   },
   nav: [
     { label: "All Job Groups", href: "/jobs/" },
-    { label: "Worldwide Remote", href: "/country/global/" },
+    { label: "Worldwide / Remote", href: "/country/global/" },
     { label: "Remote Jobs", href: "/job-type/remote-jobs/" },
     { label: "Tech Jobs", href: "/category/tech-jobs/" },
     { label: "How We Verify", href: "/how-we-verify/" },

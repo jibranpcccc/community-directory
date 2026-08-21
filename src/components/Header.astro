@@ -25,18 +25,18 @@ import { ENABLED_COUNTRIES } from "../config/countries";
     <!-- Desktop Navigation (lg:flex to avoid tablet 768px horizontal collisions) -->
     <nav class="hidden lg:flex items-center gap-1.5 xl:gap-2 text-xs font-black text-black" aria-label="Main Navigation">
       <a href="/jobs/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FEF08A] hover:border-2 hover:border-black transition-all">All Jobs</a>
-      <a href="/country/global/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#A7F3D0] hover:border-2 hover:border-black transition-all">🌐 Worldwide</a>
+      <a href="/country/global/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#A7F3D0] hover:border-2 hover:border-black transition-all">Worldwide/Remote</a>
       <a href="/job-type/remote-jobs/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#BAE6FD] hover:border-2 hover:border-black transition-all">Remote</a>
       <a href="/category/tech-jobs/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FEF9C3] hover:border-2 hover:border-black transition-all">Tech</a>
 
-      <!-- Countries Dropdown -->
+      <!-- Markets Dropdown -->
       <div class="relative group">
         <button
           type="button"
           class="inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 hover:bg-[#FED7AA] hover:border-2 hover:border-black transition-all"
           aria-expanded="false"
         >
-          <span>Countries (14)</span>
+          <span>Markets (14)</span>
           <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
           </svg>
@@ -49,7 +49,7 @@ import { ENABLED_COUNTRIES } from "../config/countries";
                 href={`/country/${c.slug}/`}
                 class="flex items-center gap-1.5 p-1.5 rounded-lg hover:bg-[#FAF8F5] font-bold text-slate-800 hover:text-black"
               >
-                <span>{c.flag}</span>
+                <span class="px-1 py-0.5 text-[9px] font-black bg-slate-100 border border-black rounded shadow-[0.5px_0.5px_0px_0px_#000]">{c.code}</span>
                 <span class="truncate">{c.shortName}</span>
               </a>
             ))}
@@ -97,7 +97,7 @@ import { ENABLED_COUNTRIES } from "../config/countries";
         All Job Groups
       </a>
       <a href="/country/global/" class="rounded-xl border-2 border-black bg-[#A7F3D0] px-3 py-2 text-xs font-black text-black shadow-[2px_2px_0px_0px_#000]">
-        🌐 Worldwide
+        Worldwide/Remote
       </a>
       <a href="/job-type/remote-jobs/" class="rounded-xl border-2 border-black bg-[#BAE6FD] px-3 py-2 text-xs font-black text-black shadow-[2px_2px_0px_0px_#000]">
         Remote Jobs
@@ -113,10 +113,10 @@ import { ENABLED_COUNTRIES } from "../config/countries";
       </a>
     </div>
 
-    <!-- Country Markets 2-Column Grid -->
+    <!-- Target Markets 2-Column Grid -->
     <div class="space-y-2 pt-2 border-t border-black/10">
       <div class="text-[11px] font-black uppercase tracking-wider text-black">
-        Browse by Country (14 Markets)
+        Browse 14 Target Markets (13 Countries + Worldwide/Remote)
       </div>
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
         {ENABLED_COUNTRIES.map((c) => (
@@ -124,7 +124,7 @@ import { ENABLED_COUNTRIES } from "../config/countries";
             href={`/country/${c.slug}/`}
             class="flex items-center gap-1.5 rounded-lg border border-black bg-white p-2 text-xs font-bold text-black shadow-[1px_1px_0px_0px_#000] hover:bg-[#FEF08A]"
           >
-            <span>{c.flag}</span>
+            <span class="px-1 py-0.5 text-[9px] font-black bg-slate-100 border border-black rounded">{c.code}</span>
             <span class="truncate">{c.name}</span>
           </a>
         ))}

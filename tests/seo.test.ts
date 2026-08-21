@@ -161,6 +161,10 @@ describe("SEO Engine & JSON-LD Generators", () => {
     it("rejects safety flags and scam language", () => {
       expect(isCommunityIndexWorthy({ ...baseCommunity, safetyFlags: ["scam-risk"] })).toBe(false);
     });
+
+    it("rejects unverified tier B communities lacking source-confirmed domain evidence", () => {
+      expect(isCommunityIndexWorthy({ ...baseCommunity, verificationStatus: "unverified" })).toBe(false);
+    });
   });
 
   describe("SEO Metadata Helper", () => {

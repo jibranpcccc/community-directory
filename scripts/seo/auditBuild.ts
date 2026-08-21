@@ -107,6 +107,10 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")) {
       characterCorruptionIssues.push(`Unicode replacement character (\\uFFFD) found in visible text`);
       pageErrors.push(`Unicode replacement character (\\uFFFD) found in visible rendered text.`);
     }
+    if (/(\u00C3[\u0080-\u00BF]|\u00C2[\u0080-\u00BF]|\u00E2\u0080[\u0090-\u00BF]|\uFFFD)/.test(cleanVisibleText)) {
+      characterCorruptionIssues.push(`Mojibake corruption found in visible text`);
+      pageErrors.push(`Mojibake corruption detected in visible rendered text.`);
+    }
 
     // 2. Title Check (Section 1)
     const titleMatch = content.match(/<title>([^<]*)<\/title>/i);

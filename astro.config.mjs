@@ -36,10 +36,8 @@ function isCommunityIndexWorthy(item) {
       return false;
     }
   }
-  if (typeof item.memberCount === 'number' && item.memberCount > 0) {
-    if (!item.memberCountSource) return false;
-  }
-  if (!item.description && item.verificationStatus === 'unverified' && !item.memberCount) {
+  const isHighTrust = ['source-confirmed', 'owner-confirmed', 'manually-reviewed'].includes(item.verificationStatus);
+  if (!isHighTrust) {
     return false;
   }
   return true;

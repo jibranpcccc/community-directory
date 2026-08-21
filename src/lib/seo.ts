@@ -25,10 +25,31 @@ export interface SeoProps {
   pageType?: PageType;
 }
 
+const APPROVED_MARKETS = [
+  "GLOBAL",
+  "US",
+  "GB",
+  "CA",
+  "AU",
+  "IN",
+  "DE",
+  "NL",
+  "SG",
+  "AE",
+  "PH",
+  "NZ",
+  "IE",
+  "ZA",
+];
+
+const INACTIVE_TITLE_REGEX = /\b(inactive|shut\s+down|closed\s+down|deleted\s+server|server\s+closed|no\s+longer\s+active)\b/i;
+const JOB_INTENT_REGEX = /\b(job|jobs|hiring|career|careers|intern|internship|internships|graduate|employment|recruitment|vacancy|vacancies|work|developer|engineer|nurse|nursing|accounting|sales)\b/i;
+const SCAM_REGEX = /\b(guaranteed\s+profit|100%\s+win|double\s+your\s+money|task\s+rating|usdt\s+deposit|pay\s+upfront|registration\s+fee)\b/i;
+
 /**
  * Strict 15-Point SEO Indexability Gate for Community Detail Pages.
  * A community detail page may be index, follow ONLY when all 15 conditions pass.
- * If useful for visitors but too thin for Google: PUBLIC = YES, BROWSEABLE = YES, but noindex, follow.
+ * If useful for visitors but unverified/thin: PUBLIC = YES, BROWSEABLE = YES, but noindex, follow.
  */
 export function isCommunityIndexWorthy(community: Community): boolean {
   // 1. Published must be true
@@ -47,24 +68,8 @@ export function isCommunityIndexWorthy(community: Community): boolean {
   // 4. Strong jobs/career/hiring intent
   if (community.vertical !== "jobs") return false;
 
-  // 5. Market is one of the 14 approved target markets or GLOBAL
-  const approvedMarkets = [
-    "GLOBAL",
-    "US",
-    "GB",
-    "CA",
-    "AU",
-    "IN",
-    "DE",
-    "NL",
-    "SG",
-    "AE",
-    "PH",
-    "NZ",
-    "IE",
-    "ZA",
-  ];
-  if (!community.countryCode || !approvedMarkets.includes(community.countryCode)) {
+  // 5. Market is one of the 14 approved target markets
+  if (!community.countryCode || !APPROVED_MARKETS.includes(community.countryCode)) {
     return false;
   }
 
@@ -77,14 +82,28 @@ export function isCommunityIndexWorthy(community: Community): boolean {
 
   // 8. No scam/fraud violation
   if (community.safetyFlags && community.safetyFlags.length > 0) return false;
+  const fullText = `${community.title} ${community.description || ""} ${(community.tags || []).join(" ")}`;
+  if (SCAM_REGEX.test(fullText)) return false;
 
   // 9. Valid canonical slug
   if (!community.slug || !/^[a-z0-9-]+$/.test(community.slug)) return false;
 
-  // 10. Useful factual unique information (title length >= 3)
+  // 10. Title validity (length >= 3 and active)
   if (!community.title || community.title.trim().length < 3) return false;
+  if (INACTIVE_TITLE_REGEX.test(community.title)) return false;
 
-  // 11. Source-confirmed claims backed by actual sources
+  // 11. Strong employment intent in title or description
+  if (!JOB_INTENT_REGEX.test(fullText)) return false;
+
+  // 12. Provenance for description
+  if (community.description && community.description.trim().length > 0) {
+    const validDescSources = ["platform", "confirmed-source", "platform-title", "platform-description", "independent-source"];
+    if (community.descriptionSource && !validDescSources.includes(community.descriptionSource)) {
+      return false;
+    }
+  }
+
+  // 13. Source-confirmed claims backed by actual verified domain sources
   if (community.verificationStatus === "source-confirmed") {
     if (
       !community.sourceVerification ||
@@ -96,17 +115,18 @@ export function isCommunityIndexWorthy(community: Community): boolean {
     }
   }
 
-  // 12. Member count provenance when displayed
+  // 14. Member count provenance when displayed
   if (typeof community.memberCount === "number" && community.memberCount > 0) {
     if (!community.memberCountSource) return false;
   }
 
-  // 13. Substantial unique information (must not be an empty thin placeholder)
-  if (
-    !community.description &&
-    community.verificationStatus === "unverified" &&
-    !community.memberCount
-  ) {
+  // 15. Substantive unique information & trust tier
+  // Tier B unverified listings lacking confirmed independent source verification
+  // are retained as public for directory users, but kept noindex, follow to protect SEO.
+  const isHighTrust = ["source-confirmed", "owner-confirmed", "manually-reviewed"].includes(
+    community.verificationStatus
+  );
+  if (!isHighTrust) {
     return false;
   }
 

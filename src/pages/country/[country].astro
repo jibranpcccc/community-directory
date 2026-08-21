@@ -29,19 +29,19 @@ const isIndexable = getIndexability("country", seoEligible.length);
 const isGlobalMarket = countryConfig.code === "GLOBAL";
 
 const pageTitle = isGlobalMarket
-  ? `Global Remote Job Alert Groups | ${siteConfig.name}`
+  ? `Worldwide & International Job Alert Groups | ${siteConfig.name}`
   : `Job Alert Groups in ${countryConfig.name} | ${siteConfig.name}`;
 
 const heading = isGlobalMarket
-  ? "Global & Worldwide Remote Job Alert Communities"
+  ? "Worldwide & International Job Alert Groups"
   : `Job Alert Groups in ${countryConfig.name}`;
 
 const subheading = isGlobalMarket
-  ? "Discover public WhatsApp, Telegram, and Discord communities sharing worldwide remote and work-from-anywhere job opportunities."
+  ? "Discover public WhatsApp, Telegram, and Discord communities sharing cross-border, international, and multinational employment opportunities."
   : `Discover active public career communities, Discord servers, and Telegram channels targeting ${countryConfig.name}.`;
 
 const pageDescription = isGlobalMarket
-  ? "Discover active public Telegram channels, Discord servers, and WhatsApp groups for worldwide remote jobs and global hiring."
+  ? "Discover active public Telegram channels, Discord servers, and WhatsApp groups for worldwide and international employment alerts."
   : `Discover active public Telegram channels, Discord servers, and WhatsApp groups for jobs and hiring in ${countryConfig.name}.`;
 
 const collectionSchema = generateCollectionPageSchema(
