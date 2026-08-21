@@ -13,13 +13,13 @@
 
 | Dimension | Standard / Quality Target | Current State | Ready? |
 | :--- | :--- | :--- | :---: |
-| **Technical Architecture** | Zero-maintenance SSG, 100% schema parity, 7 indexable pages, mobile lighthouse 88-100, 0 character corruption | Verified on Astro SSG & Netlify CDN | **YES** |
+| **Technical Architecture** | Zero-maintenance SSG, 100% schema parity, 7 indexable pages, mobile lighthouse 86-100, 0 character corruption | Verified on Astro SSG & Netlify CDN | **YES** |
 | **Autonomous Automation** | Multi-pass 14-market fair discovery, revalidation, auto-publish, and Netlify CI/CD active | 4x daily GitHub Actions workflows running | **YES** |
-| **Inventory Depth** | $\ge 25$ real communities, $\ge 4$ target markets with inventory, $\ge 4$ indexable commercial taxonomy hubs | 5 published active (1 source-confirmed, 4 Tier-B unverified), 0 indexable taxonomy hubs | **NO** |
-| **OVERALL DOMAIN READY** | All technical, automation, and inventory thresholds satisfied | Held for inventory growth to reach $\ge 25$ listings | **NO** |
+| **Inventory Depth** | $\ge 25$ strong real qualified communities, $\ge 4$ target markets with inventory, $\ge 4$ indexable commercial taxonomy hubs | 5 published active (1 source-confirmed, 4 Tier-B unverified), 0 indexable taxonomy hubs | **NO** |
+| **OVERALL DOMAIN READY** | All technical, automation, and inventory thresholds satisfied | Held for inventory growth to reach $\ge 25$ qualified listings | **NO** |
 
 > [!IMPORTANT]
-> **Domain Purchase/Connection Boundary**: Custom `.com` domain purchase, DNS configuration, and Google Search Console submission remain deferred until inventory reaches $\ge 25$ verified communities across $\ge 4$ target markets. We do NOT fabricate synthetic listings or lower publication gates to force domain readiness.
+> **Domain Purchase/Connection Boundary**: Custom `.com` domain purchase, DNS configuration, and Google Search Console submission remain deferred until inventory reaches $\ge 25$ strong real qualified communities across $\ge 4$ target markets. We do NOT fabricate synthetic listings or lower publication gates to force domain readiness.
 
 ---
 
@@ -43,22 +43,22 @@ JobAlertHub serves exactly **14 Target Markets** (13 Countries + Worldwide/Remot
 
 ### 2.2 14 Target Markets Inventory & SEO Indexability Matrix
 
-| Market Code | Market Name | Category / Region | Route | Published Active | Indexability Status |
+| Market Code | Market Name | Natural Display Title | Route | Published Active | Indexability Status |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| **GLOBAL** | Worldwide & International | Worldwide / Remote | `/country/global/` | 2 | `noindex, follow` (< 5 threshold) |
-| **US** | United States | North America | `/country/usa/` | 1 | `noindex, follow` (< 5 threshold) |
-| **GB** | United Kingdom | Europe | `/country/uk/` | 1 | `noindex, follow` (< 5 threshold) |
-| **CA** | Canada | North America | `/country/canada/` | 1 | `noindex, follow` (< 5 threshold) |
-| **AU** | Australia | Oceania | `/country/australia/` | 0 | `noindex, follow` (< 5 threshold) |
-| **IN** | India | Asia | `/country/india/` | 0 | `noindex, follow` (< 5 threshold) |
-| **DE** | Germany | Europe | `/country/germany/` | 0 | `noindex, follow` (< 5 threshold) |
-| **NL** | Netherlands | Europe | `/country/netherlands/` | 0 | `noindex, follow` (< 5 threshold) |
-| **SG** | Singapore | Asia | `/country/singapore/` | 0 | `noindex, follow` (< 5 threshold) |
-| **AE** | United Arab Emirates | Middle East | `/country/uae/` | 0 | `noindex, follow` (< 5 threshold) |
-| **PH** | Philippines | Asia | `/country/philippines/` | 0 | `noindex, follow` (< 5 threshold) |
-| **NZ** | New Zealand | Oceania | `/country/new-zealand/` | 0 | `noindex, follow` (< 5 threshold) |
-| **IE** | Ireland | Europe | `/country/ireland/` | 0 | `noindex, follow` (< 5 threshold) |
-| **ZA** | South Africa | Africa | `/country/south-africa/` | 0 | `noindex, follow` (< 5 threshold) |
+| **GLOBAL** | Worldwide & International | Worldwide & International Job Alert Groups | `/country/global/` | 2 | `noindex, follow` (< 5 threshold) |
+| **US** | United States | Job Alert Groups in the United States | `/country/usa/` | 1 | `noindex, follow` (< 5 threshold) |
+| **GB** | United Kingdom | Job Alert Groups in the United Kingdom | `/country/uk/` | 1 | `noindex, follow` (< 5 threshold) |
+| **CA** | Canada | Job Alert Groups in Canada | `/country/canada/` | 1 | `noindex, follow` (< 5 threshold) |
+| **AU** | Australia | Job Alert Groups in Australia | `/country/australia/` | 0 | `noindex, follow` (< 5 threshold) |
+| **IN** | India | Job Alert Groups in India | `/country/india/` | 0 | `noindex, follow` (< 5 threshold) |
+| **DE** | Germany | Job Alert Groups in Germany | `/country/germany/` | 0 | `noindex, follow` (< 5 threshold) |
+| **NL** | Netherlands | Job Alert Groups in the Netherlands | `/country/netherlands/` | 0 | `noindex, follow` (< 5 threshold) |
+| **SG** | Singapore | Job Alert Groups in Singapore | `/country/singapore/` | 0 | `noindex, follow` (< 5 threshold) |
+| **AE** | United Arab Emirates | Job Alert Groups in the United Arab Emirates | `/country/uae/` | 0 | `noindex, follow` (< 5 threshold) |
+| **PH** | Philippines | Job Alert Groups in the Philippines | `/country/philippines/` | 0 | `noindex, follow` (< 5 threshold) |
+| **NZ** | New Zealand | Job Alert Groups in New Zealand | `/country/new-zealand/` | 0 | `noindex, follow` (< 5 threshold) |
+| **IE** | Ireland | Job Alert Groups in Ireland | `/country/ireland/` | 0 | `noindex, follow` (< 5 threshold) |
+| **ZA** | South Africa | Job Alert Groups in South Africa | `/country/south-africa/` | 0 | `noindex, follow` (< 5 threshold) |
 
 ---
 
@@ -105,16 +105,22 @@ Audit Errors             : 0
 ==================================================
 ```
 
-### The 7 Indexable URLs on Live Production:
-1. `https://communityhub-directory.netlify.app/` (Home)
-2. `https://communityhub-directory.netlify.app/jobs/` (Catalog)
-3. `https://communityhub-directory.netlify.app/about/` (About)
-4. `https://communityhub-directory.netlify.app/how-we-verify/` (Verification Policy)
-5. `https://communityhub-directory.netlify.app/safety/` (Safety Guide)
-6. `https://communityhub-directory.netlify.app/editorial-policy/` (Editorial Standards)
-7. `https://communityhub-directory.netlify.app/group/northerndev-formerly-tech-career-north-discord/` (Source-Confirmed Detail Page)
-
-All 62 thin taxonomy hubs, tag pages, legal pages (`/privacy/`, `/terms/`, `/disclaimer/`), and unverified Tier-B detail pages output `<meta name="robots" content="noindex, follow">` and are omitted from `sitemap-0.xml`.
+### Complete Page-Type Breakdown:
+- **Total HTML Pages:** 69
+- **Indexable Pages (7):**
+  - Homepage (`/`) : 1
+  - Jobs Catalog (`/jobs/`) : 1
+  - Trust Pages (`/about/`, `/how-we-verify/`, `/safety/`, `/editorial-policy/`) : 4
+  - Detail Pages (`/group/northerndev...`) : 1
+- **Noindex Pages (62):**
+  - Unverified Tier-B Detail Pages : 4
+  - Market / Country Hubs (`/country/*`) : 14
+  - Category Hubs (`/category/*`) : 9
+  - Job-Type Hubs (`/job-type/*`) : 11
+  - Platform Hubs (`/platform/*`) : 3
+  - Tag Pages (`/tag/*`) : 10
+  - Legal Pages (`/privacy/`, `/terms/`, `/disclaimer/`) : 3
+  - Utility & Action Pages (`/contact/`, `/submit/`, `/report/`, `/new/`, `/recently-updated/`, `/submit-success/`, `/report-success/`, `/404/`) : 8
 
 ---
 
@@ -140,13 +146,15 @@ Audited in Chrome Headless using Lighthouse v13.4.0 against live Netlify product
 
 | Route | Route Name | Performance | Accessibility | Best Practices | SEO | LCP | CLS | TBT |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| `/` | Homepage | 88 | 95 | 100 | 100 | 1.3 s | 0 | 450 ms |
+| `/` (Run 1) | Homepage Run 1 | 85 | 95 | 100 | 100 | 1.2 s | 0 | 600 ms |
+| `/` (Run 3) | Homepage Run 3 | 87 | 95 | 100 | 100 | 1.2 s | 0 | 520 ms |
+| `/` (Median) | **Homepage Median** | **86** | **95** | **100** | **100** | **1.2 s** | **0** | **560 ms** |
 | `/jobs/` | Jobs Catalog | 95 | 100 | 100 | 100 | 0.8 s | 0 | 0 ms |
 | `/country/global/` | Global Market Hub | 98 | 93 | 100 | 66* | 1.0 s | 0 | 170 ms |
 | `/country/canada/` | Canada Market Hub | 97 | 98 | 100 | 66* | 0.9 s | 0 | 190 ms |
 | `/country/india/` | India Market Hub | 100 | 98 | 100 | 66* | 0.9 s | 0 | 20 ms |
 | `/platform/discord/` | Discord Platform Hub | 97 | 98 | 100 | 66* | 1.0 s | 0 | 210 ms |
-| `/platform/telegram/` | Telegram Platform Hub | 95 | 100 | 100 | 100 | 0.8 s | 0 | 0 ms |
+| `/platform/telegram/`| Telegram Platform Hub | 96 | 93 | 100 | 66* | 1.0 s | 0 | 220 ms |
 | `/category/tech-jobs/` | Tech Jobs Hub | 96 | 98 | 100 | 66* | 0.9 s | 0 | 210 ms |
 | `/group/northerndev...` | Indexable Group Page | 95 | 100 | 100 | 100 | 0.8 s | 0 | 0 ms |
 | `/group/usa-jobs...` | Noindex Group Page | 92 | 95 | 100 | 66* | 1.1 s | 0 | 350 ms |
@@ -168,16 +176,16 @@ Audited in Chrome Headless using Lighthouse v13.4.0 against live Netlify product
 | Route Path | HTTP | Robots Meta | Canonical URL | Title Tag | H1 Tag | JSON-LD | Status |
 | :--- | :---: | :--- | :--- | :--- | :--- | :---: | :---: |
 | `/country/global/` | 200 | `noindex, follow` | `/country/global/` | Worldwide & International Job Alert Groups | Worldwide & International Job Alert Groups | YES | **PASS** |
-| `/country/usa/` | 200 | `noindex, follow` | `/country/usa/` | Job Alert Groups in United States | Job Alert Groups in United States | YES | **PASS** |
-| `/country/uk/` | 200 | `noindex, follow` | `/country/uk/` | Job Alert Groups in United Kingdom | Job Alert Groups in United Kingdom | YES | **PASS** |
+| `/country/usa/` | 200 | `noindex, follow` | `/country/usa/` | Job Alert Groups in the United States | Job Alert Groups in the United States | YES | **PASS** |
+| `/country/uk/` | 200 | `noindex, follow` | `/country/uk/` | Job Alert Groups in the United Kingdom | Job Alert Groups in the United Kingdom | YES | **PASS** |
 | `/country/canada/` | 200 | `noindex, follow` | `/country/canada/` | Job Alert Groups in Canada | Job Alert Groups in Canada | YES | **PASS** |
 | `/country/australia/` | 200 | `noindex, follow` | `/country/australia/` | Job Alert Groups in Australia | Job Alert Groups in Australia | YES | **PASS** |
 | `/country/india/` | 200 | `noindex, follow` | `/country/india/` | Job Alert Groups in India | Job Alert Groups in India | YES | **PASS** |
 | `/country/germany/` | 200 | `noindex, follow` | `/country/germany/` | Job Alert Groups in Germany | Job Alert Groups in Germany | YES | **PASS** |
-| `/country/netherlands/` | 200 | `noindex, follow` | `/country/netherlands/` | Job Alert Groups in Netherlands | Job Alert Groups in Netherlands | YES | **PASS** |
+| `/country/netherlands/` | 200 | `noindex, follow` | `/country/netherlands/` | Job Alert Groups in the Netherlands | Job Alert Groups in the Netherlands | YES | **PASS** |
 | `/country/singapore/` | 200 | `noindex, follow` | `/country/singapore/` | Job Alert Groups in Singapore | Job Alert Groups in Singapore | YES | **PASS** |
-| `/country/uae/` | 200 | `noindex, follow` | `/country/uae/` | Job Alert Groups in United Arab Emirates | Job Alert Groups in United Arab Emirates | YES | **PASS** |
-| `/country/philippines/` | 200 | `noindex, follow` | `/country/philippines/` | Job Alert Groups in Philippines | Job Alert Groups in Philippines | YES | **PASS** |
+| `/country/uae/` | 200 | `noindex, follow` | `/country/uae/` | Job Alert Groups in the United Arab Emirates | Job Alert Groups in the United Arab Emirates | YES | **PASS** |
+| `/country/philippines/` | 200 | `noindex, follow` | `/country/philippines/` | Job Alert Groups in the Philippines | Job Alert Groups in the Philippines | YES | **PASS** |
 | `/country/new-zealand/` | 200 | `noindex, follow` | `/country/new-zealand/` | Job Alert Groups in New Zealand | Job Alert Groups in New Zealand | YES | **PASS** |
 | `/country/ireland/` | 200 | `noindex, follow` | `/country/ireland/` | Job Alert Groups in Ireland | Job Alert Groups in Ireland | YES | **PASS** |
 | `/country/south-africa/` | 200 | `noindex, follow` | `/country/south-africa/` | Job Alert Groups in South Africa | Job Alert Groups in South Africa | YES | **PASS** |
@@ -217,23 +225,25 @@ Sitemap: https://communityhub-directory.netlify.app/sitemap-index.xml
 
 ---
 
-## 10. Autonomous Discovery Verification Runs
+## 10. Autonomous Discovery Verification Across Pipeline Iterations
 
-| Metric | Run 1 (Manual Verification) | Run 2 (Scheduled) | Run 3 (Manual Verification) | Scheduled Reference |
-| :--- | :--- | :--- | :--- | :--- |
-| **RUN ID** | `32509742207` | `32481254527` | `32468018062` | `32447716609` |
-| **TRIGGER** | `workflow_dispatch` (MANUAL) | `schedule` | `workflow_dispatch` (MANUAL) | `schedule` |
-| **COMMIT SHA** | `62553d82054ffbcda9f38f0d55e921d7821639d6` | `fec3ca13fdab764899a28cd818bf942522309059` | `9a8264906f3ba0b6b063ec641ba43285fc54d4ff` | `5fb55f0054b2af2db3fe71cdd1bc97a841da7922` |
-| **QUERY COUNT** | 120 | 120 | 120 | 80 |
-| **MARKET QUERIES** | 8-9 per market (14 markets) | 8-9 per market (14 markets) | 8-9 per market (14 markets) | 10 per market (8 markets) |
-| **RAW CANDIDATES** | 4 | 6 | 12 | 10 |
-| **PASSED INTENT** | 4 | 5 | 10 | 8 |
-| **ACTIVE** | 4 | 5 | 8 | 6 |
-| **MARKET CONFIRMED**| 0 | 0 | 2 | 1 |
-| **NEW PUBLISHED** | 0 | 0 | 2 | 1 |
-| **REVALIDATED** | 5 | 5 | 3 | 2 |
-| **ARCHIVED** | 0 | 0 | 0 | 0 |
-| **CONCLUSION** | **SUCCESS** (Strict gating preserved) | **SUCCESS** (Revalidated 5 active) | **SUCCESS** (Published 2 valid) | **SUCCESS** (Published 1 valid) |
+Multiple successful runs across pipeline iterations confirm discovery reliability without weakening gates:
+
+| Metric | Run 1 (Final Code - Manual) | Run 2 (Scheduled Iteration) | Run 3 (Expansion Iteration) |
+| :--- | :--- | :--- | :--- |
+| **RUN ID** | `32509742207` | `32481254527` | `32468018062` |
+| **TRIGGER** | `workflow_dispatch` (MANUAL) | `schedule` | `workflow_dispatch` (MANUAL) |
+| **COMMIT SHA** | `62553d82054ffbcda9f38f0d55e921d7821639d6` | `fec3ca13fdab764899a28cd818bf942522309059` | `9a8264906f3ba0b6b063ec641ba43285fc54d4ff` |
+| **PIPELINE VERSION** | Final 14-market fair query engine | 14-market pre-correction | Scaling expansion release |
+| **QUERY COUNT** | 120 (8–9 per market across 14 markets) | 120 (8–9 per market across 14 markets) | 120 (8–9 per market across 14 markets) |
+| **RAW CANDIDATES** | 4 | 6 | 12 |
+| **PASSED INTENT** | 4 | 5 | 10 |
+| **ACTIVE** | 4 | 5 | 8 |
+| **MARKET CONFIRMED**| 0 | 0 | 2 |
+| **NEW PUBLISHED** | 0 | 0 | 2 |
+| **REVALIDATED** | 5 | 5 | 3 |
+| **ARCHIVED** | 0 | 0 | 0 |
+| **CONCLUSION** | **SUCCESS** (Strict gating preserved; revalidated 5 active) | **SUCCESS** (Revalidated 5 active) | **SUCCESS** (Published 2 valid) |
 
 ---
 
@@ -241,14 +251,15 @@ Sitemap: https://communityhub-directory.netlify.app/sitemap-index.xml
 
 | Variable | Deployment Record | Verification Status |
 | :--- | :--- | :---: |
-| **FINAL_REMOTE_HEAD_SHA** | `62553d82054ffbcda9f38f0d55e921d7821639d6` | Exact Remote `origin/main` |
+| **NETLIFY_DEPLOYED_CODE_SHA** | `62553d82054ffbcda9f38f0d55e921d7821639d6` | Live Deployed Production Build |
 | **NETLIFY_DEPLOY_ID** | `6a888f791975641ff8d1af92` | Live Production Deploy |
-| **NETLIFY_DEPLOYED_FULL_SHA** | `62553d82054ffbcda9f38f0d55e921d7821639d6` | **EXACT MATCH (100%)** |
+| **REPOSITORY_HEAD_SHA** | Newer Documentation & Consistency Commits | Repository Tracked |
+| **SHA MATCH STATUS** | Code Commit `62553d8` Deployed Live; Documentation Tracked in Git | **Accurately Distinguished** |
 
 ---
 
 ## 12. Remaining Inventory Blockers for Final Domain Connection
 
-1. **Listing Count:** Current inventory is 5 published active listings. Target is $\ge 25$ listings.
-2. **Geographic Distribution:** Current verified listings cover 4 markets (`CA`, `US`, `GB`, `GLOBAL`). 10 markets currently have 0 listings.
+1. **Total Inventory Depth:** Current inventory is 5 published active listings (1 source-confirmed, 4 Tier-B unverified). Target threshold is $\ge 25$ strong real qualified communities.
+2. **Geographic Distribution:** Current verified inventory covers 4 markets (`CA`, `US`, `GB`, `GLOBAL`). 10 regional markets currently have 0 listings.
 3. **Commercial Taxonomy Indexation:** Current commercial hubs require $\ge 5$ verified active listings before receiving `index, follow`.

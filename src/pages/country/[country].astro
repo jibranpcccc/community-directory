@@ -28,21 +28,25 @@ const isIndexable = getIndexability("country", seoEligible.length);
 
 const isGlobalMarket = countryConfig.code === "GLOBAL";
 
+const inCountryName = ["US", "GB", "NL", "PH", "AE"].includes(countryConfig.code)
+  ? `the ${countryConfig.name}`
+  : countryConfig.name;
+
 const pageTitle = isGlobalMarket
   ? `Worldwide & International Job Alert Groups | ${siteConfig.name}`
-  : `Job Alert Groups in ${countryConfig.name} | ${siteConfig.name}`;
+  : `Job Alert Groups in ${inCountryName} | ${siteConfig.name}`;
 
 const heading = isGlobalMarket
   ? "Worldwide & International Job Alert Groups"
-  : `Job Alert Groups in ${countryConfig.name}`;
+  : `Job Alert Groups in ${inCountryName}`;
 
 const subheading = isGlobalMarket
   ? "Discover public WhatsApp, Telegram, and Discord communities sharing cross-border, international, and multinational employment opportunities."
-  : `Discover active public career communities, Discord servers, and Telegram channels targeting ${countryConfig.name}.`;
+  : `Discover active public career communities, Discord servers, and Telegram channels targeting ${inCountryName}.`;
 
 const pageDescription = isGlobalMarket
   ? "Discover active public Telegram channels, Discord servers, and WhatsApp groups for worldwide and international employment alerts."
-  : `Discover active public Telegram channels, Discord servers, and WhatsApp groups for jobs and hiring in ${countryConfig.name}.`;
+  : `Discover active public Telegram channels, Discord servers, and WhatsApp groups for jobs and hiring in ${inCountryName}.`;
 
 const collectionSchema = generateCollectionPageSchema(
   heading,
