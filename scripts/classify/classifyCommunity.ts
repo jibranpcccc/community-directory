@@ -66,7 +66,8 @@ export async function classifyJobCommunityWithGemini(candidate: {
         },
       });
 
-      const prompt = `You are a strict data classifier for a Tier-1 Job Alert Directory (US, UK, Canada, Australia).
+      const validCountryCodes = Object.keys(TARGET_COUNTRIES);
+      const prompt = `You are a strict data classifier for a Global & Regional Job Alert Directory (US, UK, Canada, Australia, India, Germany, Netherlands, Singapore, UAE, Philippines, etc. and Worldwide/Remote).
 Analyze the following job community candidate evidence:
 - Platform: ${candidate.platform}
 - Invite URL: ${candidate.inviteUrl}
@@ -76,10 +77,10 @@ Analyze the following job community candidate evidence:
 - Suggested City: ${candidate.suggestedCity || "None"}
 
 Valid Category Slugs: ${categories.map((c) => `"${c.slug}"`).join(", ")}
-Target Country Codes: "US", "GB", "CA", "AU", "NZ", "IE", or null
+Target Country Codes: ${validCountryCodes.map((c) => `"${c}"`).join(", ")}, or null (use "GLOBAL" for worldwide remote jobs)
 
 STRICT ZERO-FABRICATION RULES:
-1. Assign countryCode ONLY if explicit evidence mentions the target country/city. If ambiguous, return null.
+1. Assign countryCode ONLY if explicit evidence mentions the target country/city or global remote work ("GLOBAL"). If ambiguous, return null.
 2. Assign city ONLY if explicit evidence clearly mentions the city name. Otherwise return null.
 3. If no description is in evidence, return null. Never fabricate filler text.
 4. Output strict JSON adhering to schema:
@@ -88,7 +89,7 @@ STRICT ZERO-FABRICATION RULES:
   "category": "one of valid category slugs",
   "subcategory": "subcategory name or null",
   "tags": ["3-5 lowercase alphanumeric tags"],
-  "countryCode": "US" | "GB" | "CA" | "AU" | "NZ" | "IE" | null,
+  "countryCode": "GLOBAL" | "US" | "GB" | "CA" | "AU" | "NZ" | "IE" | "SG" | "ZA" | "DE" | "NL" | "IN" | "AE" | "PH" | null,
   "city": "City name or null",
   "jobTypes": ["remote-jobs" | "full-time-jobs" | "internships" | "graduate-jobs" | "entry-level-jobs" | "contract-jobs" | "freelance-jobs" | "visa-sponsorship-jobs" | "government-jobs"],
   "industries": ["technology" | "software-engineering" | "ai-machine-learning" | "cybersecurity" | "data-analytics" | "healthcare-medical" | "nursing" | "finance-banking" | "accounting" | "marketing-sales" | "engineering-construction" | "education-teaching"],
@@ -111,7 +112,7 @@ STRICT ZERO-FABRICATION RULES:
       let finalCountryCode: CountryCode | null = null;
       if (typeof parsed.countryCode === "string") {
         const codeUpper = parsed.countryCode.toUpperCase() as CountryCode;
-        if (["US", "GB", "CA", "AU", "NZ", "IE"].includes(codeUpper)) {
+        if (codeUpper in TARGET_COUNTRIES) {
           finalCountryCode = codeUpper;
         }
       }
@@ -121,6 +122,7 @@ STRICT ZERO-FABRICATION RULES:
         if (cConfig) {
           const lowerEvidence = combinedText.toLowerCase();
           const hasCountryEvidence =
+            candidate.suggestedCountryCode === "GLOBAL" ||
             lowerEvidence.includes(cConfig.name.toLowerCase()) ||
             lowerEvidence.includes(cConfig.shortName.toLowerCase()) ||
             cConfig.cities.some((city) => lowerEvidence.includes(city.toLowerCase()));
@@ -225,15 +227,19 @@ export function fallbackHeuristicJobClassification(candidate: {
 
   let countryCode: CountryCode | null = null;
   if (candidate.suggestedCountryCode) {
-    const cConfig = TARGET_COUNTRIES[candidate.suggestedCountryCode];
-    if (cConfig) {
-      const lower = combinedText.toLowerCase();
-      if (
-        lower.includes(cConfig.name.toLowerCase()) ||
-        lower.includes(cConfig.shortName.toLowerCase()) ||
-        cConfig.cities.some((city) => lower.includes(city.toLowerCase()))
-      ) {
-        countryCode = candidate.suggestedCountryCode;
+    if (candidate.suggestedCountryCode === "GLOBAL") {
+      countryCode = "GLOBAL";
+    } else {
+      const cConfig = TARGET_COUNTRIES[candidate.suggestedCountryCode];
+      if (cConfig) {
+        const lower = combinedText.toLowerCase();
+        if (
+          lower.includes(cConfig.name.toLowerCase()) ||
+          lower.includes(cConfig.shortName.toLowerCase()) ||
+          cConfig.cities.some((city) => lower.includes(city.toLowerCase()))
+        ) {
+          countryCode = candidate.suggestedCountryCode;
+        }
       }
     }
   }

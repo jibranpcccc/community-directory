@@ -1,8 +1,8 @@
-﻿name: Discover & Auto-Publish Communities
+name: Discover & Auto-Publish Communities
 
 on:
   schedule:
-    - cron: '0 4 * * *' # Daily at 04:00 UTC
+    - cron: '0 */6 * * *' # Every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
   workflow_dispatch:
 
 concurrency:
@@ -39,9 +39,9 @@ jobs:
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
           GEMINI_SEARCH_ENABLED: ${{ vars.GEMINI_SEARCH_ENABLED || 'true' }}
           DISCOVERY_MAX_QUERIES: '120'
-          DISCOVERY_MAX_CANDIDATES: '50'
+          DISCOVERY_MAX_CANDIDATES: '100'
           AUTO_PUBLISH_ENABLED: 'true'
-          AUTO_PUBLISH_MAX_PER_RUN: '50'
+          AUTO_PUBLISH_MAX_PER_RUN: '100'
           AUTO_PUBLISH_MAX_VALIDATION_AGE_HOURS: '24'
           AUTO_PUBLISH_REQUIRE_TARGET_COUNTRY: 'true'
           AUTO_PUBLISH_REQUIRE_STRONG_JOB_INTENT: 'true'
@@ -54,7 +54,7 @@ jobs:
       - name: Run automated publication engine
         env:
           AUTO_PUBLISH_ENABLED: 'true'
-          AUTO_PUBLISH_MAX_PER_RUN: '50'
+          AUTO_PUBLISH_MAX_PER_RUN: '100'
         run: npm run auto-publish
 
       - name: Revalidate published communities

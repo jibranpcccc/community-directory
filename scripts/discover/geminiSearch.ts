@@ -54,14 +54,15 @@ export class GeminiGoogleSearchProvider implements DiscoveryProvider {
 
         const model = genAI.getGenerativeModel(modelOptions);
 
-        const prompt = `Search the public web for real, active public community invite links matching this query: "${query}".
+        const prompt = `Search the public web and community directories for real, active public job & career community invite links matching this query: "${query}".
 Platform focus: ${context?.platform || "telegram, discord, or whatsapp"}.
 Topic: ${context?.category || "general"}.
 
 STRICT INSTRUCTIONS:
-- Identify and list ALL real, public invite URLs found in search results, directories, aggregator lists, and websites (e.g. https://t.me/..., https://discord.gg/..., https://chat.whatsapp.com/...).
+- Identify and extract ALL real, active public invite URLs found in search results, community hub directories, Reddit mega-threads, GitHub resource lists, and aggregator portals (e.g. https://t.me/..., https://discord.gg/..., https://chat.whatsapp.com/...).
+- Extract up to 10 distinct working invite links per search.
 - Do NOT generate synthetic or invented links.
-- Format each found link on a separate line with only its community name next to it.`;
+- Format each found link on a separate line with its community name and topic description next to it.`;
 
         const result = await model.generateContent(prompt);
         const responseText = result.response.text();

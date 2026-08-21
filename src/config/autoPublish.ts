@@ -1,4 +1,4 @@
-﻿export interface AutoPublishConfig {
+export interface AutoPublishConfig {
   enabled: boolean;
   dryRun: boolean;
   maxPerRun: number;
@@ -16,13 +16,19 @@
     whatsapp: number;
   };
   countryWeights: {
+    GLOBAL: number;
     US: number;
     GB: number;
     CA: number;
     AU: number;
+    IN: number;
+    DE: number;
+    NL: number;
+    SG: number;
+    AE: number;
+    PH: number;
     NZ: number;
     IE: number;
-    SG: number;
     ZA: number;
   };
 }
@@ -30,7 +36,7 @@
 export const autoPublishConfig: AutoPublishConfig = {
   enabled: process.env.AUTO_PUBLISH_ENABLED === "true",
   dryRun: process.env.AUTO_PUBLISH_DRY_RUN === "true",
-  maxPerRun: parseInt(process.env.AUTO_PUBLISH_MAX_PER_RUN || "50", 10),
+  maxPerRun: parseInt(process.env.AUTO_PUBLISH_MAX_PER_RUN || "100", 10),
   maxValidationAgeHours: parseInt(process.env.AUTO_PUBLISH_MAX_VALIDATION_AGE_HOURS || "24", 10),
   requireTargetCountry: true,
   requireStrongJobIntent: true,
@@ -45,13 +51,19 @@ export const autoPublishConfig: AutoPublishConfig = {
     whatsapp: 0.15,
   },
   countryWeights: {
-    US: 0.30,
-    GB: 0.20,
-    CA: 0.15,
-    AU: 0.10,
-    NZ: 0.05,
-    IE: 0.05,
-    SG: 0.10,
-    ZA: 0.05,
+    GLOBAL: 0.20,
+    US: 0.20,
+    GB: 0.15,
+    CA: 0.10,
+    AU: 0.05,
+    IN: 0.10,
+    DE: 0.04,
+    NL: 0.04,
+    SG: 0.04,
+    AE: 0.02,
+    PH: 0.02,
+    NZ: 0.015,
+    IE: 0.015,
+    ZA: 0.01,
   },
 };

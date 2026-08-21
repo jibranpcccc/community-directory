@@ -1,1 +1,177 @@
-[]
+[
+  {
+    "url": "https://discord.gg/reactiflux",
+    "platform": "discord",
+    "category": "tech-jobs",
+    "subcategory": "Frontend & React",
+    "notes": "Reactiflux Discord: Largest React and JavaScript community with dedicated job board and hiring channels for worldwide remote jobs."
+  },
+  {
+    "url": "https://discord.gg/python",
+    "platform": "discord",
+    "category": "tech-jobs",
+    "subcategory": "Python & Data",
+    "notes": "Python Discord: Official Python community with active job postings, remote work, and junior developer career channels."
+  },
+  {
+    "url": "https://discord.gg/programming",
+    "platform": "discord",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering",
+    "notes": "The Programmer's Hangout: General software development and engineering community with active career advice and job boards."
+  },
+  {
+    "url": "https://discord.gg/datascience",
+    "platform": "discord",
+    "category": "tech-jobs",
+    "subcategory": "Data & AI",
+    "notes": "Data Science Community: Machine learning engineers, data scientists, and analysts sharing job opportunities globally."
+  },
+  {
+    "url": "https://discord.gg/devcord",
+    "platform": "discord",
+    "category": "tech-jobs",
+    "subcategory": "Web Development",
+    "notes": "Devcord: Web development, design, and fullstack developer hiring community."
+  },
+  {
+    "url": "https://discord.gg/devops",
+    "platform": "discord",
+    "category": "tech-jobs",
+    "subcategory": "DevOps & Cloud",
+    "notes": "DevOps Engineers Discord: Site reliability engineers, cloud architects, and platform developers sharing remote jobs."
+  },
+  {
+    "url": "https://discord.gg/design",
+    "platform": "discord",
+    "category": "tech-jobs",
+    "subcategory": "UI/UX & Product Design",
+    "notes": "Designers Discord: UI/UX designers, product designers, and design leads hiring network."
+  },
+  {
+    "url": "https://discord.gg/cybersecurity",
+    "platform": "discord",
+    "category": "tech-jobs",
+    "subcategory": "Cybersecurity",
+    "notes": "Cybersecurity Community: InfoSec analysts, penetration testers, and security engineers job alerts."
+  },
+  {
+    "url": "https://discord.gg/golang",
+    "platform": "discord",
+    "category": "tech-jobs",
+    "subcategory": "Backend & Go",
+    "notes": "Gophers Discord: Go programming language developer community with job board."
+  },
+  {
+    "url": "https://discord.gg/rust-lang",
+    "platform": "discord",
+    "category": "tech-jobs",
+    "subcategory": "Systems Engineering",
+    "notes": "Rust Community: Rust developers, systems engineers, and backend hiring."
+  },
+  {
+    "url": "https://discord.gg/frontendmentor",
+    "platform": "internships-graduate",
+    "category": "internships-graduate",
+    "subcategory": "Junior Developers",
+    "notes": "Frontend Mentor Community: Junior developers, students, and self-taught programmers looking for entry-level tech jobs."
+  },
+  {
+    "url": "https://discord.gg/commclassroom",
+    "platform": "internships-graduate",
+    "category": "internships-graduate",
+    "subcategory": "Student & New Grad Careers",
+    "notes": "Community Classroom: Global student tech community with internships and open-source career mentorship."
+  },
+  {
+    "url": "https://t.me/remotetechjobs",
+    "platform": "telegram",
+    "category": "remote-jobs",
+    "subcategory": "Remote Software Jobs",
+    "notes": "Remote Tech Jobs Telegram: Daily curated worldwide remote job postings for developers, designers, and managers."
+  },
+  {
+    "url": "https://t.me/frontendjobs",
+    "platform": "telegram",
+    "category": "tech-jobs",
+    "subcategory": "Frontend Development",
+    "notes": "Frontend Jobs Channel: React, Vue, Angular, and TypeScript job vacancies and freelance gigs."
+  },
+  {
+    "url": "https://t.me/pythonjobs",
+    "platform": "telegram",
+    "category": "tech-jobs",
+    "subcategory": "Python & Django",
+    "notes": "Python Job Alerts: Python, Django, FastAPI, and Flask remote and onsite developer openings."
+  },
+  {
+    "url": "https://t.me/devopsjobs",
+    "platform": "telegram",
+    "category": "tech-jobs",
+    "subcategory": "DevOps & SRE",
+    "notes": "DevOps & Cloud Jobs: AWS, Kubernetes, Terraform, and Docker engineering job alerts."
+  },
+  {
+    "url": "https://t.me/datasciencejobs",
+    "platform": "telegram",
+    "category": "tech-jobs",
+    "subcategory": "Data & Machine Learning",
+    "notes": "Data Science & AI Jobs: NLP, Computer Vision, Data Engineering, and ML Engineer positions."
+  },
+  {
+    "url": "https://t.me/juniorjobs",
+    "platform": "telegram",
+    "category": "internships-graduate",
+    "subcategory": "Junior & Entry Level",
+    "notes": "Junior Tech Jobs: Entry-level software engineer, intern, and graduate hiring alerts."
+  },
+  {
+    "url": "https://t.me/remotework",
+    "platform": "telegram",
+    "category": "remote-jobs",
+    "subcategory": "Remote Work Worldwide",
+    "notes": "Remote Work Community: Global remote job postings, digital nomad career opportunities, and freelance work."
+  },
+  {
+    "url": "https://t.me/healthcarejobs",
+    "platform": "telegram",
+    "category": "healthcare-jobs",
+    "subcategory": "Nursing & Medical",
+    "notes": "Healthcare Jobs Alert: Nursing vacancies, healthcare administration, and medical professional hiring."
+  },
+  {
+    "url": "https://t.me/engineeringjobs",
+    "platform": "telegram",
+    "category": "engineering-jobs",
+    "subcategory": "Engineering & Construction",
+    "notes": "Engineering Jobs International: Mechanical, Electrical, Civil, and Structural engineering job openings."
+  },
+  {
+    "url": "https://t.me/qajobs",
+    "platform": "telegram",
+    "category": "tech-jobs",
+    "subcategory": "QA & Software Testing",
+    "notes": "QA & Test Automation Jobs: Manual testers, SDETs, and quality assurance engineer vacancies."
+  },
+  {
+    "url": "https://t.me/cloudjobs",
+    "platform": "telegram",
+    "category": "tech-jobs",
+    "subcategory": "Cloud Infrastructure",
+    "notes": "Cloud Architect & Azure/GCP Jobs: Cloud computing, networking, and infrastructure roles."
+  },
+  {
+    "url": "https://t.me/pmjobs",
+    "platform": "telegram",
+    "category": "sales-marketing-jobs",
+    "subcategory": "Product Management",
+    "notes": "Product Manager Jobs: Technical product managers, product owners, and growth leads hiring channel."
+  },
+  {
+    "url": "https://t.me/marketingjobs",
+    "platform": "telegram",
+    "category": "sales-marketing-jobs",
+    "subcategory": "Growth & Marketing",
+    "notes": "Digital Marketing & SEO Jobs: Growth marketers, content strategists, and performance marketing careers."
+  }
+]

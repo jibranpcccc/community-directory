@@ -1,4 +1,18 @@
-﻿export type CountryCode = "US" | "GB" | "CA" | "AU" | "NZ" | "IE" | "SG" | "ZA";
+export type CountryCode =
+  | "GLOBAL"
+  | "US"
+  | "GB"
+  | "CA"
+  | "AU"
+  | "NZ"
+  | "IE"
+  | "SG"
+  | "ZA"
+  | "DE"
+  | "NL"
+  | "IN"
+  | "AE"
+  | "PH";
 
 export interface TargetCountry {
   code: CountryCode;
@@ -13,15 +27,26 @@ export interface TargetCountry {
 }
 
 export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
+  GLOBAL: {
+    code: "GLOBAL",
+    slug: "global",
+    name: "Worldwide / Remote",
+    shortName: "Global",
+    flag: "🌐",
+    priority: 1,
+    enabled: true,
+    discoveryBudgetWeight: 0.20,
+    cities: ["Remote", "Worldwide", "Global", "Work From Home", "Anywhere", "WFH", "Virtual"],
+  },
   US: {
     code: "US",
     slug: "usa",
     name: "United States",
     shortName: "USA",
-    flag: "US",
-    priority: 1,
+    flag: "🇺🇸",
+    priority: 2,
     enabled: true,
-    discoveryBudgetWeight: 0.30,
+    discoveryBudgetWeight: 0.20,
     cities: [
       "New York",
       "Los Angeles",
@@ -45,10 +70,10 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     slug: "uk",
     name: "United Kingdom",
     shortName: "UK",
-    flag: "UK",
-    priority: 2,
+    flag: "🇬🇧",
+    priority: 3,
     enabled: true,
-    discoveryBudgetWeight: 0.20,
+    discoveryBudgetWeight: 0.15,
     cities: [
       "London",
       "Manchester",
@@ -67,10 +92,10 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     slug: "canada",
     name: "Canada",
     shortName: "Canada",
-    flag: "CA",
-    priority: 3,
+    flag: "🇨🇦",
+    priority: 4,
     enabled: true,
-    discoveryBudgetWeight: 0.15,
+    discoveryBudgetWeight: 0.10,
     cities: [
       "Toronto",
       "Vancouver",
@@ -87,10 +112,10 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     slug: "australia",
     name: "Australia",
     shortName: "Australia",
-    flag: "AU",
-    priority: 4,
+    flag: "🇦🇺",
+    priority: 5,
     enabled: true,
-    discoveryBudgetWeight: 0.10,
+    discoveryBudgetWeight: 0.05,
     cities: [
       "Sydney",
       "Melbourne",
@@ -101,15 +126,108 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
       "Gold Coast",
     ],
   },
+  IN: {
+    code: "IN",
+    slug: "india",
+    name: "India",
+    shortName: "India",
+    flag: "🇮🇳",
+    priority: 6,
+    enabled: true,
+    discoveryBudgetWeight: 0.10,
+    cities: [
+      "Bangalore",
+      "Bengaluru",
+      "Hyderabad",
+      "Pune",
+      "Mumbai",
+      "Delhi",
+      "Noida",
+      "Gurgaon",
+      "Chennai",
+      "Kolkata",
+      "Ahmedabad",
+    ],
+  },
+  DE: {
+    code: "DE",
+    slug: "germany",
+    name: "Germany",
+    shortName: "Germany",
+    flag: "🇩🇪",
+    priority: 7,
+    enabled: true,
+    discoveryBudgetWeight: 0.04,
+    cities: [
+      "Berlin",
+      "Munich",
+      "Frankfurt",
+      "Hamburg",
+      "Cologne",
+      "Stuttgart",
+      "Dusseldorf",
+    ],
+  },
+  NL: {
+    code: "NL",
+    slug: "netherlands",
+    name: "Netherlands",
+    shortName: "Netherlands",
+    flag: "🇳🇱",
+    priority: 8,
+    enabled: true,
+    discoveryBudgetWeight: 0.04,
+    cities: [
+      "Amsterdam",
+      "Rotterdam",
+      "The Hague",
+      "Utrecht",
+      "Eindhoven",
+      "Delft",
+    ],
+  },
+  SG: {
+    code: "SG",
+    slug: "singapore",
+    name: "Singapore",
+    shortName: "Singapore",
+    flag: "🇸🇬",
+    priority: 9,
+    enabled: true,
+    discoveryBudgetWeight: 0.04,
+    cities: ["Singapore", "Jurong", "Changi", "Tampines", "Woodlands"],
+  },
+  AE: {
+    code: "AE",
+    slug: "uae",
+    name: "United Arab Emirates",
+    shortName: "UAE",
+    flag: "🇦🇪",
+    priority: 10,
+    enabled: true,
+    discoveryBudgetWeight: 0.02,
+    cities: ["Dubai", "Abu Dhabi", "Sharjah", "Ajman"],
+  },
+  PH: {
+    code: "PH",
+    slug: "philippines",
+    name: "Philippines",
+    shortName: "Philippines",
+    flag: "🇵🇭",
+    priority: 11,
+    enabled: true,
+    discoveryBudgetWeight: 0.02,
+    cities: ["Manila", "Cebu", "Davao", "Quezon City", "Makati", "Taguig", "BGC"],
+  },
   NZ: {
     code: "NZ",
     slug: "new-zealand",
     name: "New Zealand",
     shortName: "New Zealand",
-    flag: "NZ",
-    priority: 5,
+    flag: "🇳🇿",
+    priority: 12,
     enabled: true,
-    discoveryBudgetWeight: 0.05,
+    discoveryBudgetWeight: 0.015,
     cities: ["Auckland", "Wellington", "Christchurch", "Hamilton", "Tauranga"],
   },
   IE: {
@@ -117,32 +235,21 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
     slug: "ireland",
     name: "Ireland",
     shortName: "Ireland",
-    flag: "IE",
-    priority: 6,
+    flag: "🇮🇪",
+    priority: 13,
     enabled: true,
-    discoveryBudgetWeight: 0.05,
+    discoveryBudgetWeight: 0.015,
     cities: ["Dublin", "Cork", "Galway", "Limerick", "Waterford"],
-  },
-  SG: {
-    code: "SG",
-    slug: "singapore",
-    name: "Singapore",
-    shortName: "Singapore",
-    flag: "SG",
-    priority: 7,
-    enabled: true,
-    discoveryBudgetWeight: 0.10,
-    cities: ["Singapore", "Jurong", "Changi", "Tampines", "Woodlands"],
   },
   ZA: {
     code: "ZA",
     slug: "south-africa",
     name: "South Africa",
     shortName: "South Africa",
-    flag: "ZA",
-    priority: 8,
+    flag: "🇿🇦",
+    priority: 14,
     enabled: true,
-    discoveryBudgetWeight: 0.05,
+    discoveryBudgetWeight: 0.01,
     cities: ["Johannesburg", "Cape Town", "Durban", "Pretoria", "Sandton", "Centurion"],
   },
 };

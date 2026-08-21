@@ -4,21 +4,42 @@ import { platforms } from "../src/config/platforms";
 
 describe("Public Route Scope Validation", () => {
   describe("Country Routes Scope", () => {
-    it("enables all 8 major English-speaking countries for public routing", () => {
+    it("enables all 14 major countries and GLOBAL for public routing", () => {
       const enabledCountryCodes = ENABLED_COUNTRIES.map((c) => c.code);
-      expect(enabledCountryCodes).toEqual(["US", "GB", "CA", "AU", "NZ", "IE", "SG", "ZA"]);
-      expect(ENABLED_COUNTRIES).toHaveLength(8);
+      expect(enabledCountryCodes).toEqual([
+        "GLOBAL",
+        "US",
+        "GB",
+        "CA",
+        "AU",
+        "IN",
+        "DE",
+        "NL",
+        "SG",
+        "AE",
+        "PH",
+        "NZ",
+        "IE",
+        "ZA",
+      ]);
+      expect(ENABLED_COUNTRIES).toHaveLength(14);
     });
 
-    it("ensures all 8 English-speaking countries have valid slugs and flags", () => {
+    it("ensures all countries have valid slugs and flags", () => {
       const enabledSlugs = ENABLED_COUNTRIES.map((c) => c.slug);
+      expect(enabledSlugs).toContain("global");
       expect(enabledSlugs).toContain("usa");
       expect(enabledSlugs).toContain("uk");
       expect(enabledSlugs).toContain("canada");
       expect(enabledSlugs).toContain("australia");
+      expect(enabledSlugs).toContain("india");
+      expect(enabledSlugs).toContain("germany");
+      expect(enabledSlugs).toContain("netherlands");
+      expect(enabledSlugs).toContain("singapore");
+      expect(enabledSlugs).toContain("uae");
+      expect(enabledSlugs).toContain("philippines");
       expect(enabledSlugs).toContain("new-zealand");
       expect(enabledSlugs).toContain("ireland");
-      expect(enabledSlugs).toContain("singapore");
       expect(enabledSlugs).toContain("south-africa");
     });
   });

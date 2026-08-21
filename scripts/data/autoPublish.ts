@@ -34,20 +34,41 @@ export interface AutoPublishResult {
   evaluations: AutoPublishEvaluation[];
 }
 
-const TIER_1_COUNTRIES = new Set(["US", "GB", "CA", "AU", "NZ", "IE", "SG", "ZA"]);
+const TIER_1_COUNTRIES = new Set([
+  "GLOBAL",
+  "US",
+  "GB",
+  "CA",
+  "AU",
+  "NZ",
+  "IE",
+  "SG",
+  "ZA",
+  "DE",
+  "NL",
+  "IN",
+  "AE",
+  "PH",
+]);
 
 /**
  * Strict Geographic regex patterns.
  * IMPORTANT: Explicit US geographic forms only. "usa?" was REMOVED to avoid matching pronoun "us" in "Join us".
  */
 export const COUNTRY_GEO_PATTERNS: Record<string, RegExp> = {
+  GLOBAL: /\b(remote|worldwide|global|anywhere|wfh|work\s+from\s+home|virtual|international|telecommute|nomad)\b/i,
   US: /\b(united\s+states(?:\s+of\s+america)?|u\.s\.a\.|usa|u\.s\.|american|california|texas|new\s+york|nyc|washington|florida|illinois|chicago|seattle|san\s+francisco|los\s+angeles|boston|austin|atlanta|colorado|ohio|virginia|michigan|georgia|north\s+carolina|pennsylvania|arizona|san\s+diego|dallas|houston|denver|miami)\b/i,
   GB: /\b(united\s+kingdom|u\.k\.|uk|great\s+britain|britain|british|england|scotland|wales|northern\s+ireland|london|manchester|birmingham|leeds|glasgow|edinburgh|bristol)\b/i,
   CA: /\b(canada|canadian|ontario|quebec|british\s+columbia|alberta|toronto|vancouver|montreal|ottawa|calgary|edmonton|waterloo)\b/i,
   AU: /\b(australia|australian|nsw|victoria|queensland|sydney|melbourne|brisbane|perth|adelaide|canberra)\b/i,
+  IN: /\b(india|indian|bharat|bangalore|bengaluru|hyderabad|pune|mumbai|delhi|noida|gurgaon|chennai|kolkata|ahmedabad)\b/i,
+  DE: /\b(germany|german|deutschland|berlin|munich|münchen|frankfurt|hamburg|cologne|köln|stuttgart|dusseldorf|düsseldorf)\b/i,
+  NL: /\b(netherlands|dutch|holland|amsterdam|rotterdam|utrecht|the\s+hague|den\s+haag|eindhoven|delft)\b/i,
+  SG: /\b(singapore|singaporean|jurong|changi|tampines|woodlands)\b/i,
+  AE: /\b(united\s+arab\s+emirates|uae|u\.a\.e\.|dubai|abu\s+dhabi|sharjah|emirates|emirati)\b/i,
+  PH: /\b(philippines|philippine|filipino|pinoy|manila|cebu|davao|quezon|makati|taguig|bgc)\b/i,
   NZ: /\b(new\s+zealand|auckland|wellington|christchurch|hamilton|tauranga|kiwi)\b/i,
   IE: /\b(ireland|irish|republic\s+of\s+ireland|dublin|cork|galway|limerick|waterford)\b/i,
-  SG: /\b(singapore|singaporean|jurong|changi|tampines|woodlands)\b/i,
   ZA: /\b(south\s+africa|south\s+african|johannesburg|joburg|cape\s+town|durban|pretoria|sandton|centurion)\b/i,
 };
 

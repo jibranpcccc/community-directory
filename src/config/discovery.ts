@@ -1,10 +1,10 @@
-﻿export const discoveryConfig = {
-  // Daily discovery targets (15–50 high quality Tier-1 communities)
-  minTargetNewPerDay: 15,
-  maxTargetNewPerDay: 50,
+export const discoveryConfig = {
+  // Daily discovery targets (30–100 high quality verified communities)
+  minTargetNewPerDay: 30,
+  maxTargetNewPerDay: 100,
   maxQueriesPerRun: parseInt(process.env.DISCOVERY_MAX_QUERIES || "120", 10),
   maxCandidatesPerQuery: 10,
-  maxNewCandidatesPerRun: parseInt(process.env.DISCOVERY_MAX_CANDIDATES || "50", 10),
+  maxNewCandidatesPerRun: parseInt(process.env.DISCOVERY_MAX_CANDIDATES || "100", 10),
 
   // Rate limiting delay between search queries (ms)
   requestDelayMs: parseInt(process.env.DISCOVERY_REQUEST_DELAY_MS || "1200", 10),
@@ -19,16 +19,22 @@
   // Target platforms for discovery
   supportedPlatforms: ["telegram", "discord", "whatsapp"] as const,
 
-  // Country discovery allocation weights across 8 English-speaking markets
+  // Country discovery allocation weights across 14 markets + Worldwide Remote
   countryWeights: {
-    US: 0.30,
-    GB: 0.20,
-    CA: 0.15,
-    AU: 0.10,
-    NZ: 0.05,
-    IE: 0.05,
-    SG: 0.10,
-    ZA: 0.05,
+    GLOBAL: 0.20,
+    US: 0.20,
+    GB: 0.15,
+    CA: 0.10,
+    AU: 0.05,
+    IN: 0.10,
+    DE: 0.04,
+    NL: 0.04,
+    SG: 0.04,
+    AE: 0.02,
+    PH: 0.02,
+    NZ: 0.015,
+    IE: 0.015,
+    ZA: 0.01,
   },
 
   // Platform discovery allocation weights (Discord: 50%, Telegram: 35%, WhatsApp: 15%)

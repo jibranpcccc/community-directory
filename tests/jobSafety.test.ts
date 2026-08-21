@@ -182,9 +182,10 @@ describe("Job Scam and Fraud Risk Engine with Negation Context", () => {
 });
 
 describe("Target Country Configuration", () => {
-  it("has 8 English-speaking countries enabled with proper discovery weights summing to 100%", () => {
-    expect(ENABLED_COUNTRIES.length).toBe(8);
+  it("has 14 countries and GLOBAL enabled with proper discovery weights summing to 100%", () => {
+    expect(ENABLED_COUNTRIES.length).toBe(14);
     const codes = ENABLED_COUNTRIES.map((c) => c.code);
+    expect(codes).toContain("GLOBAL");
     expect(codes).toContain("US");
     expect(codes).toContain("GB");
     expect(codes).toContain("CA");
@@ -193,16 +194,25 @@ describe("Target Country Configuration", () => {
     expect(codes).toContain("IE");
     expect(codes).toContain("SG");
     expect(codes).toContain("ZA");
+    expect(codes).toContain("DE");
+    expect(codes).toContain("NL");
+    expect(codes).toContain("IN");
+    expect(codes).toContain("AE");
+    expect(codes).toContain("PH");
 
     const totalWeight = ENABLED_COUNTRIES.reduce((sum, c) => sum + c.discoveryBudgetWeight, 0);
     expect(totalWeight).toBeCloseTo(1.0);
   });
 
   it("resolves countries by code and slug accurately", () => {
+    expect(getCountryByCode("GLOBAL")?.name).toBe("Worldwide / Remote");
     expect(getCountryByCode("US")?.name).toBe("United States");
     expect(getCountryByCode("gb")?.name).toBe("United Kingdom");
+    expect(getCountryByCode("IN")?.name).toBe("India");
+    expect(getCountryBySlug("global")?.code).toBe("GLOBAL");
     expect(getCountryBySlug("canada")?.code).toBe("CA");
-    expect(getCountryBySlug("australia")?.code).toBe("AU");
+    expect(getCountryBySlug("germany")?.code).toBe("DE");
+    expect(getCountryBySlug("india")?.code).toBe("IN");
     expect(getCountryBySlug("singapore")?.code).toBe("SG");
     expect(getCountryBySlug("south-africa")?.code).toBe("ZA");
     expect(getCountryByCode(null)).toBeUndefined();

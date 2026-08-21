@@ -30,7 +30,22 @@ describe("Autonomous Pipeline Integration Test Suite (Zero-Maintenance Productio
     tierBRequiredObservations: 2,
     autoUnpublishUnknownAfter: 3,
     platformWeights: { discord: 0.5, telegram: 0.35, whatsapp: 0.15 },
-    countryWeights: { US: 0.3, GB: 0.2, CA: 0.15, AU: 0.1, NZ: 0.05, IE: 0.05, SG: 0.1, ZA: 0.05 },
+    countryWeights: {
+      GLOBAL: 0.20,
+      US: 0.20,
+      GB: 0.15,
+      CA: 0.10,
+      AU: 0.05,
+      IN: 0.10,
+      DE: 0.04,
+      NL: 0.04,
+      SG: 0.04,
+      AE: 0.02,
+      PH: 0.02,
+      NZ: 0.015,
+      IE: 0.015,
+      ZA: 0.01,
+    },
   };
 
   const createSampleCandidate = (overrides: Partial<Community> = {}): Community => ({

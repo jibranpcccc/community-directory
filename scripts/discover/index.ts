@@ -21,6 +21,7 @@ import type { Community, CountryCode, ExperienceLevel, ArchivedCommunity } from 
 import { runAutoPublish, validateCountryEvidence } from "../data/autoPublish";
 import { stageDiscoveredCandidates } from "../data/mergeStaging";
 import { autoPublishConfig } from "../../src/config/autoPublish";
+import { TARGET_COUNTRIES } from "../../src/config/countries";
 
 // Parse CLI flags
 const isDryRun = process.argv.some((arg) => arg.includes("dry-run"));
@@ -74,16 +75,7 @@ export interface DailyMetricsRecord {
   publishedTotal: number;
   pendingTotal: number;
   archivedTotal: number;
-  countryCounts: {
-    US: number;
-    GB: number;
-    CA: number;
-    AU: number;
-    NZ?: number;
-    IE?: number;
-    SG?: number;
-    ZA?: number;
-  };
+  countryCounts: Record<string, number>;
   platformCounts: {
     telegram: number;
     discord: number;
@@ -248,7 +240,22 @@ async function runDiscovery() {
   let scamRiskCount = 0;
   let duplicatesSkippedCount = 0;
 
-  const countryCounts: Record<CountryCode, number> = { US: 0, GB: 0, CA: 0, AU: 0, NZ: 0, IE: 0, SG: 0, ZA: 0 };
+  const countryCounts: Record<CountryCode, number> = {
+    GLOBAL: 0,
+    US: 0,
+    GB: 0,
+    CA: 0,
+    AU: 0,
+    NZ: 0,
+    IE: 0,
+    SG: 0,
+    ZA: 0,
+    DE: 0,
+    NL: 0,
+    IN: 0,
+    AE: 0,
+    PH: 0,
+  };
   let newDiscordCount = 0;
   let newTelegramCount = 0;
   let newWhatsappCount = 0;
@@ -453,8 +460,8 @@ async function runDiscovery() {
       continue;
     }
 
-    // 3. Strict Tier-1 Target Market Gate (US, GB, CA, AU)
-    const TIER_1_SET = new Set(["US", "GB", "CA", "AU"]);
+    // 3. Strict Target Market Gate (14 Countries + Worldwide Remote)
+    const TIER_1_SET = new Set(Object.keys(TARGET_COUNTRIES));
     if (!classification.countryCode || !TIER_1_SET.has(classification.countryCode)) {
       const reason = classification.countryCode
         ? `wrong-country: ${classification.countryCode}`
@@ -705,12 +712,7 @@ async function runDiscovery() {
     publishedTotal: currentPublished.length,
     pendingTotal: currentPending.length,
     archivedTotal: currentArchived.length,
-    countryCounts: {
-      US: countryCounts.US,
-      GB: countryCounts.GB,
-      CA: countryCounts.CA,
-      AU: countryCounts.AU,
-    },
+    countryCounts: { ...countryCounts },
     platformCounts: {
       telegram: newTelegramCount,
       discord: newDiscordCount,
