@@ -1,4 +1,4 @@
-﻿import * as fs from "fs";
+import * as fs from "fs";
 import * as path from "path";
 import { type CountryCode, ENABLED_COUNTRIES } from "../../src/config/countries";
 import { discoveryConfig } from "../../src/config/discovery";
@@ -291,18 +291,55 @@ export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQu
     }
   }
 
-  // Interleave round-robin across (Country x Platform)
+  // Interleave with Guaranteed 100% Market Coverage & Multi-Pass Fair Allocation
   const interleaved: SearchQuery[] = [];
+  const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
+  const countryStartOffset = dayOfYear % countries.length;
+
+  // Build ordered countries list with daily rotation
+  const orderedCountries: typeof countries = [];
+  for (let i = 0; i < countries.length; i++) {
+    orderedCountries.push(countries[(i + countryStartOffset) % countries.length]);
+  }
+
+  // Pass 1: Allocate at least 1 primary query for EVERY country (14 queries)
+  for (let cIdx = 0; cIdx < orderedCountries.length; cIdx++) {
+    const c = orderedCountries[cIdx];
+    const preferredPlatform = platforms[(cIdx + dayOfYear) % platforms.length];
+    const bucket = poolByCountryAndPlatform[`${c.code}:${preferredPlatform}`];
+    if (bucket && bucket.length > 0) {
+      const qIdx = (dayOfYear * 3) % bucket.length;
+      const q = bucket[qIdx];
+      if (q && !interleaved.some((ex) => ex.query === q.query)) {
+        interleaved.push(q);
+      }
+    }
+  }
+
+  // Pass 2: Allocate 2nd query for EVERY country across alternating platform (28 queries)
+  for (let cIdx = 0; cIdx < orderedCountries.length; cIdx++) {
+    if (interleaved.length >= maxQueries) break;
+    const c = orderedCountries[cIdx];
+    const secondPlatform = platforms[(cIdx + dayOfYear + 1) % platforms.length];
+    const bucket = poolByCountryAndPlatform[`${c.code}:${secondPlatform}`];
+    if (bucket && bucket.length > 0) {
+      const qIdx = (dayOfYear * 7 + 1) % bucket.length;
+      const q = bucket[qIdx];
+      if (q && !interleaved.some((ex) => ex.query === q.query)) {
+        interleaved.push(q);
+      }
+    }
+  }
+
+  // Pass 3: Fill remaining capacity up to maxQueries
   const maxPerBucket = Math.max(
     ...Object.values(poolByCountryAndPlatform).map((arr) => arr.length)
   );
 
-  // Daily rotational offset
-  const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
-
-  for (let idx = 0; idx < maxPerBucket; idx++) {
-    for (const c of countries) {
+  for (let idx = 0; idx < maxPerBucket && interleaved.length < maxQueries; idx++) {
+    for (const c of orderedCountries) {
       for (const p of platforms) {
+        if (interleaved.length >= maxQueries) break;
         const bucket = poolByCountryAndPlatform[`${c.code}:${p}`];
         if (!bucket || bucket.length === 0) continue;
 
@@ -311,9 +348,6 @@ export function generateSearchQueries(maxQueries: number = discoveryConfig.maxQu
 
         if (q && !interleaved.some((existing) => existing.query === q.query)) {
           interleaved.push(q);
-          if (interleaved.length >= maxQueries) {
-            return interleaved;
-          }
         }
       }
     }

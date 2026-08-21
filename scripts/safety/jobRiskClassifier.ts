@@ -49,20 +49,52 @@ const PROHIBITED_NICHES = [
 ];
 
 const SEVERE_SCAM_PATTERNS = [
-  { regex: /\b(pay\s+(?:\$?[0-9]+\s+)?(?:registration\s+)?fee|registration\s+fee|pay\s+to\s+join|pay\s+for\s+equipment|training\s+fee|deposit\s+required|send\s+money\s+first)\b/i, flag: "upfront-payment", reason: "Requires upfront payment/fee for job" },
-  { regex: /\b(unlock\s+tasks|optimization\s+task|product\s+boosting|rating\s+tasks|like\s+videos?\s+for\s+(?:money|pay)|watch\s+videos?\s+for\s+cash)\b/i, flag: "task-scam-language", reason: "Task optimization / paid video likes scam" },
-  { regex: /\b(crypto\s+deposit|usdt\s+(?:payment|deposit)|deposit\s+usdt|trc20\s+deposit)\b/i, flag: "crypto-payment", reason: "Requires cryptocurrency/USDT deposit" },
-  { regex: /\b(reshipping\s+packages?|parcel\s+inspector|package\s+forwarder|money\s+mule|cash\s+flipping|receive\s+packages?\s+and\s+resend)\b/i, flag: "reshipping-scam", reason: "Reshipping / money mule scam pattern" },
-  { regex: /\b(guaranteed\s+daily\s+income|earn\s+\$[0-9]{3,4}\s*(?:per|\/)\s*day|instant\s+income|no\s+experience\s+\$[0-9]{3,4}\s*(?:per|\/)\s*day)\b/i, flag: "guaranteed-income", reason: "Unrealistic guaranteed daily income claims" },
+  // 1. Upfront job fees & international currency fee scams
+  {
+    regex: /\b(pay\s+(?:(?:\$|£|€|₹|A\$|C\$|₱|AED|R|SGD|NZD)\s*[0-9]+|[0-9]+\s*(?:usd|eur|gbp|inr|cad|aud|php|aed|zar|sgd|nzd))\s*(?:registration|application|onboarding|training|visa|equipment)?\s*fee|registration\s+fee|pay\s+to\s+join|pay\s+for\s+(?:equipment|laptop|training|background\s+check)|training\s+fee|visa\s+processing\s+fee|work\s+permit\s+fee|deposit\s+required|send\s+money\s+first|security\s+deposit\s+for\s+(?:job|work|laptop))\b/i,
+    flag: "upfront-payment",
+    reason: "Requires upfront payment/fee for job or equipment",
+  },
+  // 2. Task optimization, app/hotel rating, & paid likes scams
+  {
+    regex: /\b(unlock\s+tasks|optimization\s+task|product\s+boosting|rating\s+tasks|like\s+videos?\s+for\s+(?:money|pay|cash)|watch\s+videos?\s+for\s+cash|app\s+rating\s+job|hotel\s+rating\s+task|task\s+commission|workbench\s+task|click\s+tasks\s+for\s+money)\b/i,
+    flag: "task-scam-language",
+    reason: "Task optimization / app rating / paid video likes scam",
+  },
+  // 3. Cryptocurrency / USDT deposit schemes
+  {
+    regex: /\b(crypto\s+deposit|usdt\s+(?:payment|deposit)|deposit\s+usdt|deposit\s+crypto|trc-?20\s+deposit|erc-?20\s+deposit|bep-?20\s+deposit|recharge\s+wallet\s+to\s+(?:withdraw|work)|pay\s+via\s+usdt)\b/i,
+    flag: "crypto-payment",
+    reason: "Requires cryptocurrency/USDT deposit",
+  },
+  // 4. Package reshipping & money mule scams
+  {
+    regex: /\b(reshipping\s+packages?|parcel\s+inspector|package\s+forwarder|money\s+mule|cash\s+flipping|receive\s+packages?\s+and\s+resend|repack\s+packages|work\s+from\s+home\s+package\s+handler|reshipping\s+agent)\b/i,
+    flag: "reshipping-scam",
+    reason: "Reshipping / package forwarder / money mule scam pattern",
+  },
+  // 5. Fake check & overpayment scams
+  {
+    regex: /\b(fake\s+check|cashier(?:'s)?\s+check\s+deposit|mobile\s+deposit\s+check|deposit\s+(?:a\s+|the\s+)?check\s+(?:and\s+)?(?:send|wire|refund|forward|keep)|check\s+cashing\s+job|mystery\s+shopper\s+check|overpayment\s+scam|print\s+check\s+at\s+home)\b/i,
+    flag: "fake-check-scam",
+    reason: "Fake check / check cashing / overpayment scam pattern",
+  },
+  // 6. Guaranteed daily income
+  {
+    regex: /\b(guaranteed\s+daily\s+income|earn\s+(?:\$|£|€|₹|A\$|C\$|₱)[0-9]{3,4}\s*(?:per|\/)\s*day|instant\s+income|no\s+experience\s+(?:\$|£|€|₹|A\$|C\$|₱)[0-9]{3,4}\s*(?:per|\/)\s*day)\b/i,
+    flag: "guaranteed-income",
+    reason: "Unrealistic guaranteed daily income claims",
+  },
 ];
 
 const NEGATION_PATTERNS = [
-  /\bno\s+(?:registration\s+)?fee(?:\s+is\s+required)?\b/gi,
-  /\bnever\s+(?:charge|pay|send|require|ask\s+for)\s+(?:any\s+|a\s+)?(?:registration\s+fee|fee|fees|deposit|crypto\s+deposit|crypto(?:\s+to\s+recruiters)?|usdt\s+deposit|usdt|money|payment)\b/gi,
-  /\b(?:employers|recruiters|companies)\s+should\s+never\s+ask\s+(?:you\s+)?(?:to\s+pay|for\s+upfront\s+payment)(?:\s+upfront)?\b/gi,
-  /\bwe\s+never\s+(?:charge|ask\s+for)\s+(?:registration\s+fees|fees|money|payment|applicants)\b/gi,
+  /\bno\s+(?:registration\s+|application\s+|visa\s+)?fee(?:\s+is\s+required)?\b/gi,
+  /\bnever\s+(?:charge|pay|send|require|ask\s+for)\s+(?:any\s+|a\s+)?(?:registration\s+fee|fee|fees|deposit|crypto\s+deposit|crypto(?:\s+to\s+recruiters)?|usdt\s+deposit|usdt|money|payment|checks?)\b/gi,
+  /\b(?:employers|recruiters|companies)\s+should\s+never\s+(?:ask|send)\s+(?:you\s+)?(?:to\s+pay|for\s+upfront\s+payment|checks?)(?:\s+upfront)?\b/gi,
+  /\bwe\s+never\s+(?:charge|ask\s+for|send)\s+(?:registration\s+fees|fees|money|payment|applicants|checks)\b/gi,
   /\b100%\s+free\s+(?:job\s+alerts|to\s+apply|to\s+join)\b/gi,
   /\bfree\s+of\s+charge\b/gi,
+  /\bnever\s+deposit\s+(?:a\s+)?check\s+from\b/gi,
 ];
 
 /**

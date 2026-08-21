@@ -1,12 +1,12 @@
-﻿export const siteConfig = {
+export const siteConfig = {
   name: "JobAlertHub",
   shortName: "JobAlerts",
-  tagline: "Active Job Alert Groups for US, UK, Canada & Australia",
+  tagline: "Active Job Alert Groups for Global Remote & 14 Employment Markets",
   headline: "Find Active Job Alert Groups",
   subheadline:
-    "Discover public WhatsApp, Telegram, and Discord communities sharing job openings, hiring alerts, career opportunities, and remote work across the United States, United Kingdom, Canada, and Australia.",
+    "Discover public WhatsApp, Telegram, and Discord communities sharing job openings, hiring alerts, career opportunities, and remote work across Worldwide Remote and 14 employment markets.",
   description:
-    "Discover active public job alert communities across Discord, Telegram, and WhatsApp for the US, UK, Canada, and Australia, with automated link checks, relevance screening, and job-scam safeguards.",
+    "JobAlertHub discovers and monitors public job-alert communities across Discord, Telegram and WhatsApp, covering worldwide remote opportunities and selected employment markets including the United States, United Kingdom, Canada, Australia, India, Germany, the Netherlands, Singapore, the United Arab Emirates, the Philippines, New Zealand, Ireland and South Africa.",
   url: process.env.PUBLIC_SITE_URL || "https://communityhub-directory.netlify.app",
   defaultLocale: "en",
   showAdPlaceholders: process.env.SHOW_AD_PLACEHOLDERS === "true",
@@ -24,22 +24,28 @@
   },
   nav: [
     { label: "All Job Groups", href: "/jobs/" },
-    { label: "USA", href: "/country/usa/" },
-    { label: "UK", href: "/country/uk/" },
-    { label: "Canada", href: "/country/canada/" },
-    { label: "Australia", href: "/country/australia/" },
+    { label: "Worldwide Remote", href: "/country/global/" },
     { label: "Remote Jobs", href: "/job-type/remote-jobs/" },
     { label: "Tech Jobs", href: "/category/tech-jobs/" },
-    { label: "Healthcare", href: "/category/healthcare-jobs/" },
     { label: "How We Verify", href: "/how-we-verify/" },
     { label: "Safety", href: "/safety/" },
   ],
   footerNav: {
     countries: [
+      { label: "Worldwide / Remote", href: "/country/global/" },
       { label: "USA Job Groups", href: "/country/usa/" },
       { label: "UK Job Groups", href: "/country/uk/" },
       { label: "Canada Job Groups", href: "/country/canada/" },
       { label: "Australia Job Groups", href: "/country/australia/" },
+      { label: "India Job Groups", href: "/country/india/" },
+      { label: "Germany Job Groups", href: "/country/germany/" },
+      { label: "Netherlands Job Groups", href: "/country/netherlands/" },
+      { label: "Singapore Job Groups", href: "/country/singapore/" },
+      { label: "UAE Job Groups", href: "/country/uae/" },
+      { label: "Philippines Job Groups", href: "/country/philippines/" },
+      { label: "New Zealand Job Groups", href: "/country/new-zealand/" },
+      { label: "Ireland Job Groups", href: "/country/ireland/" },
+      { label: "South Africa Job Groups", href: "/country/south-africa/" },
     ],
     jobTypes: [
       { label: "Remote Jobs", href: "/job-type/remote-jobs/" },
@@ -59,11 +65,9 @@
       { label: "How We Verify", href: "/how-we-verify/" },
       { label: "Job Scam Safety Guide", href: "/safety/" },
       { label: "Editorial Policy", href: "/editorial-policy/" },
-      { label: "Report a Listing", href: "/report/" },
-      { label: "Contact Us", href: "/contact/" },
+      { label: "Disclaimer", href: "/disclaimer/" },
       { label: "Privacy Policy", href: "/privacy/" },
       { label: "Terms of Service", href: "/terms/" },
-      { label: "Disclaimer", href: "/disclaimer/" },
     ],
   },
 };

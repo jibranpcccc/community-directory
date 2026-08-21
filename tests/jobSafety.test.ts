@@ -130,12 +130,28 @@ describe("Job Scam and Fraud Risk Engine with Negation Context", () => {
       "Pay $50 registration fee to begin",
       "Pay for equipment before your interview",
       "Registration fee required to unlock your training",
+      "Pay £100 onboarding fee for UK remote role",
+      "Pay ₹2500 training fee before joining",
+      "Pay €200 visa processing fee for European placement",
     ];
 
     for (const text of samples) {
       const res = classifyJobScamRisk(text);
       expect(res.isSevereScam).toBe(true);
       expect(res.safetyFlags).toContain("upfront-payment");
+    }
+  });
+
+  it("detects and flags fake check and overpayment schemes", () => {
+    const fakeCheckSamples = [
+      "We will send a mobile deposit check for you to purchase office equipment and wire back the remainder.",
+      "Cashier's check deposit required to purchase laptop from our vendor.",
+    ];
+
+    for (const text of fakeCheckSamples) {
+      const res = classifyJobScamRisk(text);
+      expect(res.isSevereScam).toBe(true);
+      expect(res.safetyFlags).toContain("fake-check-scam");
     }
   });
 
@@ -205,7 +221,7 @@ describe("Target Country Configuration", () => {
   });
 
   it("resolves countries by code and slug accurately", () => {
-    expect(getCountryByCode("GLOBAL")?.name).toBe("Worldwide / Remote");
+    expect(getCountryByCode("GLOBAL")?.name).toBe("Worldwide & International");
     expect(getCountryByCode("US")?.name).toBe("United States");
     expect(getCountryByCode("gb")?.name).toBe("United Kingdom");
     expect(getCountryByCode("IN")?.name).toBe("India");

@@ -30,7 +30,7 @@ export const TARGET_COUNTRIES: Record<CountryCode, TargetCountry> = {
   GLOBAL: {
     code: "GLOBAL",
     slug: "global",
-    name: "Worldwide / Remote",
+    name: "Worldwide & International",
     shortName: "Global",
     flag: "🌐",
     priority: 1,

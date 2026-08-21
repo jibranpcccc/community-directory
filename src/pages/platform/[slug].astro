@@ -1,4 +1,4 @@
-﻿---
+---
 import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
 import CommunityCard from "../../components/CommunityCard.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
@@ -7,7 +7,7 @@ import { platforms, getPlatformConfig } from "../../config/platforms";
 import { getCommunitiesByPlatform } from "../../lib/communities";
 import { siteConfig } from "../../config/site";
 import { generateCollectionPageSchema } from "../../lib/schema";
-import { getIndexability } from "../../lib/seo";
+import { getIndexability, isCommunityIndexWorthyForTaxonomy } from "../../lib/seo";
 
 export async function getStaticPaths() {
   return platforms
@@ -25,7 +25,8 @@ if (!platformConfig || !platformConfig.isConfigured) {
 }
 
 const communities = getCommunitiesByPlatform(platformConfig.id);
-const isIndexable = getIndexability("platform", communities.length);
+const seoEligible = communities.filter(isCommunityIndexWorthyForTaxonomy);
+const isIndexable = getIndexability("platform", seoEligible.length);
 
 const pageTitle = `Job Alert ${platformConfig.name} Channels & Groups | ${siteConfig.name}`;
 const pageDescription = `Discover publicly listed ${platformConfig.name} job alert communities, hiring channels, and career groups.`;

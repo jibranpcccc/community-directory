@@ -1,4 +1,4 @@
-﻿import fs from "fs";
+import fs from "fs";
 import path from "path";
 
 export interface PageAuditResult {
@@ -174,6 +174,11 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")) {
     if (urlPath.includes("/submit") || urlPath.includes("/report") || urlPath.includes("/contact") || urlPath.includes("/404")) {
       if (!isNoindex) {
         pageErrors.push(`UTILITY/FORM PAGE VIOLATION: ${urlPath} must be strictly noindex`);
+      }
+    }
+    if (urlPath.includes("/privacy") || urlPath.includes("/terms") || urlPath.includes("/disclaimer")) {
+      if (!isNoindex) {
+        pageErrors.push(`LEGAL PAGE VIOLATION: ${urlPath} must be strictly noindex`);
       }
     }
 

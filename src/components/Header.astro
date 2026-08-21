@@ -1,5 +1,6 @@
-﻿---
+---
 import { siteConfig } from "../config/site";
+import { ENABLED_COUNTRIES } from "../config/countries";
 ---
 
 <header class="sticky top-0 z-40 w-full border-b-[3px] border-black bg-white">
@@ -12,81 +13,123 @@ import { siteConfig } from "../config/site";
         </svg>
       </div>
       <div class="flex flex-col">
-        <span class="text-lg font-black tracking-tight text-black leading-none">
+        <span class="text-base sm:text-lg font-black tracking-tight text-black leading-none">
           {siteConfig.name}
         </span>
-        <span class="text-[10px] font-black uppercase tracking-wider text-black bg-[#A7F3D0] px-1.5 py-0.5 rounded border border-black mt-1 shadow-[1.5px_1.5px_0px_0px_#000] inline-block w-fit">
+        <span class="text-[9px] sm:text-[10px] font-black uppercase tracking-wider text-black bg-[#A7F3D0] px-1.5 py-0.5 rounded border border-black mt-1 shadow-[1px_1px_0px_0px_#000] inline-block w-fit">
           Job Alert Groups
         </span>
       </div>
     </a>
 
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:flex items-center gap-1.5 lg:gap-2 text-xs font-black text-black" aria-label="Main Navigation">
+    <!-- Desktop Navigation (lg:flex to avoid tablet 768px horizontal collisions) -->
+    <nav class="hidden lg:flex items-center gap-1.5 xl:gap-2 text-xs font-black text-black" aria-label="Main Navigation">
       <a href="/jobs/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FEF08A] hover:border-2 hover:border-black transition-all">All Jobs</a>
-      <a href="/country/usa/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#BAE6FD] hover:border-2 hover:border-black transition-all">USA</a>
-      <a href="/country/uk/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FECDD3] hover:border-2 hover:border-black transition-all">UK</a>
-      <a href="/country/canada/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FED7AA] hover:border-2 hover:border-black transition-all">Canada</a>
-      <a href="/country/australia/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#DDD6FE] hover:border-2 hover:border-black transition-all">Australia</a>
-      <a href="/category/tech-jobs/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FEF9C3] hover:border-2 hover:border-black transition-all">Tech Jobs</a>
+      <a href="/country/global/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#A7F3D0] hover:border-2 hover:border-black transition-all">🌐 Worldwide</a>
+      <a href="/job-type/remote-jobs/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#BAE6FD] hover:border-2 hover:border-black transition-all">Remote</a>
+      <a href="/category/tech-jobs/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FEF9C3] hover:border-2 hover:border-black transition-all">Tech</a>
+
+      <!-- Countries Dropdown -->
+      <div class="relative group">
+        <button
+          type="button"
+          class="inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 hover:bg-[#FED7AA] hover:border-2 hover:border-black transition-all"
+          aria-expanded="false"
+        >
+          <span>Countries (14)</span>
+          <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div class="absolute left-0 top-full hidden group-hover:block group-focus-within:block w-72 pt-2 z-50">
+          <div class="rounded-2xl border-[3px] border-black bg-white p-3 shadow-[4px_4px_0px_0px_#000] grid grid-cols-2 gap-1 text-xs">
+            {ENABLED_COUNTRIES.map((c) => (
+              <a
+                href={`/country/${c.slug}/`}
+                class="flex items-center gap-1.5 p-1.5 rounded-lg hover:bg-[#FAF8F5] font-bold text-slate-800 hover:text-black"
+              >
+                <span>{c.flag}</span>
+                <span class="truncate">{c.shortName}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <a href="/how-we-verify/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#A7F3D0] hover:border-2 hover:border-black transition-all">How We Verify</a>
       <a href="/safety/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FDE047] hover:border-2 hover:border-black transition-all">Safety</a>
     </nav>
 
     <!-- Header Actions -->
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-2 sm:gap-3">
       <a
         href="/submit/"
-        class="neo-btn inline-flex items-center bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black px-4 py-2 text-xs font-black border-2 border-black shadow-[2px_2px_0px_0px_#000]"
+        class="neo-btn inline-flex items-center bg-[#A7F3D0] hover:bg-[#6EE7B7] text-black px-3 sm:px-4 py-2 text-xs font-black border-2 border-black shadow-[2px_2px_0px_0px_#000]"
       >
-        <svg class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <svg class="h-3.5 w-3.5 sm:mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
         </svg>
-        <span>Submit Group</span>
+        <span class="hidden sm:inline">Submit Group</span>
+        <span class="sm:hidden">Submit</span>
       </a>
 
       <!-- Mobile Menu Toggle Button -->
       <button
         id="mobile-menu-button"
         type="button"
-        class="inline-flex items-center justify-center rounded-xl p-2 bg-white text-black border-2 border-black shadow-[2px_2px_0px_0px_#000] md:hidden"
+        class="inline-flex items-center justify-center rounded-xl p-2 bg-white text-black border-2 border-black shadow-[2px_2px_0px_0px_#000] lg:hidden"
         aria-label="Toggle navigation menu"
         aria-expanded="false"
         aria-controls="mobile-menu"
       >
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
   </div>
 
-  <!-- Mobile Drawer -->
-  <div id="mobile-menu" class="hidden md:hidden border-t-2 border-black bg-[#FAF8F5] px-4 pt-3 pb-5 space-y-2" aria-label="Mobile navigation">
-    <a href="/jobs/" class="block rounded-xl border-2 border-black bg-white px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
-      All Job Groups
-    </a>
-    <a href="/country/usa/" class="block rounded-xl border-2 border-black bg-[#BAE6FD] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
-      USA Job Groups
-    </a>
-    <a href="/country/uk/" class="block rounded-xl border-2 border-black bg-[#FECDD3] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
-      UK Job Groups
-    </a>
-    <a href="/country/canada/" class="block rounded-xl border-2 border-black bg-[#FED7AA] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
-      Canada Job Groups
-    </a>
-    <a href="/country/australia/" class="block rounded-xl border-2 border-black bg-[#DDD6FE] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
-      Australia Job Groups
-    </a>
-    <a href="/category/tech-jobs/" class="block rounded-xl border-2 border-black bg-[#FEF9C3] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
-      Tech Jobs
-    </a>
-    <a href="/how-we-verify/" class="block rounded-xl border-2 border-black bg-[#A7F3D0] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
-      How We Verify
-    </a>
-    <a href="/safety/" class="block rounded-xl border-2 border-black bg-[#FEF08A] px-3 py-2 text-sm font-black text-black shadow-[2px_2px_0px_0px_#000]">
-      Job Safety Guide
-    </a>
+  <!-- Mobile Drawer with All 14 Markets Grid -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t-2 border-black bg-[#FAF8F5] px-4 pt-3 pb-6 space-y-4" aria-label="Mobile navigation">
+    <div class="grid grid-cols-2 gap-2">
+      <a href="/jobs/" class="rounded-xl border-2 border-black bg-white px-3 py-2 text-xs font-black text-black shadow-[2px_2px_0px_0px_#000]">
+        All Job Groups
+      </a>
+      <a href="/country/global/" class="rounded-xl border-2 border-black bg-[#A7F3D0] px-3 py-2 text-xs font-black text-black shadow-[2px_2px_0px_0px_#000]">
+        🌐 Worldwide
+      </a>
+      <a href="/job-type/remote-jobs/" class="rounded-xl border-2 border-black bg-[#BAE6FD] px-3 py-2 text-xs font-black text-black shadow-[2px_2px_0px_0px_#000]">
+        Remote Jobs
+      </a>
+      <a href="/category/tech-jobs/" class="rounded-xl border-2 border-black bg-[#FEF9C3] px-3 py-2 text-xs font-black text-black shadow-[2px_2px_0px_0px_#000]">
+        Tech Jobs
+      </a>
+      <a href="/how-we-verify/" class="rounded-xl border-2 border-black bg-white px-3 py-2 text-xs font-black text-black shadow-[2px_2px_0px_0px_#000]">
+        How We Verify
+      </a>
+      <a href="/safety/" class="rounded-xl border-2 border-black bg-[#FEF08A] px-3 py-2 text-xs font-black text-black shadow-[2px_2px_0px_0px_#000]">
+        Safety Guide
+      </a>
+    </div>
+
+    <!-- Country Markets 2-Column Grid -->
+    <div class="space-y-2 pt-2 border-t border-black/10">
+      <div class="text-[11px] font-black uppercase tracking-wider text-black">
+        Browse by Country (14 Markets)
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
+        {ENABLED_COUNTRIES.map((c) => (
+          <a
+            href={`/country/${c.slug}/`}
+            class="flex items-center gap-1.5 rounded-lg border border-black bg-white p-2 text-xs font-bold text-black shadow-[1px_1px_0px_0px_#000] hover:bg-[#FEF08A]"
+          >
+            <span>{c.flag}</span>
+            <span class="truncate">{c.name}</span>
+          </a>
+        ))}
+      </div>
+    </div>
   </div>
 </header>
 

@@ -1,4 +1,4 @@
-﻿---
+---
 import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
 import CommunityCard from "../../components/CommunityCard.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
@@ -7,7 +7,7 @@ import { JOB_TYPES, getJobTypeConfig } from "../../config/jobTypes";
 import { getCommunitiesByJobType } from "../../lib/communities";
 import { siteConfig } from "../../config/site";
 import { generateCollectionPageSchema } from "../../lib/schema";
-import { getIndexability } from "../../lib/seo";
+import { getIndexability, isCommunityIndexWorthyForTaxonomy } from "../../lib/seo";
 
 export async function getStaticPaths() {
   return JOB_TYPES.map((jt) => ({
@@ -23,13 +23,29 @@ if (!jobTypeConfig) {
 }
 
 const communities = getCommunitiesByJobType(jobTypeConfig.slug);
-const isIndexable = getIndexability("job-type", communities.length);
+const seoEligible = communities.filter(isCommunityIndexWorthyForTaxonomy);
+const isIndexable = getIndexability("job-type", seoEligible.length);
 
-const pageTitle = `${jobTypeConfig.name} Job Alert Communities | ${siteConfig.name}`;
-const pageDescription = `Discover public Telegram, Discord, and WhatsApp communities sharing ${jobTypeConfig.name} job alerts and openings.`;
+const isRemoteJobs = jobTypeConfig.slug === "remote-jobs";
+
+const pageTitle = isRemoteJobs
+  ? `Remote Job Communities & Hiring Groups | ${siteConfig.name}`
+  : `${jobTypeConfig.name} Job Alert Communities | ${siteConfig.name}`;
+
+const heading = isRemoteJobs
+  ? "Remote Work Communities & Hiring Groups"
+  : `${jobTypeConfig.name} Job Communities`;
+
+const subheading = isRemoteJobs
+  ? "Explore public community groups and hiring hubs dedicated to remote work, distributed teams, and telecommute employment opportunities."
+  : jobTypeConfig.description;
+
+const pageDescription = isRemoteJobs
+  ? "Explore public Telegram, Discord, and WhatsApp communities specializing in remote job vacancies, work-from-home positions, and telecommute hiring."
+  : `Discover public Telegram, Discord, and WhatsApp communities sharing ${jobTypeConfig.name} job alerts and openings.`;
 
 const collectionSchema = generateCollectionPageSchema(
-  `${jobTypeConfig.name} Job Communities`,
+  heading,
   pageDescription,
   `/job-type/${jobTypeConfig.slug}/`,
   communities
@@ -37,8 +53,8 @@ const collectionSchema = generateCollectionPageSchema(
 ---
 
 <DirectoryLayout
-  heading={`${jobTypeConfig.name} Job Communities`}
-  subheading={jobTypeConfig.description}
+  heading={heading}
+  subheading={subheading}
   breadcrumbs={[{ name: jobTypeConfig.name, item: `/job-type/${jobTypeConfig.slug}/` }]}
   title={pageTitle}
   description={pageDescription}

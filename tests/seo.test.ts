@@ -1,9 +1,10 @@
-﻿import { describe, it, expect } from "vitest";
+import { describe, it, expect } from "vitest";
 import {
   getCanonicalUrl,
   formatPageTitle,
   getSeoMetadata,
   getIndexability,
+  isCommunityIndexWorthy,
 } from "../src/lib/seo";
 import {
   generateWebSiteSchema,
@@ -83,9 +84,82 @@ describe("SEO Engine & JSON-LD Generators", () => {
       expect(getIndexability("tag", 50)).toBe(false);
     });
 
-    it("enforces noindex for utility, success, and 404 pages", () => {
+    it("enforces noindex for utility, legal, success, and 404 pages", () => {
       expect(getIndexability("utility", 10)).toBe(false);
+      expect(getIndexability("legal", 10)).toBe(false);
       expect(getIndexability("404", 0)).toBe(false);
+    });
+  });
+
+  describe("Community Detail SEO Qualification (15 Conditions)", () => {
+    const baseCommunity: Community = {
+      id: "northerndev-discord",
+      slug: "northerndev-formerly-tech-career-north-discord",
+      title: "NorthernDev (formerly Tech Career North)",
+      platform: "discord",
+      vertical: "jobs",
+      category: "tech-jobs",
+      countryCode: "CA",
+      city: "Toronto",
+      jobTypes: ["remote-jobs", "full-time-jobs"],
+      industries: ["technology"],
+      workArrangement: "remote",
+      experienceLevels: ["mid-level", "senior"],
+      visaSponsorship: "unknown",
+      tags: ["canada", "tech-jobs"],
+      inviteUrl: "https://discord.gg/northerndev",
+      description: "Canadian tech community sharing career and hiring discussions.",
+      descriptionSource: "platform",
+      verificationStatus: "source-confirmed",
+      linkStatus: "active",
+      sourceUrls: ["https://northern.dev"],
+      sourceVerification: {
+        status: "confirmed",
+        checkedAt: "2026-08-19T04:00:00.000Z",
+        sourceUrl: "https://northern.dev",
+        inviteUrl: "https://discord.gg/northerndev",
+        matchedBy: "exact-href",
+      },
+      countryEvidence: {
+        sourceType: "platform-title",
+        text: "NorthernDev Canadian Tech",
+        checkedAt: "2026-08-19T04:00:00.000Z",
+      },
+      discoveryMethod: "manual",
+      discoveredAt: "2026-08-01T00:00:00.000Z",
+      lastSuccessfulValidationAt: new Date().toISOString(),
+      lastCheckedAt: new Date().toISOString(),
+      published: true,
+    };
+
+    it("returns true for a fully compliant, verified active community", () => {
+      expect(isCommunityIndexWorthy(baseCommunity)).toBe(true);
+    });
+
+    it("rejects unpublished community", () => {
+      expect(isCommunityIndexWorthy({ ...baseCommunity, published: false })).toBe(false);
+    });
+
+    it("rejects dead or removed links", () => {
+      expect(isCommunityIndexWorthy({ ...baseCommunity, linkStatus: "dead" })).toBe(false);
+      expect(isCommunityIndexWorthy({ ...baseCommunity, linkStatus: "removed" })).toBe(false);
+    });
+
+    it("rejects non-job verticals", () => {
+      expect(isCommunityIndexWorthy({ ...baseCommunity, vertical: "crypto" as any })).toBe(false);
+    });
+
+    it("rejects non-approved target markets", () => {
+      expect(isCommunityIndexWorthy({ ...baseCommunity, countryCode: "FR" as any })).toBe(false);
+    });
+
+    it("rejects stale validation age > 30 days", () => {
+      const staleDate = new Date(Date.now() - 40 * 24 * 60 * 60 * 1000).toISOString();
+      expect(isCommunityIndexWorthy({ ...baseCommunity, lastSuccessfulValidationAt: staleDate })).toBe(false);
+    });
+
+    it("rejects safety flags and scam language", () => {
+      expect(isCommunityIndexWorthy({ ...baseCommunity, safetyFlags: ["scam-risk"] })).toBe(false);
     });
   });
 

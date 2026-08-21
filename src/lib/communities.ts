@@ -1,6 +1,7 @@
-﻿import type { Community, PlatformId, FilterOptions, SortOption, CountryCode } from "../types/community";
+import type { Community, PlatformId, FilterOptions, SortOption, CountryCode } from "../types/community";
 import groupsData from "../data/groups.json";
 import pendingData from "../data/pending-groups.json";
+import { isCommunityIndexWorthy } from "./seo";
 
 // Type assertions to ensure typed access
 const publishedCommunities: Community[] = (groupsData as Community[]).filter(
@@ -25,6 +26,13 @@ export function getPublishedCommunities(): Community[] {
 }
 
 export const getAllPublishedCommunities = getPublishedCommunities;
+
+/**
+ * Returns only communities that meet all 15 SEO Indexability conditions.
+ */
+export function getSeoQualifiedCommunities(list: Community[] = publishedCommunities): Community[] {
+  return list.filter((c) => isCommunityIndexWorthy(c));
+}
 
 /**
  * Returns pending communities in the moderation queue.

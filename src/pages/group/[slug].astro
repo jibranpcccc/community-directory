@@ -1,4 +1,4 @@
-﻿---
+---
 import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
 import PlatformBadge from "../../components/PlatformBadge.astro";
 import CategoryBadge from "../../components/CategoryBadge.astro";
@@ -12,6 +12,7 @@ import { getPlatformConfig } from "../../config/platforms";
 import { formatDate } from "../../lib/dates";
 import { siteConfig } from "../../config/site";
 import { generateCommunityDetailSchema } from "../../lib/schema";
+import { isCommunityIndexWorthy } from "../../lib/seo";
 import type { Community } from "../../types/community";
 
 export async function getStaticPaths() {
@@ -43,6 +44,7 @@ const pageDescription = community.description
   : `Discover ${community.title}, a public ${platformName} community sharing ${categoryName} job alerts in ${countryName}.`;
 
 const detailSchema = generateCommunityDetailSchema(community);
+const isIndexable = isCommunityIndexWorthy(community);
 
 const breadcrumbs = [
   { name: "All Jobs", item: "/jobs/" },
@@ -61,6 +63,7 @@ const breadcrumbs = [
   canonicalPath={`/group/${community.slug}/`}
   jsonLd={detailSchema}
   pageType="group"
+  noindex={!isIndexable}
 >
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
     <!-- Left 2 Columns: Main Listing Detail -->
