@@ -29,7 +29,22 @@ export const PlatformIdSchema = z.enum([
   "forum",
 ]);
 
-export const CountryCodeSchema = z.enum(["US", "GB", "CA", "AU", "NZ", "IE"]);
+export const CountryCodeSchema = z.enum([
+  "GLOBAL",
+  "US",
+  "GB",
+  "CA",
+  "AU",
+  "NZ",
+  "IE",
+  "SG",
+  "ZA",
+  "DE",
+  "NL",
+  "IN",
+  "AE",
+  "PH",
+]);
 
 export const WorkArrangementSchema = z.enum([
   "remote",
