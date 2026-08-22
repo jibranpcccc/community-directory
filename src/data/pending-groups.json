@@ -1,1 +1,333 @@
-[]
+[
+  {
+    "id": "it-jobs-united-kingdomlondon-uk-telegram",
+    "slug": "it-jobs-united-kingdomlondon-uk-telegram",
+    "title": "IT jobs United Kingdom/London / UK",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/it_jobs_uk",
+    "description": "IT jobs in United Kingdom / London. Find full or part-time jobs in England, Scotland and Wales. Here you&#39;ll find the jobs that best match your skills and interest.&nbsp;",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GB",
+    "countryCode": "GB",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "IT jobs United Kingdom/London / UK",
+      "checkedAt": "2026-08-22T08:41:39.732Z"
+    },
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 591,
+    "memberCountSource": "https://t.me/it_jobs_uk",
+    "memberCountCheckedAt": "2026-08-22T08:41:37.232Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-08-22T08:41:37.232Z",
+    "sourceUrls": [
+      "https://t.me/it_jobs_uk"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-22T08:41:37.232Z",
+    "lastCheckedAt": "2026-08-22T08:41:37.232Z",
+    "updatedAt": "2026-08-22T08:41:37.232Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1787388097232_vaz9z",
+      "run_1787388099732_zh39t"
+    ],
+    "querySource": "site:t.me engineering job postings UK Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "jobs-pillarindia-telegram",
+    "slug": "jobs-pillarindia-telegram",
+    "title": "JOBS PILLAR(INDIA)",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/jobspillar",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "IN",
+    "countryCode": "IN",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "JOBS PILLAR(INDIA)",
+      "checkedAt": "2026-08-22T08:41:41.733Z"
+    },
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 39,
+    "memberCountSource": "https://t.me/jobspillar",
+    "memberCountCheckedAt": "2026-08-22T08:41:37.232Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-08-22T08:41:37.232Z",
+    "sourceUrls": [
+      "https://t.me/jobspillar"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-22T08:41:37.232Z",
+    "lastCheckedAt": "2026-08-22T08:41:37.232Z",
+    "updatedAt": "2026-08-22T08:41:37.232Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1787388097232_vaz9z",
+      "run_1787388101733_ta069"
+    ],
+    "querySource": "site:t.me engineering job postings India Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "uae-job-alerts-telegram",
+    "slug": "uae-job-alerts-telegram",
+    "title": "UAE Job Alerts",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/uaejobsuccess",
+    "description": "Jobsuccess.ae is a UAE based online solution for people seeking jobs in UAE. We provide a full portfolio of jobs, career management, resume guide, important tips and company profiles to ease the recruitment process for countless job seekers.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "AE",
+    "countryCode": "AE",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "UAE Job Alerts",
+      "checkedAt": "2026-08-22T08:41:42.747Z"
+    },
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 135,
+    "memberCountSource": "https://t.me/uaejobsuccess",
+    "memberCountCheckedAt": "2026-08-22T08:41:37.232Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-08-22T08:41:37.232Z",
+    "sourceUrls": [
+      "https://t.me/uaejobsuccess"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-22T08:41:37.232Z",
+    "lastCheckedAt": "2026-08-22T08:41:37.232Z",
+    "updatedAt": "2026-08-22T08:41:37.232Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1787388097232_vaz9z",
+      "run_1787388102747_j8wec"
+    ],
+    "querySource": "discord.gg engineering job postings UAE Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "world-jobs-telegram",
+    "slug": "world-jobs-telegram",
+    "title": "World Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/Ultraworldjob",
+    "description": "#worldjobs #usajob #canadajob #UAEJob #ukjobs #hiring #career #degree #BSjob #msjob #btechjob #world #jobgroup #career #engineeringjobgroup #engineering #telegram",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "AE",
+    "countryCode": "AE",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 2478,
+    "memberCountSource": "https://t.me/Ultraworldjob",
+    "memberCountCheckedAt": "2026-08-22T08:41:37.232Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-08-22T08:41:37.232Z",
+    "sourceUrls": [
+      "https://t.me/Ultraworldjob"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-22T08:41:37.232Z",
+    "lastCheckedAt": "2026-08-22T08:41:37.232Z",
+    "updatedAt": "2026-08-22T08:41:37.232Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1787388097232_vaz9z",
+      "run_1787388103223_ioiaz"
+    ],
+    "querySource": "discord.gg engineering job postings UAE Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "jobs-in-uae-telegram",
+    "slug": "jobs-in-uae-telegram",
+    "title": "Jobs in UAE",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/ensha5rcom",
+    "description": "En.sha5r.com uae jobs",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "AE",
+    "countryCode": "AE",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "Jobs in UAE",
+      "checkedAt": "2026-08-22T08:41:44.309Z"
+    },
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 3267,
+    "memberCountSource": "https://t.me/ensha5rcom",
+    "memberCountCheckedAt": "2026-08-22T08:41:37.232Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-08-22T08:41:37.232Z",
+    "sourceUrls": [
+      "https://t.me/ensha5rcom"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-22T08:41:37.232Z",
+    "lastCheckedAt": "2026-08-22T08:41:37.232Z",
+    "updatedAt": "2026-08-22T08:41:37.232Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1787388097232_vaz9z",
+      "run_1787388104309_6jbne"
+    ],
+    "querySource": "discord.gg engineering job postings UAE Telegram",
+    "sourceHostname": "t.me"
+  }
+]

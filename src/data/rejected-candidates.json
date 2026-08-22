@@ -189,10 +189,10 @@
   {
     "url": "https://t.me/joinchat",
     "platform": "telegram",
-    "reason": "unknown-status",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 2,
-    "lastSeenAt": "2026-08-21T04:42:49.346Z"
+    "timesSeen": 4,
+    "lastSeenAt": "2026-08-22T08:41:37.232Z"
   },
   {
     "url": "https://discord.gg/dFp4rR3T",
@@ -1162,8 +1162,244 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T06:19:11.064Z",
-    "lastSeenAt": "2026-08-22T06:19:11.064Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 2,
     "title": "Ultra Job Update|Fresher Job| B.Tech|Diploma Job Group| Electrical Engineering |Mechanical Engineering |Civil Engineering"
+  },
+  {
+    "url": "https://t.me/+ZX32Zn3m6zkwMDll",
+    "platform": "telegram",
+    "reason": "unknown-status",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/innotopia2022",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/ZwS2fqW7ZZ",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "title": "Book Overflow"
+  },
+  {
+    "url": "https://discord.gg/8h4CeRJZw",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://discord.gg/YgN3BJ7mF",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://chat.whatsapp.com/HQzYvJOkl0JFnKjnZyx8qw",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "title": "HQzYvJOkl0JFnKjnZyx8qw"
+  },
+  {
+    "url": "https://chat.whatsapp.com/F39Rml87Edk44Bw6domxMs",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/FETjpfe86RHLvzwrDbwYKu",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/EPWJSAFnO4O10mdi4g3WoD",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/KTR7MfXWYE1KXRy9qAZuDf",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/5vsT3UwP2WwHkugvdooaFM",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/KpIVxQtOKDxJQ4ubbr4VUh",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/job4fresherss",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "title": "job4freshers.co.in"
+  },
+  {
+    "url": "https://t.me/JobForFreshersOffCampus",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "title": "Jobs For Freshers 👨‍💻👩‍💻"
+  },
+  {
+    "url": "https://t.me/Internshipupdatesfreveryone",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "title": "Codeshaala: Internships and Job updates for Everyone offcampus phodenge😊"
+  },
+  {
+    "url": "https://t.me/eclattraining",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "title": "FREE Job Alerts INDIA and USA"
+  },
+  {
+    "url": "https://t.me/dailyitjobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "title": "Free IT job Alerts for job seekers"
+  },
+  {
+    "url": "https://t.me/civil_engineering_com",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/AE_JE_civil",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "title": "SSC /Uksssc/Ukpsc &amp; all state AE/JE Civil"
+  },
+  {
+    "url": "https://t.me/civil_experiences",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "title": "The Civil Experiences"
+  },
+  {
+    "url": "https://t.me/sgCareers",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "title": "Singapore Careers and Job Opportunities - sgCareers"
+  },
+  {
+    "url": "https://t.me/gulfjobcareers",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "title": "FreshGulfJob.com"
+  },
+  {
+    "url": "https://discord.gg/buDgydz7J9",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1,
+    "title": "DATA ENGINEERING PILIPINAS"
+  },
+  {
+    "url": "https://discord.gg/TVgcWTtSH3",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/Yjm497P",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/EZEHSgH",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/TarnPv4xQ8",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/Z2THwJf7Rt",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-22T08:41:37.232Z",
+    "lastSeenAt": "2026-08-22T08:41:37.232Z",
+    "timesSeen": 1
   }
 ]
