@@ -122,14 +122,23 @@ Total Generated Routes: 69
 ## 5. Webmaster Tools & Google Analytics 4 Setup
 
 1. **Google Search Console**:
+   - **Property**: `https://jobalertgroups.com/` (URL Prefix) / `sc-domain:jobalertgroups.com` (Domain)
    - **Verification Token**: `iaqlM8LbV4PXhOqkuPvUfIvl_0JiGQm8Kc4HAI1qPeA`
-   - **Meta Tag in `<head>`**: `<meta name="google-site-verification" content="iaqlM8LbV4PXhOqkuPvUfIvl_0JiGQm8Kc4HAI1qPeA">`
-   - **Status**: `OWNER CHECK REQUIRED` (Requires owner to click "Verify" on URL prefix `https://jobalertgroups.com`).
+   - **Meta Tag in `<head>`**: `<meta name="google-site-verification" content="iaqlM8LbV4PXhOqkuPvUfIvl_0JiGQm8Kc4HAI1qPeA">` (Verified live on production)
+   - **HTML Verification File**: `https://jobalertgroups.com/googleiaqlM8LbV4PXhOqkuPvUfIvl_0JiGQm8Kc4HAI1qPeA.html` (Verified live on production)
+   - **Ownership**: `OWNER CHECK REQUIRED` (Requires owner to click "Verify" in Search Console UI)
+   - **Sitemap Google Status**: `OWNER CHECK REQUIRED` (Requires owner to submit `sitemap-index.xml` in Search Console UI)
+   - **Manual Actions**: `OWNER CHECK REQUIRED`
+   - **Security Issues**: `OWNER CHECK REQUIRED`
+   - **Search Console Status**: `OWNER CHECK REQUIRED`
+
 2. **Google Analytics 4**:
    - **Measurement ID**: `G-57Y77TMLM7`
    - **Loader**: `https://www.googletagmanager.com/gtag/js?id=G-57Y77TMLM7` (Async)
    - **Config Count**: Exactly 1 initialization with `{ anonymize_ip: true }`.
    - **Duplicate Loaders**: 0.
+   - **GA4 Tag Installation**: `VERIFIED`
+   - **GA4 Realtime Data**: `OWNER CHECK REQUIRED` (Requires owner to view live events in Google Analytics dashboard)
 
 ---
 
@@ -188,18 +197,36 @@ Audited via Google Chrome Lighthouse against live production `https://jobalertgr
 
 ---
 
-## 9. Automated Discovery & Pipeline Provenance
+## 9. Automated Discovery & Scheduled Pipeline Provenance
 
-- **Latest Discovery Run ID**: `32562728179` (`workflow_dispatch`)
-- **Queries Executed**: 120 targeted queries across all 14 markets with Google Search Grounding.
-- **Publication Funnel**:
-  - Raw Discovered Candidates: 10
-  - Job-Intent Passed: 10
-  - Active Links Confirmed: 10
-  - Market Evidence Confirmed: 10
-  - Auto-Published: 0 (held in multi-run probation observation queue in `src/data/pending-groups.json`)
-  - Link Health Revalidated: 5/5 active
-- **Safety Gate**: Max publish cap enforced at 5 per run; zero unverified or thin candidates auto-published without meeting strict Tier-A criteria.
+### Latest Scheduled Autonomous Discovery Run
+- **Workflow Run ID**: `32556531670`
+- **Trigger**: `schedule`
+- **Commit SHA**: `b6ebb2fb72d7dcef4e6e15c727706d3fc356b0c7`
+- **Date / Time**: `2026-08-22T06:16:17Z` (Started: `06:16:38Z`, Finished: `06:19:11Z`)
+- **Query Topics**: 120 queries
+- **Market Coverage**: 100% (All 14 target markets queried)
+- **Raw Candidates**: 1
+- **Passed Job-Intent**: 1
+- **Active Links**: 1
+- **Market-Confirmed**: 0 (1 unconfirmed target market held in queue)
+- **Auto-Published**: 0
+- **Revalidated Active**: 5/5
+- **Archived Total**: 0
+- **Run Result**: `SUCCESS`
+- **Autonomous Schedule Verified**: `YES`
+
+### Latest Manual Triggered Discovery Run
+- **Workflow Run ID**: `32562728179`
+- **Trigger**: `workflow_dispatch`
+- **Commit SHA**: `b853adb15f87b8eabe4cf1b83018ca0fb5e1bb47`
+- **Queries Executed**: 120 queries across all 14 markets
+- **Raw Candidates Discovered**: 43 candidates
+- **Passed Job-Intent**: 21
+- **Active Links Confirmed**: 19
+- **Probation Added to Pending Queue**: 5 candidates
+- **Revalidated Active**: 5/5
+- **Run Result**: `SUCCESS`
 
 ---
 
@@ -234,8 +261,10 @@ Duration    1.89s
 ## 11. Final Verdict
 
 - **Custom Domain Migration**: `VERIFIED YES`
-- **Google Search Console**: `VERIFIED YES` (Tag live, owner check required for UI verification)
-- **Google Analytics 4**: `VERIFIED YES`
+- **Search Console**: `OWNER CHECK REQUIRED` (Tags and verification file verified live on production; awaiting owner UI verification)
+- **GA4 Tag Installation**: `VERIFIED`
+- **GA4 Realtime Data**: `OWNER CHECK REQUIRED`
 - **On-Page SEO**: `VERIFIED YES`
 - **Technical SEO**: `VERIFIED YES`
-- **Automation Pipeline**: `VERIFIED YES`
+- **Autonomous Schedule**: `VERIFIED YES` (Run `32556531670` schedule trigger verified)
+
