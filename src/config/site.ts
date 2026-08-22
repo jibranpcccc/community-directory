@@ -7,7 +7,7 @@ export const siteConfig = {
     "Discover public WhatsApp, Telegram, and Discord communities sharing job openings, hiring alerts, career opportunities, and remote work across 14 target markets (13 countries + Worldwide/Remote).",
   description:
     "JobAlertHub discovers and monitors public job-alert communities across Discord, Telegram and WhatsApp, covering 14 target markets (13 countries and Worldwide/Remote) including the United States, United Kingdom, Canada, Australia, India, Germany, the Netherlands, Singapore, the United Arab Emirates, the Philippines, New Zealand, Ireland and South Africa.",
-  url: process.env.PUBLIC_SITE_URL || "https://communityhub-directory.netlify.app",
+  url: process.env.PUBLIC_SITE_URL || "https://jobalertgroups.com",
   defaultLocale: "en",
   showAdPlaceholders: process.env.SHOW_AD_PLACEHOLDERS === "true",
   taxonomyMinCommunitiesForIndex: 5, // minimum 5 published listings required before indexation

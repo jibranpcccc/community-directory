@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://communityhub-directory.netlify.app/sitemap-index.xml
+Sitemap: https://jobalertgroups.com/sitemap-index.xml

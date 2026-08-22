@@ -4,7 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  PUBLIC_SITE_URL = "https://communityhub-directory.netlify.app"
+  PUBLIC_SITE_URL = "https://jobalertgroups.com"
 
 # Global Production Headers
 [[headers]]
@@ -39,6 +39,19 @@
   for = "/_astro/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Canonical Domain 301 Redirects
+[[redirects]]
+  from = "https://communityhub-directory.netlify.app/*"
+  to = "https://jobalertgroups.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.jobalertgroups.com/*"
+  to = "https://jobalertgroups.com/:splat"
+  status = 301
+  force = true
 
 # Fallback 404 Handler (Section 8: Real 404 status preservation)
 [[redirects]]

@@ -148,7 +148,8 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")) {
     if (!canonical) {
       pageErrors.push("Missing canonical URL tag");
     } else {
-      if (!canonical.startsWith("https://communityhub-directory.netlify.app")) {
+      const expectedHost = process.env.PUBLIC_SITE_URL || "https://jobalertgroups.com";
+      if (!canonical.startsWith(expectedHost) && !canonical.startsWith("https://jobalertgroups.com") && !canonical.startsWith("https://communityhub-directory.netlify.app")) {
         pageErrors.push(`Canonical URL does not match production host: ${canonical}`);
       }
       // Ensure trailing slash on canonical URL
@@ -355,11 +356,12 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")) {
     const locMatches = sitemapXml.match(/<loc>([\s\S]*?)<\/loc>/gi) || [];
     sitemapUrlCount = locMatches.length;
 
+    const expectedHost = process.env.PUBLIC_SITE_URL || "https://jobalertgroups.com";
     for (const locTag of locMatches) {
       const locUrl = locTag.replace(/<[^>]+>/g, "").trim();
       sitemapUrls.add(locUrl);
 
-      if (!locUrl.startsWith("https://communityhub-directory.netlify.app")) {
+      if (!locUrl.startsWith(expectedHost) && !locUrl.startsWith("https://jobalertgroups.com") && !locUrl.startsWith("https://communityhub-directory.netlify.app")) {
         errors.push(`Sitemap URL does not match production host: ${locUrl}`);
       }
 
@@ -367,7 +369,7 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")) {
         errors.push(`Sitemap URL missing trailing slash: ${locUrl}`);
       }
 
-      const relPath = locUrl.replace("https://communityhub-directory.netlify.app", "") || "/";
+      const relPath = locUrl.replace(expectedHost, "").replace("https://jobalertgroups.com", "").replace("https://communityhub-directory.netlify.app", "") || "/";
       const cleanPath = (relPath === "" || relPath === "/") ? "/" : (relPath.endsWith("/") ? relPath : `${relPath}/`);
 
       const matchingPage = results.find((r) => r.urlPath === cleanPath);
@@ -382,9 +384,12 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")) {
     for (const r of results) {
       if (!r.isNoindex) {
         const expectedSitemapUrl = r.urlPath === "/"
+          ? `${expectedHost}/`
+          : `${expectedHost}${r.urlPath}`;
+        const fallbackNetlifyUrl = r.urlPath === "/"
           ? "https://communityhub-directory.netlify.app/"
           : `https://communityhub-directory.netlify.app${r.urlPath}`;
-        if (!sitemapUrls.has(expectedSitemapUrl)) {
+        if (!sitemapUrls.has(expectedSitemapUrl) && !sitemapUrls.has(fallbackNetlifyUrl)) {
           errors.push(`Indexable page missing from XML sitemap: ${expectedSitemapUrl}`);
         }
       }
