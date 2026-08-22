@@ -1162,8 +1162,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T06:19:11.064Z",
-    "lastSeenAt": "2026-08-22T08:41:37.232Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-08-22T12:25:54.979Z",
+    "timesSeen": 3,
     "title": "Ultra Job Update|Fresher Job| B.Tech|Diploma Job Group| Electrical Engineering |Mechanical Engineering |Civil Engineering"
   },
   {
@@ -1401,5 +1401,14 @@
     "date": "2026-08-22T08:41:37.232Z",
     "lastSeenAt": "2026-08-22T08:41:37.232Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/JobPhobia",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-22T12:25:54.979Z",
+    "lastSeenAt": "2026-08-22T12:25:54.979Z",
+    "timesSeen": 1,
+    "title": "JobPhobia - Latest Job Updates"
   }
 ]
