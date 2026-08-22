@@ -14,6 +14,7 @@ const req = https.request({
     console.log("=== HTML LIVE INTEGRITY REPORT ===");
     console.log("Status Code :", res.statusCode);
     console.log("Title       :", (data.match(/<title>([^<]*)<\/title>/i) || [])[1]);
+    console.log("GSC Tag     :", (data.match(/<meta\s+name=["']google-site-verification["']\s+content=["']([^"']*)["']>/i) || [])[0]);
     console.log("Canonical   :", (data.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']*)["']/i) || [])[1]);
     console.log("og:url      :", (data.match(/<meta\s+property=["']og:url["']\s+content=["']([^"']*)["']/i) || [])[1]);
     console.log("H1          :", (data.match(/<h1[^>]*>([^<]*)<\/h1>/i) || [])[1]);
