@@ -5,6 +5,7 @@
 [build.environment]
   NODE_VERSION = "20"
   PUBLIC_SITE_URL = "https://jobalertgroups.com"
+  PUBLIC_GSC_VERIFICATION = "iaqlM8LbV4PXhOqkuPvUfIvl_0JiGQm8Kc4HAI1qPeA"
 
 # Global Production Headers
 [[headers]]

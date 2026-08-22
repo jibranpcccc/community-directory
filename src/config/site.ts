@@ -19,7 +19,8 @@ export const siteConfig = {
   paginationPageSize: 24,
   analytics: {
     googleAnalyticsId: process.env.PUBLIC_GA_MEASUREMENT_ID || "",
-    googleSiteVerification: process.env.PUBLIC_GSC_VERIFICATION || "",
+    googleSiteVerification:
+      process.env.PUBLIC_GSC_VERIFICATION || "iaqlM8LbV4PXhOqkuPvUfIvl_0JiGQm8Kc4HAI1qPeA",
     bingSiteVerification: process.env.PUBLIC_BING_VERIFICATION || "",
   },
   links: {
