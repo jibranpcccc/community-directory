@@ -47,6 +47,8 @@ jobs:
           if [ -n "$NETLIFY_AUTH_TOKEN" ] && [ -n "$NETLIFY_SITE_ID" ]; then
             echo "Setting custom domain jobalertgroups.com on Netlify site..."
             npx netlify-cli api updateSite --data '{"site_id": "'"$NETLIFY_SITE_ID"'", "body": {"custom_domain": "jobalertgroups.com"}}' --auth="$NETLIFY_AUTH_TOKEN" || true
+            echo "Ensuring Google Search Console DNS TXT record in Netlify DNS zone..."
+            node scripts/utilities/addNetlifyDnsRecord.mjs || true
             echo "Deploying production build to Netlify..."
             npx netlify-cli deploy --prod --dir=dist --auth="$NETLIFY_AUTH_TOKEN" --site="$NETLIFY_SITE_ID"
           else
