@@ -34,7 +34,10 @@ export function getAllHtmlFiles(dir: string, baseDir: string = dir): string[] {
     if (entry.isDirectory()) {
       results = results.concat(getAllHtmlFiles(fullPath, baseDir));
     } else if (entry.isFile() && entry.name.endsWith(".html")) {
-      results.push(fullPath);
+      // Exclude Google verification static files
+      if (!/^google[a-zA-Z0-9_-]+\.html$/i.test(entry.name)) {
+        results.push(fullPath);
+      }
     }
   }
 
@@ -149,13 +152,22 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")) {
       pageErrors.push("Missing canonical URL tag");
     } else {
       const expectedHost = process.env.PUBLIC_SITE_URL || "https://jobalertgroups.com";
-      if (!canonical.startsWith(expectedHost) && !canonical.startsWith("https://jobalertgroups.com") && !canonical.startsWith("https://communityhub-directory.netlify.app")) {
+      if (!canonical.startsWith(expectedHost) && !canonical.startsWith("https://jobalertgroups.com")) {
         pageErrors.push(`Canonical URL does not match production host: ${canonical}`);
+      }
+      if (canonical.includes("communityhub-directory.netlify.app") || canonical.includes("localhost") || canonical.includes("127.0.0.1")) {
+        pageErrors.push(`Stale/Legacy host detected in canonical: ${canonical}`);
       }
       // Ensure trailing slash on canonical URL
       if (!canonical.endsWith("/") && !/\.[a-zA-Z0-9]+$/.test(canonical)) {
         pageErrors.push(`Canonical URL missing trailing slash: ${canonical}`);
       }
+    }
+
+    // Check Open Graph / Twitter metadata for stale host
+    if (content.includes("property=\"og:url\" content=\"https://communityhub-directory.netlify.app") ||
+        content.includes("name=\"twitter:url\" content=\"https://communityhub-directory.netlify.app")) {
+      pageErrors.push(`Stale/Legacy host detected in OpenGraph / Twitter metadata`);
     }
 
     // 5. Robots Meta Tag & Indexability Gating (Section 2)
@@ -361,15 +373,18 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")) {
       const locUrl = locTag.replace(/<[^>]+>/g, "").trim();
       sitemapUrls.add(locUrl);
 
-      if (!locUrl.startsWith(expectedHost) && !locUrl.startsWith("https://jobalertgroups.com") && !locUrl.startsWith("https://communityhub-directory.netlify.app")) {
+      if (!locUrl.startsWith(expectedHost) && !locUrl.startsWith("https://jobalertgroups.com")) {
         errors.push(`Sitemap URL does not match production host: ${locUrl}`);
+      }
+      if (locUrl.includes("communityhub-directory.netlify.app") || locUrl.includes("localhost") || locUrl.includes("127.0.0.1")) {
+        errors.push(`Stale/Legacy host detected in sitemap URL: ${locUrl}`);
       }
 
       if (!locUrl.endsWith("/") && !/\.[a-zA-Z0-9]+$/.test(locUrl)) {
         errors.push(`Sitemap URL missing trailing slash: ${locUrl}`);
       }
 
-      const relPath = locUrl.replace(expectedHost, "").replace("https://jobalertgroups.com", "").replace("https://communityhub-directory.netlify.app", "") || "/";
+      const relPath = locUrl.replace(expectedHost, "").replace("https://jobalertgroups.com", "") || "/";
       const cleanPath = (relPath === "" || relPath === "/") ? "/" : (relPath.endsWith("/") ? relPath : `${relPath}/`);
 
       const matchingPage = results.find((r) => r.urlPath === cleanPath);
@@ -386,10 +401,7 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")) {
         const expectedSitemapUrl = r.urlPath === "/"
           ? `${expectedHost}/`
           : `${expectedHost}${r.urlPath}`;
-        const fallbackNetlifyUrl = r.urlPath === "/"
-          ? "https://communityhub-directory.netlify.app/"
-          : `https://communityhub-directory.netlify.app${r.urlPath}`;
-        if (!sitemapUrls.has(expectedSitemapUrl) && !sitemapUrls.has(fallbackNetlifyUrl)) {
+        if (!sitemapUrls.has(expectedSitemapUrl) && !sitemapUrls.has(`https://jobalertgroups.com${r.urlPath}`)) {
           errors.push(`Indexable page missing from XML sitemap: ${expectedSitemapUrl}`);
         }
       }

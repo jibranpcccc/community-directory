@@ -186,7 +186,7 @@ export default defineConfig({
         return true;
       },
       serialize: (item) => {
-        const siteUrl = (process.env.PUBLIC_SITE_URL || 'https://communityhub-directory.netlify.app').replace(/\/+$/, '');
+        const siteUrl = (process.env.PUBLIC_SITE_URL || 'https://jobalertgroups.com').replace(/\/+$/, '');
         if (item.url === siteUrl || item.url === `${siteUrl}/`) {
           item.url = `${siteUrl}/`;
         } else if (!item.url.endsWith('/')) {

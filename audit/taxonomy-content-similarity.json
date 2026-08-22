@@ -1,0 +1,668 @@
+{
+  "totalPairs": 666,
+  "exactDuplicateSubstantiveParagraphs": 0,
+  "highSimilarityPairs": 95,
+  "manualReviewPairs": 15,
+  "pairs": [
+    {
+      "routeA": "/country/global/",
+      "routeB": "/category/remote-jobs/",
+      "similarity": 0.7528,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/country/global/",
+      "routeB": "/job-type/remote-jobs/",
+      "similarity": 0.7253,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/country/usa/",
+      "routeB": "/category/remote-jobs/",
+      "similarity": 0.7865,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/country/usa/",
+      "routeB": "/platform/telegram/",
+      "similarity": 0.7,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/country/usa/",
+      "routeB": "/job-type/remote-jobs/",
+      "similarity": 0.7582,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/country/canada/",
+      "routeB": "/category/tech-jobs/",
+      "similarity": 0.8481,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/country/canada/",
+      "routeB": "/platform/discord/",
+      "similarity": 0.7283,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/country/canada/",
+      "routeB": "/job-type/full-time-jobs/",
+      "similarity": 0.9565,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/canada/",
+      "routeB": "/job-type/internships/",
+      "similarity": 0.9565,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/canada/",
+      "routeB": "/job-type/graduate-jobs/",
+      "similarity": 0.9565,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/canada/",
+      "routeB": "/job-type/entry-level-jobs/",
+      "similarity": 0.9565,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/australia/",
+      "routeB": "/country/india/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/australia/",
+      "routeB": "/country/germany/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/australia/",
+      "routeB": "/country/netherlands/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/australia/",
+      "routeB": "/country/singapore/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/australia/",
+      "routeB": "/country/uae/",
+      "similarity": 0.9149,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/australia/",
+      "routeB": "/country/philippines/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/australia/",
+      "routeB": "/country/new-zealand/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/australia/",
+      "routeB": "/country/ireland/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/australia/",
+      "routeB": "/country/south-africa/",
+      "similarity": 0.9348,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/india/",
+      "routeB": "/country/germany/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/india/",
+      "routeB": "/country/netherlands/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/india/",
+      "routeB": "/country/singapore/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/india/",
+      "routeB": "/country/uae/",
+      "similarity": 0.9149,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/india/",
+      "routeB": "/country/philippines/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/india/",
+      "routeB": "/country/new-zealand/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/india/",
+      "routeB": "/country/ireland/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/india/",
+      "routeB": "/country/south-africa/",
+      "similarity": 0.9348,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/germany/",
+      "routeB": "/country/netherlands/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/germany/",
+      "routeB": "/country/singapore/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/germany/",
+      "routeB": "/country/uae/",
+      "similarity": 0.9149,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/germany/",
+      "routeB": "/country/philippines/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/germany/",
+      "routeB": "/country/new-zealand/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/germany/",
+      "routeB": "/country/ireland/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/germany/",
+      "routeB": "/country/south-africa/",
+      "similarity": 0.9348,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/netherlands/",
+      "routeB": "/country/singapore/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/netherlands/",
+      "routeB": "/country/uae/",
+      "similarity": 0.9149,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/netherlands/",
+      "routeB": "/country/philippines/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/netherlands/",
+      "routeB": "/country/new-zealand/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/netherlands/",
+      "routeB": "/country/ireland/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/netherlands/",
+      "routeB": "/country/south-africa/",
+      "similarity": 0.9348,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/singapore/",
+      "routeB": "/country/uae/",
+      "similarity": 0.9149,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/singapore/",
+      "routeB": "/country/philippines/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/singapore/",
+      "routeB": "/country/new-zealand/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/singapore/",
+      "routeB": "/country/ireland/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/singapore/",
+      "routeB": "/country/south-africa/",
+      "similarity": 0.9348,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/uae/",
+      "routeB": "/country/philippines/",
+      "similarity": 0.9149,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/uae/",
+      "routeB": "/country/new-zealand/",
+      "similarity": 0.9149,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/uae/",
+      "routeB": "/country/ireland/",
+      "similarity": 0.9149,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/uae/",
+      "routeB": "/country/south-africa/",
+      "similarity": 0.8958,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/philippines/",
+      "routeB": "/country/new-zealand/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/philippines/",
+      "routeB": "/country/ireland/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/philippines/",
+      "routeB": "/country/south-africa/",
+      "similarity": 0.9348,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/new-zealand/",
+      "routeB": "/country/ireland/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/new-zealand/",
+      "routeB": "/country/south-africa/",
+      "similarity": 0.9348,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/country/ireland/",
+      "routeB": "/country/south-africa/",
+      "similarity": 0.9348,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/remote-jobs/",
+      "routeB": "/platform/telegram/",
+      "similarity": 0.8878,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/remote-jobs/",
+      "routeB": "/job-type/remote-jobs/",
+      "similarity": 0.9663,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/tech-jobs/",
+      "routeB": "/platform/discord/",
+      "similarity": 0.8587,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/tech-jobs/",
+      "routeB": "/job-type/full-time-jobs/",
+      "similarity": 0.8148,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/category/tech-jobs/",
+      "routeB": "/job-type/internships/",
+      "similarity": 0.8148,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/category/tech-jobs/",
+      "routeB": "/job-type/graduate-jobs/",
+      "similarity": 0.8148,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/category/tech-jobs/",
+      "routeB": "/job-type/entry-level-jobs/",
+      "similarity": 0.8148,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/category/healthcare-jobs/",
+      "routeB": "/category/finance-jobs/",
+      "similarity": 0.9167,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/healthcare-jobs/",
+      "routeB": "/category/internships-graduate/",
+      "similarity": 0.898,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/healthcare-jobs/",
+      "routeB": "/category/visa-sponsorship-jobs/",
+      "similarity": 0.898,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/healthcare-jobs/",
+      "routeB": "/category/government-jobs/",
+      "similarity": 0.9167,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/healthcare-jobs/",
+      "routeB": "/category/sales-marketing-jobs/",
+      "similarity": 0.9167,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/healthcare-jobs/",
+      "routeB": "/category/engineering-jobs/",
+      "similarity": 0.9167,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/finance-jobs/",
+      "routeB": "/category/internships-graduate/",
+      "similarity": 0.898,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/finance-jobs/",
+      "routeB": "/category/visa-sponsorship-jobs/",
+      "similarity": 0.898,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/finance-jobs/",
+      "routeB": "/category/government-jobs/",
+      "similarity": 0.9167,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/finance-jobs/",
+      "routeB": "/category/sales-marketing-jobs/",
+      "similarity": 0.9167,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/finance-jobs/",
+      "routeB": "/category/engineering-jobs/",
+      "similarity": 0.9167,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/internships-graduate/",
+      "routeB": "/category/visa-sponsorship-jobs/",
+      "similarity": 0.9184,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/internships-graduate/",
+      "routeB": "/category/government-jobs/",
+      "similarity": 0.898,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/internships-graduate/",
+      "routeB": "/category/sales-marketing-jobs/",
+      "similarity": 0.898,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/internships-graduate/",
+      "routeB": "/category/engineering-jobs/",
+      "similarity": 0.898,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/visa-sponsorship-jobs/",
+      "routeB": "/category/government-jobs/",
+      "similarity": 0.898,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/visa-sponsorship-jobs/",
+      "routeB": "/category/sales-marketing-jobs/",
+      "similarity": 0.898,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/visa-sponsorship-jobs/",
+      "routeB": "/category/engineering-jobs/",
+      "similarity": 0.898,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/government-jobs/",
+      "routeB": "/category/sales-marketing-jobs/",
+      "similarity": 0.9167,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/government-jobs/",
+      "routeB": "/category/engineering-jobs/",
+      "similarity": 0.9167,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/sales-marketing-jobs/",
+      "routeB": "/category/engineering-jobs/",
+      "similarity": 0.9167,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/platform/telegram/",
+      "routeB": "/job-type/remote-jobs/",
+      "similarity": 0.86,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/platform/discord/",
+      "routeB": "/job-type/full-time-jobs/",
+      "similarity": 0.7021,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/platform/discord/",
+      "routeB": "/job-type/internships/",
+      "similarity": 0.7021,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/platform/discord/",
+      "routeB": "/job-type/graduate-jobs/",
+      "similarity": 0.7021,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/platform/discord/",
+      "routeB": "/job-type/entry-level-jobs/",
+      "similarity": 0.7021,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/job-type/full-time-jobs/",
+      "routeB": "/job-type/internships/",
+      "similarity": 0.971,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/full-time-jobs/",
+      "routeB": "/job-type/graduate-jobs/",
+      "similarity": 0.971,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/full-time-jobs/",
+      "routeB": "/job-type/entry-level-jobs/",
+      "similarity": 0.971,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/internships/",
+      "routeB": "/job-type/graduate-jobs/",
+      "similarity": 0.971,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/internships/",
+      "routeB": "/job-type/entry-level-jobs/",
+      "similarity": 0.971,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/graduate-jobs/",
+      "routeB": "/job-type/entry-level-jobs/",
+      "similarity": 0.971,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/contract-jobs/",
+      "routeB": "/job-type/freelance-jobs/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/contract-jobs/",
+      "routeB": "/job-type/visa-sponsorship-jobs/",
+      "similarity": 0.9348,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/contract-jobs/",
+      "routeB": "/job-type/government-jobs/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/contract-jobs/",
+      "routeB": "/job-type/part-time-jobs/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/contract-jobs/",
+      "routeB": "/job-type/temporary-jobs/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/freelance-jobs/",
+      "routeB": "/job-type/visa-sponsorship-jobs/",
+      "similarity": 0.9348,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/freelance-jobs/",
+      "routeB": "/job-type/government-jobs/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/freelance-jobs/",
+      "routeB": "/job-type/part-time-jobs/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/freelance-jobs/",
+      "routeB": "/job-type/temporary-jobs/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/visa-sponsorship-jobs/",
+      "routeB": "/job-type/government-jobs/",
+      "similarity": 0.9348,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/visa-sponsorship-jobs/",
+      "routeB": "/job-type/part-time-jobs/",
+      "similarity": 0.9348,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/visa-sponsorship-jobs/",
+      "routeB": "/job-type/temporary-jobs/",
+      "similarity": 0.9348,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/government-jobs/",
+      "routeB": "/job-type/part-time-jobs/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/government-jobs/",
+      "routeB": "/job-type/temporary-jobs/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/job-type/part-time-jobs/",
+      "routeB": "/job-type/temporary-jobs/",
+      "similarity": 0.9556,
+      "classification": "HIGH_SIMILARITY"
+    }
+  ]
+}

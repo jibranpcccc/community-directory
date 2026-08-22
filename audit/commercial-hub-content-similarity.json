@@ -1,0 +1,224 @@
+{
+  "totalPairs": 36,
+  "exactDuplicates": 0,
+  "highSimilarity": 4,
+  "manualReview": 2,
+  "pairs": [
+    {
+      "routeA": "/",
+      "routeB": "/jobs/",
+      "similarity": 0.3791,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/",
+      "routeB": "/country/global/",
+      "similarity": 0.1667,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/",
+      "routeB": "/category/tech-jobs/",
+      "similarity": 0.1908,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/",
+      "routeB": "/category/remote-jobs/",
+      "similarity": 0.2101,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/",
+      "routeB": "/platform/telegram/",
+      "similarity": 0.2162,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/",
+      "routeB": "/platform/discord/",
+      "similarity": 0.1991,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/",
+      "routeB": "/platform/whatsapp/",
+      "similarity": 0.0958,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/",
+      "routeB": "/job-type/remote-jobs/",
+      "similarity": 0.2126,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/jobs/",
+      "routeB": "/country/global/",
+      "similarity": 0.3855,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/jobs/",
+      "routeB": "/category/tech-jobs/",
+      "similarity": 0.4413,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/jobs/",
+      "routeB": "/category/remote-jobs/",
+      "similarity": 0.486,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/jobs/",
+      "routeB": "/platform/telegram/",
+      "similarity": 0.4656,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/jobs/",
+      "routeB": "/platform/discord/",
+      "similarity": 0.4339,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/jobs/",
+      "routeB": "/platform/whatsapp/",
+      "similarity": 0.1759,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/jobs/",
+      "routeB": "/job-type/remote-jobs/",
+      "similarity": 0.4833,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/country/global/",
+      "routeB": "/category/tech-jobs/",
+      "similarity": 0.3962,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/country/global/",
+      "routeB": "/category/remote-jobs/",
+      "similarity": 0.7528,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/country/global/",
+      "routeB": "/platform/telegram/",
+      "similarity": 0.67,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/country/global/",
+      "routeB": "/platform/discord/",
+      "similarity": 0.3761,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/country/global/",
+      "routeB": "/platform/whatsapp/",
+      "similarity": 0.3478,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/country/global/",
+      "routeB": "/job-type/remote-jobs/",
+      "similarity": 0.7253,
+      "classification": "MANUAL_REVIEW"
+    },
+    {
+      "routeA": "/category/tech-jobs/",
+      "routeB": "/category/remote-jobs/",
+      "similarity": 0.3496,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/category/tech-jobs/",
+      "routeB": "/platform/telegram/",
+      "similarity": 0.3209,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/category/tech-jobs/",
+      "routeB": "/platform/discord/",
+      "similarity": 0.8587,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/tech-jobs/",
+      "routeB": "/platform/whatsapp/",
+      "similarity": 0.2885,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/category/tech-jobs/",
+      "routeB": "/job-type/remote-jobs/",
+      "similarity": 0.336,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/category/remote-jobs/",
+      "routeB": "/platform/telegram/",
+      "similarity": 0.8878,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/category/remote-jobs/",
+      "routeB": "/platform/discord/",
+      "similarity": 0.3358,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/category/remote-jobs/",
+      "routeB": "/platform/whatsapp/",
+      "similarity": 0.2909,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/category/remote-jobs/",
+      "routeB": "/job-type/remote-jobs/",
+      "similarity": 0.9663,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/platform/telegram/",
+      "routeB": "/platform/discord/",
+      "similarity": 0.4074,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/platform/telegram/",
+      "routeB": "/platform/whatsapp/",
+      "similarity": 0.3784,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/platform/telegram/",
+      "routeB": "/job-type/remote-jobs/",
+      "similarity": 0.86,
+      "classification": "HIGH_SIMILARITY"
+    },
+    {
+      "routeA": "/platform/discord/",
+      "routeB": "/platform/whatsapp/",
+      "similarity": 0.4,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/platform/discord/",
+      "routeB": "/job-type/remote-jobs/",
+      "similarity": 0.3235,
+      "classification": "DISTINCT"
+    },
+    {
+      "routeA": "/platform/whatsapp/",
+      "routeB": "/job-type/remote-jobs/",
+      "similarity": 0.2883,
+      "classification": "DISTINCT"
+    }
+  ]
+}

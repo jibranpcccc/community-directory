@@ -6,6 +6,7 @@
   NODE_VERSION = "20"
   PUBLIC_SITE_URL = "https://jobalertgroups.com"
   PUBLIC_GSC_VERIFICATION = "iaqlM8LbV4PXhOqkuPvUfIvl_0JiGQm8Kc4HAI1qPeA"
+  PUBLIC_GA_MEASUREMENT_ID = "G-57Y77TMLM7"
 
 # Global Production Headers
 [[headers]]
@@ -15,7 +16,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), screen-wake-lock=()"
-    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none'; form-action 'self' https:; base-uri 'self';"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com; frame-ancestors 'none'; form-action 'self' https:; base-uri 'self';"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-XSS-Protection = "1; mode=block"
 

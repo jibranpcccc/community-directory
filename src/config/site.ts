@@ -18,7 +18,7 @@ export const siteConfig = {
   platformMinCommunities: 5,         // minimum 5 published listings required before platform indexation
   paginationPageSize: 24,
   analytics: {
-    googleAnalyticsId: process.env.PUBLIC_GA_MEASUREMENT_ID || "",
+    googleAnalyticsId: process.env.PUBLIC_GA_MEASUREMENT_ID || "G-57Y77TMLM7",
     googleSiteVerification:
       process.env.PUBLIC_GSC_VERIFICATION || "iaqlM8LbV4PXhOqkuPvUfIvl_0JiGQm8Kc4HAI1qPeA",
     bingSiteVerification: process.env.PUBLIC_BING_VERIFICATION || "",
