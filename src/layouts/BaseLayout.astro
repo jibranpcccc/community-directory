@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { getSeoMetadata } from "../lib/seo";
 import type { SeoProps } from "../lib/seo";
+import { siteConfig } from "../config/site";
 import "../styles/global.css";
 
 interface Props extends SeoProps {
@@ -29,6 +30,10 @@ const seo = getSeoMetadata({
   noindex,
   pageType,
 });
+
+const gaId = siteConfig.analytics?.googleAnalyticsId;
+const gscVerification = siteConfig.analytics?.googleSiteVerification;
+const bingVerification = siteConfig.analytics?.bingSiteVerification;
 ---
 
 <!doctype html>
@@ -41,6 +46,23 @@ const seo = getSeoMetadata({
 
     <!-- Resource Hints & Theme Color -->
     <meta name="theme-color" content="#FEF08A" />
+
+    <!-- Webmaster Verification Tags -->
+    {gscVerification && <meta name="google-site-verification" content={gscVerification} />}
+    {bingVerification && <meta name="msvalidate.01" content={bingVerification} />}
+
+    <!-- Google Analytics (GA4) -->
+    {gaId && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+        <script is:inline define:vars={{ gaId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', gaId, { anonymize_ip: true });
+        </script>
+      </>
+    )}
 
     <!-- SEO Meta Tags -->
     <title>{seo.title}</title>

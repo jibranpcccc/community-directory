@@ -17,6 +17,11 @@ export const siteConfig = {
   jobTypeMinCommunities: 5,          // minimum 5 published listings required before job-type indexation
   platformMinCommunities: 5,         // minimum 5 published listings required before platform indexation
   paginationPageSize: 24,
+  analytics: {
+    googleAnalyticsId: process.env.PUBLIC_GA_MEASUREMENT_ID || "",
+    googleSiteVerification: process.env.PUBLIC_GSC_VERIFICATION || "",
+    bingSiteVerification: process.env.PUBLIC_BING_VERIFICATION || "",
+  },
   links: {
     github: "https://github.com/jibranpcccc/community-directory",
     submit: "/submit/",
