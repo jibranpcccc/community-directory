@@ -213,9 +213,13 @@ describe("SEO Engine & JSON-LD Generators", () => {
       const schema = generateBreadcrumbSchema(breadcrumbs);
       expect(schema["@context"]).toBe("https://schema.org");
       expect(schema["@type"]).toBe("BreadcrumbList");
-      expect(schema.itemListElement).toHaveLength(2);
-      expect(schema.itemListElement[0].item).toBe(`${baseUrl}/jobs/`);
-      expect(schema.itemListElement[1].item).toBe(`${baseUrl}/country/canada/`);
+      expect(schema.itemListElement).toHaveLength(3);
+      expect(schema.itemListElement[0].name).toBe("Home");
+      expect(schema.itemListElement[0].item).toBe(`${baseUrl}/`);
+      expect(schema.itemListElement[1].name).toBe("All Jobs");
+      expect(schema.itemListElement[1].item).toBe(`${baseUrl}/jobs/`);
+      expect(schema.itemListElement[2].name).toBe("Canada");
+      expect(schema.itemListElement[2].item).toBe(`${baseUrl}/country/canada/`);
     });
 
     it("generates valid CollectionPage JSON-LD schema for category directories", () => {

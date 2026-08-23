@@ -1,4 +1,4 @@
-# Autonomous Job Directory — Comprehensive Automation Audit & Engineering Report
+# Autonomous Job Directory â€” Comprehensive Automation Audit & Engineering Report
 
 ---
 
@@ -8,39 +8,39 @@ The **JobAlertHub Directory** is an autonomous, statically generated directory b
 
 ```text
 [External Discovery Sources] (Gemini Google Search Grounding / Manual Seeds)
-       ¦
+       â€”
        ?
 [Discovery & Pre-Filtering Engine] (scripts/discover/index.ts)
-       ¦  - Strict Tier-1 Market & Intent Filter
-       ¦  - Zero-Fabrication Metadata Provenance Extraction
-       ¦  - Link Validation (Discord API / Telegram Web / WhatsApp Web)
-       ¦  - Independent Outbound Source Verification & Persistence
+       â€”  - Strict Tier-1 Market & Intent Filter
+       â€”  - Zero-Fabrication Metadata Provenance Extraction
+       â€”  - Link Validation (Discord API / Telegram Web / WhatsApp Web)
+       â€”  - Independent Outbound Source Verification & Persistence
        ?
 [Staging & Probation Store] (src/data/pending-groups.json)
-       ¦  - Unique observedRunIds & providerIds Multi-Observation Tracking
-       ¦  - Real Staging Merge Helper (scripts/data/mergeStaging.ts)
-       ¦  - 7-Day Maximum Probation Window
+       â€”  - Unique observedRunIds & providerIds Multi-Observation Tracking
+       â€”  - Real Staging Merge Helper (scripts/data/mergeStaging.ts)
+       â€”  - 7-Day Maximum Probation Window
        ?
 [Autonomous Publication Engine] (scripts/data/autoPublish.ts)
-       ¦  - Fail-Closed Global Circuit Breaker
-       ¦  - Tier A / Tier B Mandatory Evidence Gates
-       ¦  - Multi-Platform Batch Deduplication
-       ¦  - Stable Identifier Archived Restoration
+       â€”  - Fail-Closed Global Circuit Breaker
+       â€”  - Tier A / Tier B Mandatory Evidence Gates
+       â€”  - Multi-Platform Batch Deduplication
+       â€”  - Stable Identifier Archived Restoration
        ?
 [Production Catalog] (src/data/groups.json)
-       ¦
+       â€”
        ?
 [Daily Revalidation & Auto-Unpublish Engine] (scripts/data/revalidatePublished.ts)
-       ¦  - Atomic Disk Persistence on every pass
-       ¦  - 3-Attempt Consecutive Unknown Threshold
-       ¦  - 30-Day Periodic Source Reverification & Tier B Re-Evaluation
+       â€”  - Atomic Disk Persistence on every pass
+       â€”  - 3-Attempt Consecutive Unknown Threshold
+       â€”  - 30-Day Periodic Source Reverification & Tier B Re-Evaluation
        ?
 [Archived Store] (src/data/archived-groups.json)
-       ¦
+       â€”
        ?
 [Netlify Production Deployment] (.github/workflows/discover-groups.yml)
-       ¦  - Automated Astro Static Build (51 routes)
-       ¦  - Deterministic Direct API Deployment to Netlify CDN Edge
+       â€”  - Automated Astro Static Build (51 routes)
+       â€”  - Deterministic Direct API Deployment to Netlify CDN Edge
 ```
 
 ---
@@ -52,12 +52,12 @@ The **JobAlertHub Directory** is an autonomous, statically generated directory b
    - Executes rotating search queries across Tier-1 markets (US 40%, GB 25%, CA 20%, AU 15%).
    - Multi-key pool rotation with automated backoff and cooldown.
 2. **Production Staging Integration (`scripts/data/mergeStaging.ts`)**:
-   - **Production Call Site**: `scripts/discover/index.ts` (lines 612–626) invokes `stageDiscoveredCandidates(...)` when saving discovered candidates to `src/data/pending-groups.json`.
+   - **Production Call Site**: `scripts/discover/index.ts` (lines 612â€”626) invokes `stageDiscoveredCandidates(...)` when saving discovered candidates to `src/data/pending-groups.json`.
    - **Unified Run IDs**: A single unique `currentRunId` (e.g. `run_<timestamp>_<hash>`) is generated per discovery execution and stamped across all newly discovered/re-observed candidates.
    - **Multi-Observation Corroboration**: Candidates rediscovered across multiple runs append unique run IDs to `observedRunIds` (e.g. `["RUN_A", "RUN_B"]`).
    - **Multi-Provider Corroboration**: Unique discovery providers are merged into `providerIds` (e.g. `["gemini-search", "tavily-search"]`).
 3. **Discovery `sourceVerification` Record Creation**:
-   - **Production Call Site**: `scripts/discover/index.ts` (lines 547–557) creates a complete `sourceVerification` record when `verifySourceMentionsInvite(...)` confirms an outbound link on an independent source page:
+   - **Production Call Site**: `scripts/discover/index.ts` (lines 547â€”557) creates a complete `sourceVerification` record when `verifySourceMentionsInvite(...)` confirms an outbound link on an independent source page:
      ```typescript
      sourceVerification: {
        status: "confirmed",

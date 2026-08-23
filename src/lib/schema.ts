@@ -25,10 +25,15 @@ export function generateWebSiteSchema() {
  * Generates BreadcrumbList JSON-LD schema matching visible hierarchy.
  */
 export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
+  const allItems =
+    items.length > 0 && items[0].item === "/"
+      ? items
+      : [{ name: "Home", item: "/" }, ...items];
+
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((crumb, index) => ({
+    itemListElement: allItems.map((crumb, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: crumb.name,
