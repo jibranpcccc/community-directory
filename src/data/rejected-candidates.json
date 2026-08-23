@@ -1235,18 +1235,20 @@
   {
     "url": "https://chat.whatsapp.com/EPWJSAFnO4O10mdi4g3WoD",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-08-22T08:41:37.232Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 2,
+    "title": "EPWJSAFnO4O10mdi4g3WoD"
   },
   {
     "url": "https://chat.whatsapp.com/KTR7MfXWYE1KXRy9qAZuDf",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-08-22T08:41:37.232Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 2,
+    "title": "KTR7MfXWYE1KXRy9qAZuDf"
   },
   {
     "url": "https://chat.whatsapp.com/5vsT3UwP2WwHkugvdooaFM",
@@ -1340,8 +1342,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-08-22T08:41:37.232Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 2,
     "title": "Singapore Careers and Job Opportunities - sgCareers"
   },
   {
@@ -1432,15 +1434,396 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-23T06:20:45.276Z",
-    "lastSeenAt": "2026-08-23T06:20:45.276Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/WW5yefEamr",
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-23T06:20:45.276Z",
-    "lastSeenAt": "2026-08-23T06:20:45.276Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://discord.gg/UJrgTk8v",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/kCtARcKw",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/6hRONCM2BCYIATLj5M5RDl",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "6hRONCM2BCYIATLj5M5RDl"
+  },
+  {
+    "url": "https://chat.whatsapp.com/FapnrVI6xYVComrquu2Uwl",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "Jobaxes"
+  },
+  {
+    "url": "https://chat.whatsapp.com/EehzRZA6zMm8Y49LLoaRVt",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "Civil Designer jobs"
+  },
+  {
+    "url": "https://chat.whatsapp.com/CaulPUTAe2dCGDSOqsgrwz",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "Java developer"
+  },
+  {
+    "url": "https://chat.whatsapp.com/Kt2zrTI9On85j0leXpnoY2",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "Process engineer"
+  },
+  {
+    "url": "https://chat.whatsapp.com/Crh6lYDSHc7KekoFbOsoVv",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "Revit engineer"
+  },
+  {
+    "url": "https://chat.whatsapp.com/JmjQxu07X1W9xhSBdx7Aq2",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "Tekla"
+  },
+  {
+    "url": "https://chat.whatsapp.com/I96Lq9QJnTO4vFEHaELoha",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "I96Lq9QJnTO4vFEHaELoha"
+  },
+  {
+    "url": "https://chat.whatsapp.com/JXw6CJipq5TF82e60bDmQ0",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "It&#x2019;s Time For Ireland"
+  },
+  {
+    "url": "https://t.me/GILEJoBs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "Get Employed with GILEJoBs.co.za 🎓"
+  },
+  {
+    "url": "https://discord.gg/invide",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/smartremotejobs",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/worksignal",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/z2cTehXy",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/devcord",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "devcord"
+  },
+  {
+    "url": "https://discord.gg/reactiflux",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: General chat/entertainment community without verified job alert intent.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "Reactiflux"
+  },
+  {
+    "url": "https://discord.gg/careercompass",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/job",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://discord.gg/awHZtSf89q",
+    "platform": "discord",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "🤝Devs For Hire & Jobs💰💻"
+  },
+  {
+    "url": "https://chat.whatsapp.com/EcJvgG4L5BALNkiiebazQ8",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "EcJvgG4L5BALNkiiebazQ8"
+  },
+  {
+    "url": "https://chat.whatsapp.com/FHAW5iyQtdj9IkiTHsRBJW",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "FHAW5iyQtdj9IkiTHsRBJW"
+  },
+  {
+    "url": "https://chat.whatsapp.com/F7r148hfgUSJYUjFiHuKkd",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "F7r148hfgUSJYUjFiHuKkd"
+  },
+  {
+    "url": "https://t.me/fresheroffcampus",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "FresherOffCampus Official Channel"
+  },
+  {
+    "url": "https://chat.whatsapp.com/FgJNY5FCJTDEPLpgIlBz0N",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/sgQuickJobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "Singapore Part Time / Contract Jobs - sgQuickJobs"
+  },
+  {
+    "url": "https://t.me/JobHitchpt",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "JobHitch SG (Part Time Jobs)"
+  },
+  {
+    "url": "https://t.me/snapjobssg",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/jobprop",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "Singapore JobProp"
+  },
+  {
+    "url": "https://t.me/sgparttimetalent",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "𝕊𝔾 ℙ𝕒𝕣𝕥 𝕋𝕚𝕞𝕖𝕣𝕤 &amp; 𝕋𝕒𝕝𝕖𝕟𝕥𝕤"
+  },
+  {
+    "url": "https://t.me/jobsforyouSG",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "JobswithusSG #Singapore Jobs"
+  },
+  {
+    "url": "https://discord.gg/5rwNRJma2",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/vYJDEsFuHe",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/bx7HfukmeH",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "Egyptian Developers"
+  },
+  {
+    "url": "https://discord.gg/CQp7kSNVX6",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/uTXF6yF4Wb",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/FNtZ9Vab2J",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/fwjhsPK",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "/r/DSPD"
+  },
+  {
+    "url": "https://discord.gg/FukPzQh",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "Memphis Game Dev"
+  },
+  {
+    "url": "https://chat.whatsapp.com/BBQ2X78y4VB4M9VJjnSu0f",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "JobMinia.Com 2"
+  },
+  {
+    "url": "https://chat.whatsapp.com/Dda9BoeJOBHJhUikHbSnjx",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "JobMinia.Com"
+  },
+  {
+    "url": "https://chat.whatsapp.com/EUNQpVHEa6Y6qmX5rsKrnt",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "A CHAT WITH TEACHER SEGUN &amp; CO. on Successful Schooling &amp; Education"
+  },
+  {
+    "url": "https://chat.whatsapp.com/KNYZOUAlWrzG2J0BpUaJAx",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-23T12:19:51.715Z",
+    "lastSeenAt": "2026-08-23T12:19:51.715Z",
+    "timesSeen": 1,
+    "title": "KNYZOUAlWrzG2J0BpUaJAx"
   }
 ]
