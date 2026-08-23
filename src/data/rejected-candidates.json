@@ -1410,5 +1410,13 @@
     "lastSeenAt": "2026-08-22T12:25:54.979Z",
     "timesSeen": 1,
     "title": "JobPhobia - Latest Job Updates"
+  },
+  {
+    "url": "https://discord.gg/kDQ3nGufG8",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-23T00:30:25.838Z",
+    "lastSeenAt": "2026-08-23T00:30:25.838Z",
+    "timesSeen": 1
   }
 ]
