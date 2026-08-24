@@ -45,12 +45,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-22T08:41:37.232Z",
     "lastCheckedAt": "2026-08-22T08:41:37.232Z",
     "updatedAt": "2026-08-22T08:41:37.232Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-08-22T08:41:37.232Z",
@@ -64,7 +64,11 @@
       "run_1787388099732_zh39t"
     ],
     "querySource": "site:t.me engineering job postings UK Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-52h"
+    ]
   },
   {
     "id": "jobs-pillarindia-telegram",
@@ -112,12 +116,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-22T08:41:37.232Z",
     "lastCheckedAt": "2026-08-22T08:41:37.232Z",
     "updatedAt": "2026-08-22T08:41:37.232Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-08-22T08:41:37.232Z",
@@ -131,7 +135,11 @@
       "run_1787388101733_ta069"
     ],
     "querySource": "site:t.me engineering job postings India Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-52h"
+    ]
   },
   {
     "id": "uae-job-alerts-telegram",
@@ -179,12 +187,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-22T08:41:37.232Z",
     "lastCheckedAt": "2026-08-22T08:41:37.232Z",
     "updatedAt": "2026-08-22T08:41:37.232Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-08-22T08:41:37.232Z",
@@ -198,7 +206,11 @@
       "run_1787388102747_j8wec"
     ],
     "querySource": "discord.gg engineering job postings UAE Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-52h"
+    ]
   },
   {
     "id": "world-jobs-telegram",
@@ -242,12 +254,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-22T08:41:37.232Z",
     "lastCheckedAt": "2026-08-22T08:41:37.232Z",
     "updatedAt": "2026-08-22T08:41:37.232Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-08-22T08:41:37.232Z",
@@ -261,7 +273,12 @@
       "run_1787388103223_ioiaz"
     ],
     "querySource": "discord.gg engineering job postings UAE Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-52h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching AE found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   },
   {
     "id": "jobs-in-uae-telegram",
@@ -309,12 +326,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-22T08:41:37.232Z",
     "lastCheckedAt": "2026-08-22T08:41:37.232Z",
     "updatedAt": "2026-08-22T08:41:37.232Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-08-22T08:41:37.232Z",
@@ -328,7 +345,11 @@
       "run_1787388104309_6jbne"
     ],
     "querySource": "discord.gg engineering job postings UAE Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-52h"
+    ]
   },
   {
     "id": "it-jobs-south-africa-telegram",
@@ -376,12 +397,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-23T12:19:51.715Z",
     "lastCheckedAt": "2026-08-23T12:19:51.715Z",
     "updatedAt": "2026-08-23T12:19:51.715Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-08-23T12:19:51.715Z",
@@ -395,7 +416,11 @@
       "run_1787487596583_3qdd7"
     ],
     "querySource": "site:t.me Johannesburg tech jobs OR Johannesburg job alerts",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-24h"
+    ]
   },
   {
     "id": "cronjobs-discord",
@@ -439,12 +464,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": "1488674851345531057",
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-23T12:19:51.715Z",
     "lastCheckedAt": "2026-08-23T12:19:51.715Z",
     "updatedAt": "2026-08-23T12:19:51.715Z",
     "safetyFlags": [],
+    "guildId": "1488674851345531057",
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-08-23T12:19:51.715Z",
@@ -458,7 +483,12 @@
       "run_1787487597284_ieunc"
     ],
     "querySource": "discord.gg Remote tech jobs OR Remote hiring",
-    "sourceHostname": "discord.gg"
+    "sourceHostname": "discord.gg",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-24h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   },
   {
     "id": "remoteyeah-remote-engineering-jobs-discord",
@@ -485,6 +515,11 @@
       "text": "RemoteYeah | Remote Engineering Jobs",
       "checkedAt": "2026-08-23T12:19:57.849Z"
     },
+    "cityEvidence": {
+      "sourceType": "platform-title",
+      "text": "Remote",
+      "checkedAt": "2026-08-24T12:25:47.125Z"
+    },
     "jobTypes": [
       "engineering-jobs"
     ],
@@ -506,12 +541,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": "1212617794252972104",
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-23T12:19:51.715Z",
     "lastCheckedAt": "2026-08-23T12:19:51.715Z",
     "updatedAt": "2026-08-23T12:19:51.715Z",
     "safetyFlags": [],
+    "guildId": "1212617794252972104",
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-08-23T12:19:51.715Z",
@@ -525,7 +560,11 @@
       "run_1787487597849_cfrl2"
     ],
     "querySource": "discord.gg Remote tech jobs OR Remote hiring",
-    "sourceHostname": "discord.gg"
+    "sourceHostname": "discord.gg",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-24h"
+    ]
   },
   {
     "id": "devitjobsuk-software-developer-amp-it-jobs-in-london-and-the-united-kingdom-uk-telegram",
@@ -552,6 +591,11 @@
       "text": "DevITJobs.uk - Software Developer &amp; IT Jobs in London and the United Kingdom (UK)",
       "checkedAt": "2026-08-23T12:19:59.568Z"
     },
+    "cityEvidence": {
+      "sourceType": "platform-title",
+      "text": "London",
+      "checkedAt": "2026-08-24T12:25:47.125Z"
+    },
     "jobTypes": [
       "engineering-jobs"
     ],
@@ -573,12 +617,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-23T12:19:51.715Z",
     "lastCheckedAt": "2026-08-23T12:19:51.715Z",
     "updatedAt": "2026-08-23T12:19:51.715Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-08-23T12:19:51.715Z",
@@ -592,7 +636,11 @@
       "run_1787487599568_1oumi"
     ],
     "querySource": "site:t.me London tech jobs OR London job alerts",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-24h"
+    ]
   },
   {
     "id": "best-london-job-real-work-only-telegram",
@@ -619,6 +667,11 @@
       "text": "Best London Job • Real Work Only",
       "checkedAt": "2026-08-23T12:20:00.046Z"
     },
+    "cityEvidence": {
+      "sourceType": "platform-title",
+      "text": "London",
+      "checkedAt": "2026-08-24T12:25:47.126Z"
+    },
     "jobTypes": [
       "engineering-jobs"
     ],
@@ -640,12 +693,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-23T12:19:51.715Z",
     "lastCheckedAt": "2026-08-23T12:19:51.715Z",
     "updatedAt": "2026-08-23T12:19:51.715Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-08-23T12:19:51.715Z",
@@ -659,7 +712,11 @@
       "run_1787487600046_wgha5"
     ],
     "querySource": "site:t.me London tech jobs OR London job alerts",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-24h"
+    ]
   },
   {
     "id": "india-job-seekers-ijs-telegram",
@@ -686,6 +743,11 @@
       "text": "INDIA Job Seekers (IJS)",
       "checkedAt": "2026-08-23T12:20:02.984Z"
     },
+    "cityEvidence": {
+      "sourceType": "platform-description",
+      "text": "Bangalore",
+      "checkedAt": "2026-08-24T12:25:47.126Z"
+    },
     "jobTypes": [
       "engineering-jobs"
     ],
@@ -707,12 +769,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-23T12:19:51.715Z",
     "lastCheckedAt": "2026-08-23T12:19:51.715Z",
     "updatedAt": "2026-08-23T12:19:51.715Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-08-23T12:19:51.715Z",
@@ -726,7 +788,11 @@
       "run_1787487602984_tnvoe"
     ],
     "querySource": "site:t.me Bangalore tech jobs OR Bangalore job alerts",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-24h"
+    ]
   },
   {
     "id": "singapore-internship-opportunities-telegram",
@@ -753,6 +819,11 @@
       "text": "Singapore Internship Opportunities",
       "checkedAt": "2026-08-23T12:20:04.071Z"
     },
+    "cityEvidence": {
+      "sourceType": "platform-title",
+      "text": "Singapore",
+      "checkedAt": "2026-08-24T12:25:47.126Z"
+    },
     "jobTypes": [
       "engineering-jobs"
     ],
@@ -774,12 +845,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-23T12:19:51.715Z",
     "lastCheckedAt": "2026-08-23T12:19:51.715Z",
     "updatedAt": "2026-08-23T12:19:51.715Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-08-23T12:19:51.715Z",
@@ -793,7 +864,11 @@
       "run_1787487604071_22shd"
     ],
     "querySource": "site:t.me Singapore tech jobs OR Singapore job alerts",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-24h"
+    ]
   },
   {
     "id": "sg-creative-freelance-jobs-glancesg-telegram",
@@ -820,6 +895,11 @@
       "text": "🇸🇬Singapore’s Leading Creative &amp; Tech Freelance Talent Solution Platformwww.glance.sg",
       "checkedAt": "2026-08-23T12:20:04.686Z"
     },
+    "cityEvidence": {
+      "sourceType": "platform-description",
+      "text": "Singapore",
+      "checkedAt": "2026-08-24T12:25:47.126Z"
+    },
     "jobTypes": [
       "engineering-jobs"
     ],
@@ -841,12 +921,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-23T12:19:51.715Z",
     "lastCheckedAt": "2026-08-23T12:19:51.715Z",
     "updatedAt": "2026-08-23T12:19:51.715Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-08-23T12:19:51.715Z",
@@ -860,7 +940,11 @@
       "run_1787487604686_ncccn"
     ],
     "querySource": "site:t.me Singapore tech jobs OR Singapore job alerts",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-24h"
+    ]
   },
   {
     "id": "sg-part-time-jobs-snatchjobs-telegram",
@@ -887,6 +971,11 @@
       "text": "👨‍💻Admin👨‍💻@SnatchjobsAdminBest quality Part Time Job channel of Singapore 🇸🇬Dedicated to ease your job selecting process at your convenience 💪🤝Associated🤝@sgfulltimers ⬅️ For Full time Career 🧑‍💼👨‍💼Share it with your friends&#33;",
       "checkedAt": "2026-08-23T12:20:05.165Z"
     },
+    "cityEvidence": {
+      "sourceType": "platform-description",
+      "text": "Singapore",
+      "checkedAt": "2026-08-24T12:25:47.127Z"
+    },
     "jobTypes": [
       "engineering-jobs"
     ],
@@ -908,12 +997,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-08-23T12:19:51.715Z",
     "lastCheckedAt": "2026-08-23T12:19:51.715Z",
     "updatedAt": "2026-08-23T12:19:51.715Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-08-23T12:19:51.715Z",
@@ -927,6 +1016,77 @@
       "run_1787487605165_oo35q"
     ],
     "querySource": "site:t.me Singapore tech jobs OR Singapore job alerts",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-24h"
+    ]
+  },
+  {
+    "id": "digital-marketing-jobs-telegram",
+    "slug": "digital-marketing-jobs-telegram",
+    "title": "Digital Marketing Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "sales-marketing-jobs",
+    "subcategory": "Sales & Marketing",
+    "tags": [
+      "telegram",
+      "jobs",
+      "salesmarketingjobs"
+    ],
+    "inviteUrl": "https://t.me/digitalmarketingjobsindia",
+    "description": "Find Digital Marketing Job opportunities here. Employers can post jobs here.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "IN",
+    "countryCode": "IN",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "sales-marketing-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 14,
+    "memberCountSource": "https://t.me/digitalmarketingjobsindia",
+    "memberCountCheckedAt": "2026-08-24T12:25:35.427Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-08-24T12:25:35.427Z",
+    "sourceUrls": [
+      "https://t.me/digitalmarketingjobsindia"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-24T12:25:35.427Z",
+    "lastCheckedAt": "2026-08-24T12:25:35.427Z",
+    "updatedAt": "2026-08-24T12:25:35.427Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1787574335427_wr2sn",
+      "run_1787574339974_rb1pi"
+    ],
+    "querySource": "site:t.me sales marketing job alerts India Telegram",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   }
 ]

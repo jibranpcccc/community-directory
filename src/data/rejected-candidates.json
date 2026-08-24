@@ -744,8 +744,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T09:30:52.154Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 3
   },
   {
     "url": "https://t.me/design_work",
@@ -777,8 +777,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T09:30:52.154Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 3
   },
   {
     "url": "https://t.me/freelancehunt_jobs",
@@ -825,8 +825,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 2,
     "title": "Маркетинг. Вакансии без воды"
   },
   {
@@ -1005,10 +1005,10 @@
   {
     "url": "https://t.me/remote_sales",
     "platform": "telegram",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/it_jobs",
@@ -1665,10 +1665,11 @@
   {
     "url": "https://chat.whatsapp.com/FgJNY5FCJTDEPLpgIlBz0N",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-08-23T12:19:51.715Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 2,
+    "title": "FgJNY5FCJTDEPLpgIlBz0N"
   },
   {
     "url": "https://t.me/sgQuickJobs",
@@ -1825,5 +1826,219 @@
     "lastSeenAt": "2026-08-23T12:19:51.715Z",
     "timesSeen": 1,
     "title": "KNYZOUAlWrzG2J0BpUaJAx"
+  },
+  {
+    "url": "https://t.me/postaresume",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "title": "Jobs in India and Africa"
+  },
+  {
+    "url": "https://discord.gg/wADP9tF3Z",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/ySDSxht54h",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "title": "qaqa sənsən"
+  },
+  {
+    "url": "https://discord.gg/jjfckFGP47",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/Digital_MarketingCA",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/FreelancersIndian",
+    "platform": "telegram",
+    "reason": "wrong-niche",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "title": "Freelancers Of India"
+  },
+  {
+    "url": "https://t.me/thejobalertonline",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "title": "The Job Alert"
+  },
+  {
+    "url": "https://t.me/affiliatemarketingchat",
+    "platform": "telegram",
+    "reason": "wrong-niche",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "title": "Affiliate Marketing Chat"
+  },
+  {
+    "url": "https://t.me/jskatoz",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "title": "Jobs A To Z"
+  },
+  {
+    "url": "https://t.me/freelancers_int",
+    "platform": "telegram",
+    "reason": "wrong-niche",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "title": "Crypto Freelancers"
+  },
+  {
+    "url": "https://t.me/businessxmarketing",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/businessownersgroup",
+    "platform": "telegram",
+    "reason": "wrong-niche",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "title": "Evora"
+  },
+  {
+    "url": "https://t.me/fiverr_upwork_freelancer_buyer_seller",
+    "platform": "telegram",
+    "reason": "unknown-status",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/FmTYTxsCg9",
+    "platform": "discord",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "title": "Bloom"
+  },
+  {
+    "url": "https://chat.whatsapp.com/GoYsWCQJEDa2VhkW6ln3fj",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "title": "Sales Manager Vacancies"
+  },
+  {
+    "url": "https://chat.whatsapp.com/K7tkjsx6mpkLNqUbUS7iBc",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "title": "Marketing Vacancies"
+  },
+  {
+    "url": "https://chat.whatsapp.com/DngClu2FT9R6TICOYPcw2x",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "title": "Sales Vacancies"
+  },
+  {
+    "url": "https://discord.gg/jHfh9BrzSa",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/gulfrojgaar",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "title": "Gulf Rojgaar"
+  },
+  {
+    "url": "https://t.me/govtjobsdiary",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/gulfjobvacancy",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1,
+    "title": "Gulfjobvacancy.com"
+  },
+  {
+    "url": "https://t.me/uaejobs",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/dubaijobs",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/permanentjobs_uae",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/gulfjobs_uae",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-08-24T12:25:35.427Z",
+    "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1
   }
 ]
