@@ -191,8 +191,8 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 4,
-    "lastSeenAt": "2026-08-22T08:41:37.232Z"
+    "timesSeen": 5,
+    "lastSeenAt": "2026-08-25T00:29:52.418Z"
   },
   {
     "url": "https://discord.gg/dFp4rR3T",
@@ -744,8 +744,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-24T12:25:35.427Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-08-25T00:29:52.418Z",
+    "timesSeen": 4
   },
   {
     "url": "https://t.me/design_work",
@@ -777,8 +777,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-24T12:25:35.427Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-08-25T00:29:52.418Z",
+    "timesSeen": 4
   },
   {
     "url": "https://t.me/freelancehunt_jobs",
@@ -825,8 +825,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-24T12:25:35.427Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-08-25T00:29:52.418Z",
+    "timesSeen": 3,
     "title": "Маркетинг. Вакансии без воды"
   },
   {
@@ -834,8 +834,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-25T00:29:52.418Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/design_vacancies",
@@ -1007,16 +1007,16 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-24T12:25:35.427Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-08-25T00:29:52.418Z",
+    "timesSeen": 3
   },
   {
     "url": "https://t.me/it_jobs",
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-25T00:29:52.418Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/frontend_jobs",
@@ -2039,6 +2039,14 @@
     "reason": "dead-link",
     "date": "2026-08-24T12:25:35.427Z",
     "lastSeenAt": "2026-08-24T12:25:35.427Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/+zEufGh7GjbMzZjI0",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-25T00:29:52.418Z",
+    "lastSeenAt": "2026-08-25T00:29:52.418Z",
     "timesSeen": 1
   }
 ]
