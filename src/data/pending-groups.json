@@ -67,7 +67,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-52h"
+      "validation-stale-76h"
     ]
   },
   {
@@ -138,7 +138,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-52h"
+      "validation-stale-76h"
     ]
   },
   {
@@ -209,7 +209,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-52h"
+      "validation-stale-76h"
     ]
   },
   {
@@ -276,7 +276,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-52h",
+      "validation-stale-76h",
       "unconfirmed-country-evidence: No factual geographic evidence matching AE found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -348,7 +348,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-52h"
+      "validation-stale-76h"
     ]
   },
   {
@@ -419,7 +419,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h"
+      "validation-stale-48h"
     ]
   },
   {
@@ -486,7 +486,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h",
+      "validation-stale-48h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -563,7 +563,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h"
+      "validation-stale-48h"
     ]
   },
   {
@@ -639,7 +639,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h"
+      "validation-stale-48h"
     ]
   },
   {
@@ -715,7 +715,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h"
+      "validation-stale-48h"
     ]
   },
   {
@@ -791,7 +791,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h"
+      "validation-stale-48h"
     ]
   },
   {
@@ -867,7 +867,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h"
+      "validation-stale-48h"
     ]
   },
   {
@@ -943,7 +943,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h"
+      "validation-stale-48h"
     ]
   },
   {
@@ -1019,7 +1019,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h"
+      "validation-stale-48h"
     ]
   },
   {
@@ -1086,7 +1086,75 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-24h",
       "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "experienced-jobs-whatsapp",
+    "slug": "experienced-jobs-whatsapp",
+    "title": "Experienced Jobs",
+    "platform": "whatsapp",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering",
+    "tags": [
+      "whatsapp",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://chat.whatsapp.com/GjsOB5h0XveJnAFNNPXCPL",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-08-25T12:26:20.198Z",
+    "sourceUrls": [
+      "https://chat.whatsapp.com/GjsOB5h0XveJnAFNNPXCPL"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-25T12:26:20.198Z",
+    "lastCheckedAt": "2026-08-25T12:26:20.198Z",
+    "updatedAt": "2026-08-25T12:26:20.198Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-08-25T12:26:20.198Z",
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1787660780198_kjoiq",
+      "run_1787660782391_eoax1"
+    ],
+    "querySource": "site:chat.whatsapp.com developer jobs Global job alerts",
+    "sourceHostname": "chat.whatsapp.com",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   }
 ]

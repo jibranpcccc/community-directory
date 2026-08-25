@@ -1185,10 +1185,10 @@
   {
     "url": "https://discord.gg/ZwS2fqW7ZZ",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-08-22T08:41:37.232Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 2,
     "title": "Book Overflow"
   },
   {
@@ -1667,8 +1667,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-08-24T12:25:35.427Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 3,
     "title": "FgJNY5FCJTDEPLpgIlBz0N"
   },
   {
@@ -1729,8 +1729,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-08-23T12:19:51.715Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/vYJDEsFuHe",
@@ -2047,6 +2047,118 @@
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-25T00:29:52.418Z",
     "lastSeenAt": "2026-08-25T00:29:52.418Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/thenorthhub",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-08-25T12:26:20.198Z",
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/8WsqnC6Hk3",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-25T12:26:20.198Z",
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/QpD756PG",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-08-25T12:26:20.198Z",
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/FRgq5xHztq",
+    "platform": "discord",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-25T12:26:20.198Z",
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 1,
+    "title": "Break Into Tech Sales"
+  },
+  {
+    "url": "https://discord.gg/gjnUA8tg",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-25T12:26:20.198Z",
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/h3xsec",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-25T12:26:20.198Z",
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 1,
+    "title": "H3XSEC"
+  },
+  {
+    "url": "https://chat.whatsapp.com/LwCwWDcF9IG2530kBRBsLS",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-08-25T12:26:20.198Z",
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 1,
+    "title": ""
+  },
+  {
+    "url": "https://chat.whatsapp.com/HCxdKyR42OOKCvv8ZzhvbY",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-08-25T12:26:20.198Z",
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 1,
+    "title": "Python for Web Automation and RPA"
+  },
+  {
+    "url": "https://chat.whatsapp.com/HoigXfy4UYc5MRGUXy5rkT",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-08-25T12:26:20.198Z",
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 1,
+    "title": "WordPress Webmaster Community - Learn, Grow &amp; Earn"
+  },
+  {
+    "url": "https://chat.whatsapp.com/JM6vyWeHWTvAkvVwamrhoO",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-08-25T12:26:20.198Z",
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 1,
+    "title": "Almattech Academy Info Group"
+  },
+  {
+    "url": "https://chat.whatsapp.com/DS0v8uY2iA90Avmn1vBOP7",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-08-25T12:26:20.198Z",
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 1,
+    "title": "GUEST POST FORUM (GPF)"
+  },
+  {
+    "url": "https://chat.whatsapp.com/JInCeL0IBGCKBnWm6JvqT8",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-08-25T12:26:20.198Z",
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 1,
+    "title": "Lanjwani Tech"
+  },
+  {
+    "url": "https://discord.gg/TV9uwnrDga",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-08-25T12:26:20.198Z",
+    "lastSeenAt": "2026-08-25T12:26:20.198Z",
     "timesSeen": 1
   }
 ]
