@@ -2193,23 +2193,206 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-26T06:26:07.952Z",
-    "lastSeenAt": "2026-08-26T06:26:07.952Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/GbKNe6Ux",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-08-26T06:26:07.952Z",
-    "lastSeenAt": "2026-08-26T06:26:07.952Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/QgEC66G2",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-08-26T06:26:07.952Z",
-    "lastSeenAt": "2026-08-26T06:26:07.952Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://t.me/officebasedjobslondon",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "OfficeBasedJobsLondon"
+  },
+  {
+    "url": "https://t.me/DevITJobs_uk",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/SSCRailwayBanking",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "SSC,Bank &amp; Railway"
+  },
+  {
+    "url": "https://t.me/UPSCOfficialUpdates",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/StateGovtJobs",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/LatestGovtJobs2026",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/RBINABARDJobs",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/Government_Jobs_Sarkari_Naukri",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "Government Jobs Alert Sarkari Naukri"
+  },
+  {
+    "url": "https://t.me/sarkarijobscom",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "Sarkari Jobs 🚀 - Sarkarijobs.com"
+  },
+  {
+    "url": "https://t.me/recruitmentalerts",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "Recruitment Alerts India"
+  },
+  {
+    "url": "https://t.me/govt_jobs_aspirant",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "GOVT JOBS ASPIRANT"
+  },
+  {
+    "url": "https://discord.gg/x7DbTkAe9D",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "Food Science & You"
+  },
+  {
+    "url": "https://discord.gg/Fz7p8V2rfG",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "EtaInfi"
+  },
+  {
+    "url": "https://discord.gg/JFefHh9CXB",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "GURPS"
+  },
+  {
+    "url": "https://t.me/eabroadjobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "Assignment abroad times, eAbroadjobs.com"
+  },
+  {
+    "url": "https://chat.whatsapp.com/Dfg9ia8WyfiAlHJ9L1pvqm",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "1 CAPE JOB LINKS Community"
+  },
+  {
+    "url": "https://chat.whatsapp.com/CqlgYJY9o5QA0tbG0SacXx",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "CqlgYJY9o5QA0tbG0SacXx"
+  },
+  {
+    "url": "https://chat.whatsapp.com/ELeUVeLdGtg8sitpMEnmfQ",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "ELeUVeLdGtg8sitpMEnmfQ"
+  },
+  {
+    "url": "https://chat.whatsapp.com/LR3T7vi62hB05AklfjcQzl",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "LR3T7vi62hB05AklfjcQzl"
+  },
+  {
+    "url": "https://chat.whatsapp.com/E6ausk1jN4K8L75HC0std9",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
+    "timesSeen": 1,
+    "title": "NHS Interview Insight"
+  },
+  {
+    "url": "https://discord.gg/c3bqPPjufP",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-26T12:27:42.936Z",
+    "lastSeenAt": "2026-08-26T12:27:42.936Z",
     "timesSeen": 1
   }
 ]
