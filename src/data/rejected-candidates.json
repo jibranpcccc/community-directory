@@ -29,7 +29,9 @@
     "url": "https://discord.gg/WKAvavfM",
     "platform": "discord",
     "reason": "dead-link",
-    "date": "2026-08-19T08:33:40.620Z"
+    "date": "2026-08-19T08:33:40.620Z",
+    "timesSeen": 2,
+    "lastSeenAt": "2026-08-26T00:30:47.029Z"
   },
   {
     "url": "https://t.me/constructuionUK",
@@ -148,10 +150,10 @@
   {
     "url": "https://discord.gg/JjNdBkVGc6",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 3,
-    "lastSeenAt": "2026-08-20T07:49:44.568Z"
+    "timesSeen": 4,
+    "lastSeenAt": "2026-08-26T00:30:47.029Z"
   },
   {
     "url": "https://discord.gg/Kfx2EsnKnK",
@@ -2159,6 +2161,31 @@
     "reason": "dead-link",
     "date": "2026-08-25T12:26:20.198Z",
     "lastSeenAt": "2026-08-25T12:26:20.198Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/rrdaq48xJ",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-08-26T00:30:47.029Z",
+    "lastSeenAt": "2026-08-26T00:30:47.029Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/JmmXnuX7aZ",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-26T00:30:47.029Z",
+    "lastSeenAt": "2026-08-26T00:30:47.029Z",
+    "timesSeen": 1,
+    "title": "Official /r/Brisbane Discord"
+  },
+  {
+    "url": "https://discord.gg/QwTrkUFr4u",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-08-26T00:30:47.029Z",
+    "lastSeenAt": "2026-08-26T00:30:47.029Z",
     "timesSeen": 1
   }
 ]

@@ -1156,5 +1156,68 @@
     "autoPublishBlockedReasons": [
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
+  },
+  {
+    "id": "werq-ai-discord",
+    "slug": "werq-ai-discord",
+    "title": "WerQ AI",
+    "platform": "discord",
+    "vertical": "jobs",
+    "category": "government-jobs",
+    "subcategory": "Public Sector",
+    "tags": [
+      "discord",
+      "jobs",
+      "governmentjobs"
+    ],
+    "inviteUrl": "https://discord.gg/XzxkxzwmZb",
+    "description": "Your AI career agent that automates your job search with smart matching and resume optimization.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "government-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 480,
+    "memberCountSource": "https://discord.gg/XzxkxzwmZb",
+    "memberCountCheckedAt": "2026-08-26T00:30:47.029Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-08-26T00:30:47.029Z",
+    "sourceUrls": [
+      "https://discord.gg/XzxkxzwmZb"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": "1309221292393762837",
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-26T00:30:47.029Z",
+    "lastCheckedAt": "2026-08-26T00:30:47.029Z",
+    "updatedAt": "2026-08-26T00:30:47.029Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-08-26T00:30:47.029Z",
+    "lastSeenAt": "2026-08-26T00:30:47.029Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1787704247029_tevm5",
+      "run_1787704247796_inqnv"
+    ],
+    "querySource": "discord.gg government job alerts Global Telegram",
+    "sourceHostname": "discord.gg"
   }
 ]
