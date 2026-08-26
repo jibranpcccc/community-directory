@@ -2187,5 +2187,29 @@
     "date": "2026-08-26T00:30:47.029Z",
     "lastSeenAt": "2026-08-26T00:30:47.029Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/XwJfRxQC",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-26T06:26:07.952Z",
+    "lastSeenAt": "2026-08-26T06:26:07.952Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/GbKNe6Ux",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-26T06:26:07.952Z",
+    "lastSeenAt": "2026-08-26T06:26:07.952Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/QgEC66G2",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-26T06:26:07.952Z",
+    "lastSeenAt": "2026-08-26T06:26:07.952Z",
+    "timesSeen": 1
   }
 ]
