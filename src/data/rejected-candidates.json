@@ -1624,8 +1624,8 @@
     "platform": "discord",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-08-23T12:19:51.715Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-08-27T05:14:31.311Z",
+    "timesSeen": 2,
     "title": "🤝Devs For Hire & Jobs💰💻"
   },
   {
@@ -2217,8 +2217,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-26T12:27:42.936Z",
-    "lastSeenAt": "2026-08-26T12:27:42.936Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-08-27T05:14:31.311Z",
+    "timesSeen": 2,
     "title": "OfficeBasedJobsLondon"
   },
   {
@@ -2394,5 +2394,23 @@
     "date": "2026-08-26T12:27:42.936Z",
     "lastSeenAt": "2026-08-26T12:27:42.936Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/MTsExCAQ6F",
+    "platform": "discord",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-27T05:14:31.311Z",
+    "lastSeenAt": "2026-08-27T05:14:31.311Z",
+    "timesSeen": 1,
+    "title": "CS Careers Hub 🍁"
+  },
+  {
+    "url": "https://discord.gg/toronto",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-27T05:14:31.311Z",
+    "lastSeenAt": "2026-08-27T05:14:31.311Z",
+    "timesSeen": 1,
+    "title": "Toronto Network"
   }
 ]

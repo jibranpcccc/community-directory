@@ -67,7 +67,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-100h"
+      "validation-stale-117h"
     ]
   },
   {
@@ -138,7 +138,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-100h"
+      "validation-stale-117h"
     ]
   },
   {
@@ -209,7 +209,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-100h"
+      "validation-stale-117h"
     ]
   },
   {
@@ -276,7 +276,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-100h",
+      "validation-stale-117h",
       "unconfirmed-country-evidence: No factual geographic evidence matching AE found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -348,7 +348,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-100h"
+      "validation-stale-117h"
     ]
   },
   {
@@ -419,7 +419,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h"
+      "validation-stale-89h"
     ]
   },
   {
@@ -486,7 +486,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h",
+      "validation-stale-89h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -563,7 +563,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h"
+      "validation-stale-89h"
     ]
   },
   {
@@ -639,7 +639,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h"
+      "validation-stale-89h"
     ]
   },
   {
@@ -715,7 +715,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h"
+      "validation-stale-89h"
     ]
   },
   {
@@ -791,7 +791,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h"
+      "validation-stale-89h"
     ]
   },
   {
@@ -867,7 +867,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h"
+      "validation-stale-89h"
     ]
   },
   {
@@ -943,7 +943,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h"
+      "validation-stale-89h"
     ]
   },
   {
@@ -1019,7 +1019,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h"
+      "validation-stale-89h"
     ]
   },
   {
@@ -1086,7 +1086,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-48h",
+      "validation-stale-65h",
       "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -1154,7 +1154,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h",
+      "validation-stale-41h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -1222,6 +1222,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-29h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
