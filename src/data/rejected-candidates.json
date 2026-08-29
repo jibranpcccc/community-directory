@@ -1188,27 +1188,27 @@
   {
     "url": "https://discord.gg/ZwS2fqW7ZZ",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-08-25T12:26:20.198Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 3,
     "title": "Book Overflow"
   },
   {
     "url": "https://discord.gg/8h4CeRJZw",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-08-22T08:41:37.232Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/YgN3BJ7mF",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-08-22T08:41:37.232Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 3
   },
   {
     "url": "https://chat.whatsapp.com/HQzYvJOkl0JFnKjnZyx8qw",
@@ -1238,10 +1238,10 @@
   {
     "url": "https://chat.whatsapp.com/EPWJSAFnO4O10mdi4g3WoD",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-08-23T12:19:51.715Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 3,
     "title": "EPWJSAFnO4O10mdi4g3WoD"
   },
   {
@@ -1345,8 +1345,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-08-27T16:58:43.400Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 4,
     "title": "Singapore Careers and Job Opportunities - sgCareers"
   },
   {
@@ -1668,10 +1668,10 @@
   {
     "url": "https://chat.whatsapp.com/FgJNY5FCJTDEPLpgIlBz0N",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-08-28T17:52:03.235Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 6,
     "title": "FgJNY5FCJTDEPLpgIlBz0N"
   },
   {
@@ -2621,8 +2621,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-08-28T17:52:03.235Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 2,
     "title": "Akash the Developer"
   },
   {
@@ -2630,8 +2630,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-08-28T17:52:03.235Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 2,
     "title": "OffCampus Phodenge : Aman Chowdhury 😊❤️"
   },
   {
@@ -2639,8 +2639,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-08-28T17:52:03.235Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 2,
     "title": "Job Updates &amp; Tutorials"
   },
   {
@@ -2648,8 +2648,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-08-28T17:52:03.235Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/qaD2pKD",
@@ -2926,5 +2926,173 @@
     "lastSeenAt": "2026-08-28T17:52:03.235Z",
     "timesSeen": 1,
     "title": "ScholarshipsUSA"
+  },
+  {
+    "url": "https://chat.whatsapp.com/FCBMSbuYzsE9uKqE5jDRtz",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-29T11:52:58.872Z",
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 1,
+    "title": "WORLD WIDE SOFTWARE ENGINEERS &#x1f30d;"
+  },
+  {
+    "url": "https://chat.whatsapp.com/F2fDkQgs8pVIQjTPV3MI3u",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-29T11:52:58.872Z",
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 1,
+    "title": "F2fDkQgs8pVIQjTPV3MI3u"
+  },
+  {
+    "url": "https://chat.whatsapp.com/F5x5j6EsuDr3idYBjhBVen",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-29T11:52:58.872Z",
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 1,
+    "title": "F5x5j6EsuDr3idYBjhBVen"
+  },
+  {
+    "url": "https://chat.whatsapp.com/BWU6kpoGlVCDvG3ixSXQ0E",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-29T11:52:58.872Z",
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 1,
+    "title": "BWU6kpoGlVCDvG3ixSXQ0E"
+  },
+  {
+    "url": "https://chat.whatsapp.com/HfvA4ZSeHAU8SIpbybySuK",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-29T11:52:58.872Z",
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 1,
+    "title": "HfvA4ZSeHAU8SIpbybySuK"
+  },
+  {
+    "url": "https://chat.whatsapp.com/BIRgk01gq6430oIVU4DawM",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-29T11:52:58.872Z",
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 1,
+    "title": "BIRgk01gq6430oIVU4DawM"
+  },
+  {
+    "url": "https://chat.whatsapp.com/JSwnFBug61V8DVcEtKQU4f",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-29T11:52:58.872Z",
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/CpHB6uBz2u9D6XgDdYuDBX",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-29T11:52:58.872Z",
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/EeYGNEEe9ztHFDGu6tLccW",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-29T11:52:58.872Z",
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 1,
+    "title": "Placement + Interview Prep + Courses &#x1f3af;&#x1f468;&#x200d;&#x1f4bb;"
+  },
+  {
+    "url": "https://t.me/OFF_CAMPUS_JOBS_AND_INTERNSHIPS",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-29T11:52:58.872Z",
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 1,
+    "title": "Placement Lelo 2.0"
+  },
+  {
+    "url": "https://t.me/PLACEMENTLELO",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-29T11:52:58.872Z",
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 1,
+    "title": "Placement Lelo"
+  },
+  {
+    "url": "https://t.me/freshershunt",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-29T11:52:58.872Z",
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 1,
+    "title": "Freshershunt - Off Campus Drive Updates"
+  },
+  {
+    "url": "https://t.me/joinjobsorigin",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-08-29T11:52:58.872Z",
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 1,
+    "title": "JobsOrigin.com - Off Campus | Internship | Walk In Drives"
+  },
+  {
+    "url": "https://t.me/DevSG",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-29T11:52:58.872Z",
+    "lastSeenAt": "2026-08-29T11:52:58.872Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/it_jobs_uk",
+    "platform": "telegram",
+    "title": "IT jobs United Kingdom/London / UK",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-08-29T11:53:08.345Z",
+    "lastSeenAt": "2026-08-29T11:53:08.345Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/jobspillar",
+    "platform": "telegram",
+    "title": "JOBS PILLAR(INDIA)",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-08-29T11:53:08.345Z",
+    "lastSeenAt": "2026-08-29T11:53:08.345Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/uaejobsuccess",
+    "platform": "telegram",
+    "title": "UAE Job Alerts",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-08-29T11:53:08.345Z",
+    "lastSeenAt": "2026-08-29T11:53:08.345Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/Ultraworldjob",
+    "platform": "telegram",
+    "title": "World Jobs",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-08-29T11:53:08.345Z",
+    "lastSeenAt": "2026-08-29T11:53:08.345Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/ensha5rcom",
+    "platform": "telegram",
+    "title": "Jobs in UAE",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-08-29T11:53:08.345Z",
+    "lastSeenAt": "2026-08-29T11:53:08.345Z",
+    "timesSeen": 1
   }
 ]
