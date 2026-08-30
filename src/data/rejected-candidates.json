@@ -3250,16 +3250,16 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-08-30T10:54:52.766Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-08-30T20:10:50.654Z",
+    "timesSeen": 4
   },
   {
     "url": "https://t.me/dataflair",
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-08-30T10:54:52.766Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-08-30T20:10:50.654Z",
+    "timesSeen": 5
   },
   {
     "url": "https://discord.gg/G3rvFKF",
@@ -3617,6 +3617,87 @@
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
     "lastSeenAt": "2026-08-30T10:54:52.766Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/it_jobs_south_africa",
+    "platform": "telegram",
+    "title": "IT jobs South Africa",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-08-30T20:10:50.662Z",
+    "lastSeenAt": "2026-08-30T20:10:50.662Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/cronjobs",
+    "platform": "discord",
+    "title": "CronJobs",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-08-30T20:10:50.662Z",
+    "lastSeenAt": "2026-08-30T20:10:50.662Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/69s55S7DjB",
+    "platform": "discord",
+    "title": "RemoteYeah | Remote Engineering Jobs",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-08-30T20:10:50.662Z",
+    "lastSeenAt": "2026-08-30T20:10:50.662Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/devitjobs",
+    "platform": "telegram",
+    "title": "DevITJobs.uk - Software Developer &amp; IT Jobs in London and the United Kingdom (UK)",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-08-30T20:10:50.662Z",
+    "lastSeenAt": "2026-08-30T20:10:50.662Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/bestlondonjob",
+    "platform": "telegram",
+    "title": "Best London Job • Real Work Only",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-08-30T20:10:50.662Z",
+    "lastSeenAt": "2026-08-30T20:10:50.662Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/bangalorejobseekers",
+    "platform": "telegram",
+    "title": "INDIA Job Seekers (IJS)",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-08-30T20:10:50.662Z",
+    "lastSeenAt": "2026-08-30T20:10:50.662Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/sginternships",
+    "platform": "telegram",
+    "title": "Singapore Internship Opportunities",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-08-30T20:10:50.662Z",
+    "lastSeenAt": "2026-08-30T20:10:50.662Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/sgfreelancing",
+    "platform": "telegram",
+    "title": "SG Creative Freelance Jobs | Glance.sg",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-08-30T20:10:50.662Z",
+    "lastSeenAt": "2026-08-30T20:10:50.662Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/sgparttimers",
+    "platform": "telegram",
+    "title": "SG Part Time Jobs #Snatchjobs 🇸🇬",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-08-30T20:10:50.662Z",
+    "lastSeenAt": "2026-08-30T20:10:50.662Z",
     "timesSeen": 1
   }
 ]
