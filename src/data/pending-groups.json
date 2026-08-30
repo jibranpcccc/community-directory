@@ -1814,5 +1814,265 @@
     ],
     "querySource": "site:t.me software engineer jobs Global community",
     "sourceHostname": "t.me"
+  },
+  {
+    "id": "find-your-job-telegram",
+    "slug": "find-your-job-telegram",
+    "title": "Find Your Job",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering",
+    "tags": [
+      "telegram",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://t.me/findITJobsLink",
+    "description": "Find your Job/internship. || Helping Job seekers 🙏✌( Only product based company) || SDE, SWE, SE, SRE, MTS, Analyst, TSE role || International Opportunities",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-description",
+      "text": "Find your Job/internship. || Helping Job seekers 🙏✌( Only product based company) || SDE, SWE, SE, SRE, MTS, Analyst, TSE role || International Opportunities",
+      "checkedAt": "2026-08-30T10:54:57.441Z"
+    },
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 18251,
+    "memberCountSource": "https://t.me/findITJobsLink",
+    "memberCountCheckedAt": "2026-08-30T10:54:52.766Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-08-30T10:54:52.766Z",
+    "sourceUrls": [
+      "https://t.me/findITJobsLink"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-30T10:54:52.766Z",
+    "lastCheckedAt": "2026-08-30T10:54:52.766Z",
+    "updatedAt": "2026-08-30T10:54:52.766Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-08-30T10:54:52.766Z",
+    "lastSeenAt": "2026-08-30T10:54:52.766Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1788087292766_qmu3a",
+      "run_1788087297442_0uj8v"
+    ],
+    "querySource": "site:t.me data science machine learning jobs Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "go-careers-telegram",
+    "slug": "go-careers-telegram",
+    "title": "Go Careers 🚀",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering",
+    "tags": [
+      "telegram",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://t.me/gocareers",
+    "description": "Get latest intern and job updates&#33;For collaborations/promotions reach out at gocareers.official@gmail.com",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 79643,
+    "memberCountSource": "https://t.me/gocareers",
+    "memberCountCheckedAt": "2026-08-30T10:54:52.766Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-08-30T10:54:52.766Z",
+    "sourceUrls": [
+      "https://t.me/gocareers"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-30T10:54:52.766Z",
+    "lastCheckedAt": "2026-08-30T10:54:52.766Z",
+    "updatedAt": "2026-08-30T10:54:52.766Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-08-30T10:54:52.766Z",
+    "lastSeenAt": "2026-08-30T10:54:52.766Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1788087292766_qmu3a",
+      "run_1788087298038_pemcx"
+    ],
+    "querySource": "site:t.me data science machine learning jobs Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "job-updates-amp-tutorials-telegram",
+    "slug": "job-updates-amp-tutorials-telegram",
+    "title": "Job Updates &amp; Tutorials",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering",
+    "tags": [
+      "telegram",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://t.me/riddhi_dutta",
+    "description": "Get all the job hiring updates , important resources and exclusive access to my interview preparation content on this channel.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 30065,
+    "memberCountSource": "https://t.me/riddhi_dutta",
+    "memberCountCheckedAt": "2026-08-30T10:54:52.766Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-08-30T10:54:52.766Z",
+    "sourceUrls": [
+      "https://t.me/riddhi_dutta"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-30T10:54:52.766Z",
+    "lastCheckedAt": "2026-08-30T10:54:52.766Z",
+    "updatedAt": "2026-08-30T10:54:52.766Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-08-30T10:54:52.766Z",
+    "lastSeenAt": "2026-08-30T10:54:52.766Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1788087292766_qmu3a",
+      "run_1788087298457_ubwf5"
+    ],
+    "querySource": "site:t.me data science machine learning jobs Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "rb-visa-services-and-dubai-job-consultancy-whatsapp",
+    "slug": "rb-visa-services-and-dubai-job-consultancy-whatsapp",
+    "title": "RB Visa Services And Dubai Job Consultancy",
+    "platform": "whatsapp",
+    "vertical": "jobs",
+    "category": "visa-sponsorship-jobs",
+    "subcategory": "Sharjah Jobs",
+    "tags": [
+      "whatsapp",
+      "jobs",
+      "visasponsorshipjobs"
+    ],
+    "inviteUrl": "https://chat.whatsapp.com/CCvP48vwRcgLkGxZEHLa0M",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "AE",
+    "countryCode": "AE",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "RB Visa Services And Dubai Job Consultancy",
+      "checkedAt": "2026-08-30T10:55:02.251Z"
+    },
+    "jobTypes": [
+      "visa-sponsorship-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-08-30T10:54:52.766Z",
+    "sourceUrls": [
+      "https://chat.whatsapp.com/CCvP48vwRcgLkGxZEHLa0M"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-08-30T10:54:52.766Z",
+    "lastCheckedAt": "2026-08-30T10:54:52.766Z",
+    "updatedAt": "2026-08-30T10:54:52.766Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-08-30T10:54:52.766Z",
+    "lastSeenAt": "2026-08-30T10:54:52.766Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1788087292766_qmu3a",
+      "run_1788087302252_snim4"
+    ],
+    "querySource": "site:chat.whatsapp.com Sharjah job alerts",
+    "sourceHostname": "chat.whatsapp.com"
   }
 ]
