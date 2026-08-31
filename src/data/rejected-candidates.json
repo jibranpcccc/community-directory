@@ -341,8 +341,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-19T10:19:18.665Z",
-    "lastSeenAt": "2026-08-19T10:19:18.665Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-08-31T11:57:41.948Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/9M8awV8",
@@ -3011,8 +3011,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-29T11:52:58.872Z",
-    "lastSeenAt": "2026-08-31T01:47:18.550Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-08-31T11:57:41.948Z",
+    "timesSeen": 3,
     "title": "Placement Lelo 2.0"
   },
   {
@@ -3020,8 +3020,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-29T11:52:58.872Z",
-    "lastSeenAt": "2026-08-31T01:47:18.550Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-08-31T11:57:41.948Z",
+    "timesSeen": 3,
     "title": "Placement Lelo"
   },
   {
@@ -3029,8 +3029,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-29T11:52:58.872Z",
-    "lastSeenAt": "2026-08-31T01:47:18.550Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-08-31T11:57:41.948Z",
+    "timesSeen": 3,
     "title": "Freshershunt - Off Campus Drive Updates"
   },
   {
@@ -3698,6 +3698,48 @@
     "reason": "insufficient-publication-confidence",
     "date": "2026-08-30T20:10:50.662Z",
     "lastSeenAt": "2026-08-30T20:10:50.662Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/mEK9sZ5JNA",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-31T11:57:41.948Z",
+    "lastSeenAt": "2026-08-31T11:57:41.948Z",
+    "timesSeen": 1,
+    "title": "FABC"
+  },
+  {
+    "url": "https://discord.gg/qGNHMPpnxU",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-08-31T11:57:41.948Z",
+    "lastSeenAt": "2026-08-31T11:57:41.948Z",
+    "timesSeen": 1,
+    "title": "HIFI Labs"
+  },
+  {
+    "url": "https://discord.gg/2QmAg3hA8m",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-31T11:57:41.948Z",
+    "lastSeenAt": "2026-08-31T11:57:41.948Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/WZuRnMCZ4c",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-31T11:57:41.948Z",
+    "lastSeenAt": "2026-08-31T11:57:41.948Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/JGoiuAqL7xg5RsLps8j5Ul",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-31T11:57:41.948Z",
+    "lastSeenAt": "2026-08-31T11:57:41.948Z",
     "timesSeen": 1
   }
 ]
