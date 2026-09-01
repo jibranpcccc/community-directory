@@ -63,7 +63,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-150h",
+      "validation-stale-166h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -131,7 +131,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-138h",
+      "validation-stale-154h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +199,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-126h",
+      "validation-stale-142h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -267,7 +267,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-126h",
+      "validation-stale-142h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -335,7 +335,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-126h",
+      "validation-stale-142h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -403,7 +403,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-97h",
+      "validation-stale-114h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -471,7 +471,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-97h",
+      "validation-stale-114h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -540,7 +540,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-97h",
+      "validation-stale-114h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -608,7 +608,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h",
+      "validation-stale-89h",
       "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -680,7 +680,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-50h"
+      "validation-stale-67h"
     ]
   },
   {
@@ -751,7 +751,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-50h"
+      "validation-stale-67h"
     ]
   },
   {
@@ -822,7 +822,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-50h"
+      "validation-stale-67h"
     ]
   },
   {
@@ -893,7 +893,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-50h"
+      "validation-stale-67h"
     ]
   },
   {
@@ -964,7 +964,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-50h"
+      "validation-stale-67h"
     ]
   },
   {
@@ -1031,7 +1031,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-50h",
+      "validation-stale-67h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -1103,7 +1103,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-50h"
+      "validation-stale-67h"
     ]
   },
   {
@@ -1170,7 +1170,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-31h",
+      "validation-stale-48h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -1238,7 +1238,145 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-31h",
+      "validation-stale-48h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "remote-jobs-telegram-2",
+    "slug": "remote-jobs-telegram-2",
+    "title": "Remote Jobs👨‍💻",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Global Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://t.me/RemoteJobs",
+    "description": "Hand-picked remote jobs, daily roundups and practical career tips. Find your next high paying remote roleSupport: @hvhelp",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "Remote Jobs👨‍💻",
+      "checkedAt": "2026-09-01T10:40:56.503Z"
+    },
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 6669,
+    "memberCountSource": "https://t.me/RemoteJobs",
+    "memberCountCheckedAt": "2026-09-01T10:40:51.833Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-01T10:40:51.833Z",
+    "sourceUrls": [
+      "https://t.me/RemoteJobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-01T10:40:51.833Z",
+    "lastCheckedAt": "2026-09-01T10:40:51.833Z",
+    "updatedAt": "2026-09-01T10:40:51.833Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-01T10:40:51.833Z",
+    "lastSeenAt": "2026-09-01T10:40:51.833Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1788259251833_2yy5q",
+      "run_1788259256503_vh97v"
+    ],
+    "querySource": "site:t.me Global tech jobs OR Global job alerts",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "duplicate-published: Matching community title on telegram: \"Remote Jobs👨‍💻\" vs \"Remote Jobs\""
+    ]
+  },
+  {
+    "id": "data-science-jobs-telegram",
+    "slug": "data-science-jobs-telegram",
+    "title": "Data Science Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Global Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://t.me/datasciencejobs",
+    "description": "Лучшие вакансии по темам Data Science, машинного обучения, нейросетей, искусственного интеллекта, компьютерного зрения, сбора, обработки и анализа данных.🗄Мы в реестре РКН: https://vk.cc/cEZ5FfПо всем вопросам: @musitЧат: @bigdata_ru",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 21851,
+    "memberCountSource": "https://t.me/datasciencejobs",
+    "memberCountCheckedAt": "2026-09-01T10:40:51.833Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-01T10:40:51.833Z",
+    "sourceUrls": [
+      "https://t.me/datasciencejobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-01T10:40:51.833Z",
+    "lastCheckedAt": "2026-09-01T10:40:51.833Z",
+    "updatedAt": "2026-09-01T10:40:51.833Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-01T10:40:51.833Z",
+    "lastSeenAt": "2026-09-01T10:40:51.833Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1788259251833_2yy5q",
+      "run_1788259257463_a8fsx"
+    ],
+    "querySource": "site:t.me Global tech jobs OR Global job alerts",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   }
