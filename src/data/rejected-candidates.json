@@ -3715,8 +3715,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-31T11:57:41.948Z",
-    "lastSeenAt": "2026-08-31T11:57:41.948Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-01T15:39:11.690Z",
+    "timesSeen": 2,
     "title": "HIFI Labs"
   },
   {
@@ -4132,5 +4132,46 @@
     "lastSeenAt": "2026-09-01T10:40:51.833Z",
     "timesSeen": 1,
     "title": "DyFEqddFsigAUFjiy8YnEM"
+  },
+  {
+    "url": "https://discord.gg/NvTJPqBYXd",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-09-01T15:39:11.690Z",
+    "lastSeenAt": "2026-09-01T15:39:11.690Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/XPmzmC3Bur",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-09-01T15:39:11.690Z",
+    "lastSeenAt": "2026-09-01T15:39:11.690Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/URvYjr3",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-01T15:39:11.690Z",
+    "lastSeenAt": "2026-09-01T15:39:11.690Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/qqzrSCFmmh",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-01T15:39:11.690Z",
+    "lastSeenAt": "2026-09-01T15:39:11.690Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/GjsOB5h0XveJnAFNNPXCPL",
+    "platform": "whatsapp",
+    "title": "Experienced Jobs",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-01T15:39:12.305Z",
+    "lastSeenAt": "2026-09-01T15:39:12.305Z",
+    "timesSeen": 1
   }
 ]
