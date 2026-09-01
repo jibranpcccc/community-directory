@@ -39,9 +39,10 @@ const platformName = platformConfig ? platformConfig.name : community.platform;
 
 // Factual SEO Metadata
 const pageTitle = `${community.title} - ${categoryName} Job Group in ${countryName} | ${siteConfig.name}`;
-const pageDescription = community.description
-  ? community.description.slice(0, 155)
-  : `Discover ${community.title}, a public ${platformName} community sharing ${categoryName} job alerts in ${countryName}.`;
+const pageDescription =
+  community.description && community.description.trim().length >= 50
+    ? community.description.slice(0, 155)
+    : `Discover ${community.title}, a public ${platformName} community sharing ${categoryName} job alerts in ${countryName}.`;
 
 const detailSchema = generateCommunityDetailSchema(community);
 const isIndexable = isCommunityIndexWorthy(community);
