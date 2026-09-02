@@ -1,209 +1,5 @@
 [
   {
-    "id": "nhs-job-discussion-group-whatsapp",
-    "slug": "nhs-job-discussion-group-whatsapp",
-    "title": "NHS Job Discussion Group",
-    "platform": "whatsapp",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Worldwide Jobs",
-    "tags": [
-      "whatsapp",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://chat.whatsapp.com/CS3Nv75h6UY4lItMMeMZAC",
-    "description": null,
-    "descriptionSource": null,
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": null,
-    "memberCountSource": null,
-    "memberCountCheckedAt": null,
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-26T12:27:42.936Z",
-    "sourceUrls": [
-      "https://chat.whatsapp.com/CS3Nv75h6UY4lItMMeMZAC"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-26T12:27:42.936Z",
-    "lastCheckedAt": "2026-08-26T12:27:42.936Z",
-    "updatedAt": "2026-08-26T12:27:42.936Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-08-26T12:27:42.936Z",
-    "lastSeenAt": "2026-08-26T12:27:42.936Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1787747262936_p6dyu",
-      "run_1787747267504_qk0an"
-    ],
-    "querySource": "site:chat.whatsapp.com Worldwide job alerts",
-    "sourceHostname": "chat.whatsapp.com",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-157h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "nhs-job-discussion-group-ii-whatsapp",
-    "slug": "nhs-job-discussion-group-ii-whatsapp",
-    "title": "NHS Job Discussion Group II",
-    "platform": "whatsapp",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Worldwide Jobs",
-    "tags": [
-      "whatsapp",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://chat.whatsapp.com/CWaJP1F46MkGw6BqcflcAX",
-    "description": null,
-    "descriptionSource": null,
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": null,
-    "memberCountSource": null,
-    "memberCountCheckedAt": null,
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-26T12:27:42.936Z",
-    "sourceUrls": [
-      "https://chat.whatsapp.com/CWaJP1F46MkGw6BqcflcAX"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-26T12:27:42.936Z",
-    "lastCheckedAt": "2026-08-26T12:27:42.936Z",
-    "updatedAt": "2026-08-26T12:27:42.936Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-08-26T12:27:42.936Z",
-    "lastSeenAt": "2026-08-26T12:27:42.936Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1787747262936_p6dyu",
-      "run_1787747268352_31axw"
-    ],
-    "querySource": "site:chat.whatsapp.com Worldwide job alerts",
-    "sourceHostname": "chat.whatsapp.com",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-157h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "nhs-job-discussion-group-iii-whatsapp",
-    "slug": "nhs-job-discussion-group-iii-whatsapp",
-    "title": "NHS Job Discussion Group III",
-    "platform": "whatsapp",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Worldwide Jobs",
-    "tags": [
-      "whatsapp",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://chat.whatsapp.com/K0Cn82JjspPDmibTiuVsH9",
-    "description": null,
-    "descriptionSource": null,
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": null,
-    "memberCountSource": null,
-    "memberCountCheckedAt": null,
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-26T12:27:42.936Z",
-    "sourceUrls": [
-      "https://chat.whatsapp.com/K0Cn82JjspPDmibTiuVsH9"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-26T12:27:42.936Z",
-    "lastCheckedAt": "2026-08-26T12:27:42.936Z",
-    "updatedAt": "2026-08-26T12:27:42.936Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-08-26T12:27:42.936Z",
-    "lastSeenAt": "2026-08-26T12:27:42.936Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1787747262936_p6dyu",
-      "run_1787747268901_01ben"
-    ],
-    "querySource": "site:chat.whatsapp.com Worldwide job alerts",
-    "sourceHostname": "chat.whatsapp.com",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-157h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "sarkari-job-updates-government-job-with-job4government-job4fresherscoin-telegram",
     "slug": "sarkari-job-updates-government-job-with-job4government-job4fresherscoin-telegram",
     "title": "Sarkari Job Updates | Government Job with Job4Government - @job4freshers.co.in",
@@ -267,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-129h",
+      "validation-stale-143h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -335,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-129h",
+      "validation-stale-143h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -404,7 +200,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-129h",
+      "validation-stale-143h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -472,7 +268,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-104h",
+      "validation-stale-118h",
       "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -544,7 +340,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-82h"
+      "validation-stale-96h"
     ]
   },
   {
@@ -615,7 +411,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-82h"
+      "validation-stale-96h"
     ]
   },
   {
@@ -686,7 +482,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-82h"
+      "validation-stale-96h"
     ]
   },
   {
@@ -757,7 +553,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-82h"
+      "validation-stale-96h"
     ]
   },
   {
@@ -828,7 +624,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-82h"
+      "validation-stale-96h"
     ]
   },
   {
@@ -895,7 +691,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-82h",
+      "validation-stale-96h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -967,7 +763,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-82h"
+      "validation-stale-96h"
     ]
   },
   {
@@ -1034,7 +830,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-63h",
+      "validation-stale-77h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -1102,7 +898,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-63h",
+      "validation-stale-77h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -1174,6 +970,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-29h",
       "duplicate-published: Matching community title on telegram: \"Remote Jobs👨‍💻\" vs \"Remote Jobs\""
     ]
   },
@@ -1241,6 +1038,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-29h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   }
