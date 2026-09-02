@@ -4173,5 +4173,32 @@
     "date": "2026-09-01T15:39:12.305Z",
     "lastSeenAt": "2026-09-01T15:39:12.305Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/remotejobalerts",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-02T01:34:06.863Z",
+    "lastSeenAt": "2026-09-02T01:34:06.863Z",
+    "timesSeen": 1,
+    "title": "Remote Jobs : uprightremotejobs.com"
+  },
+  {
+    "url": "https://t.me/sgfulltimers",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-02T01:34:06.863Z",
+    "lastSeenAt": "2026-09-02T01:34:06.863Z",
+    "timesSeen": 1,
+    "title": "SG Full Timers #Snatchjobs 🇸🇬"
+  },
+  {
+    "url": "https://discord.gg/XzxkxzwmZb",
+    "platform": "discord",
+    "title": "WerQ AI",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-02T01:34:10.587Z",
+    "lastSeenAt": "2026-09-02T01:34:10.587Z",
+    "timesSeen": 1
   }
 ]
