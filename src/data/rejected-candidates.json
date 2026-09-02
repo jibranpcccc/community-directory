@@ -1668,10 +1668,10 @@
   {
     "url": "https://chat.whatsapp.com/FgJNY5FCJTDEPLpgIlBz0N",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-09-01T10:40:51.833Z",
-    "timesSeen": 9,
+    "lastSeenAt": "2026-09-02T10:03:01.226Z",
+    "timesSeen": 10,
     "title": "FgJNY5FCJTDEPLpgIlBz0N"
   },
   {
