@@ -1041,5 +1041,68 @@
       "validation-stale-29h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
+  },
+  {
+    "id": "maha-naukri-telegram",
+    "slug": "maha-naukri-telegram",
+    "title": "Maha Naukri",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "remote-jobs",
+    "subcategory": "Remote Work",
+    "tags": [
+      "telegram",
+      "jobs",
+      "remotejobs"
+    ],
+    "inviteUrl": "https://t.me/mnjobs",
+    "description": "Get Daily Job UpdatesCentral Government Jobs | State Government Jobs | Private JobsYoutube Channel Link :- https://www.youtube.com/c/MahaNaukri",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "remote-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 33736,
+    "memberCountSource": "https://t.me/mnjobs",
+    "memberCountCheckedAt": "2026-09-03T10:16:47.914Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-03T10:16:47.914Z",
+    "sourceUrls": [
+      "https://t.me/mnjobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-03T10:16:47.914Z",
+    "lastCheckedAt": "2026-09-03T10:16:47.914Z",
+    "updatedAt": "2026-09-03T10:16:47.914Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-03T10:16:47.914Z",
+    "lastSeenAt": "2026-09-03T10:16:47.914Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1788430607914_6qca5",
+      "run_1788430615892_plur8"
+    ],
+    "querySource": "site:t.me worldwide remote jobs Global Telegram channel",
+    "sourceHostname": "t.me"
   }
 ]
