@@ -748,8 +748,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-09-02T15:31:08.648Z",
-    "timesSeen": 8
+    "lastSeenAt": "2026-09-03T15:19:24.483Z",
+    "timesSeen": 9
   },
   {
     "url": "https://t.me/design_work",
@@ -905,8 +905,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-27T16:58:43.400Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-09-03T15:19:24.483Z",
+    "timesSeen": 3
   },
   {
     "url": "https://t.me/web_designers",
@@ -1347,8 +1347,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-09-03T10:16:47.914Z",
-    "timesSeen": 9,
+    "lastSeenAt": "2026-09-03T15:19:24.483Z",
+    "timesSeen": 10,
     "title": "Singapore Careers and Job Opportunities - sgCareers"
   },
   {
@@ -3852,8 +3852,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-31T18:20:29.403Z",
-    "lastSeenAt": "2026-09-03T10:16:47.914Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-09-03T15:19:24.483Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/KUCp9KEtDq",
@@ -4268,8 +4268,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-09-02T15:31:08.648Z",
-    "lastSeenAt": "2026-09-02T15:31:08.648Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-03T15:19:24.483Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/JobBankinCanada",
@@ -4599,5 +4599,22 @@
     "lastSeenAt": "2026-09-03T10:16:47.914Z",
     "timesSeen": 1,
     "title": "BO2LAJnZMOGCTHRNW5S5yX"
+  },
+  {
+    "url": "https://t.me/RemoteIT",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-03T15:19:24.483Z",
+    "lastSeenAt": "2026-09-03T15:19:24.483Z",
+    "timesSeen": 1,
+    "title": "Remote IT (Inflow)"
+  },
+  {
+    "url": "https://t.me/Remote_Web_dev_jobs",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-09-03T15:19:24.483Z",
+    "lastSeenAt": "2026-09-03T15:19:24.483Z",
+    "timesSeen": 1
   }
 ]
