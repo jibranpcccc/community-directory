@@ -5,6 +5,7 @@ import {
   getSeoMetadata,
   getIndexability,
   isCommunityIndexWorthy,
+  isCommunityIndexWorthyForTaxonomy,
 } from "../src/lib/seo";
 import {
   generateWebSiteSchema,
@@ -12,6 +13,7 @@ import {
   generateCollectionPageSchema,
   generateOrganizationSchema,
   generateCommunityDetailSchema,
+  generateFaqSchema,
 } from "../src/lib/schema";
 import { siteConfig } from "../src/config/site";
 import type { Community } from "../src/types/community";
@@ -167,6 +169,52 @@ describe("SEO Engine & JSON-LD Generators", () => {
     });
   });
 
+  describe("Taxonomy Index Eligibility (Decoupled Hub Gate)", () => {
+    const validTierB: Community = {
+      id: "india-tech-telegram",
+      slug: "india-tech-telegram",
+      title: "India Tech Job Alerts",
+      platform: "telegram",
+      vertical: "jobs",
+      category: "tech-jobs",
+      countryCode: "IN",
+      city: "Bangalore",
+      jobTypes: ["full-time-jobs"],
+      industries: ["technology"],
+      workArrangement: "remote",
+      experienceLevels: ["mid-level"],
+      visaSponsorship: "unknown",
+      tags: ["india", "tech"],
+      inviteUrl: "https://t.me/indiatechjobs",
+      description: "Indian tech recruitment announcements and hiring alerts.",
+      verificationStatus: "unverified",
+      linkStatus: "active",
+      sourceUrls: [],
+      countryEvidence: {
+        sourceType: "platform-description",
+        text: "India tech recruitment in description",
+        checkedAt: new Date().toISOString(),
+      },
+      discoveryMethod: "manual",
+      discoveredAt: "2026-08-01T00:00:00.000Z",
+      lastCheckedAt: new Date().toISOString(),
+      lastSuccessfulValidationAt: new Date().toISOString(),
+      published: true,
+    };
+
+    it("qualifies safe Tier-B communities for taxonomy hubs without requiring corporate root domain evidence", () => {
+      expect(isCommunityIndexWorthyForTaxonomy(validTierB)).toBe(true);
+      // But detail page remains non-indexed to prevent thin UGC detail pages
+      expect(isCommunityIndexWorthy(validTierB)).toBe(false);
+    });
+
+    it("rejects non-active or scam-flagged communities from taxonomy counts", () => {
+      expect(isCommunityIndexWorthyForTaxonomy({ ...validTierB, linkStatus: "dead" })).toBe(false);
+      expect(isCommunityIndexWorthyForTaxonomy({ ...validTierB, safetyFlags: ["scam-risk"] })).toBe(false);
+      expect(isCommunityIndexWorthyForTaxonomy({ ...validTierB, vertical: "forex" as any })).toBe(false);
+    });
+  });
+
   describe("SEO Metadata Helper", () => {
     it("generates correct Open Graph and Twitter tags with trailing slashes", () => {
       const meta = getSeoMetadata({
@@ -306,6 +354,26 @@ describe("SEO Engine & JSON-LD Generators", () => {
       expect(schemaString).not.toContain("Review");
       expect(schemaString).not.toContain("Product");
       expect(schemaString).not.toContain("FAQPage");
+    });
+
+    it("generates valid FAQPage JSON-LD schema with questions and accepted answers", () => {
+      const faqs = [
+        {
+          question: "Are these groups free to join?",
+          answer: "Yes, every community listed is free without membership fees.",
+        },
+      ];
+
+      const schema = generateFaqSchema(faqs);
+      expect(schema["@context"]).toBe("https://schema.org");
+      expect(schema["@type"]).toBe("FAQPage");
+      expect(schema.mainEntity).toHaveLength(1);
+      expect(schema.mainEntity[0]["@type"]).toBe("Question");
+      expect(schema.mainEntity[0].name).toBe("Are these groups free to join?");
+      expect(schema.mainEntity[0].acceptedAnswer["@type"]).toBe("Answer");
+      expect(schema.mainEntity[0].acceptedAnswer.text).toBe(
+        "Yes, every community listed is free without membership fees."
+      );
     });
   });
 });

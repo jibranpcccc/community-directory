@@ -1,4 +1,4 @@
-﻿---
+---
 import type { Community } from "../types/community";
 import PlatformBadge from "./PlatformBadge.astro";
 import CategoryBadge from "./CategoryBadge.astro";
@@ -68,16 +68,13 @@ const country = getCountryByCode(community.countryCode);
       </p>
     )}
 
-    <!-- Tags -->
+    <!-- Tags (Rendered as visual badges to preserve PageRank for indexable hubs) -->
     {community.tags && community.tags.length > 0 && (
       <div class="flex flex-wrap gap-1.5 mb-4">
         {community.tags.slice(0, 3).map((tag) => (
-          <a
-            href={`/tag/${tag.toLowerCase()}/`}
-            class="rounded-md border border-black bg-[#FAF8F5] px-2 py-0.5 text-[11px] font-bold text-black hover:bg-[#FEF08A] transition-colors shadow-[1px_1px_0px_0px_#000]"
-          >
+          <span class="rounded-md border border-black bg-[#FAF8F5] px-2 py-0.5 text-[11px] font-bold text-black shadow-[1px_1px_0px_0px_#000]">
             #{tag}
-          </a>
+          </span>
         ))}
       </div>
     )}
@@ -112,8 +109,9 @@ const country = getCountryByCode(community.countryCode);
       <a
         href={`/group/${community.slug}/`}
         class="neo-btn text-center bg-white hover:bg-slate-100 text-black px-3 py-2 text-xs font-black border-2 border-black shadow-[2px_2px_0px_0px_#000]"
+        aria-label={`View full details for ${community.title}`}
       >
-        View Details
+        View Group &rarr;
       </a>
       <a
         href={community.inviteUrl}

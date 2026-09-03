@@ -1,9 +1,33 @@
 ---
 import DirectoryLayout from "../layouts/DirectoryLayout.astro";
+import FaqSection from "../components/FaqSection.astro";
 import { siteConfig } from "../config/site";
+import { generateFaqSchema } from "../lib/schema";
 
 const pageTitle = `Job Seeker Safety & Scam Prevention Guide | ${siteConfig.name}`;
 const pageDescription = "Essential safety guidelines for job seekers discovering online employment communities. Learn how to spot task scams, fake recruiters, and fee fraud.";
+
+const safetyFaqs = [
+  {
+    question: "How can I tell if a Telegram job recruiter is legitimate?",
+    answer:
+      "Legitimate corporate recruiters will always verify their identity via an official company email address (name@company.com) and invite you to a formal video interview. Be immediately suspicious of anyone conducting hiring purely over Telegram text, offering immediate employment without a resume review, or requesting fees.",
+  },
+  {
+    question: "Is it safe to click invite links on JobAlertHub?",
+    answer:
+      "JobAlertHub scans and validates all invite links to ensure they resolve to public community channels on official platform domains (t.me, discord.gg, chat.whatsapp.com). However, community content is user-generated; always verify individual employers before sharing personal documents.",
+  },
+  {
+    question: "Where can I report recruitment fraud to government authorities?",
+    answer:
+      "In the United States, report to the Federal Trade Commission (reportfraud.ftc.gov) and FBI IC3 (ic3.gov). In the United Kingdom, report to Action Fraud (actionfraud.police.uk). In Canada, report to the Canadian Anti-Fraud Centre (antifraudcentre-centreantifraude.ca). In Australia, report to Scamwatch (scamwatch.gov.au).",
+  },
+];
+
+const schemas = [
+  generateFaqSchema(safetyFaqs),
+];
 ---
 
 <DirectoryLayout
@@ -13,6 +37,7 @@ const pageDescription = "Essential safety guidelines for job seekers discovering
   title={pageTitle}
   description={pageDescription}
   canonicalPath="/safety/"
+  jsonLd={schemas}
   pageType="trust"
 >
   <div class="max-w-4xl mx-auto space-y-10">
@@ -27,6 +52,45 @@ const pageDescription = "Essential safety guidelines for job seekers discovering
       <p class="text-sm sm:text-base font-bold text-black leading-relaxed">
         <strong>A legitimate employer will NEVER ask you to pay money to get a job.</strong> You should never pay for job applications, background check fees, equipment deposits, or cryptocurrency wallet unlocks.
       </p>
+    </div>
+
+    <!-- Platform-Specific Attack Vectors -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-black text-black">Platform-Specific Scam Tactics</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <!-- Telegram -->
+        <div class="neo-card p-5 bg-white space-y-2">
+          <div class="font-black text-base text-black flex items-center gap-2">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#0284C7]"></span>
+            <span>Telegram Traps</span>
+          </div>
+          <p class="text-xs font-medium text-neutral-700 leading-relaxed">
+            Watch out for recruiter handle spoofing (e.g. mimicking real HR staff with slight character variations like replacing 'l' with '1'). Beware of secret chat invitations, automated rating bots, and requests to convert cash to crypto.
+          </p>
+        </div>
+
+        <!-- Discord -->
+        <div class="neo-card p-5 bg-white space-y-2">
+          <div class="font-black text-base text-black flex items-center gap-2">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#5865F2]"></span>
+            <span>Discord Traps</span>
+          </div>
+          <p class="text-xs font-medium text-neutral-700 leading-relaxed">
+            Be cautious of direct messages asking you to authorize a third-party bot to "verify candidate status", QR codes claiming to give server roles, or direct downloads disguised as code test assignments (e.g. .scr or .exe files).
+          </p>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="neo-card p-5 bg-white space-y-2">
+          <div class="font-black text-base text-black flex items-center gap-2">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#22C55E]"></span>
+            <span>WhatsApp Traps</span>
+          </div>
+          <p class="text-xs font-medium text-neutral-700 leading-relaxed">
+            Watch out for unsolicited bulk group adds from unknown foreign country codes. Scammers often post automated hiring messages offering "$300/day remote assistant" work with shortened phishing links.
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- Common Scams Explained -->
@@ -64,7 +128,7 @@ const pageDescription = "Essential safety guidelines for job seekers discovering
             <li>"Pay $150 for mandatory onboarding training."</li>
             <li>"Send a deposit for company laptop & monitor shipping."</li>
             <li>"Pay an administrative visa processing fee."</li>
-            <li><strong>Outcome:</strong> Be cautious if an unknown recruiter asks you to pay upfront for equipment, training, processing, or access to a job. Verify the employer through its official website and independently confirmed contact channels before sending money or sensitive information.</li>
+            <li><strong>Outcome:</strong> Legitimate employers cover equipment and onboarding costs. Never pay upfront for a job.</li>
           </ul>
         </div>
 
@@ -96,9 +160,46 @@ const pageDescription = "Essential safety guidelines for job seekers discovering
           <ul class="text-xs font-bold text-slate-800 space-y-1.5 list-disc pl-4">
             <li>Scammers claim to offer guaranteed UK Skilled Worker, US H-1B, or Canadian LMIA visas.</li>
             <li>They demand payment via wire or crypto for "fast-track government work permits".</li>
-            <li><strong>Outcome:</strong> Official visa sponsorship is handled through regulated government immigration portals, never personal Telegram/WhatsApp payments.</li>
+            <li><strong>Outcome:</strong> Official visa sponsorship is handled through regulated government immigration portals, never personal chat payments.</li>
           </ul>
         </div>
+      </div>
+    </div>
+
+    <!-- Official Fraud Reporting Directory -->
+    <div class="neo-card p-6 sm:p-8 bg-white space-y-4">
+      <div class="inline-block bg-[#FDE047] px-2.5 py-0.5 border border-black text-[10px] font-black uppercase tracking-wider shadow-[1px_1px_0px_0px_#000]">
+        OFFICIAL REPORTING AUTHORITIES
+      </div>
+      <h2 class="text-xl sm:text-2xl font-black text-black">Where to Report Recruitment Scams</h2>
+      <p class="text-xs sm:text-sm font-medium text-neutral-700 leading-relaxed">
+        If you have encountered recruitment fraud, reporting it protects the entire job-seeking community. You can file official reports directly with national authorities:
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold">
+        <a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener noreferrer" class="p-3 bg-neutral-50 border-2 border-black rounded-xl hover:bg-[#FEF08A] transition-colors flex items-center justify-between">
+          <span>🇺🇸 USA: Federal Trade Commission (FTC)</span>
+          <span>&rarr;</span>
+        </a>
+        <a href="https://www.ic3.gov" target="_blank" rel="noopener noreferrer" class="p-3 bg-neutral-50 border-2 border-black rounded-xl hover:bg-[#FEF08A] transition-colors flex items-center justify-between">
+          <span>🇺🇸 USA: FBI Internet Crime Complaint Center (IC3)</span>
+          <span>&rarr;</span>
+        </a>
+        <a href="https://www.actionfraud.police.uk" target="_blank" rel="noopener noreferrer" class="p-3 bg-neutral-50 border-2 border-black rounded-xl hover:bg-[#FEF08A] transition-colors flex items-center justify-between">
+          <span>🇬🇧 UK: Action Fraud UK</span>
+          <span>&rarr;</span>
+        </a>
+        <a href="https://www.antifraudcentre-centreantifraude.ca" target="_blank" rel="noopener noreferrer" class="p-3 bg-neutral-50 border-2 border-black rounded-xl hover:bg-[#FEF08A] transition-colors flex items-center justify-between">
+          <span>🇨🇦 Canada: Canadian Anti-Fraud Centre</span>
+          <span>&rarr;</span>
+        </a>
+        <a href="https://www.scamwatch.gov.au" target="_blank" rel="noopener noreferrer" class="p-3 bg-neutral-50 border-2 border-black rounded-xl hover:bg-[#FEF08A] transition-colors flex items-center justify-between">
+          <span>🇦🇺 Australia: Scamwatch (ACCC)</span>
+          <span>&rarr;</span>
+        </a>
+        <a href="https://www.cybercrime.gov.in" target="_blank" rel="noopener noreferrer" class="p-3 bg-neutral-50 border-2 border-black rounded-xl hover:bg-[#FEF08A] transition-colors flex items-center justify-between">
+          <span>🇮🇳 India: National Cyber Crime Portal</span>
+          <span>&rarr;</span>
+        </a>
       </div>
     </div>
 
@@ -110,7 +211,7 @@ const pageDescription = "Essential safety guidelines for job seekers discovering
           <strong>Verify Corporate Emails:</strong> Ensure communications come from official domains (@company.com), not generic Gmail, Outlook, or Telegram handles.
         </div>
         <div class="p-3 bg-white border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_#000]">
-          <strong>Interview Caution:</strong> Be cautious of job offers made with little or no meaningful screening, especially when followed by requests for money or sensitive documents. Hiring processes vary by employer.
+          <strong>Interview Caution:</strong> Be cautious of job offers made with little or no meaningful screening, especially when followed by requests for money or sensitive documents.
         </div>
         <div class="p-3 bg-white border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_#000]">
           <strong>Never Send Identity Docs Upfront:</strong> Do not submit passport copies, SSN/SIN, or banking details before an official verified offer letter.
@@ -121,6 +222,13 @@ const pageDescription = "Essential safety guidelines for job seekers discovering
       </div>
     </div>
 
+    <!-- Safety FAQs -->
+    <FaqSection
+      title="Recruitment Safety FAQs"
+      subtitle="Frequently asked questions about detecting fraudulent employment postings in chat channels."
+      faqs={safetyFaqs}
+    />
+
     <!-- CTA -->
     <div class="text-center pt-4">
       <a href="/report/" class="neo-button bg-[#FECDD3] hover:bg-[#FDA4AF] text-black px-6 py-3 text-sm font-black">
@@ -129,3 +237,4 @@ const pageDescription = "Essential safety guidelines for job seekers discovering
     </div>
   </div>
 </DirectoryLayout>
+

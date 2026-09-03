@@ -5,7 +5,8 @@ import CategoryBadge from "../../components/CategoryBadge.astro";
 import StatusBadge from "../../components/StatusBadge.astro";
 import VerificationBadge from "../../components/VerificationBadge.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
-import { getAllPublishedCommunities } from "../../lib/communities";
+import CommunityCard from "../../components/CommunityCard.astro";
+import { getAllPublishedCommunities, getRelatedCommunities } from "../../lib/communities";
 import { getCountryByCode } from "../../config/countries";
 import { getCategoryBySlug } from "../../config/categories";
 import { getPlatformConfig } from "../../config/platforms";
@@ -46,6 +47,7 @@ const pageDescription =
 
 const detailSchema = generateCommunityDetailSchema(community);
 const isIndexable = isCommunityIndexWorthy(community);
+const relatedCommunities = getRelatedCommunities(community, 3);
 
 const breadcrumbs = [
   { name: "All Jobs", item: "/jobs/" },
@@ -192,6 +194,35 @@ const breadcrumbs = [
       </div>
     </div>
   </div>
+
+  <!-- Similar / Related Job Alert Groups (Eliminates Crawl Dead-End) -->
+  {
+    relatedCommunities.length > 0 && (
+      <section class="mt-12 pt-8 border-t-[3px] border-black">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <div class="inline-block bg-[#BAE6FD] px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-wider shadow-[1.5px_1.5px_0px_0px_#000] mb-1.5">
+              RELATED COMMUNITIES
+            </div>
+            <h2 class="text-xl sm:text-2xl font-black text-black tracking-tight">
+              Similar {categoryName} Groups in {countryName}
+            </h2>
+          </div>
+          <a
+            href={`/category/${community.category}/`}
+            class="text-xs font-black text-black hover:underline"
+          >
+            View all {categoryName} &rarr;
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {relatedCommunities.map((related) => (
+            <CommunityCard community={related} />
+          ))}
+        </div>
+      </section>
+    )
+  }
 
   <SafetyNotice type="job-warning" />
 </DirectoryLayout>

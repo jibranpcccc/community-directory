@@ -1,12 +1,12 @@
 export const siteConfig = {
   name: "JobAlertHub",
   shortName: "JobAlerts",
-  tagline: "Active Job Alert Groups Across 14 Target Markets (13 Countries + Worldwide/Remote)",
-  headline: "Find Active Job Alert Groups",
+  tagline: "Job Alert Groups: Telegram Channels & Discord Career Servers",
+  headline: "Discover Active Job Alert Groups, Telegram Channels & Discord Servers",
   subheadline:
-    "Discover public WhatsApp, Telegram, and Discord communities sharing job openings, hiring alerts, career opportunities, and remote work across 14 target markets (13 countries + Worldwide/Remote).",
+    "Search public WhatsApp job groups, Telegram hiring channels, and Discord career servers sharing job openings, tech hiring alerts, and remote work across 14 target markets (13 countries + Worldwide/Remote).",
   description:
-    "JobAlertHub discovers and monitors public job-alert communities across Discord, Telegram and WhatsApp, covering 14 target markets (13 countries and Worldwide/Remote) including the United States, United Kingdom, Canada, Australia, India, Germany, the Netherlands, Singapore, the United Arab Emirates, the Philippines, New Zealand, Ireland and South Africa.",
+    "JobAlertHub is a verified directory of public job alert groups, Telegram job channels, and Discord career servers across 14 target markets including the USA, UK, Canada, Australia, India, and remote work.",
   url: process.env.PUBLIC_SITE_URL || "https://jobalertgroups.com",
   defaultLocale: "en",
   showAdPlaceholders: process.env.SHOW_AD_PLACEHOLDERS === "true",
@@ -55,6 +55,7 @@ export const siteConfig = {
     ],
     jobTypes: [
       { label: "Remote Jobs", href: "/job-type/remote-jobs/" },
+      { label: "Government Jobs", href: "/job-type/government-jobs/" },
       { label: "Full-Time Jobs", href: "/job-type/full-time-jobs/" },
       { label: "Tech & Software Jobs", href: "/category/tech-jobs/" },
       { label: "Healthcare & Nursing", href: "/category/healthcare-jobs/" },

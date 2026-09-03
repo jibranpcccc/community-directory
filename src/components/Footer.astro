@@ -1,4 +1,4 @@
-﻿---
+---
 import { siteConfig } from "../config/site";
 import { getDatasetStats } from "../lib/communities";
 
@@ -7,7 +7,7 @@ const stats = getDatasetStats();
 
 <footer class="mt-auto border-t-[3px] border-black bg-white text-black">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
       <!-- Brand & Mission Column -->
       <div class="lg:col-span-2 space-y-4">
         <a href="/" class="flex items-center gap-2.5">
@@ -19,7 +19,7 @@ const stats = getDatasetStats();
           <span class="text-base font-black text-black">{siteConfig.name}</span>
         </a>
         <p class="text-xs font-medium leading-relaxed text-slate-700 max-w-sm">
-          Discover public Discord servers, Telegram channels, and WhatsApp groups sharing job openings, hiring alerts, career opportunities, and remote work across the USA, UK, Canada, and Australia.
+          Discover public Discord servers, Telegram channels, and WhatsApp groups sharing job openings, hiring alerts, career opportunities, and remote work across 14 target markets (13 countries + Worldwide/Remote).
         </p>
 
         <div class="rounded-xl border-2 border-black bg-[#FEF9C3] p-3.5 text-xs text-black font-bold space-y-1.5 shadow-[2px_2px_0px_0px_#000]">
@@ -29,13 +29,29 @@ const stats = getDatasetStats();
           </div>
           <div class="flex items-center justify-between">
             <span>Target Markets:</span>
-            <span class="text-black font-black">USA, UK, Canada, Australia</span>
+            <span class="text-black font-black">14 Markets (13 Countries + Global)</span>
           </div>
           <div class="flex items-center justify-between">
             <span>Platforms:</span>
-            <span class="text-black font-black">Discord, Telegram, WhatsApp</span>
+            <span class="text-black font-black">Telegram, Discord, WhatsApp</span>
           </div>
         </div>
+      </div>
+
+      <!-- Platforms Column -->
+      <div>
+        <h3 class="text-xs font-black uppercase tracking-wider text-black bg-[#DDD6FE] px-2 py-0.5 rounded border border-black shadow-[1px_1px_0px_0px_#000] inline-block mb-3">
+          By Platform
+        </h3>
+        <ul class="space-y-2 text-xs font-bold">
+          {siteConfig.footerNav.platforms && siteConfig.footerNav.platforms.map((item) => (
+            <li>
+              <a href={item.href} class="hover:underline text-black">
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <!-- Countries Column -->

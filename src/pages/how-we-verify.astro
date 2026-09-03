@@ -1,9 +1,31 @@
 ---
 import DirectoryLayout from "../layouts/DirectoryLayout.astro";
 import VerificationBadge from "../components/VerificationBadge.astro";
+import FaqSection from "../components/FaqSection.astro";
+import { generateFaqSchema } from "../lib/schema";
 
 const pageTitle = "How We Verify Job Communities | JobAlertHub";
 const pageDescription = "A transparent breakdown of our data standards, automated validation pipeline, and trust tiers.";
+
+const verifyFaqs = [
+  {
+    question: "What are the 12 programmatic validation gates?",
+    answer:
+      "Every community candidate is screened for: (1) normalized URL syntax on approved platforms, (2) live reachable HTTP status, (3) minimum probation observation, (4) country employment evidence in public metadata, (5) verified job category mapping, (6) anti-scam heuristic screening against task fraud and upfront fees, (7) rate-limiting protections, (8) duplicate slug collision prevention, (9) title and description sanitization, (10) verification tier assignment, (11) absence of blacklisted domains or phishing tokens, and (12) zero-hallucination compliance.",
+  },
+  {
+    question: "How does a community obtain a 'Source Confirmed' badge?",
+    answer:
+      "A Source Confirmed badge is awarded when a community's exact invite link or unique server ID is directly cited on an authoritative corporate domain (e.g. an official company website, registered non-profit, or verified developer portal).",
+  },
+  {
+    question: "How can community administrators update their listing or invite link?",
+    answer:
+      "Community administrators can submit updated invite links or refreshed descriptions via our Contact and Report portals. Once verified, updates are deployed automatically during the next validation cycle.",
+  },
+];
+
+const schemas = [generateFaqSchema(verifyFaqs)];
 ---
 
 <DirectoryLayout
@@ -16,6 +38,7 @@ const pageDescription = "A transparent breakdown of our data standards, automate
   title={pageTitle}
   description={pageDescription}
   canonicalPath="/how-we-verify/"
+  jsonLd={schemas}
   pageType="trust"
 >
   <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base font-medium text-slate-800 leading-relaxed">
@@ -131,6 +154,13 @@ const pageDescription = "A transparent breakdown of our data standards, automate
         </div>
       </div>
     </section>
+
+    <!-- Verification FAQs -->
+    <FaqSection
+      title="Verification & Safety FAQs"
+      subtitle="Answers to common questions about our data ingestion, trust tiers, and review pipelines."
+      faqs={verifyFaqs}
+    />
 
     <!-- Report & Takedown Callout -->
     <div class="rounded-3xl border-[3px] border-black bg-[#FECDD3] p-6 sm:p-8 shadow-[6px_6px_0px_0px_#000] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">

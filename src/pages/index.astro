@@ -2,20 +2,45 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CommunityCard from "../components/CommunityCard.astro";
 import SafetyNotice from "../components/SafetyNotice.astro";
+import FaqSection from "../components/FaqSection.astro";
 import { getAllPublishedCommunities, getDatasetStats } from "../lib/communities";
 import { siteConfig } from "../config/site";
 import { ENABLED_COUNTRIES } from "../config/countries";
 import { categories } from "../config/categories";
 import { platforms } from "../config/platforms";
-import { generateWebSiteSchema, generateOrganizationSchema } from "../lib/schema";
+import { generateWebSiteSchema, generateOrganizationSchema, generateFaqSchema } from "../lib/schema";
 
 const communities = getAllPublishedCommunities();
 const stats = getDatasetStats();
+
+const homeFaqs = [
+  {
+    question: "Are all job alert communities on JobAlertHub free to join?",
+    answer:
+      "Yes. Every Discord server, Telegram channel, and WhatsApp group listed in our directory is publicly accessible without subscription fees, paywalls, or membership charges. We strictly reject groups that require payment to view job alerts.",
+  },
+  {
+    question: "How does JobAlertHub detect and remove broken or expired invite links?",
+    answer:
+      "Our automated link health engine actively tests invite endpoints across Telegram, Discord, and WhatsApp. Links that return HTTP 404, expired invite codes, or revoked permissions are automatically flagged and unpublished from the directory within 24 to 48 hours.",
+  },
+  {
+    question: "Can community owners submit their hiring group for inclusion?",
+    answer:
+      "Yes. Community administrators and moderators can submit public channels via our Submit portal. Every submission undergoes a 12-gate programmatic evaluation and human verification to confirm regional employment intent and scam-free history.",
+  },
+  {
+    question: "Does JobAlertHub guarantee employment or verify individual employers in these groups?",
+    answer:
+      "No. JobAlertHub is an independent directory of public chat communities. While we verify that the groups themselves are active and employment-focused, we do not employ or endorse third-party recruiters posting inside them. Job seekers must always exercise caution and follow our Safety Guidelines.",
+  },
+];
 
 // Structured Data
 const schemas = [
   generateWebSiteSchema(),
   generateOrganizationSchema(),
+  generateFaqSchema(homeFaqs),
 ];
 
 // Featured / Recent slice
@@ -38,7 +63,7 @@ const recentCommunities = communities.slice(0, 6);
         </div>
 
         <h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-black leading-[1.08]">
-          Discover Active Job Alert Communities
+          Discover Active Job Alert Groups, Telegram Channels & Discord Servers
         </h1>
 
         <p class="text-sm sm:text-base md:text-lg font-bold text-black/85 leading-relaxed">
@@ -339,7 +364,10 @@ const recentCommunities = communities.slice(0, 6);
       </div>
     </section>
 
-    <!-- 9. Job Seeker Safety Notice -->
+    <!-- 9. Frequently Asked Questions -->
+    <FaqSection faqs={homeFaqs} />
+
+    <!-- 10. Job Seeker Safety Notice -->
     <SafetyNotice type="job-warning" />
   </div>
 </BaseLayout>

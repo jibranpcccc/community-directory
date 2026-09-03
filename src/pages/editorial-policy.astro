@@ -2,13 +2,13 @@
 import DirectoryLayout from "../layouts/DirectoryLayout.astro";
 import { siteConfig } from "../config/site";
 
-const pageTitle = `Editorial Policy & Listing Guidelines | ${siteConfig.name}`;
-const pageDescription = "Our editorial guidelines, inclusion standards, and review policies for public job alert communities.";
+const pageTitle = `Editorial Policy & Directory Standards | ${siteConfig.name}`;
+const pageDescription = "Our independent editorial standards, zero-hallucination policy, inclusion criteria, and automated removal protocols.";
 ---
 
 <DirectoryLayout
-  heading="Editorial Policy & Standards"
-  subheading="Our criteria for indexing, evaluating, maintaining, and removing public job communities."
+  heading="Editorial Policy & Directory Standards"
+  subheading="Our independent criteria for discovering, evaluating, maintaining, and removing public job alert communities."
   breadcrumbs={[{ name: "Editorial Policy", item: "/editorial-policy/" }]}
   title={pageTitle}
   description={pageDescription}
@@ -16,23 +16,93 @@ const pageDescription = "Our editorial guidelines, inclusion standards, and revi
   pageType="trust"
 >
   <div class="max-w-4xl mx-auto space-y-8 text-sm sm:text-base font-medium text-slate-800 leading-relaxed">
+    <!-- 1. Editorial Independence & Non-Commercial Neutrality -->
     <div class="neo-card p-6 sm:p-8 bg-white space-y-4">
-      <h2 class="text-xl sm:text-2xl font-black text-black">Inclusion Criteria</h2>
-      <p class="text-slate-700">To be listed on JobAlertHub, a community must meet all of the following requirements:</p>
+      <div class="inline-block bg-[#A7F3D0] px-2.5 py-0.5 border border-black text-[10px] font-black uppercase tracking-wider shadow-[1px_1px_0px_0px_#000]">
+        EDITORIAL INDEPENDENCE
+      </div>
+      <h2 class="text-xl sm:text-2xl font-black text-black">
+        Commercial Neutrality & Free Access Charter
+      </h2>
+      <p class="text-slate-700">
+        JobAlertHub is an independent public-interest directory. We operate with strict commercial separation to ensure job seekers have unfiltered, unbiased access to legitimate career communities:
+      </p>
       <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm font-bold text-slate-800">
-        <li>Must have a functional, non-expired public invite link.</li>
-        <li>Must focus primarily on career opportunities, hiring alerts, internships, or industry networking.</li>
-        <li>Must serve one of our 14 target employment markets (13 countries + Worldwide/Remote: US, UK, CA, AU, IN, DE, NL, SG, AE, PH, NZ, IE, ZA, or GLOBAL).</li>
-        <li>Must not require upfront fees or subscriptions to access basic job alerts.</li>
-        <li>Must not promote task scams, crypto investment recruitment, or multi-level marketing (MLM).</li>
+        <li><strong>No Paid Placement:</strong> We never sell directory placement, sponsored positions, or featured rankings. Every community is indexed strictly on merit, link health, and verified employment focus.</li>
+        <li><strong>No Paid Badges:</strong> Verification tiers (such as <em>Source Confirmed</em>) cannot be purchased or fast-tracked with payments. They reflect verifiable public evidence only.</li>
+        <li><strong>Free to Job Seekers:</strong> All directory listings, filters, and outbound discovery links are 100% free to browse without paywalls, email collection walls, or registration fees.</li>
       </ul>
     </div>
 
+    <!-- 2. Zero-Hallucination & Fact-First Data Policy -->
     <div class="neo-card p-6 sm:p-8 bg-white space-y-4">
-      <h2 class="text-xl sm:text-2xl font-black text-black">Automated Revalidation & Removal</h2>
+      <div class="inline-block bg-[#BAE6FD] px-2.5 py-0.5 border border-black text-[10px] font-black uppercase tracking-wider shadow-[1px_1px_0px_0px_#000]">
+        DATA INTEGRITY
+      </div>
+      <h2 class="text-xl sm:text-2xl font-black text-black">
+        Zero Hallucination & Fact-First Transparency
+      </h2>
       <p class="text-slate-700">
-        Directory listings are checked daily for link health. Communities with broken links or spam reports are placed on probation and automatically unpublished if unresolved within 48 hours.
+        Our core engineering constitution prohibits the fabrication of community data. We believe inaccurate job data harms vulnerable job seekers:
       </p>
+      <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm font-bold text-slate-800">
+        <li><strong>No Fake Member Metrics:</strong> We never invent member counts, subscriber growth stats, or active user numbers. If a platform's public API does not expose exact subscriber counts, we record the value as unknown.</li>
+        <li><strong>No Fabricated Reviews:</strong> We do not publish artificial ratings, fake user testimonials, or unverified star ratings.</li>
+        <li><strong>Explicit Provenance:</strong> Every description and regional classification is anchored in verified public metadata or primary official websites.</li>
+      </ul>
+    </div>
+
+    <!-- 3. Inclusion Criteria -->
+    <div class="neo-card p-6 sm:p-8 bg-white space-y-4">
+      <div class="inline-block bg-[#FEF08A] px-2.5 py-0.5 border border-black text-[10px] font-black uppercase tracking-wider shadow-[1px_1px_0px_0px_#000]">
+        INDEXING CRITERIA
+      </div>
+      <h2 class="text-xl sm:text-2xl font-black text-black">
+        Inclusion Standards & Quality Gates
+      </h2>
+      <p class="text-slate-700">
+        To qualify for publication in JobAlertHub, a community must pass our 12-gate automated pipeline and satisfy all of the following requirements:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm font-bold text-slate-800">
+        <li><strong>Active Public Endpoint:</strong> Must possess a valid, non-expired public invite link on Telegram (<code>t.me</code>), Discord (<code>discord.gg</code>), or WhatsApp (<code>chat.whatsapp.com</code>).</li>
+        <li><strong>Primary Career Intent:</strong> The community's core purpose must center on job opportunities, recruitment alerts, tech apprenticeships, graduate hiring, or career networking.</li>
+        <li><strong>Market Geographic Alignment:</strong> Must explicitly serve one of our 14 target markets (13 sovereign countries + Worldwide/Remote: USA, UK, Canada, Australia, India, Germany, Netherlands, Singapore, UAE, Philippines, New Zealand, Ireland, South Africa, or GLOBAL).</li>
+        <li><strong>Zero Upfront Fees:</strong> Communities that require subscription fees, crypto deposits, or registration charges to view job notices are permanently barred.</li>
+        <li><strong>Zero Fraud Tolerance:</strong> Channels promoting task-rating scams, high-yield investment schemes, crypto trading signals, or multi-level marketing (MLM) are rejected and permanently blacklisted.</li>
+      </ul>
+    </div>
+
+    <!-- 4. Automated Revalidation & Removal Protocol -->
+    <div class="neo-card p-6 sm:p-8 bg-white space-y-4">
+      <div class="inline-block bg-[#DDD6FE] px-2.5 py-0.5 border border-black text-[10px] font-black uppercase tracking-wider shadow-[1px_1px_0px_0px_#000]">
+        MAINTENANCE & SLA
+      </div>
+      <h2 class="text-xl sm:text-2xl font-black text-black">
+        Continuous Revalidation & 48-Hour De-Listing
+      </h2>
+      <p class="text-slate-700">
+        Online chat groups are volatile: invite links expire, channels rebrand, and ownership changes hands. To maintain directory hygiene:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm font-bold text-slate-800">
+        <li><strong>Daily Automated Probing:</strong> Our automated link validation engine checks published invite endpoints every 24 to 48 hours.</li>
+        <li><strong>Automated Probation & De-listing:</strong> If an invite link fails (HTTP 404, expired token, or revoked invite), it enters probation. If unreachable across consecutive checks, it is automatically unpublished from the public directory.</li>
+        <li><strong>Community Reports:</strong> Job seekers can report suspicious activity, expired invites, or scam alerts via our Report portal. Reported channels undergo human review within 24 hours.</li>
+      </ul>
+    </div>
+
+    <!-- 5. Takedowns, Corrections & Ownership Appeals -->
+    <div class="neo-card p-6 sm:p-8 bg-white space-y-4">
+      <h2 class="text-xl sm:text-2xl font-black text-black">
+        Corrections, Ownership Claims & Takedowns
+      </h2>
+      <p class="text-slate-700">
+        If you are the administrator or creator of an indexed community, you retain full rights regarding your group's representation:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm font-bold text-slate-800">
+        <li><strong>Ownership Verification:</strong> Community founders can request an <em>Owner Confirmed</em> verification badge by contacting our review desk from an official contact address listed in the channel description.</li>
+        <li><strong>Metadata Updates:</strong> To update your community's official description, primary category, or refresh an invite code, submit an update via our contact portal.</li>
+        <li><strong>Immediate Takedowns:</strong> If you wish to have your public community removed from JobAlertHub, submit a takedown request specifying your group's canonical URL. We honor all legitimate administrative removal requests within 24 to 48 hours.</li>
+      </ul>
     </div>
   </div>
 </DirectoryLayout>

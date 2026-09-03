@@ -224,8 +224,8 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")) {
         for (const t of types) {
           if (t) {
             schemas.push(t);
-            // Prohibited schema check
-            if (["JobPosting", "AggregateRating", "Review", "Product", "FAQPage"].includes(t)) {
+            // Prohibited schema check: fake/hallucinated job postings, fake reviews/ratings, or ecommerce
+            if (["JobPosting", "AggregateRating", "Review", "Product", "EmployerAggregateRating", "Course"].includes(t)) {
               forbiddenSchemas.push(t);
               pageErrors.push(`FORBIDDEN SCHEMA: Non-factual or hallucinated schema type "${t}" detected`);
             }

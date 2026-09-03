@@ -24,10 +24,41 @@ import { ENABLED_COUNTRIES } from "../config/countries";
 
     <!-- Desktop Navigation (lg:flex to avoid tablet 768px horizontal collisions) -->
     <nav class="hidden lg:flex items-center gap-1.5 xl:gap-2 text-xs font-black text-black" aria-label="Main Navigation">
-      <a href="/jobs/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FEF08A] hover:border-2 hover:border-black transition-all">All Jobs</a>
+      <a href="/jobs/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FEF08A] hover:border-2 hover:border-black transition-all">All Job Groups</a>
       <a href="/country/global/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#A7F3D0] hover:border-2 hover:border-black transition-all">Worldwide/Remote</a>
-      <a href="/job-type/remote-jobs/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#BAE6FD] hover:border-2 hover:border-black transition-all">Remote</a>
-      <a href="/category/tech-jobs/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FEF9C3] hover:border-2 hover:border-black transition-all">Tech</a>
+      <a href="/job-type/remote-jobs/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#BAE6FD] hover:border-2 hover:border-black transition-all">Remote Jobs</a>
+      <a href="/category/tech-jobs/" class="rounded-lg px-2.5 py-1.5 hover:bg-[#FEF9C3] hover:border-2 hover:border-black transition-all">Tech Job Alerts</a>
+
+      <!-- Platforms Dropdown -->
+      <div class="relative group">
+        <button
+          type="button"
+          class="inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 hover:bg-[#DDD6FE] hover:border-2 hover:border-black transition-all"
+          aria-expanded="false"
+        >
+          <span>Platforms</span>
+          <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div class="absolute left-0 top-full hidden group-hover:block group-focus-within:block w-56 pt-2 z-50">
+          <div class="rounded-2xl border-[3px] border-black bg-white p-2.5 shadow-[4px_4px_0px_0px_#000] space-y-1 text-xs">
+            <a href="/platform/telegram/" class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-[#BAE6FD] font-bold text-slate-800 hover:text-black">
+              <span class="w-2 h-2 rounded-full bg-[#0284C7]"></span>
+              <span>Telegram Channels</span>
+            </a>
+            <a href="/platform/discord/" class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-[#DDD6FE] font-bold text-slate-800 hover:text-black">
+              <span class="w-2 h-2 rounded-full bg-[#5865F2]"></span>
+              <span>Discord Servers</span>
+            </a>
+            <a href="/platform/whatsapp/" class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-[#A7F3D0] font-bold text-slate-800 hover:text-black">
+              <span class="w-2 h-2 rounded-full bg-[#22C55E]"></span>
+              <span>WhatsApp Groups</span>
+            </a>
+          </div>
+        </div>
+      </div>
 
       <!-- Markets Dropdown -->
       <div class="relative group">
@@ -110,6 +141,19 @@ import { ENABLED_COUNTRIES } from "../config/countries";
       </a>
       <a href="/safety/" class="rounded-xl border-2 border-black bg-[#FEF08A] px-3 py-2 text-xs font-black text-black shadow-[2px_2px_0px_0px_#000]">
         Safety Guide
+      </a>
+    </div>
+
+    <!-- Mobile Platforms Row -->
+    <div class="grid grid-cols-3 gap-2">
+      <a href="/platform/telegram/" class="text-center rounded-xl border-2 border-black bg-[#BAE6FD] px-2 py-1.5 text-[11px] font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
+        Telegram
+      </a>
+      <a href="/platform/discord/" class="text-center rounded-xl border-2 border-black bg-[#DDD6FE] px-2 py-1.5 text-[11px] font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
+        Discord
+      </a>
+      <a href="/platform/whatsapp/" class="text-center rounded-xl border-2 border-black bg-[#A7F3D0] px-2 py-1.5 text-[11px] font-black text-black shadow-[1.5px_1.5px_0px_0px_#000]">
+        WhatsApp
       </a>
     </div>
 

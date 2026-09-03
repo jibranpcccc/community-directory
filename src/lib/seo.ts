@@ -134,10 +134,55 @@ export function isCommunityIndexWorthy(community: Community): boolean {
 }
 
 /**
- * Filter function for taxonomy SEO indexability calculations.
+ * Robust Indexability Gate for Taxonomy Aggregation Hubs (Country, Category, Platform, Job-Type).
+ * A collection hub qualifies for indexing when it contains >= 5 safe, active, revalidated listings
+ * meeting all vertical, freshness, scam-protection, and market rules.
  */
 export function isCommunityIndexWorthyForTaxonomy(community: Community): boolean {
-  return isCommunityIndexWorthy(community);
+  // 1. Published must be true
+  if (!community.published) return false;
+
+  // 2. Link status must be active
+  if (community.linkStatus !== "active") return false;
+
+  // 3. Sufficiently fresh validation (within 30 days)
+  if (!community.lastSuccessfulValidationAt) return false;
+  const validationAgeDays =
+    (Date.now() - new Date(community.lastSuccessfulValidationAt).getTime()) /
+    (1000 * 3600 * 24);
+  if (validationAgeDays > 30) return false;
+
+  // 4. Strong jobs/career/hiring intent
+  if (community.vertical !== "jobs") return false;
+
+  // 5. Market is one of the 14 approved target markets
+  if (!community.countryCode || !APPROVED_MARKETS.includes(community.countryCode)) {
+    return false;
+  }
+
+  // 6. Supported platform: Discord / Telegram / WhatsApp
+  const approvedPlatforms = ["discord", "telegram", "whatsapp"];
+  if (!approvedPlatforms.includes(community.platform)) return false;
+
+  // 7. Valid market evidence present
+  if (!community.countryEvidence || !community.countryEvidence.text) return false;
+
+  // 8. No scam/fraud violation
+  if (community.safetyFlags && community.safetyFlags.length > 0) return false;
+  const fullText = `${community.title} ${community.description || ""} ${(community.tags || []).join(" ")}`;
+  if (SCAM_REGEX.test(fullText)) return false;
+
+  // 9. Valid canonical slug
+  if (!community.slug || !/^[a-z0-9-]+$/.test(community.slug)) return false;
+
+  // 10. Title validity (length >= 3 and active)
+  if (!community.title || community.title.trim().length < 3) return false;
+  if (INACTIVE_TITLE_REGEX.test(community.title)) return false;
+
+  // 11. Strong employment intent in title or description
+  if (!JOB_INTENT_REGEX.test(fullText)) return false;
+
+  return true;
 }
 
 /**

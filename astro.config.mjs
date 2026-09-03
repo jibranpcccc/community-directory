@@ -43,6 +43,24 @@ function isCommunityIndexWorthy(item) {
   return true;
 }
 
+function isCommunityTaxonomyEligible(item) {
+  if (!item.published || item.linkStatus !== 'active') return false;
+  if (item.vertical !== 'jobs') return false;
+  if (!item.lastSuccessfulValidationAt) return false;
+  const validationAgeDays = (Date.now() - new Date(item.lastSuccessfulValidationAt).getTime()) / (1000 * 3600 * 24);
+  if (validationAgeDays > 30) return false;
+  const approvedMarkets = [
+    'GLOBAL', 'US', 'GB', 'CA', 'AU', 'IN', 'DE', 'NL', 'SG', 'AE', 'PH', 'NZ', 'IE', 'ZA'
+  ];
+  if (!item.countryCode || !approvedMarkets.includes(item.countryCode)) return false;
+  if (!['discord', 'telegram', 'whatsapp'].includes(item.platform)) return false;
+  if (!item.countryEvidence || !item.countryEvidence.text) return false;
+  if (item.safetyFlags && item.safetyFlags.length > 0) return false;
+  if (!item.slug || !/^[a-z0-9-]+$/.test(item.slug)) return false;
+  if (!item.title || item.title.trim().length < 3) return false;
+  return true;
+}
+
 try {
   const groupsPath = path.resolve('./src/data/groups.json');
   if (fs.existsSync(groupsPath)) {
@@ -72,7 +90,8 @@ try {
     for (const item of raw) {
       if (isCommunityIndexWorthy(item)) {
         eligibleGroupSlugs.add(item.slug);
-
+      }
+      if (isCommunityTaxonomyEligible(item)) {
         if (item.category) {
           catCounts[item.category] = (catCounts[item.category] || 0) + 1;
         }

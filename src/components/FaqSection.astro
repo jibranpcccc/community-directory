@@ -1,0 +1,55 @@
+---
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  faqs: FaqItem[];
+  class?: string;
+}
+
+const {
+  title = "Frequently Asked Questions",
+  subtitle = "Everything you need to know about discovering, joining, and evaluating job alert groups safely.",
+  faqs = [],
+  class: customClass = "",
+} = Astro.props;
+---
+
+<section class={`mt-12 mb-8 ${customClass}`}>
+  <div class="mb-6">
+    <div class="inline-block bg-[#E0E7FF] px-2.5 py-0.5 border-2 border-black text-[11px] font-black uppercase tracking-wider shadow-[2px_2px_0px_0px_#000] mb-2">
+      KNOWLEDGE BASE & FAQS
+    </div>
+    <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">
+      {title}
+    </h2>
+    {subtitle && (
+      <p class="text-sm font-semibold text-neutral-700 mt-1 max-w-2xl">
+        {subtitle}
+      </p>
+    )}
+  </div>
+
+  <div class="space-y-4">
+    {faqs.map((faq, index) => (
+      <details
+        class="group rounded-xl border-2 border-black bg-white p-4 sm:p-5 shadow-[3px_3px_0px_0px_#000] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1.5px_1.5px_0px_0px_#000]"
+        open={index === 0}
+      >
+        <summary class="flex cursor-pointer items-center justify-between font-black text-black text-base sm:text-lg select-none list-none">
+          <span>{faq.question}</span>
+          <span class="ml-4 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg border-2 border-black bg-[#FEF08A] font-black text-black text-sm shadow-[1.5px_1.5px_0px_0px_#000] group-open:bg-[#BAE6FD] group-open:rotate-180 transition-transform">
+            ▼
+          </span>
+        </summary>
+        <div class="mt-3 text-sm font-medium leading-relaxed text-neutral-800 border-t border-neutral-200 pt-3">
+          {faq.answer}
+        </div>
+      </details>
+    ))}
+  </div>
+</section>

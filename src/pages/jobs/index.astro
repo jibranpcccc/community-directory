@@ -1,13 +1,14 @@
-﻿---
+---
 import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
 import CommunityCard from "../../components/CommunityCard.astro";
 import FilterBar from "../../components/FilterBar.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
 import EmptyState from "../../components/EmptyState.astro";
+import FaqSection from "../../components/FaqSection.astro";
 import { filterCommunities, sortCommunities } from "../../lib/filters";
 import { getAllPublishedCommunities, getDatasetStats } from "../../lib/communities";
 import { siteConfig } from "../../config/site";
-import { generateCollectionPageSchema } from "../../lib/schema";
+import { generateCollectionPageSchema, generateFaqSchema } from "../../lib/schema";
 import type { FilterOptions, SortOption } from "../../types/community";
 
 // Parse URL search parameters for runtime client-side filtering if available, or SSG defaults
@@ -32,23 +33,72 @@ const filteredCommunities = sortCommunities(
 
 const stats = getDatasetStats();
 
-// Structured data for CollectionPage
-const collectionSchema = generateCollectionPageSchema(
-  "Explore All Job Alert Groups",
-  siteConfig.description,
-  "/jobs/",
-  filteredCommunities
-);
+const catalogFaqs = [
+  {
+    question: "How frequently are job openings posted in these groups?",
+    answer:
+      "Posting frequency varies by platform and community size. High-volume Telegram channels often post alerts multiple times per hour, whereas specialized Discord servers typically curate weekly hiring roundups and structured vacancy boards.",
+  },
+  {
+    question: "Can I filter groups by country or remote work?",
+    answer:
+      "Yes. Use the Country dropdown above to isolate groups in specific regions (such as the UK, USA, Canada, or India), or select the Remote Jobs category to discover borderless international hiring groups.",
+  },
+  {
+    question: "What should I do if an invite link appears expired or invalid?",
+    answer:
+      "Click the 'Report Issue' link on any community detail page. Our automated validation engine continuously flags dead links, and reported entries undergo immediate administrative review for removal or refresh.",
+  },
+];
+
+// Structured data for CollectionPage and FAQPage
+const schemas = [
+  generateCollectionPageSchema(
+    "Explore All Job Alert Groups",
+    siteConfig.description,
+    "/jobs/",
+    filteredCommunities
+  ),
+  generateFaqSchema(catalogFaqs),
+];
 ---
 
 <DirectoryLayout
+  title={`All Job Alert Groups: Telegram, Discord & WhatsApp | ${siteConfig.name}`}
   heading="Explore All Job Alert Groups"
-  subheading="Browse public career communities, hiring channels, and job alert groups across Discord, Telegram, and WhatsApp."
+  subheading="Browse verified public career communities, hiring channels, and job alert groups across Discord, Telegram, and WhatsApp."
   breadcrumbs={[{ name: "All Jobs", item: "/jobs/" }]}
   canonicalPath="/jobs/"
-  jsonLd={collectionSchema}
+  jsonLd={schemas}
   pageType="jobs"
 >
+  <!-- Pre-Grid Editorial Guide -->
+  <section class="mb-8 p-5 sm:p-6 bg-white border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_#000]">
+    <div class="inline-block bg-[#FEF08A] px-2 py-0.5 border border-black text-[10px] font-black uppercase tracking-wider shadow-[1px_1px_0px_0px_#000] mb-2">
+      DIRECTORY GUIDANCE
+    </div>
+    <h2 class="text-lg sm:text-xl font-black text-black mb-2">
+      How to Search and Filter Job Communities Effectively
+    </h2>
+    <p class="text-xs sm:text-sm font-medium text-neutral-700 leading-relaxed mb-3">
+      Public messaging communities on Telegram, Discord, and WhatsApp provide direct access to real-time hiring alerts, tech opportunities, and freelance gigs that rarely appear on traditional corporate job boards. To maximize your search efficiency, use the interactive filters below to isolate communities by target country, job category, or platform.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-bold text-neutral-800 pt-2 border-t border-neutral-200">
+      <div class="flex items-center gap-2">
+        <span class="h-2 w-2 rounded-full bg-[#10B981]"></span>
+        <span>100% Active Links Checked Daily</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="h-2 w-2 rounded-full bg-[#3B82F6]"></span>
+        <span>Screened for Recruitment Scams</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="h-2 w-2 rounded-full bg-[#8B5CF6]"></span>
+        <span>Direct Discovery Without Paywalls</span>
+      </div>
+    </div>
+  </section>
+
   <!-- Filter Controls -->
   <FilterBar
     currentFilters={currentFilters}
@@ -75,6 +125,13 @@ const collectionSchema = generateCollectionPageSchema(
     )
   }
 
-  <!-- Job Seeker Safety Notice -->
+  <!-- Catalog FAQ Section -->
+  <FaqSection
+    title="Job Directory & Community FAQs"
+    subtitle="Answers to common questions regarding our catalog curation, search filters, and channel updates."
+    faqs={catalogFaqs}
+  />
+
+  <!-- Safety Warning -->
   <SafetyNotice type="job-warning" />
 </DirectoryLayout>
