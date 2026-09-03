@@ -4616,5 +4616,32 @@
     "date": "2026-09-03T15:19:24.483Z",
     "lastSeenAt": "2026-09-03T15:19:24.483Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/job4government",
+    "platform": "telegram",
+    "title": "Sarkari Job Updates | Government Job with Job4Government - @job4freshers.co.in",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-03T20:13:22.268Z",
+    "lastSeenAt": "2026-09-03T20:13:22.268Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/Government_Jobs_Sarkari_Naukri",
+    "platform": "telegram",
+    "title": "Government Jobs Alert Sarkari Naukri",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-03T20:13:22.268Z",
+    "lastSeenAt": "2026-09-03T20:13:22.268Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/remotely_jobs",
+    "platform": "telegram",
+    "title": "Ремоут &amp; Релокейт 🇺🇦",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-03T20:13:22.268Z",
+    "lastSeenAt": "2026-09-03T20:13:22.268Z",
+    "timesSeen": 1
   }
 ]
