@@ -4774,5 +4774,14 @@
     "date": "2026-09-04T10:11:44.954Z",
     "lastSeenAt": "2026-09-04T10:11:44.954Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/eb3daXz",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-04T15:14:22.819Z",
+    "lastSeenAt": "2026-09-04T15:14:22.819Z",
+    "timesSeen": 1,
+    "title": "brrtt"
   }
 ]
