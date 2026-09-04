@@ -1,15 +1,15 @@
 import https from "https";
 
-const BASE_URL = "https://communityhub-directory.netlify.app";
+const BASE_URL = "https://jobalertgroups.com";
 
 const testRoutes = [
   // 14 Target Markets
-  { path: "/country/global/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "GLOBAL Market" },
+  { path: "/country/global/", expectedHttp: 200, expectedRobots: "index, follow", name: "GLOBAL Market" },
   { path: "/country/usa/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "USA Market" },
-  { path: "/country/uk/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "UK Market" },
+  { path: "/country/uk/", expectedHttp: 200, expectedRobots: "index, follow", name: "UK Market" },
   { path: "/country/canada/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "Canada Market" },
   { path: "/country/australia/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "Australia Market" },
-  { path: "/country/india/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "India Market" },
+  { path: "/country/india/", expectedHttp: 200, expectedRobots: "index, follow", name: "India Market" },
   { path: "/country/germany/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "Germany Market" },
   { path: "/country/netherlands/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "Netherlands Market" },
   { path: "/country/singapore/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "Singapore Market" },
@@ -19,24 +19,34 @@ const testRoutes = [
   { path: "/country/ireland/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "Ireland Market" },
   { path: "/country/south-africa/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "South Africa Market" },
 
-  // Unsupported countries (must 404 or redirect)
+  // Unsupported countries (must 404)
   { path: "/country/france/", expectedHttp: 404, name: "France (Unsupported)" },
   { path: "/country/spain/", expectedHttp: 404, name: "Spain (Unsupported)" },
   { path: "/country/brazil/", expectedHttp: 404, name: "Brazil (Unsupported)" },
   { path: "/country/japan/", expectedHttp: 404, name: "Japan (Unsupported)" },
 
-  // Core Pages
+  // Core Pages & Hubs
   { path: "/", expectedHttp: 200, expectedRobots: "index, follow", name: "Home" },
   { path: "/jobs/", expectedHttp: 200, expectedRobots: "index, follow", name: "Jobs Catalog" },
   { path: "/platform/discord/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "Discord Platform" },
-  { path: "/platform/telegram/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "Telegram Platform" },
+  { path: "/platform/telegram/", expectedHttp: 200, expectedRobots: "index, follow", name: "Telegram Platform" },
   { path: "/platform/whatsapp/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "WhatsApp Platform" },
-  { path: "/category/tech-jobs/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "Tech Jobs Category" },
+  { path: "/category/tech-jobs/", expectedHttp: 200, expectedRobots: "index, follow", name: "Tech Jobs Category" },
+  { path: "/category/government-jobs/", expectedHttp: 200, expectedRobots: "index, follow", name: "Gov Jobs Category" },
   { path: "/job-type/remote-jobs/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "Remote Jobs Type" },
+  { path: "/job-type/government-jobs/", expectedHttp: 200, expectedRobots: "index, follow", name: "Gov Jobs Type" },
+  { path: "/how-we-verify/", expectedHttp: 200, expectedRobots: "index, follow", name: "How We Verify" },
+  { path: "/safety/", expectedHttp: 200, expectedRobots: "index, follow", name: "Safety Guide" },
+  { path: "/editorial-policy/", expectedHttp: 200, expectedRobots: "index, follow", name: "Editorial Policy" },
   { path: "/privacy/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "Privacy Policy" },
   { path: "/terms/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "Terms of Service" },
   { path: "/disclaimer/", expectedHttp: 200, expectedRobots: "noindex, follow", name: "Disclaimer" },
+
+  // SEO & Machine-readable files
   { path: "/robots.txt", expectedHttp: 200, name: "robots.txt" },
+  { path: "/llms.txt", expectedHttp: 200, name: "llms.txt" },
+  { path: "/llms-full.txt", expectedHttp: 200, name: "llms-full.txt" },
+  { path: "/5f6b28114f4e421ebc7f92e4a8b792da.txt", expectedHttp: 200, name: "IndexNow Key File" },
   { path: "/sitemap-index.xml", expectedHttp: 200, name: "sitemap-index.xml" },
   { path: "/sitemap-0.xml", expectedHttp: 200, name: "sitemap-0.xml" },
   { path: "/a-definitely-invalid-url/", expectedHttp: 404, name: "Invalid Route (404 Test)" },
