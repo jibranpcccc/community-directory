@@ -1,73 +1,5 @@
 [
   {
-    "id": "fresher-jobs-and-internships-remote-jobs-software-engineer-telegram",
-    "slug": "fresher-jobs-and-internships-remote-jobs-software-engineer-telegram",
-    "title": "Fresher Jobs and Internships | Remote Jobs | Software Engineer",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Software Engineering",
-    "tags": [
-      "telegram",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://t.me/offcampusjobsindia",
-    "description": "🚀 Freshers Job Updates | Internships | Off-Campus Drives 🎓Welcome to your one-stop destination for the latest Freshers Jobs, Internship Alerts, Work From Home Jobs, Remote Internships, Off-Campus Drives, IT Jobs, Non-IT Jobs, and Daily Job Updates&#33;🔍 G",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "IN",
-    "countryCode": "IN",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 70064,
-    "memberCountSource": "https://t.me/offcampusjobsindia",
-    "memberCountCheckedAt": "2026-08-28T17:52:03.235Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-28T17:52:03.235Z",
-    "sourceUrls": [
-      "https://t.me/offcampusjobsindia"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-28T17:52:03.235Z",
-    "lastCheckedAt": "2026-08-28T17:52:03.235Z",
-    "updatedAt": "2026-08-28T17:52:03.235Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-08-28T17:52:03.235Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1787939523235_9do4n",
-      "run_1787939525604_jhglb"
-    ],
-    "querySource": "site:t.me tech job postings Discord India",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-160h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "jobs-sydney-whatsapp",
     "slug": "jobs-sydney-whatsapp",
     "title": "JOBS SYDNEY",
@@ -135,7 +67,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-138h"
+      "validation-stale-148h"
     ]
   },
   {
@@ -206,7 +138,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-138h"
+      "validation-stale-148h"
     ]
   },
   {
@@ -277,7 +209,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-138h"
+      "validation-stale-148h"
     ]
   },
   {
@@ -348,7 +280,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-138h"
+      "validation-stale-148h"
     ]
   },
   {
@@ -419,7 +351,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-138h"
+      "validation-stale-148h"
     ]
   },
   {
@@ -486,7 +418,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-138h",
+      "validation-stale-148h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -558,7 +490,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-138h"
+      "validation-stale-148h"
     ]
   },
   {
@@ -625,7 +557,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-119h",
+      "validation-stale-129h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -693,7 +625,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-119h",
+      "validation-stale-129h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -765,7 +697,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h",
+      "validation-stale-81h",
       "duplicate-published: Matching community title on telegram: \"Remote Jobs👨‍💻\" vs \"Remote Jobs\""
     ]
   },
@@ -833,7 +765,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h",
+      "validation-stale-81h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -901,6 +833,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-34h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
