@@ -114,12 +114,46 @@ const bingVerification = siteConfig.analytics?.bingSiteVerification;
       Skip to main content
     </a>
 
-    <div class="relative z-10 flex min-h-screen flex-col">
+    <div class="relative z-10 flex min-h-screen flex-col pb-14 md:pb-0">
       <Header />
       <main id="main-content" class="flex-grow" tabindex="-1">
         <slot />
       </main>
       <Footer />
     </div>
+
+    <!-- Mobile Persistent Action Dock (CRO Ergonomics) -->
+    <nav
+      aria-label="Mobile quick navigation"
+      class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur border-t-2 border-black px-4 py-2 flex justify-between items-center shadow-[0_-2px_10px_rgba(0,0,0,0.05)]"
+    >
+      <a
+        href="/jobs/"
+        class="flex flex-col items-center text-[10px] font-black text-black hover:text-[#2563EB]"
+      >
+        <span class="text-sm">💼</span>
+        <span>All Jobs</span>
+      </a>
+      <a
+        href="/platform/telegram/"
+        class="flex flex-col items-center text-[10px] font-black text-black hover:text-[#2563EB]"
+      >
+        <span class="text-sm">✈️</span>
+        <span>Telegram</span>
+      </a>
+      <a
+        href="/country/global/"
+        class="flex flex-col items-center text-[10px] font-black text-black hover:text-[#2563EB]"
+      >
+        <span class="text-sm">🌍</span>
+        <span>Remote</span>
+      </a>
+      <a
+        href="/submit/"
+        class="px-2.5 py-1 bg-[#FEF08A] border-2 border-black rounded-lg text-[10px] font-black text-black shadow-[1.5px_1.5px_0px_0px_#000] hover:bg-[#BAE6FD]"
+      >
+        + Submit
+      </a>
+    </nav>
   </body>
 </html>

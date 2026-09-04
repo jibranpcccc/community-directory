@@ -3,10 +3,11 @@ import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
 import CommunityCard from "../../components/CommunityCard.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
 import EmptyState from "../../components/EmptyState.astro";
+import FaqSection from "../../components/FaqSection.astro";
 import { ENABLED_COUNTRIES, getCountryBySlug } from "../../config/countries";
 import { getCommunitiesByCountry } from "../../lib/communities";
 import { siteConfig } from "../../config/site";
-import { generateCollectionPageSchema } from "../../lib/schema";
+import { generateCollectionPageSchema, generateFaqSchema } from "../../lib/schema";
 import { getIndexability, isCommunityIndexWorthyForTaxonomy } from "../../lib/seo";
 
 export async function getStaticPaths() {
@@ -45,8 +46,8 @@ const subheading = isGlobalMarket
   : `Discover active public career communities, Discord servers, and Telegram channels targeting ${inCountryName}.`;
 
 const pageDescription = isGlobalMarket
-  ? "Discover active public Telegram channels, Discord servers, and WhatsApp groups for worldwide and international employment alerts."
-  : `Discover active public Telegram channels, Discord servers, and WhatsApp groups for jobs and hiring in ${inCountryName}.`;
+  ? "Discover active public Telegram channels, Discord servers, and WhatsApp groups for worldwide and international employment alerts with verified links."
+  : `Discover active public Telegram channels, Discord servers, and WhatsApp groups for jobs and hiring in ${inCountryName} with verified links.`;
 
 const collectionSchema = generateCollectionPageSchema(
   heading,
@@ -54,6 +55,35 @@ const collectionSchema = generateCollectionPageSchema(
   `/country/${countryConfig.slug}/`,
   communities
 );
+
+// Regional FAQs and Editorial Guidance
+const regionalAuthorityMap: Record<string, string> = {
+  US: "the Federal Trade Commission (FTC) or IC3.gov",
+  GB: "Action Fraud UK",
+  CA: "the Canadian Anti-Fraud Centre (CAFC)",
+  AU: "Scamwatch Australia",
+  IN: "the National Cyber Crime Reporting Portal (cybercrime.gov.in)",
+  GLOBAL: "your local consumer protection agency and IC3.gov",
+};
+
+const localAuthority = regionalAuthorityMap[countryConfig.code] || "your national consumer protection authority";
+
+const countryFaqs = [
+  {
+    question: `How are job alert groups in ${inCountryName} curated?`,
+    answer: `Every listed community targeting ${inCountryName} is evaluated against 12 programmatic quality gates. We test invite link status bi-weekly, verify verifiable employment relevance, and filter out MLM schemes, task rating bots, and deceptive fee-charging channels.`,
+  },
+  {
+    question: `Are remote positions available for candidates in ${inCountryName}?`,
+    answer: `Yes. Many curated communities in ${inCountryName} include hybrid and fully remote roles for software engineers, digital marketing specialists, customer support agents, and technical writers.`,
+  },
+  {
+    question: `How can I report a suspicious job listing in ${inCountryName}?`,
+    answer: `If any channel or recruiter asks for upfront training fees, equipment deposits, or cryptocurrency transfers, report it immediately to our team at /report/ and file a complaint with ${localAuthority}.`,
+  },
+];
+
+const faqSchema = generateFaqSchema(countryFaqs);
 ---
 
 <DirectoryLayout
@@ -63,10 +93,24 @@ const collectionSchema = generateCollectionPageSchema(
   title={pageTitle}
   description={pageDescription}
   canonicalPath={`/country/${countryConfig.slug}/`}
-  jsonLd={collectionSchema}
+  jsonLd={[collectionSchema, faqSchema]}
   noindex={!isIndexable}
   pageType="country"
 >
+  <!-- Regional Editorial Guide Block (GEO Citability) -->
+  <section class="mb-8 neo-card p-6 bg-white border-2 border-black shadow-[4px_4px_0px_0px_#000]">
+    <div class="inline-block bg-[#FEF08A] px-2.5 py-0.5 border-2 border-black text-[11px] font-black uppercase tracking-wider shadow-[2px_2px_0px_0px_#000] mb-3">
+      REGIONAL MARKET GUIDE
+    </div>
+    <p class="text-base text-neutral-900 leading-relaxed font-medium">
+      {
+        isGlobalMarket
+          ? "Worldwide and remote job alert communities bring together international employers, distributed technology companies, and global freelance contractors. These channels publish cross-border opportunities that offer asynchronous collaboration, competitive compensation, and location independence."
+          : `Job alert communities targeting ${inCountryName} connect local job seekers with instant employment alerts, direct recruiter contact points, and verified career openings across Telegram, Discord, and WhatsApp.`
+      }
+    </p>
+  </section>
+
   {
     communities.length > 0 ? (
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
@@ -84,6 +128,13 @@ const collectionSchema = generateCollectionPageSchema(
       </div>
     )
   }
+
+  <!-- Regional FAQs -->
+  <FaqSection
+    title={`Frequently Asked Questions: Hiring in ${inCountryName}`}
+    subtitle={`Key insights into finding, evaluating, and securing opportunities in ${inCountryName}.`}
+    faqs={countryFaqs}
+  />
 
   <SafetyNotice type="job-warning" />
 </DirectoryLayout>

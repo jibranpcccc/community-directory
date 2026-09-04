@@ -20,7 +20,8 @@
     "revalidate-published": "tsx scripts/data/revalidatePublished.ts",
     "validate-links": "tsx scripts/validate/index.ts",
     "approve": "tsx scripts/utilities/approve.ts",
-    "seo:audit": "tsx scripts/seo/auditBuild.ts"
+    "seo:audit": "tsx scripts/seo/auditBuild.ts",
+    "indexnow": "tsx scripts/seo/notifyIndexNow.ts"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",

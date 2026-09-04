@@ -3,10 +3,11 @@ import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
 import CommunityCard from "../../components/CommunityCard.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
 import EmptyState from "../../components/EmptyState.astro";
+import FaqSection from "../../components/FaqSection.astro";
 import { platforms, getPlatformConfig } from "../../config/platforms";
 import { getCommunitiesByPlatform } from "../../lib/communities";
 import { siteConfig } from "../../config/site";
-import { generateCollectionPageSchema } from "../../lib/schema";
+import { generateCollectionPageSchema, generateFaqSchema } from "../../lib/schema";
 import { getIndexability, isCommunityIndexWorthyForTaxonomy } from "../../lib/seo";
 
 export async function getStaticPaths() {
@@ -29,7 +30,7 @@ const seoEligible = communities.filter(isCommunityIndexWorthyForTaxonomy);
 const isIndexable = getIndexability("platform", seoEligible.length);
 
 const pageTitle = `Job Alert ${platformConfig.name} Channels & Groups | ${siteConfig.name}`;
-const pageDescription = `Discover publicly listed ${platformConfig.name} job alert communities, hiring channels, and career groups.`;
+const pageDescription = `Discover publicly listed ${platformConfig.name} job alert communities, hiring channels, and career groups with verified links and zero spam.`;
 
 const collectionSchema = generateCollectionPageSchema(
   `Job Alert ${platformConfig.name} Groups`,
@@ -37,6 +38,116 @@ const collectionSchema = generateCollectionPageSchema(
   `/platform/${platformConfig.id}/`,
   communities
 );
+
+// Platform-specific E-E-A-T editorial content and FAQs
+const platformDetails: Record<
+  string,
+  {
+    definition: string;
+    highlights: string[];
+    faqs: { question: string; answer: string }[];
+  }
+> = {
+  telegram: {
+    definition:
+      "Telegram job alert channels are public broadcast streams where verified tech companies, recruiters, and career communities share instant hiring announcements. Unlike noisy social media feeds, Telegram channels deliver direct notifications to your device without algorithmic suppression, allowing candidates to view job descriptions, salary brackets, and application links in real time.",
+    highlights: [
+      "Zero notification delay for newly released vacancies",
+      "High candidate privacy: phone numbers and personal profiles remain hidden from other channel subscribers",
+      "Direct external application links without registration fees or paywalls",
+    ],
+    faqs: [
+      {
+        question: "How do Telegram job alert channels work?",
+        answer:
+          "Telegram channels function as broadcast feeds managed by recruitment coordinators and community admins. When a new role opens, the channel posts the job description, required experience, location/remote status, and an official application link. Subscribers receive real-time push alerts on their phones or desktop apps.",
+      },
+      {
+        question: "Are Telegram job alert channels safe to join?",
+        answer:
+          "Yes, public Telegram job alert channels are safe when using common sense. Legitimate hiring channels will never ask you to pay an application fee, purchase proprietary training software, or transfer cryptocurrency. All channels listed on JobAlertGroups.com pass our 12-point anti-fraud screening.",
+      },
+      {
+        question: "Do I need to pay any fees to join or view listings?",
+        answer:
+          "No. All communities in our directory are 100% free to access. Under our editorial policy, any channel charging job seekers for basic vacancy access or interview opportunities is strictly banned.",
+      },
+    ],
+  },
+  discord: {
+    definition:
+      "Discord career servers are real-time, multi-channel technical communities designed for direct professional networking, portfolio critiques, and collaborative hiring. Unlike static job boards, Discord career servers feature active #hiring, #jobs, and #freelance channels where candidates can converse directly with engineering leads and hiring managers.",
+    highlights: [
+      "Two-way interactive discussions with hiring leads and community peers",
+      "Dedicated tech-stack channels for React, Python, DevOps, design, and product",
+      "Community resume critique, mock interview rooms, and peer mentorship",
+    ],
+    faqs: [
+      {
+        question: "How do Discord career servers differ from traditional job boards?",
+        answer:
+          "Traditional job boards are passive databases where resumes are submitted into applicant tracking systems. Discord servers offer an active community environment where candidates can interact directly with founders, participate in open-source projects, and discuss specific job openings before applying.",
+      },
+      {
+        question: "Can junior developers and career changers benefit from Discord servers?",
+        answer:
+          "Yes. Discord tech communities are known for welcoming junior developers. Many servers provide dedicated study groups, pair-programming channels, and entry-level role referrals that are rarely advertised on corporate job boards.",
+      },
+      {
+        question: "What safety precautions should I take in Discord servers?",
+        answer:
+          "Never click unsolicited links sent via direct messages (DMs) by unknown users. Avoid running unverified Discord bots that request OAuth server permissions, and always verify official employer domains before sharing sensitive career documents.",
+      },
+    ],
+  },
+  whatsapp: {
+    definition:
+      "WhatsApp job groups are regional, mobile-first messaging communities connecting localized job seekers with instant employment notices, walk-in interview schedules, and short-notice contract positions. WhatsApp groups provide direct reach for regional staffing markets and shift-based employment.",
+    highlights: [
+      "Instant push notifications directly inside your primary messaging app",
+      "Highly effective for regional vacancies, local retail, logistics, and field roles",
+      "Direct access to regional hiring coordinators and local recruiters",
+    ],
+    faqs: [
+      {
+        question: "How do WhatsApp job groups operate?",
+        answer:
+          "WhatsApp job groups are invite-based group chats where local recruiters, employment coordinators, and staffing agencies post daily vacancies, required documentation, and direct interview contact details.",
+      },
+      {
+        question: "How can I protect my personal privacy in WhatsApp job groups?",
+        answer:
+          "In WhatsApp groups, your phone number may be visible to fellow group participants. To protect your privacy, set your profile photo and 'About' info to 'My Contacts Only' in WhatsApp privacy settings, and never wire money or share government ID copies over group chats.",
+      },
+      {
+        question: "How does JobAlertGroups verify WhatsApp groups?",
+        answer:
+          "Our discovery system tests group invite links bi-weekly to verify they are active and unexpired. Descriptions and group metadata are evaluated against our automated anti-fraud filters to screen out task-based scams and MLM schemes.",
+      },
+    ],
+  },
+};
+
+const currentPlatformData = platformDetails[platformConfig.id] || {
+  definition: `Explore publicly discoverable ${platformConfig.name} job alert channels, hiring groups, and career communities vetted for active links and employment intent.`,
+  highlights: [
+    `Direct push notifications for new employment opportunities`,
+    `Verified public invite links with bi-weekly health checks`,
+    `Zero upfront fees and strict scam prevention screening`,
+  ],
+  faqs: [
+    {
+      question: `How are ${platformConfig.name} job groups verified?`,
+      answer: `Every community passes our 12 automated quality gates, confirming active link status, hiring relevance, and freedom from task scams or pay-to-work schemes.`,
+    },
+    {
+      question: `Is joining ${platformConfig.name} job groups free?`,
+      answer: `Yes, all listings on JobAlertGroups.com are 100% free to access.`,
+    },
+  ],
+};
+
+const faqSchema = generateFaqSchema(currentPlatformData.faqs);
 ---
 
 <DirectoryLayout
@@ -46,10 +157,71 @@ const collectionSchema = generateCollectionPageSchema(
   title={pageTitle}
   description={pageDescription}
   canonicalPath={`/platform/${platformConfig.id}/`}
-  jsonLd={collectionSchema}
+  jsonLd={[collectionSchema, faqSchema]}
   noindex={!isIndexable}
   pageType="platform"
 >
+  <!-- Platform Editorial Answer Block (GEO Citability) -->
+  <section class="mb-8 neo-card p-6 bg-white border-2 border-black shadow-[4px_4px_0px_0px_#000]">
+    <div class="inline-block bg-[#FEF08A] px-2.5 py-0.5 border-2 border-black text-[11px] font-black uppercase tracking-wider shadow-[2px_2px_0px_0px_#000] mb-3">
+      PLATFORM OVERVIEW & CITABILITY GUIDE
+    </div>
+    <p class="text-base text-neutral-900 leading-relaxed font-medium mb-4">
+      {currentPlatformData.definition}
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 border-t-2 border-black/10">
+      {currentPlatformData.highlights.map((highlight) => (
+        <div class="flex items-start gap-2 text-xs font-bold text-neutral-800">
+          <span class="text-emerald-600 flex-shrink-0">✔</span>
+          <span>{highlight}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Platform Comparison Matrix (Information Gain Table) -->
+  <section class="mb-8 neo-card p-5 bg-[#F0FDF4] border-2 border-black shadow-[4px_4px_0px_0px_#000] overflow-x-auto">
+    <div class="text-xs font-black uppercase tracking-wider text-emerald-900 mb-2">
+      COMPARATIVE PLATFORM INTELLIGENCE
+    </div>
+    <table class="w-full text-left text-xs border-collapse min-w-[550px]">
+      <thead>
+        <tr class="border-b-2 border-black bg-white">
+          <th class="py-2.5 px-3 font-black text-black">Feature</th>
+          <th class="py-2.5 px-3 font-black text-black">Telegram Channels</th>
+          <th class="py-2.5 px-3 font-black text-black">Discord Career Servers</th>
+          <th class="py-2.5 px-3 font-black text-black">WhatsApp Job Groups</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-black/10 font-medium text-neutral-900">
+        <tr>
+          <td class="py-2 px-3 font-bold">Alert Delivery</td>
+          <td class="py-2 px-3">Instant broadcast feed (no lag)</td>
+          <td class="py-2 px-3">Category-organized channels</td>
+          <td class="py-2 px-3">Direct group chat notifications</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-3 font-bold">Candidate Privacy</td>
+          <td class="py-2 px-3">Highest (phone/profile hidden)</td>
+          <td class="py-2 px-3">High (pseudonymous handle)</td>
+          <td class="py-2 px-3">Moderate (phone visible to group)</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-3 font-bold">Two-Way Networking</td>
+          <td class="py-2 px-3">Broadcast only (comments optional)</td>
+          <td class="py-2 px-3">Full (voice, video, text, forums)</td>
+          <td class="py-2 px-3">Group chat interactions</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-3 font-bold">Best Use Case</td>
+          <td class="py-2 px-3">Tech & remote broadcast alerts</td>
+          <td class="py-2 px-3">Tech careers, portfolio & referrals</td>
+          <td class="py-2 px-3">Regional & local shift employment</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
   <div class="mb-6 neo-card p-4 bg-white text-xs font-bold text-black flex items-center gap-2">
     <svg class="h-4 w-4 text-black flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -76,6 +248,13 @@ const collectionSchema = generateCollectionPageSchema(
       </div>
     )
   }
+
+  <!-- Platform FAQs Section -->
+  <FaqSection
+    title={`Frequently Asked Questions About ${platformConfig.name} Job Groups`}
+    subtitle={`Practical advice for discovering, evaluating, and applying to positions found on ${platformConfig.name}.`}
+    faqs={currentPlatformData.faqs}
+  />
 
   <SafetyNotice type="job-warning" />
 </DirectoryLayout>

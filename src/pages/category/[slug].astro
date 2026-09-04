@@ -3,10 +3,11 @@ import DirectoryLayout from "../../layouts/DirectoryLayout.astro";
 import CommunityCard from "../../components/CommunityCard.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
 import EmptyState from "../../components/EmptyState.astro";
+import FaqSection from "../../components/FaqSection.astro";
 import { categories, getCategoryBySlug } from "../../config/categories";
 import { getCommunitiesByCategory } from "../../lib/communities";
 import { siteConfig } from "../../config/site";
-import { generateCollectionPageSchema } from "../../lib/schema";
+import { generateCollectionPageSchema, generateFaqSchema } from "../../lib/schema";
 import { getIndexability, isCommunityIndexWorthyForTaxonomy } from "../../lib/seo";
 
 export async function getStaticPaths() {
@@ -27,7 +28,7 @@ const seoEligible = communities.filter(isCommunityIndexWorthyForTaxonomy);
 const isIndexable = getIndexability("category", seoEligible.length);
 
 const pageTitle = `${categoryConfig.name} Job Alert Groups | ${siteConfig.name}`;
-const pageDescription = `Discover active Discord servers, Telegram channels, and WhatsApp groups for ${categoryConfig.name}.`;
+const pageDescription = `Discover active Discord servers, Telegram channels, and WhatsApp groups for ${categoryConfig.name} with verified links and active moderation.`;
 
 const collectionSchema = generateCollectionPageSchema(
   categoryConfig.name,
@@ -35,6 +36,69 @@ const collectionSchema = generateCollectionPageSchema(
   `/category/${categoryConfig.slug}/`,
   communities
 );
+
+// Category-specific editorial intelligence and FAQs
+const categoryDetails: Record<
+  string,
+  {
+    guide: string;
+    faqs: { question: string; answer: string }[];
+  }
+> = {
+  "tech-jobs": {
+    guide:
+      "Technology job alert communities connect software developers, DevOps engineers, data scientists, and UI/UX designers directly with active hiring managers. By joining dedicated tech career communities on Discord and Telegram, developers gain early access to remote tech roles, startup equity opportunities, and community referral programs before listings reach saturated public job boards.",
+    faqs: [
+      {
+        question: "What types of tech roles are shared in these communities?",
+        answer:
+          "Listings include full-stack development, backend engineering (Python, Go, Node.js, Java), frontend frameworks (React, Next.js, Vue), cloud/DevOps infrastructure, machine learning/AI engineering, and technical product management.",
+      },
+      {
+        question: "Are remote tech jobs available for international applicants?",
+        answer:
+          "Yes. Many listed Discord servers and Telegram channels specialize exclusively in worldwide remote roles, contractor agreements, and asynchronous global engineering teams.",
+      },
+      {
+        question: "How do I stand out when applying through community channels?",
+        answer:
+          "Ensure your GitHub profile, technical portfolio, or LinkedIn profile is updated. When reaching out to community hiring leads, include a concise note referencing their specific tech stack and relevant projects you have built.",
+      },
+    ],
+  },
+  "government-jobs": {
+    guide:
+      "Public sector and government job alert channels provide instant notification for civil service examinations, public agency vacancies, and official recruitment gazettes. These communities alert candidates the moment application windows open, helping applicants track syllabus updates, admit card releases, and eligibility criteria.",
+    faqs: [
+      {
+        question: "How reliable are government job notifications in Telegram channels?",
+        answer:
+          "The channels curated on JobAlertGroups.com cite official public commission notifications and government employment bulletins. We recommend always cross-referencing exam dates and fee structures on the official government agency portal.",
+      },
+      {
+        question: "Do public sector hiring channels charge application fees?",
+        answer:
+          "No. Joining the alert channels is completely free. Official application fees must only be paid directly on verified government portal domains (.gov, .nic.in, etc.), never to a group administrator.",
+      },
+    ],
+  },
+};
+
+const currentCategoryData = categoryDetails[categoryConfig.slug] || {
+  guide: `Discover vetted career communities and public job alert groups specializing in ${categoryConfig.name}. All listings are screened to ensure active invite links and verified employment intent.`,
+  faqs: [
+    {
+      question: `How are ${categoryConfig.name} job alert groups verified?`,
+      answer: `Every community passes our 12 automated quality gates, ensuring active link status, genuine employment intent, and strict protection against recruitment scams.`,
+    },
+    {
+      question: `Are these ${categoryConfig.name} communities free to join?`,
+      answer: `Yes. All communities listed on JobAlertGroups.com are 100% free for job seekers.`,
+    },
+  ],
+};
+
+const faqSchema = generateFaqSchema(currentCategoryData.faqs);
 ---
 
 <DirectoryLayout
@@ -44,10 +108,20 @@ const collectionSchema = generateCollectionPageSchema(
   title={pageTitle}
   description={pageDescription}
   canonicalPath={`/category/${categoryConfig.slug}/`}
-  jsonLd={collectionSchema}
+  jsonLd={[collectionSchema, faqSchema]}
   noindex={!isIndexable}
   pageType="category"
 >
+  <!-- Category Editorial Guide Block (GEO Citability) -->
+  <section class="mb-8 neo-card p-6 bg-white border-2 border-black shadow-[4px_4px_0px_0px_#000]">
+    <div class="inline-block bg-[#BAE6FD] px-2.5 py-0.5 border-2 border-black text-[11px] font-black uppercase tracking-wider shadow-[2px_2px_0px_0px_#000] mb-3">
+      CATEGORY CURATION GUIDE
+    </div>
+    <p class="text-base text-neutral-900 leading-relaxed font-medium">
+      {currentCategoryData.guide}
+    </p>
+  </section>
+
   {
     communities.length > 0 ? (
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
@@ -65,6 +139,13 @@ const collectionSchema = generateCollectionPageSchema(
       </div>
     )
   }
+
+  <!-- Category FAQs -->
+  <FaqSection
+    title={`Frequently Asked Questions: ${categoryConfig.name}`}
+    subtitle={`Guidance on finding, evaluating, and applying to ${categoryConfig.name} opportunities.`}
+    faqs={currentCategoryData.faqs}
+  />
 
   <SafetyNotice type="job-warning" />
 </DirectoryLayout>

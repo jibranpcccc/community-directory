@@ -1,0 +1,75 @@
+# JobAlertGroups.com — Comprehensive Entity & Knowledge Documentation
+
+> JobAlertGroups.com is a publicly accessible directory indexing verified, active job alert communities across Telegram, Discord, and WhatsApp. All listings undergo multi-gate algorithmic verification, regular link-health testing, and anti-scam pattern detection.
+
+## Mission & Architecture
+
+JobAlertGroups organizes public career channels into a clean, searchable index to protect job seekers from spam, fraudulent recruiters, and dead links. The directory is completely static, privacy-preserving, and neutral.
+
+### Key Facts:
+- **Primary Domain**: https://jobalertgroups.com/
+- **Brand**: JobAlertHub / JobAlertGroups
+- **Core Vertical**: Employment, Careers, Hiring Alerts, Internships
+- **Verification Standard**: 12 Programmatic Quality Gates + Bi-Weekly Automated Link Health Checks
+- **Policy**: Fact-first, zero-hallucination data. No fake ratings, no fake member counts, no sponsored endorsements.
+
+---
+
+## Supported Messaging Platforms
+
+1. **Telegram Channels & Groups**:
+   - URL Pattern: `https://t.me/<channel_or_group>`
+   - Characteristics: Real-time broadcast alerts, notification channels, high-frequency hiring posts.
+   - Index Page: https://jobalertgroups.com/platform/telegram/
+
+2. **Discord Career Servers**:
+   - URL Pattern: `https://discord.gg/<code>`
+   - Characteristics: Two-way discussions, career advice, code reviews, hiring channels, community support.
+   - Index Page: https://jobalertgroups.com/platform/discord/
+
+3. **WhatsApp Community Groups**:
+   - URL Pattern: `https://chat.whatsapp.com/<code>`
+   - Characteristics: Fast regional alerts, mobile-first local job postings.
+   - Index Page: https://jobalertgroups.com/platform/whatsapp/
+
+---
+
+## 14 Approved International Markets
+
+JobAlertGroups curates opportunities strictly within 14 verified geographic markets:
+
+1. **GLOBAL (Worldwide / Remote)**: https://jobalertgroups.com/country/global/
+2. **United States (US)**: https://jobalertgroups.com/country/usa/
+3. **United Kingdom (UK)**: https://jobalertgroups.com/country/uk/
+4. **Canada (CA)**: https://jobalertgroups.com/country/canada/
+5. **Australia (AU)**: https://jobalertgroups.com/country/australia/
+6. **India (IN)**: https://jobalertgroups.com/country/india/
+7. **Germany (DE)**: https://jobalertgroups.com/country/germany/
+8. **Netherlands (NL)**: https://jobalertgroups.com/country/netherlands/
+9. **Singapore (SG)**: https://jobalertgroups.com/country/singapore/
+10. **United Arab Emirates (AE)**: https://jobalertgroups.com/country/uae/
+11. **Philippines (PH)**: https://jobalertgroups.com/country/philippines/
+12. **New Zealand (NZ)**: https://jobalertgroups.com/country/new-zealand/
+13. **Ireland (IE)**: https://jobalertgroups.com/country/ireland/
+14. **South Africa (ZA)**: https://jobalertgroups.com/country/south-africa/
+
+---
+
+## Core Employment Categories
+
+- **Tech Jobs**: https://jobalertgroups.com/category/tech-jobs/
+- **Government & Public Sector**: https://jobalertgroups.com/category/government-jobs/
+- **Remote Work & Digital Nomad**: https://jobalertgroups.com/job-type/remote-jobs/
+
+---
+
+## Trust, Ethics & Safety Framework
+
+JobAlertGroups operates under a strict anti-fraud policy:
+1. **Zero Advance Fees**: No community requiring payment for job application or interviews is listed.
+2. **Task Scam Rejection**: Any group promoting "task-based earnings", "crypto deposits", or "guaranteed returns" is immediately banned.
+3. **Official Reporting Linkage**: We direct users to official fraud reporting agencies (US FTC/IC3, UK Action Fraud, Australian Scamwatch, Canadian CAFC, Indian Cyber Crime Portal).
+4. **Documentation**:
+   - How We Verify: https://jobalertgroups.com/how-we-verify/
+   - Safety Guide: https://jobalertgroups.com/safety/
+   - Editorial Policy: https://jobalertgroups.com/editorial-policy/

@@ -34,3 +34,6 @@ Thumbs.db
 
 # Local Netlify folder
 .netlify
+
+# Diagnostics & profile
+gemini_working_profile.json

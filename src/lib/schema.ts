@@ -15,9 +15,14 @@ export function generateWebSiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": getCanonicalUrl("/#website"),
     name: siteConfig.name,
     url: getCanonicalUrl("/"),
     description: siteConfig.description,
+    inLanguage: "en",
+    publisher: {
+      "@id": getCanonicalUrl("/#organization"),
+    },
   };
 }
 
@@ -77,11 +82,43 @@ export function generateOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": getCanonicalUrl("/#organization"),
     name: siteConfig.name,
     url: getCanonicalUrl("/"),
     logo: getCanonicalUrl("/favicon.svg"),
     description: siteConfig.description,
     sameAs: [siteConfig.links.github],
+    knowsAbout: [
+      "Job Alert Communities",
+      "Telegram Job Channels",
+      "Discord Career Servers",
+      "WhatsApp Hiring Groups",
+      "Remote Work Employment",
+      "Technology Careers",
+      "Employment Scam Prevention",
+    ],
+    areaServed: [
+      "Worldwide",
+      "United States",
+      "United Kingdom",
+      "Canada",
+      "Australia",
+      "India",
+      "Germany",
+      "Netherlands",
+      "Singapore",
+      "United Arab Emirates",
+      "Philippines",
+      "New Zealand",
+      "Ireland",
+      "South Africa",
+    ],
+    publishingPrinciples: getCanonicalUrl("/editorial-policy/"),
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "editorial support",
+      url: getCanonicalUrl("/report/"),
+    },
   };
 }
 

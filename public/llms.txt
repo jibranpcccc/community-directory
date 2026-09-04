@@ -1,0 +1,28 @@
+# JobAlertGroups.com
+
+> A verified, searchable public directory of job alert Telegram channels, Discord career servers, and WhatsApp hiring groups across 14 international markets.
+
+## Core Directories
+
+- [All Job Communities](https://jobalertgroups.com/jobs/): Complete catalog of active, verified public job alert communities.
+- [Telegram Job Channels](https://jobalertgroups.com/platform/telegram/): Public Telegram broadcast channels offering real-time vacancy alerts.
+- [Discord Career Servers](https://jobalertgroups.com/platform/discord/): Interactive career development, tech, and hiring Discord servers.
+- [WhatsApp Job Groups](https://jobalertgroups.com/platform/whatsapp/): Region-specific messaging groups for instant job notification.
+- [Tech Jobs](https://jobalertgroups.com/category/tech-jobs/): Software development, DevOps, data science, and tech hiring channels.
+- [Government Jobs](https://jobalertgroups.com/category/government-jobs/): Public sector and civil service exam alert communities.
+
+## Geographic Markets
+
+- [Worldwide & Remote](https://jobalertgroups.com/country/global/): Cross-border and international remote employment alerts.
+- [India](https://jobalertgroups.com/country/india/): Technology and government hiring communities in India.
+- [United Kingdom](https://jobalertgroups.com/country/uk/): UK career servers and professional networks.
+
+## Trust & Verification
+
+- [How We Verify](https://jobalertgroups.com/how-we-verify/): Details of our 12 programmatic validation gates, active link checks, and zero-hallucination standards.
+- [Safety & Anti-Scam Guide](https://jobalertgroups.com/safety/): Identification of common employment scams, Telegram spoofing, and official reporting authorities.
+- [Editorial Policy](https://jobalertgroups.com/editorial-policy/): Commercial neutrality, 48-hour de-listing SLA, and fact-first listing principles.
+
+## Optional
+
+- [Full Entity & Taxonomy Guide](https://jobalertgroups.com/llms-full.txt): Complete documentation of taxonomies, 14 market definitions, and platform architecture.
