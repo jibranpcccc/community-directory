@@ -4643,5 +4643,21 @@
     "date": "2026-09-03T20:13:22.268Z",
     "lastSeenAt": "2026-09-03T20:13:22.268Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/4DwTQdvAvz",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-09-04T01:37:42.263Z",
+    "lastSeenAt": "2026-09-04T01:37:42.263Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/SFKXKBqh",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-09-04T01:37:42.263Z",
+    "lastSeenAt": "2026-09-04T01:37:42.263Z",
+    "timesSeen": 1
   }
 ]
