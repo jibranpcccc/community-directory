@@ -2775,10 +2775,10 @@
   {
     "url": "https://chat.whatsapp.com/BaNtEQMjC7X3IEbrD0p76j",
     "platform": "whatsapp",
-    "reason": "wrong-niche",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-09-01T10:40:51.833Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-09-05T01:32:50.983Z",
+    "timesSeen": 4,
     "title": "BaNtEQMjC7X3IEbrD0p76j"
   },
   {
@@ -4259,8 +4259,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-02T15:31:08.648Z",
-    "lastSeenAt": "2026-09-02T15:31:08.648Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-05T01:32:50.983Z",
+    "timesSeen": 2,
     "title": "Job x"
   },
   {
@@ -4792,5 +4792,23 @@
     "date": "2026-09-04T19:58:41.261Z",
     "lastSeenAt": "2026-09-04T19:58:41.261Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/CnubCywHwNoDL5JOo7udV0",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-05T01:32:50.983Z",
+    "lastSeenAt": "2026-09-05T01:32:50.983Z",
+    "timesSeen": 1,
+    "title": "CnubCywHwNoDL5JOo7udV0"
+  },
+  {
+    "url": "https://chat.whatsapp.com/JULjTlIpG2q7myDjvERnDi",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-05T01:32:50.983Z",
+    "lastSeenAt": "2026-09-05T01:32:50.983Z",
+    "timesSeen": 1,
+    "title": "Talent Bridge"
   }
 ]
