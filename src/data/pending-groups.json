@@ -1,499 +1,5 @@
 [
   {
-    "id": "jobs-sydney-whatsapp",
-    "slug": "jobs-sydney-whatsapp",
-    "title": "JOBS SYDNEY",
-    "platform": "whatsapp",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Software Engineering",
-    "tags": [
-      "whatsapp",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://chat.whatsapp.com/EmErNBuqXYN4iVwsUMDDW3",
-    "description": null,
-    "descriptionSource": null,
-    "language": null,
-    "country": "AU",
-    "countryCode": "AU",
-    "city": null,
-    "countryEvidence": {
-      "sourceType": "platform-title",
-      "text": "JOBS SYDNEY",
-      "checkedAt": "2026-08-29T15:52:49.455Z"
-    },
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": null,
-    "memberCountSource": null,
-    "memberCountCheckedAt": null,
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-29T15:52:48.447Z",
-    "sourceUrls": [
-      "https://chat.whatsapp.com/EmErNBuqXYN4iVwsUMDDW3"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-29T15:52:48.447Z",
-    "lastCheckedAt": "2026-08-29T15:52:48.447Z",
-    "updatedAt": "2026-08-29T15:52:48.447Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-08-29T15:52:48.447Z",
-    "lastSeenAt": "2026-08-29T15:52:48.447Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1788018768447_sph1o",
-      "run_1788018769455_i1979"
-    ],
-    "querySource": "site:chat.whatsapp.com software engineer jobs Australia community",
-    "sourceHostname": "chat.whatsapp.com",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-148h"
-    ]
-  },
-  {
-    "id": "tech-sarvam-software-testing-amp-qa-telegram",
-    "slug": "tech-sarvam-software-testing-amp-qa-telegram",
-    "title": "Tech Sarvam | Software Testing &amp; QA",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Software Engineering",
-    "tags": [
-      "telegram",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://t.me/softwaretestingjobhelp",
-    "description": "This group helps the people with manual testing and automation testing jobs across India. For testing placement help and other assistance, please ping us.Group is for Manual testing, Automation Testing and any other jobs anywhere in India.",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "IN",
-    "countryCode": "IN",
-    "city": null,
-    "countryEvidence": {
-      "sourceType": "platform-description",
-      "text": "This group helps the people with manual testing and automation testing jobs across India. For testing placement help and other assistance, please ping us.Group is for Manual testing, Automation Testing and any other jobs anywhere in India.",
-      "checkedAt": "2026-08-29T15:52:50.248Z"
-    },
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 3118,
-    "memberCountSource": "https://t.me/softwaretestingjobhelp",
-    "memberCountCheckedAt": "2026-08-29T15:52:48.447Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-29T15:52:48.447Z",
-    "sourceUrls": [
-      "https://t.me/softwaretestingjobhelp"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-29T15:52:48.447Z",
-    "lastCheckedAt": "2026-08-29T15:52:48.447Z",
-    "updatedAt": "2026-08-29T15:52:48.447Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-08-29T15:52:48.447Z",
-    "lastSeenAt": "2026-08-29T15:52:48.447Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1788018768447_sph1o",
-      "run_1788018770249_gav8a"
-    ],
-    "querySource": "site:t.me software engineer jobs India community",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-148h"
-    ]
-  },
-  {
-    "id": "noicejobs-senior-remote-jobs-telegram",
-    "slug": "noicejobs-senior-remote-jobs-telegram",
-    "title": "NoiceJobs: Senior Remote Jobs",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Software Engineering",
-    "tags": [
-      "telegram",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://t.me/NoiceJobsChannel",
-    "description": "NoiceJobs helps you find remote senior jobs without having to look for them.Not on Telegram? Visit blog.NoiceJobs.com",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": {
-      "sourceType": "platform-title",
-      "text": "NoiceJobs: Senior Remote Jobs",
-      "checkedAt": "2026-08-29T15:52:52.124Z"
-    },
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 2576,
-    "memberCountSource": "https://t.me/NoiceJobsChannel",
-    "memberCountCheckedAt": "2026-08-29T15:52:48.447Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-29T15:52:48.447Z",
-    "sourceUrls": [
-      "https://t.me/NoiceJobsChannel"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-29T15:52:48.447Z",
-    "lastCheckedAt": "2026-08-29T15:52:48.447Z",
-    "updatedAt": "2026-08-29T15:52:48.447Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-08-29T15:52:48.447Z",
-    "lastSeenAt": "2026-08-29T15:52:48.447Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1788018768447_sph1o",
-      "run_1788018772124_i49v4"
-    ],
-    "querySource": "site:t.me software engineer jobs Global community",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-148h"
-    ]
-  },
-  {
-    "id": "remote-crypto-jobs-telegram",
-    "slug": "remote-crypto-jobs-telegram",
-    "title": "Remote Crypto Jobs",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Software Engineering",
-    "tags": [
-      "telegram",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://t.me/remotejobshg",
-    "description": "A global hub for high-quality crypto jobs. 💻🌎📣 Buy ads: https://telega.io/c/remotejobshg📩 Admin: @seb_tgads‼️Please DM me only for business-related topics, I will not reply to other messages.",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": {
-      "sourceType": "platform-title",
-      "text": "Remote Crypto Jobs",
-      "checkedAt": "2026-08-29T15:52:52.522Z"
-    },
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 33328,
-    "memberCountSource": "https://t.me/remotejobshg",
-    "memberCountCheckedAt": "2026-08-29T15:52:48.447Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-29T15:52:48.447Z",
-    "sourceUrls": [
-      "https://t.me/remotejobshg"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-29T15:52:48.447Z",
-    "lastCheckedAt": "2026-08-29T15:52:48.447Z",
-    "updatedAt": "2026-08-29T15:52:48.447Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-08-29T15:52:48.447Z",
-    "lastSeenAt": "2026-08-29T15:52:48.447Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1788018768447_sph1o",
-      "run_1788018772522_oqp78"
-    ],
-    "querySource": "site:t.me software engineer jobs Global community",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-148h"
-    ]
-  },
-  {
-    "id": "remote-it-jobs-war-time-telegram",
-    "slug": "remote-it-jobs-war-time-telegram",
-    "title": "Remote IT Jobs [war time]",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Software Engineering",
-    "tags": [
-      "telegram",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://t.me/remote_it_jobs",
-    "description": "Стабильная удаленная работа для разработчиков и не толькоРазмещение вакансий  @ntstreamlineУсловия:https://telegra.ph/Razmeshchenie-vakansij-na-kanale-10-20",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": {
-      "sourceType": "platform-title",
-      "text": "Remote IT Jobs [war time]",
-      "checkedAt": "2026-08-29T15:52:52.924Z"
-    },
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 949,
-    "memberCountSource": "https://t.me/remote_it_jobs",
-    "memberCountCheckedAt": "2026-08-29T15:52:48.447Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-29T15:52:48.447Z",
-    "sourceUrls": [
-      "https://t.me/remote_it_jobs"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-29T15:52:48.447Z",
-    "lastCheckedAt": "2026-08-29T15:52:48.447Z",
-    "updatedAt": "2026-08-29T15:52:48.447Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-08-29T15:52:48.447Z",
-    "lastSeenAt": "2026-08-29T15:52:48.447Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1788018768447_sph1o",
-      "run_1788018772924_rmzpz"
-    ],
-    "querySource": "site:t.me software engineer jobs Global community",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-148h"
-    ]
-  },
-  {
-    "id": "devops-jobs-telegram",
-    "slug": "devops-jobs-telegram",
-    "title": "DevOps Jobs - работа и аналитика",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Software Engineering",
-    "tags": [
-      "telegram",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://t.me/devops_jobs",
-    "description": "Публикуем вакансии и запросы на поиск работы по направлению DevOps &amp; SRE.Обмен инсайдами и аналитикой на рынке труда DevOps &amp; SRE.Вакансии в @devops_jobs_feedFAQ и правила: https://git.io/JtnWbСтарт бота &quot;/man&quot;См.также: @devops_ru, @kubernetes_ru",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 21893,
-    "memberCountSource": "https://t.me/devops_jobs",
-    "memberCountCheckedAt": "2026-08-29T15:52:48.447Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-29T15:52:48.447Z",
-    "sourceUrls": [
-      "https://t.me/devops_jobs"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-29T15:52:48.447Z",
-    "lastCheckedAt": "2026-08-29T15:52:48.447Z",
-    "updatedAt": "2026-08-29T15:52:48.447Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-08-29T15:52:48.447Z",
-    "lastSeenAt": "2026-08-29T15:52:48.447Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1788018768447_sph1o",
-      "run_1788018773529_5qa06"
-    ],
-    "querySource": "site:t.me software engineer jobs Global community",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-148h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "remote-devops-jobs-telegram",
-    "slug": "remote-devops-jobs-telegram",
-    "title": "Remote DevOps Jobs 🌐✨",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Software Engineering",
-    "tags": [
-      "telegram",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://t.me/remote_devops_jobs",
-    "description": "Unlock top remote DevOps jobs&#33; 🔧☁️ Connect with leading opportunities, insights, and a network of DevOps experts. Elevate your career in the cloud era&#33;Buy ads: https://telega.io/c/remote_devops_jobsPost a vacancy: @mr_k_007",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": {
-      "sourceType": "platform-title",
-      "text": "Remote DevOps Jobs 🌐✨",
-      "checkedAt": "2026-08-29T15:52:53.927Z"
-    },
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 2297,
-    "memberCountSource": "https://t.me/remote_devops_jobs",
-    "memberCountCheckedAt": "2026-08-29T15:52:48.447Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-29T15:52:48.447Z",
-    "sourceUrls": [
-      "https://t.me/remote_devops_jobs"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-29T15:52:48.447Z",
-    "lastCheckedAt": "2026-08-29T15:52:48.447Z",
-    "updatedAt": "2026-08-29T15:52:48.447Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-08-29T15:52:48.447Z",
-    "lastSeenAt": "2026-08-29T15:52:48.447Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1788018768447_sph1o",
-      "run_1788018773927_sp0x1"
-    ],
-    "querySource": "site:t.me software engineer jobs Global community",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-148h"
-    ]
-  },
-  {
     "id": "go-careers-telegram",
     "slug": "go-careers-telegram",
     "title": "Go Careers 🚀",
@@ -557,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-129h",
+      "validation-stale-153h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -625,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-129h",
+      "validation-stale-153h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -697,7 +203,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-81h",
+      "validation-stale-105h",
       "duplicate-published: Matching community title on telegram: \"Remote Jobs👨‍💻\" vs \"Remote Jobs\""
     ]
   },
@@ -765,7 +271,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-81h",
+      "validation-stale-105h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -833,7 +339,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-34h",
+      "validation-stale-57h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -901,6 +407,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-33h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -968,6 +475,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-33h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   }
