@@ -126,14 +126,18 @@
   {
     "url": "https://discord.gg/XsD8QZcyZ",
     "platform": "discord",
-    "reason": "dead-link",
-    "date": "2026-08-19T08:33:40.620Z"
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-19T08:33:40.620Z",
+    "timesSeen": 2,
+    "lastSeenAt": "2026-09-06T09:49:59.766Z"
   },
   {
     "url": "https://discord.gg/8ywtyt3MX",
     "platform": "discord",
-    "reason": "dead-link",
-    "date": "2026-08-19T08:33:40.620Z"
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-08-19T08:33:40.620Z",
+    "timesSeen": 2,
+    "lastSeenAt": "2026-09-06T09:49:59.766Z"
   },
   {
     "url": "https://discord.gg/QNXJ9znD",
@@ -146,8 +150,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 2,
-    "lastSeenAt": "2026-09-03T10:16:47.914Z"
+    "timesSeen": 3,
+    "lastSeenAt": "2026-09-06T09:49:59.766Z"
   },
   {
     "url": "https://discord.gg/JjNdBkVGc6",
@@ -286,8 +290,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T09:56:18.214Z",
-    "lastSeenAt": "2026-09-04T10:11:44.954Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 5
   },
   {
     "url": "https://discord.gg/cscareerhub",
@@ -1365,8 +1369,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-09-05T14:05:00.140Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 5,
     "title": "DATA ENGINEERING PILIPINAS"
   },
   {
@@ -1374,8 +1378,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-09-05T14:05:00.140Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 4
   },
   {
     "url": "https://discord.gg/Yjm497P",
@@ -1612,8 +1616,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-09-05T09:56:13.493Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/job",
@@ -2110,8 +2114,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-25T12:26:20.198Z",
-    "lastSeenAt": "2026-09-02T15:31:08.648Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 5,
     "title": "LwCwWDcF9IG2530kBRBsLS"
   },
   {
@@ -2676,8 +2680,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-09-05T09:56:13.493Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 6,
     "title": "cscareers.dev"
   },
   {
@@ -2708,10 +2712,11 @@
   {
     "url": "https://discord.gg/MmWwgXQezf",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-09-05T14:05:00.140Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 4,
+    "title": "pandesal.dev"
   },
   {
     "url": "https://discord.gg/h9Bq9UkGwy",
@@ -2726,8 +2731,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-09-04T10:11:44.954Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/r-jobs-26599",
@@ -2777,8 +2782,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-09-05T01:32:50.983Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 5,
     "title": "BaNtEQMjC7X3IEbrD0p76j"
   },
   {
@@ -3993,8 +3998,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-31T18:20:29.403Z",
-    "lastSeenAt": "2026-09-04T10:11:44.954Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 4,
     "title": "Get in Nottingham, Nottinghamshire, Southwell, Barnby-in-the-Willows, Willoughby on the Wolds"
   },
   {
@@ -4259,8 +4264,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-02T15:31:08.648Z",
-    "lastSeenAt": "2026-09-05T09:56:13.493Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 4,
     "title": "Job x"
   },
   {
@@ -4697,8 +4702,8 @@
     "platform": "whatsapp",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-04T10:11:44.954Z",
-    "lastSeenAt": "2026-09-04T10:11:44.954Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 2
   },
   {
     "url": "https://chat.whatsapp.com/FF5kj9FPb5oAUcSYH6EZOU",
@@ -4740,16 +4745,16 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-04T10:11:44.954Z",
-    "lastSeenAt": "2026-09-04T10:11:44.954Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/DaE4DvG8g",
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-04T10:11:44.954Z",
-    "lastSeenAt": "2026-09-04T10:11:44.954Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/zchqUtzsu",
@@ -4798,8 +4803,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-05T01:32:50.983Z",
-    "lastSeenAt": "2026-09-05T01:32:50.983Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 2,
     "title": "CnubCywHwNoDL5JOo7udV0"
   },
   {
@@ -4807,8 +4812,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-05T01:32:50.983Z",
-    "lastSeenAt": "2026-09-05T01:32:50.983Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 2,
     "title": "Talent Bridge"
   },
   {
@@ -4992,8 +4997,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-09-05T09:56:13.493Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/klinncommunity",
@@ -5099,8 +5104,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-09-05T09:56:13.493Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 2,
     "title": "Krishan Kumar - Jobs &amp; Internships Updates"
   },
   {
@@ -5108,8 +5113,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-09-05T09:56:13.493Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/Xpk2bPFZWt",
@@ -5141,8 +5146,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-05T14:05:00.140Z",
-    "lastSeenAt": "2026-09-05T14:05:00.140Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/VHb6BwS9NT",
@@ -5157,8 +5162,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-05T14:05:00.140Z",
-    "lastSeenAt": "2026-09-05T14:05:00.140Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/4ZCcgFBm",
@@ -5229,6 +5234,106 @@
     "reason": "insufficient-publication-confidence",
     "date": "2026-09-05T19:38:50.650Z",
     "lastSeenAt": "2026-09-05T19:38:50.650Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/m8Bw5JYzHZ",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-06T09:49:59.766Z",
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 1,
+    "title": "r/MelbourneTrains Official 🚂"
+  },
+  {
+    "url": "https://discord.gg/2QuWKfDUwe",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-06T09:49:59.766Z",
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/B3XVDrNrk",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-06T09:49:59.766Z",
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/XprR7VA4X",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-06T09:49:59.766Z",
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/NctEUwc8P",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-06T09:49:59.766Z",
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/careercompass-1460148112399007911",
+    "platform": "discord",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-06T09:49:59.766Z",
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 1,
+    "title": "CareerCompass"
+  },
+  {
+    "url": "https://discord.gg/microsoftinterns",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-06T09:49:59.766Z",
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/LrRSFgew6MuHsmiEwqjgjQ",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-06T09:49:59.766Z",
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 1,
+    "title": "InternPools Internships &#x1f680; (2)"
+  },
+  {
+    "url": "https://discord.gg/prospects",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-06T09:49:59.766Z",
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 1,
+    "title": "Prospects"
+  },
+  {
+    "url": "https://discord.gg/wEbBaJr",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-06T09:49:59.766Z",
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/XGdbyr9Pw",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-09-06T09:49:59.766Z",
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/FTWGGf5",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-06T09:49:59.766Z",
+    "lastSeenAt": "2026-09-06T09:49:59.766Z",
     "timesSeen": 1
   }
 ]
