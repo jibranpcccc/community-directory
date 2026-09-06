@@ -5333,8 +5333,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-06T09:49:59.766Z",
-    "lastSeenAt": "2026-09-06T09:49:59.766Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-06T19:41:24.493Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/gocareers",
@@ -5352,6 +5352,14 @@
     "reason": "insufficient-publication-confidence",
     "date": "2026-09-06T14:33:18.191Z",
     "lastSeenAt": "2026-09-06T14:33:18.191Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/YY6jZqkmg5",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-06T19:41:24.493Z",
+    "lastSeenAt": "2026-09-06T19:41:24.493Z",
     "timesSeen": 1
   }
 ]
