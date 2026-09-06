@@ -5335,5 +5335,23 @@
     "date": "2026-09-06T09:49:59.766Z",
     "lastSeenAt": "2026-09-06T09:49:59.766Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/gocareers",
+    "platform": "telegram",
+    "title": "Go Careers 🚀",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-06T14:33:18.191Z",
+    "lastSeenAt": "2026-09-06T14:33:18.191Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/riddhi_dutta",
+    "platform": "telegram",
+    "title": "Job Updates &amp; Tutorials",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-06T14:33:18.191Z",
+    "lastSeenAt": "2026-09-06T14:33:18.191Z",
+    "timesSeen": 1
   }
 ]

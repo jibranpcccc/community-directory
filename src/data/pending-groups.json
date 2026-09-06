@@ -1,141 +1,5 @@
 [
   {
-    "id": "go-careers-telegram",
-    "slug": "go-careers-telegram",
-    "title": "Go Careers 🚀",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Software Engineering",
-    "tags": [
-      "telegram",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://t.me/gocareers",
-    "description": "Get latest intern and job updates&#33;For collaborations/promotions reach out at gocareers.official@gmail.com",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 79643,
-    "memberCountSource": "https://t.me/gocareers",
-    "memberCountCheckedAt": "2026-08-30T10:54:52.766Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-30T10:54:52.766Z",
-    "sourceUrls": [
-      "https://t.me/gocareers"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-30T10:54:52.766Z",
-    "lastCheckedAt": "2026-08-30T10:54:52.766Z",
-    "updatedAt": "2026-08-30T10:54:52.766Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-08-30T10:54:52.766Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1788087292766_qmu3a",
-      "run_1788087298038_pemcx"
-    ],
-    "querySource": "site:t.me data science machine learning jobs Global Telegram",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-167h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "job-updates-amp-tutorials-telegram",
-    "slug": "job-updates-amp-tutorials-telegram",
-    "title": "Job Updates &amp; Tutorials",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Software Engineering",
-    "tags": [
-      "telegram",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://t.me/riddhi_dutta",
-    "description": "Get all the job hiring updates , important resources and exclusive access to my interview preparation content on this channel.",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 30065,
-    "memberCountSource": "https://t.me/riddhi_dutta",
-    "memberCountCheckedAt": "2026-08-30T10:54:52.766Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-08-30T10:54:52.766Z",
-    "sourceUrls": [
-      "https://t.me/riddhi_dutta"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-08-30T10:54:52.766Z",
-    "lastCheckedAt": "2026-08-30T10:54:52.766Z",
-    "updatedAt": "2026-08-30T10:54:52.766Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-08-30T10:54:52.766Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1788087292766_qmu3a",
-      "run_1788087298457_ubwf5"
-    ],
-    "querySource": "site:t.me data science machine learning jobs Global Telegram",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-167h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "remote-jobs-telegram-2",
     "slug": "remote-jobs-telegram-2",
     "title": "Remote Jobs👨‍💻",
@@ -203,7 +67,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-119h",
+      "validation-stale-124h",
       "duplicate-published: Matching community title on telegram: \"Remote Jobs👨‍💻\" vs \"Remote Jobs\""
     ]
   },
@@ -271,7 +135,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-119h",
+      "validation-stale-124h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -339,7 +203,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h",
+      "validation-stale-76h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -407,7 +271,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-48h",
+      "validation-stale-52h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -475,7 +339,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-48h",
+      "validation-stale-52h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   }
