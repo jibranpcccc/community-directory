@@ -5521,5 +5521,63 @@
     "date": "2026-09-07T11:01:56.391Z",
     "lastSeenAt": "2026-09-07T11:01:56.391Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/qUKfTT",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-09-07T16:44:28.445Z",
+    "lastSeenAt": "2026-09-07T16:44:28.445Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/uXZdZjFcjB",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-07T16:44:28.445Z",
+    "lastSeenAt": "2026-09-07T16:44:28.445Z",
+    "timesSeen": 1,
+    "title": "Engenious"
+  },
+  {
+    "url": "https://discord.gg/nnVC2uRKd6",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-07T16:44:28.445Z",
+    "lastSeenAt": "2026-09-07T16:44:28.445Z",
+    "timesSeen": 1,
+    "title": "Cal State LA 🦅🟡⚫"
+  },
+  {
+    "url": "https://discord.gg/qr3bZMXN33",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-07T16:44:28.445Z",
+    "lastSeenAt": "2026-09-07T16:44:28.445Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/MBJKvb3M",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-07T16:44:28.445Z",
+    "lastSeenAt": "2026-09-07T16:44:28.445Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/kumPceKb",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-07T16:44:28.445Z",
+    "lastSeenAt": "2026-09-07T16:44:28.445Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/ED43dBAZ",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-07T16:44:28.445Z",
+    "lastSeenAt": "2026-09-07T16:44:28.445Z",
+    "timesSeen": 1
   }
 ]
