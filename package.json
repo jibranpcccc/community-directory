@@ -21,7 +21,8 @@
     "validate-links": "tsx scripts/validate/index.ts",
     "approve": "tsx scripts/utilities/approve.ts",
     "seo:audit": "tsx scripts/seo/auditBuild.ts",
-    "indexnow": "tsx scripts/seo/notifyIndexNow.ts"
+    "indexnow": "tsx scripts/seo/notifyIndexNow.ts",
+    "index:broadcast": "python scripts/seo/broadcastMultiProtocolIndexing.py"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
