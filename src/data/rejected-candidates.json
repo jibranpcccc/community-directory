@@ -5361,5 +5361,13 @@
     "date": "2026-09-06T19:41:24.493Z",
     "lastSeenAt": "2026-09-06T19:41:24.493Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/kGRVWfPmfM",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-07T01:25:34.008Z",
+    "lastSeenAt": "2026-09-07T01:25:34.008Z",
+    "timesSeen": 1
   }
 ]
