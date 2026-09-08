@@ -2531,10 +2531,10 @@
   {
     "url": "https://chat.whatsapp.com/IFB8gqjaP80B6lF2JhuFC2",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-27T16:58:43.400Z",
-    "lastSeenAt": "2026-09-08T10:13:10.042Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-09-08T20:24:29.995Z",
+    "timesSeen": 6,
     "title": "ICT Opportunities 6 &#x1f393;"
   },
   {
@@ -5782,5 +5782,14 @@
     "date": "2026-09-08T15:31:43.530Z",
     "lastSeenAt": "2026-09-08T15:31:43.530Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/DWFOCpUHAEF0V79hJCImzV",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-08T20:24:29.995Z",
+    "lastSeenAt": "2026-09-08T20:24:29.995Z",
+    "timesSeen": 1,
+    "title": "DWFOCpUHAEF0V79hJCImzV"
   }
 ]
