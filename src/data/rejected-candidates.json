@@ -5764,5 +5764,23 @@
     "date": "2026-09-08T10:13:10.042Z",
     "lastSeenAt": "2026-09-08T10:13:10.042Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/RemoteJobs",
+    "platform": "telegram",
+    "title": "Remote Jobs👨‍💻",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-08T15:31:43.530Z",
+    "lastSeenAt": "2026-09-08T15:31:43.530Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/datasciencejobs",
+    "platform": "telegram",
+    "title": "Data Science Jobs",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-08T15:31:43.530Z",
+    "lastSeenAt": "2026-09-08T15:31:43.530Z",
+    "timesSeen": 1
   }
 ]
