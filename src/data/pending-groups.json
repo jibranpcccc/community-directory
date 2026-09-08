@@ -67,7 +67,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-124h",
+      "validation-stale-168h",
       "duplicate-published: Matching community title on telegram: \"Remote Jobs👨‍💻\" vs \"Remote Jobs\""
     ]
   },
@@ -135,7 +135,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-124h",
+      "validation-stale-168h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -203,7 +203,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-76h",
+      "validation-stale-120h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -271,7 +271,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-52h",
+      "validation-stale-96h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -339,7 +339,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-52h",
+      "validation-stale-96h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -385,12 +385,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-09-07T11:01:56.391Z",
     "lastCheckedAt": "2026-09-07T11:01:56.391Z",
     "updatedAt": "2026-09-07T11:01:56.391Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-09-07T11:01:56.391Z",
@@ -404,7 +404,11 @@
       "run_1788778916944_zsbh7"
     ],
     "querySource": "site:t.me Worldwide tech jobs OR Worldwide job alerts",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   },
   {
     "id": "hireupgrad-job-updates-telegram",
@@ -448,12 +452,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-09-07T11:01:56.391Z",
     "lastCheckedAt": "2026-09-07T11:01:56.391Z",
     "updatedAt": "2026-09-07T11:01:56.391Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-09-07T11:01:56.391Z",
@@ -467,7 +471,11 @@
       "run_1788778917894_u0mb6"
     ],
     "querySource": "site:t.me Worldwide tech jobs OR Worldwide job alerts",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   },
   {
     "id": "krishan-kumar-jobs-amp-internships-updates-telegram",
@@ -511,12 +519,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-09-07T11:01:56.391Z",
     "lastCheckedAt": "2026-09-07T11:01:56.391Z",
     "updatedAt": "2026-09-07T11:01:56.391Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-09-07T11:01:56.391Z",
@@ -530,6 +538,211 @@
       "run_1788778918355_lchi9"
     ],
     "querySource": "site:t.me Worldwide tech jobs OR Worldwide job alerts",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "cruise-jobs-and-visa-sponsered-job-telegram",
+    "slug": "cruise-jobs-and-visa-sponsered-job-telegram",
+    "title": "Cruise Jobs and Visa sponsered job",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "visa-sponsorship-jobs",
+    "subcategory": "Visa Sponsorship",
+    "tags": [
+      "telegram",
+      "jobs",
+      "visasponsorshipjobs"
+    ],
+    "inviteUrl": "https://t.me/visacruisejobs",
+    "description": "Your trusted source for visa-sponsored jobs and cruise ship careers&#33; Find verified job listings in fields like healthcare, hospitality, and engineering, along with cruise ship roles from top lines.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "visa-sponsorship-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 308,
+    "memberCountSource": "https://t.me/visacruisejobs",
+    "memberCountCheckedAt": "2026-09-08T10:13:10.042Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-08T10:13:10.042Z",
+    "sourceUrls": [
+      "https://t.me/visacruisejobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-08T10:13:10.042Z",
+    "lastCheckedAt": "2026-09-08T10:13:10.042Z",
+    "updatedAt": "2026-09-08T10:13:10.042Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-08T10:13:10.042Z",
+    "lastSeenAt": "2026-09-08T10:13:10.042Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1788862390042_4ctiq",
+      "run_1788862390825_gqefv"
+    ],
+    "querySource": "site:t.me skilled worker visa jobs Global Telegram",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "jobs-in-poland-for-english-speakers-telegram",
+    "slug": "jobs-in-poland-for-english-speakers-telegram",
+    "title": "Jobs in Poland for English Speakers",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "visa-sponsorship-jobs",
+    "subcategory": "Visa Sponsorship",
+    "tags": [
+      "telegram",
+      "jobs",
+      "visasponsorshipjobs"
+    ],
+    "inviteUrl": "https://t.me/JobsInPoland_EN",
+    "description": "Job offers in Poland for English speaking people. Work permits, only legal employment",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "visa-sponsorship-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 450,
+    "memberCountSource": "https://t.me/JobsInPoland_EN",
+    "memberCountCheckedAt": "2026-09-08T10:13:10.042Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-08T10:13:10.042Z",
+    "sourceUrls": [
+      "https://t.me/JobsInPoland_EN"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-08T10:13:10.042Z",
+    "lastCheckedAt": "2026-09-08T10:13:10.042Z",
+    "updatedAt": "2026-09-08T10:13:10.042Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-08T10:13:10.042Z",
+    "lastSeenAt": "2026-09-08T10:13:10.042Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1788862390042_4ctiq",
+      "run_1788862391229_zwk93"
+    ],
+    "querySource": "site:t.me skilled worker visa jobs Global Telegram",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "nhs-job-discussion-group-ix-whatsapp",
+    "slug": "nhs-job-discussion-group-ix-whatsapp",
+    "title": "NHS Job Discussion Group IX",
+    "platform": "whatsapp",
+    "vertical": "jobs",
+    "category": "visa-sponsorship-jobs",
+    "subcategory": "Visa Sponsorship",
+    "tags": [
+      "whatsapp",
+      "jobs",
+      "visasponsorshipjobs"
+    ],
+    "inviteUrl": "https://chat.whatsapp.com/IhoZPTnnUk30tKCmIgm7kj",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "GB",
+    "countryCode": "GB",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "visa-sponsorship-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-08T10:13:10.042Z",
+    "sourceUrls": [
+      "https://chat.whatsapp.com/IhoZPTnnUk30tKCmIgm7kj"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-08T10:13:10.042Z",
+    "lastCheckedAt": "2026-09-08T10:13:10.042Z",
+    "updatedAt": "2026-09-08T10:13:10.042Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-08T10:13:10.042Z",
+    "lastSeenAt": "2026-09-08T10:13:10.042Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1788862390042_4ctiq",
+      "run_1788862392696_17ntb"
+    ],
+    "querySource": "site:chat.whatsapp.com skilled worker visa jobs UK Telegram",
+    "sourceHostname": "chat.whatsapp.com",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GB found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   }
 ]
