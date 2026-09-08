@@ -5579,5 +5579,38 @@
     "date": "2026-09-07T16:44:28.445Z",
     "lastSeenAt": "2026-09-07T16:44:28.445Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/+4o7gIgcVXio2YmI8",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-08T01:34:46.501Z",
+    "lastSeenAt": "2026-09-08T01:34:46.501Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/claraukimmigration",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-08T01:34:46.501Z",
+    "lastSeenAt": "2026-09-08T01:34:46.501Z",
+    "timesSeen": 1,
+    "title": "Clara Immigration"
+  },
+  {
+    "url": "https://t.me/F1_visa_slots_india",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-08T01:34:46.501Z",
+    "lastSeenAt": "2026-09-08T01:34:46.501Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/ebmscholarschannel",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-08T01:34:46.501Z",
+    "lastSeenAt": "2026-09-08T01:34:46.501Z",
+    "timesSeen": 1
   }
 ]
