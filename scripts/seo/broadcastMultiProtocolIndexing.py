@@ -66,6 +66,16 @@ BACKLINK_ASSETS = [
         "name": "Jibran Ayub Developer Profile Hub",
         "url": "https://github.com/jibranpcccc",
         "da": 96
+    },
+    {
+        "name": "GitHub Pages Directory Network Portal",
+        "url": "https://jibranpcccc.github.io/",
+        "da": 96
+    },
+    {
+        "name": "GitHub Pages Web Utilities Hub",
+        "url": "https://jibranpcccc.github.io/tools.html",
+        "da": 96
     }
 ]
 

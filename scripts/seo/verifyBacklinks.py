@@ -6,6 +6,8 @@ backlinks = [
     ('GitHub Release v1.0.0', 'https://github.com/jibranpcccc/job-alert-communities-directory/releases/tag/v1.0.0', 96),
     ('Curated Public Gist', 'https://gist.github.com/jibranpcccc/9db0aaeea4c7047e65dd0864e7712294', 96),
     ('Developer Profile Hub', 'https://github.com/jibranpcccc', 96),
+    ('GitHub Pages Directory Network Portal', 'https://jibranpcccc.github.io/', 96),
+    ('GitHub Pages Web Utilities Hub', 'https://jibranpcccc.github.io/tools.html', 96),
     ('Wayback Machine Homepage', 'http://web.archive.org/web/20260907094106/https://jobalertgroups.com/', 96),
     ('Wayback Machine Jobs Catalog', 'http://web.archive.org/web/20260907094208/https://jobalertgroups.com/jobs/', 96),
     ('Wayback Machine Telegram Hub', 'http://web.archive.org/web/20260907094200/https://jobalertgroups.com/platform/telegram/', 96)
