@@ -199,8 +199,8 @@
     "platform": "telegram",
     "reason": "unknown-status",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 10,
-    "lastSeenAt": "2026-09-08T10:13:10.042Z"
+    "timesSeen": 11,
+    "lastSeenAt": "2026-09-09T15:25:55.383Z"
   },
   {
     "url": "https://discord.gg/dFp4rR3T",
@@ -5392,16 +5392,16 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-09-07T11:01:56.391Z",
-    "lastSeenAt": "2026-09-07T11:01:56.391Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-09T15:25:55.383Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/wobbjobs_it",
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-09-07T11:01:56.391Z",
-    "lastSeenAt": "2026-09-07T11:01:56.391Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-09T15:25:55.383Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/Buzzpenny",
@@ -5955,6 +5955,31 @@
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-09T10:17:40.700Z",
     "lastSeenAt": "2026-09-09T10:17:40.700Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/worktechpro",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-09T15:25:55.383Z",
+    "lastSeenAt": "2026-09-09T15:25:55.383Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/jkupdatetechnology",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-09T15:25:55.383Z",
+    "lastSeenAt": "2026-09-09T15:25:55.383Z",
+    "timesSeen": 1,
+    "title": "JK Update Technology"
+  },
+  {
+    "url": "https://t.me/TheCarlTech",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-09T15:25:55.383Z",
+    "lastSeenAt": "2026-09-09T15:25:55.383Z",
     "timesSeen": 1
   }
 ]

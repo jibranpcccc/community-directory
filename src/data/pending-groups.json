@@ -63,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-144h",
+      "validation-stale-149h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -131,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-120h",
+      "validation-stale-125h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +199,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-120h",
+      "validation-stale-125h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -267,7 +267,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-47h",
+      "validation-stale-52h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -335,7 +335,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-47h",
+      "validation-stale-52h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -403,7 +403,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-47h",
+      "validation-stale-52h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -471,7 +471,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h",
+      "validation-stale-29h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -539,7 +539,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h",
+      "validation-stale-29h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -607,7 +607,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h",
+      "validation-stale-29h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GB found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -670,6 +670,207 @@
     "observedRunIds": [
       "run_1788949060700_j1mvz",
       "run_1788949061949_aox0w"
+    ],
+    "querySource": "site:t.me international tech hiring Global Discord",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "free-job-alerts-india-and-usa-telegram",
+    "slug": "free-job-alerts-india-and-usa-telegram",
+    "title": "FREE Job Alerts INDIA and USA",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "visa-sponsorship-jobs",
+    "subcategory": "Visa Sponsorship",
+    "tags": [
+      "telegram",
+      "jobs",
+      "visasponsorshipjobs"
+    ],
+    "inviteUrl": "https://t.me/eclattraining",
+    "description": "All types of jobs",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "visa-sponsorship-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 556,
+    "memberCountSource": "https://t.me/eclattraining",
+    "memberCountCheckedAt": "2026-09-09T15:25:55.383Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-09T15:25:55.383Z",
+    "sourceUrls": [
+      "https://t.me/eclattraining"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-09T15:25:55.383Z",
+    "lastCheckedAt": "2026-09-09T15:25:55.383Z",
+    "updatedAt": "2026-09-09T15:25:55.383Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-09T15:25:55.383Z",
+    "lastSeenAt": "2026-09-09T15:25:55.383Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1788967555383_pw7bt",
+      "run_1788967557400_4dy7g"
+    ],
+    "querySource": "site:t.me international tech hiring Global Discord",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "free-it-job-alerts-for-job-seekers-telegram",
+    "slug": "free-it-job-alerts-for-job-seekers-telegram",
+    "title": "Free IT job Alerts for job seekers",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "visa-sponsorship-jobs",
+    "subcategory": "Visa Sponsorship",
+    "tags": [
+      "telegram",
+      "jobs",
+      "visasponsorshipjobs"
+    ],
+    "inviteUrl": "https://t.me/dailyitjobs",
+    "description": "Posting Daily All IT jobs",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "visa-sponsorship-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 218,
+    "memberCountSource": "https://t.me/dailyitjobs",
+    "memberCountCheckedAt": "2026-09-09T15:25:55.383Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-09T15:25:55.383Z",
+    "sourceUrls": [
+      "https://t.me/dailyitjobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-09T15:25:55.383Z",
+    "lastCheckedAt": "2026-09-09T15:25:55.383Z",
+    "updatedAt": "2026-09-09T15:25:55.383Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-09T15:25:55.383Z",
+    "lastSeenAt": "2026-09-09T15:25:55.383Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1788967555383_pw7bt",
+      "run_1788967557880_8ew8f"
+    ],
+    "querySource": "site:t.me international tech hiring Global Discord",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "gulf-job-express-telegram",
+    "slug": "gulf-job-express-telegram",
+    "title": "Gulf Job Express",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "visa-sponsorship-jobs",
+    "subcategory": "Visa Sponsorship",
+    "tags": [
+      "telegram",
+      "jobs",
+      "visasponsorshipjobs"
+    ],
+    "inviteUrl": "https://t.me/gulfjobexpress",
+    "description": "For more latest gulf vacancies check our official websitehttps://www.worktogulf.comTelegram Link - https://telegram.me/gulfjobexpressGulf Job Opening in Saudi Arabia, Bahrain, Oman, Qatar, UAE, kuwait, Europe#gulfjobs Assignment abroad times pdf",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "visa-sponsorship-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 6276,
+    "memberCountSource": "https://t.me/gulfjobexpress",
+    "memberCountCheckedAt": "2026-09-09T15:25:55.383Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-09T15:25:55.383Z",
+    "sourceUrls": [
+      "https://t.me/gulfjobexpress"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-09T15:25:55.383Z",
+    "lastCheckedAt": "2026-09-09T15:25:55.383Z",
+    "updatedAt": "2026-09-09T15:25:55.383Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-09T15:25:55.383Z",
+    "lastSeenAt": "2026-09-09T15:25:55.383Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1788967555383_pw7bt",
+      "run_1788967558535_8yptc"
     ],
     "querySource": "site:t.me international tech hiring Global Discord",
     "sourceHostname": "t.me",
