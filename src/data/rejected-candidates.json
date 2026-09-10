@@ -5981,5 +5981,45 @@
     "date": "2026-09-09T15:25:55.383Z",
     "lastSeenAt": "2026-09-09T15:25:55.383Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/fvNhZkxvkt",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-10T01:37:24.641Z",
+    "lastSeenAt": "2026-09-10T01:37:24.641Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/U25g437",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-10T01:37:24.641Z",
+    "lastSeenAt": "2026-09-10T01:37:24.641Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/wE3ufNvQN8",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-10T01:37:24.641Z",
+    "lastSeenAt": "2026-09-10T01:37:24.641Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/Fx4K7Zb8",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-10T01:37:24.641Z",
+    "lastSeenAt": "2026-09-10T01:37:24.641Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/pmDFwE7",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-09-10T01:37:24.641Z",
+    "lastSeenAt": "2026-09-10T01:37:24.641Z",
+    "timesSeen": 1
   }
 ]
