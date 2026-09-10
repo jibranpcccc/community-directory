@@ -2097,8 +2097,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-25T12:26:20.198Z",
-    "lastSeenAt": "2026-09-09T10:17:40.700Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-09-10T10:10:45.273Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/h3xsec",
@@ -4146,8 +4146,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-01T15:39:11.690Z",
-    "lastSeenAt": "2026-09-01T15:39:11.690Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-10T10:10:45.273Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/XPmzmC3Bur",
@@ -4754,8 +4754,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-04T10:11:44.954Z",
-    "lastSeenAt": "2026-09-08T10:13:10.042Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-09-10T10:10:45.273Z",
+    "timesSeen": 5
   },
   {
     "url": "https://discord.gg/zchqUtzsu",
@@ -5511,8 +5511,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-07T11:01:56.391Z",
-    "lastSeenAt": "2026-09-07T11:01:56.391Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-10T10:10:45.273Z",
+    "timesSeen": 2,
     "title": "Crossing Lears"
   },
   {
@@ -6021,5 +6021,74 @@
     "date": "2026-09-10T01:37:24.641Z",
     "lastSeenAt": "2026-09-10T01:37:24.641Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/gulfjobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-10T10:10:45.273Z",
+    "lastSeenAt": "2026-09-10T10:10:45.273Z",
+    "timesSeen": 1,
+    "title": "Gulf Jobs"
+  },
+  {
+    "url": "https://discord.gg/QN7E2X66",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-09-10T10:10:45.273Z",
+    "lastSeenAt": "2026-09-10T10:10:45.273Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/we4dTgwJAt",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-10T10:10:45.273Z",
+    "lastSeenAt": "2026-09-10T10:10:45.273Z",
+    "timesSeen": 1,
+    "title": "Icreatechs Community"
+  },
+  {
+    "url": "https://t.me/+MJD1X1R9r2VkNTU0",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-10T10:10:45.273Z",
+    "lastSeenAt": "2026-09-10T10:10:45.273Z",
+    "timesSeen": 1,
+    "title": "Vlogs with Offy"
+  },
+  {
+    "url": "https://t.me/IIHCR",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-10T10:10:45.273Z",
+    "lastSeenAt": "2026-09-10T10:10:45.273Z",
+    "timesSeen": 1,
+    "title": "India International Healthcare Recruiters"
+  },
+  {
+    "url": "https://t.me/no1doctors",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-10T10:10:45.273Z",
+    "lastSeenAt": "2026-09-10T10:10:45.273Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/goodhealthconsult",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-09-10T10:10:45.273Z",
+    "lastSeenAt": "2026-09-10T10:10:45.273Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/MedicalJobsIndia",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-10T10:10:45.273Z",
+    "lastSeenAt": "2026-09-10T10:10:45.273Z",
+    "timesSeen": 1,
+    "title": "Medical Jobs - MBBS | Nursing | Pharma | NEET UG PG"
   }
 ]
