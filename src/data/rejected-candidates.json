@@ -6090,5 +6090,23 @@
     "lastSeenAt": "2026-09-10T10:10:45.273Z",
     "timesSeen": 1,
     "title": "Medical Jobs - MBBS | Nursing | Pharma | NEET UG PG"
+  },
+  {
+    "url": "https://t.me/Visasponsorshipjobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-10T15:18:59.238Z",
+    "lastSeenAt": "2026-09-10T15:18:59.238Z",
+    "timesSeen": 1,
+    "title": "Visa sponsorship jobs USA, CANADA, UK, EUROPE"
+  },
+  {
+    "url": "https://t.me/mnjobs",
+    "platform": "telegram",
+    "title": "Maha Naukri",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-10T15:18:59.770Z",
+    "lastSeenAt": "2026-09-10T15:18:59.770Z",
+    "timesSeen": 1
   }
 ]
