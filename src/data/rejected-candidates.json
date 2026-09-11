@@ -4700,10 +4700,10 @@
   {
     "url": "https://chat.whatsapp.com/EediwLSUucSA3cBm24OF47",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-04T10:11:44.954Z",
-    "lastSeenAt": "2026-09-09T10:17:40.700Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-09-11T01:36:26.094Z",
+    "timesSeen": 6,
     "title": "EediwLSUucSA3cBm24OF47"
   },
   {
@@ -6127,5 +6127,32 @@
     "date": "2026-09-10T20:10:11.788Z",
     "lastSeenAt": "2026-09-10T20:10:11.788Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/HnFqqbXGZbeFFUpRq8AMfB",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-11T01:36:26.094Z",
+    "lastSeenAt": "2026-09-11T01:36:26.094Z",
+    "timesSeen": 1,
+    "title": "HnFqqbXGZbeFFUpRq8AMfB"
+  },
+  {
+    "url": "https://chat.whatsapp.com/E3r6kDOMQqmGBV1opfuYgW",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-11T01:36:26.094Z",
+    "lastSeenAt": "2026-09-11T01:36:26.094Z",
+    "timesSeen": 1,
+    "title": "E3r6kDOMQqmGBV1opfuYgW"
+  },
+  {
+    "url": "https://chat.whatsapp.com/EM3oVtVjdHB2r1bkRepAVO",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-11T01:36:26.094Z",
+    "lastSeenAt": "2026-09-11T01:36:26.094Z",
+    "timesSeen": 1,
+    "title": "BirthNursepathway&#x1f468;&#x200d;&#x2695;&#xfe0f;&#x1f469;&#x200d;&#x2695;&#xfe0f;&#x1f3e5;&#x1f1f3;&#x1f1fa;&#x1f3f4;&#xe0067;&#xe0062;&#xe0065;&#xe006e;&#xe0067;&#xe007f;&#x1f3f4;&#xe0067;&#xe0062;&#xe0073;&#xe0063;&#xe0074;&#xe007f;&#x1f3f4;&#xe0067;&#xe0062;&#xe0077;&#xe006c;&#xe0073;&#xe007f;&#x1f1ec;&#x1f1e7;"
   }
 ]
