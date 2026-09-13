@@ -6537,8 +6537,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-13T01:32:58.526Z",
-    "lastSeenAt": "2026-09-13T01:32:58.526Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-13T15:10:20.827Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/sbb6mAydXE",
@@ -6712,5 +6712,13 @@
     "lastSeenAt": "2026-09-13T11:12:58.493Z",
     "timesSeen": 1,
     "title": "GLnZEleqtXnBNXTEdBjZpk"
+  },
+  {
+    "url": "https://discord.gg/financialcareers",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-09-13T15:10:20.827Z",
+    "lastSeenAt": "2026-09-13T15:10:20.827Z",
+    "timesSeen": 1
   }
 ]
