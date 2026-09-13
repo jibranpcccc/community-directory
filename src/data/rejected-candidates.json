@@ -1624,8 +1624,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-09-07T11:01:56.391Z",
-    "timesSeen": 6
+    "lastSeenAt": "2026-09-13T19:57:26.656Z",
+    "timesSeen": 7
   },
   {
     "url": "https://discord.gg/awHZtSf89q",
@@ -6535,18 +6535,19 @@
   {
     "url": "https://discord.gg/nYmWtzs",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-09-13T01:32:58.526Z",
-    "lastSeenAt": "2026-09-13T15:10:20.827Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-09-13T19:57:26.656Z",
+    "timesSeen": 3,
+    "title": "/r/AustralianAccounting"
   },
   {
     "url": "https://discord.gg/sbb6mAydXE",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-09-13T01:32:58.526Z",
-    "lastSeenAt": "2026-09-13T01:32:58.526Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-13T19:57:26.656Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/ZCXtaYXxED",
@@ -6718,7 +6719,15 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-13T15:10:20.827Z",
-    "lastSeenAt": "2026-09-13T15:10:20.827Z",
+    "lastSeenAt": "2026-09-13T19:57:26.656Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://discord.gg/Nsbrp24RhY",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-09-13T19:57:26.656Z",
+    "lastSeenAt": "2026-09-13T19:57:26.656Z",
     "timesSeen": 1
   }
 ]
