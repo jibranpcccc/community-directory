@@ -36,6 +36,9 @@ WEBSITE_URLS = [
     "https://jobalertgroups.com/country/global/",
     "https://jobalertgroups.com/country/uk/",
     "https://jobalertgroups.com/country/india/",
+    "https://jobalertgroups.com/country/singapore/",
+    "https://jobalertgroups.com/job-type/visa-sponsorship-jobs/",
+    "https://jobalertgroups.com/platform/whatsapp/",
     "https://jobalertgroups.com/how-we-verify/",
     "https://jobalertgroups.com/safety/",
     "https://jobalertgroups.com/editorial-policy/",
@@ -75,6 +78,26 @@ BACKLINK_ASSETS = [
     {
         "name": "GitHub Pages Web Utilities Hub",
         "url": "https://jibranpcccc.github.io/tools.html",
+        "da": 96
+    },
+    {
+        "name": "Awesome Remote Job Alert Groups Repo",
+        "url": "https://github.com/jibranpcccc/awesome-remote-job-alert-groups",
+        "da": 96
+    },
+    {
+        "name": "Awesome Remote Job Alert Release v1.0.0",
+        "url": "https://github.com/jibranpcccc/awesome-remote-job-alert-groups/releases/tag/v1.0.0",
+        "da": 96
+    },
+    {
+        "name": "Awesome Remote Job Alert Standards Issue RFC",
+        "url": "https://github.com/jibranpcccc/awesome-remote-job-alert-groups/issues/1",
+        "da": 96
+    },
+    {
+        "name": "Curated Remote & Tech Jobs Gist",
+        "url": "https://gist.github.com/jibranpcccc/8da5d0e83e299599eff31fe5662fc7ee",
         "da": 96
     }
 ]

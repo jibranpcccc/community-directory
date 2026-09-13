@@ -8,6 +8,10 @@ backlinks = [
     ('Developer Profile Hub', 'https://github.com/jibranpcccc', 96),
     ('GitHub Pages Directory Network Portal', 'https://jibranpcccc.github.io/', 96),
     ('GitHub Pages Web Utilities Hub', 'https://jibranpcccc.github.io/tools.html', 96),
+    ('Awesome Remote Job Alert Groups Repo', 'https://github.com/jibranpcccc/awesome-remote-job-alert-groups', 96),
+    ('Awesome Remote Job Alert Release v1.0.0', 'https://github.com/jibranpcccc/awesome-remote-job-alert-groups/releases/tag/v1.0.0', 96),
+    ('Awesome Remote Job Alert Standards Issue RFC', 'https://github.com/jibranpcccc/awesome-remote-job-alert-groups/issues/1', 96),
+    ('Curated Remote & Tech Jobs Gist', 'https://gist.github.com/jibranpcccc/8da5d0e83e299599eff31fe5662fc7ee', 96),
     ('Wayback Machine Homepage', 'http://web.archive.org/web/20260907094106/https://jobalertgroups.com/', 96),
     ('Wayback Machine Jobs Catalog', 'http://web.archive.org/web/20260907094208/https://jobalertgroups.com/jobs/', 96),
     ('Wayback Machine Telegram Hub', 'http://web.archive.org/web/20260907094200/https://jobalertgroups.com/platform/telegram/', 96)

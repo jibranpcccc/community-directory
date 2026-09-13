@@ -57,6 +57,7 @@ export const siteConfig = {
       { label: "Remote Jobs", href: "/job-type/remote-jobs/" },
       { label: "Government Jobs", href: "/job-type/government-jobs/" },
       { label: "Full-Time Jobs", href: "/job-type/full-time-jobs/" },
+      { label: "Visa Sponsorship Jobs", href: "/job-type/visa-sponsorship-jobs/" },
       { label: "Tech & Software Jobs", href: "/category/tech-jobs/" },
       { label: "Healthcare & Nursing", href: "/category/healthcare-jobs/" },
       { label: "Internships & Graduate", href: "/category/internships-graduate/" },
