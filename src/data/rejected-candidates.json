@@ -2182,10 +2182,10 @@
   {
     "url": "https://discord.gg/JmmXnuX7aZ",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-26T00:30:47.029Z",
-    "lastSeenAt": "2026-09-09T10:17:40.700Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-09-13T01:32:58.526Z",
+    "timesSeen": 4,
     "title": "Official /r/Brisbane Discord"
   },
   {
@@ -5855,8 +5855,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-09T10:17:40.700Z",
-    "lastSeenAt": "2026-09-09T10:17:40.700Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-13T01:32:58.526Z",
+    "timesSeen": 2
   },
   {
     "url": "https://chat.whatsapp.com/CJZZP2VxMpQHYqsz8dy8Nz",
@@ -6530,6 +6530,72 @@
     "reason": "dead-link",
     "date": "2026-09-12T09:45:27.340Z",
     "lastSeenAt": "2026-09-12T09:45:27.340Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/nYmWtzs",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-13T01:32:58.526Z",
+    "lastSeenAt": "2026-09-13T01:32:58.526Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/sbb6mAydXE",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-13T01:32:58.526Z",
+    "lastSeenAt": "2026-09-13T01:32:58.526Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/ZCXtaYXxED",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-13T01:32:58.526Z",
+    "lastSeenAt": "2026-09-13T01:32:58.526Z",
+    "timesSeen": 1,
+    "title": "Virtual Bookkeeping Learning Hub"
+  },
+  {
+    "url": "https://discord.gg/kvJEwfvyrW",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-13T01:32:58.526Z",
+    "lastSeenAt": "2026-09-13T01:32:58.526Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/2qYRNKubRz",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-13T01:32:58.526Z",
+    "lastSeenAt": "2026-09-13T01:32:58.526Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/bDnJrbCEuS",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-13T01:32:58.526Z",
+    "lastSeenAt": "2026-09-13T01:32:58.526Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/sJA4ez2jcK",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-13T01:32:58.526Z",
+    "lastSeenAt": "2026-09-13T01:32:58.526Z",
+    "timesSeen": 1,
+    "title": "TriCitiesWA"
+  },
+  {
+    "url": "https://discord.gg/cFAZkAfAq",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-09-13T01:32:58.526Z",
+    "lastSeenAt": "2026-09-13T01:32:58.526Z",
     "timesSeen": 1
   }
 ]
