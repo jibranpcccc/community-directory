@@ -2773,8 +2773,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-09-14T17:08:10.578Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-09-14T21:08:12.647Z",
+    "timesSeen": 7,
     "title": "EBYwjbKNBOoALGZfjcUaO5"
   },
   {
@@ -6742,10 +6742,10 @@
   {
     "url": "https://chat.whatsapp.com/GUV3ELW5pf4Cdx5iNPdp5I",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-14T01:51:21.201Z",
-    "lastSeenAt": "2026-09-14T01:51:21.201Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-14T21:08:12.647Z",
+    "timesSeen": 2,
     "title": "YOUNG FINANCIALS COMMUNITY"
   },
   {
