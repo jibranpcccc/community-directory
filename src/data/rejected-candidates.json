@@ -6622,8 +6622,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-09-13T11:12:58.493Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-14T01:51:21.201Z",
+    "timesSeen": 2,
     "title": "CA Foundation"
   },
   {
@@ -6631,8 +6631,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-09-13T11:12:58.493Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-14T01:51:21.201Z",
+    "timesSeen": 2,
     "title": "CA Inter"
   },
   {
@@ -6640,8 +6640,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-09-13T11:12:58.493Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-14T01:51:21.201Z",
+    "timesSeen": 2,
     "title": "CA Final"
   },
   {
@@ -6649,8 +6649,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-09-13T11:12:58.493Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-14T01:51:21.201Z",
+    "timesSeen": 2,
     "title": "B.Com"
   },
   {
@@ -6667,8 +6667,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-09-13T11:12:58.493Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-14T01:51:21.201Z",
+    "timesSeen": 2,
     "title": "CA"
   },
   {
@@ -6729,5 +6729,48 @@
     "date": "2026-09-13T19:57:26.656Z",
     "lastSeenAt": "2026-09-13T19:57:26.656Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/HI3mQkaKblNDqB7GEF2nPM",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-14T01:51:21.201Z",
+    "lastSeenAt": "2026-09-14T01:51:21.201Z",
+    "timesSeen": 1,
+    "title": "HI3mQkaKblNDqB7GEF2nPM"
+  },
+  {
+    "url": "https://chat.whatsapp.com/GUV3ELW5pf4Cdx5iNPdp5I",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-14T01:51:21.201Z",
+    "lastSeenAt": "2026-09-14T01:51:21.201Z",
+    "timesSeen": 1,
+    "title": "YOUNG FINANCIALS COMMUNITY"
+  },
+  {
+    "url": "https://chat.whatsapp.com/CNGpz4GsOYg5K5CwoQI0sF",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-14T01:51:21.201Z",
+    "lastSeenAt": "2026-09-14T01:51:21.201Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/GpNuUhYxWgBEoeOg0BB5YD",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-14T01:51:21.201Z",
+    "lastSeenAt": "2026-09-14T01:51:21.201Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/CGhy7XkJCZjI5lv1lLdfLz",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-14T01:51:21.201Z",
+    "lastSeenAt": "2026-09-14T01:51:21.201Z",
+    "timesSeen": 1,
+    "title": "CGhy7XkJCZjI5lv1lLdfLz"
   }
 ]
