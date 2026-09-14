@@ -2773,8 +2773,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-09-08T10:13:10.042Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-09-14T17:08:10.578Z",
+    "timesSeen": 6,
     "title": "EBYwjbKNBOoALGZfjcUaO5"
   },
   {
@@ -6620,55 +6620,55 @@
   {
     "url": "https://chat.whatsapp.com/LHU9Kh7QdGa4rbSfCdM7ZK",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-09-14T01:51:21.201Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-09-14T17:08:10.578Z",
+    "timesSeen": 3,
     "title": "CA Foundation"
   },
   {
     "url": "https://chat.whatsapp.com/BUeHOU9jofOCvjiJjf2Cbu",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-09-14T01:51:21.201Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-09-14T17:08:10.578Z",
+    "timesSeen": 3,
     "title": "CA Inter"
   },
   {
     "url": "https://chat.whatsapp.com/EpWk901g5eZEzmxoGgjJiP",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-09-14T01:51:21.201Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-09-14T17:08:10.578Z",
+    "timesSeen": 3,
     "title": "CA Final"
   },
   {
     "url": "https://chat.whatsapp.com/LN2O8vDSl8U5gBnxV7fBHO",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-09-14T01:51:21.201Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-09-14T17:08:10.578Z",
+    "timesSeen": 3,
     "title": "B.Com"
   },
   {
     "url": "https://chat.whatsapp.com/GgBEmQaedGWLjr9YSDSHMu",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-09-13T11:12:58.493Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-14T17:08:10.578Z",
+    "timesSeen": 2,
     "title": "CS"
   },
   {
     "url": "https://chat.whatsapp.com/ECsKqHV3Ysx584mp5Ea6Ih",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-09-14T01:51:21.201Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-09-14T17:08:10.578Z",
+    "timesSeen": 3,
     "title": "CA"
   },
   {
@@ -6926,5 +6926,23 @@
     "date": "2026-09-14T11:06:50.846Z",
     "lastSeenAt": "2026-09-14T11:06:50.846Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/GIDTLE1GzKDGF9fkEPZ7Wt",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-14T17:08:10.578Z",
+    "lastSeenAt": "2026-09-14T17:08:10.578Z",
+    "timesSeen": 1,
+    "title": "Sales Jobs by Miss Giks"
+  },
+  {
+    "url": "https://chat.whatsapp.com/JcRfYNvNMQt5ZrlnXcRHJo",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-14T17:08:10.578Z",
+    "lastSeenAt": "2026-09-14T17:08:10.578Z",
+    "timesSeen": 1,
+    "title": "JcRfYNvNMQt5ZrlnXcRHJo"
   }
 ]
