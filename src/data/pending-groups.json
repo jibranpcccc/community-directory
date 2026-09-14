@@ -1,209 +1,5 @@
 [
   {
-    "id": "codeshaala-internships-and-job-updates-for-everyone-offcampus-phodenge-telegram",
-    "slug": "codeshaala-internships-and-job-updates-for-everyone-offcampus-phodenge-telegram",
-    "title": "Codeshaala: Internships and Job updates for Everyone offcampus phodenge😊",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "internships-graduate",
-    "subcategory": "Worldwide Jobs",
-    "tags": [
-      "telegram",
-      "jobs",
-      "internshipsgraduate"
-    ],
-    "inviteUrl": "https://t.me/Internshipupdatesfreveryone",
-    "description": "🔍 What We offer: 🚀 Daily updates on job openings across various industries and locations. 💼 Career tips, resume guidance, and interview strategies to help you succeed. 🤝 Networking opportunities to connect with professionals in your field📢 Share",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "internships-graduate"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 4108,
-    "memberCountSource": "https://t.me/Internshipupdatesfreveryone",
-    "memberCountCheckedAt": "2026-09-07T11:01:56.391Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-09-07T11:01:56.391Z",
-    "sourceUrls": [
-      "https://t.me/Internshipupdatesfreveryone"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-09-07T11:01:56.391Z",
-    "lastCheckedAt": "2026-09-07T11:01:56.391Z",
-    "updatedAt": "2026-09-07T11:01:56.391Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-09-07T11:01:56.391Z",
-    "lastSeenAt": "2026-09-07T11:01:56.391Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1788778916391_6qgu4",
-      "run_1788778916944_zsbh7"
-    ],
-    "querySource": "site:t.me Worldwide tech jobs OR Worldwide job alerts",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-119h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "hireupgrad-job-updates-telegram",
-    "slug": "hireupgrad-job-updates-telegram",
-    "title": "HireUpGrad | Job Updates",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "internships-graduate",
-    "subcategory": "Worldwide Jobs",
-    "tags": [
-      "telegram",
-      "jobs",
-      "internshipsgraduate"
-    ],
-    "inviteUrl": "https://t.me/hireupgrad",
-    "description": "🎓 Daily Off-Campus Jobs &amp; Internship Updates  💼 For 3rd, 4th years &amp; fresh grads  🚀 From Campus → Career  📸 Follow us on Instagram -&gt; https://www.instagram.com/hireupgrad",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "internships-graduate"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 2255,
-    "memberCountSource": "https://t.me/hireupgrad",
-    "memberCountCheckedAt": "2026-09-07T11:01:56.391Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-09-07T11:01:56.391Z",
-    "sourceUrls": [
-      "https://t.me/hireupgrad"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-09-07T11:01:56.391Z",
-    "lastCheckedAt": "2026-09-07T11:01:56.391Z",
-    "updatedAt": "2026-09-07T11:01:56.391Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-09-07T11:01:56.391Z",
-    "lastSeenAt": "2026-09-07T11:01:56.391Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1788778916391_6qgu4",
-      "run_1788778917894_u0mb6"
-    ],
-    "querySource": "site:t.me Worldwide tech jobs OR Worldwide job alerts",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-119h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "krishan-kumar-jobs-amp-internships-updates-telegram",
-    "slug": "krishan-kumar-jobs-amp-internships-updates-telegram",
-    "title": "Krishan Kumar - Jobs &amp; Internships Updates",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "internships-graduate",
-    "subcategory": "Worldwide Jobs",
-    "tags": [
-      "telegram",
-      "jobs",
-      "internshipsgraduate"
-    ],
-    "inviteUrl": "https://t.me/jobs_and_internships_updates",
-    "description": "Latest Interns and Jobs UpdateLatest Offcampus Jobs &amp; Internships opportunities for IT/CS-Field students are posted everyday Send your queries: https://www.linkedin.com/in/krishan-kumar08For Promotions Contact : jobsandinternshipsupdates[@]gmail.com",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "internships-graduate"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 198445,
-    "memberCountSource": "https://t.me/jobs_and_internships_updates",
-    "memberCountCheckedAt": "2026-09-07T11:01:56.391Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-09-07T11:01:56.391Z",
-    "sourceUrls": [
-      "https://t.me/jobs_and_internships_updates"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-09-07T11:01:56.391Z",
-    "lastCheckedAt": "2026-09-07T11:01:56.391Z",
-    "updatedAt": "2026-09-07T11:01:56.391Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-09-07T11:01:56.391Z",
-    "lastSeenAt": "2026-09-07T11:01:56.391Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1788778916391_6qgu4",
-      "run_1788778918355_lchi9"
-    ],
-    "querySource": "site:t.me Worldwide tech jobs OR Worldwide job alerts",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-119h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "cruise-jobs-and-visa-sponsered-job-telegram",
     "slug": "cruise-jobs-and-visa-sponsered-job-telegram",
     "title": "Cruise Jobs and Visa sponsered job",
@@ -267,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-96h",
+      "validation-stale-145h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -335,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-96h",
+      "validation-stale-145h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -403,7 +199,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-96h",
+      "validation-stale-145h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GB found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -471,7 +267,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-71h",
+      "validation-stale-121h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -539,7 +335,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-66h",
+      "validation-stale-116h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -607,7 +403,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-66h",
+      "validation-stale-116h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -675,7 +471,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-66h",
+      "validation-stale-116h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -743,6 +539,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-49h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -810,6 +607,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-49h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   }
