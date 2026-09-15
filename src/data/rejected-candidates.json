@@ -2586,8 +2586,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-27T16:58:43.400Z",
-    "lastSeenAt": "2026-08-27T16:58:43.400Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-15T15:47:58.008Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/YKXyH8zj",
@@ -7268,5 +7268,41 @@
     "date": "2026-09-15T10:37:59.190Z",
     "lastSeenAt": "2026-09-15T10:37:59.190Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/Relocats",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-15T15:47:58.008Z",
+    "lastSeenAt": "2026-09-15T15:47:58.008Z",
+    "timesSeen": 1,
+    "title": "IT Relocation (Inflow)"
+  },
+  {
+    "url": "https://t.me/JobPortalAbroad",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-15T15:47:58.008Z",
+    "lastSeenAt": "2026-09-15T15:47:58.008Z",
+    "timesSeen": 1,
+    "title": "Job Portal Abroad"
+  },
+  {
+    "url": "https://t.me/Remoteit",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-15T15:47:58.008Z",
+    "lastSeenAt": "2026-09-15T15:47:58.008Z",
+    "timesSeen": 1,
+    "title": "Remote IT (Inflow)"
+  },
+  {
+    "url": "https://t.me/freelancersit",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-15T15:47:58.008Z",
+    "lastSeenAt": "2026-09-15T15:47:58.008Z",
+    "timesSeen": 1,
+    "title": "IT Freelancer &amp; Outsourcing"
   }
 ]
