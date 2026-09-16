@@ -7512,5 +7512,49 @@
     "date": "2026-09-16T10:34:41.158Z",
     "lastSeenAt": "2026-09-16T10:34:41.158Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/s7ay4AEwUQ",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-16T15:39:00.289Z",
+    "lastSeenAt": "2026-09-16T15:39:00.289Z",
+    "timesSeen": 1,
+    "title": "Amsterdam"
+  },
+  {
+    "url": "https://discord.gg/5GR5AFMNpf",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-16T15:39:00.289Z",
+    "lastSeenAt": "2026-09-16T15:39:00.289Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/eclattraining",
+    "platform": "telegram",
+    "title": "FREE Job Alerts INDIA and USA",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-16T15:39:00.603Z",
+    "lastSeenAt": "2026-09-16T15:39:00.603Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/dailyitjobs",
+    "platform": "telegram",
+    "title": "Free IT job Alerts for job seekers",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-16T15:39:00.603Z",
+    "lastSeenAt": "2026-09-16T15:39:00.603Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/gulfjobexpress",
+    "platform": "telegram",
+    "title": "Gulf Job Express",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-16T15:39:00.603Z",
+    "lastSeenAt": "2026-09-16T15:39:00.603Z",
+    "timesSeen": 1
   }
 ]
