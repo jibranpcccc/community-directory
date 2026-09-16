@@ -4669,10 +4669,10 @@
   {
     "url": "https://discord.gg/mKqbaEUW",
     "platform": "discord",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-04T10:11:44.954Z",
-    "lastSeenAt": "2026-09-12T09:45:27.340Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-09-16T01:51:37.462Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/aAJdWvHAYK",
@@ -6405,8 +6405,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-12T09:45:27.340Z",
-    "lastSeenAt": "2026-09-12T09:45:27.340Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-16T01:51:37.462Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/y6rk7zFB5c",
@@ -7304,5 +7304,21 @@
     "lastSeenAt": "2026-09-15T15:47:58.008Z",
     "timesSeen": 1,
     "title": "IT Freelancer &amp; Outsourcing"
+  },
+  {
+    "url": "https://discord.gg/X3Bm98rk",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-16T01:51:37.462Z",
+    "lastSeenAt": "2026-09-16T01:51:37.462Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/yxKyHjQjc9",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-16T01:51:37.462Z",
+    "lastSeenAt": "2026-09-16T01:51:37.462Z",
+    "timesSeen": 1
   }
 ]
