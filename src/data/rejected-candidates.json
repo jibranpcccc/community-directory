@@ -4671,8 +4671,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-04T10:11:44.954Z",
-    "lastSeenAt": "2026-09-16T01:51:37.462Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-09-16T20:31:42.858Z",
+    "timesSeen": 4
   },
   {
     "url": "https://discord.gg/aAJdWvHAYK",
@@ -6403,10 +6403,11 @@
   {
     "url": "https://discord.gg/p6RR5ztAUe",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-12T09:45:27.340Z",
-    "lastSeenAt": "2026-09-16T01:51:37.462Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-09-16T20:31:42.858Z",
+    "timesSeen": 3,
+    "title": "SWE Hacks 2021"
   },
   {
     "url": "https://discord.gg/y6rk7zFB5c",
@@ -7318,8 +7319,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-16T01:51:37.462Z",
-    "lastSeenAt": "2026-09-16T01:51:37.462Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-16T20:31:42.858Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/pGSZzn2",
@@ -7518,8 +7519,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-16T15:39:00.289Z",
-    "lastSeenAt": "2026-09-16T15:39:00.289Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-16T20:31:42.858Z",
+    "timesSeen": 2,
     "title": "Amsterdam"
   },
   {
