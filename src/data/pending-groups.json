@@ -63,7 +63,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-136h",
+      "validation-stale-150h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -131,7 +131,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-136h",
+      "validation-stale-150h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-63h",
+      "validation-stale-77h",
       "unconfirmed-country-evidence: No factual geographic evidence matching AE found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -245,12 +245,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-09-18T10:14:06.131Z",
     "lastCheckedAt": "2026-09-18T10:14:06.131Z",
     "updatedAt": "2026-09-18T10:14:06.131Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-09-18T10:14:06.131Z",
@@ -264,7 +264,11 @@
       "run_1789726450804_q104c"
     ],
     "querySource": "site:t.me junior developer careers Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   },
   {
     "id": "off-campus-jobs-2024-kn-academy-latest-hiring-telegram",
@@ -308,12 +312,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-09-18T10:14:06.131Z",
     "lastCheckedAt": "2026-09-18T10:14:06.131Z",
     "updatedAt": "2026-09-18T10:14:06.131Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-09-18T10:14:06.131Z",
@@ -327,6 +331,10 @@
       "run_1789726451325_mvt33"
     ],
     "querySource": "site:t.me junior developer careers Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   }
 ]
