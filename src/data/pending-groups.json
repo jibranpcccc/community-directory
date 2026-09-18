@@ -202,5 +202,131 @@
       "validation-stale-63h",
       "unconfirmed-country-evidence: No factual geographic evidence matching AE found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
+  },
+  {
+    "id": "go-careers-telegram",
+    "slug": "go-careers-telegram",
+    "title": "Go Careers 🚀",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "internships-graduate",
+    "subcategory": "Graduate & Internships",
+    "tags": [
+      "telegram",
+      "jobs",
+      "internshipsgraduate"
+    ],
+    "inviteUrl": "https://t.me/gocareers",
+    "description": "Get latest intern and job updates&#33;For collaborations/promotions reach out at gocareers.official@gmail.com",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "internships-graduate"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 79403,
+    "memberCountSource": "https://t.me/gocareers",
+    "memberCountCheckedAt": "2026-09-18T10:14:06.131Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-18T10:14:06.131Z",
+    "sourceUrls": [
+      "https://t.me/gocareers"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-18T10:14:06.131Z",
+    "lastCheckedAt": "2026-09-18T10:14:06.131Z",
+    "updatedAt": "2026-09-18T10:14:06.131Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-18T10:14:06.131Z",
+    "lastSeenAt": "2026-09-18T10:14:06.131Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1789726446131_l3mdh",
+      "run_1789726450804_q104c"
+    ],
+    "querySource": "site:t.me junior developer careers Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "off-campus-jobs-2024-kn-academy-latest-hiring-telegram",
+    "slug": "off-campus-jobs-2024-kn-academy-latest-hiring-telegram",
+    "title": "OFF CAMPUS JOBS 2024 KN ACADEMY | LATEST HIRING",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "internships-graduate",
+    "subcategory": "Graduate & Internships",
+    "tags": [
+      "telegram",
+      "jobs",
+      "internshipsgraduate"
+    ],
+    "inviteUrl": "https://t.me/internshipsupdate",
+    "description": "This  group is for daily jobs updates And in this group you will get proper guidance regarding job and internship.https://t.me/internshipsupdateWhatsapp group : https://chat.whatsapp.com/ENHvWeL6yev3k3l9JVbvAA",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "internships-graduate"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 29663,
+    "memberCountSource": "https://t.me/internshipsupdate",
+    "memberCountCheckedAt": "2026-09-18T10:14:06.131Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-18T10:14:06.131Z",
+    "sourceUrls": [
+      "https://t.me/internshipsupdate"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-18T10:14:06.131Z",
+    "lastCheckedAt": "2026-09-18T10:14:06.131Z",
+    "updatedAt": "2026-09-18T10:14:06.131Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-18T10:14:06.131Z",
+    "lastSeenAt": "2026-09-18T10:14:06.131Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1789726446131_l3mdh",
+      "run_1789726451325_mvt33"
+    ],
+    "querySource": "site:t.me junior developer careers Global Telegram",
+    "sourceHostname": "t.me"
   }
 ]
