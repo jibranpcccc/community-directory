@@ -4145,10 +4145,10 @@
   {
     "url": "https://discord.gg/NvTJPqBYXd",
     "platform": "discord",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-01T15:39:11.690Z",
-    "lastSeenAt": "2026-09-10T10:10:45.273Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-09-18T20:04:49.139Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/XPmzmC3Bur",
@@ -4756,8 +4756,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-04T10:11:44.954Z",
-    "lastSeenAt": "2026-09-17T10:36:20.146Z",
-    "timesSeen": 9
+    "lastSeenAt": "2026-09-18T20:04:49.139Z",
+    "timesSeen": 10
   },
   {
     "url": "https://discord.gg/zchqUtzsu",
@@ -5513,8 +5513,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-07T11:01:56.391Z",
-    "lastSeenAt": "2026-09-18T10:14:06.131Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-09-18T20:04:49.139Z",
+    "timesSeen": 4,
     "title": "Crossing Lears"
   },
   {
@@ -6033,8 +6033,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-10T10:10:45.273Z",
-    "lastSeenAt": "2026-09-18T15:17:14.179Z",
-    "timesSeen": 9,
+    "lastSeenAt": "2026-09-18T20:04:49.139Z",
+    "timesSeen": 10,
     "title": "Gulf Jobs"
   },
   {
@@ -7889,5 +7889,13 @@
     "lastSeenAt": "2026-09-18T10:14:06.131Z",
     "timesSeen": 1,
     "title": "The Programmer's Hangout"
+  },
+  {
+    "url": "https://t.me/jobsinuae",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-09-18T20:04:49.139Z",
+    "lastSeenAt": "2026-09-18T20:04:49.139Z",
+    "timesSeen": 1
   }
 ]
