@@ -199,8 +199,8 @@
     "platform": "telegram",
     "reason": "unknown-status",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 18,
-    "lastSeenAt": "2026-09-16T10:34:32.340Z"
+    "timesSeen": 19,
+    "lastSeenAt": "2026-09-19T10:02:00.611Z"
   },
   {
     "url": "https://discord.gg/dFp4rR3T",
@@ -1625,8 +1625,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-09-18T10:14:06.131Z",
-    "timesSeen": 10
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 11
   },
   {
     "url": "https://discord.gg/awHZtSf89q",
@@ -2534,17 +2534,17 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-27T16:58:43.400Z",
-    "lastSeenAt": "2026-09-18T10:14:06.131Z",
-    "timesSeen": 7,
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 8,
     "title": "ICT Opportunities 6 &#x1f393;"
   },
   {
     "url": "https://chat.whatsapp.com/Fg8ZJJowVzX5La7Cb85An1",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-27T16:58:43.400Z",
-    "lastSeenAt": "2026-09-08T10:13:10.042Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 5,
     "title": "Law / LLB Opportunities &#x1f393;"
   },
   {
@@ -2552,17 +2552,17 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-27T16:58:43.400Z",
-    "lastSeenAt": "2026-09-08T10:13:10.042Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 5,
     "title": "Social Work Opportunities with STUFNews.com 1 &#x1f393;"
   },
   {
     "url": "https://chat.whatsapp.com/JCD7w0prnNsEdgGGhQIfJy",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-27T16:58:43.400Z",
-    "lastSeenAt": "2026-09-08T10:13:10.042Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 5,
     "title": "JCD7w0prnNsEdgGGhQIfJy"
   },
   {
@@ -3216,8 +3216,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-29T15:52:48.447Z",
-    "lastSeenAt": "2026-09-03T10:16:47.914Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 3,
     "title": "IT POSITIONS"
   },
   {
@@ -3225,8 +3225,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-29T15:52:48.447Z",
-    "lastSeenAt": "2026-09-03T10:16:47.914Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 3,
     "title": "Network Engineer V5"
   },
   {
@@ -4129,8 +4129,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-01T10:40:51.833Z",
-    "lastSeenAt": "2026-09-01T10:40:51.833Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 2,
     "title": "PRIDEGO"
   },
   {
@@ -4488,19 +4488,19 @@
   {
     "url": "https://chat.whatsapp.com/DXO1mdvtC3t8kJKkWReaFf",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-03T10:16:47.914Z",
-    "lastSeenAt": "2026-09-08T10:13:10.042Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 4,
     "title": "Marketing, PR, Comms 1 &#x1f393;"
   },
   {
     "url": "https://chat.whatsapp.com/H8FrBxPlj3nKbkHwwL7imk",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "unconfirmed-target-market",
     "date": "2026-09-03T10:16:47.914Z",
-    "lastSeenAt": "2026-09-08T10:13:10.042Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 4,
     "title": "SHEQ Interns, Jobs, B..1&#x1f393;"
   },
   {
@@ -4628,10 +4628,10 @@
     "url": "https://t.me/job4government",
     "platform": "telegram",
     "title": "Sarkari Job Updates | Government Job with Job4Government - @job4freshers.co.in",
-    "reason": "insufficient-publication-confidence",
+    "reason": "unconfirmed-target-market",
     "date": "2026-09-03T20:13:22.268Z",
-    "lastSeenAt": "2026-09-03T20:13:22.268Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/Government_Jobs_Sarkari_Naukri",
@@ -5790,8 +5790,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-08T20:24:29.995Z",
-    "lastSeenAt": "2026-09-08T20:24:29.995Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 2,
     "title": "DWFOCpUHAEF0V79hJCImzV"
   },
   {
@@ -7906,5 +7906,125 @@
     "lastSeenAt": "2026-09-19T01:47:21.432Z",
     "timesSeen": 1,
     "title": "JobPH"
+  },
+  {
+    "url": "https://t.me/+kPJoYz-uy4E1N2Rl",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1,
+    "title": "Servisource New"
+  },
+  {
+    "url": "https://chat.whatsapp.com/Clbs3lCLzkAIFj8cCXGzxD",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1,
+    "title": "Crackias.com ,grp 22"
+  },
+  {
+    "url": "https://discord.gg/Rn23HRf4Z7",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/CgLN3xf2coJ45EI95VSTaK",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1,
+    "title": "CgLN3xf2coJ45EI95VSTaK"
+  },
+  {
+    "url": "https://chat.whatsapp.com/GXUXKMhryc5GHGbMEaNu6i",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1,
+    "title": "GXUXKMhryc5GHGbMEaNu6i"
+  },
+  {
+    "url": "https://discord.gg/k3yrQs3a",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/opportunitydeskofficial",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/opportunities_platform121",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/MzRyAzqpsC",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/6wqbvHj",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1,
+    "title": "International Students"
+  },
+  {
+    "url": "https://discord.gg/cK9fGJTJSu",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1,
+    "title": "Intl to USA"
+  },
+  {
+    "url": "https://discord.gg/usaworkvisajobs",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/HaBZEGRfsD7368vFjg6pK0",
+    "platform": "whatsapp",
+    "title": "OJAINT.COM | JOBS + GEMS&#x1f48e;",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-19T10:02:10.892Z",
+    "lastSeenAt": "2026-09-19T10:02:10.892Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/JzoA0HU1wX192IztbXskLk",
+    "platform": "whatsapp",
+    "title": "UTC Healthcare Jobs",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-19T10:02:10.892Z",
+    "lastSeenAt": "2026-09-19T10:02:10.892Z",
+    "timesSeen": 1
   }
 ]

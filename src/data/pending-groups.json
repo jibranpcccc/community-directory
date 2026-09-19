@@ -1,141 +1,5 @@
 [
   {
-    "id": "ojaintcom-jobs-gemsx1f48e-whatsapp",
-    "slug": "ojaintcom-jobs-gemsx1f48e-whatsapp",
-    "title": "OJAINT.COM | JOBS + GEMS&#x1f48e;",
-    "platform": "whatsapp",
-    "vertical": "jobs",
-    "category": "healthcare-jobs",
-    "subcategory": "Remote Jobs",
-    "tags": [
-      "whatsapp",
-      "jobs",
-      "healthcarejobs"
-    ],
-    "inviteUrl": "https://chat.whatsapp.com/HaBZEGRfsD7368vFjg6pK0",
-    "description": null,
-    "descriptionSource": null,
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "healthcare-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": null,
-    "memberCountSource": null,
-    "memberCountCheckedAt": null,
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-09-12T09:45:27.340Z",
-    "sourceUrls": [
-      "https://chat.whatsapp.com/HaBZEGRfsD7368vFjg6pK0"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-09-12T09:45:27.340Z",
-    "lastCheckedAt": "2026-09-12T09:45:27.340Z",
-    "updatedAt": "2026-09-12T09:45:27.340Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-09-12T09:45:27.340Z",
-    "lastSeenAt": "2026-09-12T09:45:27.340Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1789206327340_czylz",
-      "run_1789206331192_abqjg"
-    ],
-    "querySource": "site:chat.whatsapp.com Remote job alerts",
-    "sourceHostname": "chat.whatsapp.com",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-150h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "utc-healthcare-jobs-whatsapp",
-    "slug": "utc-healthcare-jobs-whatsapp",
-    "title": "UTC Healthcare Jobs",
-    "platform": "whatsapp",
-    "vertical": "jobs",
-    "category": "healthcare-jobs",
-    "subcategory": "Remote Jobs",
-    "tags": [
-      "whatsapp",
-      "jobs",
-      "healthcarejobs"
-    ],
-    "inviteUrl": "https://chat.whatsapp.com/JzoA0HU1wX192IztbXskLk",
-    "description": null,
-    "descriptionSource": null,
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "healthcare-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": null,
-    "memberCountSource": null,
-    "memberCountCheckedAt": null,
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-09-12T09:45:27.340Z",
-    "sourceUrls": [
-      "https://chat.whatsapp.com/JzoA0HU1wX192IztbXskLk"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-09-12T09:45:27.340Z",
-    "lastCheckedAt": "2026-09-12T09:45:27.340Z",
-    "updatedAt": "2026-09-12T09:45:27.340Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-09-12T09:45:27.340Z",
-    "lastSeenAt": "2026-09-12T09:45:27.340Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1789206327340_czylz",
-      "run_1789206331710_6tdwx"
-    ],
-    "querySource": "site:chat.whatsapp.com Remote job alerts",
-    "sourceHostname": "chat.whatsapp.com",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-150h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "world-jobs-telegram",
     "slug": "world-jobs-telegram",
     "title": "World Jobs",
@@ -199,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-77h",
+      "validation-stale-95h",
       "unconfirmed-country-evidence: No factual geographic evidence matching AE found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -331,6 +195,207 @@
       "run_1789726451325_mvt33"
     ],
     "querySource": "site:t.me junior developer careers Global Telegram",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "workiley-community-telegram",
+    "slug": "workiley-community-telegram",
+    "title": "Workiley Community",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "visa-sponsorship-jobs",
+    "subcategory": "Visa Sponsorship",
+    "tags": [
+      "telegram",
+      "jobs",
+      "visasponsorshipjobs"
+    ],
+    "inviteUrl": "https://t.me/workileygroup",
+    "description": "For career discussions, job guidance &amp; application help.This group is not for direct vacancy postings. Instead, it focuses on:🔹 Discussion about job vacancies and hiring trends🔹 Guidance on application processes and requirements.📌 Grow together.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "visa-sponsorship-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 82,
+    "memberCountSource": "https://t.me/workileygroup",
+    "memberCountCheckedAt": "2026-09-19T10:02:00.611Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-19T10:02:00.611Z",
+    "sourceUrls": [
+      "https://t.me/workileygroup"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-19T10:02:00.611Z",
+    "lastCheckedAt": "2026-09-19T10:02:00.611Z",
+    "updatedAt": "2026-09-19T10:02:00.611Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1789812120611_sflm1",
+      "run_1789812126894_6yr11"
+    ],
+    "querySource": "site:t.me work visa hiring Worldwide & International community group",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "jega-outsourcing-network-ltd-telegram",
+    "slug": "jega-outsourcing-network-ltd-telegram",
+    "title": "Jega Outsourcing Network Ltd",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "visa-sponsorship-jobs",
+    "subcategory": "Visa Sponsorship",
+    "tags": [
+      "telegram",
+      "jobs",
+      "visasponsorshipjobs"
+    ],
+    "inviteUrl": "https://t.me/+4mTD6jaM2280NGFk",
+    "description": "Our job is to find a competent and well-qualified candidate who can fit into any reputable organization.Office Address ShopRite Surulere mall",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "visa-sponsorship-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 1625,
+    "memberCountSource": "https://t.me/+4mTD6jaM2280NGFk",
+    "memberCountCheckedAt": "2026-09-19T10:02:00.611Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-19T10:02:00.611Z",
+    "sourceUrls": [
+      "https://t.me/+4mTD6jaM2280NGFk"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-19T10:02:00.611Z",
+    "lastCheckedAt": "2026-09-19T10:02:00.611Z",
+    "updatedAt": "2026-09-19T10:02:00.611Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1789812120611_sflm1",
+      "run_1789812127357_tatum"
+    ],
+    "querySource": "site:t.me work visa hiring Worldwide & International community group",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "jobless-vs-jobholder-jvsj-telegram",
+    "slug": "jobless-vs-jobholder-jvsj-telegram",
+    "title": "Jobless Vs Jobholder - JvsJ",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "visa-sponsorship-jobs",
+    "subcategory": "Visa Sponsorship",
+    "tags": [
+      "telegram",
+      "jobs",
+      "visasponsorshipjobs"
+    ],
+    "inviteUrl": "https://t.me/joblessvsjobholder",
+    "description": "Job Openings for freshers and experienced",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "visa-sponsorship-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 13294,
+    "memberCountSource": "https://t.me/joblessvsjobholder",
+    "memberCountCheckedAt": "2026-09-19T10:02:00.611Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-19T10:02:00.611Z",
+    "sourceUrls": [
+      "https://t.me/joblessvsjobholder"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-19T10:02:00.611Z",
+    "lastCheckedAt": "2026-09-19T10:02:00.611Z",
+    "updatedAt": "2026-09-19T10:02:00.611Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-19T10:02:00.611Z",
+    "lastSeenAt": "2026-09-19T10:02:00.611Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1789812120611_sflm1",
+      "run_1789812127803_utgcd"
+    ],
+    "querySource": "site:t.me work visa hiring Worldwide & International community group",
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
