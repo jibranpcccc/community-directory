@@ -8026,5 +8026,14 @@
     "date": "2026-09-19T10:02:10.892Z",
     "lastSeenAt": "2026-09-19T10:02:10.892Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/w5MCUdhhbu",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-19T19:40:23.350Z",
+    "lastSeenAt": "2026-09-19T19:40:23.350Z",
+    "timesSeen": 1,
+    "title": "Shaiya Revolt EP 5.4"
   }
 ]
