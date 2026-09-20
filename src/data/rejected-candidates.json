@@ -5745,10 +5745,10 @@
   {
     "url": "https://chat.whatsapp.com/DHNppu0p04q6nzlmZCwebr",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-08T10:13:10.042Z",
-    "lastSeenAt": "2026-09-20T10:26:46.954Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-09-20T19:54:07.786Z",
+    "timesSeen": 3,
     "title": "DHNppu0p04q6nzlmZCwebr"
   },
   {
@@ -7678,8 +7678,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-18T10:14:06.131Z",
-    "lastSeenAt": "2026-09-20T10:26:46.954Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-09-20T19:54:07.786Z",
+    "timesSeen": 3,
     "title": "BCzXRX9Rpzk0JixrPs8EAB"
   },
   {
