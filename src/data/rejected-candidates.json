@@ -2390,10 +2390,10 @@
   {
     "url": "https://chat.whatsapp.com/E6ausk1jN4K8L75HC0std9",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-26T12:27:42.936Z",
-    "lastSeenAt": "2026-08-26T12:27:42.936Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 2,
     "title": "NHS Interview Insight"
   },
   {
@@ -3972,8 +3972,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-31T18:20:29.403Z",
-    "lastSeenAt": "2026-09-04T10:11:44.954Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 4,
     "title": "GgXC5Up2hno7OvBuJFJv1b"
   },
   {
@@ -3981,8 +3981,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-31T18:20:29.403Z",
-    "lastSeenAt": "2026-09-01T10:40:51.833Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 3,
     "title": "Bpii0BJZWSMGk35a0UdIx5"
   },
   {
@@ -3990,8 +3990,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-31T18:20:29.403Z",
-    "lastSeenAt": "2026-09-09T10:17:40.700Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 6,
     "title": "ETuoLIwTL8Y7W5KKksTErm"
   },
   {
@@ -3999,8 +3999,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-31T18:20:29.403Z",
-    "lastSeenAt": "2026-09-11T15:20:16.584Z",
-    "timesSeen": 8,
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 9,
     "title": "Get in Nottingham, Nottinghamshire, Southwell, Barnby-in-the-Willows, Willoughby on the Wolds"
   },
   {
@@ -4008,8 +4008,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-31T18:20:29.403Z",
-    "lastSeenAt": "2026-09-11T10:16:27.114Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 7,
     "title": "Business networking, jobs, recruitment, employment, opportunities, buy &amp; sell, immigration papers"
   },
   {
@@ -4086,8 +4086,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-01T10:40:51.833Z",
-    "lastSeenAt": "2026-09-11T10:16:27.114Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 6,
     "title": "Lp9xasahYnx2mDRvUkOmxD"
   },
   {
@@ -4358,8 +4358,8 @@
     "title": "NHS Job Discussion Group",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-02T15:31:19.339Z",
-    "lastSeenAt": "2026-09-04T10:11:44.954Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 3
   },
   {
     "url": "https://chat.whatsapp.com/CWaJP1F46MkGw6BqcflcAX",
@@ -4367,8 +4367,8 @@
     "title": "NHS Job Discussion Group II",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-02T15:31:19.339Z",
-    "lastSeenAt": "2026-09-04T10:11:44.954Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 3
   },
   {
     "url": "https://chat.whatsapp.com/K0Cn82JjspPDmibTiuVsH9",
@@ -4376,8 +4376,8 @@
     "title": "NHS Job Discussion Group III",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-02T15:31:19.339Z",
-    "lastSeenAt": "2026-09-04T10:11:44.954Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 3
   },
   {
     "url": "https://t.me/talexajobsandcareer",
@@ -4672,8 +4672,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-04T10:11:44.954Z",
-    "lastSeenAt": "2026-09-16T20:31:42.858Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 5
   },
   {
     "url": "https://discord.gg/aAJdWvHAYK",
@@ -4704,8 +4704,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-04T10:11:44.954Z",
-    "lastSeenAt": "2026-09-11T20:09:18.406Z",
-    "timesSeen": 9,
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 10,
     "title": "EediwLSUucSA3cBm24OF47"
   },
   {
@@ -5745,10 +5745,11 @@
   {
     "url": "https://chat.whatsapp.com/DHNppu0p04q6nzlmZCwebr",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-08T10:13:10.042Z",
-    "lastSeenAt": "2026-09-08T10:13:10.042Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 2,
+    "title": "DHNppu0p04q6nzlmZCwebr"
   },
   {
     "url": "https://t.me/owafkafricaonline",
@@ -6137,8 +6138,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-11T01:36:26.094Z",
-    "lastSeenAt": "2026-09-11T20:09:18.406Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 5,
     "title": "HnFqqbXGZbeFFUpRq8AMfB"
   },
   {
@@ -6146,8 +6147,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-11T01:36:26.094Z",
-    "lastSeenAt": "2026-09-11T15:20:16.584Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 3,
     "title": "E3r6kDOMQqmGBV1opfuYgW"
   },
   {
@@ -6155,8 +6156,8 @@
     "platform": "whatsapp",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-11T01:36:26.094Z",
-    "lastSeenAt": "2026-09-11T15:20:16.584Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 4,
     "title": "BirthNursepathway&#x1f468;&#x200d;&#x2695;&#xfe0f;&#x1f469;&#x200d;&#x2695;&#xfe0f;&#x1f3e5;&#x1f1f3;&#x1f1fa;&#x1f3f4;&#xe0067;&#xe0062;&#xe0065;&#xe006e;&#xe0067;&#xe007f;&#x1f3f4;&#xe0067;&#xe0062;&#xe0073;&#xe0063;&#xe0074;&#xe007f;&#x1f3f4;&#xe0067;&#xe0062;&#xe0077;&#xe006c;&#xe0073;&#xe007f;&#x1f1ec;&#x1f1e7;"
   },
   {
@@ -6173,8 +6174,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-11T10:16:27.114Z",
-    "lastSeenAt": "2026-09-11T10:16:27.114Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 2,
     "title": "LneQAlrL25yDu534PmleI9"
   },
   {
@@ -6240,8 +6241,8 @@
     "platform": "whatsapp",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-11T10:16:27.114Z",
-    "lastSeenAt": "2026-09-11T10:16:27.114Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/atcomlb",
@@ -7677,8 +7678,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-18T10:14:06.131Z",
-    "lastSeenAt": "2026-09-18T10:14:06.131Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 2,
     "title": "BCzXRX9Rpzk0JixrPs8EAB"
   },
   {
@@ -8035,5 +8036,118 @@
     "lastSeenAt": "2026-09-19T19:40:23.350Z",
     "timesSeen": 1,
     "title": "Shaiya Revolt EP 5.4"
+  },
+  {
+    "url": "https://t.me/ChatNewYork1",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-20T10:26:46.954Z",
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 1,
+    "title": "Работа в США"
+  },
+  {
+    "url": "https://t.me/JobsNewYork",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-20T10:26:46.954Z",
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 1,
+    "title": "️ Работа в США"
+  },
+  {
+    "url": "https://discord.gg/VendfXqSTJ",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-20T10:26:46.954Z",
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 1,
+    "title": "Forge RP 18+ Serious RP Real World Economy"
+  },
+  {
+    "url": "https://discord.gg/gEhZSqycmu",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-20T10:26:46.954Z",
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 1,
+    "title": "The Red Left"
+  },
+  {
+    "url": "https://t.me/JobOpportunitiesPH",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-20T10:26:46.954Z",
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 1,
+    "title": "Job Opportunities PH (Updated and Verified jobs) 2025"
+  },
+  {
+    "url": "https://t.me/ExpertistNET",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-09-20T10:26:46.954Z",
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/ExpertistCommunity",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-09-20T10:26:46.954Z",
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/jKfeW9fE3q",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-20T10:26:46.954Z",
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 1,
+    "title": "The Ladies Room"
+  },
+  {
+    "url": "https://discord.gg/4uwMxW9YxS",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-20T10:26:46.954Z",
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/42VewdV2wu",
+    "platform": "discord",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-20T10:26:46.954Z",
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 1,
+    "title": "Health Career Connection 2021"
+  },
+  {
+    "url": "https://chat.whatsapp.com/G9F4owdgQaH3VzfupTTmbT",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-20T10:26:46.954Z",
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 1,
+    "title": "Pre-Employment Workup NHS"
+  },
+  {
+    "url": "https://chat.whatsapp.com/C43rCJesbobKqzH714OTCp",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-20T10:26:46.954Z",
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 1,
+    "title": "C43rCJesbobKqzH714OTCp"
+  },
+  {
+    "url": "https://chat.whatsapp.com/EA8AkhOQQ663yA85DVkZLp",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-20T10:26:46.954Z",
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 1
   }
 ]

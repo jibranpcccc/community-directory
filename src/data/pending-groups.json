@@ -401,5 +401,68 @@
     "autoPublishBlockedReasons": [
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
+  },
+  {
+    "id": "nhs-job-discussion-group-ix-whatsapp",
+    "slug": "nhs-job-discussion-group-ix-whatsapp",
+    "title": "NHS Job Discussion Group IX",
+    "platform": "whatsapp",
+    "vertical": "jobs",
+    "category": "healthcare-jobs",
+    "subcategory": "Nursing & Medical",
+    "tags": [
+      "whatsapp",
+      "jobs",
+      "healthcarejobs"
+    ],
+    "inviteUrl": "https://chat.whatsapp.com/IhoZPTnnUk30tKCmIgm7kj",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "GB",
+    "countryCode": "GB",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "healthcare-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-20T10:26:46.954Z",
+    "sourceUrls": [
+      "https://chat.whatsapp.com/IhoZPTnnUk30tKCmIgm7kj"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-20T10:26:46.954Z",
+    "lastCheckedAt": "2026-09-20T10:26:46.954Z",
+    "updatedAt": "2026-09-20T10:26:46.954Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-20T10:26:46.954Z",
+    "lastSeenAt": "2026-09-20T10:26:46.954Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1789900006954_bedj4",
+      "run_1789900010451_vomeo"
+    ],
+    "querySource": "site:chat.whatsapp.com hospital nursing jobs UK group",
+    "sourceHostname": "chat.whatsapp.com"
   }
 ]
