@@ -2801,16 +2801,16 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-09-14T11:06:42.041Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-09-22T15:49:28.666Z",
+    "timesSeen": 4
   },
   {
     "url": "https://discord.gg/hacksouth",
     "platform": "discord",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-09-09T10:17:40.700Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-09-22T15:49:28.666Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/zJp7dqns",
@@ -8486,6 +8486,15 @@
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-22T10:33:31.370Z",
     "lastSeenAt": "2026-09-22T10:33:31.370Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/Ultraworldjob",
+    "platform": "telegram",
+    "title": "World Jobs",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-22T15:49:28.679Z",
+    "lastSeenAt": "2026-09-22T15:49:28.679Z",
     "timesSeen": 1
   }
 ]
