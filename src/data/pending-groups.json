@@ -63,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-145h",
+      "validation-stale-168h",
       "unconfirmed-country-evidence: No factual geographic evidence matching AE found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -131,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-73h",
+      "validation-stale-96h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-73h",
+      "validation-stale-96h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -267,7 +267,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-49h",
+      "validation-stale-73h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -335,7 +335,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-49h",
+      "validation-stale-73h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -403,7 +403,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-49h",
+      "validation-stale-73h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -471,8 +471,75 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-25h",
+      "validation-stale-48h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GB found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "civil-engineering-tutor-telegram",
+    "slug": "civil-engineering-tutor-telegram",
+    "title": "Civil Engineering Tutor",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/CivilEnggTutor",
+    "description": "Civil Engineering Govt Job preparation:PDF study materials ✔️Short notes ✔️MCQs ✔️Mock Tests ✔️Regular Job update ✔",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 890,
+    "memberCountSource": "https://t.me/CivilEnggTutor",
+    "memberCountCheckedAt": "2026-09-22T10:33:31.370Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-22T10:33:31.370Z",
+    "sourceUrls": [
+      "https://t.me/CivilEnggTutor"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-22T10:33:31.370Z",
+    "lastCheckedAt": "2026-09-22T10:33:31.370Z",
+    "updatedAt": "2026-09-22T10:33:31.370Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-22T10:33:31.370Z",
+    "lastSeenAt": "2026-09-22T10:33:31.370Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1790073211370_4qgcj",
+      "run_1790073218930_pwgdz"
+    ],
+    "querySource": "site:t.me civil engineering careers Global community",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   }
 ]
