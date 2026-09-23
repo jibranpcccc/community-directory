@@ -63,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-102h",
+      "validation-stale-120h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -131,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-102h",
+      "validation-stale-120h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-78h",
+      "validation-stale-96h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -267,7 +267,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-78h",
+      "validation-stale-96h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -335,7 +335,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-78h",
+      "validation-stale-96h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -403,7 +403,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-53h",
+      "validation-stale-72h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GB found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -468,6 +468,274 @@
       "run_1790073218930_pwgdz"
     ],
     "querySource": "site:t.me civil engineering careers Global community",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "job-updates-amp-tutorials-telegram",
+    "slug": "job-updates-amp-tutorials-telegram",
+    "title": "Job Updates &amp; Tutorials",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering",
+    "tags": [
+      "telegram",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://t.me/riddhi_dutta",
+    "description": "Get all the job hiring updates , important resources and exclusive access to my interview preparation content on this channel.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 29749,
+    "memberCountSource": "https://t.me/riddhi_dutta",
+    "memberCountCheckedAt": "2026-09-23T10:27:25.436Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-23T10:27:25.436Z",
+    "sourceUrls": [
+      "https://t.me/riddhi_dutta"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-23T10:27:25.436Z",
+    "lastCheckedAt": "2026-09-23T10:27:25.436Z",
+    "updatedAt": "2026-09-23T10:27:25.436Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-23T10:27:25.436Z",
+    "lastSeenAt": "2026-09-23T10:27:25.436Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1790159245436_lbobs",
+      "run_1790159246498_5xnwf"
+    ],
+    "querySource": "site:chat.whatsapp.com data science machine learning jobs Global Telegram",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "data-science-jobsindia-telegram",
+    "slug": "data-science-jobsindia-telegram",
+    "title": "Data Science Jobs@India",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering",
+    "tags": [
+      "telegram",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://t.me/data_science_jobs",
+    "description": "Data Science Jobs",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 1767,
+    "memberCountSource": "https://t.me/data_science_jobs",
+    "memberCountCheckedAt": "2026-09-23T10:27:25.436Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-23T10:27:25.436Z",
+    "sourceUrls": [
+      "https://t.me/data_science_jobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-23T10:27:25.436Z",
+    "lastCheckedAt": "2026-09-23T10:27:25.436Z",
+    "updatedAt": "2026-09-23T10:27:25.436Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-23T10:27:25.436Z",
+    "lastSeenAt": "2026-09-23T10:27:25.436Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1790159245436_lbobs",
+      "run_1790159247589_mes8w"
+    ],
+    "querySource": "site:chat.whatsapp.com data science machine learning jobs Global Telegram",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "ai-jobs-telegram",
+    "slug": "ai-jobs-telegram",
+    "title": "AI Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering",
+    "tags": [
+      "telegram",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://t.me/ai_jobs",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 184,
+    "memberCountSource": "https://t.me/ai_jobs",
+    "memberCountCheckedAt": "2026-09-23T10:27:25.436Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-23T10:27:25.436Z",
+    "sourceUrls": [
+      "https://t.me/ai_jobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-23T10:27:25.436Z",
+    "lastCheckedAt": "2026-09-23T10:27:25.436Z",
+    "updatedAt": "2026-09-23T10:27:25.436Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-23T10:27:25.436Z",
+    "lastSeenAt": "2026-09-23T10:27:25.436Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1790159245436_lbobs",
+      "run_1790159248004_4l0ym"
+    ],
+    "querySource": "site:chat.whatsapp.com data science machine learning jobs Global Telegram",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "data-science-amp-ml-jobs-telegram",
+    "slug": "data-science-amp-ml-jobs-telegram",
+    "title": "Data Science 🛸 &amp; ML Jobs за рубежом",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering",
+    "tags": [
+      "telegram",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://t.me/opento_data",
+    "description": "✈️ Строго вне РФ, РБ&#33; Разместить вакансию: @opento_proРеклама: @opento_saleЛучшие вакансии в сфере Data Science, Data Engineer, аналитики, ML, CV, нейросетей и анализа данных. Позиции за рубежом и на удаленку. ЗП в &#036;, €. ✈️ Вне РФ, вне РБ.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 7369,
+    "memberCountSource": "https://t.me/opento_data",
+    "memberCountCheckedAt": "2026-09-23T10:27:25.436Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-23T10:27:25.436Z",
+    "sourceUrls": [
+      "https://t.me/opento_data"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-23T10:27:25.436Z",
+    "lastCheckedAt": "2026-09-23T10:27:25.436Z",
+    "updatedAt": "2026-09-23T10:27:25.436Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-23T10:27:25.436Z",
+    "lastSeenAt": "2026-09-23T10:27:25.436Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1790159245436_lbobs",
+      "run_1790159248433_arrw7"
+    ],
+    "querySource": "site:chat.whatsapp.com data science machine learning jobs Global Telegram",
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
