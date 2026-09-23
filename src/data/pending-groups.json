@@ -741,5 +741,68 @@
     "autoPublishBlockedReasons": [
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
+  },
+  {
+    "id": "staffing-training-jobs-events-techwyns-us-and-europe-whatsapp",
+    "slug": "staffing-training-jobs-events-techwyns-us-and-europe-whatsapp",
+    "title": "Staffing-training-jobs-events-TechWyns (US and Europe)",
+    "platform": "whatsapp",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering",
+    "tags": [
+      "whatsapp",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://chat.whatsapp.com/KywARnJ2I7P6OHSuxJebs3",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-23T20:46:41.683Z",
+    "sourceUrls": [
+      "https://chat.whatsapp.com/KywARnJ2I7P6OHSuxJebs3"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-23T20:46:41.683Z",
+    "lastCheckedAt": "2026-09-23T20:46:41.683Z",
+    "updatedAt": "2026-09-23T20:46:41.683Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-23T20:46:41.683Z",
+    "lastSeenAt": "2026-09-23T20:46:41.683Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1790196401683_5npgo",
+      "run_1790196402185_73w9t"
+    ],
+    "querySource": "site:chat.whatsapp.com data science machine learning jobs Global Telegram",
+    "sourceHostname": "chat.whatsapp.com"
   }
 ]

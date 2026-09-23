@@ -3262,16 +3262,16 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-09-23T10:27:25.436Z",
-    "timesSeen": 6
+    "lastSeenAt": "2026-09-23T20:46:41.683Z",
+    "timesSeen": 7
   },
   {
     "url": "https://t.me/dataflair",
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-09-23T10:27:25.436Z",
-    "timesSeen": 6
+    "lastSeenAt": "2026-09-23T20:46:41.683Z",
+    "timesSeen": 7
   },
   {
     "url": "https://discord.gg/G3rvFKF",
@@ -3373,8 +3373,8 @@
     "platform": "whatsapp",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-09-23T15:39:34.082Z",
-    "timesSeen": 6
+    "lastSeenAt": "2026-09-23T20:46:41.683Z",
+    "timesSeen": 7
   },
   {
     "url": "https://t.me/DatascienceChats",
@@ -8527,8 +8527,8 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-23T10:27:25.436Z",
-    "lastSeenAt": "2026-09-23T10:27:25.436Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-23T20:46:41.683Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/datascienceinfo",
@@ -8706,6 +8706,14 @@
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-23T15:39:34.082Z",
     "lastSeenAt": "2026-09-23T15:39:34.082Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/datasciencemorons",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-23T20:46:41.683Z",
+    "lastSeenAt": "2026-09-23T20:46:41.683Z",
     "timesSeen": 1
   }
 ]
