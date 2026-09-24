@@ -753,8 +753,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-09-23T10:27:25.436Z",
-    "timesSeen": 12
+    "lastSeenAt": "2026-09-24T16:00:25.588Z",
+    "timesSeen": 13
   },
   {
     "url": "https://t.me/design_work",
@@ -767,10 +767,10 @@
   {
     "url": "https://t.me/itfreelance",
     "platform": "telegram",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-09-16T10:34:32.340Z",
-    "timesSeen": 6
+    "lastSeenAt": "2026-09-24T16:00:25.588Z",
+    "timesSeen": 7
   },
   {
     "url": "https://t.me/writing_jobs",
@@ -1025,16 +1025,16 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-09-04T10:11:44.954Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-09-24T16:00:25.588Z",
+    "timesSeen": 5
   },
   {
     "url": "https://t.me/frontend_jobs",
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-24T16:00:25.588Z",
+    "timesSeen": 2,
     "title": "Frontend Jobs"
   },
   {
@@ -1042,8 +1042,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-24T16:00:25.588Z",
+    "timesSeen": 2,
     "title": "backend_jobs"
   },
   {
@@ -1076,8 +1076,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-24T16:00:25.588Z",
+    "timesSeen": 2,
     "title": "DevOps Jobs - работа и аналитика"
   },
   {
