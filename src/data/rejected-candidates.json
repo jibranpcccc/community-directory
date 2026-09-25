@@ -8900,5 +8900,13 @@
     "date": "2026-09-25T10:59:01.429Z",
     "lastSeenAt": "2026-09-25T10:59:01.429Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/6ysxNtJ",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-09-25T16:01:25.590Z",
+    "lastSeenAt": "2026-09-25T16:01:25.590Z",
+    "timesSeen": 1
   }
 ]
