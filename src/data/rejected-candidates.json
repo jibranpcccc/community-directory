@@ -754,8 +754,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-09-27T15:53:35.565Z",
-    "timesSeen": 25
+    "lastSeenAt": "2026-09-27T20:32:11.298Z",
+    "timesSeen": 26
   },
   {
     "url": "https://t.me/design_work",
@@ -952,8 +952,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-09-27T15:53:35.565Z",
-    "timesSeen": 6
+    "lastSeenAt": "2026-09-27T20:32:11.298Z",
+    "timesSeen": 7
   },
   {
     "url": "https://t.me/coders_jobs",
@@ -994,8 +994,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-09-27T02:00:43.711Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-09-27T20:32:11.298Z",
+    "timesSeen": 3
   },
   {
     "url": "https://t.me/remote_tech_jobs",
@@ -1019,8 +1019,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-09-27T15:53:35.565Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-09-27T20:32:11.298Z",
+    "timesSeen": 5
   },
   {
     "url": "https://t.me/it_jobs",
@@ -4617,8 +4617,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-03T15:19:24.483Z",
-    "lastSeenAt": "2026-09-27T11:02:27.734Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-09-27T20:32:11.298Z",
+    "timesSeen": 4,
     "title": "Remote IT (Inflow)"
   },
   {
@@ -9332,6 +9332,15 @@
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-27T15:53:35.565Z",
     "lastSeenAt": "2026-09-27T15:53:35.565Z",
+    "timesSeen": 1,
+    "title": "Remotelist"
+  },
+  {
+    "url": "https://t.me/remotelist",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-27T20:32:11.298Z",
+    "lastSeenAt": "2026-09-27T20:32:11.298Z",
     "timesSeen": 1,
     "title": "Remotelist"
   }
