@@ -158,8 +158,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 8,
-    "lastSeenAt": "2026-09-25T10:58:53.812Z"
+    "timesSeen": 9,
+    "lastSeenAt": "2026-09-28T22:44:50.513Z"
   },
   {
     "url": "https://discord.gg/Kfx2EsnKnK",
@@ -199,8 +199,8 @@
     "platform": "telegram",
     "reason": "unknown-status",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 28,
-    "lastSeenAt": "2026-09-27T11:02:27.734Z"
+    "timesSeen": 29,
+    "lastSeenAt": "2026-09-28T22:44:50.513Z"
   },
   {
     "url": "https://discord.gg/dFp4rR3T",
@@ -1147,8 +1147,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-21T17:47:44.347Z",
-    "lastSeenAt": "2026-08-21T17:47:44.347Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 2,
     "title": "Accounting~Audit Jobs 1"
   },
   {
@@ -1156,8 +1156,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-21T17:47:44.347Z",
-    "lastSeenAt": "2026-09-26T10:27:27.283Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 4,
     "title": "Accounting~Audit Jobs 2"
   },
   {
@@ -1431,8 +1431,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-23T00:30:25.838Z",
-    "lastSeenAt": "2026-09-22T10:33:31.370Z",
-    "timesSeen": 8,
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 9,
     "title": "Tech Professionals - Australia & New Zealand"
   },
   {
@@ -3575,10 +3575,11 @@
   {
     "url": "https://chat.whatsapp.com/CvmPbIsZxpy7OQ8SSDCx3o",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-08-30T10:54:52.766Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 2,
+    "title": "Goethe Uni Frankfurt"
   },
   {
     "url": "https://chat.whatsapp.com/FGEgtDxUYOE799TfPibKBj",
@@ -3630,8 +3631,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-09-26T10:27:27.283Z",
-    "timesSeen": 9,
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 10,
     "title": "/r/singaporejobs"
   },
   {
@@ -4134,8 +4135,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-01T10:40:51.833Z",
-    "lastSeenAt": "2026-09-27T11:02:27.734Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 7,
     "title": "PRIDEGO"
   },
   {
@@ -4143,8 +4144,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-01T10:40:51.833Z",
-    "lastSeenAt": "2026-09-01T10:40:51.833Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 2,
     "title": "DyFEqddFsigAUFjiy8YnEM"
   },
   {
@@ -5391,24 +5392,24 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-09-07T11:01:56.391Z",
-    "lastSeenAt": "2026-09-07T11:01:56.391Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/wobbjobs_engineering",
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-09-07T11:01:56.391Z",
-    "lastSeenAt": "2026-09-22T10:33:31.370Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 4
   },
   {
     "url": "https://t.me/wobbjobs_it",
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-09-07T11:01:56.391Z",
-    "lastSeenAt": "2026-09-22T10:33:31.370Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 4
   },
   {
     "url": "https://t.me/Buzzpenny",
@@ -9027,8 +9028,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-26T10:27:27.283Z",
-    "lastSeenAt": "2026-09-26T10:27:27.283Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 2,
     "title": "Secretary~Recep~Admin Job"
   },
   {
@@ -9175,8 +9176,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-27T11:02:27.734Z",
-    "lastSeenAt": "2026-09-27T11:02:27.734Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 2,
     "title": "GXPsSDwTlWr2VlOUgPUn4p"
   },
   {
@@ -9343,5 +9344,109 @@
     "lastSeenAt": "2026-09-27T20:32:11.298Z",
     "timesSeen": 1,
     "title": "Remotelist"
+  },
+  {
+    "url": "https://chat.whatsapp.com/JRjCb6vzRYlHBO4xC2crdY",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-09-28T22:44:50.513Z",
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 1,
+    "title": "WiWi Goethe 25/26"
+  },
+  {
+    "url": "https://t.me/theyseeku",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-28T22:44:50.513Z",
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 1,
+    "title": "Finder.work: работа и вакансии ✔"
+  },
+  {
+    "url": "https://chat.whatsapp.com/BjHZPXqi9XYIIebdoV4DxR",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-28T22:44:50.513Z",
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 1,
+    "title": "Agriculture Jobs"
+  },
+  {
+    "url": "https://chat.whatsapp.com/BY8v1F99Sh8582eQozbAJz",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-28T22:44:50.513Z",
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 1,
+    "title": "Airlines Jobs"
+  },
+  {
+    "url": "https://chat.whatsapp.com/Dpy29kgZ0sALp721SL6SLV",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-28T22:44:50.513Z",
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 1,
+    "title": "Apparel~Fashion Jobs"
+  },
+  {
+    "url": "https://t.me/jobs_falcon",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-09-28T22:44:50.513Z",
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 1,
+    "title": "Falcon Services: Job Updates"
+  },
+  {
+    "url": "https://t.me/wobbjobs_customerservice",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-09-28T22:44:50.513Z",
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/wobbjobs_creative",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-09-28T22:44:50.513Z",
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/wobbjobs_marketing",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-09-28T22:44:50.513Z",
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/wobbjobs_sales",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-09-28T22:44:50.513Z",
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/4huBWgTmzk",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-28T22:44:50.513Z",
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 1,
+    "title": "Infobip Community"
+  },
+  {
+    "url": "https://discord.gg/ZYUa5eZhG4",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-28T22:44:50.513Z",
+    "lastSeenAt": "2026-09-28T22:44:50.513Z",
+    "timesSeen": 1,
+    "title": "Learn About Web3"
   }
 ]
