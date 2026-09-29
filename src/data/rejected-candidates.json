@@ -3575,19 +3575,19 @@
   {
     "url": "https://chat.whatsapp.com/CvmPbIsZxpy7OQ8SSDCx3o",
     "platform": "whatsapp",
-    "reason": "wrong-niche",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-09-28T22:44:50.513Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-09-29T02:52:35.944Z",
+    "timesSeen": 3,
     "title": "Goethe Uni Frankfurt"
   },
   {
     "url": "https://chat.whatsapp.com/FGEgtDxUYOE799TfPibKBj",
     "platform": "whatsapp",
-    "reason": "wrong-niche",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-08-30T10:54:52.766Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-09-29T02:52:35.944Z",
+    "timesSeen": 2,
     "title": "Study in Germany"
   },
   {
@@ -9448,5 +9448,41 @@
     "lastSeenAt": "2026-09-28T22:44:50.513Z",
     "timesSeen": 1,
     "title": "Learn About Web3"
+  },
+  {
+    "url": "https://chat.whatsapp.com/KYpGuHEyo4WBY3L5Kd6sct",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-29T02:52:35.944Z",
+    "lastSeenAt": "2026-09-29T02:52:35.944Z",
+    "timesSeen": 1,
+    "title": "KYpGuHEyo4WBY3L5Kd6sct"
+  },
+  {
+    "url": "https://chat.whatsapp.com/DZIoXqDHzVH32hRnosZ4Q3",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-29T02:52:35.944Z",
+    "lastSeenAt": "2026-09-29T02:52:35.944Z",
+    "timesSeen": 1,
+    "title": "info germany"
+  },
+  {
+    "url": "https://chat.whatsapp.com/K7pa3HJ22CU5Tg5T8zzJqJ",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-29T02:52:35.944Z",
+    "lastSeenAt": "2026-09-29T02:52:35.944Z",
+    "timesSeen": 1,
+    "title": "Germany Launchpad"
+  },
+  {
+    "url": "https://chat.whatsapp.com/ElBG9D86iCuFSwwyHvjSPt",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-09-29T02:52:35.944Z",
+    "lastSeenAt": "2026-09-29T02:52:35.944Z",
+    "timesSeen": 1,
+    "title": "Road To Germany"
   }
 ]
