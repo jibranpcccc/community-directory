@@ -9453,10 +9453,10 @@
   {
     "url": "https://chat.whatsapp.com/KYpGuHEyo4WBY3L5Kd6sct",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-29T02:52:35.944Z",
-    "lastSeenAt": "2026-09-29T11:44:22.930Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-09-29T21:35:53.911Z",
+    "timesSeen": 3,
     "title": "KYpGuHEyo4WBY3L5Kd6sct"
   },
   {
