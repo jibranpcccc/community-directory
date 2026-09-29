@@ -1,73 +1,5 @@
 [
   {
-    "id": "civil-engineering-tutor-telegram",
-    "slug": "civil-engineering-tutor-telegram",
-    "title": "Civil Engineering Tutor",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "engineering-jobs",
-    "subcategory": "Civil & Mechanical",
-    "tags": [
-      "telegram",
-      "jobs",
-      "engineeringjobs"
-    ],
-    "inviteUrl": "https://t.me/CivilEnggTutor",
-    "description": "Civil Engineering Govt Job preparation:PDF study materials ✔️Short notes ✔️MCQs ✔️Mock Tests ✔️Regular Job update ✔",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "engineering-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 890,
-    "memberCountSource": "https://t.me/CivilEnggTutor",
-    "memberCountCheckedAt": "2026-09-22T10:33:31.370Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-09-22T10:33:31.370Z",
-    "sourceUrls": [
-      "https://t.me/CivilEnggTutor"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-09-22T10:33:31.370Z",
-    "lastCheckedAt": "2026-09-22T10:33:31.370Z",
-    "updatedAt": "2026-09-22T10:33:31.370Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-09-22T10:33:31.370Z",
-    "lastSeenAt": "2026-09-22T10:33:31.370Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1790073211370_4qgcj",
-      "run_1790073218930_pwgdz"
-    ],
-    "querySource": "site:t.me civil engineering careers Global community",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-156h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "job-updates-amp-tutorials-telegram",
     "slug": "job-updates-amp-tutorials-telegram",
     "title": "Job Updates &amp; Tutorials",
@@ -131,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-132h",
+      "validation-stale-145h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-132h",
+      "validation-stale-145h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -267,7 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-132h",
+      "validation-stale-145h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -335,7 +267,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-132h",
+      "validation-stale-145h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -403,7 +335,74 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-122h",
+      "validation-stale-135h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "dos-student-internships-unofficial-no-affiliation-with-the-us-dos-discord",
+    "slug": "dos-student-internships-unofficial-no-affiliation-with-the-us-dos-discord",
+    "title": "DOS Student Internships (Unofficial - no affiliation with the U.S. D.O.S.)",
+    "platform": "discord",
+    "vertical": "jobs",
+    "category": "internships-graduate",
+    "subcategory": "Graduate & Internships",
+    "tags": [
+      "discord",
+      "jobs",
+      "internshipsgraduate"
+    ],
+    "inviteUrl": "https://discord.gg/vcSfgVkQ2d",
+    "description": "The largest server dedicated to students and early-career professionals interested in a career in the State Department.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "internships-graduate"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 2606,
+    "memberCountSource": "https://discord.gg/vcSfgVkQ2d",
+    "memberCountCheckedAt": "2026-09-29T11:44:22.930Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-09-29T11:44:22.930Z",
+    "sourceUrls": [
+      "https://discord.gg/vcSfgVkQ2d"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-09-29T11:44:22.930Z",
+    "lastCheckedAt": "2026-09-29T11:44:22.930Z",
+    "updatedAt": "2026-09-29T11:44:22.930Z",
+    "safetyFlags": [],
+    "guildId": "739641981466050601",
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-09-29T11:44:22.930Z",
+    "lastSeenAt": "2026-09-29T11:44:22.930Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1790682262930_z52gh",
+      "run_1790682265093_w2tg1"
+    ],
+    "querySource": "discord.gg Worldwide & International student internships Discord server",
+    "sourceHostname": "discord.gg",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   }
