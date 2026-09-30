@@ -1628,8 +1628,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-09-30T11:43:11.905Z",
-    "timesSeen": 18
+    "lastSeenAt": "2026-09-30T21:41:58.530Z",
+    "timesSeen": 19
   },
   {
     "url": "https://discord.gg/awHZtSf89q",
@@ -3631,8 +3631,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-09-28T22:44:50.513Z",
-    "timesSeen": 10,
+    "lastSeenAt": "2026-09-30T21:41:58.530Z",
+    "timesSeen": 11,
     "title": "/r/singaporejobs"
   },
   {
@@ -9748,6 +9748,15 @@
     "reason": "insufficient-publication-confidence",
     "date": "2026-09-30T11:43:16.035Z",
     "lastSeenAt": "2026-09-30T11:43:16.035Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/KywARnJ2I7P6OHSuxJebs3",
+    "platform": "whatsapp",
+    "title": "Staffing-training-jobs-events-TechWyns (US and Europe)",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-09-30T21:41:59.191Z",
+    "lastSeenAt": "2026-09-30T21:41:59.191Z",
     "timesSeen": 1
   }
 ]
