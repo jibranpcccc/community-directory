@@ -1431,8 +1431,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-23T00:30:25.838Z",
-    "lastSeenAt": "2026-09-28T22:44:50.513Z",
-    "timesSeen": 9,
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 10,
     "title": "Tech Professionals - Australia & New Zealand"
   },
   {
@@ -1681,8 +1681,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-09-12T09:45:27.340Z",
-    "timesSeen": 13,
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 14,
     "title": "FgJNY5FCJTDEPLpgIlBz0N"
   },
   {
@@ -4041,8 +4041,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-01T10:40:51.833Z",
-    "lastSeenAt": "2026-09-01T10:40:51.833Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 2,
     "title": "JOB OPPORTUNITIES 237"
   },
   {
@@ -5153,10 +5153,10 @@
   {
     "url": "https://discord.gg/zprWu9BsR",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-09-05T14:05:00.140Z",
-    "lastSeenAt": "2026-09-08T10:13:10.042Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 4
   },
   {
     "url": "https://discord.gg/VHb6BwS9NT",
@@ -6042,8 +6042,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-10T10:10:45.273Z",
-    "lastSeenAt": "2026-09-29T11:44:22.930Z",
-    "timesSeen": 11,
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 12,
     "title": "Gulf Jobs"
   },
   {
@@ -6068,8 +6068,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-10T10:10:45.273Z",
-    "lastSeenAt": "2026-09-30T11:43:11.905Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 3,
     "title": "Vlogs with Offy"
   },
   {
@@ -6282,8 +6282,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-11T10:16:27.114Z",
-    "lastSeenAt": "2026-09-30T11:43:11.905Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 5,
     "title": "Career and Jobs"
   },
   {
@@ -9757,6 +9757,97 @@
     "reason": "insufficient-publication-confidence",
     "date": "2026-09-30T21:41:59.191Z",
     "lastSeenAt": "2026-09-30T21:41:59.191Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/ja8KQMsV4q",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-01T12:00:56.919Z",
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/v8qjcecWPt",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-01T12:00:56.919Z",
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 1,
+    "title": "IBMers"
+  },
+  {
+    "url": "https://discord.gg/rqgHCDqdRr",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-01T12:00:56.919Z",
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/sYTNtwg29e",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-01T12:00:56.919Z",
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/christian-lempa-s-tech-community-702179729767268433",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-01T12:00:56.919Z",
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/ExPDP9gqpX36gjFWTFCm5n",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-01T12:00:56.919Z",
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 1,
+    "title": "2027 placement opportunities"
+  },
+  {
+    "url": "https://chat.whatsapp.com/IwdN1tCBRFX4mvXPGgI8zz",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-01T12:00:56.919Z",
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 1,
+    "title": "IwdN1tCBRFX4mvXPGgI8zz"
+  },
+  {
+    "url": "https://discord.gg/tum",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-01T12:00:56.919Z",
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/jobs_in_uae_2024",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-10-01T12:00:56.919Z",
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/egHq45V",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-10-01T12:00:56.919Z",
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/IrishDoc",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-01T12:00:56.919Z",
+    "lastSeenAt": "2026-10-01T12:00:56.919Z",
     "timesSeen": 1
   }
 ]
