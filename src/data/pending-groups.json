@@ -192,5 +192,68 @@
     ],
     "querySource": "discord.gg Worldwide tech jobs OR Worldwide hiring",
     "sourceHostname": "discord.gg"
+  },
+  {
+    "id": "world-jobs-telegram",
+    "slug": "world-jobs-telegram",
+    "title": "World Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/Ultraworldjob",
+    "description": "#worldjobs #usajob #canadajob #UAEJob #ukjobs #hiring #career #degree #BSjob #msjob #btechjob #world #jobgroup #career #engineeringjobgroup #engineering #telegram",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "AE",
+    "countryCode": "AE",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 2431,
+    "memberCountSource": "https://t.me/Ultraworldjob",
+    "memberCountCheckedAt": "2026-10-02T11:50:09.586Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-02T11:50:09.586Z",
+    "sourceUrls": [
+      "https://t.me/Ultraworldjob"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-02T11:50:09.586Z",
+    "lastCheckedAt": "2026-10-02T11:50:09.586Z",
+    "updatedAt": "2026-10-02T11:50:09.586Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-02T11:50:09.586Z",
+    "lastSeenAt": "2026-10-02T11:50:09.586Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1790941809586_reh1u",
+      "run_1790941812714_43dov"
+    ],
+    "querySource": "site:t.me engineering job postings UAE Telegram",
+    "sourceHostname": "t.me"
   }
 ]
