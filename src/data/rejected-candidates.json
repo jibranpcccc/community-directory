@@ -1897,8 +1897,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-24T12:25:35.427Z",
-    "lastSeenAt": "2026-09-09T10:17:40.700Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-04T11:28:16.120Z",
+    "timesSeen": 3,
     "title": "The Job Alert"
   },
   {
@@ -2287,8 +2287,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-26T12:27:42.936Z",
-    "lastSeenAt": "2026-08-26T12:27:42.936Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-04T11:28:16.120Z",
+    "timesSeen": 2,
     "title": "Government Jobs Alert Sarkari Naukri"
   },
   {
@@ -4638,8 +4638,8 @@
     "title": "Sarkari Job Updates | Government Job with Job4Government - @job4freshers.co.in",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-03T20:13:22.268Z",
-    "lastSeenAt": "2026-09-19T10:02:00.611Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-10-04T11:28:16.120Z",
+    "timesSeen": 3
   },
   {
     "url": "https://t.me/Government_Jobs_Sarkari_Naukri",
@@ -5605,8 +5605,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-08T01:34:46.501Z",
-    "lastSeenAt": "2026-10-03T10:47:36.354Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-10-04T11:28:16.120Z",
+    "timesSeen": 6,
     "title": "Clara Immigration"
   },
   {
@@ -7811,8 +7811,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-18T10:14:06.131Z",
-    "lastSeenAt": "2026-09-18T10:14:06.131Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-04T11:28:16.120Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/QgxU2bcyva",
@@ -10015,5 +10015,39 @@
     "date": "2026-10-03T20:22:11.604Z",
     "lastSeenAt": "2026-10-03T20:22:11.604Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/DevITJobsUK",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-10-04T11:28:16.120Z",
+    "lastSeenAt": "2026-10-04T11:28:16.120Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/HDHvv58",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-04T11:28:16.120Z",
+    "lastSeenAt": "2026-10-04T11:28:16.120Z",
+    "timesSeen": 1,
+    "title": "McGill University"
+  },
+  {
+    "url": "https://discord.gg/Mr9aam3PPM",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-04T11:28:16.120Z",
+    "lastSeenAt": "2026-10-04T11:28:16.120Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/H6XcJs8U3Ci437t1awMJBY",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-10-04T11:28:16.120Z",
+    "lastSeenAt": "2026-10-04T11:28:16.120Z",
+    "timesSeen": 1,
+    "title": ""
   }
 ]
