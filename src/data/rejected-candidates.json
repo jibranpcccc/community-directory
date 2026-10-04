@@ -8853,10 +8853,11 @@
   {
     "url": "https://discord.gg/m2QZSErdfP",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-25T10:58:53.812Z",
-    "lastSeenAt": "2026-09-25T10:58:53.812Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-04T20:33:55.483Z",
+    "timesSeen": 2,
+    "title": "Christchurch Make Friends Here"
   },
   {
     "url": "https://discord.gg/mYCBHTZm6v",
@@ -10049,5 +10050,13 @@
     "lastSeenAt": "2026-10-04T11:28:16.120Z",
     "timesSeen": 1,
     "title": ""
+  },
+  {
+    "url": "https://discord.gg/gamingkiwi",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-04T20:33:55.483Z",
+    "lastSeenAt": "2026-10-04T20:33:55.483Z",
+    "timesSeen": 1
   }
 ]
