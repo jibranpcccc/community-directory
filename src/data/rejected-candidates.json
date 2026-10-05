@@ -10058,5 +10058,39 @@
     "date": "2026-10-04T20:33:55.483Z",
     "lastSeenAt": "2026-10-04T20:33:55.483Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/HHFW1t7bnFR5osi5pLPuy1",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-05T02:35:01.674Z",
+    "lastSeenAt": "2026-10-05T02:35:01.674Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/locumchannel",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-05T02:35:01.674Z",
+    "lastSeenAt": "2026-10-05T02:35:01.674Z",
+    "timesSeen": 1,
+    "title": "Medical Locum Jobs -Scholarships/ NGO/ Overseas Jobs"
+  },
+  {
+    "url": "https://t.me/+gtB7dQWqyQo0YTU8",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-05T02:35:01.674Z",
+    "lastSeenAt": "2026-10-05T02:35:01.674Z",
+    "timesSeen": 1,
+    "title": "Medical Locum Jobs"
+  },
+  {
+    "url": "https://t.me/hopestreamhealth",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-05T02:35:01.674Z",
+    "lastSeenAt": "2026-10-05T02:35:01.674Z",
+    "timesSeen": 1
   }
 ]
