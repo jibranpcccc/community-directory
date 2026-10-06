@@ -158,8 +158,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 9,
-    "lastSeenAt": "2026-09-28T22:44:50.513Z"
+    "timesSeen": 10,
+    "lastSeenAt": "2026-10-06T12:23:13.932Z"
   },
   {
     "url": "https://discord.gg/Kfx2EsnKnK",
@@ -197,10 +197,10 @@
   {
     "url": "https://t.me/joinchat",
     "platform": "telegram",
-    "reason": "unknown-status",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 34,
-    "lastSeenAt": "2026-10-06T03:26:51.866Z"
+    "timesSeen": 35,
+    "lastSeenAt": "2026-10-06T12:23:13.932Z"
   },
   {
     "url": "https://discord.gg/dFp4rR3T",
@@ -348,8 +348,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-19T10:19:18.665Z",
-    "lastSeenAt": "2026-09-18T10:14:06.131Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 5
   },
   {
     "url": "https://discord.gg/9M8awV8",
@@ -1628,8 +1628,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-10-02T11:50:09.586Z",
-    "timesSeen": 20
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 22
   },
   {
     "url": "https://discord.gg/awHZtSf89q",
@@ -1708,16 +1708,16 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-08-23T12:19:51.715Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/jobprop",
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-08-23T12:19:51.715Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 2,
     "title": "Singapore JobProp"
   },
   {
@@ -2186,10 +2186,10 @@
   {
     "url": "https://discord.gg/JmmXnuX7aZ",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-26T00:30:47.029Z",
-    "lastSeenAt": "2026-09-26T10:27:27.283Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 6,
     "title": "Official /r/Brisbane Discord"
   },
   {
@@ -2667,8 +2667,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-09-24T10:40:25.484Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 7,
     "title": "Code. Corp. Answers."
   },
   {
@@ -3400,10 +3400,10 @@
   {
     "url": "https://discord.gg/J5CuFNVDYU",
     "platform": "discord",
-    "reason": "wrong-niche",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-08-31T18:20:29.403Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 3,
     "title": "Irish Personal Finance"
   },
   {
@@ -4245,10 +4245,10 @@
   {
     "url": "https://t.me/sgjob4u",
     "platform": "telegram",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "unconfirmed-target-market",
     "date": "2026-09-02T15:31:08.648Z",
-    "lastSeenAt": "2026-09-12T09:45:27.340Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 3,
     "title": "SGJOB4U 🍍 (Singapore Jobs)"
   },
   {
@@ -6454,8 +6454,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-12T09:45:27.340Z",
-    "lastSeenAt": "2026-10-03T20:22:11.604Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 7,
     "title": "r/BTechtards"
   },
   {
@@ -7740,8 +7740,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-18T10:14:06.131Z",
-    "lastSeenAt": "2026-09-21T11:18:49.128Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 3
   },
   {
     "url": "https://chat.whatsapp.com/LpCHCdavdfU7m0CXmdGRhl",
@@ -8205,10 +8205,10 @@
   {
     "url": "https://discord.gg/Ep6zGAuWbq",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-09-21T11:18:49.128Z",
-    "lastSeenAt": "2026-10-03T10:47:36.354Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 5
   },
   {
     "url": "https://discord.gg/Hs4n5SEJF2",
@@ -9699,16 +9699,17 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-30T11:43:11.905Z",
-    "lastSeenAt": "2026-10-05T12:51:11.167Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/mtRkrGWj9v",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-30T11:43:11.905Z",
-    "lastSeenAt": "2026-09-30T11:43:11.905Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 2,
+    "title": "r/Islamabad"
   },
   {
     "url": "https://t.me/+Zwk34yyGg6owNDdl",
@@ -9895,8 +9896,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-10-02T11:50:09.586Z",
-    "lastSeenAt": "2026-10-02T11:50:09.586Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 2,
     "title": "frontlinesedutech"
   },
   {
@@ -10081,8 +10082,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-10-05T02:35:01.674Z",
-    "lastSeenAt": "2026-10-05T23:27:02.924Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 3,
     "title": "Medical Locum Jobs"
   },
   {
@@ -10209,6 +10210,77 @@
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-05T12:51:11.167Z",
     "lastSeenAt": "2026-10-05T12:51:11.167Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/Y6hDRbHanG",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-06T12:23:13.932Z",
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 1,
+    "title": "Freshersinfo"
+  },
+  {
+    "url": "https://t.me/Pharma_bharat",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-06T12:23:13.932Z",
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 1,
+    "title": "Pharma Bharat Job portal"
+  },
+  {
+    "url": "https://discord.gg/pVFN79NYpD",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-06T12:23:13.932Z",
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/jobhitchpt",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-06T12:23:13.932Z",
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 1,
+    "title": "JobHitch SG (Part Time Jobs)"
+  },
+  {
+    "url": "https://t.me/sgeventjobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-06T12:23:13.932Z",
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 1,
+    "title": "Singapore Events Jobs"
+  },
+  {
+    "url": "https://t.me/happysgjobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-06T12:23:13.932Z",
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 1,
+    "title": "Happy SG Jobs 🥳"
+  },
+  {
+    "url": "https://discord.gg/fbZxqJY74",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-06T12:23:13.932Z",
+    "lastSeenAt": "2026-10-06T12:23:13.932Z",
+    "timesSeen": 1,
+    "title": "BengaluruDecoders"
+  },
+  {
+    "url": "https://discord.gg/vcSfgVkQ2d",
+    "platform": "discord",
+    "title": "DOS Student Internships (Unofficial - no affiliation with the U.S. D.O.S.)",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-10-06T12:23:19.911Z",
+    "lastSeenAt": "2026-10-06T12:23:19.911Z",
     "timesSeen": 1
   }
 ]

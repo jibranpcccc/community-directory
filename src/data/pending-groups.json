@@ -1,73 +1,5 @@
 [
   {
-    "id": "dos-student-internships-unofficial-no-affiliation-with-the-us-dos-discord",
-    "slug": "dos-student-internships-unofficial-no-affiliation-with-the-us-dos-discord",
-    "title": "DOS Student Internships (Unofficial - no affiliation with the U.S. D.O.S.)",
-    "platform": "discord",
-    "vertical": "jobs",
-    "category": "internships-graduate",
-    "subcategory": "Graduate & Internships",
-    "tags": [
-      "discord",
-      "jobs",
-      "internshipsgraduate"
-    ],
-    "inviteUrl": "https://discord.gg/vcSfgVkQ2d",
-    "description": "The largest server dedicated to students and early-career professionals interested in a career in the State Department.",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "internships-graduate"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 2606,
-    "memberCountSource": "https://discord.gg/vcSfgVkQ2d",
-    "memberCountCheckedAt": "2026-09-29T11:44:22.930Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-09-29T11:44:22.930Z",
-    "sourceUrls": [
-      "https://discord.gg/vcSfgVkQ2d"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-09-29T11:44:22.930Z",
-    "lastCheckedAt": "2026-09-29T11:44:22.930Z",
-    "updatedAt": "2026-09-29T11:44:22.930Z",
-    "safetyFlags": [],
-    "guildId": "739641981466050601",
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-09-29T11:44:22.930Z",
-    "lastSeenAt": "2026-09-29T11:44:22.930Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1790682262930_z52gh",
-      "run_1790682265093_w2tg1"
-    ],
-    "querySource": "discord.gg Worldwide & International student internships Discord server",
-    "sourceHostname": "discord.gg",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-145h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "cs-careers-hub-discord",
     "slug": "cs-careers-hub-discord",
     "title": "CS Careers Hub 🍁",
@@ -131,7 +63,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-97h",
+      "validation-stale-120h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +131,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-97h",
+      "validation-stale-120h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -267,7 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-73h",
+      "validation-stale-97h",
       "unconfirmed-country-evidence: No factual geographic evidence matching AE found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
