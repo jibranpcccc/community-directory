@@ -2395,10 +2395,10 @@
   {
     "url": "https://chat.whatsapp.com/E6ausk1jN4K8L75HC0std9",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-26T12:27:42.936Z",
-    "lastSeenAt": "2026-09-20T10:26:46.954Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-07T22:23:16.826Z",
+    "timesSeen": 3,
     "title": "NHS Interview Insight"
   },
   {
@@ -4045,8 +4045,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-01T10:40:51.833Z",
-    "lastSeenAt": "2026-10-01T12:00:56.919Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-07T22:23:16.826Z",
+    "timesSeen": 3,
     "title": "JOB OPPORTUNITIES 237"
   },
   {
@@ -4368,8 +4368,8 @@
     "title": "NHS Job Discussion Group",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-02T15:31:19.339Z",
-    "lastSeenAt": "2026-09-20T10:26:46.954Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-10-07T22:23:16.826Z",
+    "timesSeen": 4
   },
   {
     "url": "https://chat.whatsapp.com/CWaJP1F46MkGw6BqcflcAX",
@@ -4377,8 +4377,8 @@
     "title": "NHS Job Discussion Group II",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-02T15:31:19.339Z",
-    "lastSeenAt": "2026-09-20T10:26:46.954Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-10-07T22:23:16.826Z",
+    "timesSeen": 4
   },
   {
     "url": "https://chat.whatsapp.com/K0Cn82JjspPDmibTiuVsH9",
@@ -4386,8 +4386,8 @@
     "title": "NHS Job Discussion Group III",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-02T15:31:19.339Z",
-    "lastSeenAt": "2026-09-20T10:26:46.954Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-10-07T22:23:16.826Z",
+    "timesSeen": 4
   },
   {
     "url": "https://t.me/talexajobsandcareer",
@@ -7692,8 +7692,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-18T10:14:06.131Z",
-    "lastSeenAt": "2026-10-03T10:47:36.354Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-10-07T22:23:16.826Z",
+    "timesSeen": 7,
     "title": "BCzXRX9Rpzk0JixrPs8EAB"
   },
   {
@@ -10305,10 +10305,10 @@
   {
     "url": "https://discord.gg/qaDHb3FDKA",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-10-07T12:12:12.331Z",
-    "lastSeenAt": "2026-10-07T12:12:12.331Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-07T22:23:16.826Z",
+    "timesSeen": 2,
     "title": "Chartered Accountants"
   },
   {
@@ -10372,8 +10372,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-10-07T12:12:12.331Z",
-    "lastSeenAt": "2026-10-07T12:12:12.331Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-07T22:23:16.826Z",
+    "timesSeen": 2,
     "title": "CA Jobs, CA Articleship Vacancies &amp; Placement"
   },
   {
@@ -10393,5 +10393,38 @@
     "lastSeenAt": "2026-10-07T12:12:12.331Z",
     "timesSeen": 1,
     "title": "FreshGulfJob.com"
+  },
+  {
+    "url": "https://chat.whatsapp.com/G2iAtmxODU48UlityusfJh",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-07T22:23:16.826Z",
+    "lastSeenAt": "2026-10-07T22:23:16.826Z",
+    "timesSeen": 1,
+    "title": "G2iAtmxODU48UlityusfJh"
+  },
+  {
+    "url": "https://discord.gg/vGNKVSqe2N",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-10-07T22:23:16.826Z",
+    "lastSeenAt": "2026-10-07T22:23:16.826Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/nVskXPh",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-07T22:23:16.826Z",
+    "lastSeenAt": "2026-10-07T22:23:16.826Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/tqvMpHuN",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-07T22:23:16.826Z",
+    "lastSeenAt": "2026-10-07T22:23:16.826Z",
+    "timesSeen": 1
   }
 ]
