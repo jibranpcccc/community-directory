@@ -213,7 +213,9 @@
     "platform": "discord",
     "reason": "wrong-niche",
     "title": "AEC Collective",
-    "date": "2026-08-19T08:33:40.620Z"
+    "date": "2026-08-19T08:33:40.620Z",
+    "timesSeen": 2,
+    "lastSeenAt": "2026-10-07T12:12:12.331Z"
   },
   {
     "url": "https://discord.gg/x4ET4WM29w",
@@ -1354,8 +1356,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-09-15T10:37:47.840Z",
-    "timesSeen": 13,
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 14,
     "title": "Singapore Careers and Job Opportunities - sgCareers"
   },
   {
@@ -1628,8 +1630,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-10-06T12:23:13.932Z",
-    "timesSeen": 22
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 23
   },
   {
     "url": "https://discord.gg/awHZtSf89q",
@@ -1708,16 +1710,16 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-10-06T12:23:13.932Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 3
   },
   {
     "url": "https://t.me/jobprop",
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-10-06T12:23:13.932Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 3,
     "title": "Singapore JobProp"
   },
   {
@@ -3866,8 +3868,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-31T18:20:29.403Z",
-    "lastSeenAt": "2026-10-05T12:51:11.167Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 5
   },
   {
     "url": "https://discord.gg/KUCp9KEtDq",
@@ -4247,8 +4249,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-02T15:31:08.648Z",
-    "lastSeenAt": "2026-10-06T12:23:13.932Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 4,
     "title": "SGJOB4U 🍍 (Singapore Jobs)"
   },
   {
@@ -4786,10 +4788,11 @@
   {
     "url": "https://discord.gg/jobs",
     "platform": "discord",
-    "reason": "dead-link",
+    "reason": "unconfirmed-target-market",
     "date": "2026-09-04T10:11:44.954Z",
-    "lastSeenAt": "2026-09-04T10:11:44.954Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 2,
+    "title": "/jobs"
   },
   {
     "url": "https://discord.gg/eb3daXz",
@@ -6325,10 +6328,10 @@
   {
     "url": "https://discord.gg/wWac5eD",
     "platform": "discord",
-    "reason": "unknown-status",
+    "reason": "dead-link",
     "date": "2026-09-11T10:16:27.114Z",
-    "lastSeenAt": "2026-09-21T11:18:49.128Z",
-    "timesSeen": 7
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 10
   },
   {
     "url": "https://discord.gg/kKxJf88",
@@ -10261,8 +10264,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-10-06T12:23:13.932Z",
-    "lastSeenAt": "2026-10-06T12:23:13.932Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 2,
     "title": "Happy SG Jobs 🥳"
   },
   {
@@ -10294,9 +10297,101 @@
   {
     "url": "https://t.me/learningaccounting631",
     "platform": "telegram",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-07T02:51:11.398Z",
-    "lastSeenAt": "2026-10-07T02:51:11.398Z",
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://discord.gg/qaDHb3FDKA",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-07T12:12:12.331Z",
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 1,
+    "title": "Chartered Accountants"
+  },
+  {
+    "url": "https://discord.gg/4sJdZnNCSW",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-07T12:12:12.331Z",
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/TAX376111",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-07T12:12:12.331Z",
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/CAS3701",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-07T12:12:12.331Z",
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/FAC376444",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-07T12:12:12.331Z",
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/AIN370111",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-07T12:12:12.331Z",
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/AUE37611",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-07T12:12:12.331Z",
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/MAC376111",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-07T12:12:12.331Z",
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/Jobs4CA",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-07T12:12:12.331Z",
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 1,
+    "title": "CA Jobs, CA Articleship Vacancies &amp; Placement"
+  },
+  {
+    "url": "https://t.me/thewokesalaryman",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-07T12:12:12.331Z",
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 1,
+    "title": "The Woke Salaryman"
+  },
+  {
+    "url": "https://t.me/+QltcjIg1u4J4H8px",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-07T12:12:12.331Z",
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 1,
+    "title": "FreshGulfJob.com"
   }
 ]

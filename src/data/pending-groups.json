@@ -403,5 +403,68 @@
     "autoPublishBlockedReasons": [
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
+  },
+  {
+    "id": "krishan-kumar-jobs-amp-internships-updates-telegram",
+    "slug": "krishan-kumar-jobs-amp-internships-updates-telegram",
+    "title": "Krishan Kumar - Jobs &amp; Internships Updates",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "finance-jobs",
+    "subcategory": "Finance & Accounting",
+    "tags": [
+      "telegram",
+      "jobs",
+      "financejobs"
+    ],
+    "inviteUrl": "https://t.me/jobs_and_internships_updates",
+    "description": "Latest Interns and Jobs UpdateLatest Offcampus Jobs &amp; Internships opportunities for IT/CS-Field students are posted everyday Send your queries: https://www.linkedin.com/in/krishan-kumar08For Promotions Contact : jobsandinternshipsupdates[@]gmail.com",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "finance-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 195989,
+    "memberCountSource": "https://t.me/jobs_and_internships_updates",
+    "memberCountCheckedAt": "2026-10-07T12:12:12.331Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-07T12:12:12.331Z",
+    "sourceUrls": [
+      "https://t.me/jobs_and_internships_updates"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-07T12:12:12.331Z",
+    "lastCheckedAt": "2026-10-07T12:12:12.331Z",
+    "updatedAt": "2026-10-07T12:12:12.331Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-07T12:12:12.331Z",
+    "lastSeenAt": "2026-10-07T12:12:12.331Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1791375132331_rk9jo",
+      "run_1791375133141_tvfqv"
+    ],
+    "querySource": "discord.gg finance accounting job alerts Global Telegram",
+    "sourceHostname": "t.me"
   }
 ]
