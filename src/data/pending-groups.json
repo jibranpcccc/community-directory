@@ -1,141 +1,5 @@
 [
   {
-    "id": "cs-careers-hub-discord",
-    "slug": "cs-careers-hub-discord",
-    "title": "CS Careers Hub 🍁",
-    "platform": "discord",
-    "vertical": "jobs",
-    "category": "internships-graduate",
-    "subcategory": "Worldwide Jobs",
-    "tags": [
-      "discord",
-      "jobs",
-      "internshipsgraduate"
-    ],
-    "inviteUrl": "https://discord.gg/MTsExCAQ6F",
-    "description": null,
-    "descriptionSource": null,
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "internships-graduate"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 2354,
-    "memberCountSource": "https://discord.gg/MTsExCAQ6F",
-    "memberCountCheckedAt": "2026-10-01T12:00:56.919Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-10-01T12:00:56.919Z",
-    "sourceUrls": [
-      "https://discord.gg/MTsExCAQ6F"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-10-01T12:00:56.919Z",
-    "lastCheckedAt": "2026-10-01T12:00:56.919Z",
-    "updatedAt": "2026-10-01T12:00:56.919Z",
-    "safetyFlags": [],
-    "guildId": "1179609811176915004",
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-10-01T12:00:56.919Z",
-    "lastSeenAt": "2026-10-01T12:00:56.919Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1790856056919_wagsq",
-      "run_1790856057397_5e2w9"
-    ],
-    "querySource": "discord.gg Worldwide tech jobs OR Worldwide hiring",
-    "sourceHostname": "discord.gg",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-120h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "careercompass-discord",
-    "slug": "careercompass-discord",
-    "title": "CareerCompass",
-    "platform": "discord",
-    "vertical": "jobs",
-    "category": "internships-graduate",
-    "subcategory": "Worldwide Jobs",
-    "tags": [
-      "discord",
-      "jobs",
-      "internshipsgraduate"
-    ],
-    "inviteUrl": "https://discord.gg/careercompass-1460148112399007911",
-    "description": "CareerCompass is a student-focused Discord community designed to make finding work, internships, and early career opportunities easier and less overwhelming.",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "internships-graduate"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 2745,
-    "memberCountSource": "https://discord.gg/careercompass-1460148112399007911",
-    "memberCountCheckedAt": "2026-10-01T12:00:56.919Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-10-01T12:00:56.919Z",
-    "sourceUrls": [
-      "https://discord.gg/careercompass-1460148112399007911"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-10-01T12:00:56.919Z",
-    "lastCheckedAt": "2026-10-01T12:00:56.919Z",
-    "updatedAt": "2026-10-01T12:00:56.919Z",
-    "safetyFlags": [],
-    "guildId": "1460148112399007911",
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-10-01T12:00:56.919Z",
-    "lastSeenAt": "2026-10-01T12:00:56.919Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1790856056919_wagsq",
-      "run_1790856057892_4naob"
-    ],
-    "querySource": "discord.gg Worldwide tech jobs OR Worldwide hiring",
-    "sourceHostname": "discord.gg",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-120h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "world-jobs-telegram",
     "slug": "world-jobs-telegram",
     "title": "World Jobs",
@@ -199,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-97h",
+      "validation-stale-145h",
       "unconfirmed-country-evidence: No factual geographic evidence matching AE found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -267,6 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-72h",
       "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -334,6 +199,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-72h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -401,6 +267,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-72h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -446,12 +313,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-10-07T12:12:12.331Z",
     "lastCheckedAt": "2026-10-07T12:12:12.331Z",
     "updatedAt": "2026-10-07T12:12:12.331Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-10-07T12:12:12.331Z",
@@ -465,6 +332,11 @@
       "run_1791375133141_tvfqv"
     ],
     "querySource": "discord.gg finance accounting job alerts Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-24h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   }
 ]
