@@ -6640,73 +6640,73 @@
   {
     "url": "https://chat.whatsapp.com/LHU9Kh7QdGa4rbSfCdM7ZK",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-10-08T12:23:55.194Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-08T22:34:08.468Z",
+    "timesSeen": 5,
     "title": "CA Foundation"
   },
   {
     "url": "https://chat.whatsapp.com/BUeHOU9jofOCvjiJjf2Cbu",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-10-08T12:23:55.194Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-08T22:34:08.468Z",
+    "timesSeen": 5,
     "title": "CA Inter"
   },
   {
     "url": "https://chat.whatsapp.com/EpWk901g5eZEzmxoGgjJiP",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-10-08T12:23:55.194Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-08T22:34:08.468Z",
+    "timesSeen": 5,
     "title": "CA Final"
   },
   {
     "url": "https://chat.whatsapp.com/LN2O8vDSl8U5gBnxV7fBHO",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-10-08T12:23:55.194Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-08T22:34:08.468Z",
+    "timesSeen": 5,
     "title": "B.Com"
   },
   {
     "url": "https://chat.whatsapp.com/GgBEmQaedGWLjr9YSDSHMu",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-10-08T12:23:55.194Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-08T22:34:08.468Z",
+    "timesSeen": 4,
     "title": "CS"
   },
   {
     "url": "https://chat.whatsapp.com/ECsKqHV3Ysx584mp5Ea6Ih",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-10-08T12:23:55.194Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-08T22:34:08.468Z",
+    "timesSeen": 5,
     "title": "CA"
   },
   {
     "url": "https://chat.whatsapp.com/HmxjVT8kW8LLG9Kdy9lSzk",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-10-08T12:23:55.194Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-08T22:34:08.468Z",
+    "timesSeen": 3,
     "title": "Graduate (Any)"
   },
   {
     "url": "https://chat.whatsapp.com/Iw40iwfNHKiK0FH4CBvWHp",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-13T11:12:58.493Z",
-    "lastSeenAt": "2026-10-08T12:23:55.194Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-08T22:34:08.468Z",
+    "timesSeen": 3,
     "title": "Others"
   },
   {
@@ -6753,10 +6753,10 @@
   {
     "url": "https://chat.whatsapp.com/HI3mQkaKblNDqB7GEF2nPM",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-14T01:51:21.201Z",
-    "lastSeenAt": "2026-09-14T01:51:21.201Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-08T22:34:08.468Z",
+    "timesSeen": 2,
     "title": "HI3mQkaKblNDqB7GEF2nPM"
   },
   {
@@ -10563,5 +10563,14 @@
     "date": "2026-10-08T12:24:12.505Z",
     "lastSeenAt": "2026-10-08T12:24:12.505Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/IEgmJVbPUMt7Y8NnRj7gqQ",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-10-08T22:34:08.468Z",
+    "lastSeenAt": "2026-10-08T22:34:08.468Z",
+    "timesSeen": 1,
+    "title": ""
   }
 ]
