@@ -3259,8 +3259,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-29T15:52:48.447Z",
-    "lastSeenAt": "2026-08-29T15:52:48.447Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-09T03:14:23.011Z",
+    "timesSeen": 2,
     "title": "Python — вакансии и аналитика"
   },
   {
@@ -10572,5 +10572,23 @@
     "lastSeenAt": "2026-10-08T22:34:08.468Z",
     "timesSeen": 1,
     "title": ""
+  },
+  {
+    "url": "https://t.me/products_jobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-09T03:14:23.011Z",
+    "lastSeenAt": "2026-10-09T03:14:23.011Z",
+    "timesSeen": 1,
+    "title": "Products Jobs — вакансии и аналитика"
+  },
+  {
+    "url": "https://t.me/gogetajob",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-09T03:14:23.011Z",
+    "lastSeenAt": "2026-10-09T03:14:23.011Z",
+    "timesSeen": 1,
+    "title": "Go Get A Job"
   }
 ]
