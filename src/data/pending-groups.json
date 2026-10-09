@@ -1,73 +1,5 @@
 [
   {
-    "id": "world-jobs-telegram",
-    "slug": "world-jobs-telegram",
-    "title": "World Jobs",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "engineering-jobs",
-    "subcategory": "Civil & Mechanical",
-    "tags": [
-      "telegram",
-      "jobs",
-      "engineeringjobs"
-    ],
-    "inviteUrl": "https://t.me/Ultraworldjob",
-    "description": "#worldjobs #usajob #canadajob #UAEJob #ukjobs #hiring #career #degree #BSjob #msjob #btechjob #world #jobgroup #career #engineeringjobgroup #engineering #telegram",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "AE",
-    "countryCode": "AE",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "engineering-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 2431,
-    "memberCountSource": "https://t.me/Ultraworldjob",
-    "memberCountCheckedAt": "2026-10-02T11:50:09.586Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-10-02T11:50:09.586Z",
-    "sourceUrls": [
-      "https://t.me/Ultraworldjob"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-10-02T11:50:09.586Z",
-    "lastCheckedAt": "2026-10-02T11:50:09.586Z",
-    "updatedAt": "2026-10-02T11:50:09.586Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-10-02T11:50:09.586Z",
-    "lastSeenAt": "2026-10-02T11:50:09.586Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1790941809586_reh1u",
-      "run_1790941812714_43dov"
-    ],
-    "querySource": "site:t.me engineering job postings UAE Telegram",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-145h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching AE found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "medical-jobs-mbbs-nursing-pharma-neet-ug-pg-telegram",
     "slug": "medical-jobs-mbbs-nursing-pharma-neet-ug-pg-telegram",
     "title": "Medical Jobs - MBBS | Nursing | Pharma | NEET UG PG",
@@ -131,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h",
+      "validation-stale-95h",
       "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +131,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h",
+      "validation-stale-95h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -267,7 +199,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h",
+      "validation-stale-95h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -335,7 +267,342 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h",
+      "validation-stale-48h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "civil-engineering-jobs-telegram",
+    "slug": "civil-engineering-jobs-telegram",
+    "title": "Civil Engineering Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/Civil_Engineering_Jobs_India",
+    "description": "Civil Engineering Jobs",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 58651,
+    "memberCountSource": "https://t.me/Civil_Engineering_Jobs_India",
+    "memberCountCheckedAt": "2026-10-09T12:16:03.815Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-09T12:16:03.815Z",
+    "sourceUrls": [
+      "https://t.me/Civil_Engineering_Jobs_India"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-09T12:16:03.815Z",
+    "lastCheckedAt": "2026-10-09T12:16:03.815Z",
+    "updatedAt": "2026-10-09T12:16:03.815Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-09T12:16:03.815Z",
+    "lastSeenAt": "2026-10-09T12:16:03.815Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1791548163815_cc8ex",
+      "run_1791548165659_fowda"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "products-jobs-telegram",
+    "slug": "products-jobs-telegram",
+    "title": "Products Jobs — вакансии и аналитика",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/products_jobs",
+    "description": "Работа для людей, которые отвечают за успех цифрового продукта на рынкеПри размещении вакансии обязательно указывайте зарплатную вилку.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 19069,
+    "memberCountSource": "https://t.me/products_jobs",
+    "memberCountCheckedAt": "2026-10-09T12:16:03.815Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-09T12:16:03.815Z",
+    "sourceUrls": [
+      "https://t.me/products_jobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-09T12:16:03.815Z",
+    "lastCheckedAt": "2026-10-09T12:16:03.815Z",
+    "updatedAt": "2026-10-09T12:16:03.815Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-09T12:16:03.815Z",
+    "lastSeenAt": "2026-10-09T12:16:03.815Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1791548163815_cc8ex",
+      "run_1791548166586_0s26v"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "go-get-a-job-telegram",
+    "slug": "go-get-a-job-telegram",
+    "title": "Go Get A Job",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/gogetajob",
+    "description": "Филиал @gogolangФлудилка - https://t.me/+I6Q2M70UxdMyZDNiПредназначен для публикации вакансий, связанных с языком Go AKA GolangПравила постинга — в закреплённом сообщенииКанал с вакансиями без общения @gogetajobfeedТираны чатика те же :)",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 6689,
+    "memberCountSource": "https://t.me/gogetajob",
+    "memberCountCheckedAt": "2026-10-09T12:16:03.815Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-09T12:16:03.815Z",
+    "sourceUrls": [
+      "https://t.me/gogetajob"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-09T12:16:03.815Z",
+    "lastCheckedAt": "2026-10-09T12:16:03.815Z",
+    "updatedAt": "2026-10-09T12:16:03.815Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-09T12:16:03.815Z",
+    "lastSeenAt": "2026-10-09T12:16:03.815Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1791548163815_cc8ex",
+      "run_1791548167150_f6ofp"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "microsoft-stack-jobs-telegram",
+    "slug": "microsoft-stack-jobs-telegram",
+    "title": "Microsoft Stack Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/microsoftstackjobs",
+    "description": "Work &amp; freelance only Microsoft Stack. Feed https://t.me/MicrosoftstackjobsfeedЧат про F#: @Fsharp_chatЧат про C#: @CSharpChatЧат про Xamarin: @xamarin_russia  Чат общения:@dotnettalks",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 1931,
+    "memberCountSource": "https://t.me/microsoftstackjobs",
+    "memberCountCheckedAt": "2026-10-09T12:16:03.815Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-09T12:16:03.815Z",
+    "sourceUrls": [
+      "https://t.me/microsoftstackjobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-09T12:16:03.815Z",
+    "lastCheckedAt": "2026-10-09T12:16:03.815Z",
+    "updatedAt": "2026-10-09T12:16:03.815Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-09T12:16:03.815Z",
+    "lastSeenAt": "2026-10-09T12:16:03.815Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1791548163815_cc8ex",
+      "run_1791548167574_y1v1l"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "javascript-jobs-telegram",
+    "slug": "javascript-jobs-telegram",
+    "title": "JavaScript Jobs — чат",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/javascript_jobs",
+    "description": "JavaScript Jobs — чат для поиска работы и людейПравила оформления в закрепленном сообщении",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 27548,
+    "memberCountSource": "https://t.me/javascript_jobs",
+    "memberCountCheckedAt": "2026-10-09T12:16:03.815Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-09T12:16:03.815Z",
+    "sourceUrls": [
+      "https://t.me/javascript_jobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-09T12:16:03.815Z",
+    "lastCheckedAt": "2026-10-09T12:16:03.815Z",
+    "updatedAt": "2026-10-09T12:16:03.815Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-09T12:16:03.815Z",
+    "lastSeenAt": "2026-10-09T12:16:03.815Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1791548163815_cc8ex",
+      "run_1791548167996_toa3z"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   }
