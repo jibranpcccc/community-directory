@@ -10840,5 +10840,14 @@
     "date": "2026-10-10T20:48:06.749Z",
     "lastSeenAt": "2026-10-10T20:48:06.749Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/vipulthewonderful",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-11T02:22:49.066Z",
+    "lastSeenAt": "2026-10-11T02:22:49.066Z",
+    "timesSeen": 1,
+    "title": "Career Guidance by Vipul"
   }
 ]
