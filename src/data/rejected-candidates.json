@@ -10927,5 +10927,40 @@
     "date": "2026-10-12T13:42:25.474Z",
     "lastSeenAt": "2026-10-12T13:42:25.474Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/+rzfsChtyZso4YmE1",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-12T23:54:01.443Z",
+    "lastSeenAt": "2026-10-12T23:54:01.443Z",
+    "timesSeen": 1,
+    "title": "Free Jobs links 🔗"
+  },
+  {
+    "url": "https://t.me/student_impulse_careers",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-10-12T23:54:01.443Z",
+    "lastSeenAt": "2026-10-12T23:54:01.443Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/+6U5rZhva41UyMjVl",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-12T23:54:01.443Z",
+    "lastSeenAt": "2026-10-12T23:54:01.443Z",
+    "timesSeen": 1,
+    "title": "CareerUpJobs"
+  },
+  {
+    "url": "https://t.me/DishaBetterJobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-12T23:54:01.443Z",
+    "lastSeenAt": "2026-10-12T23:54:01.443Z",
+    "timesSeen": 1,
+    "title": "Disha Better Jobs"
   }
 ]
