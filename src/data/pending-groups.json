@@ -1,209 +1,5 @@
 [
   {
-    "id": "medical-jobs-mbbs-nursing-pharma-neet-ug-pg-telegram",
-    "slug": "medical-jobs-mbbs-nursing-pharma-neet-ug-pg-telegram",
-    "title": "Medical Jobs - MBBS | Nursing | Pharma | NEET UG PG",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "healthcare-jobs",
-    "subcategory": "Nursing & Medical",
-    "tags": [
-      "telegram",
-      "jobs",
-      "healthcarejobs"
-    ],
-    "inviteUrl": "https://t.me/MedicalJobsIndia",
-    "description": "Medical Job Alerts",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "IN",
-    "countryCode": "IN",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "healthcare-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 3140,
-    "memberCountSource": "https://t.me/MedicalJobsIndia",
-    "memberCountCheckedAt": "2026-10-05T12:51:11.167Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-10-05T12:51:11.167Z",
-    "sourceUrls": [
-      "https://t.me/MedicalJobsIndia"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-10-05T12:51:11.167Z",
-    "lastCheckedAt": "2026-10-05T12:51:11.167Z",
-    "updatedAt": "2026-10-05T12:51:11.167Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-10-05T12:51:11.167Z",
-    "lastSeenAt": "2026-10-05T12:51:11.167Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1791204671167_64ztg",
-      "run_1791204672576_5zj19"
-    ],
-    "querySource": "site:t.me hospital nursing jobs India group",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-158h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "is3a-information-technology-jobs-whatsapp",
-    "slug": "is3a-information-technology-jobs-whatsapp",
-    "title": "Is3a Information Technology Jobs",
-    "platform": "whatsapp",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Software Engineering",
-    "tags": [
-      "whatsapp",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://chat.whatsapp.com/LeT9Oniz8z57N2fPxRZi2p",
-    "description": null,
-    "descriptionSource": null,
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": null,
-    "memberCountSource": null,
-    "memberCountCheckedAt": null,
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-10-05T12:51:11.167Z",
-    "sourceUrls": [
-      "https://chat.whatsapp.com/LeT9Oniz8z57N2fPxRZi2p"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-10-05T12:51:11.167Z",
-    "lastCheckedAt": "2026-10-05T12:51:11.167Z",
-    "updatedAt": "2026-10-05T12:51:11.167Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-10-05T12:51:11.167Z",
-    "lastSeenAt": "2026-10-05T12:51:11.167Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1791204671167_64ztg",
-      "run_1791204673788_5clxk"
-    ],
-    "querySource": "site:chat.whatsapp.com software engineer jobs Global community",
-    "sourceHostname": "chat.whatsapp.com",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-158h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "jobs-for-cpt-opt-h1b-whatsapp",
-    "slug": "jobs-for-cpt-opt-h1b-whatsapp",
-    "title": "Jobs for CPT | OPT | H1B",
-    "platform": "whatsapp",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Software Engineering",
-    "tags": [
-      "whatsapp",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://chat.whatsapp.com/Bc7MV4q9Gxy8zfnMc2POJi",
-    "description": null,
-    "descriptionSource": null,
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": null,
-    "memberCountSource": null,
-    "memberCountCheckedAt": null,
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-10-05T12:51:11.167Z",
-    "sourceUrls": [
-      "https://chat.whatsapp.com/Bc7MV4q9Gxy8zfnMc2POJi"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-10-05T12:51:11.167Z",
-    "lastCheckedAt": "2026-10-05T12:51:11.167Z",
-    "updatedAt": "2026-10-05T12:51:11.167Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-10-05T12:51:11.167Z",
-    "lastSeenAt": "2026-10-05T12:51:11.167Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1791204671167_64ztg",
-      "run_1791204674259_dbzoa"
-    ],
-    "querySource": "site:chat.whatsapp.com software engineer jobs Global community",
-    "sourceHostname": "chat.whatsapp.com",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-158h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "krishan-kumar-jobs-amp-internships-updates-telegram",
     "slug": "krishan-kumar-jobs-amp-internships-updates-telegram",
     "title": "Krishan Kumar - Jobs &amp; Internships Updates",
@@ -267,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-111h",
+      "validation-stale-122h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -335,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-63h",
+      "validation-stale-73h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -403,7 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-63h",
+      "validation-stale-73h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -471,7 +267,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-63h",
+      "validation-stale-73h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -539,7 +335,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-63h",
+      "validation-stale-73h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -607,7 +403,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-63h",
+      "validation-stale-73h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -676,7 +472,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-39h",
+      "validation-stale-50h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   }
