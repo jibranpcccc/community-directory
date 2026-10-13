@@ -10962,5 +10962,23 @@
     "lastSeenAt": "2026-10-12T23:54:01.443Z",
     "timesSeen": 1,
     "title": "Disha Better Jobs"
+  },
+  {
+    "url": "https://chat.whatsapp.com/B5qA5oXKc22BO9UNRUkhAj",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-13T13:03:01.356Z",
+    "lastSeenAt": "2026-10-13T13:03:01.356Z",
+    "timesSeen": 1,
+    "title": "Job vacancies &#064; Inter Arc"
+  },
+  {
+    "url": "https://chat.whatsapp.com/H04cTtnC9qqGPvdirlh2P3",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-13T13:03:01.356Z",
+    "lastSeenAt": "2026-10-13T13:03:01.356Z",
+    "timesSeen": 1,
+    "title": "H04cTtnC9qqGPvdirlh2P3"
   }
 ]
