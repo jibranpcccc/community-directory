@@ -199,8 +199,8 @@
     "platform": "telegram",
     "reason": "unknown-status",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 37,
-    "lastSeenAt": "2026-10-11T11:47:35.039Z"
+    "timesSeen": 38,
+    "lastSeenAt": "2026-10-13T22:04:44.560Z"
   },
   {
     "url": "https://discord.gg/dFp4rR3T",
@@ -1899,8 +1899,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-24T12:25:35.427Z",
-    "lastSeenAt": "2026-10-04T11:28:16.120Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-13T22:04:44.560Z",
+    "timesSeen": 4,
     "title": "The Job Alert"
   },
   {
@@ -2215,16 +2215,16 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-26T06:26:07.952Z",
-    "lastSeenAt": "2026-08-26T12:27:42.936Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-10-13T22:04:44.560Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/QgEC66G2",
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-26T06:26:07.952Z",
-    "lastSeenAt": "2026-08-26T12:27:42.936Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-10-13T22:04:44.560Z",
+    "timesSeen": 3
   },
   {
     "url": "https://t.me/officebasedjobslondon",
@@ -6075,8 +6075,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-10T10:10:45.273Z",
-    "lastSeenAt": "2026-10-01T12:00:56.919Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-13T22:04:44.560Z",
+    "timesSeen": 4,
     "title": "Vlogs with Offy"
   },
   {
