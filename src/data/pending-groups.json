@@ -475,5 +475,68 @@
       "validation-stale-83h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
+  },
+  {
+    "id": "job-by-namrata-telegram",
+    "slug": "job-by-namrata-telegram",
+    "title": "JOB BY NAMRATA",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "government-jobs",
+    "subcategory": "Remote Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "governmentjobs"
+    ],
+    "inviteUrl": "https://t.me/jobbynamrata",
+    "description": "Daily job notification 💯🙏🏻",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "government-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 1981,
+    "memberCountSource": "https://t.me/jobbynamrata",
+    "memberCountCheckedAt": "2026-10-14T10:46:26.711Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-14T10:46:26.711Z",
+    "sourceUrls": [
+      "https://t.me/jobbynamrata"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-14T10:46:26.711Z",
+    "lastCheckedAt": "2026-10-14T10:46:26.711Z",
+    "updatedAt": "2026-10-14T10:46:26.711Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-14T10:46:26.711Z",
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1791974786711_y88f9",
+      "run_1791974789484_alxt0"
+    ],
+    "querySource": "site:t.me Remote tech jobs OR Remote job alerts",
+    "sourceHostname": "t.me"
   }
 ]

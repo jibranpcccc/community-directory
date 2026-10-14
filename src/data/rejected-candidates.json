@@ -1356,8 +1356,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-10-11T11:47:35.039Z",
-    "timesSeen": 17,
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 18,
     "title": "Singapore Careers and Job Opportunities - sgCareers"
   },
   {
@@ -1710,16 +1710,16 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-10-11T11:47:35.039Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 5
   },
   {
     "url": "https://t.me/jobprop",
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-10-11T11:47:35.039Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 5,
     "title": "Singapore JobProp"
   },
   {
@@ -2289,8 +2289,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-26T12:27:42.936Z",
-    "lastSeenAt": "2026-10-04T11:28:16.120Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 3,
     "title": "Government Jobs Alert Sarkari Naukri"
   },
   {
@@ -2494,8 +2494,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-27T16:58:43.400Z",
-    "lastSeenAt": "2026-10-12T13:42:18.315Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 4,
     "title": "LSSyEXhrvd2CekBs2nCOcX"
   },
   {
@@ -3636,8 +3636,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-10-11T11:47:35.039Z",
-    "timesSeen": 15,
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 16,
     "title": "/r/singaporejobs"
   },
   {
@@ -4250,8 +4250,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-02T15:31:08.648Z",
-    "lastSeenAt": "2026-10-11T11:47:35.039Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 6,
     "title": "SGJOB4U 🍍 (Singapore Jobs)"
   },
   {
@@ -7431,10 +7431,10 @@
   {
     "url": "https://t.me/WSGJobs_CareerAdvice",
     "platform": "telegram",
-    "reason": "wrong-niche",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-16T10:34:32.340Z",
-    "lastSeenAt": "2026-09-16T10:34:32.340Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 2,
     "title": "wsgjobs_careeradvice"
   },
   {
@@ -7442,8 +7442,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-16T10:34:32.340Z",
-    "lastSeenAt": "2026-09-16T10:34:32.340Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 2,
     "title": "Advisory"
   },
   {
@@ -9642,10 +9642,10 @@
   {
     "url": "https://t.me/techsenpais",
     "platform": "telegram",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-30T11:43:11.905Z",
-    "lastSeenAt": "2026-09-30T11:43:11.905Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 2,
     "title": "Tech Senpais"
   },
   {
@@ -10248,8 +10248,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-10-06T12:23:13.932Z",
-    "lastSeenAt": "2026-10-06T12:23:13.932Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 2,
     "title": "JobHitch SG (Part Time Jobs)"
   },
   {
@@ -10517,8 +10517,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-10-08T12:23:55.194Z",
-    "lastSeenAt": "2026-10-12T13:42:18.315Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 3,
     "title": "BndJs2bdLZbC1jkufNk0vh"
   },
   {
@@ -10980,5 +10980,32 @@
     "lastSeenAt": "2026-10-13T13:03:01.356Z",
     "timesSeen": 1,
     "title": "H04cTtnC9qqGPvdirlh2P3"
+  },
+  {
+    "url": "https://discord.gg/pFzBd9H2cw",
+    "platform": "discord",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-14T10:46:26.711Z",
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 1,
+    "title": "Buhay Digital Job Board & Work Together"
+  },
+  {
+    "url": "https://chat.whatsapp.com/J6n10rYEg0EJrVtS7CxMgD",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-14T10:46:26.711Z",
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 1,
+    "title": "Teaching Job Alerts 4"
+  },
+  {
+    "url": "https://t.me/PhilippineGo",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-14T10:46:26.711Z",
+    "lastSeenAt": "2026-10-14T10:46:26.711Z",
+    "timesSeen": 1,
+    "title": "Philippine Go"
   }
 ]
