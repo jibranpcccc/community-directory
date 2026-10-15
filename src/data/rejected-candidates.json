@@ -3634,10 +3634,10 @@
   {
     "url": "https://discord.gg/3QyqASgm3y",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-10-15T10:30:53.593Z",
-    "timesSeen": 17,
+    "lastSeenAt": "2026-10-15T15:51:17.434Z",
+    "timesSeen": 18,
     "title": "/r/singaporejobs"
   },
   {
