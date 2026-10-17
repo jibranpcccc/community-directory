@@ -3381,8 +3381,8 @@
     "platform": "whatsapp",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-10-17T14:31:46.681Z",
-    "timesSeen": 12
+    "lastSeenAt": "2026-10-17T19:47:25.262Z",
+    "timesSeen": 13
   },
   {
     "url": "https://t.me/DatascienceChats",
@@ -11379,10 +11379,10 @@
   {
     "url": "https://chat.whatsapp.com/CiBVYuUrwa3AQ6YXlyjmDZ",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-17T01:43:41.072Z",
-    "lastSeenAt": "2026-10-17T14:31:46.681Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-17T19:47:25.262Z",
+    "timesSeen": 4,
     "title": "Data Science &#064;InfraBIM"
   },
   {
