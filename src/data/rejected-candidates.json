@@ -3381,8 +3381,8 @@
     "platform": "whatsapp",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-10-17T09:53:12.499Z",
-    "timesSeen": 11
+    "lastSeenAt": "2026-10-17T14:31:46.681Z",
+    "timesSeen": 12
   },
   {
     "url": "https://t.me/DatascienceChats",
@@ -11381,8 +11381,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-10-17T01:43:41.072Z",
-    "lastSeenAt": "2026-10-17T09:53:12.499Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-17T14:31:46.681Z",
+    "timesSeen": 3,
     "title": "Data Science &#064;InfraBIM"
   },
   {
@@ -11521,5 +11521,14 @@
     "lastSeenAt": "2026-10-17T09:53:12.499Z",
     "timesSeen": 1,
     "title": "WIGMANWORKZ AIRSOFT"
+  },
+  {
+    "url": "https://t.me/remotely_jobs",
+    "platform": "telegram",
+    "title": "Ремоут &amp; Релокейт 🇺🇦",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-10-17T14:31:48.570Z",
+    "lastSeenAt": "2026-10-17T14:31:48.570Z",
+    "timesSeen": 1
   }
 ]
