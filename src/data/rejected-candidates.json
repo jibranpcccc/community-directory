@@ -1433,8 +1433,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-23T00:30:25.838Z",
-    "lastSeenAt": "2026-10-17T09:53:12.499Z",
-    "timesSeen": 17,
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 18,
     "title": "Tech Professionals - Australia & New Zealand"
   },
   {
@@ -1630,8 +1630,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-10-15T10:30:53.593Z",
-    "timesSeen": 27
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 29
   },
   {
     "url": "https://discord.gg/awHZtSf89q",
@@ -1865,8 +1865,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-24T12:25:35.427Z",
-    "lastSeenAt": "2026-09-27T11:02:27.734Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 3,
     "title": "qaqa sənsən"
   },
   {
@@ -2190,8 +2190,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-26T00:30:47.029Z",
-    "lastSeenAt": "2026-10-06T12:23:13.932Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 7,
     "title": "Official /r/Brisbane Discord"
   },
   {
@@ -2414,8 +2414,8 @@
     "platform": "discord",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-27T05:14:31.311Z",
-    "lastSeenAt": "2026-10-16T10:18:35.904Z",
-    "timesSeen": 11,
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 12,
     "title": "CS Careers Hub 🍁"
   },
   {
@@ -4786,8 +4786,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-04T10:11:44.954Z",
-    "lastSeenAt": "2026-10-16T10:18:35.904Z",
-    "timesSeen": 5
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 6
   },
   {
     "url": "https://discord.gg/jobs",
@@ -7878,10 +7878,10 @@
   {
     "url": "https://discord.gg/mW9py9e",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-18T10:14:06.131Z",
-    "lastSeenAt": "2026-10-01T22:05:13.405Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 3,
     "title": "CS Majors"
   },
   {
@@ -11135,8 +11135,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-10-15T10:30:53.593Z",
-    "lastSeenAt": "2026-10-15T10:30:53.593Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 2,
     "title": "Job Postings - Tough Tongue AI"
   },
   {
@@ -11530,5 +11530,121 @@
     "date": "2026-10-17T14:31:48.570Z",
     "lastSeenAt": "2026-10-17T14:31:48.570Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/e5fVF4aSHE",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 1,
+    "title": "Wonsulting"
+  },
+  {
+    "url": "https://discord.gg/W6Ue8VSVZ",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/g5ZEsxMZ",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/yjMZU8g",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://discord.gg/geeksforgeeks",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/geeksforgeeks_official",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/kirodotdev",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/BF8NjfEd4Y",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 1,
+    "title": "SIGDAO Foundation | Lab"
+  },
+  {
+    "url": "https://discord.gg/BM7PGMrp",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/ER8Fu4NddOxKIynVHeB7le",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/aPQUBbzuY5",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 1,
+    "title": "Full Stack Developers"
+  },
+  {
+    "url": "https://discord.gg/NgPnSj3jK",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/y8zBND",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/cZsJmkr",
+    "platform": "discord",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 1,
+    "title": "💻 Ouckah Lair"
   }
 ]

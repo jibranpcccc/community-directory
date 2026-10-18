@@ -63,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-76h",
+      "validation-stale-95h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -131,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-52h",
+      "validation-stale-72h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-52h",
+      "validation-stale-72h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -265,6 +265,74 @@
     ],
     "querySource": "site:t.me data science machine learning jobs Global Telegram",
     "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-24h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "jobs-recruitments-discord",
+    "slug": "jobs-recruitments-discord",
+    "title": "Jobs & Recruitments",
+    "platform": "discord",
+    "vertical": "jobs",
+    "category": "internships-graduate",
+    "subcategory": "Graduate & Internships",
+    "tags": [
+      "discord",
+      "jobs",
+      "internshipsgraduate"
+    ],
+    "inviteUrl": "https://discord.gg/tt4BsKPSEy",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "internships-graduate"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 567,
+    "memberCountSource": "https://discord.gg/tt4BsKPSEy",
+    "memberCountCheckedAt": "2026-10-18T10:06:42.715Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-18T10:06:42.715Z",
+    "sourceUrls": [
+      "https://discord.gg/tt4BsKPSEy"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-18T10:06:42.715Z",
+    "lastCheckedAt": "2026-10-18T10:06:42.715Z",
+    "updatedAt": "2026-10-18T10:06:42.715Z",
+    "safetyFlags": [],
+    "guildId": "1475487910836047962",
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-18T10:06:42.715Z",
+    "lastSeenAt": "2026-10-18T10:06:42.715Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1792318002715_oixog",
+      "run_1792318005412_tkkho"
+    ],
+    "querySource": "discord.gg new grad tech jobs Discord Worldwide & International",
+    "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
