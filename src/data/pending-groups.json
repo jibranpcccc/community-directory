@@ -337,5 +337,257 @@
     "autoPublishBlockedReasons": [
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
+  },
+  {
+    "id": "career-discover-jobs-telegram",
+    "slug": "career-discover-jobs-telegram",
+    "title": "Career Discover Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Global Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://t.me/careerdiscoverjobs",
+    "description": "Welcome to Job Updates, your one-stop destination for the latest job openings and career opportunities. Whether you&#39;re a fresh graduate or an experienced professional, we bring you the most current and relevant job listings to help you take the next step",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 108,
+    "memberCountSource": "https://t.me/careerdiscoverjobs",
+    "memberCountCheckedAt": "2026-10-19T01:59:04.467Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-19T01:59:04.467Z",
+    "sourceUrls": [
+      "https://t.me/careerdiscoverjobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-19T01:59:04.467Z",
+    "lastCheckedAt": "2026-10-19T01:59:04.467Z",
+    "updatedAt": "2026-10-19T01:59:04.467Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-19T01:59:04.467Z",
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1792375144467_jjgtu",
+      "run_1792375146285_8a4nm"
+    ],
+    "querySource": "site:t.me Global tech jobs OR Global job alerts",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "data-science-jobsindia-telegram",
+    "slug": "data-science-jobsindia-telegram",
+    "title": "Data Science Jobs@India",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Global Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://t.me/data_science_jobs",
+    "description": "Data Science Jobs",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 1747,
+    "memberCountSource": "https://t.me/data_science_jobs",
+    "memberCountCheckedAt": "2026-10-19T01:59:04.467Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-19T01:59:04.467Z",
+    "sourceUrls": [
+      "https://t.me/data_science_jobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-19T01:59:04.467Z",
+    "lastCheckedAt": "2026-10-19T01:59:04.467Z",
+    "updatedAt": "2026-10-19T01:59:04.467Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-19T01:59:04.467Z",
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1792375144467_jjgtu",
+      "run_1792375146878_lkkzd"
+    ],
+    "querySource": "site:t.me Global tech jobs OR Global job alerts",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "ai-jobs-telegram",
+    "slug": "ai-jobs-telegram",
+    "title": "AI Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Global Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://t.me/ai_jobs",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 194,
+    "memberCountSource": "https://t.me/ai_jobs",
+    "memberCountCheckedAt": "2026-10-19T01:59:04.467Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-19T01:59:04.467Z",
+    "sourceUrls": [
+      "https://t.me/ai_jobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-19T01:59:04.467Z",
+    "lastCheckedAt": "2026-10-19T01:59:04.467Z",
+    "updatedAt": "2026-10-19T01:59:04.467Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-19T01:59:04.467Z",
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1792375144467_jjgtu",
+      "run_1792375147276_ob3nz"
+    ],
+    "querySource": "site:t.me Global tech jobs OR Global job alerts",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "cybersecurity-jobs-telegram",
+    "slug": "cybersecurity-jobs-telegram",
+    "title": "CyberSecurity Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Global Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://t.me/cybersecurity_jobs",
+    "description": "Anyone interested to post Job requirements._____________________________________Please fill below form to submit your job Opportunities.https://forms.gle/Bw3gofvEWuipHq9dA",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 2075,
+    "memberCountSource": "https://t.me/cybersecurity_jobs",
+    "memberCountCheckedAt": "2026-10-19T01:59:04.467Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-19T01:59:04.467Z",
+    "sourceUrls": [
+      "https://t.me/cybersecurity_jobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-19T01:59:04.467Z",
+    "lastCheckedAt": "2026-10-19T01:59:04.467Z",
+    "updatedAt": "2026-10-19T01:59:04.467Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-19T01:59:04.467Z",
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1792375144467_jjgtu",
+      "run_1792375147676_187c2"
+    ],
+    "querySource": "site:t.me Global tech jobs OR Global job alerts",
+    "sourceHostname": "t.me"
   }
 ]

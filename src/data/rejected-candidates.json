@@ -756,8 +756,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-17T09:53:12.499Z",
-    "timesSeen": 27
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 28
   },
   {
     "url": "https://t.me/design_work",
@@ -772,8 +772,8 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-17T09:53:12.499Z",
-    "timesSeen": 17
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 18
   },
   {
     "url": "https://t.me/writing_jobs",
@@ -847,8 +847,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-09-27T11:02:27.734Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 4
   },
   {
     "url": "https://t.me/design_vacancies",
@@ -2752,10 +2752,10 @@
   {
     "url": "https://chat.whatsapp.com/Fed8qs7ZjsF35TeSBnvCK5",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-10-16T10:18:35.904Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 5,
     "title": "DigitAfric Ltd"
   },
   {
@@ -2796,10 +2796,10 @@
   {
     "url": "https://chat.whatsapp.com/LdzVbZvV3vy0F5jxB6r5PB",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-10-15T10:30:53.593Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 6,
     "title": "LdzVbZvV3vy0F5jxB6r5PB"
   },
   {
@@ -4058,8 +4058,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-01T10:40:51.833Z",
-    "lastSeenAt": "2026-09-04T10:11:44.954Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/Q3sxvJKjPQ",
@@ -4092,8 +4092,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-01T10:40:51.833Z",
-    "lastSeenAt": "2026-09-04T10:11:44.954Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 3
   },
   {
     "url": "https://chat.whatsapp.com/Lp9xasahYnx2mDRvUkOmxD",
@@ -5883,8 +5883,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-09T10:17:40.700Z",
-    "lastSeenAt": "2026-09-09T10:17:40.700Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 2,
     "title": "Jobs"
   },
   {
@@ -6008,10 +6008,10 @@
   {
     "url": "https://discord.gg/fvNhZkxvkt",
     "platform": "discord",
-    "reason": "wrong-niche",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-10T01:37:24.641Z",
-    "lastSeenAt": "2026-09-10T20:10:11.788Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 3,
     "title": "Deep Dish Rust"
   },
   {
@@ -6851,10 +6851,10 @@
   {
     "url": "https://chat.whatsapp.com/BIsR0Qp5YxiAez6cNQnEVN",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-14T11:06:42.041Z",
-    "lastSeenAt": "2026-10-15T10:30:53.593Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 5,
     "title": "BIsR0Qp5YxiAez6cNQnEVN"
   },
   {
@@ -11646,5 +11646,49 @@
     "lastSeenAt": "2026-10-18T10:06:42.715Z",
     "timesSeen": 1,
     "title": "💻 Ouckah Lair"
+  },
+  {
+    "url": "https://chat.whatsapp.com/5poi197iuvadb9lodictdl",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-10-19T01:59:04.467Z",
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 1,
+    "title": ""
+  },
+  {
+    "url": "https://t.me/itworksolim",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-19T01:59:04.467Z",
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 1,
+    "title": "Itworks.olim.high-tech"
+  },
+  {
+    "url": "https://discord.gg/NCubfP7CDX",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-19T01:59:04.467Z",
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 1,
+    "title": "IGDA IIT"
+  },
+  {
+    "url": "https://discord.gg/QEuTNTrvve",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-19T01:59:04.467Z",
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 1,
+    "title": "LOGICA UIC"
+  },
+  {
+    "url": "https://discord.gg/XbHxutaEAW",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-19T01:59:04.467Z",
+    "lastSeenAt": "2026-10-19T01:59:04.467Z",
+    "timesSeen": 1
   }
 ]
