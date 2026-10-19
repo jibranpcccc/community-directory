@@ -211,11 +211,11 @@
   {
     "url": "https://discord.gg/nN7U2rPCwR",
     "platform": "discord",
-    "reason": "wrong-niche",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "title": "AEC Collective",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 2,
-    "lastSeenAt": "2026-10-07T12:12:12.331Z"
+    "timesSeen": 3,
+    "lastSeenAt": "2026-10-19T17:51:15.547Z"
   },
   {
     "url": "https://discord.gg/x4ET4WM29w",
@@ -11829,5 +11829,13 @@
     "lastSeenAt": "2026-10-19T11:26:30.149Z",
     "timesSeen": 1,
     "title": "IBYDEta9Mf042yXQyzHimw"
+  },
+  {
+    "url": "https://discord.gg/X5qUJN",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-10-19T17:51:15.547Z",
+    "lastSeenAt": "2026-10-19T17:51:15.547Z",
+    "timesSeen": 1
   }
 ]
