@@ -2549,10 +2549,10 @@
   {
     "url": "https://chat.whatsapp.com/Fg8ZJJowVzX5La7Cb85An1",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-08-27T16:58:43.400Z",
-    "lastSeenAt": "2026-09-19T10:02:00.611Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-10-20T20:58:31.532Z",
+    "timesSeen": 6,
     "title": "Law / LLB Opportunities &#x1f393;"
   },
   {
@@ -2560,8 +2560,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-27T16:58:43.400Z",
-    "lastSeenAt": "2026-09-19T10:02:00.611Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-10-20T20:58:31.532Z",
+    "timesSeen": 6,
     "title": "Social Work Opportunities with STUFNews.com 1 &#x1f393;"
   },
   {
@@ -4505,10 +4505,10 @@
   {
     "url": "https://chat.whatsapp.com/DXO1mdvtC3t8kJKkWReaFf",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-03T10:16:47.914Z",
-    "lastSeenAt": "2026-10-12T13:42:18.315Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-10-20T20:58:31.532Z",
+    "timesSeen": 6,
     "title": "Marketing, PR, Comms 1 &#x1f393;"
   },
   {
@@ -4516,8 +4516,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-03T10:16:47.914Z",
-    "lastSeenAt": "2026-09-19T10:02:00.611Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-20T20:58:31.532Z",
+    "timesSeen": 5,
     "title": "SHEQ Interns, Jobs, B..1&#x1f393;"
   },
   {
@@ -7856,8 +7856,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-18T10:14:06.131Z",
-    "lastSeenAt": "2026-09-18T10:14:06.131Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-20T20:58:31.532Z",
+    "timesSeen": 2,
     "title": "Student Bursars&amp;Interns 1"
   },
   {
@@ -11983,5 +11983,23 @@
     "lastSeenAt": "2026-10-20T10:36:55.567Z",
     "timesSeen": 1,
     "title": "Visa Inc Interns & New Grads"
+  },
+  {
+    "url": "https://chat.whatsapp.com/Hj8OPooaUUv9p1xJP8qVvI",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-10-20T20:58:31.532Z",
+    "lastSeenAt": "2026-10-20T20:58:31.532Z",
+    "timesSeen": 1,
+    "title": ""
+  },
+  {
+    "url": "https://chat.whatsapp.com/CiSPiy9XaAPBsSZdPKMGSW",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-10-20T20:58:31.532Z",
+    "lastSeenAt": "2026-10-20T20:58:31.532Z",
+    "timesSeen": 1,
+    "title": "Supply Chain/Logistics 3&#x1f393;"
   }
 ]
