@@ -759,32 +759,32 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-21T10:47:43.301Z",
-    "timesSeen": 37
+    "lastSeenAt": "2026-10-21T20:59:19.772Z",
+    "timesSeen": 38
   },
   {
     "url": "https://t.me/design_work",
     "platform": "telegram",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-21T10:47:43.301Z",
-    "timesSeen": 8
+    "lastSeenAt": "2026-10-21T20:59:19.772Z",
+    "timesSeen": 9
   },
   {
     "url": "https://t.me/itfreelance",
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-21T10:47:43.301Z",
-    "timesSeen": 24
+    "lastSeenAt": "2026-10-21T20:59:19.772Z",
+    "timesSeen": 25
   },
   {
     "url": "https://t.me/writing_jobs",
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-21T10:47:43.301Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-10-21T20:59:19.772Z",
+    "timesSeen": 6,
     "title": "𝙒𝙍𝙄𝙏𝙄𝙉𝙂 𝙅𝙊𝘽"
   },
   {
@@ -792,8 +792,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-21T10:47:43.301Z",
-    "timesSeen": 9
+    "lastSeenAt": "2026-10-21T20:59:19.772Z",
+    "timesSeen": 10
   },
   {
     "url": "https://t.me/freelancehunt_jobs",
@@ -833,16 +833,16 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-21T10:47:43.301Z",
-    "timesSeen": 6
+    "lastSeenAt": "2026-10-21T20:59:19.772Z",
+    "timesSeen": 7
   },
   {
     "url": "https://t.me/marketing_vacancies",
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-20T10:36:55.567Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-10-21T20:59:19.772Z",
+    "timesSeen": 6,
     "title": "Маркетинг. Вакансии без воды"
   },
   {
@@ -12182,6 +12182,14 @@
     "reason": "dead-link",
     "date": "2026-10-21T16:12:41.341Z",
     "lastSeenAt": "2026-10-21T16:12:41.341Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/findervc",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-10-21T20:59:19.772Z",
+    "lastSeenAt": "2026-10-21T20:59:19.772Z",
     "timesSeen": 1
   }
 ]
