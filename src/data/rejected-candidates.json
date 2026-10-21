@@ -757,10 +757,10 @@
   {
     "url": "https://t.me/remotework",
     "platform": "telegram",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-20T10:36:55.567Z",
-    "timesSeen": 31
+    "lastSeenAt": "2026-10-21T02:09:17.937Z",
+    "timesSeen": 32
   },
   {
     "url": "https://t.me/design_work",
@@ -806,10 +806,10 @@
   {
     "url": "https://t.me/freelance_today",
     "platform": "telegram",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-09-27T11:02:27.734Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-21T02:09:17.937Z",
+    "timesSeen": 3,
     "title": "Freelance.Today"
   },
   {
@@ -866,8 +866,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-09-27T15:53:35.565Z",
-    "timesSeen": 5
+    "lastSeenAt": "2026-10-21T02:09:17.937Z",
+    "timesSeen": 6
   },
   {
     "url": "https://t.me/developer_jobs",
@@ -901,8 +901,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-08-21T04:42:49.346Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-21T02:09:17.937Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/content_managers",
@@ -915,10 +915,10 @@
   {
     "url": "https://t.me/digital_nomads",
     "platform": "telegram",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-17T09:53:12.499Z",
-    "timesSeen": 12
+    "lastSeenAt": "2026-10-21T02:09:17.937Z",
+    "timesSeen": 13
   },
   {
     "url": "https://t.me/web_designers",
@@ -955,10 +955,10 @@
   {
     "url": "https://t.me/remotepros",
     "platform": "telegram",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-09-27T20:32:11.298Z",
-    "timesSeen": 7
+    "lastSeenAt": "2026-10-21T02:09:17.937Z",
+    "timesSeen": 8
   },
   {
     "url": "https://t.me/coders_jobs",
@@ -1016,8 +1016,8 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-09-27T11:02:27.734Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-10-21T02:09:17.937Z",
+    "timesSeen": 5
   },
   {
     "url": "https://t.me/remote_sales",
@@ -1032,8 +1032,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-20T10:36:55.567Z",
-    "timesSeen": 9
+    "lastSeenAt": "2026-10-21T02:09:17.937Z",
+    "timesSeen": 10
   },
   {
     "url": "https://t.me/frontend_jobs",
