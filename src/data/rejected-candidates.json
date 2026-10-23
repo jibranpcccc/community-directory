@@ -166,7 +166,9 @@
     "platform": "discord",
     "title": "Lomos Archilabs",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
-    "date": "2026-08-19T08:33:40.620Z"
+    "date": "2026-08-19T08:33:40.620Z",
+    "timesSeen": 2,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z"
   },
   {
     "url": "https://discord.gg/hT7JwtbWnm",
@@ -1359,8 +1361,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-10-21T10:47:43.301Z",
-    "timesSeen": 19,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 20,
     "title": "Singapore Careers and Job Opportunities - sgCareers"
   },
   {
@@ -1633,8 +1635,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-10-22T10:54:32.072Z",
-    "timesSeen": 34
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 35
   },
   {
     "url": "https://discord.gg/awHZtSf89q",
@@ -1902,8 +1904,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-24T12:25:35.427Z",
-    "lastSeenAt": "2026-10-13T22:04:44.560Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 5,
     "title": "The Job Alert"
   },
   {
@@ -2417,8 +2419,8 @@
     "platform": "discord",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-27T05:14:31.311Z",
-    "lastSeenAt": "2026-10-18T10:06:42.715Z",
-    "timesSeen": 12,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 13,
     "title": "CS Careers Hub 🍁"
   },
   {
@@ -3023,8 +3025,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-29T11:52:58.872Z",
-    "lastSeenAt": "2026-10-16T10:18:35.904Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 6,
     "title": "Placement + Interview Prep + Courses &#x1f3af;&#x1f468;&#x200d;&#x1f4bb;"
   },
   {
@@ -3050,8 +3052,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-29T11:52:58.872Z",
-    "lastSeenAt": "2026-10-10T11:33:26.843Z",
-    "timesSeen": 7,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 8,
     "title": "Freshershunt - Off Campus Drive Updates"
   },
   {
@@ -3066,10 +3068,10 @@
   {
     "url": "https://t.me/DevSG",
     "platform": "telegram",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-08-29T11:52:58.872Z",
-    "lastSeenAt": "2026-10-09T12:16:03.815Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 4
   },
   {
     "url": "https://t.me/it_jobs_uk",
@@ -4120,8 +4122,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-01T10:40:51.833Z",
-    "lastSeenAt": "2026-10-15T10:30:53.593Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 4,
     "title": "DownUnderDevs"
   },
   {
@@ -4240,8 +4242,8 @@
     "platform": "telegram",
     "reason": "unknown-status",
     "date": "2026-09-02T15:31:08.648Z",
-    "lastSeenAt": "2026-09-12T09:45:27.340Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 3
   },
   {
     "url": "https://t.me/jsc-ja-nonpmet",
@@ -4842,8 +4844,8 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-09-05T09:56:13.493Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/studentclubcanada",
@@ -4858,8 +4860,8 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-09-05T09:56:13.493Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/canadadream",
@@ -5016,10 +5018,10 @@
   {
     "url": "https://discord.gg/techopportunityclub",
     "platform": "discord",
-    "reason": "dead-link",
+    "reason": "unknown-status",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-09-06T09:49:59.766Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 4
   },
   {
     "url": "https://discord.gg/klinncommunity",
@@ -5108,8 +5110,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-09-29T11:44:22.930Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 5,
     "title": "Students channel"
   },
   {
@@ -5125,8 +5127,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-10-19T11:26:30.149Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 4,
     "title": "Krishan Kumar - Jobs &amp; Internships Updates"
   },
   {
@@ -5140,10 +5142,11 @@
   {
     "url": "https://discord.gg/Xpk2bPFZWt",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-09-05T09:56:13.493Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 2,
+    "title": "r/StudyInTheNetherlands"
   },
   {
     "url": "https://chat.whatsapp.com/D2n6MEdY0fj72tf60qeYXC",
@@ -5303,8 +5306,8 @@
     "platform": "discord",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-06T09:49:59.766Z",
-    "lastSeenAt": "2026-09-29T11:44:22.930Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 3,
     "title": "CareerCompass"
   },
   {
@@ -5529,10 +5532,10 @@
   {
     "url": "https://discord.gg/JzHT6T4xr4",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-07T11:01:56.391Z",
-    "lastSeenAt": "2026-09-18T20:04:49.139Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 5,
     "title": "Crossing Lears"
   },
   {
@@ -6464,8 +6467,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-12T09:45:27.340Z",
-    "lastSeenAt": "2026-10-19T11:26:30.149Z",
-    "timesSeen": 11,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 12,
     "title": "r/BTechtards"
   },
   {
@@ -6892,8 +6895,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-09-14T11:06:42.041Z",
-    "lastSeenAt": "2026-10-09T12:16:03.815Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 3
   },
   {
     "url": "https://t.me/TechStartupjobsSG",
@@ -6908,8 +6911,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-14T11:06:42.041Z",
-    "lastSeenAt": "2026-10-09T12:16:03.815Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 3,
     "title": "DevOpsSG"
   },
   {
@@ -6925,8 +6928,8 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-14T11:06:42.041Z",
-    "lastSeenAt": "2026-09-14T11:06:42.041Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/Internshipupdatesfreveryone",
@@ -6941,10 +6944,10 @@
     "url": "https://t.me/hireupgrad",
     "platform": "telegram",
     "title": "HireUpGrad | Job Updates",
-    "reason": "insufficient-publication-confidence",
+    "reason": "unconfirmed-target-market",
     "date": "2026-09-14T11:06:50.846Z",
-    "lastSeenAt": "2026-09-14T11:06:50.846Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/jobs_and_internships_updates",
@@ -7439,8 +7442,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-16T10:34:32.340Z",
-    "lastSeenAt": "2026-10-14T10:46:26.711Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 3,
     "title": "wsgjobs_careeradvice"
   },
   {
@@ -7890,10 +7893,10 @@
   {
     "url": "https://discord.gg/KtwtG7M6Jb",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-18T10:14:06.131Z",
-    "lastSeenAt": "2026-09-18T10:14:06.131Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 2,
     "title": "Syncloop"
   },
   {
@@ -8310,8 +8313,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-21T21:18:34.688Z",
-    "lastSeenAt": "2026-09-21T21:18:34.688Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/PUCHZvw",
@@ -9693,10 +9696,10 @@
   {
     "url": "https://discord.gg/H5wrcdEV",
     "platform": "discord",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-30T11:43:11.905Z",
-    "lastSeenAt": "2026-09-30T11:43:11.905Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/wPMsEJmqrb",
@@ -9960,8 +9963,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-10-02T11:50:09.586Z",
-    "lastSeenAt": "2026-10-02T11:50:09.586Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/realengineering",
@@ -11829,8 +11832,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-10-19T11:26:30.149Z",
-    "lastSeenAt": "2026-10-19T11:26:30.149Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 3,
     "title": "IBYDEta9Mf042yXQyzHimw"
   },
   {
@@ -12374,6 +12377,234 @@
     "reason": "insufficient-publication-confidence",
     "date": "2026-10-22T10:54:45.055Z",
     "lastSeenAt": "2026-10-22T10:54:45.055Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/6MYy2b3zSw",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/XpzHtSn",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/SwUpdVGkTy",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/FcSZRDEjur",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/germanystudenthelp",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/germanystudentschat",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/netherlands",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1,
+    "title": "Netherlands"
+  },
+  {
+    "url": "https://discord.gg/SQ2Ux2upTy",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1,
+    "title": "WielerGenoten | Samen op de fiets!"
+  },
+  {
+    "url": "https://discord.gg/AqzkJNjhR",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/Pj2YPXP",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1,
+    "title": "Estudyanteng Pinoy"
+  },
+  {
+    "url": "https://discord.gg/studywithme",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1,
+    "title": "Study With Me"
+  },
+  {
+    "url": "https://discord.gg/sssRDaaUx",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1,
+    "title": "Trancapecho Football Group"
+  },
+  {
+    "url": "https://chat.whatsapp.com/FSjW5rPwcBSBQdRwexnxME",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1,
+    "title": "General"
+  },
+  {
+    "url": "https://discord.gg/ugWsVbRxkm",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1,
+    "title": "Aao Code Kare"
+  },
+  {
+    "url": "https://discord.gg/yx3wdytgfA",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1,
+    "title": "Syncloop"
+  },
+  {
+    "url": "https://discord.gg/UswBsduwcD",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1,
+    "title": "Zapply"
+  },
+  {
+    "url": "https://discord.gg/speedyapply",
+    "platform": "discord",
+    "reason": "unknown-status",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/thestemspectrum",
+    "platform": "discord",
+    "reason": "unknown-status",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/WZ6RGgVkUs",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1,
+    "title": "Nestoria"
+  },
+  {
+    "url": "https://t.me/GlobalInternshipAlerts",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/DevITJobs_UK",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/uktechsoftwarejobs",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/D34yDXi45d56KZVMbzJYEw",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1,
+    "title": "Designers Syd"
+  },
+  {
+    "url": "https://chat.whatsapp.com/IYfEzHtNFjPDl1jdV7sotz",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/freshershunt24",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1,
+    "title": "Freshershunt"
+  },
+  {
+    "url": "https://t.me/interviewspreparation",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/GovTechBytes",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-23T10:42:40.465Z",
+    "lastSeenAt": "2026-10-23T10:42:40.465Z",
     "timesSeen": 1
   }
 ]
