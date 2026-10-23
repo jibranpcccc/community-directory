@@ -11892,19 +11892,19 @@
   {
     "url": "https://chat.whatsapp.com/Gh3enT0Wr8N5Un0jg9areJ",
     "platform": "whatsapp",
-    "reason": "unconfirmed-target-market",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-20T10:36:55.567Z",
-    "lastSeenAt": "2026-10-20T10:36:55.567Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-23T16:00:12.242Z",
+    "timesSeen": 2,
     "title": "Research Jobs Hub"
   },
   {
     "url": "https://chat.whatsapp.com/IKc5D9ozOVrGPLucdarML7",
     "platform": "whatsapp",
-    "reason": "unconfirmed-target-market",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-20T10:36:55.567Z",
-    "lastSeenAt": "2026-10-20T10:36:55.567Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-23T16:00:12.242Z",
+    "timesSeen": 2,
     "title": "Research Jobs Hub 2"
   },
   {
@@ -12606,5 +12606,72 @@
     "date": "2026-10-23T10:42:40.465Z",
     "lastSeenAt": "2026-10-23T10:42:40.465Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/DS8dnj5HdsqDxVrlOXeozv",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-23T16:00:12.242Z",
+    "lastSeenAt": "2026-10-23T16:00:12.242Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/EqO3LAxaB2kK9dd9XlYmN",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-23T16:00:12.242Z",
+    "lastSeenAt": "2026-10-23T16:00:12.242Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/KFkAq5BkYCLDvs9LfE6IAW",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-23T16:00:12.242Z",
+    "lastSeenAt": "2026-10-23T16:00:12.242Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/InaBzpexK831QtdGypIWPc",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-10-23T16:00:12.242Z",
+    "lastSeenAt": "2026-10-23T16:00:12.242Z",
+    "timesSeen": 1,
+    "title": "The CIB &amp; Financial Services Club"
+  },
+  {
+    "url": "https://chat.whatsapp.com/LZW830ZK96LHS7JCSXYXcg",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-23T16:00:12.242Z",
+    "lastSeenAt": "2026-10-23T16:00:12.242Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/DMVRar3vcKxDrqM8olW9mL",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-10-23T16:00:12.242Z",
+    "lastSeenAt": "2026-10-23T16:00:12.242Z",
+    "timesSeen": 1,
+    "title": "October - Data Science Foundation Bootcamp-UK"
+  },
+  {
+    "url": "https://chat.whatsapp.com/KWv2l3LvYn8BoEpYPD01hU",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-23T16:00:12.242Z",
+    "lastSeenAt": "2026-10-23T16:00:12.242Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/C6LY95sLSEpHOlZORRPaEq",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-10-23T16:00:12.242Z",
+    "lastSeenAt": "2026-10-23T16:00:12.242Z",
+    "timesSeen": 1,
+    "title": "General chat &#x1f4ac;"
   }
 ]
