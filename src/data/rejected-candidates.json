@@ -1627,10 +1627,10 @@
   {
     "url": "https://discord.gg/careercompass",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-10-24T09:59:01.684Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-10-24T19:55:17.615Z",
+    "timesSeen": 5
   },
   {
     "url": "https://discord.gg/job",
@@ -2691,10 +2691,10 @@
   {
     "url": "https://discord.gg/cscareers",
     "platform": "discord",
-    "reason": "wrong-niche",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-10-24T09:59:01.684Z",
-    "timesSeen": 9,
+    "lastSeenAt": "2026-10-24T19:55:17.615Z",
+    "timesSeen": 10,
     "title": "cscareers.dev"
   },
   {
@@ -5020,10 +5020,10 @@
   {
     "url": "https://discord.gg/techopportunityclub",
     "platform": "discord",
-    "reason": "unknown-status",
+    "reason": "dead-link",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-10-23T10:42:40.465Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-10-24T19:55:17.615Z",
+    "timesSeen": 5
   },
   {
     "url": "https://discord.gg/klinncommunity",
@@ -5129,8 +5129,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-10-24T14:58:39.934Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-10-24T19:55:17.615Z",
+    "timesSeen": 6,
     "title": "Krishan Kumar - Jobs &amp; Internships Updates"
   },
   {
@@ -12494,10 +12494,10 @@
   {
     "url": "https://discord.gg/ugWsVbRxkm",
     "platform": "discord",
-    "reason": "wrong-niche",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-23T10:42:40.465Z",
-    "lastSeenAt": "2026-10-23T10:42:40.465Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-24T19:55:17.615Z",
+    "timesSeen": 2,
     "title": "Aao Code Kare"
   },
   {
@@ -12766,10 +12766,10 @@
   {
     "url": "https://discord.gg/tJeyxxsef9",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-24T14:58:39.934Z",
-    "lastSeenAt": "2026-10-24T14:58:39.934Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-24T19:55:17.615Z",
+    "timesSeen": 2,
     "title": "Jobright.ai"
   },
   {
@@ -12788,5 +12788,30 @@
     "lastSeenAt": "2026-10-24T14:58:39.934Z",
     "timesSeen": 1,
     "title": "Data Science Dojo"
+  },
+  {
+    "url": "https://discord.gg/k89Mku9ApU",
+    "platform": "discord",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-24T19:55:17.615Z",
+    "lastSeenAt": "2026-10-24T19:55:17.615Z",
+    "timesSeen": 1,
+    "title": "UBC Internships & Co-op"
+  },
+  {
+    "url": "https://discord.gg/xF3WbYDubF",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-24T19:55:17.615Z",
+    "lastSeenAt": "2026-10-24T19:55:17.615Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/exe-guild",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-10-24T19:55:17.615Z",
+    "lastSeenAt": "2026-10-24T19:55:17.615Z",
+    "timesSeen": 1
   }
 ]
