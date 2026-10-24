@@ -5129,8 +5129,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-10-23T10:42:40.465Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-24T14:58:39.934Z",
+    "timesSeen": 5,
     "title": "Krishan Kumar - Jobs &amp; Internships Updates"
   },
   {
@@ -12762,5 +12762,31 @@
     "date": "2026-10-24T09:59:08.568Z",
     "lastSeenAt": "2026-10-24T09:59:08.568Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/tJeyxxsef9",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-24T14:58:39.934Z",
+    "lastSeenAt": "2026-10-24T14:58:39.934Z",
+    "timesSeen": 1,
+    "title": "Jobright.ai"
+  },
+  {
+    "url": "https://discord.gg/EaDDmgT82",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-10-24T14:58:39.934Z",
+    "lastSeenAt": "2026-10-24T14:58:39.934Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/hyXEnPv7ZY",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-24T14:58:39.934Z",
+    "lastSeenAt": "2026-10-24T14:58:39.934Z",
+    "timesSeen": 1,
+    "title": "Data Science Dojo"
   }
 ]
