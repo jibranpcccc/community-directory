@@ -1,73 +1,5 @@
 [
   {
-    "id": "data-science-amp-ml-jobs-telegram",
-    "slug": "data-science-amp-ml-jobs-telegram",
-    "title": "Data Science 🛸 &amp; ML Jobs за рубежом",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Software Engineering",
-    "tags": [
-      "telegram",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://t.me/opento_data",
-    "description": "✈️ Строго вне РФ, РБ&#33; Разместить вакансию: @opento_proРеклама: @opento_saleЛучшие вакансии в сфере Data Science, Data Engineer, аналитики, ML, CV, нейросетей и анализа данных. Позиции за рубежом и на удаленку. ЗП в &#036;, €. ✈️ Вне РФ, вне РБ.",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 7589,
-    "memberCountSource": "https://t.me/opento_data",
-    "memberCountCheckedAt": "2026-10-17T09:53:12.499Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-10-17T09:53:12.499Z",
-    "sourceUrls": [
-      "https://t.me/opento_data"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-10-17T09:53:12.499Z",
-    "lastCheckedAt": "2026-10-17T09:53:12.499Z",
-    "updatedAt": "2026-10-17T09:53:12.499Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-10-17T09:53:12.499Z",
-    "lastSeenAt": "2026-10-17T09:53:12.499Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1792230792499_fluc5",
-      "run_1792230792912_7ukuk"
-    ],
-    "querySource": "site:t.me data science machine learning jobs Global Telegram",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-145h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "jobs-recruitments-discord",
     "slug": "jobs-recruitments-discord",
     "title": "Jobs & Recruitments",
@@ -131,7 +63,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-121h",
+      "validation-stale-144h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-105h",
+      "validation-stale-128h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -267,7 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-105h",
+      "validation-stale-128h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -335,7 +267,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-105h",
+      "validation-stale-128h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -403,7 +335,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-105h",
+      "validation-stale-128h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -475,7 +407,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-72h",
+      "validation-stale-95h",
       "duplicate-published: Matching community title on telegram: \"Remote Jobs👨‍💻\" vs \"Remote Jobs\""
     ]
   },
@@ -543,7 +475,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-48h",
+      "validation-stale-71h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -611,7 +543,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-48h",
+      "validation-stale-71h",
       "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   }
