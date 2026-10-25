@@ -1438,10 +1438,10 @@
   {
     "url": "https://discord.gg/kDQ3nGufG8",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-23T00:30:25.838Z",
-    "lastSeenAt": "2026-10-24T02:07:09.234Z",
-    "timesSeen": 20,
+    "lastSeenAt": "2026-10-25T20:04:56.530Z",
+    "timesSeen": 21,
     "title": "Tech Professionals - Australia & New Zealand"
   },
   {
