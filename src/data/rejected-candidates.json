@@ -158,8 +158,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 13,
-    "lastSeenAt": "2026-10-20T10:36:55.567Z"
+    "timesSeen": 14,
+    "lastSeenAt": "2026-10-25T10:19:30.208Z"
   },
   {
     "url": "https://discord.gg/Kfx2EsnKnK",
@@ -1363,8 +1363,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-10-23T10:42:40.465Z",
-    "timesSeen": 20,
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 21,
     "title": "Singapore Careers and Job Opportunities - sgCareers"
   },
   {
@@ -1637,8 +1637,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-10-24T02:07:09.234Z",
-    "timesSeen": 36
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 37
   },
   {
     "url": "https://discord.gg/awHZtSf89q",
@@ -2296,8 +2296,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-26T12:27:42.936Z",
-    "lastSeenAt": "2026-10-14T10:46:26.711Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 4,
     "title": "Government Jobs Alert Sarkari Naukri"
   },
   {
@@ -2421,8 +2421,8 @@
     "platform": "discord",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-27T05:14:31.311Z",
-    "lastSeenAt": "2026-10-23T10:42:40.465Z",
-    "timesSeen": 13,
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 14,
     "title": "CS Careers Hub 🍁"
   },
   {
@@ -5501,10 +5501,10 @@
   {
     "url": "https://discord.gg/m7YWfSCu84",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-07T11:01:56.391Z",
-    "lastSeenAt": "2026-09-07T11:01:56.391Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 2,
     "title": "𝗖𝗘𝗕𝗨 𝗧𝗔𝗠𝗕𝗔𝗬𝗔𝗡"
   },
   {
@@ -5528,8 +5528,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-07T11:01:56.391Z",
-    "lastSeenAt": "2026-09-07T11:01:56.391Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/JzHT6T4xr4",
@@ -5543,10 +5543,10 @@
   {
     "url": "https://discord.gg/XcCfdJmP",
     "platform": "discord",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-07T11:01:56.391Z",
-    "lastSeenAt": "2026-09-07T11:01:56.391Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/qUKfTT",
@@ -5935,8 +5935,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-09T10:17:40.700Z",
-    "lastSeenAt": "2026-10-05T12:51:11.167Z",
-    "timesSeen": 7,
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 8,
     "title": "South-African Tech Channel"
   },
   {
@@ -6469,8 +6469,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-12T09:45:27.340Z",
-    "lastSeenAt": "2026-10-23T10:42:40.465Z",
-    "timesSeen": 12,
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 13,
     "title": "r/BTechtards"
   },
   {
@@ -7827,8 +7827,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-18T10:14:06.131Z",
-    "lastSeenAt": "2026-10-24T09:59:01.684Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 5
   },
   {
     "url": "https://discord.gg/QgxU2bcyva",
@@ -7886,10 +7886,10 @@
   {
     "url": "https://discord.gg/mW9py9e",
     "platform": "discord",
-    "reason": "wrong-niche",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-18T10:14:06.131Z",
-    "lastSeenAt": "2026-10-18T10:06:42.715Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 4,
     "title": "CS Majors"
   },
   {
@@ -8272,10 +8272,11 @@
   {
     "url": "https://discord.gg/pandesal-dev",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-21T11:18:49.128Z",
-    "lastSeenAt": "2026-09-21T11:18:49.128Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 2,
+    "title": "pandesal.dev"
   },
   {
     "url": "https://discord.gg/6VzUu8rf",
@@ -11593,8 +11594,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-18T10:06:42.715Z",
-    "lastSeenAt": "2026-10-18T10:06:42.715Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/BF8NjfEd4Y",
@@ -11896,8 +11897,8 @@
     "platform": "whatsapp",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-20T10:36:55.567Z",
-    "lastSeenAt": "2026-10-23T16:00:12.242Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 3,
     "title": "Research Jobs Hub"
   },
   {
@@ -12870,6 +12871,67 @@
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-25T01:54:03.486Z",
     "lastSeenAt": "2026-10-25T01:54:03.486Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/HosdZkax5pvG1O7BGrIj1F",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-25T10:19:30.208Z",
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 1,
+    "title": "HosdZkax5pvG1O7BGrIj1F"
+  },
+  {
+    "url": "https://discord.gg/R5tsfdaG",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-10-25T10:19:30.208Z",
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/freejobsinformation",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-25T10:19:30.208Z",
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 1,
+    "title": "FREE JOBS INFORMATION"
+  },
+  {
+    "url": "https://chat.whatsapp.com/EAeoczoUp8t9CDW4M6dNIv",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-25T10:19:30.208Z",
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/6mT4g5S4mH",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-25T10:19:30.208Z",
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 1,
+    "title": "SUNY Albany"
+  },
+  {
+    "url": "https://discord.gg/mzASG5q9HW",
+    "platform": "discord",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-25T10:19:30.208Z",
+    "lastSeenAt": "2026-10-25T10:19:30.208Z",
+    "timesSeen": 1,
+    "title": "Jobify 🎃 | Find Your Job!"
+  },
+  {
+    "url": "https://discord.gg/tt4BsKPSEy",
+    "platform": "discord",
+    "title": "Jobs & Recruitments",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-10-25T10:19:32.239Z",
+    "lastSeenAt": "2026-10-25T10:19:32.239Z",
     "timesSeen": 1
   }
 ]
