@@ -11143,8 +11143,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-10-15T10:30:53.593Z",
-    "lastSeenAt": "2026-10-22T10:54:32.072Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-25T01:54:03.486Z",
+    "timesSeen": 4,
     "title": "Job Postings - Tough Tongue AI"
   },
   {
@@ -12812,6 +12812,64 @@
     "reason": "dead-link",
     "date": "2026-10-24T19:55:17.615Z",
     "lastSeenAt": "2026-10-24T19:55:17.615Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/t7yGKvaAPy",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-10-25T01:54:03.486Z",
+    "lastSeenAt": "2026-10-25T01:54:03.486Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/qD6yd9jDpG",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-10-25T01:54:03.486Z",
+    "lastSeenAt": "2026-10-25T01:54:03.486Z",
+    "timesSeen": 1,
+    "title": "CISSA"
+  },
+  {
+    "url": "https://chat.whatsapp.com/JvEwSlSUG4L1Y08jC2VDpY",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-25T01:54:03.486Z",
+    "lastSeenAt": "2026-10-25T01:54:03.486Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/ENkMsxYbsS4HBGyQJ2ORth",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-25T01:54:03.486Z",
+    "lastSeenAt": "2026-10-25T01:54:03.486Z",
+    "timesSeen": 1,
+    "title": "Bengaluru"
+  },
+  {
+    "url": "https://chat.whatsapp.com/B6Yx05TOUvD82VdLnjCBkS",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-25T01:54:03.486Z",
+    "lastSeenAt": "2026-10-25T01:54:03.486Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/DXvbXg1hCA48FMRRLZhoTw",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-25T01:54:03.486Z",
+    "lastSeenAt": "2026-10-25T01:54:03.486Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/D9p3HDMjfG0LIH1cyJv7ld",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-25T01:54:03.486Z",
+    "lastSeenAt": "2026-10-25T01:54:03.486Z",
     "timesSeen": 1
   }
 ]
