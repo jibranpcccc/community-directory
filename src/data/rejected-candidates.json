@@ -5771,8 +5771,8 @@
     "platform": "whatsapp",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-08T10:13:10.042Z",
-    "lastSeenAt": "2026-10-21T10:47:43.301Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-10-26T11:39:38.104Z",
+    "timesSeen": 7,
     "title": "DHNppu0p04q6nzlmZCwebr"
   },
   {
@@ -12950,5 +12950,41 @@
     "lastSeenAt": "2026-10-25T15:08:23.624Z",
     "timesSeen": 1,
     "title": "Talent Hub by Big Break Foundation"
+  },
+  {
+    "url": "https://t.me/careerdiscoverjobs",
+    "platform": "telegram",
+    "title": "Career Discover Jobs",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-10-26T11:39:38.122Z",
+    "lastSeenAt": "2026-10-26T11:39:38.122Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/data_science_jobs",
+    "platform": "telegram",
+    "title": "Data Science Jobs@India",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-10-26T11:39:38.122Z",
+    "lastSeenAt": "2026-10-26T11:39:38.122Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/ai_jobs",
+    "platform": "telegram",
+    "title": "AI Jobs",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-10-26T11:39:38.122Z",
+    "lastSeenAt": "2026-10-26T11:39:38.122Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/cybersecurity_jobs",
+    "platform": "telegram",
+    "title": "CyberSecurity Jobs",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-10-26T11:39:38.122Z",
+    "lastSeenAt": "2026-10-26T11:39:38.122Z",
+    "timesSeen": 1
   }
 ]
