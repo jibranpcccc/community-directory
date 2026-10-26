@@ -5620,8 +5620,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-08T01:34:46.501Z",
-    "lastSeenAt": "2026-10-04T11:28:16.120Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-10-26T22:01:06.961Z",
+    "timesSeen": 7,
     "title": "Clara Immigration"
   },
   {
@@ -5769,10 +5769,10 @@
   {
     "url": "https://chat.whatsapp.com/DHNppu0p04q6nzlmZCwebr",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-08T10:13:10.042Z",
-    "lastSeenAt": "2026-10-26T11:39:38.104Z",
-    "timesSeen": 7,
+    "lastSeenAt": "2026-10-26T22:01:06.961Z",
+    "timesSeen": 8,
     "title": "DHNppu0p04q6nzlmZCwebr"
   },
   {
@@ -5780,8 +5780,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-08T10:13:10.042Z",
-    "lastSeenAt": "2026-10-21T16:12:41.341Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-26T22:01:06.961Z",
+    "timesSeen": 5,
     "title": "Owafk Africa"
   },
   {
@@ -6084,10 +6084,10 @@
   {
     "url": "https://t.me/+MJD1X1R9r2VkNTU0",
     "platform": "telegram",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-10T10:10:45.273Z",
-    "lastSeenAt": "2026-10-26T17:44:36.394Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-10-26T22:01:06.961Z",
+    "timesSeen": 7,
     "title": "Vlogs with Offy"
   },
   {
@@ -6998,10 +6998,10 @@
   {
     "url": "https://discord.gg/EUYmAeqnbd",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-15T10:37:47.840Z",
-    "lastSeenAt": "2026-09-15T10:37:47.840Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-26T22:01:06.961Z",
+    "timesSeen": 2,
     "title": "De Huiskamer"
   },
   {
@@ -9596,10 +9596,10 @@
   {
     "url": "https://discord.gg/kHYA9ntEEE",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-09-29T11:44:22.930Z",
-    "lastSeenAt": "2026-09-29T11:44:22.930Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-26T22:01:06.961Z",
+    "timesSeen": 2
   },
   {
     "url": "https://chat.whatsapp.com/EBrZfUSowijI96TxuRIFZ1",
@@ -13002,6 +13002,40 @@
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-26T17:44:36.394Z",
     "lastSeenAt": "2026-10-26T17:44:36.394Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/mielaw",
+    "platform": "telegram",
+    "reason": "wrong-niche",
+    "date": "2026-10-26T22:01:06.961Z",
+    "lastSeenAt": "2026-10-26T22:01:06.961Z",
+    "timesSeen": 1,
+    "title": "موسسه ملکپور"
+  },
+  {
+    "url": "https://chat.whatsapp.com/IqgTCT6Km8O5sEUkEJgk1x",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-26T22:01:06.961Z",
+    "lastSeenAt": "2026-10-26T22:01:06.961Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/+5YHp9eU8Dds1MWEy",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-26T22:01:06.961Z",
+    "lastSeenAt": "2026-10-26T22:01:06.961Z",
+    "timesSeen": 1,
+    "title": "Работа в Дубае (вакансии&#33;)"
+  },
+  {
+    "url": "https://t.me/+YfOcxLpKmHxhODJi",
+    "platform": "telegram",
+    "reason": "unknown-status",
+    "date": "2026-10-26T22:01:06.961Z",
+    "lastSeenAt": "2026-10-26T22:01:06.961Z",
     "timesSeen": 1
   }
 ]
