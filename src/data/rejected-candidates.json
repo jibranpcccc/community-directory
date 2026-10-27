@@ -158,8 +158,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 14,
-    "lastSeenAt": "2026-10-25T10:19:30.208Z"
+    "timesSeen": 15,
+    "lastSeenAt": "2026-10-27T11:13:34.101Z"
   },
   {
     "url": "https://discord.gg/Kfx2EsnKnK",
@@ -763,8 +763,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-21T20:59:19.772Z",
-    "timesSeen": 38
+    "lastSeenAt": "2026-10-27T11:13:34.101Z",
+    "timesSeen": 39
   },
   {
     "url": "https://t.me/design_work",
@@ -777,10 +777,10 @@
   {
     "url": "https://t.me/itfreelance",
     "platform": "telegram",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-21T20:59:19.772Z",
-    "timesSeen": 25
+    "lastSeenAt": "2026-10-27T11:13:34.101Z",
+    "timesSeen": 26
   },
   {
     "url": "https://t.me/writing_jobs",
@@ -1363,8 +1363,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-10-25T10:19:30.208Z",
-    "timesSeen": 21,
+    "lastSeenAt": "2026-10-27T11:13:34.101Z",
+    "timesSeen": 22,
     "title": "Singapore Careers and Job Opportunities - sgCareers"
   },
   {
@@ -1637,8 +1637,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-10-25T10:19:30.208Z",
-    "timesSeen": 37
+    "lastSeenAt": "2026-10-27T11:13:34.101Z",
+    "timesSeen": 38
   },
   {
     "url": "https://discord.gg/awHZtSf89q",
@@ -3745,8 +3745,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-31T11:57:41.948Z",
-    "lastSeenAt": "2026-10-12T13:42:18.315Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-27T11:13:34.101Z",
+    "timesSeen": 5,
     "title": "HIFI Labs"
   },
   {
@@ -5620,8 +5620,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-08T01:34:46.501Z",
-    "lastSeenAt": "2026-10-26T22:01:06.961Z",
-    "timesSeen": 7,
+    "lastSeenAt": "2026-10-27T11:13:34.101Z",
+    "timesSeen": 8,
     "title": "Clara Immigration"
   },
   {
@@ -6383,10 +6383,10 @@
     "url": "https://t.me/jaabz_bot",
     "platform": "telegram",
     "title": "Tech Job Offer Notifier🤖",
-    "reason": "insufficient-publication-confidence",
+    "reason": "unconfirmed-target-market",
     "date": "2026-09-11T10:16:37.904Z",
-    "lastSeenAt": "2026-09-11T10:16:37.904Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-27T11:13:34.101Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/cscareerhub",
@@ -11568,10 +11568,11 @@
   {
     "url": "https://discord.gg/yjMZU8g",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "unconfirmed-target-market",
     "date": "2026-10-18T10:06:42.715Z",
-    "lastSeenAt": "2026-10-18T10:06:42.715Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-10-27T11:13:34.101Z",
+    "timesSeen": 3,
+    "title": "Our Startups"
   },
   {
     "url": "https://discord.gg/geeksforgeeks",
@@ -13036,6 +13037,59 @@
     "reason": "unknown-status",
     "date": "2026-10-26T22:01:06.961Z",
     "lastSeenAt": "2026-10-26T22:01:06.961Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/JYpHjaCN",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-27T11:13:34.101Z",
+    "lastSeenAt": "2026-10-27T11:13:34.101Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/7q8NBZbQzt",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-27T11:13:34.101Z",
+    "lastSeenAt": "2026-10-27T11:13:34.101Z",
+    "timesSeen": 1,
+    "title": "Wechaty"
+  },
+  {
+    "url": "https://t.me/workewco",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-27T11:13:34.101Z",
+    "lastSeenAt": "2026-10-27T11:13:34.101Z",
+    "timesSeen": 1,
+    "title": "Remote Jobs | Workew"
+  },
+  {
+    "url": "https://t.me/remotely_jobs_daily",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-27T11:13:34.101Z",
+    "lastSeenAt": "2026-10-27T11:13:34.101Z",
+    "timesSeen": 1,
+    "title": "Remotely - Remote Work Job Board"
+  },
+  {
+    "url": "https://t.me/marketingremotejobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-27T11:13:34.101Z",
+    "lastSeenAt": "2026-10-27T11:13:34.101Z",
+    "timesSeen": 1,
+    "title": "Marketing Remote Jobs"
+  },
+  {
+    "url": "https://t.me/remotejobs",
+    "platform": "telegram",
+    "title": "Remote Jobs👨‍💻",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-10-27T11:13:36.680Z",
+    "lastSeenAt": "2026-10-27T11:13:36.680Z",
     "timesSeen": 1
   }
 ]
