@@ -1363,8 +1363,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-10-27T11:13:34.101Z",
-    "timesSeen": 22,
+    "lastSeenAt": "2026-10-28T11:49:31.305Z",
+    "timesSeen": 23,
     "title": "Singapore Careers and Job Opportunities - sgCareers"
   },
   {
@@ -1372,8 +1372,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-10-21T10:47:43.301Z",
-    "timesSeen": 9,
+    "lastSeenAt": "2026-10-28T11:49:31.305Z",
+    "timesSeen": 10,
     "title": "FreshGulfJob.com"
   },
   {
@@ -1635,10 +1635,10 @@
   {
     "url": "https://discord.gg/job",
     "platform": "discord",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-10-27T11:13:34.101Z",
-    "timesSeen": 38
+    "lastSeenAt": "2026-10-28T11:49:31.305Z",
+    "timesSeen": 39
   },
   {
     "url": "https://discord.gg/awHZtSf89q",
@@ -2368,8 +2368,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-26T12:27:42.936Z",
-    "lastSeenAt": "2026-10-20T10:36:55.567Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-28T11:49:31.305Z",
+    "timesSeen": 4,
     "title": "1 CAPE JOB LINKS Community"
   },
   {
@@ -3584,8 +3584,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-09-25T10:58:53.812Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-10-28T11:49:31.305Z",
+    "timesSeen": 3
   },
   {
     "url": "https://chat.whatsapp.com/CvmPbIsZxpy7OQ8SSDCx3o",
@@ -6060,8 +6060,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-10T10:10:45.273Z",
-    "lastSeenAt": "2026-10-26T17:44:36.394Z",
-    "timesSeen": 15,
+    "lastSeenAt": "2026-10-28T11:49:31.305Z",
+    "timesSeen": 16,
     "title": "Gulf Jobs"
   },
   {
@@ -8272,10 +8272,10 @@
   {
     "url": "https://discord.gg/pandesal-dev",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-21T11:18:49.128Z",
-    "lastSeenAt": "2026-10-25T10:19:30.208Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-28T11:49:31.305Z",
+    "timesSeen": 3,
     "title": "pandesal.dev"
   },
   {
@@ -9598,8 +9598,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-29T11:44:22.930Z",
-    "lastSeenAt": "2026-10-26T22:01:06.961Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-10-28T11:49:31.305Z",
+    "timesSeen": 3
   },
   {
     "url": "https://chat.whatsapp.com/EBrZfUSowijI96TxuRIFZ1",
@@ -9655,10 +9655,10 @@
   {
     "url": "https://t.me/techsenpais",
     "platform": "telegram",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-30T11:43:11.905Z",
-    "lastSeenAt": "2026-10-15T20:37:27.851Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-28T11:49:31.305Z",
+    "timesSeen": 4,
     "title": "Tech Senpais"
   },
   {
@@ -9949,8 +9949,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-10-02T11:50:09.586Z",
-    "lastSeenAt": "2026-10-02T11:50:09.586Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-28T11:49:31.305Z",
+    "timesSeen": 2,
     "title": "Middle East Jobs"
   },
   {
@@ -13090,6 +13090,59 @@
     "reason": "insufficient-publication-confidence",
     "date": "2026-10-27T11:13:36.680Z",
     "lastSeenAt": "2026-10-27T11:13:36.680Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/jc66nmmMGS",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-10-28T11:49:31.305Z",
+    "lastSeenAt": "2026-10-28T11:49:31.305Z",
+    "timesSeen": 1,
+    "title": "Ann Arbor AI/ML Group"
+  },
+  {
+    "url": "https://chat.whatsapp.com/FDH6QC3CkgWDwpiU3tCjJG",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-28T11:49:31.305Z",
+    "lastSeenAt": "2026-10-28T11:49:31.305Z",
+    "timesSeen": 1,
+    "title": "Rotterdam Housing Chat | RentSwap #1"
+  },
+  {
+    "url": "https://t.me/justpostedjobsbot",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-10-28T11:49:31.305Z",
+    "lastSeenAt": "2026-10-28T11:49:31.305Z",
+    "timesSeen": 1,
+    "title": "Just Posted Jobs"
+  },
+  {
+    "url": "https://discord.gg/m8zqJa5Ygy",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-28T11:49:31.305Z",
+    "lastSeenAt": "2026-10-28T11:49:31.305Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/42VewdV2wu",
+    "platform": "discord",
+    "title": "Health Career Connection 2021",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-10-28T11:49:33.744Z",
+    "lastSeenAt": "2026-10-28T11:49:33.744Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/MedicalJobsIndia",
+    "platform": "telegram",
+    "title": "Medical Jobs - MBBS | Nursing | Pharma | NEET UG PG",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-10-28T11:49:33.744Z",
+    "lastSeenAt": "2026-10-28T11:49:33.744Z",
     "timesSeen": 1
   }
 ]
