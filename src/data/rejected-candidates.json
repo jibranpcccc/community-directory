@@ -11768,18 +11768,20 @@
   {
     "url": "https://discord.gg/45RnaaeAm4",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-10-19T11:26:30.149Z",
-    "lastSeenAt": "2026-10-19T11:26:30.149Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-28T21:58:14.976Z",
+    "timesSeen": 2,
+    "title": "DVO COSCOM CAFE"
   },
   {
     "url": "https://discord.gg/jKyeCdnPH3",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-10-19T11:26:30.149Z",
-    "lastSeenAt": "2026-10-19T11:26:30.149Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-28T21:58:14.976Z",
+    "timesSeen": 2,
+    "title": "World Cosplay X Gaming"
   },
   {
     "url": "https://discord.gg/bisdak",
