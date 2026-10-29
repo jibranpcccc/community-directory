@@ -6243,8 +6243,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-11T10:16:27.114Z",
-    "lastSeenAt": "2026-09-11T10:16:27.114Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-29T17:41:27.017Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/6g4HnEUv",
@@ -6317,8 +6317,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-11T10:16:27.114Z",
-    "lastSeenAt": "2026-09-11T10:16:27.114Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-29T17:41:27.017Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/empoweringnurses",
@@ -12462,10 +12462,10 @@
   {
     "url": "https://discord.gg/Pj2YPXP",
     "platform": "discord",
-    "reason": "wrong-niche",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-10-23T10:42:40.465Z",
-    "lastSeenAt": "2026-10-23T10:42:40.465Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-29T17:41:27.017Z",
+    "timesSeen": 2,
     "title": "Estudyanteng Pinoy"
   },
   {
@@ -13145,6 +13145,31 @@
     "reason": "insufficient-publication-confidence",
     "date": "2026-10-28T11:49:33.744Z",
     "lastSeenAt": "2026-10-28T11:49:33.744Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/EFHIPZfCyqvFZ2s8bEF4ow",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-29T17:41:27.017Z",
+    "lastSeenAt": "2026-10-29T17:41:27.017Z",
+    "timesSeen": 1,
+    "title": "EFHIPZfCyqvFZ2s8bEF4ow"
+  },
+  {
+    "url": "https://discord.gg/Y4AeGUBX",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-29T17:41:27.017Z",
+    "lastSeenAt": "2026-10-29T17:41:27.017Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/KSJGrQtg",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-29T17:41:27.017Z",
+    "lastSeenAt": "2026-10-29T17:41:27.017Z",
     "timesSeen": 1
   }
 ]
