@@ -1372,8 +1372,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-10-28T11:49:31.305Z",
-    "timesSeen": 10,
+    "lastSeenAt": "2026-10-29T11:53:20.349Z",
+    "timesSeen": 11,
     "title": "FreshGulfJob.com"
   },
   {
@@ -6060,8 +6060,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-10T10:10:45.273Z",
-    "lastSeenAt": "2026-10-28T11:49:31.305Z",
-    "timesSeen": 16,
+    "lastSeenAt": "2026-10-29T11:53:20.349Z",
+    "timesSeen": 17,
     "title": "Gulf Jobs"
   },
   {
@@ -6110,10 +6110,10 @@
   {
     "url": "https://t.me/goodhealthconsult",
     "platform": "telegram",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-09-10T10:10:45.273Z",
-    "lastSeenAt": "2026-10-21T10:47:43.301Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-10-29T11:53:20.349Z",
+    "timesSeen": 5
   },
   {
     "url": "https://t.me/MedicalJobsIndia",
@@ -10405,8 +10405,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-10-07T12:12:12.331Z",
-    "lastSeenAt": "2026-10-07T12:12:12.331Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-29T11:53:20.349Z",
+    "timesSeen": 2,
     "title": "FreshGulfJob.com"
   },
   {
