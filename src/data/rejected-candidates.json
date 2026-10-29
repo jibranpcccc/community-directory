@@ -1372,8 +1372,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-10-29T11:53:20.349Z",
-    "timesSeen": 11,
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 12,
     "title": "FreshGulfJob.com"
   },
   {
@@ -4182,10 +4182,11 @@
   {
     "url": "https://discord.gg/URvYjr3",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-01T15:39:11.690Z",
-    "lastSeenAt": "2026-09-01T15:39:11.690Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 2,
+    "title": "Foreign Service"
   },
   {
     "url": "https://discord.gg/qqzrSCFmmh",
@@ -6060,8 +6061,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-10T10:10:45.273Z",
-    "lastSeenAt": "2026-10-29T11:53:20.349Z",
-    "timesSeen": 17,
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 18,
     "title": "Gulf Jobs"
   },
   {
@@ -6235,8 +6236,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-11T10:16:27.114Z",
-    "lastSeenAt": "2026-09-11T10:16:27.114Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/studentnurse",
@@ -6325,16 +6326,16 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-11T10:16:27.114Z",
-    "lastSeenAt": "2026-09-11T10:16:27.114Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/nursesclass",
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-11T10:16:27.114Z",
-    "lastSeenAt": "2026-10-21T10:47:43.301Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 4,
     "title": "Nurses Class &amp; Nursing Jobs"
   },
   {
@@ -10405,8 +10406,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-10-07T12:12:12.331Z",
-    "lastSeenAt": "2026-10-29T11:53:20.349Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 3,
     "title": "FreshGulfJob.com"
   },
   {
@@ -13152,8 +13153,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-10-29T17:41:27.017Z",
-    "lastSeenAt": "2026-10-29T17:41:27.017Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 2,
     "title": "EFHIPZfCyqvFZ2s8bEF4ow"
   },
   {
@@ -13169,7 +13170,55 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-29T17:41:27.017Z",
-    "lastSeenAt": "2026-10-29T17:41:27.017Z",
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://discord.gg/StudentNurse",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-29T22:07:53.024Z",
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/SgECphGYrf",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-10-29T22:07:53.024Z",
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/ev2g72FNJ2",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-29T22:07:53.024Z",
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/ZywmzAZ9",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-29T22:07:53.024Z",
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/goodhealt",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-10-29T22:07:53.024Z",
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/ur2uVm2Mm",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-29T22:07:53.024Z",
+    "lastSeenAt": "2026-10-29T22:07:53.024Z",
     "timesSeen": 1
   }
 ]
