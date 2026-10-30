@@ -204,8 +204,8 @@
     "platform": "telegram",
     "reason": "unknown-status",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 42,
-    "lastSeenAt": "2026-10-21T10:47:43.301Z"
+    "timesSeen": 43,
+    "lastSeenAt": "2026-10-30T11:49:44.103Z"
   },
   {
     "url": "https://discord.gg/dFp4rR3T",
@@ -1635,10 +1635,10 @@
   {
     "url": "https://discord.gg/job",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-10-28T11:49:31.305Z",
-    "timesSeen": 39
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 40
   },
   {
     "url": "https://discord.gg/awHZtSf89q",
@@ -2546,8 +2546,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-27T16:58:43.400Z",
-    "lastSeenAt": "2026-10-16T10:18:35.904Z",
-    "timesSeen": 9,
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 10,
     "title": "ICT Opportunities 6 &#x1f393;"
   },
   {
@@ -2676,8 +2676,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-10-15T10:30:53.593Z",
-    "timesSeen": 12,
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 13,
     "title": "Code. Corp. Answers."
   },
   {
@@ -2814,8 +2814,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-10-02T11:50:09.586Z",
-    "timesSeen": 5
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 6
   },
   {
     "url": "https://discord.gg/hacksouth",
@@ -3412,10 +3412,10 @@
   {
     "url": "https://discord.gg/J5CuFNVDYU",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-10-06T12:23:13.932Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 4,
     "title": "Irish Personal Finance"
   },
   {
@@ -3646,8 +3646,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-10-15T20:37:27.851Z",
-    "timesSeen": 19,
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 20,
     "title": "/r/singaporejobs"
   },
   {
@@ -3870,8 +3870,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-31T18:20:29.403Z",
-    "lastSeenAt": "2026-08-31T18:20:29.403Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 2,
     "title": "Jobs abroad"
   },
   {
@@ -4528,10 +4528,10 @@
   {
     "url": "https://discord.gg/deskbuddies",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-09-03T10:16:47.914Z",
-    "lastSeenAt": "2026-10-21T10:47:43.301Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 5,
     "title": "deskbuddies"
   },
   {
@@ -5934,10 +5934,10 @@
   {
     "url": "https://discord.gg/X9tUSuSz7k",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-09T10:17:40.700Z",
-    "lastSeenAt": "2026-10-25T10:19:30.208Z",
-    "timesSeen": 8,
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 9,
     "title": "South-African Tech Channel"
   },
   {
@@ -6984,8 +6984,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-15T02:01:06.098Z",
-    "lastSeenAt": "2026-09-26T10:27:27.283Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 3,
     "title": "Jobs in Europe"
   },
   {
@@ -8275,8 +8275,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-21T11:18:49.128Z",
-    "lastSeenAt": "2026-10-28T11:49:31.305Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 4,
     "title": "pandesal.dev"
   },
   {
@@ -9523,8 +9523,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-29T11:44:22.930Z",
-    "lastSeenAt": "2026-10-24T09:59:01.684Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 5
   },
   {
     "url": "https://discord.gg/VgPXmQ7tHp",
@@ -10770,8 +10770,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-10T11:33:26.843Z",
-    "lastSeenAt": "2026-10-16T10:18:35.904Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/FFb9YFX",
@@ -13208,10 +13208,10 @@
   {
     "url": "https://t.me/goodhealt",
     "platform": "telegram",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-29T22:07:53.024Z",
-    "lastSeenAt": "2026-10-29T22:07:53.024Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/ur2uVm2Mm",
@@ -13219,6 +13219,48 @@
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-29T22:07:53.024Z",
     "lastSeenAt": "2026-10-29T22:07:53.024Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/+V74sMymleKM1NzZk",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-10-30T11:49:44.103Z",
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 1,
+    "title": "Manuel YEBOAH YT Family ▶️"
+  },
+  {
+    "url": "https://discord.gg/kuya-dev",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-10-30T11:49:44.103Z",
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/FQMC1OrcduAIhXmHhCUJgj",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-10-30T11:49:44.103Z",
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 1,
+    "title": ""
+  },
+  {
+    "url": "https://discord.gg/icfp26",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-30T11:49:44.103Z",
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/InterSystemsIRIS",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-30T11:49:44.103Z",
+    "lastSeenAt": "2026-10-30T11:49:44.103Z",
     "timesSeen": 1
   }
 ]
