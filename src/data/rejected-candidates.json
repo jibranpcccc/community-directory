@@ -1372,8 +1372,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-10-29T22:07:53.024Z",
-    "timesSeen": 12,
+    "lastSeenAt": "2026-10-30T17:18:58.417Z",
+    "timesSeen": 13,
     "title": "FreshGulfJob.com"
   },
   {
@@ -9523,8 +9523,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-29T11:44:22.930Z",
-    "lastSeenAt": "2026-10-30T11:49:44.103Z",
-    "timesSeen": 5
+    "lastSeenAt": "2026-10-30T17:18:58.417Z",
+    "timesSeen": 6
   },
   {
     "url": "https://discord.gg/VgPXmQ7tHp",
@@ -10406,8 +10406,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-10-07T12:12:12.331Z",
-    "lastSeenAt": "2026-10-29T22:07:53.024Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-10-30T17:18:58.417Z",
+    "timesSeen": 4,
     "title": "FreshGulfJob.com"
   },
   {
@@ -13261,6 +13261,14 @@
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-30T11:49:44.103Z",
     "lastSeenAt": "2026-10-30T11:49:44.103Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/EwRZrvpE8b",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-30T17:18:58.417Z",
+    "lastSeenAt": "2026-10-30T17:18:58.417Z",
     "timesSeen": 1
   }
 ]
