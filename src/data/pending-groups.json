@@ -1,1 +1,191 @@
-[]
+[
+  {
+    "id": "the-job-alert-telegram",
+    "slug": "the-job-alert-telegram",
+    "title": "The Job Alert",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "finance-jobs",
+    "subcategory": "Finance & Accounting",
+    "tags": [
+      "telegram",
+      "jobs",
+      "financejobs"
+    ],
+    "inviteUrl": "https://t.me/thejobalertonline",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "finance-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 11512,
+    "memberCountSource": "https://t.me/thejobalertonline",
+    "memberCountCheckedAt": "2026-10-31T11:22:54.263Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-31T11:22:54.263Z",
+    "sourceUrls": [
+      "https://t.me/thejobalertonline"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-31T11:22:54.263Z",
+    "lastCheckedAt": "2026-10-31T11:22:54.263Z",
+    "updatedAt": "2026-10-31T11:22:54.263Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-31T11:22:54.263Z",
+    "lastSeenAt": "2026-10-31T11:22:54.263Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1793445774263_592xx",
+      "run_1793445775650_eir37"
+    ],
+    "querySource": "site:chat.whatsapp.com finance accounting job alerts Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "medical-locum-jobs-scholarships-ngo-overseas-jobs-telegram",
+    "slug": "medical-locum-jobs-scholarships-ngo-overseas-jobs-telegram",
+    "title": "Medical Locum Jobs -Scholarships/ NGO/ Overseas Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "healthcare-jobs",
+    "subcategory": "Nursing & Medical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "healthcarejobs"
+    ],
+    "inviteUrl": "https://t.me/locumchannel",
+    "description": "This is the Telegram channel of Medical Locum Jobs Recruiting agency for Job advert placement across AfricaManagement: +2349059951180 ( WhatsApp)Terms &amp; Condition:https://medlocumjobs.com/terms-of-service",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "healthcare-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 11540,
+    "memberCountSource": "https://t.me/locumchannel",
+    "memberCountCheckedAt": "2026-10-31T11:22:54.263Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-31T11:22:54.263Z",
+    "sourceUrls": [
+      "https://t.me/locumchannel"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-31T11:22:54.263Z",
+    "lastCheckedAt": "2026-10-31T11:22:54.263Z",
+    "updatedAt": "2026-10-31T11:22:54.263Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-31T11:22:54.263Z",
+    "lastSeenAt": "2026-10-31T11:22:54.263Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1793445774263_592xx",
+      "run_1793445778729_kipmy"
+    ],
+    "querySource": "site:t.me healthcare vacancies Worldwide & International community",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "health-info-amp-vacancy-news-hivn-telegram",
+    "slug": "health-info-amp-vacancy-news-hivn-telegram",
+    "title": "Health info &amp; vacancy news (HIVN)",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "healthcare-jobs",
+    "subcategory": "Nursing & Medical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "healthcarejobs"
+    ],
+    "inviteUrl": "https://t.me/healthinovation",
+    "description": "🎥🔊 ማስታወቂያ ለማሰራት @Andualem0 ያግኙን።📢Youtube channel  youtube.com/@HIVN📢 Our group t.me/HIVN19📢 Channel t.me/healthinovation📢 facebook page: https://www.facebook.com/profile.php?id=61584797009769ቡና ይጋብዙን ⤵️https://ye-buna.com/HIVN",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "healthcare-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 92079,
+    "memberCountSource": "https://t.me/healthinovation",
+    "memberCountCheckedAt": "2026-10-31T11:22:54.263Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-10-31T11:22:54.263Z",
+    "sourceUrls": [
+      "https://t.me/healthinovation"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-10-31T11:22:54.263Z",
+    "lastCheckedAt": "2026-10-31T11:22:54.263Z",
+    "updatedAt": "2026-10-31T11:22:54.263Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-10-31T11:22:54.263Z",
+    "lastSeenAt": "2026-10-31T11:22:54.263Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1793445774263_592xx",
+      "run_1793445779134_pqq39"
+    ],
+    "querySource": "site:t.me healthcare vacancies Worldwide & International community",
+    "sourceHostname": "t.me"
+  }
+]
