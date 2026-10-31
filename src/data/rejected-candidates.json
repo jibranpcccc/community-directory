@@ -12746,10 +12746,10 @@
   {
     "url": "https://discord.gg/FinancialCareers",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-10-24T09:59:01.684Z",
-    "lastSeenAt": "2026-10-24T09:59:01.684Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-10-31T02:52:35.875Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/jobby",
@@ -13269,6 +13269,14 @@
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-30T17:18:58.417Z",
     "lastSeenAt": "2026-10-30T17:18:58.417Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/Ur4WfyfuTh",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-10-31T02:52:35.875Z",
+    "lastSeenAt": "2026-10-31T02:52:35.875Z",
     "timesSeen": 1
   }
 ]
