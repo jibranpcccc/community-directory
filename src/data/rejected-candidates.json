@@ -1637,8 +1637,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-11-03T13:11:01.037Z",
-    "timesSeen": 42
+    "lastSeenAt": "2026-11-03T22:39:28.176Z",
+    "timesSeen": 43
   },
   {
     "url": "https://discord.gg/awHZtSf89q",
@@ -2812,10 +2812,10 @@
   {
     "url": "https://discord.gg/satech",
     "platform": "discord",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-10-30T11:49:44.103Z",
-    "timesSeen": 6
+    "lastSeenAt": "2026-11-03T22:39:28.176Z",
+    "timesSeen": 7
   },
   {
     "url": "https://discord.gg/hacksouth",
