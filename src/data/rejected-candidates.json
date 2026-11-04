@@ -150,8 +150,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 3,
-    "lastSeenAt": "2026-09-06T09:49:59.766Z"
+    "timesSeen": 4,
+    "lastSeenAt": "2026-11-04T13:26:53.423Z"
   },
   {
     "url": "https://discord.gg/JjNdBkVGc6",
@@ -195,8 +195,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 3,
-    "lastSeenAt": "2026-10-22T10:54:32.072Z",
+    "timesSeen": 4,
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
     "title": "Work abroad - Layboard.in"
   },
   {
@@ -204,8 +204,8 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 44,
-    "lastSeenAt": "2026-10-31T11:22:54.263Z"
+    "timesSeen": 45,
+    "lastSeenAt": "2026-11-04T13:26:53.423Z"
   },
   {
     "url": "https://discord.gg/dFp4rR3T",
@@ -796,8 +796,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-21T20:59:19.772Z",
-    "timesSeen": 10
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 11
   },
   {
     "url": "https://t.me/freelancehunt_jobs",
@@ -845,8 +845,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-21T20:59:19.772Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 7,
     "title": "Маркетинг. Вакансии без воды"
   },
   {
@@ -1026,10 +1026,10 @@
   {
     "url": "https://t.me/remote_sales",
     "platform": "telegram",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-17T09:53:12.499Z",
-    "timesSeen": 6
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 7
   },
   {
     "url": "https://t.me/it_jobs",
@@ -1363,8 +1363,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-11-02T14:01:35.538Z",
-    "timesSeen": 24,
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 25,
     "title": "Singapore Careers and Job Opportunities - sgCareers"
   },
   {
@@ -1438,10 +1438,10 @@
   {
     "url": "https://discord.gg/kDQ3nGufG8",
     "platform": "discord",
-    "reason": "wrong-niche",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-23T00:30:25.838Z",
-    "lastSeenAt": "2026-11-03T13:11:01.037Z",
-    "timesSeen": 22,
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 23,
     "title": "Tech Professionals - Australia & New Zealand"
   },
   {
@@ -1881,8 +1881,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-24T12:25:35.427Z",
-    "lastSeenAt": "2026-11-03T13:11:01.037Z",
-    "timesSeen": 6
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 7
   },
   {
     "url": "https://t.me/Digital_MarketingCA",
@@ -1967,8 +1967,8 @@
     "platform": "discord",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-24T12:25:35.427Z",
-    "lastSeenAt": "2026-08-24T12:25:35.427Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 2,
     "title": "Bloom"
   },
   {
@@ -2296,8 +2296,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-26T12:27:42.936Z",
-    "lastSeenAt": "2026-10-25T10:19:30.208Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 5,
     "title": "Government Jobs Alert Sarkari Naukri"
   },
   {
@@ -3644,10 +3644,10 @@
   {
     "url": "https://discord.gg/3QyqASgm3y",
     "platform": "discord",
-    "reason": "wrong-niche",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-11-03T13:11:01.037Z",
-    "timesSeen": 24,
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 25,
     "title": "/r/singaporejobs"
   },
   {
@@ -4150,8 +4150,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-01T10:40:51.833Z",
-    "lastSeenAt": "2026-11-03T13:11:01.037Z",
-    "timesSeen": 12,
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 13,
     "title": "PRIDEGO"
   },
   {
@@ -7419,8 +7419,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-16T10:34:32.340Z",
-    "lastSeenAt": "2026-11-03T13:11:01.037Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 7,
     "title": "r/IndianWorkplace"
   },
   {
@@ -13734,5 +13734,66 @@
     "lastSeenAt": "2026-11-03T13:11:01.037Z",
     "timesSeen": 1,
     "title": "Interior designer  &#x1f1ee;&#x1f1f3;"
+  },
+  {
+    "url": "https://chat.whatsapp.com/FKWMJovH4glDo4c4fhU1UK",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-04T13:26:53.423Z",
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/H4a9tLBc4ffBIYs09MtLde",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-04T13:26:53.423Z",
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 1,
+    "title": "Handicrafts manufacturing"
+  },
+  {
+    "url": "https://t.me/marketing_sales_jobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-04T13:26:53.423Z",
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 1,
+    "title": "Marketing and Sales Jobs Networking Group"
+  },
+  {
+    "url": "https://t.me/hitechjoband",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-11-04T13:26:53.423Z",
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/onlymonster_updates",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-04T13:26:53.423Z",
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 1,
+    "title": "OnlyMonster"
+  },
+  {
+    "url": "https://chat.whatsapp.com/Hn7a0e2pmJq7ISELX68cTp",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-04T13:26:53.423Z",
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 1,
+    "title": "Hn7a0e2pmJq7ISELX68cTp"
+  },
+  {
+    "url": "https://chat.whatsapp.com/G8MyFe77hwJ9Gc0Yekd2Py",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-04T13:26:53.423Z",
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 1,
+    "title": "Pruthvi Job&#039;s Kannada"
   }
 ]

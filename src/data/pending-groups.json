@@ -63,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-51h",
+      "validation-stale-98h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -131,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-51h",
+      "validation-stale-98h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-51h",
+      "validation-stale-98h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -267,6 +267,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-47h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -334,6 +335,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-47h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -401,6 +403,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-47h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -468,6 +471,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-47h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -535,6 +539,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-47h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -599,6 +604,409 @@
       "run_1793628104762_okjmj"
     ],
     "querySource": "site:t.me mechanical electrical engineer vacancies Worldwide & International",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-47h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "sales-banking-field-jobs-hiring-whatsapp",
+    "slug": "sales-banking-field-jobs-hiring-whatsapp",
+    "title": "SALES BANKING FIELD JOBS HIRING",
+    "platform": "whatsapp",
+    "vertical": "jobs",
+    "category": "sales-marketing-jobs",
+    "subcategory": "Sales & Marketing",
+    "tags": [
+      "whatsapp",
+      "jobs",
+      "salesmarketingjobs"
+    ],
+    "inviteUrl": "https://chat.whatsapp.com/Fo9rmRyiiTDFw493dJQaKm",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "sales-marketing-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-04T13:26:53.423Z",
+    "sourceUrls": [
+      "https://chat.whatsapp.com/Fo9rmRyiiTDFw493dJQaKm"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-04T13:26:53.423Z",
+    "lastCheckedAt": "2026-11-04T13:26:53.423Z",
+    "updatedAt": "2026-11-04T13:26:53.423Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-04T13:26:53.423Z",
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1793798813423_bxqgg",
+      "run_1793798814382_rexi4"
+    ],
+    "querySource": "site:chat.whatsapp.com sales marketing job alerts Global Telegram",
+    "sourceHostname": "chat.whatsapp.com",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "v-the-techee-telegram",
+    "slug": "v-the-techee-telegram",
+    "title": "V the Techee",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "government-jobs",
+    "subcategory": "Remote Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "governmentjobs"
+    ],
+    "inviteUrl": "https://t.me/VtheTecheeChannel",
+    "description": "For getting daily Latest Jobs ,Certification courses,Interview Experience &amp; Internship UpdatesJoin this Telegram channel and avail the benefit 🔔",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "government-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 28095,
+    "memberCountSource": "https://t.me/VtheTecheeChannel",
+    "memberCountCheckedAt": "2026-11-04T13:26:53.423Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-04T13:26:53.423Z",
+    "sourceUrls": [
+      "https://t.me/VtheTecheeChannel"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-04T13:26:53.423Z",
+    "lastCheckedAt": "2026-11-04T13:26:53.423Z",
+    "updatedAt": "2026-11-04T13:26:53.423Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-04T13:26:53.423Z",
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1793798813423_bxqgg",
+      "run_1793798817732_7zvrx"
+    ],
+    "querySource": "site:t.me Remote tech jobs OR Remote job alerts",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "engineer-jobs-india-telegram",
+    "slug": "engineer-jobs-india-telegram",
+    "title": "ENGINEER JOBS INDIA",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "government-jobs",
+    "subcategory": "Remote Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "governmentjobs"
+    ],
+    "inviteUrl": "https://t.me/engineerjobsindia",
+    "description": "🌀 ” Our Only Aim Is To Let Get Placed To You In A Reputed Company. “Contact Admin: Mail me for collaboffcampusjobsindiaadmin@gmail.cominstagram.com/offcampusjobsindia_itOur Website :www.offcampusjobsindia.com",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "government-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 56805,
+    "memberCountSource": "https://t.me/engineerjobsindia",
+    "memberCountCheckedAt": "2026-11-04T13:26:53.423Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-04T13:26:53.423Z",
+    "sourceUrls": [
+      "https://t.me/engineerjobsindia"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-04T13:26:53.423Z",
+    "lastCheckedAt": "2026-11-04T13:26:53.423Z",
+    "updatedAt": "2026-11-04T13:26:53.423Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-04T13:26:53.423Z",
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1793798813423_bxqgg",
+      "run_1793798818378_xco52"
+    ],
+    "querySource": "site:t.me Remote tech jobs OR Remote job alerts",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "learning-with-ram-job-opportunity-updates-telegram",
+    "slug": "learning-with-ram-job-opportunity-updates-telegram",
+    "title": "Learning With Ram-Job Opportunity updates 🎯",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "government-jobs",
+    "subcategory": "Remote Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "governmentjobs"
+    ],
+    "inviteUrl": "https://t.me/learningwithram1299",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "government-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 1929,
+    "memberCountSource": "https://t.me/learningwithram1299",
+    "memberCountCheckedAt": "2026-11-04T13:26:53.423Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-04T13:26:53.423Z",
+    "sourceUrls": [
+      "https://t.me/learningwithram1299"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-04T13:26:53.423Z",
+    "lastCheckedAt": "2026-11-04T13:26:53.423Z",
+    "updatedAt": "2026-11-04T13:26:53.423Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-04T13:26:53.423Z",
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1793798813423_bxqgg",
+      "run_1793798819341_mz7nr"
+    ],
+    "querySource": "site:t.me Remote tech jobs OR Remote job alerts",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "it-jobs-across-india-telegram",
+    "slug": "it-jobs-across-india-telegram",
+    "title": "IT Jobs across India",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "government-jobs",
+    "subcategory": "Remote Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "governmentjobs"
+    ],
+    "inviteUrl": "https://t.me/seekajob",
+    "description": "Visit seekajob.in for more update also visit youtube channel     https://youtu.be/HXvQOESgAZA",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "government-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 734,
+    "memberCountSource": "https://t.me/seekajob",
+    "memberCountCheckedAt": "2026-11-04T13:26:53.423Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-04T13:26:53.423Z",
+    "sourceUrls": [
+      "https://t.me/seekajob"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-04T13:26:53.423Z",
+    "lastCheckedAt": "2026-11-04T13:26:53.423Z",
+    "updatedAt": "2026-11-04T13:26:53.423Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-04T13:26:53.423Z",
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1793798813423_bxqgg",
+      "run_1793798819819_48gfu"
+    ],
+    "querySource": "site:t.me Remote tech jobs OR Remote job alerts",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "placement-fellas-off-campus-drives-telegram",
+    "slug": "placement-fellas-off-campus-drives-telegram",
+    "title": "Placement Fellas-Off Campus Drives",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "government-jobs",
+    "subcategory": "Remote Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "governmentjobs"
+    ],
+    "inviteUrl": "https://t.me/placement_fellas",
+    "description": "For any queries contact us via @placement_fellas_botOr drop a mail at placementfellas@gmail.com👉 Get materials for MNC&#39;s.👉 Off campus recruitment updates. 👉 Interview Experiences.👉 And all the placement related information at one place.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "government-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 47477,
+    "memberCountSource": "https://t.me/placement_fellas",
+    "memberCountCheckedAt": "2026-11-04T13:26:53.423Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-04T13:26:53.423Z",
+    "sourceUrls": [
+      "https://t.me/placement_fellas"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-04T13:26:53.423Z",
+    "lastCheckedAt": "2026-11-04T13:26:53.423Z",
+    "updatedAt": "2026-11-04T13:26:53.423Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-04T13:26:53.423Z",
+    "lastSeenAt": "2026-11-04T13:26:53.423Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1793798813423_bxqgg",
+      "run_1793798820291_ev9ld"
+    ],
+    "querySource": "site:t.me Remote tech jobs OR Remote job alerts",
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
