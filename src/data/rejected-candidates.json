@@ -1637,8 +1637,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-11-05T13:40:21.144Z",
-    "timesSeen": 44
+    "lastSeenAt": "2026-11-06T13:23:27.620Z",
+    "timesSeen": 45
   },
   {
     "url": "https://discord.gg/awHZtSf89q",
@@ -3644,10 +3644,10 @@
   {
     "url": "https://discord.gg/3QyqASgm3y",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-11-05T13:40:21.144Z",
-    "timesSeen": 26,
+    "lastSeenAt": "2026-11-06T13:23:27.620Z",
+    "timesSeen": 27,
     "title": "/r/singaporejobs"
   },
   {
@@ -13856,5 +13856,40 @@
     "lastSeenAt": "2026-11-05T13:40:21.144Z",
     "timesSeen": 1,
     "title": "Tech Students-India &#x1f4da;&#x1f469;&#x1f3fb;&#x200d;&#x1f393;&#x1f468;&#x1f3fb;&#x200d;&#x1f393;"
+  },
+  {
+    "url": "https://discord.gg/federal-connection",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-06T13:23:27.620Z",
+    "lastSeenAt": "2026-11-06T13:23:27.620Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/HdAFhTMoAS13Zmcn16IYiJ",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-06T13:23:27.620Z",
+    "lastSeenAt": "2026-11-06T13:23:27.620Z",
+    "timesSeen": 1,
+    "title": "HdAFhTMoAS13Zmcn16IYiJ"
+  },
+  {
+    "url": "https://discord.gg/w2ssCPMEWp",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-06T13:23:27.620Z",
+    "lastSeenAt": "2026-11-06T13:23:27.620Z",
+    "timesSeen": 1,
+    "title": "Melbourne GitHub User Group"
+  },
+  {
+    "url": "https://chat.whatsapp.com/E5FwqHfExlOBrKhZffspZv",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-06T13:23:27.620Z",
+    "lastSeenAt": "2026-11-06T13:23:27.620Z",
+    "timesSeen": 1,
+    "title": "General"
   }
 ]
