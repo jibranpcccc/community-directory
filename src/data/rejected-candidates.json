@@ -6085,10 +6085,10 @@
   {
     "url": "https://t.me/+MJD1X1R9r2VkNTU0",
     "platform": "telegram",
-    "reason": "wrong-niche",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-10T10:10:45.273Z",
-    "lastSeenAt": "2026-10-26T22:01:06.961Z",
-    "timesSeen": 7,
+    "lastSeenAt": "2026-11-07T21:10:04.299Z",
+    "timesSeen": 8,
     "title": "Vlogs with Offy"
   },
   {
@@ -13998,5 +13998,14 @@
     "lastSeenAt": "2026-11-07T17:21:27.521Z",
     "timesSeen": 1,
     "title": "AWS VIRTUAL INTERNSHIP G11"
+  },
+  {
+    "url": "https://t.me/Australiasydneychat",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-07T21:10:04.299Z",
+    "lastSeenAt": "2026-11-07T21:10:04.299Z",
+    "timesSeen": 1,
+    "title": "澳洲悉尼自由交流群"
   }
 ]
