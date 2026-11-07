@@ -7976,8 +7976,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-19T10:02:00.611Z",
-    "lastSeenAt": "2026-11-02T14:01:35.538Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-11-07T17:21:27.521Z",
+    "timesSeen": 3,
     "title": "GXUXKMhryc5GHGbMEaNu6i"
   },
   {
@@ -13914,8 +13914,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-11-07T12:02:38.559Z",
-    "lastSeenAt": "2026-11-07T12:02:38.559Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-07T17:21:27.521Z",
+    "timesSeen": 2,
     "title": "JobGrp1~Dubai-Forever.Com"
   },
   {
@@ -13989,5 +13989,14 @@
     "date": "2026-11-07T12:02:46.991Z",
     "lastSeenAt": "2026-11-07T12:02:46.991Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/FLUp6AgbYvDCue6zbE9ZCl",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-07T17:21:27.521Z",
+    "lastSeenAt": "2026-11-07T17:21:27.521Z",
+    "timesSeen": 1,
+    "title": "AWS VIRTUAL INTERNSHIP G11"
   }
 ]
