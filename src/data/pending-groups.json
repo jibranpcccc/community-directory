@@ -882,5 +882,68 @@
       "validation-stale-32h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
+  },
+  {
+    "id": "cs-careers-hub-discord",
+    "slug": "cs-careers-hub-discord",
+    "title": "CS Careers Hub 🍁",
+    "platform": "discord",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering",
+    "tags": [
+      "discord",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://discord.gg/MTsExCAQ6F",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 2357,
+    "memberCountSource": "https://discord.gg/MTsExCAQ6F",
+    "memberCountCheckedAt": "2026-11-08T12:22:48.111Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-08T12:22:48.111Z",
+    "sourceUrls": [
+      "https://discord.gg/MTsExCAQ6F"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": "1179609811176915004",
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-08T12:22:48.111Z",
+    "lastCheckedAt": "2026-11-08T12:22:48.111Z",
+    "updatedAt": "2026-11-08T12:22:48.111Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-08T12:22:48.111Z",
+    "lastSeenAt": "2026-11-08T12:22:48.111Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1794140568111_5qr84",
+      "run_1794140572036_kyrbb"
+    ],
+    "querySource": "discord.gg tech job postings Discord Worldwide & International",
+    "sourceHostname": "discord.gg"
   }
 ]
