@@ -1,413 +1,5 @@
 [
   {
-    "id": "electrical-electronics-jobs-telegram",
-    "slug": "electrical-electronics-jobs-telegram",
-    "title": "Electrical/ Electronics Jobs",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "engineering-jobs",
-    "subcategory": "Civil & Mechanical",
-    "tags": [
-      "telegram",
-      "jobs",
-      "engineeringjobs"
-    ],
-    "inviteUrl": "https://t.me/electrical_electronics_jobs",
-    "description": null,
-    "descriptionSource": null,
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "engineering-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 9308,
-    "memberCountSource": "https://t.me/electrical_electronics_jobs",
-    "memberCountCheckedAt": "2026-11-02T14:01:35.538Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-11-02T14:01:35.538Z",
-    "sourceUrls": [
-      "https://t.me/electrical_electronics_jobs"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-11-02T14:01:35.538Z",
-    "lastCheckedAt": "2026-11-02T14:01:35.538Z",
-    "updatedAt": "2026-11-02T14:01:35.538Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-11-02T14:01:35.538Z",
-    "lastSeenAt": "2026-11-02T14:01:35.538Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1793628095538_ex9dr",
-      "run_1793628102400_xhchm"
-    ],
-    "querySource": "site:t.me mechanical electrical engineer vacancies Worldwide & International",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-127h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "all-india-freshers-it-jobs-telegram",
-    "slug": "all-india-freshers-it-jobs-telegram",
-    "title": "All India Freshers IT Jobs",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "engineering-jobs",
-    "subcategory": "Civil & Mechanical",
-    "tags": [
-      "telegram",
-      "jobs",
-      "engineeringjobs"
-    ],
-    "inviteUrl": "https://t.me/IndiaSoftwareTechnicalJobs",
-    "description": "Find Freshers Jobs for IT, Mechanical, Electrical and  In Other fieldsUpload Resume : https://bit.ly/3NYJRIqCheck Interview Questions and blog on https://geekfrisk.com",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "engineering-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 13580,
-    "memberCountSource": "https://t.me/IndiaSoftwareTechnicalJobs",
-    "memberCountCheckedAt": "2026-11-02T14:01:35.538Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-11-02T14:01:35.538Z",
-    "sourceUrls": [
-      "https://t.me/IndiaSoftwareTechnicalJobs"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-11-02T14:01:35.538Z",
-    "lastCheckedAt": "2026-11-02T14:01:35.538Z",
-    "updatedAt": "2026-11-02T14:01:35.538Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-11-02T14:01:35.538Z",
-    "lastSeenAt": "2026-11-02T14:01:35.538Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1793628095538_ex9dr",
-      "run_1793628102870_7ulqv"
-    ],
-    "querySource": "site:t.me mechanical electrical engineer vacancies Worldwide & International",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-127h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "mechanical-jobs-telegram",
-    "slug": "mechanical-jobs-telegram",
-    "title": "Mechanical jobs",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "engineering-jobs",
-    "subcategory": "Civil & Mechanical",
-    "tags": [
-      "telegram",
-      "jobs",
-      "engineeringjobs"
-    ],
-    "inviteUrl": "https://t.me/Mechanical_job_openings",
-    "description": "Mechanical Jobs for Fresher and Experienced All Mechanical Jobs are available for Free. This Channel only provides a mechanical job for PAN India.For help message @djobbuzz 😊#Mechanical_Jobs #Mechanical_Fresher_Jobs#Mechanical_Experienced_Jobs#Job",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "engineering-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 21688,
-    "memberCountSource": "https://t.me/Mechanical_job_openings",
-    "memberCountCheckedAt": "2026-11-02T14:01:35.538Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-11-02T14:01:35.538Z",
-    "sourceUrls": [
-      "https://t.me/Mechanical_job_openings"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-11-02T14:01:35.538Z",
-    "lastCheckedAt": "2026-11-02T14:01:35.538Z",
-    "updatedAt": "2026-11-02T14:01:35.538Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-11-02T14:01:35.538Z",
-    "lastSeenAt": "2026-11-02T14:01:35.538Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1793628095538_ex9dr",
-      "run_1793628103347_qd5fv"
-    ],
-    "querySource": "site:t.me mechanical electrical engineer vacancies Worldwide & International",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-127h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "civil-engineering-jobs-telegram",
-    "slug": "civil-engineering-jobs-telegram",
-    "title": "Civil Engineering Jobs",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "engineering-jobs",
-    "subcategory": "Civil & Mechanical",
-    "tags": [
-      "telegram",
-      "jobs",
-      "engineeringjobs"
-    ],
-    "inviteUrl": "https://t.me/Civil_Engineering_Jobs_India",
-    "description": "Civil Engineering Jobs",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "engineering-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 58157,
-    "memberCountSource": "https://t.me/Civil_Engineering_Jobs_India",
-    "memberCountCheckedAt": "2026-11-02T14:01:35.538Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-11-02T14:01:35.538Z",
-    "sourceUrls": [
-      "https://t.me/Civil_Engineering_Jobs_India"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-11-02T14:01:35.538Z",
-    "lastCheckedAt": "2026-11-02T14:01:35.538Z",
-    "updatedAt": "2026-11-02T14:01:35.538Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-11-02T14:01:35.538Z",
-    "lastSeenAt": "2026-11-02T14:01:35.538Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1793628095538_ex9dr",
-      "run_1793628103815_wc3vo"
-    ],
-    "querySource": "site:t.me mechanical electrical engineer vacancies Worldwide & International",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-127h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "india-job-hub-telegram",
-    "slug": "india-job-hub-telegram",
-    "title": "India Job hub",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "engineering-jobs",
-    "subcategory": "Civil & Mechanical",
-    "tags": [
-      "telegram",
-      "jobs",
-      "engineeringjobs"
-    ],
-    "inviteUrl": "https://t.me/jobhubindia",
-    "description": "This group only posts job openings for free. We are happy to help those people who are  struggling to get job.  Hope so, our good deeds will help you each some day.  😊 For help message on https://t.me/djobbuzz",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "engineering-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 3824,
-    "memberCountSource": "https://t.me/jobhubindia",
-    "memberCountCheckedAt": "2026-11-02T14:01:35.538Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-11-02T14:01:35.538Z",
-    "sourceUrls": [
-      "https://t.me/jobhubindia"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-11-02T14:01:35.538Z",
-    "lastCheckedAt": "2026-11-02T14:01:35.538Z",
-    "updatedAt": "2026-11-02T14:01:35.538Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-11-02T14:01:35.538Z",
-    "lastSeenAt": "2026-11-02T14:01:35.538Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1793628095538_ex9dr",
-      "run_1793628104289_lon21"
-    ],
-    "querySource": "site:t.me mechanical electrical engineer vacancies Worldwide & International",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-127h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "walk-in-jobs-telegram",
-    "slug": "walk-in-jobs-telegram",
-    "title": "Walk-in jobs",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "engineering-jobs",
-    "subcategory": "Civil & Mechanical",
-    "tags": [
-      "telegram",
-      "jobs",
-      "engineeringjobs"
-    ],
-    "inviteUrl": "https://t.me/walk_in_Job",
-    "description": null,
-    "descriptionSource": null,
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "engineering-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 3674,
-    "memberCountSource": "https://t.me/walk_in_Job",
-    "memberCountCheckedAt": "2026-11-02T14:01:35.538Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-11-02T14:01:35.538Z",
-    "sourceUrls": [
-      "https://t.me/walk_in_Job"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-11-02T14:01:35.538Z",
-    "lastCheckedAt": "2026-11-02T14:01:35.538Z",
-    "updatedAt": "2026-11-02T14:01:35.538Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-11-02T14:01:35.538Z",
-    "lastSeenAt": "2026-11-02T14:01:35.538Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1793628095538_ex9dr",
-      "run_1793628104762_okjmj"
-    ],
-    "querySource": "site:t.me mechanical electrical engineer vacancies Worldwide & International",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-127h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "sales-banking-field-jobs-hiring-whatsapp",
     "slug": "sales-banking-field-jobs-hiring-whatsapp",
     "title": "SALES BANKING FIELD JOBS HIRING",
@@ -471,7 +63,7 @@
     "sourceHostname": "chat.whatsapp.com",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-80h",
+      "validation-stale-121h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -539,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-80h",
+      "validation-stale-121h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -607,7 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-80h",
+      "validation-stale-121h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -675,7 +267,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-80h",
+      "validation-stale-121h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -743,7 +335,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-80h",
+      "validation-stale-121h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -811,7 +403,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-80h",
+      "validation-stale-121h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -879,7 +471,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-32h",
+      "validation-stale-73h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -925,12 +517,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": "1179609811176915004",
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-08T12:22:48.111Z",
     "lastCheckedAt": "2026-11-08T12:22:48.111Z",
     "updatedAt": "2026-11-08T12:22:48.111Z",
     "safetyFlags": [],
+    "guildId": "1179609811176915004",
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-08T12:22:48.111Z",
@@ -944,6 +536,11 @@
       "run_1794140572036_kyrbb"
     ],
     "querySource": "discord.gg tech job postings Discord Worldwide & International",
-    "sourceHostname": "discord.gg"
+    "sourceHostname": "discord.gg",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-26h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   }
 ]
