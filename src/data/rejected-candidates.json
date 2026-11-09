@@ -2676,8 +2676,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-11-08T12:22:48.111Z",
-    "timesSeen": 19,
+    "lastSeenAt": "2026-11-09T03:09:48.299Z",
+    "timesSeen": 20,
     "title": "Code. Corp. Answers."
   },
   {
@@ -8224,8 +8224,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-21T11:18:49.128Z",
-    "lastSeenAt": "2026-11-08T12:22:48.111Z",
-    "timesSeen": 8
+    "lastSeenAt": "2026-11-09T03:09:48.299Z",
+    "timesSeen": 9
   },
   {
     "url": "https://discord.gg/Hs4n5SEJF2",
@@ -8798,8 +8798,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-24T10:40:25.484Z",
-    "lastSeenAt": "2026-11-08T12:22:48.111Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-11-09T03:09:48.299Z",
+    "timesSeen": 5,
     "title": "Thapa Technical"
   },
   {
@@ -14075,5 +14075,21 @@
     "lastSeenAt": "2026-11-08T12:22:48.111Z",
     "timesSeen": 1,
     "title": "OHUB"
+  },
+  {
+    "url": "https://discord.gg/Bq6NuaPu",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-09T03:09:48.299Z",
+    "lastSeenAt": "2026-11-09T03:09:48.299Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/KNudBGbQHr",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-09T03:09:48.299Z",
+    "lastSeenAt": "2026-11-09T03:09:48.299Z",
+    "timesSeen": 1
   }
 ]
