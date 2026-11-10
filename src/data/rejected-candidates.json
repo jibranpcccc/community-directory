@@ -204,8 +204,8 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 45,
-    "lastSeenAt": "2026-11-04T13:26:53.423Z"
+    "timesSeen": 48,
+    "lastSeenAt": "2026-11-10T13:57:59.784Z"
   },
   {
     "url": "https://discord.gg/dFp4rR3T",
@@ -3276,16 +3276,16 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-09-23T20:46:41.683Z",
-    "timesSeen": 7
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 10
   },
   {
     "url": "https://t.me/dataflair",
     "platform": "telegram",
-    "reason": "wrong-niche",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-10-17T09:53:12.499Z",
-    "timesSeen": 8,
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 10,
     "title": "DataFlair"
   },
   {
@@ -3302,8 +3302,8 @@
     "platform": "whatsapp",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-10-31T11:22:54.263Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 5,
     "title": "AWS Machine Learning"
   },
   {
@@ -3362,8 +3362,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-08-30T10:54:52.766Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 2,
     "title": "Data Science / Analytics / Gen AI Jobs"
   },
   {
@@ -3388,8 +3388,8 @@
     "platform": "whatsapp",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-10-17T19:47:25.262Z",
-    "timesSeen": 13
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 14
   },
   {
     "url": "https://t.me/DatascienceChats",
@@ -3523,10 +3523,10 @@
   {
     "url": "https://discord.gg/datascience",
     "platform": "discord",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-08-30T10:54:52.766Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/artificialintelligence",
@@ -4150,8 +4150,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-01T10:40:51.833Z",
-    "lastSeenAt": "2026-11-09T14:33:43.782Z",
-    "timesSeen": 17,
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 18,
     "title": "PRIDEGO"
   },
   {
@@ -5266,10 +5266,10 @@
   {
     "url": "https://discord.gg/m8Bw5JYzHZ",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-06T09:49:59.766Z",
-    "lastSeenAt": "2026-09-06T09:49:59.766Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 2,
     "title": "r/MelbourneTrains Official 🚂"
   },
   {
@@ -5770,10 +5770,10 @@
   {
     "url": "https://chat.whatsapp.com/DHNppu0p04q6nzlmZCwebr",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-08T10:13:10.042Z",
-    "lastSeenAt": "2026-11-09T14:33:43.782Z",
-    "timesSeen": 9,
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 10,
     "title": "DHNppu0p04q6nzlmZCwebr"
   },
   {
@@ -5825,8 +5825,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-09-09T10:17:40.700Z",
-    "lastSeenAt": "2026-11-09T14:33:43.782Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 4
   },
   {
     "url": "https://discord.gg/developersindia",
@@ -5934,10 +5934,10 @@
   {
     "url": "https://discord.gg/X9tUSuSz7k",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-09-09T10:17:40.700Z",
-    "lastSeenAt": "2026-11-03T00:07:57.051Z",
-    "timesSeen": 13,
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 14,
     "title": "South-African Tech Channel"
   },
   {
@@ -8553,8 +8553,8 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-23T10:27:25.436Z",
-    "lastSeenAt": "2026-09-23T20:46:41.683Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 5
   },
   {
     "url": "https://t.me/datascienceinfo",
@@ -8583,10 +8583,10 @@
   {
     "url": "https://discord.gg/data-share",
     "platform": "discord",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-23T10:27:25.436Z",
-    "lastSeenAt": "2026-09-23T10:27:25.436Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/data-science",
@@ -8737,10 +8737,10 @@
   {
     "url": "https://t.me/datasciencemorons",
     "platform": "telegram",
-    "reason": "wrong-niche",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-23T20:46:41.683Z",
-    "lastSeenAt": "2026-10-17T09:53:12.499Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 4,
     "title": "Data Science"
   },
   {
@@ -9529,10 +9529,11 @@
   {
     "url": "https://discord.gg/VgPXmQ7tHp",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-09-29T11:44:22.930Z",
-    "lastSeenAt": "2026-10-16T10:18:35.904Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 3,
+    "title": "Kiwi Tech Network"
   },
   {
     "url": "https://t.me/jobsandopportunities",
@@ -11389,10 +11390,10 @@
   {
     "url": "https://chat.whatsapp.com/CiBVYuUrwa3AQ6YXlyjmDZ",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-10-17T01:43:41.072Z",
-    "lastSeenAt": "2026-10-17T19:47:25.262Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 5,
     "title": "Data Science &#064;InfraBIM"
   },
   {
@@ -11899,19 +11900,19 @@
   {
     "url": "https://chat.whatsapp.com/Gh3enT0Wr8N5Un0jg9areJ",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "unconfirmed-target-market",
     "date": "2026-10-20T10:36:55.567Z",
-    "lastSeenAt": "2026-10-25T10:19:30.208Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 4,
     "title": "Research Jobs Hub"
   },
   {
     "url": "https://chat.whatsapp.com/IKc5D9ozOVrGPLucdarML7",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "unconfirmed-target-market",
     "date": "2026-10-20T10:36:55.567Z",
-    "lastSeenAt": "2026-10-23T16:00:12.242Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 3,
     "title": "Research Jobs Hub 2"
   },
   {
@@ -12790,10 +12791,10 @@
   {
     "url": "https://discord.gg/hyXEnPv7ZY",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-10-24T14:58:39.934Z",
-    "lastSeenAt": "2026-10-24T14:58:39.934Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 2,
     "title": "Data Science Dojo"
   },
   {
@@ -14205,5 +14206,169 @@
     "date": "2026-11-09T14:33:48.567Z",
     "lastSeenAt": "2026-11-09T14:33:48.567Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/datasciencej",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1,
+    "title": "Data Science Jobs"
+  },
+  {
+    "url": "https://discord.gg/yyfQaVSqBH",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/AchTKJtw",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/Gybk6Cct",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/E7gMFVrM",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/wMKrJHZC",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/Sbtj3jdeAz",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1,
+    "title": "Analytics India Magazine"
+  },
+  {
+    "url": "https://discord.gg/csdojo",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/IxSRNr9yBdi80E3ZHahpOB",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/fhTdHdZju2",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1,
+    "title": "Nottingham Data Science & AI"
+  },
+  {
+    "url": "https://discord.gg/D9ZcwE",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/H5R38UWzxZ",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/datascience_UK01",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://t.me/ninja_data",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://t.me/mldlworld",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://t.me/learn_datasicence",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://t.me/geekycod",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 2
+  },
+  {
+    "url": "https://t.me/Kagglers_africa_tunisia",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/en_sha5r_com_uae_jobs",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/JmPu9Uq58UW562XTQOupCK",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-10T13:57:59.784Z",
+    "lastSeenAt": "2026-11-10T13:57:59.784Z",
+    "timesSeen": 1,
+    "title": "HireShort | Community"
   }
 ]
