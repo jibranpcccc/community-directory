@@ -1440,8 +1440,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-23T00:30:25.838Z",
-    "lastSeenAt": "2026-11-09T14:33:43.782Z",
-    "timesSeen": 26,
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 27,
     "title": "Tech Professionals - Australia & New Zealand"
   },
   {
@@ -1637,16 +1637,16 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-11-08T12:22:48.111Z",
-    "timesSeen": 47
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 48
   },
   {
     "url": "https://discord.gg/awHZtSf89q",
     "platform": "discord",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-11-08T12:22:48.111Z",
-    "timesSeen": 15,
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 16,
     "title": "🤝Devs For Hire & Jobs💰💻"
   },
   {
@@ -1681,8 +1681,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-10-10T11:33:26.843Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 5,
     "title": "FresherOffCampus Official Channel"
   },
   {
@@ -3036,8 +3036,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-29T11:52:58.872Z",
-    "lastSeenAt": "2026-10-17T01:43:41.072Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 6,
     "title": "Placement Lelo 2.0"
   },
   {
@@ -3054,8 +3054,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-29T11:52:58.872Z",
-    "lastSeenAt": "2026-11-09T14:33:43.782Z",
-    "timesSeen": 9,
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 10,
     "title": "Freshershunt - Off Campus Drive Updates"
   },
   {
@@ -3644,10 +3644,10 @@
   {
     "url": "https://discord.gg/3QyqASgm3y",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-11-09T14:33:43.782Z",
-    "timesSeen": 30,
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 31,
     "title": "/r/singaporejobs"
   },
   {
@@ -4124,8 +4124,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-01T10:40:51.833Z",
-    "lastSeenAt": "2026-10-23T10:42:40.465Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 5,
     "title": "DownUnderDevs"
   },
   {
@@ -10712,10 +10712,10 @@
   {
     "url": "https://discord.gg/gamertechtoronto",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-10-10T11:33:26.843Z",
-    "lastSeenAt": "2026-10-10T11:33:26.843Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/fmCJpPd8",
@@ -12595,10 +12595,10 @@
   {
     "url": "https://t.me/freshershunt24",
     "platform": "telegram",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-23T10:42:40.465Z",
-    "lastSeenAt": "2026-10-23T10:42:40.465Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 2,
     "title": "Freshershunt"
   },
   {
@@ -13684,8 +13684,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-11-03T13:11:01.037Z",
-    "lastSeenAt": "2026-11-03T13:11:01.037Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 2,
     "title": "马尼拉招聘工作群 MANILA JOB HIRING"
   },
   {
@@ -14370,5 +14370,161 @@
     "lastSeenAt": "2026-11-10T13:57:59.784Z",
     "timesSeen": 1,
     "title": "HireShort | Community"
+  },
+  {
+    "url": "https://t.me/BinanceFilipino",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-11T23:50:20.405Z",
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/MXCFilipino",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-11T23:50:20.405Z",
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/PilipinoCommunity",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-11T23:50:20.405Z",
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/68YqqFZ",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-11T23:50:20.405Z",
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/rubyjob",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-11T23:50:20.405Z",
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 1,
+    "title": "Ruby &amp; Elixir Job | Jooby.dev"
+  },
+  {
+    "url": "https://t.me/jvmjobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-11T23:50:20.405Z",
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 1,
+    "title": "pro.JVM Jobs"
+  },
+  {
+    "url": "https://t.me/mobile_jobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-11T23:50:20.405Z",
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 1,
+    "title": "Mobile Dev Jobs — вакансии и резюме"
+  },
+  {
+    "url": "https://t.me/analysts_hunter",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-11T23:50:20.405Z",
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 1,
+    "title": "Работа ищет аналитиков // Вакансии"
+  },
+  {
+    "url": "https://t.me/+VZpknRZ9nR8xMTQy",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-11T23:50:20.405Z",
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 1,
+    "title": "London Rooms &amp; Flats 🇬🇧 Rent Community"
+  },
+  {
+    "url": "https://discord.gg/e9wqKr957",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-11T23:50:20.405Z",
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/code2careerai",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-11T23:50:20.405Z",
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 1,
+    "title": "🤖 Coding Community | code2career.ai 🇮🇳"
+  },
+  {
+    "url": "https://discord.gg/angular",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-11T23:50:20.405Z",
+    "lastSeenAt": "2026-11-11T23:50:20.405Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/Fo9rmRyiiTDFw493dJQaKm",
+    "platform": "whatsapp",
+    "title": "SALES BANKING FIELD JOBS HIRING",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-11-11T23:50:26.315Z",
+    "lastSeenAt": "2026-11-11T23:50:26.315Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/VtheTecheeChannel",
+    "platform": "telegram",
+    "title": "V the Techee",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-11-11T23:50:26.315Z",
+    "lastSeenAt": "2026-11-11T23:50:26.315Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/engineerjobsindia",
+    "platform": "telegram",
+    "title": "ENGINEER JOBS INDIA",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-11-11T23:50:26.315Z",
+    "lastSeenAt": "2026-11-11T23:50:26.315Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/learningwithram1299",
+    "platform": "telegram",
+    "title": "Learning With Ram-Job Opportunity updates 🎯",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-11-11T23:50:26.315Z",
+    "lastSeenAt": "2026-11-11T23:50:26.315Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/seekajob",
+    "platform": "telegram",
+    "title": "IT Jobs across India",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-11-11T23:50:26.315Z",
+    "lastSeenAt": "2026-11-11T23:50:26.315Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/placement_fellas",
+    "platform": "telegram",
+    "title": "Placement Fellas-Off Campus Drives",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-11-11T23:50:26.315Z",
+    "lastSeenAt": "2026-11-11T23:50:26.315Z",
+    "timesSeen": 1
   }
 ]
