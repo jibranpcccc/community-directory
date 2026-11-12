@@ -3644,10 +3644,10 @@
   {
     "url": "https://discord.gg/3QyqASgm3y",
     "platform": "discord",
-    "reason": "wrong-niche",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-11-11T23:50:20.405Z",
-    "timesSeen": 31,
+    "lastSeenAt": "2026-11-12T04:29:23.096Z",
+    "timesSeen": 32,
     "title": "/r/singaporejobs"
   },
   {
@@ -14526,5 +14526,23 @@
     "date": "2026-11-11T23:50:26.315Z",
     "lastSeenAt": "2026-11-11T23:50:26.315Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/G70XLIWEAAwJEvabPSgWQX",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-12T04:29:23.096Z",
+    "lastSeenAt": "2026-11-12T04:29:23.096Z",
+    "timesSeen": 1,
+    "title": "G70XLIWEAAwJEvabPSgWQX"
+  },
+  {
+    "url": "https://chat.whatsapp.com/LvxFGWQ6IUBEUC53gW5DK9",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-12T04:29:23.096Z",
+    "lastSeenAt": "2026-11-12T04:29:23.096Z",
+    "timesSeen": 1,
+    "title": "LvxFGWQ6IUBEUC53gW5DK9"
   }
 ]
