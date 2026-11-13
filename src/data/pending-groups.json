@@ -1,73 +1,5 @@
 [
   {
-    "id": "cs-career-hub-discord",
-    "slug": "cs-career-hub-discord",
-    "title": "CS Career Hub",
-    "platform": "discord",
-    "vertical": "jobs",
-    "category": "government-jobs",
-    "subcategory": "Public Sector",
-    "tags": [
-      "discord",
-      "jobs",
-      "governmentjobs"
-    ],
-    "inviteUrl": "https://discord.gg/cscareerhub",
-    "description": "This server is to help grow the next and current generation of software engineers.",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "government-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 38533,
-    "memberCountSource": "https://discord.gg/cscareerhub",
-    "memberCountCheckedAt": "2026-11-06T13:23:27.620Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-11-06T13:23:27.620Z",
-    "sourceUrls": [
-      "https://discord.gg/cscareerhub"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-11-06T13:23:27.620Z",
-    "lastCheckedAt": "2026-11-06T13:23:27.620Z",
-    "updatedAt": "2026-11-06T13:23:27.620Z",
-    "safetyFlags": [],
-    "guildId": "334891772696330241",
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-11-06T13:23:27.620Z",
-    "lastSeenAt": "2026-11-06T13:23:27.620Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1793971407620_8yfnp",
-      "run_1793971408141_mhar2"
-    ],
-    "querySource": "discord.gg government job alerts Global Telegram",
-    "sourceHostname": "discord.gg",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-145h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "cs-careers-hub-discord",
     "slug": "cs-careers-hub-discord",
     "title": "CS Careers Hub 🍁",
@@ -131,7 +63,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-98h",
+      "validation-stale-121h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -203,6 +135,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-38h",
       "duplicate-published: Matching community title on telegram: \"Best London Job • Real Work Only\" vs \"Best London Job • Real Work Only\""
     ]
   }
