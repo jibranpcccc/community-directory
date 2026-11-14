@@ -763,8 +763,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-11-13T13:35:59.375Z",
-    "timesSeen": 41
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 42
   },
   {
     "url": "https://t.me/design_work",
@@ -870,8 +870,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-21T02:09:17.937Z",
-    "timesSeen": 6
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 7
   },
   {
     "url": "https://t.me/developer_jobs",
@@ -921,8 +921,8 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-21T10:47:43.301Z",
-    "timesSeen": 15
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 16
   },
   {
     "url": "https://t.me/web_designers",
@@ -1020,8 +1020,8 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-21T04:42:49.346Z",
-    "lastSeenAt": "2026-10-21T02:09:17.937Z",
-    "timesSeen": 5
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 6
   },
   {
     "url": "https://t.me/remote_sales",
@@ -1872,8 +1872,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-24T12:25:35.427Z",
-    "lastSeenAt": "2026-10-18T10:06:42.715Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 4,
     "title": "qaqa sənsən"
   },
   {
@@ -4634,8 +4634,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-03T15:19:24.483Z",
-    "lastSeenAt": "2026-09-27T20:32:11.298Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 5,
     "title": "Remote IT (Inflow)"
   },
   {
@@ -9174,8 +9174,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-27T11:02:27.734Z",
-    "lastSeenAt": "2026-09-27T11:02:27.734Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 2,
     "title": "TrulyRemoteWork Jobs"
   },
   {
@@ -13094,10 +13094,10 @@
     "url": "https://t.me/remotejobs",
     "platform": "telegram",
     "title": "Remote Jobs👨‍💻",
-    "reason": "insufficient-publication-confidence",
+    "reason": "unconfirmed-target-market",
     "date": "2026-10-27T11:13:36.680Z",
-    "lastSeenAt": "2026-10-27T11:13:36.680Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/jc66nmmMGS",
@@ -14220,26 +14220,27 @@
   {
     "url": "https://discord.gg/yyfQaVSqBH",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-11-10T13:57:59.784Z",
-    "lastSeenAt": "2026-11-10T13:57:59.784Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 2,
+    "title": "Data Science Dojo"
   },
   {
     "url": "https://discord.gg/AchTKJtw",
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-11-10T13:57:59.784Z",
-    "lastSeenAt": "2026-11-10T13:57:59.784Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/Gybk6Cct",
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-11-10T13:57:59.784Z",
-    "lastSeenAt": "2026-11-10T13:57:59.784Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/E7gMFVrM",
@@ -14629,8 +14630,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-11-12T14:08:38.953Z",
-    "lastSeenAt": "2026-11-12T14:08:38.953Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 2,
     "title": "Recabulary"
   },
   {
@@ -14717,6 +14718,39 @@
     "reason": "insufficient-publication-confidence",
     "date": "2026-11-13T13:36:07.173Z",
     "lastSeenAt": "2026-11-13T13:36:07.173Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/RemoteAndFreelance",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-14T03:44:25.828Z",
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/H33rRDTm3p",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-14T03:44:25.828Z",
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/8AQnWJAgHt",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-14T03:44:25.828Z",
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
+    "timesSeen": 1,
+    "title": "r/CerebralPalsy"
+  },
+  {
+    "url": "https://discord.gg/aBVQ8ErR",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-14T03:44:25.828Z",
+    "lastSeenAt": "2026-11-14T03:44:25.828Z",
     "timesSeen": 1
   }
 ]
