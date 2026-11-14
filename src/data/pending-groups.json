@@ -138,5 +138,68 @@
       "validation-stale-38h",
       "duplicate-published: Matching community title on telegram: \"Best London Job • Real Work Only\" vs \"Best London Job • Real Work Only\""
     ]
+  },
+  {
+    "id": "job-for-ukrainians-telegram",
+    "slug": "job-for-ukrainians-telegram",
+    "title": "JOB for Ukrainians",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "remote-jobs",
+    "subcategory": "Remote Work",
+    "tags": [
+      "telegram",
+      "jobs",
+      "remotejobs"
+    ],
+    "inviteUrl": "https://t.me/jobforukrainians",
+    "description": "Платне розміщення вакансій @Jobs_KhrystynaБот для вiдправки вакансiй - @jobforukrainiansvacancy_botКанал з найбільшою кількість найкращих вакансій 🇺🇦і🌎Оновлення щодня 10:00IT, Med, Ed, Fin, Law and otherРекламний партнер https://teleads.com.ua",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GB",
+    "countryCode": "GB",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "remote-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 44843,
+    "memberCountSource": "https://t.me/jobforukrainians",
+    "memberCountCheckedAt": "2026-11-14T12:40:03.114Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-14T12:40:03.114Z",
+    "sourceUrls": [
+      "https://t.me/jobforukrainians"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-14T12:40:03.114Z",
+    "lastCheckedAt": "2026-11-14T12:40:03.114Z",
+    "updatedAt": "2026-11-14T12:40:03.114Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-14T12:40:03.114Z",
+    "lastSeenAt": "2026-11-14T12:40:03.114Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1794660003114_mj5ah",
+      "run_1794660005301_8zjo6"
+    ],
+    "querySource": "site:t.me worldwide remote jobs UK Telegram channel",
+    "sourceHostname": "t.me"
   }
 ]
