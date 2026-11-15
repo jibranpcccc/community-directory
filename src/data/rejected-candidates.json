@@ -1440,8 +1440,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-23T00:30:25.838Z",
-    "lastSeenAt": "2026-11-11T23:50:20.405Z",
-    "timesSeen": 27,
+    "lastSeenAt": "2026-11-15T03:18:55.086Z",
+    "timesSeen": 28,
     "title": "Tech Professionals - Australia & New Zealand"
   },
   {
@@ -4159,8 +4159,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-01T10:40:51.833Z",
-    "lastSeenAt": "2026-09-28T22:44:50.513Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-11-15T03:18:55.086Z",
+    "timesSeen": 3,
     "title": "DyFEqddFsigAUFjiy8YnEM"
   },
   {
@@ -6766,10 +6766,10 @@
   {
     "url": "https://chat.whatsapp.com/HI3mQkaKblNDqB7GEF2nPM",
     "platform": "whatsapp",
-    "reason": "wrong-niche",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-14T01:51:21.201Z",
-    "lastSeenAt": "2026-10-08T22:34:08.468Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-11-15T03:18:55.086Z",
+    "timesSeen": 3,
     "title": "HI3mQkaKblNDqB7GEF2nPM"
   },
   {
@@ -14857,5 +14857,67 @@
     "date": "2026-11-14T12:40:03.114Z",
     "lastSeenAt": "2026-11-14T12:40:03.114Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/L7KU5a94NQz0CUdYwk9Jp8",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-15T03:18:55.086Z",
+    "lastSeenAt": "2026-11-15T03:18:55.086Z",
+    "timesSeen": 1,
+    "title": "&#x1f4ab;"
+  },
+  {
+    "url": "https://chat.whatsapp.com/L832XFMdRnQDtjTxnpV4hc",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-15T03:18:55.086Z",
+    "lastSeenAt": "2026-11-15T03:18:55.086Z",
+    "timesSeen": 1,
+    "title": "L832XFMdRnQDtjTxnpV4hc"
+  },
+  {
+    "url": "https://chat.whatsapp.com/GVJQmWffcgP5IdsS2EFPns",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-15T03:18:55.086Z",
+    "lastSeenAt": "2026-11-15T03:18:55.086Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/DULWsgGoibR96tsau0G4IV",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-15T03:18:55.086Z",
+    "lastSeenAt": "2026-11-15T03:18:55.086Z",
+    "timesSeen": 1,
+    "title": "DULWsgGoibR96tsau0G4IV"
+  },
+  {
+    "url": "https://chat.whatsapp.com/7bRqXnDzdNX1erwkOMg9ad",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-15T03:18:55.086Z",
+    "lastSeenAt": "2026-11-15T03:18:55.086Z",
+    "timesSeen": 1,
+    "title": "7bRqXnDzdNX1erwkOMg9ad"
+  },
+  {
+    "url": "https://chat.whatsapp.com/6y0cecykeL7D4mqAOIZ0kV",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-15T03:18:55.086Z",
+    "lastSeenAt": "2026-11-15T03:18:55.086Z",
+    "timesSeen": 1,
+    "title": "DUBAI TRADE"
+  },
+  {
+    "url": "https://chat.whatsapp.com/IK1P2NVkWjDDYiXLoTHcK7",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-15T03:18:55.086Z",
+    "lastSeenAt": "2026-11-15T03:18:55.086Z",
+    "timesSeen": 1,
+    "title": "HR &amp; ADMIN Quick Jobs Placement - 1"
   }
 ]
