@@ -9812,10 +9812,11 @@
   {
     "url": "https://discord.gg/sYTNtwg29e",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-10-01T12:00:56.919Z",
-    "lastSeenAt": "2026-10-01T12:00:56.919Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-17T01:11:17.141Z",
+    "timesSeen": 2,
+    "title": "Tech Certified Community"
   },
   {
     "url": "https://discord.gg/christian-lempa-s-tech-community-702179729767268433",
@@ -15063,5 +15064,14 @@
     "lastSeenAt": "2026-11-16T14:11:07.242Z",
     "timesSeen": 1,
     "title": "SaaS University"
+  },
+  {
+    "url": "https://discord.gg/dZTzjNGuf",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-11-17T01:11:17.141Z",
+    "lastSeenAt": "2026-11-17T01:11:17.141Z",
+    "timesSeen": 1,
+    "title": "Googlers"
   }
 ]
