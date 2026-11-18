@@ -67,7 +67,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-85h",
+      "validation-stale-144h",
       "duplicate-published: Matching community title on telegram: \"Best London Job • Real Work Only\" vs \"Best London Job • Real Work Only\""
     ]
   },
@@ -135,8 +135,75 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-24h",
+      "validation-stale-83h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GB found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "careercompass-discord",
+    "slug": "careercompass-discord",
+    "title": "CareerCompass",
+    "platform": "discord",
+    "vertical": "jobs",
+    "category": "internships-graduate",
+    "subcategory": "Worldwide Jobs",
+    "tags": [
+      "discord",
+      "jobs",
+      "internshipsgraduate"
+    ],
+    "inviteUrl": "https://discord.gg/u2wTmrJz8J",
+    "description": "CareerCompass is a student-focused Discord community designed to make finding work, internships, and early career opportunities easier and less overwhelming.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "internships-graduate"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 3198,
+    "memberCountSource": "https://discord.gg/u2wTmrJz8J",
+    "memberCountCheckedAt": "2026-11-18T00:07:51.120Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-18T00:07:51.120Z",
+    "sourceUrls": [
+      "https://discord.gg/u2wTmrJz8J"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-18T00:07:51.120Z",
+    "lastCheckedAt": "2026-11-18T00:07:51.120Z",
+    "updatedAt": "2026-11-18T00:07:51.120Z",
+    "safetyFlags": [],
+    "guildId": "1460148112399007911",
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-18T00:07:51.120Z",
+    "lastSeenAt": "2026-11-18T00:07:51.120Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1794960471120_rq6bq",
+      "run_1794960471332_hpp8w"
+    ],
+    "querySource": "discord.gg Worldwide tech jobs OR Worldwide hiring",
+    "sourceHostname": "discord.gg",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   }
 ]

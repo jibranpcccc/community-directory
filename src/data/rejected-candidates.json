@@ -232,11 +232,11 @@
   {
     "url": "https://discord.gg/ryVD4mEs8t",
     "platform": "discord",
-    "reason": "wrong-niche",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "title": "Project Belonging",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 3,
-    "lastSeenAt": "2026-11-13T13:35:59.375Z"
+    "timesSeen": 4,
+    "lastSeenAt": "2026-11-18T00:07:51.120Z"
   },
   {
     "url": "https://discord.gg/TygWnqdAkD",
@@ -5130,8 +5130,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-11-17T15:07:26.646Z",
-    "timesSeen": 8,
+    "lastSeenAt": "2026-11-18T00:07:51.120Z",
+    "timesSeen": 9,
     "title": "Krishan Kumar - Jobs &amp; Internships Updates"
   },
   {
@@ -7889,8 +7889,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-18T10:14:06.131Z",
-    "lastSeenAt": "2026-10-25T10:19:30.208Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-11-18T00:07:51.120Z",
+    "timesSeen": 5,
     "title": "CS Majors"
   },
   {
@@ -11649,8 +11649,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-10-18T10:06:42.715Z",
-    "lastSeenAt": "2026-10-18T10:06:42.715Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-18T00:07:51.120Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/cZsJmkr",
@@ -15165,5 +15165,14 @@
     "date": "2026-11-17T15:07:26.646Z",
     "lastSeenAt": "2026-11-17T15:07:26.646Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/pRJ4nhvCF5",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-18T00:07:51.120Z",
+    "lastSeenAt": "2026-11-18T00:07:51.120Z",
+    "timesSeen": 1,
+    "title": "Aao Code Kare"
   }
 ]
