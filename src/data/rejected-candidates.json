@@ -1618,10 +1618,10 @@
   {
     "url": "https://discord.gg/reactiflux",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-11-18T07:28:38.130Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-11-18T14:41:21.887Z",
+    "timesSeen": 4,
     "title": "Reactiflux"
   },
   {
@@ -1681,8 +1681,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-11-11T23:50:20.405Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-11-18T14:41:21.887Z",
+    "timesSeen": 6,
     "title": "FresherOffCampus Official Channel"
   },
   {
@@ -3054,8 +3054,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-29T11:52:58.872Z",
-    "lastSeenAt": "2026-11-15T13:08:42.339Z",
-    "timesSeen": 11,
+    "lastSeenAt": "2026-11-18T14:41:21.887Z",
+    "timesSeen": 12,
     "title": "Freshershunt - Off Campus Drive Updates"
   },
   {
@@ -5015,8 +5015,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-09-05T09:56:13.493Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-18T14:41:21.887Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/techopportunityclub",
@@ -9795,10 +9795,10 @@
   {
     "url": "https://discord.gg/v8qjcecWPt",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-10-01T12:00:56.919Z",
-    "lastSeenAt": "2026-10-19T11:26:30.149Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-11-18T14:41:21.887Z",
+    "timesSeen": 3,
     "title": "IBMers"
   },
   {
@@ -9831,8 +9831,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-10-01T12:00:56.919Z",
-    "lastSeenAt": "2026-10-01T12:00:56.919Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-18T14:41:21.887Z",
+    "timesSeen": 2,
     "title": "2027 placement opportunities"
   },
   {
@@ -12759,10 +12759,10 @@
   {
     "url": "https://discord.gg/jobby",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-10-24T09:59:01.684Z",
-    "lastSeenAt": "2026-10-24T09:59:01.684Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-18T14:41:21.887Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/opento_data",
@@ -15174,5 +15174,30 @@
     "lastSeenAt": "2026-11-18T00:07:51.120Z",
     "timesSeen": 1,
     "title": "Aao Code Kare"
+  },
+  {
+    "url": "https://discord.gg/tech-opportunity-club-1002237083074066482",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-18T14:41:21.887Z",
+    "lastSeenAt": "2026-11-18T14:41:21.887Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/zapply",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-18T14:41:21.887Z",
+    "lastSeenAt": "2026-11-18T14:41:21.887Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/csmajors",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-11-18T14:41:21.887Z",
+    "lastSeenAt": "2026-11-18T14:41:21.887Z",
+    "timesSeen": 1,
+    "title": "CS Majors"
   }
 ]
