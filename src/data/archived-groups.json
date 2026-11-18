@@ -1,1 +1,46 @@
-[]
+[
+  {
+    "id": "remote-job-positions-telegram",
+    "slug": "remote-job-positions-telegram",
+    "title": "Remote Job Positions",
+    "platform": "telegram",
+    "inviteUrl": "https://t.me/RemoteJobPositions",
+    "publishedAt": "2026-09-09T10:17:40.700Z",
+    "unpublishedAt": "2026-11-18T07:19:02.583Z",
+    "unpublishReason": "repurposed-or-affiliate-spam",
+    "lastKnownStatus": "active",
+    "guildId": null,
+    "countryCode": "GLOBAL",
+    "category": "visa-sponsorship-jobs",
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "Remote Job Positions",
+      "checkedAt": "2026-09-09T10:17:41.548Z"
+    },
+    "sourceUrls": [
+      "https://t.me/RemoteJobPositions"
+    ]
+  },
+  {
+    "id": "remote-job-positions-telegram",
+    "slug": "remote-job-positions-telegram",
+    "title": "Remote Job Positions",
+    "platform": "telegram",
+    "inviteUrl": "https://t.me/RemoteJobPositions",
+    "publishedAt": "2026-09-09T10:17:40.700Z",
+    "unpublishedAt": "2026-11-18T07:24:17.202Z",
+    "unpublishReason": "repurposed-or-affiliate-spam",
+    "lastKnownStatus": "active",
+    "guildId": null,
+    "countryCode": "GLOBAL",
+    "category": "visa-sponsorship-jobs",
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "Remote Job Positions",
+      "checkedAt": "2026-09-09T10:17:41.548Z"
+    },
+    "sourceUrls": [
+      "https://t.me/RemoteJobPositions"
+    ]
+  }
+]

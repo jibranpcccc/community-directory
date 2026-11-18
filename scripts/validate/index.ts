@@ -54,6 +54,13 @@ async function runLinkValidation() {
     // Only update if state or timestamp changed
     comm.lastCheckedAt = result.checkedAt;
     comm.updatedAt = result.checkedAt;
+    comm.lastValidationStatus = result.status;
+
+    if (result.status === "active") {
+      comm.lastSuccessfulValidationAt = result.checkedAt;
+      comm.lastKnownLinkStatus = "active";
+      comm.consecutiveUnknownCount = 0;
+    }
     
     // Cautious state transition: if previously active and now fails once, don't mark dead immediately unless 404
     if (result.status !== comm.linkStatus) {

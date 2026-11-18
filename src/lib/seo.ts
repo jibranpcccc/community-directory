@@ -145,12 +145,12 @@ export function isCommunityIndexWorthyForTaxonomy(community: Community): boolean
   // 2. Link status must be active
   if (community.linkStatus !== "active") return false;
 
-  // 3. Sufficiently fresh validation (within 30 days)
+  // 3. Validated within the last 365 days (taxonomy hubs remain indexed across brief cron pauses)
   if (!community.lastSuccessfulValidationAt) return false;
   const validationAgeDays =
     (Date.now() - new Date(community.lastSuccessfulValidationAt).getTime()) /
     (1000 * 3600 * 24);
-  if (validationAgeDays > 30) return false;
+  if (validationAgeDays > 365) return false;
 
   // 4. Strong jobs/career/hiring intent
   if (community.vertical !== "jobs") return false;

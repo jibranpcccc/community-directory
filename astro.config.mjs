@@ -48,7 +48,7 @@ function isCommunityTaxonomyEligible(item) {
   if (item.vertical !== 'jobs') return false;
   if (!item.lastSuccessfulValidationAt) return false;
   const validationAgeDays = (Date.now() - new Date(item.lastSuccessfulValidationAt).getTime()) / (1000 * 3600 * 24);
-  if (validationAgeDays > 30) return false;
+  if (validationAgeDays > 365) return false;
   const approvedMarkets = [
     'GLOBAL', 'US', 'GB', 'CA', 'AU', 'IN', 'DE', 'NL', 'SG', 'AE', 'PH', 'NZ', 'IE', 'ZA'
   ];

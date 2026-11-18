@@ -1,6 +1,16 @@
 import { BOT_USER_AGENT, type LinkValidationResult } from "./validateUrl";
 import { extractCommunityIdentifier } from "../data/normalizeUrl";
 
+function decodeHtmlEntities(text: string): string {
+  return text
+    .replace(/&amp;/g, "&")
+    .replace(/&#39;|&#x27;|&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&#33;/g, "!");
+}
+
 /**
  * Validates a public Telegram link (e.g. https://t.me/example).
  * Performs deep semantic HTML inspection on the public preview page.
@@ -71,13 +81,13 @@ export async function validateTelegramLink(url: string): Promise<LinkValidationR
 
     // 2. Extract public metadata
     const titleMatch = html.match(/<div class="tgme_page_title"[^>]*>([\s\S]*?)<\/div>/);
-    const title = titleMatch ? titleMatch[1].replace(/<[^>]+>/g, "").trim() : undefined;
+    const title = titleMatch ? decodeHtmlEntities(titleMatch[1].replace(/<[^>]+>/g, "").trim()) : undefined;
 
     const extraMatch = html.match(/<div class="tgme_page_extra"[^>]*>([\s\S]*?)<\/div>/);
     const extra = extraMatch ? extraMatch[1].replace(/<[^>]+>/g, "").trim() : "";
 
     const descMatch = html.match(/<div class="tgme_page_description"[^>]*>([\s\S]*?)<\/div>/);
-    const desc = descMatch ? descMatch[1].replace(/<[^>]+>/g, "").trim() : undefined;
+    const desc = descMatch ? decodeHtmlEntities(descMatch[1].replace(/<[^>]+>/g, "").trim()) : undefined;
 
     // Check if it has member/subscriber count
     let memberCount: number | null = null;

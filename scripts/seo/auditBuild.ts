@@ -130,9 +130,9 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")) {
     }
 
     // 3. Meta Description Check (Section 1)
-    const descMatch = content.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)["']/i) ||
-                      content.match(/<meta\s+content=["']([^"']*)["']\s+name=["']description["']/i);
-    const description = descMatch ? descMatch[1].trim() : "";
+    const descMatch = content.match(/<meta\s+name=["']description["']\s+content=(["'])((?:(?!\1).)*)\1/i) ||
+                      content.match(/<meta\s+content=(["'])((?:(?!\1).)*)\1\s+name=["']description["']/i);
+    const description = descMatch ? descMatch[2].trim() : "";
     if (!description && urlPath !== "/404/") {
       pageErrors.push("Missing meta description");
     } else if (description) {
@@ -406,6 +406,14 @@ export function runSeoAudit(distDir: string = path.resolve("./dist")) {
         }
       }
     }
+  }
+
+  // Guardrail against silent mass-deindexing collapse
+  if (indexableCount < 15) {
+    errors.push(`Indexable page count collapsed to ${indexableCount} (minimum 15 required). Check taxonomy/freshness gates.`);
+  }
+  if (sitemapUrlCount < 15) {
+    errors.push(`Sitemap URL count collapsed to ${sitemapUrlCount} (minimum 15 required).`);
   }
 
   // Aggregate all page errors
