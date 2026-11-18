@@ -1620,8 +1620,8 @@
     "platform": "discord",
     "reason": "wrong-niche",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-11-18T14:41:21.887Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 5,
     "title": "Reactiflux"
   },
   {
@@ -1681,8 +1681,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-11-18T14:41:21.887Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 7,
     "title": "FresherOffCampus Official Channel"
   },
   {
@@ -2181,8 +2181,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-25T12:26:20.198Z",
-    "lastSeenAt": "2026-11-17T15:07:26.646Z",
-    "timesSeen": 14
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 15
   },
   {
     "url": "https://discord.gg/rrdaq48xJ",
@@ -2544,10 +2544,10 @@
   {
     "url": "https://chat.whatsapp.com/IFB8gqjaP80B6lF2JhuFC2",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-08-27T16:58:43.400Z",
-    "lastSeenAt": "2026-10-30T11:49:44.103Z",
-    "timesSeen": 10,
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 11,
     "title": "ICT Opportunities 6 &#x1f393;"
   },
   {
@@ -2555,8 +2555,8 @@
     "platform": "whatsapp",
     "reason": "wrong-niche",
     "date": "2026-08-27T16:58:43.400Z",
-    "lastSeenAt": "2026-10-20T20:58:31.532Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 7,
     "title": "Law / LLB Opportunities &#x1f393;"
   },
   {
@@ -2564,17 +2564,17 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-27T16:58:43.400Z",
-    "lastSeenAt": "2026-10-20T20:58:31.532Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 7,
     "title": "Social Work Opportunities with STUFNews.com 1 &#x1f393;"
   },
   {
     "url": "https://chat.whatsapp.com/JCD7w0prnNsEdgGGhQIfJy",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-08-27T16:58:43.400Z",
-    "lastSeenAt": "2026-10-20T10:36:55.567Z",
-    "timesSeen": 8,
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 9,
     "title": "JCD7w0prnNsEdgGGhQIfJy"
   },
   {
@@ -3054,8 +3054,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-29T11:52:58.872Z",
-    "lastSeenAt": "2026-11-18T14:41:21.887Z",
-    "timesSeen": 12,
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 13,
     "title": "Freshershunt - Off Campus Drive Updates"
   },
   {
@@ -4510,10 +4510,10 @@
   {
     "url": "https://chat.whatsapp.com/DXO1mdvtC3t8kJKkWReaFf",
     "platform": "whatsapp",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-09-03T10:16:47.914Z",
-    "lastSeenAt": "2026-11-03T13:11:01.037Z",
-    "timesSeen": 7,
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 8,
     "title": "Marketing, PR, Comms 1 &#x1f393;"
   },
   {
@@ -4521,8 +4521,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-03T10:16:47.914Z",
-    "lastSeenAt": "2026-10-20T20:58:31.532Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 6,
     "title": "SHEQ Interns, Jobs, B..1&#x1f393;"
   },
   {
@@ -5005,26 +5005,26 @@
   {
     "url": "https://discord.gg/aaocodekare",
     "platform": "discord",
-    "reason": "unknown-status",
+    "reason": "dead-link",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-09-18T10:14:06.131Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/syncloop",
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-11-18T14:41:21.887Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/techopportunityclub",
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-10-24T19:55:17.615Z",
-    "timesSeen": 5
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 6
   },
   {
     "url": "https://discord.gg/klinncommunity",
@@ -5130,8 +5130,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-11-18T00:07:51.120Z",
-    "timesSeen": 9,
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 10,
     "title": "Krishan Kumar - Jobs &amp; Internships Updates"
   },
   {
@@ -9829,10 +9829,10 @@
   {
     "url": "https://chat.whatsapp.com/ExPDP9gqpX36gjFWTFCm5n",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-10-01T12:00:56.919Z",
-    "lastSeenAt": "2026-11-18T14:41:21.887Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 3,
     "title": "2027 placement opportunities"
   },
   {
@@ -12599,8 +12599,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-10-23T10:42:40.465Z",
-    "lastSeenAt": "2026-11-15T13:08:42.339Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 4,
     "title": "Freshershunt"
   },
   {
@@ -13112,10 +13112,10 @@
   {
     "url": "https://chat.whatsapp.com/FDH6QC3CkgWDwpiU3tCjJG",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-28T11:49:31.305Z",
-    "lastSeenAt": "2026-10-28T11:49:31.305Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 2,
     "title": "Rotterdam Housing Chat | RentSwap #1"
   },
   {
@@ -15199,5 +15199,73 @@
     "lastSeenAt": "2026-11-18T14:41:21.887Z",
     "timesSeen": 1,
     "title": "CS Majors"
+  },
+  {
+    "url": "https://discord.gg/outintech",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-18T23:44:24.361Z",
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/internships",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-18T23:44:24.361Z",
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/K9SzAaYEl1T7raEvFKarWn",
+    "platform": "whatsapp",
+    "reason": "wrong-niche",
+    "date": "2026-11-18T23:44:24.361Z",
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 1,
+    "title": ""
+  },
+  {
+    "url": "https://t.me/learnnew3",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-18T23:44:24.361Z",
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 1,
+    "title": "Jobs/Internship All Batches"
+  },
+  {
+    "url": "https://t.me/testupdatesol",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-18T23:44:24.361Z",
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 1,
+    "title": "Test & Interview Latest Updates (Online Learning) All Courses/Batches/All Streams"
+  },
+  {
+    "url": "https://chat.whatsapp.com/FEG2u7w1uQW856I1SHmv6z",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-18T23:44:24.361Z",
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/Dyjjx0NX9VQBucb2QFcv7p",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-18T23:44:24.361Z",
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/yTvY3JyFZ2",
+    "platform": "discord",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-18T23:44:24.361Z",
+    "lastSeenAt": "2026-11-18T23:44:24.361Z",
+    "timesSeen": 1,
+    "title": "Rishab Jain's Visionaries"
   }
 ]
