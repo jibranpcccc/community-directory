@@ -15267,5 +15267,31 @@
     "lastSeenAt": "2026-11-18T23:44:24.361Z",
     "timesSeen": 1,
     "title": "Rishab Jain's Visionaries"
+  },
+  {
+    "url": "https://chat.whatsapp.com/CCQYfR2BfqeIWKJtik7ghu",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-19T04:40:39.225Z",
+    "lastSeenAt": "2026-11-19T04:40:39.225Z",
+    "timesSeen": 1,
+    "title": "CCQYfR2BfqeIWKJtik7ghu"
+  },
+  {
+    "url": "https://discord.gg/QxmAvmgKeY",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-19T04:40:39.225Z",
+    "lastSeenAt": "2026-11-19T04:40:39.225Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/+tTSQQ8M-f_lhOWM6",
+    "platform": "telegram",
+    "title": "Best London Job • Real Work Only",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-11-19T04:40:39.623Z",
+    "lastSeenAt": "2026-11-19T04:40:39.623Z",
+    "timesSeen": 1
   }
 ]

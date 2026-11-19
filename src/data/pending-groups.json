@@ -1,77 +1,5 @@
 [
   {
-    "id": "best-london-job-real-work-only-telegram-2",
-    "slug": "best-london-job-real-work-only-telegram-2",
-    "title": "Best London Job • Real Work Only",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "tech-jobs",
-    "subcategory": "Software Engineering",
-    "tags": [
-      "telegram",
-      "jobs",
-      "techjobs"
-    ],
-    "inviteUrl": "https://t.me/+tTSQQ8M-f_lhOWM6",
-    "description": "WORK IN LONDON AND THE UKВакансии в Лондоне без посредников.Только реальные проверенные объявления и актуальные смены.Без спама, без схем, без “быстрого заработка”.For Friends: https://t.me/+tTSQQ8M-f_lhOWM6https://t.me/+VZpknRZ9nR8xMTQy",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GB",
-    "countryCode": "GB",
-    "city": null,
-    "countryEvidence": {
-      "sourceType": "platform-title",
-      "text": "Best London Job • Real Work Only",
-      "checkedAt": "2026-11-11T23:50:22.467Z"
-    },
-    "jobTypes": [
-      "tech-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 9048,
-    "memberCountSource": "https://t.me/+tTSQQ8M-f_lhOWM6",
-    "memberCountCheckedAt": "2026-11-11T23:50:20.405Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-11-11T23:50:20.405Z",
-    "sourceUrls": [
-      "https://t.me/+tTSQQ8M-f_lhOWM6"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-11-11T23:50:20.405Z",
-    "lastCheckedAt": "2026-11-11T23:50:20.405Z",
-    "updatedAt": "2026-11-11T23:50:20.405Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-11-11T23:50:20.405Z",
-    "lastSeenAt": "2026-11-11T23:50:20.405Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1794441020405_2vnrx",
-      "run_1794441022467_2yzpt"
-    ],
-    "querySource": "site:t.me tech startup hiring United Kingdom Telegram",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-144h",
-      "duplicate-published: Matching community title on telegram: \"Best London Job • Real Work Only\" vs \"Best London Job • Real Work Only\""
-    ]
-  },
-  {
     "id": "job-for-ukrainians-telegram",
     "slug": "job-for-ukrainians-telegram",
     "title": "JOB for Ukrainians",
@@ -135,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-83h",
+      "validation-stale-112h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GB found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -203,6 +131,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-29h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -248,12 +177,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": "697694775561945109",
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-18T23:44:24.361Z",
     "lastCheckedAt": "2026-11-18T23:44:24.361Z",
     "updatedAt": "2026-11-18T23:44:24.361Z",
     "safetyFlags": [],
+    "guildId": "697694775561945109",
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-18T23:44:24.361Z",
@@ -267,6 +196,10 @@
       "run_1795045464755_go46p"
     ],
     "querySource": "discord.gg Worldwide tech jobs OR Worldwide hiring",
-    "sourceHostname": "discord.gg"
+    "sourceHostname": "discord.gg",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   }
 ]
