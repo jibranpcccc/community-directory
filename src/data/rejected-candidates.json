@@ -156,10 +156,10 @@
   {
     "url": "https://discord.gg/JjNdBkVGc6",
     "platform": "discord",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 17,
-    "lastSeenAt": "2026-11-15T22:11:27.377Z"
+    "timesSeen": 18,
+    "lastSeenAt": "2026-11-20T14:31:57.061Z"
   },
   {
     "url": "https://discord.gg/Kfx2EsnKnK",
@@ -357,8 +357,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-08-19T10:19:18.665Z",
-    "lastSeenAt": "2026-11-01T21:29:15.078Z",
-    "timesSeen": 6
+    "lastSeenAt": "2026-11-20T14:31:57.061Z",
+    "timesSeen": 7
   },
   {
     "url": "https://discord.gg/9M8awV8",
@@ -2341,8 +2341,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-26T12:27:42.936Z",
-    "lastSeenAt": "2026-11-19T14:50:10.690Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-11-20T14:31:57.061Z",
+    "timesSeen": 3,
     "title": "EtaInfi"
   },
   {
@@ -2676,8 +2676,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-11-15T13:08:42.339Z",
-    "timesSeen": 22,
+    "lastSeenAt": "2026-11-20T14:31:57.061Z",
+    "timesSeen": 23,
     "title": "Code. Corp. Answers."
   },
   {
@@ -5825,8 +5825,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-09-09T10:17:40.700Z",
-    "lastSeenAt": "2026-11-10T13:57:59.784Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-11-20T14:31:57.061Z",
+    "timesSeen": 5
   },
   {
     "url": "https://discord.gg/developersindia",
@@ -5978,8 +5978,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-09-09T10:17:40.700Z",
-    "lastSeenAt": "2026-09-09T10:17:40.700Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-20T14:31:57.061Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/hhJGDWM9",
@@ -6386,8 +6386,8 @@
     "title": "Tech Job Offer Notifier🤖",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-11T10:16:37.904Z",
-    "lastSeenAt": "2026-10-27T11:13:34.101Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-11-20T14:31:57.061Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/cscareerhub",
@@ -6470,8 +6470,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-12T09:45:27.340Z",
-    "lastSeenAt": "2026-11-17T15:07:26.646Z",
-    "timesSeen": 15,
+    "lastSeenAt": "2026-11-20T14:31:57.061Z",
+    "timesSeen": 16,
     "title": "r/BTechtards"
   },
   {
@@ -6752,8 +6752,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-13T15:10:20.827Z",
-    "lastSeenAt": "2026-10-08T12:23:55.194Z",
-    "timesSeen": 6
+    "lastSeenAt": "2026-11-20T14:31:57.061Z",
+    "timesSeen": 7
   },
   {
     "url": "https://discord.gg/Nsbrp24RhY",
@@ -8224,8 +8224,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-21T11:18:49.128Z",
-    "lastSeenAt": "2026-11-15T13:08:42.339Z",
-    "timesSeen": 11
+    "lastSeenAt": "2026-11-20T14:31:57.061Z",
+    "timesSeen": 13
   },
   {
     "url": "https://discord.gg/Hs4n5SEJF2",
@@ -8796,10 +8796,10 @@
   {
     "url": "https://discord.gg/MdScmCsua6",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-24T10:40:25.484Z",
-    "lastSeenAt": "2026-11-17T15:07:26.646Z",
-    "timesSeen": 7,
+    "lastSeenAt": "2026-11-20T14:31:57.061Z",
+    "timesSeen": 9,
     "title": "Thapa Technical"
   },
   {
@@ -15282,8 +15282,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-11-19T04:40:39.225Z",
-    "lastSeenAt": "2026-11-20T00:00:07.411Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-11-20T14:31:57.061Z",
+    "timesSeen": 3
   },
   {
     "url": "https://t.me/+tTSQQ8M-f_lhOWM6",
@@ -15433,5 +15433,22 @@
     "date": "2026-11-20T04:50:43.405Z",
     "lastSeenAt": "2026-11-20T04:50:43.405Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/xKzYsff",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-20T14:31:57.061Z",
+    "lastSeenAt": "2026-11-20T14:31:57.061Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/opcorners",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-20T14:31:57.061Z",
+    "lastSeenAt": "2026-11-20T14:31:57.061Z",
+    "timesSeen": 1,
+    "title": "Opportunities Corners"
   }
 ]
