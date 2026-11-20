@@ -5621,8 +5621,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-08T01:34:46.501Z",
-    "lastSeenAt": "2026-11-19T14:50:10.690Z",
-    "timesSeen": 9,
+    "lastSeenAt": "2026-11-20T00:00:07.411Z",
+    "timesSeen": 10,
     "title": "Clara Immigration"
   },
   {
@@ -5770,10 +5770,10 @@
   {
     "url": "https://chat.whatsapp.com/DHNppu0p04q6nzlmZCwebr",
     "platform": "whatsapp",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-08T10:13:10.042Z",
-    "lastSeenAt": "2026-11-10T13:57:59.784Z",
-    "timesSeen": 10,
+    "lastSeenAt": "2026-11-20T00:00:07.411Z",
+    "timesSeen": 11,
     "title": "DHNppu0p04q6nzlmZCwebr"
   },
   {
@@ -12566,8 +12566,8 @@
     "platform": "telegram",
     "reason": "dead-link",
     "date": "2026-10-23T10:42:40.465Z",
-    "lastSeenAt": "2026-11-19T14:50:10.690Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-11-20T00:00:07.411Z",
+    "timesSeen": 3
   },
   {
     "url": "https://t.me/uktechsoftwarejobs",
@@ -15282,8 +15282,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-11-19T04:40:39.225Z",
-    "lastSeenAt": "2026-11-19T04:40:39.225Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-20T00:00:07.411Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/+tTSQQ8M-f_lhOWM6",
@@ -15417,5 +15417,13 @@
     "lastSeenAt": "2026-11-19T14:50:10.690Z",
     "timesSeen": 1,
     "title": "Visa Sponsorship Jobs"
+  },
+  {
+    "url": "https://discord.gg/remoteemployment",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-20T00:00:07.411Z",
+    "lastSeenAt": "2026-11-20T00:00:07.411Z",
+    "timesSeen": 1
   }
 ]
