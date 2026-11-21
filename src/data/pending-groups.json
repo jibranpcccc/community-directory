@@ -1,73 +1,5 @@
 [
   {
-    "id": "job-for-ukrainians-telegram",
-    "slug": "job-for-ukrainians-telegram",
-    "title": "JOB for Ukrainians",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "remote-jobs",
-    "subcategory": "Remote Work",
-    "tags": [
-      "telegram",
-      "jobs",
-      "remotejobs"
-    ],
-    "inviteUrl": "https://t.me/jobforukrainians",
-    "description": "Платне розміщення вакансій @Jobs_KhrystynaБот для вiдправки вакансiй - @jobforukrainiansvacancy_botКанал з найбільшою кількість найкращих вакансій 🇺🇦і🌎Оновлення щодня 10:00IT, Med, Ed, Fin, Law and otherРекламний партнер https://teleads.com.ua",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GB",
-    "countryCode": "GB",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "remote-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 44843,
-    "memberCountSource": "https://t.me/jobforukrainians",
-    "memberCountCheckedAt": "2026-11-14T12:40:03.114Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-11-14T12:40:03.114Z",
-    "sourceUrls": [
-      "https://t.me/jobforukrainians"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-11-14T12:40:03.114Z",
-    "lastCheckedAt": "2026-11-14T12:40:03.114Z",
-    "updatedAt": "2026-11-14T12:40:03.114Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-11-14T12:40:03.114Z",
-    "lastSeenAt": "2026-11-14T12:40:03.114Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1794660003114_mj5ah",
-      "run_1794660005301_8zjo6"
-    ],
-    "querySource": "site:t.me worldwide remote jobs UK Telegram channel",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-146h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GB found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "careercompass-discord",
     "slug": "careercompass-discord",
     "title": "CareerCompass",
@@ -131,7 +63,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-62h",
+      "validation-stale-86h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +131,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-39h",
+      "validation-stale-62h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -267,6 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-47h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -334,6 +267,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-47h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -401,6 +335,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-47h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   }

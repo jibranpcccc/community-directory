@@ -204,8 +204,8 @@
     "platform": "telegram",
     "reason": "unknown-status",
     "date": "2026-08-19T08:33:40.620Z",
-    "timesSeen": 53,
-    "lastSeenAt": "2026-11-17T15:07:26.646Z"
+    "timesSeen": 54,
+    "lastSeenAt": "2026-11-21T13:51:45.601Z"
   },
   {
     "url": "https://discord.gg/dFp4rR3T",
@@ -3644,10 +3644,10 @@
   {
     "url": "https://discord.gg/3QyqASgm3y",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-11-12T04:29:23.096Z",
-    "timesSeen": 32,
+    "lastSeenAt": "2026-11-21T13:51:45.601Z",
+    "timesSeen": 33,
     "title": "/r/singaporejobs"
   },
   {
@@ -4097,10 +4097,11 @@
   {
     "url": "https://discord.gg/K8ecPrZ4e9",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-09-01T10:40:51.833Z",
-    "lastSeenAt": "2026-10-19T11:26:30.149Z",
-    "timesSeen": 4
+    "lastSeenAt": "2026-11-21T13:51:45.601Z",
+    "timesSeen": 5,
+    "title": "AI and Technology"
   },
   {
     "url": "https://chat.whatsapp.com/Lp9xasahYnx2mDRvUkOmxD",
@@ -6017,19 +6018,19 @@
   {
     "url": "https://discord.gg/fvNhZkxvkt",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-09-10T01:37:24.641Z",
-    "lastSeenAt": "2026-10-22T10:54:32.072Z",
-    "timesSeen": 5,
+    "lastSeenAt": "2026-11-21T13:51:45.601Z",
+    "timesSeen": 6,
     "title": "Deep Dish Rust"
   },
   {
     "url": "https://discord.gg/U25g437",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-09-10T01:37:24.641Z",
-    "lastSeenAt": "2026-10-22T10:54:32.072Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-11-21T13:51:45.601Z",
+    "timesSeen": 5,
     "title": "ChicagoJUG"
   },
   {
@@ -6045,8 +6046,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-10T01:37:24.641Z",
-    "lastSeenAt": "2026-09-10T20:10:11.788Z",
-    "timesSeen": 2
+    "lastSeenAt": "2026-11-21T13:51:45.601Z",
+    "timesSeen": 3
   },
   {
     "url": "https://discord.gg/pmDFwE7",
@@ -6087,8 +6088,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-10T10:10:45.273Z",
-    "lastSeenAt": "2026-11-13T13:35:59.375Z",
-    "timesSeen": 9,
+    "lastSeenAt": "2026-11-21T13:51:45.601Z",
+    "timesSeen": 10,
     "title": "Vlogs with Offy"
   },
   {
@@ -13246,11 +13247,11 @@
   {
     "url": "https://chat.whatsapp.com/FQMC1OrcduAIhXmHhCUJgj",
     "platform": "whatsapp",
-    "reason": "wrong-niche",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-10-30T11:49:44.103Z",
-    "lastSeenAt": "2026-10-30T11:49:44.103Z",
-    "timesSeen": 1,
-    "title": ""
+    "lastSeenAt": "2026-11-21T13:51:45.601Z",
+    "timesSeen": 2,
+    "title": "FQMC1OrcduAIhXmHhCUJgj"
   },
   {
     "url": "https://discord.gg/icfp26",
@@ -15414,8 +15415,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-11-19T14:50:10.690Z",
-    "lastSeenAt": "2026-11-19T14:50:10.690Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-21T13:51:45.601Z",
+    "timesSeen": 2,
     "title": "Visa Sponsorship Jobs"
   },
   {
@@ -15450,5 +15451,46 @@
     "lastSeenAt": "2026-11-20T14:31:57.061Z",
     "timesSeen": 1,
     "title": "Opportunities Corners"
+  },
+  {
+    "url": "https://discord.gg/Q7JVMkvX4r",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-21T13:51:45.601Z",
+    "lastSeenAt": "2026-11-21T13:51:45.601Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/indian-medical-server-714196770879438888",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-21T13:51:45.601Z",
+    "lastSeenAt": "2026-11-21T13:51:45.601Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/nbfxRfWae",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-21T13:51:45.601Z",
+    "lastSeenAt": "2026-11-21T13:51:45.601Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/bCmUdjk",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-21T13:51:45.601Z",
+    "lastSeenAt": "2026-11-21T13:51:45.601Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/jobforukrainians",
+    "platform": "telegram",
+    "title": "JOB for Ukrainians",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-11-21T13:51:48.586Z",
+    "lastSeenAt": "2026-11-21T13:51:48.586Z",
+    "timesSeen": 1
   }
 ]
