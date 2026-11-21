@@ -42,5 +42,19 @@
     "sourceUrls": [
       "https://t.me/RemoteJobPositions"
     ]
+  },
+  {
+    "id": "northerndev-formerly-tech-career-north-discord",
+    "slug": "northerndev-formerly-tech-career-north-discord",
+    "title": "northern.dev",
+    "platform": "discord",
+    "inviteUrl": "https://discord.gg/96rkQyC5rX",
+    "publishedAt": "2026-08-19T08:33:40.620Z",
+    "unpublishedAt": "2026-11-21T22:31:17.725Z",
+    "unpublishReason": "repurposed-non-job: No verified employment, job alert, or hiring keywords found.",
+    "lastKnownStatus": "removed",
+    "guildId": "1045555763264880640",
+    "countryCode": "CA",
+    "category": "tech-jobs"
   }
 ]
