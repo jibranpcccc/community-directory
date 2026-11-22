@@ -15492,5 +15492,14 @@
     "date": "2026-11-21T13:51:48.586Z",
     "lastSeenAt": "2026-11-21T13:51:48.586Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/kumarmanisheducation",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-22T03:39:32.172Z",
+    "lastSeenAt": "2026-11-22T03:39:32.172Z",
+    "timesSeen": 1,
+    "title": "Kumar manish education"
   }
 ]

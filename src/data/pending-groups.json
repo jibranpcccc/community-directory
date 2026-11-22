@@ -338,5 +338,68 @@
       "validation-stale-47h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
+  },
+  {
+    "id": "medical-jobs-mbbs-nursing-pharma-neet-ug-pg-telegram",
+    "slug": "medical-jobs-mbbs-nursing-pharma-neet-ug-pg-telegram",
+    "title": "Medical Jobs - MBBS | Nursing | Pharma | NEET UG PG",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "healthcare-jobs",
+    "subcategory": "Nursing & Medical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "healthcarejobs"
+    ],
+    "inviteUrl": "https://t.me/MedicalJobsIndia",
+    "description": "Medical Job Alerts",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "IN",
+    "countryCode": "IN",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "healthcare-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 3136,
+    "memberCountSource": "https://t.me/MedicalJobsIndia",
+    "memberCountCheckedAt": "2026-11-22T03:39:32.172Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-22T03:39:32.172Z",
+    "sourceUrls": [
+      "https://t.me/MedicalJobsIndia"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-22T03:39:32.172Z",
+    "lastCheckedAt": "2026-11-22T03:39:32.172Z",
+    "updatedAt": "2026-11-22T03:39:32.172Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-22T03:39:32.172Z",
+    "lastSeenAt": "2026-11-22T03:39:32.172Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795318772172_znhd2",
+      "run_1795318772676_74avs"
+    ],
+    "querySource": "site:t.me hospital nursing jobs India group",
+    "sourceHostname": "t.me"
   }
 ]
