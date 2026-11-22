@@ -401,5 +401,68 @@
     ],
     "querySource": "site:t.me hospital nursing jobs India group",
     "sourceHostname": "t.me"
+  },
+  {
+    "id": "medical-locum-jobs-scholarships-ngo-overseas-jobs-telegram",
+    "slug": "medical-locum-jobs-scholarships-ngo-overseas-jobs-telegram",
+    "title": "Medical Locum Jobs -Scholarships/ NGO/ Overseas Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "healthcare-jobs",
+    "subcategory": "Nursing & Medical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "healthcarejobs"
+    ],
+    "inviteUrl": "https://t.me/locumchannel",
+    "description": "This is the Telegram channel of Medical Locum Jobs Recruiting agency for Job advert placement across AfricaManagement: +2349059951180 ( WhatsApp)Terms & Condition:https://medlocumjobs.com/terms-of-service",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "healthcare-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 11690,
+    "memberCountSource": "https://t.me/locumchannel",
+    "memberCountCheckedAt": "2026-11-22T13:43:17.403Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-22T13:43:17.403Z",
+    "sourceUrls": [
+      "https://t.me/locumchannel"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-22T13:43:17.403Z",
+    "lastCheckedAt": "2026-11-22T13:43:17.403Z",
+    "updatedAt": "2026-11-22T13:43:17.403Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-22T13:43:17.403Z",
+    "lastSeenAt": "2026-11-22T13:43:17.403Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795354997403_eif7n",
+      "run_1795354997928_19xph"
+    ],
+    "querySource": "site:t.me hospital nursing jobs Global group",
+    "sourceHostname": "t.me"
   }
 ]

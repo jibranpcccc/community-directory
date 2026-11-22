@@ -6112,10 +6112,10 @@
   {
     "url": "https://t.me/goodhealthconsult",
     "platform": "telegram",
-    "reason": "dead-link",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-10T10:10:45.273Z",
-    "lastSeenAt": "2026-10-29T11:53:20.349Z",
-    "timesSeen": 5
+    "lastSeenAt": "2026-11-22T13:43:17.403Z",
+    "timesSeen": 6
   },
   {
     "url": "https://t.me/MedicalJobsIndia",
@@ -13480,8 +13480,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-10-31T11:22:54.263Z",
-    "lastSeenAt": "2026-10-31T11:22:54.263Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-22T13:43:17.403Z",
+    "timesSeen": 2,
     "title": "Health Informatics, IT & Data Science"
   },
   {
@@ -15498,8 +15498,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-11-22T03:39:32.172Z",
-    "lastSeenAt": "2026-11-22T03:39:32.172Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-22T13:43:17.403Z",
+    "timesSeen": 2,
     "title": "Kumar manish education"
   }
 ]
