@@ -15498,8 +15498,73 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-11-22T03:39:32.172Z",
-    "lastSeenAt": "2026-11-22T13:43:17.403Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-11-22T22:55:50.197Z",
+    "timesSeen": 3,
     "title": "Kumar manish education"
+  },
+  {
+    "url": "https://t.me/nursingeducation",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-22T22:55:50.197Z",
+    "lastSeenAt": "2026-11-22T22:55:50.197Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/nursingzonediscussion",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-22T22:55:50.197Z",
+    "lastSeenAt": "2026-11-22T22:55:50.197Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/expertnursingclasses",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-22T22:55:50.197Z",
+    "lastSeenAt": "2026-11-22T22:55:50.197Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/Bsc_nursing_education_solution",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-22T22:55:50.197Z",
+    "lastSeenAt": "2026-11-22T22:55:50.197Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/nursingjobs",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-11-22T22:55:50.197Z",
+    "lastSeenAt": "2026-11-22T22:55:50.197Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/BSc_nursing_discussion",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-22T22:55:50.197Z",
+    "lastSeenAt": "2026-11-22T22:55:50.197Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/nursingchallengers",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-22T22:55:50.197Z",
+    "lastSeenAt": "2026-11-22T22:55:50.197Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/NursingGovtJobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-22T22:55:50.197Z",
+    "lastSeenAt": "2026-11-22T22:55:50.197Z",
+    "timesSeen": 1,
+    "title": "Nursing Govt Jobs"
   }
 ]
