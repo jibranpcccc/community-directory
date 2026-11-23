@@ -464,5 +464,68 @@
     ],
     "querySource": "site:t.me hospital nursing jobs Global group",
     "sourceHostname": "t.me"
+  },
+  {
+    "id": "medical-representative-job-telegram",
+    "slug": "medical-representative-job-telegram",
+    "title": "Medical representative job",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "healthcare-jobs",
+    "subcategory": "Bangalore Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "healthcarejobs"
+    ],
+    "inviteUrl": "https://t.me/mrjobsindia",
+    "description": "This group is Created for MR job postingGroup is for information purpose. Act on your risk. Read policy and terms of data use",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "IN",
+    "countryCode": "IN",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "healthcare-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 14724,
+    "memberCountSource": "https://t.me/mrjobsindia",
+    "memberCountCheckedAt": "2026-11-23T16:42:10.499Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-23T16:42:10.499Z",
+    "sourceUrls": [
+      "https://t.me/mrjobsindia"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-23T16:42:10.499Z",
+    "lastCheckedAt": "2026-11-23T16:42:10.499Z",
+    "updatedAt": "2026-11-23T16:42:10.499Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-23T16:42:10.499Z",
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795452130499_qw23b",
+      "run_1795452130874_agomk"
+    ],
+    "querySource": "site:t.me Bangalore tech jobs OR Bangalore job alerts",
+    "sourceHostname": "t.me"
   }
 ]

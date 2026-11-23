@@ -2676,8 +2676,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-08-28T17:52:03.235Z",
-    "lastSeenAt": "2026-11-20T14:31:57.061Z",
-    "timesSeen": 23,
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 24,
     "title": "Code. Corp. Answers."
   },
   {
@@ -3054,8 +3054,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-29T11:52:58.872Z",
-    "lastSeenAt": "2026-11-18T23:44:24.361Z",
-    "timesSeen": 13,
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 14,
     "title": "Freshershunt - Off Campus Drive Updates"
   },
   {
@@ -3644,10 +3644,10 @@
   {
     "url": "https://discord.gg/3QyqASgm3y",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-08-30T10:54:52.766Z",
-    "lastSeenAt": "2026-11-21T13:51:45.601Z",
-    "timesSeen": 33,
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 34,
     "title": "/r/singaporejobs"
   },
   {
@@ -5131,8 +5131,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-05T09:56:13.493Z",
-    "lastSeenAt": "2026-11-18T23:44:24.361Z",
-    "timesSeen": 10,
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 11,
     "title": "Krishan Kumar - Jobs &amp; Internships Updates"
   },
   {
@@ -6469,10 +6469,10 @@
   {
     "url": "https://discord.gg/Hg2H3TJJsd",
     "platform": "discord",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "wrong-niche",
     "date": "2026-09-12T09:45:27.340Z",
-    "lastSeenAt": "2026-11-20T14:31:57.061Z",
-    "timesSeen": 16,
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 17,
     "title": "r/BTechtards"
   },
   {
@@ -7437,8 +7437,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-16T10:34:32.340Z",
-    "lastSeenAt": "2026-11-07T12:02:38.559Z",
-    "timesSeen": 2,
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 3,
     "title": "THE BGLR BACK"
   },
   {
@@ -7975,10 +7975,10 @@
   {
     "url": "https://chat.whatsapp.com/GXUXKMhryc5GHGbMEaNu6i",
     "platform": "whatsapp",
-    "reason": "wrong-niche",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-19T10:02:00.611Z",
-    "lastSeenAt": "2026-11-13T13:35:59.375Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 7,
     "title": "GXUXKMhryc5GHGbMEaNu6i"
   },
   {
@@ -13232,8 +13232,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-10-30T11:49:44.103Z",
-    "lastSeenAt": "2026-10-30T11:49:44.103Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 2,
     "title": "Manuel YEBOAH YT Family ▶️"
   },
   {
@@ -14001,8 +14001,8 @@
     "platform": "whatsapp",
     "reason": "unconfirmed-target-market",
     "date": "2026-11-07T17:21:27.521Z",
-    "lastSeenAt": "2026-11-07T17:21:27.521Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 2,
     "title": "AWS VIRTUAL INTERNSHIP G11"
   },
   {
@@ -14632,8 +14632,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-11-12T14:08:38.953Z",
-    "lastSeenAt": "2026-11-23T04:12:38.533Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 4,
     "title": "Recabulary"
   },
   {
@@ -15566,5 +15566,63 @@
     "lastSeenAt": "2026-11-22T22:55:50.197Z",
     "timesSeen": 1,
     "title": "Nursing Govt Jobs"
+  },
+  {
+    "url": "https://t.me/DutyDoctors",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-23T16:42:10.499Z",
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/DutyDoctorsBangalore",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-23T16:42:10.499Z",
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/DutyDoctorsAlliedHealthcareJobs",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-11-23T16:42:10.499Z",
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/arttravelservice",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-23T16:42:10.499Z",
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/KVf7qFmMrX",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-11-23T16:42:10.499Z",
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 1,
+    "title": "Non-humans and Longtermism"
+  },
+  {
+    "url": "https://discord.gg/yHNKkvMN5e",
+    "platform": "discord",
+    "reason": "wrong-niche",
+    "date": "2026-11-23T16:42:10.499Z",
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 1,
+    "title": "Code.Sydney"
+  },
+  {
+    "url": "https://discord.gg/UzfEHYZgqA",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-23T16:42:10.499Z",
+    "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 1
   }
 ]
