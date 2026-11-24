@@ -1363,8 +1363,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-22T08:41:37.232Z",
-    "lastSeenAt": "2026-11-19T14:50:10.690Z",
-    "timesSeen": 28,
+    "lastSeenAt": "2026-11-24T03:33:11.762Z",
+    "timesSeen": 29,
     "title": "Singapore Careers and Job Opportunities - sgCareers"
   },
   {
@@ -1699,8 +1699,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-11-13T13:35:59.375Z",
-    "timesSeen": 6,
+    "lastSeenAt": "2026-11-24T03:33:11.762Z",
+    "timesSeen": 7,
     "title": "Singapore Part Time / Contract Jobs - sgQuickJobs"
   },
   {
@@ -4416,8 +4416,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-03T10:16:47.914Z",
-    "lastSeenAt": "2026-09-03T10:16:47.914Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-24T03:33:11.762Z",
+    "timesSeen": 2,
     "title": "Singapore Internship Opportunities - sgInternship"
   },
   {
@@ -6342,10 +6342,10 @@
   {
     "url": "https://discord.gg/wWac5eD",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "dead-link",
     "date": "2026-09-11T10:16:27.114Z",
-    "lastSeenAt": "2026-11-12T14:08:38.953Z",
-    "timesSeen": 16
+    "lastSeenAt": "2026-11-24T03:33:11.762Z",
+    "timesSeen": 17
   },
   {
     "url": "https://discord.gg/kKxJf88",
@@ -7446,8 +7446,8 @@
     "platform": "telegram",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-16T10:34:32.340Z",
-    "lastSeenAt": "2026-10-23T10:42:40.465Z",
-    "timesSeen": 3,
+    "lastSeenAt": "2026-11-24T03:33:11.762Z",
+    "timesSeen": 4,
     "title": "wsgjobs_careeradvice"
   },
   {
@@ -15623,6 +15623,49 @@
     "reason": "dead-link",
     "date": "2026-11-23T16:42:10.499Z",
     "lastSeenAt": "2026-11-23T16:42:10.499Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/AdvisorySG",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-11-24T03:33:11.762Z",
+    "lastSeenAt": "2026-11-24T03:33:11.762Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/gemheapjobs_bot",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-24T03:33:11.762Z",
+    "lastSeenAt": "2026-11-24T03:33:11.762Z",
+    "timesSeen": 1,
+    "title": "Job Alerts - Gemheap"
+  },
+  {
+    "url": "https://t.me/honeymoneysg",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-24T03:33:11.762Z",
+    "lastSeenAt": "2026-11-24T03:33:11.762Z",
+    "timesSeen": 1,
+    "title": "🍯💰 Honey Money SG Community"
+  },
+  {
+    "url": "https://t.me/theschoolofmoneysg",
+    "platform": "telegram",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-24T03:33:11.762Z",
+    "lastSeenAt": "2026-11-24T03:33:11.762Z",
+    "timesSeen": 1,
+    "title": "The School of Money Discussion Board"
+  },
+  {
+    "url": "https://t.me/Kelvinlearnsinvesting",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-11-24T03:33:11.762Z",
+    "lastSeenAt": "2026-11-24T03:33:11.762Z",
     "timesSeen": 1
   }
 ]
