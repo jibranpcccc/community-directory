@@ -63,7 +63,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-86h",
+      "validation-stale-161h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -131,7 +131,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-62h",
+      "validation-stale-137h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-47h",
+      "validation-stale-122h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -267,7 +267,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-47h",
+      "validation-stale-122h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -335,7 +335,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-47h",
+      "validation-stale-122h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -381,12 +381,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-22T03:39:32.172Z",
     "lastCheckedAt": "2026-11-22T03:39:32.172Z",
     "updatedAt": "2026-11-22T03:39:32.172Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-22T03:39:32.172Z",
@@ -400,7 +400,12 @@
       "run_1795318772676_74avs"
     ],
     "querySource": "site:t.me hospital nursing jobs India group",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-61h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   },
   {
     "id": "medical-locum-jobs-scholarships-ngo-overseas-jobs-telegram",
@@ -444,12 +449,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-22T13:43:17.403Z",
     "lastCheckedAt": "2026-11-22T13:43:17.403Z",
     "updatedAt": "2026-11-22T13:43:17.403Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-22T13:43:17.403Z",
@@ -463,7 +468,12 @@
       "run_1795354997928_19xph"
     ],
     "querySource": "site:t.me hospital nursing jobs Global group",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-51h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   },
   {
     "id": "medical-representative-job-telegram",
@@ -507,12 +517,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-23T16:42:10.499Z",
     "lastCheckedAt": "2026-11-23T16:42:10.499Z",
     "updatedAt": "2026-11-23T16:42:10.499Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-23T16:42:10.499Z",
@@ -526,6 +536,77 @@
       "run_1795452130874_agomk"
     ],
     "querySource": "site:t.me Bangalore tech jobs OR Bangalore job alerts",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "somalijobs-inc-telegram",
+    "slug": "somalijobs-inc-telegram",
+    "title": "Somalijobs Inc",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "finance-jobs",
+    "subcategory": "Finance & Accounting",
+    "tags": [
+      "telegram",
+      "jobs",
+      "financejobs"
+    ],
+    "inviteUrl": "https://t.me/somalijobsinc",
+    "description": "Somali Jobs is the place for jobseekers to find the job of their dreams and for recruiters to advertise their vacancies to find/reach the right candidates, easily and cost-effectively. Somali Jobs was founded in December 2011.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "finance-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 22509,
+    "memberCountSource": "https://t.me/somalijobsinc",
+    "memberCountCheckedAt": "2026-11-24T16:40:40.636Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-24T16:40:40.636Z",
+    "sourceUrls": [
+      "https://t.me/somalijobsinc"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-24T16:40:40.636Z",
+    "lastCheckedAt": "2026-11-24T16:40:40.636Z",
+    "updatedAt": "2026-11-24T16:40:40.636Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-24T16:40:40.636Z",
+    "lastSeenAt": "2026-11-24T16:40:40.636Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795538440636_s0ono",
+      "run_1795538442359_pxqrh"
+    ],
+    "querySource": "site:t.me finance accounting job alerts Global Telegram",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   }
 ]
