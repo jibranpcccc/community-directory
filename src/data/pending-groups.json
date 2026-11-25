@@ -63,7 +63,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-146h",
+      "validation-stale-161h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -131,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-131h",
+      "validation-stale-146h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-131h",
+      "validation-stale-146h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -267,7 +267,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-131h",
+      "validation-stale-146h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -335,7 +335,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-70h",
+      "validation-stale-85h",
       "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -403,7 +403,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-60h",
+      "validation-stale-75h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -471,7 +471,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-33h",
+      "validation-stale-48h",
       "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -537,6 +537,350 @@
     ],
     "querySource": "site:t.me finance accounting job alerts Global Telegram",
     "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "your-web3-job-telegram",
+    "slug": "your-web3-job-telegram",
+    "title": "Your WEB3 Job",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "finance-jobs",
+    "subcategory": "Remote Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "financejobs"
+    ],
+    "inviteUrl": "https://t.me/YourWEB3Job",
+    "description": "Verified crypto & web3 jobs – straight from the companies' own careers pages, checked for scam patterns. Community, marketing, moderator & dev roles.🌐 yourweb3job.com✉️ contact@yourweb3job.com🤖 @YourWeb3Jobbot",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "finance-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 25132,
+    "memberCountSource": "https://t.me/YourWEB3Job",
+    "memberCountCheckedAt": "2026-11-25T16:19:54.900Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-25T16:19:54.900Z",
+    "sourceUrls": [
+      "https://t.me/YourWEB3Job"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-25T16:19:54.900Z",
+    "lastCheckedAt": "2026-11-25T16:19:54.900Z",
+    "updatedAt": "2026-11-25T16:19:54.900Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-25T16:19:54.900Z",
+    "lastSeenAt": "2026-11-25T16:19:54.900Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795623594900_7cvon",
+      "run_1795623602715_k9xb1"
+    ],
+    "querySource": "site:t.me Remote tech jobs OR Remote job alerts",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "remote-jobs-telegram-2",
+    "slug": "remote-jobs-telegram-2",
+    "title": "Remote Jobs👨‍💻",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "finance-jobs",
+    "subcategory": "Remote Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "financejobs"
+    ],
+    "inviteUrl": "https://t.me/remotejobs",
+    "description": "Hand-picked remote jobs, daily roundups and practical career tips. Find your next high paying remote roleSupport: @hvhelp",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": "Remote",
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "Remote Jobs👨‍💻",
+      "checkedAt": "2026-11-25T16:20:03.197Z"
+    },
+    "cityEvidence": {
+      "sourceType": "platform-title",
+      "text": "Remote",
+      "checkedAt": "2026-11-25T16:20:15.502Z"
+    },
+    "jobTypes": [
+      "finance-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 8406,
+    "memberCountSource": "https://t.me/remotejobs",
+    "memberCountCheckedAt": "2026-11-25T16:19:54.900Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-25T16:19:54.900Z",
+    "sourceUrls": [
+      "https://t.me/remotejobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-25T16:19:54.900Z",
+    "lastCheckedAt": "2026-11-25T16:19:54.900Z",
+    "updatedAt": "2026-11-25T16:19:54.900Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-25T16:19:54.900Z",
+    "lastSeenAt": "2026-11-25T16:19:54.900Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795623594900_7cvon",
+      "run_1795623603197_lijat"
+    ],
+    "querySource": "site:t.me Remote tech jobs OR Remote job alerts",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "duplicate-published: Matching community title on telegram: \"Remote Jobs👨‍💻\" vs \"Remote Jobs\""
+    ]
+  },
+  {
+    "id": "crypto-jobs-telegram",
+    "slug": "crypto-jobs-telegram",
+    "title": "Crypto Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "finance-jobs",
+    "subcategory": "Remote Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "financejobs"
+    ],
+    "inviteUrl": "https://t.me/cryptojoborg",
+    "description": "Simple way to get hired in the web3 space.Create a profile and explore opportunities. Triple your salary and get hired in less than 30 days.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "finance-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 5714,
+    "memberCountSource": "https://t.me/cryptojoborg",
+    "memberCountCheckedAt": "2026-11-25T16:19:54.900Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-25T16:19:54.900Z",
+    "sourceUrls": [
+      "https://t.me/cryptojoborg"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-25T16:19:54.900Z",
+    "lastCheckedAt": "2026-11-25T16:19:54.900Z",
+    "updatedAt": "2026-11-25T16:19:54.900Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-25T16:19:54.900Z",
+    "lastSeenAt": "2026-11-25T16:19:54.900Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795623594900_7cvon",
+      "run_1795623606254_gpq6n"
+    ],
+    "querySource": "site:t.me Remote tech jobs OR Remote job alerts",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "crypto-jobs-fintech-web3-telegram",
+    "slug": "crypto-jobs-fintech-web3-telegram",
+    "title": "Crypto Jobs - Fintech, Web3 вакансии",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "finance-jobs",
+    "subcategory": "Remote Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "financejobs"
+    ],
+    "inviteUrl": "https://t.me/opento_crypto",
+    "description": "Post job @Phenex_BH⚡️Advertising @Vahitsaw⚡️Verified jobs in crypto industry, web3, blockchain, DeFi, smart contracts. From creator @workingincrypto @careers_crypto @cryptoheadhunter @web30job @cryptovakansii",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "finance-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 9347,
+    "memberCountSource": "https://t.me/opento_crypto",
+    "memberCountCheckedAt": "2026-11-25T16:19:54.900Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-25T16:19:54.900Z",
+    "sourceUrls": [
+      "https://t.me/opento_crypto"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-25T16:19:54.900Z",
+    "lastCheckedAt": "2026-11-25T16:19:54.900Z",
+    "updatedAt": "2026-11-25T16:19:54.900Z",
+    "safetyFlags": [],
+    "guildId": null,
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-25T16:19:54.900Z",
+    "lastSeenAt": "2026-11-25T16:19:54.900Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795623594900_7cvon",
+      "run_1795623606746_ds1b6"
+    ],
+    "querySource": "site:t.me Remote tech jobs OR Remote job alerts",
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
+  },
+  {
+    "id": "cs-career-hub-discord",
+    "slug": "cs-career-hub-discord",
+    "title": "CS Career Hub",
+    "platform": "discord",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering",
+    "tags": [
+      "discord",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://discord.gg/cscareerhub",
+    "description": "This server is to help grow the next and current generation of software engineers.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 38644,
+    "memberCountSource": "https://discord.gg/cscareerhub",
+    "memberCountCheckedAt": "2026-11-25T16:19:54.900Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-25T16:19:54.900Z",
+    "sourceUrls": [
+      "https://discord.gg/cscareerhub"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-25T16:19:54.900Z",
+    "lastCheckedAt": "2026-11-25T16:19:54.900Z",
+    "updatedAt": "2026-11-25T16:19:54.900Z",
+    "safetyFlags": [],
+    "guildId": "334891772696330241",
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-25T16:19:54.900Z",
+    "lastSeenAt": "2026-11-25T16:19:54.900Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795623594900_7cvon",
+      "run_1795623612846_m63xd"
+    ],
+    "querySource": "discord.gg tech job postings Discord Worldwide & International",
+    "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
