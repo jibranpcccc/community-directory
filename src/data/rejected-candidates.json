@@ -10399,10 +10399,10 @@
   {
     "url": "https://t.me/thewokesalaryman",
     "platform": "telegram",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-07T12:12:12.331Z",
-    "lastSeenAt": "2026-10-07T12:12:12.331Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-25T01:42:40.980Z",
+    "timesSeen": 2,
     "title": "The Woke Salaryman"
   },
   {
@@ -10461,8 +10461,8 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-10-08T12:23:55.194Z",
-    "lastSeenAt": "2026-10-08T12:23:55.194Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-25T01:42:40.980Z",
+    "timesSeen": 2
   },
   {
     "url": "https://t.me/CryptoSG",
@@ -15646,19 +15646,19 @@
   {
     "url": "https://t.me/honeymoneysg",
     "platform": "telegram",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-11-24T03:33:11.762Z",
-    "lastSeenAt": "2026-11-24T03:33:11.762Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-25T01:42:40.980Z",
+    "timesSeen": 2,
     "title": "🍯💰 Honey Money SG Community"
   },
   {
     "url": "https://t.me/theschoolofmoneysg",
     "platform": "telegram",
-    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-11-24T03:33:11.762Z",
-    "lastSeenAt": "2026-11-24T03:33:11.762Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-25T01:42:40.980Z",
+    "timesSeen": 2,
     "title": "The School of Money Discussion Board"
   },
   {
@@ -15752,6 +15752,72 @@
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-11-24T16:40:40.636Z",
     "lastSeenAt": "2026-11-24T16:40:40.636Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/L7g23J9h01b2c3d4e5f6g7",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-25T01:42:40.980Z",
+    "lastSeenAt": "2026-11-25T01:42:40.980Z",
+    "timesSeen": 1,
+    "title": "L7g23J9h01b2c3d4e5f6g7"
+  },
+  {
+    "url": "https://t.me/Loo1M65",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-25T01:42:40.980Z",
+    "lastSeenAt": "2026-11-25T01:42:40.980Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/MoneySmartSingapore",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-25T01:42:40.980Z",
+    "lastSeenAt": "2026-11-25T01:42:40.980Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/dollarsandsense",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-25T01:42:40.980Z",
+    "lastSeenAt": "2026-11-25T01:42:40.980Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/milelion",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-25T01:42:40.980Z",
+    "lastSeenAt": "2026-11-25T01:42:40.980Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/sgxinvest",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-25T01:42:40.980Z",
+    "lastSeenAt": "2026-11-25T01:42:40.980Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/arigatoinvestor",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-25T01:42:40.980Z",
+    "lastSeenAt": "2026-11-25T01:42:40.980Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/u2wTmrJz8J",
+    "platform": "discord",
+    "title": "CareerCompass",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-11-25T01:42:41.463Z",
+    "lastSeenAt": "2026-11-25T01:42:41.463Z",
     "timesSeen": 1
   }
 ]
