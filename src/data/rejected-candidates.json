@@ -1438,10 +1438,10 @@
   {
     "url": "https://discord.gg/kDQ3nGufG8",
     "platform": "discord",
-    "reason": "wrong-niche",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-08-23T00:30:25.838Z",
-    "lastSeenAt": "2026-11-25T16:19:54.900Z",
-    "timesSeen": 31,
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 32,
     "title": "Tech Professionals - Australia & New Zealand"
   },
   {
@@ -1645,8 +1645,8 @@
     "platform": "discord",
     "reason": "unconfirmed-target-market",
     "date": "2026-08-23T12:19:51.715Z",
-    "lastSeenAt": "2026-11-15T13:08:42.339Z",
-    "timesSeen": 18,
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 19,
     "title": "🤝Devs For Hire & Jobs💰💻"
   },
   {
@@ -4795,8 +4795,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-04T10:11:44.954Z",
-    "lastSeenAt": "2026-11-25T16:19:54.900Z",
-    "timesSeen": 9
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 10
   },
   {
     "url": "https://discord.gg/jobs",
@@ -4812,8 +4812,8 @@
     "platform": "discord",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-09-04T15:14:22.819Z",
-    "lastSeenAt": "2026-09-04T15:14:22.819Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 2,
     "title": "brrtt"
   },
   {
@@ -5259,10 +5259,10 @@
     "url": "https://t.me/remote_devops_jobs",
     "platform": "telegram",
     "title": "Remote DevOps Jobs 🌐✨",
-    "reason": "insufficient-publication-confidence",
+    "reason": "unconfirmed-target-market",
     "date": "2026-09-05T19:38:50.650Z",
-    "lastSeenAt": "2026-09-05T19:38:50.650Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/m8Bw5JYzHZ",
@@ -6986,8 +6986,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-15T02:01:06.098Z",
-    "lastSeenAt": "2026-11-14T12:40:03.114Z",
-    "timesSeen": 7,
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 8,
     "title": "Jobs in Europe"
   },
   {
@@ -7071,8 +7071,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-15T10:37:47.840Z",
-    "lastSeenAt": "2026-11-02T14:01:35.538Z",
-    "timesSeen": 3
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 6
   },
   {
     "url": "https://discord.gg/DevHeads",
@@ -7136,8 +7136,8 @@
     "platform": "discord",
     "reason": "dead-link",
     "date": "2026-09-15T10:37:47.840Z",
-    "lastSeenAt": "2026-09-15T10:37:47.840Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 2
   },
   {
     "url": "https://discord.gg/devopsfans",
@@ -7655,8 +7655,8 @@
     "platform": "telegram",
     "reason": "unconfirmed-target-market",
     "date": "2026-09-17T10:36:20.146Z",
-    "lastSeenAt": "2026-11-24T16:40:40.636Z",
-    "timesSeen": 4,
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 5,
     "title": "Jobs in Europe"
   },
   {
@@ -7830,8 +7830,8 @@
     "platform": "discord",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-09-18T10:14:06.131Z",
-    "lastSeenAt": "2026-11-25T16:19:54.900Z",
-    "timesSeen": 6
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 7
   },
   {
     "url": "https://discord.gg/QgxU2bcyva",
@@ -10847,10 +10847,11 @@
   {
     "url": "https://discord.gg/devops-sre-infrastructure-419745677585940482",
     "platform": "discord",
-    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "reason": "wrong-niche",
     "date": "2026-10-10T16:27:32.320Z",
-    "lastSeenAt": "2026-10-10T16:27:32.320Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 2,
+    "title": "DevOps, SRE, & Infrastructure"
   },
   {
     "url": "https://discord.gg/devops",
@@ -14556,8 +14557,8 @@
     "platform": "whatsapp",
     "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
     "date": "2026-11-12T14:08:38.953Z",
-    "lastSeenAt": "2026-11-12T14:08:38.953Z",
-    "timesSeen": 1,
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 2,
     "title": "International Manpower Solutions &#064; 20"
   },
   {
@@ -15877,8 +15878,8 @@
     "platform": "telegram",
     "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
     "date": "2026-11-25T16:19:54.900Z",
-    "lastSeenAt": "2026-11-25T16:19:54.900Z",
-    "timesSeen": 1
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 2
   },
   {
     "url": "https://chat.whatsapp.com/LondonJobAlerts",
@@ -15947,6 +15948,247 @@
     "reason": "insufficient-publication-confidence",
     "date": "2026-11-26T01:14:36.880Z",
     "lastSeenAt": "2026-11-26T01:14:36.880Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/QNcbMn7Mee",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/cryptojobslist",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/Electrical_Engineering_Jobs",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/freelance_jobs_projects",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/WorldJobs",
+    "platform": "telegram",
+    "reason": "dead-link",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/CznXmrTpcipCuSaMW5yWXF",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "title": "CznXmrTpcipCuSaMW5yWXF"
+  },
+  {
+    "url": "https://chat.whatsapp.com/HLFm93tkHQR4zu8hafpqSl",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "title": "Freelancer&#039;s 3"
+  },
+  {
+    "url": "https://chat.whatsapp.com/HqzBlMaOPci0wYvkEtcCDa",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "title": "&#x1f48e;&#x1f4da;2025 SPOTO&#x26a1; Flash Sale IT Group 8"
+  },
+  {
+    "url": "https://t.me/germantechjobs",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "title": "GermanTechJobs.de - IT & Developer jobs in Germany"
+  },
+  {
+    "url": "https://t.me/PhDFinder",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/devops-programming-cloud",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/ArYGFqJ",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/devopssociety",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/ai-devops-foundry",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/devopslounge",
+    "platform": "discord",
+    "reason": "dead-link",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/LJrWNqdmwBM1qtdht4fOS8",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/5ZOYAYP2Q3O2wRRLafU6Fn",
+    "platform": "whatsapp",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://chat.whatsapp.com/6iRRdv2Jg1RKraZy8CwGal",
+    "platform": "whatsapp",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "title": "Gulf Jobs -And Papers 1"
+  },
+  {
+    "url": "https://chat.whatsapp.com/LwKyLdvoeqk61r4ErxusLX",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "title": "JSR INTERNATIONAL 19"
+  },
+  {
+    "url": "https://chat.whatsapp.com/83bTVcd62A2EvNtsE9urqz",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "title": "&#x1f9da;Frindship Group &#x1f9da;"
+  },
+  {
+    "url": "https://chat.whatsapp.com/KrlFO2JX2y95vXtyTMQt53",
+    "platform": "whatsapp",
+    "reason": "Platform title/description not job related: No verified employment, job alert, or hiring keywords found.",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "title": "UAE Construction Service"
+  },
+  {
+    "url": "https://t.me/kubernative",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/devops_sre_notes",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/DevOps101",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/mkdev_me",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/LearnKube",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/azuredevopspro",
+    "platform": "telegram",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/KubeCareers",
+    "platform": "telegram",
+    "reason": "unconfirmed-target-market",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "title": "Kube Careers"
+  },
+  {
+    "url": "https://discord.gg/5nge8Stwd",
+    "platform": "discord",
+    "reason": "Pre-filtered: No strong job-intent keywords found (e.g. jobs, hiring, careers, internships, vacancies).",
+    "date": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
     "timesSeen": 1
   }
 ]

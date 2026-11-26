@@ -818,5 +818,986 @@
     "autoPublishBlockedReasons": [
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
+  },
+  {
+    "id": "global-jobs-telegram",
+    "slug": "global-jobs-telegram",
+    "title": "Global Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/techjobsdaily",
+    "description": "Daily curated Tech, Remote, AI & Web3 jobs. Handpicked Engineering, Product, Design, and Business Growth roles.Turn your CV into a professional portfolio website: https://cvin.bio",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "Global Jobs",
+      "checkedAt": "2026-11-26T15:58:56.164Z"
+    },
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 5263,
+    "memberCountSource": "https://t.me/techjobsdaily",
+    "memberCountCheckedAt": "2026-11-26T15:58:55.016Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://t.me/techjobsdaily"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708736165_5w4jj"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "jobs-programming-and-development-ingamejobcom-telegram",
+    "slug": "jobs-programming-and-development-ingamejobcom-telegram",
+    "title": "Jobs: Programming and Development | InGameJob.com",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/ingamejob_dev",
+    "description": "More Programming and Development jobs at https://ingamejob.com/en/jobs/programming-and-developmentAll info and jobs at @ingamejobHow to post a job?- Register at https://ingamejob.com- Post a job- The job will be automatically posted to the channel",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 4972,
+    "memberCountSource": "https://t.me/ingamejob_dev",
+    "memberCountCheckedAt": "2026-11-26T15:58:55.016Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://t.me/ingamejob_dev"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708736650_msowu"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "web3-jobs-telegram",
+    "slug": "web3-jobs-telegram",
+    "title": "Web3 Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/web3hiring",
+    "description": "Daily feed of global web3 jobsTo post jobs or ads, contact: @web3jobs_repDo your own due diligence. We won’t assume responsibility for any incurred losses.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-description",
+      "text": "Daily feed of global web3 jobsTo post jobs or ads, contact: @web3jobs_repDo your own due diligence. We won’t assume responsibility for any incurred losses.",
+      "checkedAt": "2026-11-26T15:58:57.145Z"
+    },
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 61018,
+    "memberCountSource": "https://t.me/web3hiring",
+    "memberCountCheckedAt": "2026-11-26T15:58:55.016Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://t.me/web3hiring"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708737145_b136e"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "engineers-jobs-world-telegram",
+    "slug": "engineers-jobs-world-telegram",
+    "title": "Engineers Jobs World",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/EngineersJobsWorld",
+    "description": "All type of jobs Notifications(I.e Technical. Non technical, Engineering, Govt Private,Work from Home,Part time Jobs) you  can see here.Youtube Link- https://youtube.com/channel/UCM4LaoZUh6nshu1dYZ1xDLQ",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-description",
+      "text": "All type of jobs Notifications(I.e Technical. Non technical, Engineering, Govt Private,Work from Home,Part time Jobs) you  can see here.Youtube Link- https://youtube.com/channel/UCM4LaoZUh6nshu1dYZ1xDLQ",
+      "checkedAt": "2026-11-26T15:58:57.629Z"
+    },
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 36101,
+    "memberCountSource": "https://t.me/EngineersJobsWorld",
+    "memberCountCheckedAt": "2026-11-26T15:58:55.016Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://t.me/EngineersJobsWorld"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708737629_21xt2"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "go-careers-telegram",
+    "slug": "go-careers-telegram",
+    "title": "Go Careers 🚀",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/gocareers",
+    "description": "Get latest intern and job updates!For collaborations/promotions reach out at gocareers.official@gmail.com",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 77619,
+    "memberCountSource": "https://t.me/gocareers",
+    "memberCountCheckedAt": "2026-11-26T15:58:55.016Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://t.me/gocareers"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708738288_rqqt7"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "qa-testing-jobs-india-telegram",
+    "slug": "qa-testing-jobs-india-telegram",
+    "title": "QA testing Jobs - India",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/qajobs",
+    "description": "A group for sharing Software Testing related jobs and knowledge.Rules:1. BE NICE AND RESPECTFUL2. No political discussion3. English only4. Posts should be only related to Testing or technology5. Do not PM anyone without asking for permission",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 15904,
+    "memberCountSource": "https://t.me/qajobs",
+    "memberCountCheckedAt": "2026-11-26T15:58:55.016Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://t.me/qajobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708738771_ymyk5"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "tech-sarvam-software-testing-qa-telegram",
+    "slug": "tech-sarvam-software-testing-qa-telegram",
+    "title": "Tech Sarvam | Software Testing & QA",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/softwaretestingjobhelp",
+    "description": "This group helps the people with manual testing and automation testing jobs across India. For testing placement help and other assistance, please ping us.Group is for Manual testing, Automation Testing and any other jobs anywhere in India.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-description",
+      "text": "This group helps the people with manual testing and automation testing jobs across India. For testing placement help and other assistance, please ping us.Group is for Manual testing, Automation Testing and any other jobs anywhere in India.",
+      "checkedAt": "2026-11-26T15:58:59.263Z"
+    },
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 2958,
+    "memberCountSource": "https://t.me/softwaretestingjobhelp",
+    "memberCountCheckedAt": "2026-11-26T15:58:55.016Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://t.me/softwaretestingjobhelp"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708739263_55btx"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "it-remote-jobs-telegram",
+    "slug": "it-remote-jobs-telegram",
+    "title": "IT Remote Jobs 💻",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/ITRemoteJobs",
+    "description": "Welcome to IT Remote Jobs! In this group we will post remote jobs across the world.Contract, permanent and fixed term.",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "IT Remote Jobs 💻",
+      "checkedAt": "2026-11-26T15:58:59.748Z"
+    },
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 490,
+    "memberCountSource": "https://t.me/ITRemoteJobs",
+    "memberCountCheckedAt": "2026-11-26T15:58:55.016Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://t.me/ITRemoteJobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708739748_gsqo3"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "remote-foreign-job-telegram",
+    "slug": "remote-foreign-job-telegram",
+    "title": "Remote foreign job",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/remotejob",
+    "description": "My daily thoughts and actions to be a remote developer",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "Remote foreign job",
+      "checkedAt": "2026-11-26T15:59:00.420Z"
+    },
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 306,
+    "memberCountSource": "https://t.me/remotejob",
+    "memberCountCheckedAt": "2026-11-26T15:58:55.016Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://t.me/remotejob"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708740420_0s5x1"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "engineering-jobs-telegram",
+    "slug": "engineering-jobs-telegram",
+    "title": "وظائف هندسية و فنية | Engineering Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/Engineering_Jobs",
+    "description": "&lrm;مشاركة الوظائف الهندسية والفنية في السعودية(مجاناً)Sharing eng and tech jobs in KSA(Free)DM-الخاص: https://t.me/sattam_alajmiلإكتشاف أحدث الفرص - المنصة الرقمية:To explore new opportunities - Website:https://www.clear-vision-recruitment.com",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 14611,
+    "memberCountSource": "https://t.me/Engineering_Jobs",
+    "memberCountCheckedAt": "2026-11-26T15:58:55.016Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://t.me/Engineering_Jobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708740913_vobgy"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "remote-job-positions-telegram",
+    "slug": "remote-job-positions-telegram",
+    "title": "Remote Job Positions",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/RemoteJobPositions",
+    "description": "- Sign up on Coinbase, make a €20 trade, and get €20 bonus. -> https://tinyurl.com/coinbase20eur- netsons.com VPS Hosting Domain -> https://tinyurl.com/netsons-promo- bondora.com 6.5% APY https://tinyurl.com/bondora-bonus-5",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "Remote Job Positions",
+      "checkedAt": "2026-11-26T15:59:01.394Z"
+    },
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 3816,
+    "memberCountSource": "https://t.me/RemoteJobPositions",
+    "memberCountCheckedAt": "2026-11-26T15:58:55.016Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://t.me/RemoteJobPositions"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708741394_2cfaz"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "ultra-job-update-btech-job-group-jobs-for-electrical-engineeringmechanical-engineeringcivil-engineering-telegram",
+    "slug": "ultra-job-update-btech-job-group-jobs-for-electrical-engineeringmechanical-engineeringcivil-engineering-telegram",
+    "title": "Ultra Job Update | B.Tech Job Group | Jobs For Electrical Engineering/Mechanical Engineering/Civil Engineering |",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/UltraJobUpdate",
+    "description": "Views All Latest job www.Ultrajobupdate.online",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 1546,
+    "memberCountSource": "https://t.me/UltraJobUpdate",
+    "memberCountCheckedAt": "2026-11-26T15:58:55.016Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://t.me/UltraJobUpdate"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708741880_b0so5"
+    ],
+    "querySource": "site:t.me engineering job postings Global Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "world-jobs-telegram",
+    "slug": "world-jobs-telegram",
+    "title": "World Jobs",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/Ultraworldjob",
+    "description": "#worldjobs #usajob #canadajob #UAEJob #ukjobs #hiring #career #degree #BSjob #msjob #btechjob #world #jobgroup #career #engineeringjobgroup #engineering #telegram",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "CA",
+    "countryCode": "CA",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 2358,
+    "memberCountSource": "https://t.me/Ultraworldjob",
+    "memberCountCheckedAt": "2026-11-26T15:58:55.016Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://t.me/Ultraworldjob"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708742722_stg8z"
+    ],
+    "querySource": "site:t.me engineering job postings Canada Telegram",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "laksh-all-india-jobs-whatsapp",
+    "slug": "laksh-all-india-jobs-whatsapp",
+    "title": "Laksh All India Jobs",
+    "platform": "whatsapp",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Civil & Mechanical",
+    "tags": [
+      "whatsapp",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://chat.whatsapp.com/E3GADWZDJT66VC2Wo6x3hE",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "IN",
+    "countryCode": "IN",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "Laksh All India Jobs",
+      "checkedAt": "2026-11-26T15:59:05.175Z"
+    },
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://chat.whatsapp.com/E3GADWZDJT66VC2Wo6x3hE"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708745175_rn0bv"
+    ],
+    "querySource": "site:chat.whatsapp.com engineering job postings India Telegram",
+    "sourceHostname": "chat.whatsapp.com"
+  },
+  {
+    "id": "latest-update-dubai-jobsx2705-whatsapp",
+    "slug": "latest-update-dubai-jobsx2705-whatsapp",
+    "title": "Latest update Dubai Jobs&#x2705;",
+    "platform": "whatsapp",
+    "vertical": "jobs",
+    "category": "tech-jobs",
+    "subcategory": "Software Engineering",
+    "tags": [
+      "whatsapp",
+      "jobs",
+      "techjobs"
+    ],
+    "inviteUrl": "https://chat.whatsapp.com/GBA2azK0vZXJDp9Eok3ca8",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "AE",
+    "countryCode": "AE",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "Latest update Dubai Jobs&#x2705;",
+      "checkedAt": "2026-11-26T15:59:07.435Z"
+    },
+    "jobTypes": [
+      "tech-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-26T15:58:55.016Z",
+    "sourceUrls": [
+      "https://chat.whatsapp.com/GBA2azK0vZXJDp9Eok3ca8"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-26T15:58:55.016Z",
+    "lastCheckedAt": "2026-11-26T15:58:55.016Z",
+    "updatedAt": "2026-11-26T15:58:55.016Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-26T15:58:55.016Z",
+    "lastSeenAt": "2026-11-26T15:58:55.016Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795708735016_kfum8",
+      "run_1795708747435_ae1um"
+    ],
+    "querySource": "site:chat.whatsapp.com devops cloud engineer jobs United Arab Emirates community",
+    "sourceHostname": "chat.whatsapp.com"
   }
 ]
