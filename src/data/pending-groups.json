@@ -1,73 +1,5 @@
 [
   {
-    "id": "design-buddies-discord",
-    "slug": "design-buddies-discord",
-    "title": "Design Buddies 🐰",
-    "platform": "discord",
-    "vertical": "jobs",
-    "category": "internships-graduate",
-    "subcategory": "Worldwide Jobs",
-    "tags": [
-      "discord",
-      "jobs",
-      "internshipsgraduate"
-    ],
-    "inviteUrl": "https://discord.gg/designbuddies",
-    "description": "Meet other designers, level up your design skills, land jobs, and more!",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "internships-graduate"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 105948,
-    "memberCountSource": "https://discord.gg/designbuddies",
-    "memberCountCheckedAt": "2026-11-18T23:44:24.361Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-11-18T23:44:24.361Z",
-    "sourceUrls": [
-      "https://discord.gg/designbuddies"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-11-18T23:44:24.361Z",
-    "lastCheckedAt": "2026-11-18T23:44:24.361Z",
-    "updatedAt": "2026-11-18T23:44:24.361Z",
-    "safetyFlags": [],
-    "guildId": "697694775561945109",
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-11-18T23:44:24.361Z",
-    "lastSeenAt": "2026-11-18T23:44:24.361Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1795045464361_1gqtc",
-      "run_1795045464755_go46p"
-    ],
-    "querySource": "discord.gg Worldwide tech jobs OR Worldwide hiring",
-    "sourceHostname": "discord.gg",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-161h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "jobs-abroad-telegram",
     "slug": "jobs-abroad-telegram",
     "title": "Jobs abroad",
@@ -131,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-146h",
+      "validation-stale-154h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -199,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-146h",
+      "validation-stale-154h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -267,7 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-146h",
+      "validation-stale-154h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -335,7 +267,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-85h",
+      "validation-stale-94h",
       "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -403,7 +335,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-75h",
+      "validation-stale-84h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -471,7 +403,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-48h",
+      "validation-stale-57h",
       "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -539,6 +471,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-33h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },

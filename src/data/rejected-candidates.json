@@ -15939,5 +15939,14 @@
     "date": "2026-11-25T16:19:54.900Z",
     "lastSeenAt": "2026-11-25T16:19:54.900Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://discord.gg/designbuddies",
+    "platform": "discord",
+    "title": "Design Buddies 🐰",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-11-26T01:14:36.880Z",
+    "lastSeenAt": "2026-11-26T01:14:36.880Z",
+    "timesSeen": 1
   }
 ]
