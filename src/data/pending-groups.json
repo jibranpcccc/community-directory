@@ -1799,5 +1799,198 @@
     ],
     "querySource": "site:chat.whatsapp.com devops cloud engineer jobs United Arab Emirates community",
     "sourceHostname": "chat.whatsapp.com"
+  },
+  {
+    "id": "devops-jobs-telegram",
+    "slug": "devops-jobs-telegram",
+    "title": "DevOps Jobs - работа и аналитика",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Remote Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/devops_jobs",
+    "description": "Публикуем вакансии и запросы на поиск работы по направлению DevOps & SRE.Обмен инсайдами и аналитикой на рынке труда DevOps & SRE.Вакансии в @devops_jobs_feedFAQ и правила: https://git.io/JtnWbСтарт бота \"/man\"См.также: @devops_ru, @kubernetes_ru",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 23039,
+    "memberCountSource": "https://t.me/devops_jobs",
+    "memberCountCheckedAt": "2026-11-27T15:48:53.511Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-27T15:48:53.511Z",
+    "sourceUrls": [
+      "https://t.me/devops_jobs"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-27T15:48:53.511Z",
+    "lastCheckedAt": "2026-11-27T15:48:53.511Z",
+    "updatedAt": "2026-11-27T15:48:53.511Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-27T15:48:53.511Z",
+    "lastSeenAt": "2026-11-27T15:48:53.511Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795794533511_0xota",
+      "run_1795794535042_qeeqe"
+    ],
+    "querySource": "site:t.me Remote tech jobs OR Remote job alerts",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "tech-jobs-hub-telegram",
+    "slug": "tech-jobs-hub-telegram",
+    "title": "Tech Jobs Hub",
+    "platform": "telegram",
+    "vertical": "jobs",
+    "category": "engineering-jobs",
+    "subcategory": "Remote Jobs",
+    "tags": [
+      "telegram",
+      "jobs",
+      "engineeringjobs"
+    ],
+    "inviteUrl": "https://t.me/TechJobsHub",
+    "description": "All Tech Jobs Information provided in this Channel",
+    "descriptionSource": "platform",
+    "language": null,
+    "country": "GLOBAL",
+    "countryCode": "GLOBAL",
+    "city": null,
+    "countryEvidence": null,
+    "jobTypes": [
+      "engineering-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": 3,
+    "memberCountSource": "https://t.me/TechJobsHub",
+    "memberCountCheckedAt": "2026-11-27T15:48:53.511Z",
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-27T15:48:53.511Z",
+    "sourceUrls": [
+      "https://t.me/TechJobsHub"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-27T15:48:53.511Z",
+    "lastCheckedAt": "2026-11-27T15:48:53.511Z",
+    "updatedAt": "2026-11-27T15:48:53.511Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-27T15:48:53.511Z",
+    "lastSeenAt": "2026-11-27T15:48:53.511Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795794533511_0xota",
+      "run_1795794535489_npkux"
+    ],
+    "querySource": "site:t.me Remote tech jobs OR Remote job alerts",
+    "sourceHostname": "t.me"
+  },
+  {
+    "id": "dubai-jobs-7xfe0fx20e32xfe0fx20e3-whatsapp",
+    "slug": "dubai-jobs-7xfe0fx20e32xfe0fx20e3-whatsapp",
+    "title": "Dubai Jobs 7&#xfe0f;&#x20e3;2&#xfe0f;&#x20e3;",
+    "platform": "whatsapp",
+    "vertical": "jobs",
+    "category": "remote-jobs",
+    "subcategory": "Remote Work",
+    "tags": [
+      "whatsapp",
+      "jobs",
+      "remotejobs"
+    ],
+    "inviteUrl": "https://chat.whatsapp.com/KPMl0zgIbs5DBour6TGyUF",
+    "description": null,
+    "descriptionSource": null,
+    "language": null,
+    "country": "AE",
+    "countryCode": "AE",
+    "city": null,
+    "countryEvidence": {
+      "sourceType": "platform-title",
+      "text": "Dubai Jobs 7&#xfe0f;&#x20e3;2&#xfe0f;&#x20e3;",
+      "checkedAt": "2026-11-27T15:48:57.896Z"
+    },
+    "jobTypes": [
+      "remote-jobs"
+    ],
+    "industries": [],
+    "workArrangement": "unknown",
+    "experienceLevels": [],
+    "visaSponsorship": "unknown",
+    "accessType": "unknown",
+    "communityType": "unknown",
+    "memberCount": null,
+    "memberCountSource": null,
+    "memberCountCheckedAt": null,
+    "verificationStatus": "unverified",
+    "linkStatus": "active",
+    "lastKnownLinkStatus": "active",
+    "lastSuccessfulValidationAt": "2026-11-27T15:48:53.511Z",
+    "sourceUrls": [
+      "https://chat.whatsapp.com/KPMl0zgIbs5DBour6TGyUF"
+    ],
+    "sourceCheckedAt": null,
+    "sourceVerification": null,
+    "guildId": null,
+    "discoveryMethod": "gemini-search",
+    "discoveredAt": "2026-11-27T15:48:53.511Z",
+    "lastCheckedAt": "2026-11-27T15:48:53.511Z",
+    "updatedAt": "2026-11-27T15:48:53.511Z",
+    "safetyFlags": [],
+    "published": false,
+    "featured": false,
+    "firstSeenAt": "2026-11-27T15:48:53.511Z",
+    "lastSeenAt": "2026-11-27T15:48:53.511Z",
+    "timesSeen": 1,
+    "providerIds": [
+      "gemini-search"
+    ],
+    "observedRunIds": [
+      "run_1795794533511_0xota",
+      "run_1795794537896_71nns"
+    ],
+    "querySource": "site:chat.whatsapp.com daily remote job postings Discord United Arab Emirates",
+    "sourceHostname": "chat.whatsapp.com"
   }
 ]
