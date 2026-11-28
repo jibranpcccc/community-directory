@@ -16251,5 +16251,32 @@
     "date": "2026-11-27T15:48:53.511Z",
     "lastSeenAt": "2026-11-27T15:48:53.511Z",
     "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/jobs_abroad",
+    "platform": "telegram",
+    "title": "Jobs abroad",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-11-28T00:46:35.763Z",
+    "lastSeenAt": "2026-11-28T00:46:35.763Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/jobs_united_states",
+    "platform": "telegram",
+    "title": "🇺🇸Immigrate to USA Jobs",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-11-28T00:46:35.763Z",
+    "lastSeenAt": "2026-11-28T00:46:35.763Z",
+    "timesSeen": 1
+  },
+  {
+    "url": "https://t.me/jobs_usa_visa_sponsorship",
+    "platform": "telegram",
+    "title": "🇺🇸Jobs abroad in the USA!",
+    "reason": "insufficient-publication-confidence",
+    "date": "2026-11-28T00:46:35.763Z",
+    "lastSeenAt": "2026-11-28T00:46:35.763Z",
+    "timesSeen": 1
   }
 ]

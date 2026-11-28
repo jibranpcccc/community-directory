@@ -1,209 +1,5 @@
 [
   {
-    "id": "jobs-abroad-telegram",
-    "slug": "jobs-abroad-telegram",
-    "title": "Jobs abroad",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "visa-sponsorship-jobs",
-    "subcategory": "Visa Sponsorship",
-    "tags": [
-      "telegram",
-      "jobs",
-      "visasponsorshipjobs"
-    ],
-    "inviteUrl": "https://t.me/jobs_abroad",
-    "description": "Channel rules (ENG): https://bit.ly/3c9nUnBПравила (RUS): https://bit.ly/2ZJ13tJAdmin - @alina_tallinna",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "visa-sponsorship-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 15590,
-    "memberCountSource": "https://t.me/jobs_abroad",
-    "memberCountCheckedAt": "2026-11-19T14:50:10.690Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-11-19T14:50:10.690Z",
-    "sourceUrls": [
-      "https://t.me/jobs_abroad"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-11-19T14:50:10.690Z",
-    "lastCheckedAt": "2026-11-19T14:50:10.690Z",
-    "updatedAt": "2026-11-19T14:50:10.690Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-11-19T14:50:10.690Z",
-    "lastSeenAt": "2026-11-19T14:50:10.690Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1795099810690_dmiyy",
-      "run_1795099814683_u98bp"
-    ],
-    "querySource": "site:t.me skilled worker visa jobs Global Telegram",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-154h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "immigrate-to-usa-jobs-telegram",
-    "slug": "immigrate-to-usa-jobs-telegram",
-    "title": "🇺🇸Immigrate to USA Jobs",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "visa-sponsorship-jobs",
-    "subcategory": "Visa Sponsorship",
-    "tags": [
-      "telegram",
-      "jobs",
-      "visasponsorshipjobs"
-    ],
-    "inviteUrl": "https://t.me/jobs_united_states",
-    "description": "Our free channel @visa_sponsorshipOur job portal move2usajobs.com   You can ask questions on our website online chat",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "visa-sponsorship-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 1959,
-    "memberCountSource": "https://t.me/jobs_united_states",
-    "memberCountCheckedAt": "2026-11-19T14:50:10.690Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-11-19T14:50:10.690Z",
-    "sourceUrls": [
-      "https://t.me/jobs_united_states"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-11-19T14:50:10.690Z",
-    "lastCheckedAt": "2026-11-19T14:50:10.690Z",
-    "updatedAt": "2026-11-19T14:50:10.690Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-11-19T14:50:10.690Z",
-    "lastSeenAt": "2026-11-19T14:50:10.690Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1795099810690_dmiyy",
-      "run_1795099815495_cytua"
-    ],
-    "querySource": "site:t.me skilled worker visa jobs Global Telegram",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-154h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
-    "id": "jobs-abroad-in-the-usa-telegram",
-    "slug": "jobs-abroad-in-the-usa-telegram",
-    "title": "🇺🇸Jobs abroad in the USA!",
-    "platform": "telegram",
-    "vertical": "jobs",
-    "category": "visa-sponsorship-jobs",
-    "subcategory": "Visa Sponsorship",
-    "tags": [
-      "telegram",
-      "jobs",
-      "visasponsorshipjobs"
-    ],
-    "inviteUrl": "https://t.me/jobs_usa_visa_sponsorship",
-    "description": "https://move2usajobs.comJob portal with 5000+ jobs with USA visa sponsorship! Skilled and unskilled!buy ads https://telega.io/channels/jobs_usa_visa_sponsorship/",
-    "descriptionSource": "platform",
-    "language": null,
-    "country": "GLOBAL",
-    "countryCode": "GLOBAL",
-    "city": null,
-    "countryEvidence": null,
-    "jobTypes": [
-      "visa-sponsorship-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": 4819,
-    "memberCountSource": "https://t.me/jobs_usa_visa_sponsorship",
-    "memberCountCheckedAt": "2026-11-19T14:50:10.690Z",
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-11-19T14:50:10.690Z",
-    "sourceUrls": [
-      "https://t.me/jobs_usa_visa_sponsorship"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-11-19T14:50:10.690Z",
-    "lastCheckedAt": "2026-11-19T14:50:10.690Z",
-    "updatedAt": "2026-11-19T14:50:10.690Z",
-    "safetyFlags": [],
-    "guildId": null,
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-11-19T14:50:10.690Z",
-    "lastSeenAt": "2026-11-19T14:50:10.690Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1795099810690_dmiyy",
-      "run_1795099815897_jeaxo"
-    ],
-    "querySource": "site:t.me skilled worker visa jobs Global Telegram",
-    "sourceHostname": "t.me",
-    "publicationTier": "C",
-    "autoPublishBlockedReasons": [
-      "validation-stale-154h",
-      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
-    ]
-  },
-  {
     "id": "medical-jobs-mbbs-nursing-pharma-neet-ug-pg-telegram",
     "slug": "medical-jobs-mbbs-nursing-pharma-neet-ug-pg-telegram",
     "title": "Medical Jobs - MBBS | Nursing | Pharma | NEET UG PG",
@@ -267,7 +63,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-94h",
+      "validation-stale-141h",
       "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -335,7 +131,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-84h",
+      "validation-stale-131h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -403,7 +199,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-57h",
+      "validation-stale-104h",
       "unconfirmed-country-evidence: No factual geographic evidence matching IN found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -471,7 +267,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
-      "validation-stale-33h",
+      "validation-stale-80h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -539,6 +335,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-56h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -615,6 +412,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-56h",
       "duplicate-published: Matching community title on telegram: \"Remote Jobs👨‍💻\" vs \"Remote Jobs\""
     ]
   },
@@ -682,6 +480,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-56h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -749,6 +548,7 @@
     "sourceHostname": "t.me",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-56h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -816,6 +616,7 @@
     "sourceHostname": "discord.gg",
     "publicationTier": "C",
     "autoPublishBlockedReasons": [
+      "validation-stale-56h",
       "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
     ]
   },
@@ -865,12 +666,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -884,7 +685,11 @@
       "run_1795708736165_5w4jj"
     ],
     "querySource": "site:t.me engineering job postings Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h"
+    ]
   },
   {
     "id": "jobs-programming-and-development-ingamejobcom-telegram",
@@ -928,12 +733,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -947,7 +752,12 @@
       "run_1795708736650_msowu"
     ],
     "querySource": "site:t.me engineering job postings Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   },
   {
     "id": "web3-jobs-telegram",
@@ -995,12 +805,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -1014,7 +824,11 @@
       "run_1795708737145_b136e"
     ],
     "querySource": "site:t.me engineering job postings Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h"
+    ]
   },
   {
     "id": "engineers-jobs-world-telegram",
@@ -1062,12 +876,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -1081,7 +895,11 @@
       "run_1795708737629_21xt2"
     ],
     "querySource": "site:t.me engineering job postings Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h"
+    ]
   },
   {
     "id": "go-careers-telegram",
@@ -1125,12 +943,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -1144,7 +962,12 @@
       "run_1795708738288_rqqt7"
     ],
     "querySource": "site:t.me engineering job postings Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   },
   {
     "id": "qa-testing-jobs-india-telegram",
@@ -1188,12 +1011,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -1207,7 +1030,12 @@
       "run_1795708738771_ymyk5"
     ],
     "querySource": "site:t.me engineering job postings Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   },
   {
     "id": "tech-sarvam-software-testing-qa-telegram",
@@ -1255,12 +1083,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -1274,7 +1102,11 @@
       "run_1795708739263_55btx"
     ],
     "querySource": "site:t.me engineering job postings Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h"
+    ]
   },
   {
     "id": "it-remote-jobs-telegram",
@@ -1322,12 +1154,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -1341,7 +1173,11 @@
       "run_1795708739748_gsqo3"
     ],
     "querySource": "site:t.me engineering job postings Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h"
+    ]
   },
   {
     "id": "remote-foreign-job-telegram",
@@ -1389,12 +1225,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -1408,7 +1244,11 @@
       "run_1795708740420_0s5x1"
     ],
     "querySource": "site:t.me engineering job postings Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h"
+    ]
   },
   {
     "id": "engineering-jobs-telegram",
@@ -1452,12 +1292,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -1471,7 +1311,12 @@
       "run_1795708740913_vobgy"
     ],
     "querySource": "site:t.me engineering job postings Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   },
   {
     "id": "remote-job-positions-telegram",
@@ -1519,12 +1364,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -1538,7 +1383,11 @@
       "run_1795708741394_2cfaz"
     ],
     "querySource": "site:t.me engineering job postings Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h"
+    ]
   },
   {
     "id": "ultra-job-update-btech-job-group-jobs-for-electrical-engineeringmechanical-engineeringcivil-engineering-telegram",
@@ -1582,12 +1431,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -1601,7 +1450,12 @@
       "run_1795708741880_b0so5"
     ],
     "querySource": "site:t.me engineering job postings Global Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   },
   {
     "id": "world-jobs-telegram",
@@ -1645,12 +1499,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -1664,7 +1518,12 @@
       "run_1795708742722_stg8z"
     ],
     "querySource": "site:t.me engineering job postings Canada Telegram",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h",
+      "unconfirmed-country-evidence: No factual geographic evidence matching CA found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   },
   {
     "id": "laksh-all-india-jobs-whatsapp",
@@ -1712,12 +1571,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -1731,7 +1590,11 @@
       "run_1795708745175_rn0bv"
     ],
     "querySource": "site:chat.whatsapp.com engineering job postings India Telegram",
-    "sourceHostname": "chat.whatsapp.com"
+    "sourceHostname": "chat.whatsapp.com",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h"
+    ]
   },
   {
     "id": "latest-update-dubai-jobsx2705-whatsapp",
@@ -1779,12 +1642,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-26T15:58:55.016Z",
     "lastCheckedAt": "2026-11-26T15:58:55.016Z",
     "updatedAt": "2026-11-26T15:58:55.016Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-26T15:58:55.016Z",
@@ -1798,7 +1661,11 @@
       "run_1795708747435_ae1um"
     ],
     "querySource": "site:chat.whatsapp.com devops cloud engineer jobs United Arab Emirates community",
-    "sourceHostname": "chat.whatsapp.com"
+    "sourceHostname": "chat.whatsapp.com",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "validation-stale-33h"
+    ]
   },
   {
     "id": "devops-jobs-telegram",
@@ -1842,12 +1709,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-27T15:48:53.511Z",
     "lastCheckedAt": "2026-11-27T15:48:53.511Z",
     "updatedAt": "2026-11-27T15:48:53.511Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-27T15:48:53.511Z",
@@ -1861,7 +1728,11 @@
       "run_1795794535042_qeeqe"
     ],
     "querySource": "site:t.me Remote tech jobs OR Remote job alerts",
-    "sourceHostname": "t.me"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   },
   {
     "id": "tech-jobs-hub-telegram",
@@ -1905,12 +1776,12 @@
     ],
     "sourceCheckedAt": null,
     "sourceVerification": null,
-    "guildId": null,
     "discoveryMethod": "gemini-search",
     "discoveredAt": "2026-11-27T15:48:53.511Z",
     "lastCheckedAt": "2026-11-27T15:48:53.511Z",
     "updatedAt": "2026-11-27T15:48:53.511Z",
     "safetyFlags": [],
+    "guildId": null,
     "published": false,
     "featured": false,
     "firstSeenAt": "2026-11-27T15:48:53.511Z",
@@ -1924,73 +1795,10 @@
       "run_1795794535489_npkux"
     ],
     "querySource": "site:t.me Remote tech jobs OR Remote job alerts",
-    "sourceHostname": "t.me"
-  },
-  {
-    "id": "dubai-jobs-7xfe0fx20e32xfe0fx20e3-whatsapp",
-    "slug": "dubai-jobs-7xfe0fx20e32xfe0fx20e3-whatsapp",
-    "title": "Dubai Jobs 7&#xfe0f;&#x20e3;2&#xfe0f;&#x20e3;",
-    "platform": "whatsapp",
-    "vertical": "jobs",
-    "category": "remote-jobs",
-    "subcategory": "Remote Work",
-    "tags": [
-      "whatsapp",
-      "jobs",
-      "remotejobs"
-    ],
-    "inviteUrl": "https://chat.whatsapp.com/KPMl0zgIbs5DBour6TGyUF",
-    "description": null,
-    "descriptionSource": null,
-    "language": null,
-    "country": "AE",
-    "countryCode": "AE",
-    "city": null,
-    "countryEvidence": {
-      "sourceType": "platform-title",
-      "text": "Dubai Jobs 7&#xfe0f;&#x20e3;2&#xfe0f;&#x20e3;",
-      "checkedAt": "2026-11-27T15:48:57.896Z"
-    },
-    "jobTypes": [
-      "remote-jobs"
-    ],
-    "industries": [],
-    "workArrangement": "unknown",
-    "experienceLevels": [],
-    "visaSponsorship": "unknown",
-    "accessType": "unknown",
-    "communityType": "unknown",
-    "memberCount": null,
-    "memberCountSource": null,
-    "memberCountCheckedAt": null,
-    "verificationStatus": "unverified",
-    "linkStatus": "active",
-    "lastKnownLinkStatus": "active",
-    "lastSuccessfulValidationAt": "2026-11-27T15:48:53.511Z",
-    "sourceUrls": [
-      "https://chat.whatsapp.com/KPMl0zgIbs5DBour6TGyUF"
-    ],
-    "sourceCheckedAt": null,
-    "sourceVerification": null,
-    "guildId": null,
-    "discoveryMethod": "gemini-search",
-    "discoveredAt": "2026-11-27T15:48:53.511Z",
-    "lastCheckedAt": "2026-11-27T15:48:53.511Z",
-    "updatedAt": "2026-11-27T15:48:53.511Z",
-    "safetyFlags": [],
-    "published": false,
-    "featured": false,
-    "firstSeenAt": "2026-11-27T15:48:53.511Z",
-    "lastSeenAt": "2026-11-27T15:48:53.511Z",
-    "timesSeen": 1,
-    "providerIds": [
-      "gemini-search"
-    ],
-    "observedRunIds": [
-      "run_1795794533511_0xota",
-      "run_1795794537896_71nns"
-    ],
-    "querySource": "site:chat.whatsapp.com daily remote job postings Discord United Arab Emirates",
-    "sourceHostname": "chat.whatsapp.com"
+    "sourceHostname": "t.me",
+    "publicationTier": "C",
+    "autoPublishBlockedReasons": [
+      "unconfirmed-country-evidence: No factual geographic evidence matching GLOBAL found in platform title, description, or verified source text. (Pronouns like \"us\", tags, or bare sourceUrls alone are insufficient)"
+    ]
   }
 ]
